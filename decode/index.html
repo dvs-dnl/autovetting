@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIN Decoder — AutoVetting</title>
+<meta name="description" content="Enter a 17-character VIN. We decode the year, make, model, and trim using NHTSA's official vPIC data — then hand you off to a vehicle-specific inspection checklist.">
+<link rel="canonical" href="https://autovetting.com/decode/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--white);
+    padding: 48px 24px 64px;
+    text-align: center;
+  }
+  .page-hero .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--electric);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+  .page-hero h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .page-hero p {
+    color: var(--slate-300);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 17px;
+  }
+  .decode-wrap {
+    max-width: 720px;
+    margin: -32px auto 0;
+    padding: 0 24px 80px;
+  }
+  .decode-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 32px;
+    border: 1px solid var(--slate-200);
+  }
+  .decode-card h2 { font-size: 22px; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .decode-card .lead { color: var(--slate-500); font-size: 14px; margin-bottom: 20px; }
+  .vin-row { display: flex; gap: 12px; align-items: stretch; }
+  .vin-row input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid var(--slate-300);
+    border-radius: var(--radius);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--white);
+  }
+  .vin-row input:focus { outline: none; border-color: var(--electric); box-shadow: 0 0 0 3px rgba(59,130,246,0.15); }
+  .vin-row input.invalid { border-color: var(--critical); }
+  .vin-status { margin-top: 12px; font-size: 13px; min-height: 18px; }
+  .vin-status.ok { color: var(--clear); }
+  .vin-status.error { color: var(--critical); }
+  .result-card {
+    margin-top: 20px;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    background: var(--blue-50);
+    display: none;
+  }
+  .result-card.visible { display: block; }
+  .result-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--electric);
+    margin-bottom: 6px;
+  }
+  .result-title { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .result-vin { font-family: var(--font-mono); font-size: 12px; color: var(--slate-500); margin-bottom: 16px; }
+  .result-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+  .result-meta dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate-500); margin-bottom: 2px; }
+  .result-meta dd { font-size: 14px; color: var(--navy); font-weight: 500; }
+  .result-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .next-steps {
+    margin-top: 24px;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+  }
+  .next-steps h3 { font-size: 18px; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .next-steps p { color: var(--slate-500); font-size: 14px; margin-bottom: 8px; }
+  .next-steps ol { padding-left: 20px; color: var(--slate-500); font-size: 14px; }
+  .next-steps ol li { margin: 6px 0; }
+  @media (max-width: 640px) {
+    .page-hero h1 { font-size: 30px; }
+    .vin-row { flex-direction: column; }
+    .result-meta { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/" aria-current="page">Decode</a>
+      <a href="/inspect/">Inspect</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow">Step 3 of 4 · Decode</p>
+  <h1>What is this car, really?</h1>
+  <p>Paste a 17-character VIN. We decode the year, make, model, and trim against NHTSA's official vehicle database — then hand you straight to its inspection checklist.</p>
+</section>
+
+<div class="decode-wrap">
+
+  <div class="decode-card">
+    <h2>Decode a VIN</h2>
+    <p class="lead">17 characters. No spaces. Sellers usually have it on the dashboard or the driver-side door jamb.</p>
+    <div class="vin-row">
+      <input type="text" id="vin-input" maxlength="17" placeholder="1HGCR2F37EA000123" autocomplete="off" spellcheck="false">
+      <button class="btn" id="decode-btn">Decode</button>
+    </div>
+    <div class="vin-status" id="vin-status"></div>
+
+    <div class="result-card" id="result-card" aria-live="polite">
+      <p class="result-eyebrow">Decoded</p>
+      <div class="result-title" id="result-title"></div>
+      <div class="result-vin" id="result-vin"></div>
+      <dl class="result-meta">
+        <div><dt>Engine</dt><dd id="result-engine">—</dd></div>
+        <div><dt>Body / Trim</dt><dd id="result-trim">—</dd></div>
+        <div><dt>Drivetrain</dt><dd id="result-drive">—</dd></div>
+        <div><dt>Plant</dt><dd id="result-plant">—</dd></div>
+      </dl>
+      <div class="result-actions">
+        <a class="btn" id="checklist-link">View inspection checklist &rarr;</a>
+        <button class="btn btn-ghost" id="copy-btn">Copy decoded info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="next-steps">
+    <h3>What happens next</h3>
+    <ol>
+      <li>We confirm year / make / model / trim so you're not chasing the wrong checklist.</li>
+      <li>You open the model-specific inspection checklist — built from NHTSA recall data, owner-reported failures, and mechanic intel.</li>
+      <li>Optional: book a pre-purchase inspection with a vetted Phoenix shop (summer 2026).</li>
+    </ol>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric);">Vetting</span><sup class="tm">&trade;</sup> &mdash; Know before you buy.</p>
+  <p style="margin-top:8px;">Built by the team behind <a href="https://trailmanual.com">TrailManual</a>.</p>
+</footer>
+
+<script>
+const VIN_REGEX = /^[A-HJ-NPR-Z0-9]{17}$/;
+const $ = id => document.getElementById(id);
+const vinInput = $('vin-input');
+const decodeBtn = $('decode-btn');
+const vinStatus = $('vin-status');
+const resultCard = $('result-card');
+const resultTitle = $('result-title');
+const resultVin = $('result-vin');
+const resultEngine = $('result-engine');
+const resultTrim = $('result-trim');
+const resultDrive = $('result-drive');
+const resultPlant = $('result-plant');
+const checklistLink = $('checklist-link');
+const copyBtn = $('copy-btn');
+
+let lastDecoded = null;
+
+function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : ''; }
+
+vinInput.addEventListener('input', () => {
+  const v = vinInput.value.toUpperCase().trim();
+  vinInput.value = v;
+  if (!v) {
+    vinStatus.textContent = '';
+    vinStatus.className = 'vin-status';
+    vinInput.classList.remove('invalid');
+  } else if (v.length < 17) {
+    vinStatus.textContent = `${v.length}/17 characters`;
+    vinStatus.className = 'vin-status';
+    vinInput.classList.remove('invalid');
+  } else if (!VIN_REGEX.test(v)) {
+    vinStatus.textContent = 'Invalid VIN — VINs never contain I, O, or Q';
+    vinStatus.className = 'vin-status error';
+    vinInput.classList.add('invalid');
+  } else {
+    vinStatus.textContent = 'Ready to decode';
+    vinStatus.className = 'vin-status ok';
+    vinInput.classList.remove('invalid');
+  }
+});
+
+decodeBtn.addEventListener('click', decode);
+vinInput.addEventListener('keydown', e => { if (e.key === 'Enter') decode(); });
+
+async function decode() {
+  const vin = vinInput.value.toUpperCase().trim();
+  if (!VIN_REGEX.test(vin)) {
+    vinStatus.textContent = 'Enter a valid 17-character VIN first.';
+    vinStatus.className = 'vin-status error';
+    return;
+  }
+  vinStatus.textContent = 'Decoding via NHTSA vPIC…';
+  vinStatus.className = 'vin-status';
+  decodeBtn.disabled = true;
+  resultCard.classList.remove('visible');
+  try {
+    const r = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`);
+    const j = await r.json();
+    const d = j.Results && j.Results[0];
+    if (!d || !d.ModelYear || !d.Make || !d.Model) throw new Error('Decode incomplete');
+    const year = parseInt(d.ModelYear, 10);
+    const make = cap(d.Make);
+    const model = d.Model;
+    const trim = d.Trim || d.Series || '';
+    const engine = [d.DisplacementL ? d.DisplacementL + 'L' : null, d.EngineCylinders ? d.EngineCylinders + '-cyl' : null, d.FuelTypePrimary || null].filter(Boolean).join(' · ') || '—';
+    const drive = d.DriveType || '—';
+    const plant = [d.PlantCity, d.PlantCountry].filter(Boolean).join(', ') || '—';
+
+    lastDecoded = { vin, year, make, model, trim, engine, drive, plant };
+
+    resultTitle.textContent = `${year} ${make} ${model}` + (trim ? ` ${trim}` : '');
+    resultVin.textContent = `VIN ${vin}`;
+    resultEngine.textContent = engine;
+    resultTrim.textContent = trim || d.BodyClass || '—';
+    resultDrive.textContent = drive;
+    resultPlant.textContent = plant;
+    const params = new URLSearchParams({ year: String(year), make, model });
+    if (trim) params.set('trim', trim);
+    checklistLink.href = `/inspect/?${params.toString()}`;
+
+    resultCard.classList.add('visible');
+    vinStatus.textContent = 'Decoded successfully.';
+    vinStatus.className = 'vin-status ok';
+  } catch (e) {
+    vinStatus.textContent = 'NHTSA could not decode that VIN. Double-check it, or pick by year / make / model on Inspect.';
+    vinStatus.className = 'vin-status error';
+  } finally {
+    decodeBtn.disabled = false;
+  }
+}
+
+copyBtn.addEventListener('click', async () => {
+  if (!lastDecoded) return;
+  const d = lastDecoded;
+  const text = `VIN ${d.vin}\n${d.year} ${d.make} ${d.model}${d.trim ? ' ' + d.trim : ''}\nEngine: ${d.engine}\nDrivetrain: ${d.drive}\nPlant: ${d.plant}`;
+  try {
+    await navigator.clipboard.writeText(text);
+    copyBtn.textContent = 'Copied';
+    setTimeout(() => copyBtn.textContent = 'Copy decoded info', 1800);
+  } catch (e) {
+    copyBtn.textContent = 'Could not copy';
+  }
+});
+</script>
+
+</body>
+</html>

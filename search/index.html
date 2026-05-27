@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search the listings &mdash; AutoVetting</title>
+<meta name="description" content="A playbook for searching used-car listings on Craigslist, Facebook Marketplace, Cars.com, and dealer inventory without drowning in noise or falling for scams.">
+<link rel="canonical" href="https://autovetting.com/search/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--white); padding: 48px 24px 64px; text-align: center; }
+  .page-hero .eyebrow { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--electric); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 12px; }
+  .page-hero h1 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .page-hero p { color: var(--slate-300); max-width: 600px; margin: 0 auto; font-size: 17px; }
+  .scaffold { max-width: 820px; margin: -32px auto 0; padding: 0 24px 80px; }
+  .scaffold-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md); border: 1px solid var(--slate-200); }
+  .badge { display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--warning); text-transform: uppercase; letter-spacing: 0.15em; background: rgba(245,158,11,0.1); padding: 4px 10px; border-radius: 999px; margin-bottom: 20px; }
+  .scaffold-card h2 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .scaffold-card > p { color: var(--slate-500); margin-bottom: 24px; }
+  .roadmap { background: var(--slate-white); border-radius: var(--radius); padding: 24px; margin-top: 24px; }
+  .roadmap h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--electric); margin-bottom: 14px; font-family: var(--font-mono); font-weight: 500; }
+  .roadmap ul { list-style: none; padding: 0; }
+  .roadmap li { padding: 10px 0; border-bottom: 1px solid var(--slate-200); color: var(--navy); font-size: 14px; }
+  .roadmap li:last-child { border-bottom: none; }
+  .roadmap li strong { color: var(--navy); font-weight: 600; }
+  .roadmap li span { color: var(--slate-500); display: block; font-size: 13px; margin-top: 2px; }
+  .next-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  @media (max-width: 640px) { .page-hero h1 { font-size: 28px; } .scaffold-card { padding: 28px 20px; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/" aria-current="page">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow">Step 2 of 4 &middot; Search</p>
+  <h1>Hunt the listings without drowning.</h1>
+  <p>Once you've pinpointed which year/make/model you want, the next problem is finding a clean one in your area without losing a weekend to scams and tire-kickers.</p>
+</section>
+
+<div class="scaffold">
+  <div class="scaffold-card">
+    <span class="badge">In progress</span>
+    <h2>The Search playbook is being written.</h2>
+    <p>We're drafting the listing-hunt section now. It'll cover the search syntax, saved-alert tricks, and red-flag patterns we use to triage every listing before the test drive.</p>
+
+    <div class="roadmap">
+      <h3>What's coming</h3>
+      <ul>
+        <li><strong>Platform-by-platform search filters</strong><span>Boolean tricks for Craigslist, Facebook Marketplace search operators, Cars.com saved-search radius logic, dealer inventory filters that actually work.</span></li>
+        <li><strong>Listing red flags</strong><span>The phrasing patterns that signal curbstoners, washed titles, and odometer rollbacks. What "needs nothing" really means.</span></li>
+        <li><strong>Price triangulation</strong><span>Pulling KBB / Edmunds / iSeeCars trade-in and private-party data so the seller's number lands in context.</span></li>
+        <li><strong>Outreach scripts</strong><span>The questions to ask in your first DM that filter 90% of waste in under a minute.</span></li>
+        <li><strong>Saved-alert setup</strong><span>How to be the first call on a clean listing without checking your phone every hour.</span></li>
+      </ul>
+    </div>
+
+    <div class="next-row">
+      <a class="btn" href="/pinpoint/">Back to Step 1: Pinpoint</a>
+      <a class="btn btn-ghost" href="/decode/">Already have a VIN? Skip to Decode &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric);">Vetting</span><sup class="tm">&trade;</sup> &mdash; Know before you buy.</p>
+  <p style="margin-top:8px;">Built by the team behind <a href="https://trailmanual.com">TrailManual</a>.</p>
+</footer>
+
+</body>
+</html>
