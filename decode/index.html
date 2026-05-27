@@ -280,6 +280,18 @@ copyBtn.addEventListener('click', async () => {
     copyBtn.textContent = 'Could not copy';
   }
 });
+
+// Auto-fill + auto-decode if ?vin= passed (homepage hands off here).
+(function handleVinQueryParam() {
+  const params = new URLSearchParams(window.location.search);
+  const vin = (params.get('vin') || '').toUpperCase().trim();
+  if (!vin) return;
+  vinInput.value = vin;
+  vinInput.dispatchEvent(new Event('input'));
+  if (VIN_REGEX.test(vin)) {
+    decode();
+  }
+})();
 </script>
 
 </body>
