@@ -13,21 +13,32 @@
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
   :root {
-    --slate: #2B3A4A;
-    --slate-d: #1A2330;
-    --slate-l: #5B6B7E;
-    --clay: #C97E50;
-    --clay-d: #A85D33;
-    --clay-l: #E8AB85;
-    --bone: #E8E2D2;
-    --bone-d: #C9C1AC;
-    --paper: #F7F4ED;
-    --good: #5E8C5A;
-    --warn: #D89035;
-    --safety: #B23B2F;
-    --info: #4F7795;
-    --moss: #3D5B47;
-    --sans: "DM Sans", -apple-system, sans-serif;
+    /* AutoVetting brand tokens — names retained to minimize diff against prior TrailManual theme; values now navy/electric/slate-white. */
+    --navy: #0F172A;
+    --navy-2: #1E3A5F;
+    --electric: #3B82F6;
+    --electric-hover: #2563EB;
+    --slate-white: #F8FAFC;
+    --critical: #EF4444;
+    --warning: #F59E0B;
+    --caution: #EAB308;
+    --clear: #10B981;
+
+    --slate: #0F172A;
+    --slate-d: #0B1322;
+    --slate-l: #475569;
+    --clay: #3B82F6;
+    --clay-d: #2563EB;
+    --clay-l: #93C5FD;
+    --bone: #E2E8F0;
+    --bone-d: #CBD5E1;
+    --paper: #F8FAFC;
+    --good: #10B981;
+    --warn: #F59E0B;
+    --safety: #EF4444;
+    --info: #3B82F6;
+    --moss: #10B981;
+    --sans: "Inter", -apple-system, sans-serif;
     --mono: "JetBrains Mono", monospace;
     --bg-card: #fff;
     color-scheme: light;
@@ -42,47 +53,8 @@
     line-height: 1.5;
     min-height: 100vh;
   }
-  /* ── Site header bar ─────────────────────────────────────── */
-  .site-header {
-    background: var(--clay);
-    color: var(--paper);
-    padding: 14px 24px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .site-header-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--paper);
-  }
-  .site-header-wordmark {
-    font-family: var(--sans);
-    font-weight: 500;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--paper);
-  }
-  .site-header-nav {
-    display: flex;
-    gap: 20px;
-  }
-  .site-header-nav a {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: rgba(247,244,237,0.7);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .site-header-nav a:hover { color: var(--paper); }
+  /* Site header now uses the shared /assets/css/site.css .site-header / .nav / .brand / .vet / .tm rules.
+     Local overrides removed in the AutoVetting rebrand so the navy + electric header is consistent across pages. */
   /* ── Content masthead ────────────────────────────────────── */
   .masthead {
     border-bottom: 1px solid var(--bone);
@@ -1033,6 +1005,231 @@ footer:not(.site-footer) { display: none !important; }
 /* PPI button -> AutoVetting electric */
 .ppi-btn, a.ppi-btn { background: var(--av-electric) !important; color: #FFFFFF !important; }
 .ppi-btn:hover { background: #1D4ED8 !important; }
+
+/* ============================================================
+   AUTOVETTING RESEARCH WIZARD (3-step first-visit overlay) +
+   "Quick start" restart pill in the controls bar.
+   Ported from Product/Landing-Page/index.html (the wizard +
+   faceted-sidebar pattern Daniel ratified 2026-05-27).
+   ============================================================ */
+.av-wiz-shell {
+  max-width: 1400px;
+  margin: 24px auto 32px;
+  padding: 0 32px;
+}
+.av-wiz {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  border-radius: 16px;
+  padding: 36px;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(15,23,42,0.18);
+  font-family: var(--sans);
+}
+.av-wiz-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.av-wiz-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+  flex-shrink: 0;
+}
+.av-wiz-dot.done    { background: var(--electric); }
+.av-wiz-dot.current { background: var(--electric); box-shadow: 0 0 0 4px rgba(59,130,246,0.18); }
+.av-wiz-line {
+  flex: 1;
+  height: 1.5px;
+  background: rgba(255,255,255,0.14);
+}
+.av-wiz-line.done { background: var(--electric); }
+.av-wiz-stepnum {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.04em;
+  margin-left: auto;
+}
+.av-wiz-question {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.av-wiz-hint {
+  color: rgba(255,255,255,0.78);
+  font-size: 15px;
+  margin-bottom: 22px;
+  line-height: 1.5;
+  max-width: 640px;
+}
+.av-wiz-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.av-wiz-option {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: left;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: var(--sans);
+}
+.av-wiz-option:hover {
+  background: rgba(59,130,246,0.14);
+  border-color: var(--electric);
+}
+.av-wiz-option.selected {
+  background: var(--electric);
+  border-color: var(--electric);
+}
+.av-wiz-option-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.av-wiz-option-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+}
+.av-wiz-option.selected .av-wiz-option-sub { color: rgba(255,255,255,0.92); }
+.av-wiz-budget {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.av-wiz-budget input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font: inherit;
+  width: 130px;
+}
+.av-wiz-budget input::placeholder { color: rgba(255,255,255,0.4); }
+.av-wiz-budget span { color: rgba(255,255,255,0.65); }
+.av-wiz-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.av-wiz-back {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.av-wiz-back:hover { color: #fff; }
+.av-wiz-back:disabled { opacity: 0.35; cursor: not-allowed; }
+.av-wiz-next {
+  background: var(--electric);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.av-wiz-next:hover { background: var(--electric-hover); }
+.av-wiz-skip {
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  text-decoration: underline;
+  margin-left: auto;
+  padding: 11px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.av-wiz-skip:hover { color: #fff; }
+.av-wiz-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  align-items: center;
+}
+.av-wiz-chips-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.av-wiz-chip {
+  font-size: 12px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.av-wiz-step { display: none; }
+.av-wiz-step.active { display: block; }
+.av-hidden { display: none !important; }
+
+/* Quick-start pill that reopens the wizard from the controls bar */
+.av-wiz-restart {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(59,130,246,0.08);
+  color: var(--electric);
+  border: 1px solid rgba(59,130,246,0.28);
+  border-radius: 100px;
+  padding: 7px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-left: auto;
+}
+.av-wiz-restart:hover { background: rgba(59,130,246,0.16); }
+
+@media (max-width: 640px) {
+  .av-wiz-shell { padding: 0 16px; margin: 16px auto 24px; }
+  .av-wiz { padding: 22px; border-radius: 12px; }
+  .av-wiz-question { font-size: 20px; }
+  .av-wiz-hint { font-size: 14px; }
+  .av-wiz-budget { font-size: 18px; padding: 12px 14px; }
+  .av-wiz-budget input { width: 110px; }
+  .av-wiz-restart { margin-left: 0; }
+}
 </style>
 </head>
 <body>
@@ -1049,7 +1246,7 @@ footer:not(.site-footer) { display: none !important; }
 </header>
 <div class="masthead">
   <div class="top-meta">
-    <span><a href="https://trailmanual.com" style="color:inherit;text-decoration:none;">The Used Garage</a> · Vol. <span class="vol">02</span> · Field Edition + Electric</span>
+    <span>Pinpoint &middot; AutoVetting Research Index &middot; <span class="vol">Vol. 02</span></span>
     <span id="header-budget">Budget: $6,000 – $8,000</span>
   </div>
   <h1 class="title">The <em>Used</em> Question.</h1>
@@ -1073,6 +1270,108 @@ footer:not(.site-footer) { display: none !important; }
     </div>
   </div>
 </div>
+<!-- ============================================================
+     RESEARCH WIZARD (3-step first-visit overlay)
+     Shows once per visitor; mode persists in localStorage av-research-mode.
+     The "Quick start" pill in the controls bar below reopens it.
+     ============================================================ -->
+<div class="av-wiz-shell av-hidden" id="av-wiz-shell">
+  <div class="av-wiz" role="dialog" aria-labelledby="av-wiz-q">
+    <div class="av-wiz-progress">
+      <div class="av-wiz-dot current" data-dot="1"></div>
+      <div class="av-wiz-line" data-line="1"></div>
+      <div class="av-wiz-dot" data-dot="2"></div>
+      <div class="av-wiz-line" data-line="2"></div>
+      <div class="av-wiz-dot" data-dot="3"></div>
+      <span class="av-wiz-stepnum" id="av-wiz-stepnum">Step 1 of 3</span>
+    </div>
+
+    <!-- Step 1 — Budget -->
+    <div class="av-wiz-step active" data-step="1">
+      <h2 class="av-wiz-question" id="av-wiz-q">What's your budget?</h2>
+      <p class="av-wiz-hint">Set a real range &mdash; the floor matters as much as the ceiling. You can change this any time from the filters.</p>
+      <div class="av-wiz-budget">
+        <span>$</span>
+        <input type="number" id="av-wiz-budget-min" value="6000" min="0" step="500" placeholder="6,000" aria-label="Minimum budget">
+        <span>to</span>
+        <span>$</span>
+        <input type="number" id="av-wiz-budget-max" value="10000" min="0" step="500" placeholder="10,000" aria-label="Maximum budget">
+      </div>
+      <div class="av-wiz-actions">
+        <button class="av-wiz-back" data-back-from="1" disabled>&larr; Back</button>
+        <button class="av-wiz-next" data-next-from="1">Continue <span>&rarr;</span></button>
+        <button class="av-wiz-skip" data-skip>Skip &mdash; show me everything</button>
+      </div>
+    </div>
+
+    <!-- Step 2 — Body style -->
+    <div class="av-wiz-step" data-step="2">
+      <h2 class="av-wiz-question">What kind of car do you actually need?</h2>
+      <p class="av-wiz-hint">Pick the body style that fits how you'll really use it &mdash; not the one you wish you needed.</p>
+      <div class="av-wiz-options" id="av-wiz-body">
+        <button class="av-wiz-option" data-body="Sedan">
+          <div class="av-wiz-option-title">Sedan</div>
+          <div class="av-wiz-option-sub">Daily driver, commute, fuel economy</div>
+        </button>
+        <button class="av-wiz-option" data-body="Truck">
+          <div class="av-wiz-option-title">Truck</div>
+          <div class="av-wiz-option-sub">Tow / haul ready</div>
+        </button>
+        <button class="av-wiz-option" data-body="SUV">
+          <div class="av-wiz-option-title">SUV</div>
+          <div class="av-wiz-option-sub">Space and weather capability</div>
+        </button>
+        <button class="av-wiz-option" data-body="EV">
+          <div class="av-wiz-option-title">EV / PHEV</div>
+          <div class="av-wiz-option-sub">Read battery notes carefully</div>
+        </button>
+        <button class="av-wiz-option" data-body="all">
+          <div class="av-wiz-option-title">Honestly? Not sure</div>
+          <div class="av-wiz-option-sub">Show me all 56</div>
+        </button>
+      </div>
+      <div class="av-wiz-actions">
+        <button class="av-wiz-back" data-back-from="2">&larr; Back</button>
+        <button class="av-wiz-next" data-next-from="2">Continue <span>&rarr;</span></button>
+        <button class="av-wiz-skip" data-skip>Skip &mdash; show me everything</button>
+      </div>
+    </div>
+
+    <!-- Step 3 — Priority -->
+    <div class="av-wiz-step" data-step="3">
+      <h2 class="av-wiz-question">What matters most?</h2>
+      <p class="av-wiz-hint">Last question. We'll sort the results accordingly &mdash; you can re-sort later.</p>
+      <div class="av-wiz-options" id="av-wiz-priority">
+        <button class="av-wiz-option" data-priority="reliability">
+          <div class="av-wiz-option-title">Top reliability only</div>
+          <div class="av-wiz-option-sub">Only show top-tier picks</div>
+        </button>
+        <button class="av-wiz-option" data-priority="balance">
+          <div class="av-wiz-option-title">Balance of price and reliability</div>
+          <div class="av-wiz-option-sub">Default ordering &mdash; best picks first</div>
+        </button>
+        <button class="av-wiz-option" data-priority="sport">
+          <div class="av-wiz-option-title">Sportiness</div>
+          <div class="av-wiz-option-sub">Sort by how fun it actually is</div>
+        </button>
+        <button class="av-wiz-option" data-priority="family">
+          <div class="av-wiz-option-title">Family-friendly</div>
+          <div class="av-wiz-option-sub">Only show top family picks</div>
+        </button>
+      </div>
+      <div class="av-wiz-actions">
+        <button class="av-wiz-back" data-back-from="3">&larr; Back</button>
+        <button class="av-wiz-next" data-next-from="3">See results <span>&rarr;</span></button>
+        <button class="av-wiz-skip" data-skip>Skip &mdash; show me everything</button>
+      </div>
+    </div>
+
+    <div class="av-wiz-chips" id="av-wiz-chips">
+      <span class="av-wiz-chips-label">So far:</span>
+    </div>
+  </div>
+</div>
+
 <section class="controls">
   <button class="filter-toggle-btn" id="filter-toggle-btn" aria-expanded="false">
     <span>Filters <span class="filter-toggle-label-count" id="filter-active-count"></span></span>
@@ -1198,7 +1497,7 @@ footer:not(.site-footer) { display: none !important; }
 </section>
 <footer class="site-footer">
   <p>Auto<span style="color:#3B82F6;">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup> &mdash; Know before you buy.</p>
-  <p style="margin-top:8px;">Built by the team behind <a href="https://trailmanual.com">TrailManual</a>. Reliability data synthesized from RepairPal, J.D. Power, iSeeCars, Consumer Reports, Recurrent, and owner forums. Prices reflect national averages as of May 2026; regional variation &plusmn;$1,000. None of this replaces a pre-purchase inspection.</p>
+  <p style="margin-top:8px;">Prices reflect national averages as of May 2026; regional variation &plusmn;$1,000. None of this replaces a pre-purchase inspection.</p>
 </footer>
 <script>
 const vehicles = [
@@ -1261,7 +1560,31 @@ const vehicles = [
   {id:"leaf-2015",make:"Nissan",model:"Leaf SV/SL (Lizard battery)",years:"2015",category:"EV",tier:"decent",mileageLow:60000,mileageHigh:100000,sweetSpotLow:60000,sweetSpotHigh:90000,family:"nissan-leaf",familyName:"Nissan Leaf",familyOrder:2,priceLow:5500,priceHigh:7500,reliability:3,sport:2,longevity:150000,mpg:"114 MPGe",mpgCombined:114,engine:"80kW AC motor, 24kWh battery",transmission:"Single-speed automatic",drivetrain:"FWD",range:"65–80 miles realistic (84 EPA when new)",bestYears:"2015 ('Lizard' battery designed for hot climates)",avoidYears:"2011–2014 in hot climates (severe battery degradation)",fScore:3,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"5-passenger hatch. 33.3\" rear legroom is tight, but the hatch shape makes the seats feel airier. No rear AC vents. Range is the family limiter.",summary:"Cheapest entry to EV ownership. Phoenix heat is the wildcard.",pros:["Cheap entry to EV ownership","Mechanically very simple","Free fuel","Tons of inventory"],cons:["NO LIQUID COOLING — Phoenix heat accelerates degradation","Range depends entirely on battery health","CHAdeMO fast charging is dying in North America","Verify capacity bars (12=new, 9-10=ok, 7-8=short hops only)"]},
   {id:"leaf-2013",make:"Nissan",model:"Leaf SV/SL (early)",years:"2013–2014",category:"EV",tier:"decent",mileageLow:70000,mileageHigh:120000,sweetSpotLow:60000,sweetSpotHigh:90000,family:"nissan-leaf",familyName:"Nissan Leaf",familyOrder:1,priceLow:4000,priceHigh:6000,reliability:2,sport:2,longevity:130000,mpg:"115 MPGe",mpgCombined:115,engine:"80kW AC motor, 24kWh battery",transmission:"Single-speed automatic",drivetrain:"FWD",range:"50–70 miles realistic in 2026",bestYears:"Late-2014 production (some have Lizard battery)",avoidYears:"All early 2013s in hot climates",fScore:3,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"Same body as 2015. Battery range concerns make it impractical for typical family logistics in Phoenix.",summary:"Cheap but very risky in Phoenix. Battery degradation is severe.",pros:["Very cheap entry point","Good for short, predictable commutes","Use LeafSpy app to verify SOH before buying"],cons:["Battery degradation severe in hot climates","5yr/60k battery warranty long expired","May have <50mi real range","$5,500–$7,000 to refurb battery"]},
   {id:"i3-rex",make:"BMW",model:"i3 REx",years:"2014–2016",category:"EV",tier:"decent",mileageLow:60000,mileageHigh:100000,sweetSpotLow:60000,sweetSpotHigh:100000,priceLow:8000,priceHigh:13000,reliability:3,sport:4,longevity:180000,mpg:"117 MPGe · 39 gas",mpgCombined:117,engine:"125kW motor + 0.65L gas generator, 22–33kWh battery",transmission:"Single-speed automatic",drivetrain:"RWD",range:"72 miles EV + 78 miles gas backup (REx model)",bestYears:"2016 (33kWh battery option)",avoidYears:"Pure BEV version in low-charging areas",fScore:1,fRear:0,fCargo:0,fVents:0,fThird:0,fSeats5:0,fNotes:"Only 4 passengers AND the rear coach doors only open when the front doors are open — making car-seat installation a daily hassle. Skip for families.",summary:"Quirky, premium, fun to drive. REx range extender solves anxiety. BMW tax applies.",pros:["Carbon fiber body (low weight, no rust)","Liquid-cooled battery","Genuinely fun to drive","REx eliminates range anxiety","Premium feel"],cons:["BMW parts expensive when they break","Tight on rear space","Resale value is soft","Specialized service required"]},
-  {id:"rav4-ev",make:"Toyota",model:"RAV4 EV (Tesla powertrain)",years:"2012–2014",category:"EV",tier:"decent",mileageLow:40000,mileageHigh:90000,sweetSpotLow:40000,sweetSpotHigh:70000,priceLow:8500,priceHigh:12000,reliability:1,sport:3,longevity:130000,mpg:"76 MPGe",mpgCombined:76,engine:"115kW Tesla motor, 41.8kWh Tesla battery pack",transmission:"Single-speed automatic",drivetrain:"FWD",range:"65–85 miles realistic (103 mi EPA when new)",bestYears:"Any with documented drive unit replacement after 2016",avoidYears:"Original (un-replaced) drive unit; high-heat climate history",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"RAV4 body so the family ergonomics are fine, but the underlying recommendation against this vehicle (see card cons) outweighs family creds.",summary:"Compliance car with Tesla guts. Cool concept, brutal repair reality.",pros:["Real Tesla motor (154hp, 273 lb-ft, 7.2s 0-60)","Liquid-cooled battery","Roomy SUV body"],cons:["Only ~2,500 ever made — orphaned parts","Drive unit replacement $17,467 from dealer","Tesla no longer supports it","Out-of-warranty (5yr/60k, original-owner-only)","No qualified service outside California","Phoenix heat = battery enemy"]}
+  {id:"rav4-ev",make:"Toyota",model:"RAV4 EV (Tesla powertrain)",years:"2012–2014",category:"EV",tier:"decent",mileageLow:40000,mileageHigh:90000,sweetSpotLow:40000,sweetSpotHigh:70000,priceLow:8500,priceHigh:12000,reliability:1,sport:3,longevity:130000,mpg:"76 MPGe",mpgCombined:76,engine:"115kW Tesla motor, 41.8kWh Tesla battery pack",transmission:"Single-speed automatic",drivetrain:"FWD",range:"65–85 miles realistic (103 mi EPA when new)",bestYears:"Any with documented drive unit replacement after 2016",avoidYears:"Original (un-replaced) drive unit; high-heat climate history",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"RAV4 body so the family ergonomics are fine, but the underlying recommendation against this vehicle (see card cons) outweighs family creds.",summary:"Compliance car with Tesla guts. Cool concept, brutal repair reality.",pros:["Real Tesla motor (154hp, 273 lb-ft, 7.2s 0-60)","Liquid-cooled battery","Roomy SUV body"],cons:["Only ~2,500 ever made — orphaned parts","Drive unit replacement $17,467 from dealer","Tesla no longer supports it","Out-of-warranty (5yr/60k, original-owner-only)","No qualified service outside California","Phoenix heat = battery enemy"]},
+  {id:"camry-v6-2010",make:"Toyota",model:"Camry V6 (XLE/SE)",years:"2010–2012",category:"Sedan",tier:"top",mileageLow:130000,mileageHigh:170000,sweetSpotLow:110000,sweetSpotHigh:150000,family:"toyota-camry",familyName:"Toyota Camry",familyOrder:2,priceLow:6500,priceHigh:8500,reliability:5,sport:3,longevity:280000,mpg:"19/28 mpg",mpgCombined:22,engine:"3.5L 2GR-FE V6 (268hp)",transmission:"6-spd automatic",drivetrain:"FWD",bestYears:"2011–2012 (post-launch refinements)",avoidYears:"2010 early production; ALL years require VVT-i oil line verification (LSC 90G)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Midsize sedan. 38.9\" rear legroom, 15 cu ft trunk, rear AC vents on XLE.",summary:"The 2GR-FE V6 Camry is the V6 Accord's quieter twin. 280k+ routine.",pros:["Bulletproof 2GR-FE V6 (270hp), 280k+ documented","Quieter interior than V6 Accord","268hp does 0-60 in ~6s","Toyota parts ecosystem cheaper than Honda V6"],cons:["VVT-i rubber oil line — verify steel replacement (LSC 90G) or budget engine swap","Water pump preventive replacement at 100k ($600-$900)","Dashboard leather peels in Phoenix sun (extended warranty in some regions)","Premium fuel recommended for full power"]},
+  {id:"camry-4cyl-2012",make:"Toyota",model:"Camry LE/SE/XLE (4-cyl)",years:"2012–2014",category:"Sedan",tier:"top",mileageLow:110000,mileageHigh:150000,sweetSpotLow:90000,sweetSpotHigh:140000,family:"toyota-camry",familyName:"Toyota Camry",familyOrder:1,priceLow:5500,priceHigh:7500,reliability:5,sport:2,longevity:280000,mpg:"25/35 mpg",mpgCombined:28,engine:"2.5L 2AR-FE I4 (178hp)",transmission:"6-spd automatic",drivetrain:"FWD",bestYears:"2012–2014 (7th gen, pre-CarPlay simplicity)",avoidYears:"None major; check for melting-dashboard TSB on 2012-13 in hot states",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Midsize. Roomy rear at 38.9\" legroom, 15 cu ft trunk, rear vents on XLE and Limited.",summary:"Best-selling US car for a reason. Boring, reliable, cheap to own.",pros:["280,000+ mile potential routine","Regular fuel only","Cheap insurance, parts everywhere","Most likely sedan to start every morning at 200k"],cons:["2012-13 dashboard leather melts in Phoenix-style heat (Toyota TSB; sometimes covered)","Steering feel disconnected by design","Cabin road noise on highway","JBL premium audio amp fails commonly on Limited"]},
+  {id:"crv-2015",make:"Honda",model:"CR-V EX/EX-L",years:"2015–2016",category:"SUV",tier:"top",mileageLow:100000,mileageHigh:140000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:9000,priceHigh:12000,reliability:4,sport:2,longevity:230000,mpg:"27/34 mpg",mpgCombined:29,engine:"2.4L K24W I4 (185hp)",transmission:"CVT",drivetrain:"FWD or AWD",bestYears:"2015–2016 (mid-cycle refresh, K24 + CVT mature)",avoidYears:"2017+ (1.5L turbo engine has separate oil dilution issues)",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact SUV. Best-in-class cargo, rear vents standard, AWD widely available. Reasonable family rig.",summary:"America's best-selling crossover. K24 reliability with CVT caveats.",pros:["Larger cargo than Mazda3 or Civic — actual family practicality","AWD widely available without major price premium","K24 engine 200k+ routine","27-34 mpg surprisingly good for AWD SUV"],cons:["CVT shudder same as Accord — verify HCF-2 fluid changes every 30k","K24 direct injection carbon buildup at 80k+ (walnut blast $400-$700)","A/C condenser vulnerable to stone strikes from front mount","Higher entry price than equivalent sedans"]},
+  {id:"cx5-2014",make:"Mazda",model:"CX-5 Touring/Grand Touring",years:"2014–2016",category:"SUV",tier:"top",mileageLow:100000,mileageHigh:140000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:7500,priceHigh:10000,reliability:4,sport:4,longevity:220000,mpg:"26/33 mpg",mpgCombined:28,engine:"2.5L Skyactiv-G I4 (184hp)",transmission:"6-spd auto",drivetrain:"FWD or AWD",bestYears:"2014–2016 (post-launch refinements, 2.5L engine)",avoidYears:"2013 (1st year — 2.0L only, less power)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact SUV. Slightly tighter cargo than CR-V, but markedly sportier handling. 39.3\" rear legroom.",summary:"Sportiest small SUV under $10k. Skyactiv carbon buildup is the catch.",pros:["Genuinely fun to drive for the segment","6-speed auto — no CVT to worry about","Striking styling that still looks current","AWD available without major premium"],cons:["Skyactiv-G 13:1 compression → intake valve carbon buildup at 80k+","Soul Red paint chips and fades faster than other colors (multi-layer clearcoat is delicate)","Infotainment freezes/reboots on 2014-15 (Mazda TSB available)","Slightly tighter rear cargo than CR-V"]},
+  {id:"prius-gen3-2012",make:"Toyota",model:"Prius (3rd gen)",years:"2012–2015",category:"Sedan",tier:"top",mileageLow:110000,mileageHigh:160000,sweetSpotLow:100000,sweetSpotHigh:150000,priceLow:5500,priceHigh:8500,reliability:5,sport:1,longevity:280000,mpg:"51/48 mpg",mpgCombined:50,engine:"1.8L 2ZR-FXE Atkinson + 60kW hybrid (134hp combined)",transmission:"eCVT (planetary, no belt)",drivetrain:"FWD",bestYears:"2012–2015 (post-refresh, ballast recall era)",avoidYears:"2010–2011 (verify headlight ballast recall completed)",fScore:4,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"5-passenger hatchback. Roomy interior, 21.6 cu ft cargo, no rear AC vents (real concern in Phoenix). 36.0\" rear legroom.",summary:"Unkillable used hybrid. 50 mpg, 300k+ routine, has niche failure points worth checking.",pros:["50+ mpg real-world (verified, not optimistic)","HV traction battery often outlasts the car","Atkinson 2ZR-FXE engine essentially unkillable","Massive Toyota hybrid parts and service ecosystem"],cons:["Inverter coolant pump fails at 100k+ (TSB — $250 fix that prevents $4k+ inverter damage)","HV battery degradation accelerated in Phoenix heat — verify SOH","Headlight ballast/low-beam recall — verify completion on 2010-11","Brake actuator can fail expensively ($2,000+) — pedal feel is the tell"]},
+  {id:"ram-1500-hemi-2013",make:"Ram",model:"1500 Crew Cab 5.7L Hemi",years:"2013–2014",category:"Truck",tier:"strong",mileageLow:130000,mileageHigh:170000,sweetSpotLow:110000,sweetSpotHigh:150000,priceLow:11000,priceHigh:15000,reliability:3,sport:3,longevity:200000,mpg:"15/22 mpg",mpgCombined:17,tow:"10,650 lbs",towNum:10650,engine:"5.7L Hemi V8 (395hp)",transmission:"8-spd ZF 8HP70 automatic",drivetrain:"RWD or 4WD",bestYears:"2013–2014 (post-coil-spring redesign, pre-eTorque, mature 8-spd)",avoidYears:"Any with no MDS lifter or manifold bolt service",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Full-size truck. Crew Cab has 40.3\" rear legroom — competitive with sedans — and rear AC vents standard.",summary:"Hemi V8 with the silky 8-speed ZF. Maintenance discipline decides if it survives.",pros:["5.7L Hemi V8 (395hp), classic American truck character","ZF 8HP70 8-speed is smoother than competitors' transmissions","Coil-spring rear suspension rides better than F-150/Silverado leaf springs","Tows 10,000+ lbs out of the box"],cons:["MDS (cylinder deactivation) lifters tick and fail at 100k+ — ~$1,500 to replace, often misdiagnosed by generic shops as ignition","Exhaust manifold bolts notoriously break (heat-cycle fatigue) — all 16 should be replaced together, ~$800 labor","Plastic intake manifold heater coolant leak — TSB available, often missed","Air suspension on Laramie/Limited trims is $2,500+ when it fails — verify ride height"]},
+  {id:"rogue-2014",make:"Nissan",model:"Rogue SV/SL",years:"2014–2016",category:"SUV",tier:"decent",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:110000,priceLow:7000,priceHigh:10000,reliability:2,sport:2,longevity:160000,mpg:"26/33 mpg",mpgCombined:28,engine:"2.5L QR25DE I4 (170hp)",transmission:"Xtronic CVT (JF017E)",drivetrain:"FWD or AWD",bestYears:"2014–2016 with documented JF017E CVT fluid changes",avoidYears:"Any with no documented CVT service history or no extended-warranty completion",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact-midsize crossover. 37.9\" rear legroom, 32 cu ft cargo (large for class), rear AC vents on SV/SL trims.",summary:"America's top-volume crossover with a notoriously fragile CVT. Verify discipline before buying.",pros:["Top-rated for cargo space in segment","AWD widely available without big premium","26-33 mpg surprising for size","Cheaper-than-Honda/Toyota entry price"],cons:["JF017E CVT failure is the headline buyer issue — non-negotiable to verify fluid changes every 30k","Nissan extended CVT warranty to 7yr/84k retroactively — verify completion or remediation via VIN","Without verified cooler upgrade and fluid changes: budget $4,000+ for CVT replacement","Lower-than-segment resale value because of CVT reputation (silver lining: you pay less to buy)"]},
+  {id:"explorer-2013",make:"Ford",model:"Explorer XLT/Limited (3.5L V6)",years:"2013–2015",category:"SUV",tier:"strong",mileageLow:120000,mileageHigh:160000,sweetSpotLow:100000,sweetSpotHigh:140000,priceLow:8500,priceHigh:12000,reliability:3,sport:3,longevity:190000,mpg:"17/24 mpg",mpgCombined:20,engine:"3.5L Ti-VCT V6 (290hp) — preferred",transmission:"6F50 6-spd automatic",drivetrain:"FWD or 4WD (Intelligent 4WD)",bestYears:"2013–2015 with 3.5L Ti-VCT (skip 2.0L EcoBoost variants)",avoidYears:"2.0L EcoBoost (coolant intrusion); 2011–2012 (launch-year electrical bugs)",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:1,fSeats5:1,fNotes:"Midsize 3-row SUV. 39.5\" rear legroom 2nd row, 33.3\" 3rd row (kids only), rear AC vents standard.",summary:"3-row family hauler at a real used-car price. The 3.5L V6 is the durable choice — avoid 2.0T entirely.",pros:["3-row seating at sub-$12k","3.5L Ti-VCT V6 (290hp) is the durable engine choice","AWD available with intelligent torque distribution","Comfortable highway cruiser"],cons:["3.5L INTERNAL water pump driven by timing chain — fails by 130k typically, $2,500-$3,500 because engine has to come apart","PTU (Power Transfer Unit) on AWD needs $200 fluid change every 60k — most owners skip → $1,500 PTU replacement","2.0L EcoBoost variants have known coolant intrusion that cracks heads — wrong engine, walk away","Mediocre 17/24 mpg for non-towing daily use"]},
+  {id:"corolla-2014",make:"Toyota",model:"Corolla LE/S",years:"2014–2016",category:"Sedan",tier:"top",mileageLow:100000,mileageHigh:140000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:7500,priceHigh:10000,reliability:5,sport:1,longevity:280000,mpg:"30/40 mpg",mpgCombined:34,engine:"1.8L 2ZR-FE I4 (132hp)",transmission:"K313 CVT (Toyota's CVT)",drivetrain:"FWD",bestYears:"2014–2016 (post-launch, K313 CVT mature)",avoidYears:"None major",fScore:3,fRear:1,fCargo:0,fVents:0,fThird:0,fSeats5:1,fNotes:"Compact sedan. 41.4\" rear legroom (best in class — feels bigger inside than out), 13 cu ft trunk, no rear AC vents.",summary:"Bulletproof commuter sedan. The K313 CVT is unsung — milder than Honda/Nissan CVT issues.",pros:["280,000+ mile potential, routine","Regular fuel, 34 mpg combined","Toyota K313 CVT noticeably more reliable than Nissan JF017E or Honda 4-cyl CVT","Cheapest sedan to insure and maintain in segment"],cons:["CVT fluid change at 60k often skipped (Toyota WS fluid only — universal CVT fluid causes problems)","Water pump preventive replacement at 100k ($350)","Headlight projector clearcoat hazes on 2014-15 (DIY restoration $20)","Slow off the line (132hp moves 2,860 lbs at relaxed pace)"]},
+  {id:"edge-2013",make:"Ford",model:"Edge SEL/Limited (3.5L V6)",years:"2013–2015",category:"SUV",tier:"strong",mileageLow:110000,mileageHigh:150000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:7500,priceHigh:11000,reliability:3,sport:3,longevity:190000,mpg:"17/25 mpg",mpgCombined:20,engine:"3.5L Ti-VCT V6 (285hp) or 3.7L V6 (305hp) — both preferred",transmission:"6F50 6-spd automatic",drivetrain:"FWD or AWD",bestYears:"2013–2015 with 3.5L Ti-VCT or 3.7L V6",avoidYears:"2.0L EcoBoost (coolant intrusion); 1st gen pre-2011 (older transmission)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Midsize 2-row SUV. 40.6\" rear legroom, 32.2 cu ft cargo, rear AC vents standard.",summary:"Bigger sibling to Escape, smaller sibling to Explorer. The 3.5L is the safe choice.",pros:["Same 3.5L Ti-VCT V6 as Explorer (no 3rd-row demands on it)","More cargo than Escape, less mass than Explorer","AWD available","Comfortable highway cruiser"],cons:["3.5L internal water pump (timing-chain driven) — $2,500-$3,500 fix, often required by 130k (same engine as Explorer)","PTU on AWD models needs $200 fluid service every 60k or $1,500 PTU replacement when neglected","2.0L EcoBoost variants have coolant intrusion — avoid","MyFordTouch infotainment is notoriously slow and freezes on 2013-14 (updated screens available on later years)"]},
+  {id:"equinox-v6-2014",make:"Chevrolet",model:"Equinox LT/LTZ V6 (3.6L LFX only)",years:"2014–2017",category:"SUV",tier:"strong",mileageLow:110000,mileageHigh:150000,sweetSpotLow:100000,sweetSpotHigh:140000,priceLow:7500,priceHigh:11000,reliability:4,sport:3,longevity:200000,mpg:"17/24 mpg",mpgCombined:20,engine:"3.6L LFX V6 (301hp) — engine code 8th VIN digit is 3 or W",transmission:"6T70 6-spd automatic",drivetrain:"FWD or AWD",bestYears:"2014–2017 with 3.6L LFX V6 ONLY",avoidYears:"ALL 2.4L Ecotec variants (chronic catastrophic oil consumption); ALL 2018+ 1.5T",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact-midsize SUV. 39.9\" rear legroom (best in class), 31.4 cu ft cargo, rear vents standard. The bigger usable family rig hiding in the Equinox lineup.",summary:"The 3.6L V6 Equinox is the hidden gem; the 2.4L variant is the disaster. Engine code matters more than year.",pros:["3.6L LFX V6 is among GM's most reliable engines — routine 200k+","AWD available across all years","Bigger rear seat than CR-V or RAV4","Comfortable highway cruiser at low price"],cons:["The 2.4L Ecotec variant has CATASTROPHIC oil consumption — burns a quart per 1,000 miles routinely. CHECK VIN'S 8TH DIGIT: 1 or W (not 3) = 2.4L, walk away.","Water pump on 3.6L V6 needs preventive at 100k ($700-$900)","Plastic timing chain guides on 3.6L start wearing at 150k (chain rattle on cold start = caught early)","GM interior plastics show wear faster than Japanese rivals; infotainment slow on 2014-2015"]},
+  {id:"malibu-2014",make:"Chevrolet",model:"Malibu LT/LTZ (2.5L only)",years:"2014–2015",category:"Sedan",tier:"decent",mileageLow:110000,mileageHigh:150000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:5500,priceHigh:8000,reliability:3,sport:2,longevity:170000,mpg:"25/36 mpg",mpgCombined:29,engine:"2.5L Ecotec LCV I4 (196hp) — engine code 8th VIN digit is A or M",transmission:"6T40 6-spd automatic",drivetrain:"FWD",bestYears:"2014–2015 with 2.5L Ecotec (pre-9-speed, pre-1.5T)",avoidYears:"2.0T variants (timing chain stretch); ALL 2016+ 9-speed; ALL 2016+ 1.5T (oil dilution)",fScore:4,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"Midsize sedan. 36.8\" rear legroom (tighter than Camry/Accord), 16.3 cu ft trunk, no rear AC vents on most trims.",summary:"Cheap entry to the midsize segment if you find a 2.5L NA. The 9th gen redesign and turbo engines are the trap.",pros:["Cheapest midsize sedan under $7k routinely","2.5L Ecotec naturally aspirated is decent and predictable","Decent 29mpg combined","Easy to find inventory (high fleet/rental volume)"],cons:["Production cancelled — long-term parts availability concern","2.0T variants have timing chain stretch by 100k ($2,000+ repair)","A/C compressor failures common on 2014-2015 (Delphi compressor TSB)","Resale value drops faster than Camry/Accord — but cheaper to enter too"]},
+  {id:"tucson-nu-2016",make:"Hyundai",model:"Tucson SE/SEL (2.0L Nu only)",years:"2016–2018",category:"SUV",tier:"decent",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:115000,priceLow:8500,priceHigh:12000,reliability:3,sport:2,longevity:180000,mpg:"23/30 mpg",mpgCombined:26,engine:"2.0L Nu I4 (164hp) — engine code 8th VIN digit is 4",transmission:"6-spd automatic",drivetrain:"FWD or AWD",bestYears:"2016–2018 with 2.0L Nu engine",avoidYears:"ALL 1.6T variants (7-spd DCT clutch judder); ALL pre-2016 Tucsons (2.4L Theta II rod-bearing era)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact SUV. 38.2\" rear legroom, 31 cu ft cargo, rear vents on SEL+ trims.",summary:"Hyundai's 3rd-gen Tucson with the safer Nu engine. Long warranty + low entry price + 1.6T trap to avoid.",pros:["Original 10yr/100k powertrain warranty (transferable 5yr/60k to second owner)","Cheaper than CR-V/RAV4 at equivalent mileage","Roomy cargo for compact class","Touchscreen infotainment ahead of Japanese rivals in this price range"],cons:["1.6T variants have chronic low-speed DCT clutch judder — TSB software update available but rarely applied. VERIFY engine code before buying.","Valve cover gasket leaks on 2.0L Nu at 100k+ ($300 fix)","A/C condenser leaks similar to Honda pattern (front-mounted vulnerable)","Resale value drops 30-40% faster than Japanese SUVs in same mileage range"]},
+  {id:"escape-2013",make:"Ford",model:"Escape SE/SEL (2.5L NA only)",years:"2013–2018",category:"SUV",tier:"decent",mileageLow:100000,mileageHigh:140000,sweetSpotLow:85000,sweetSpotHigh:125000,priceLow:6500,priceHigh:9500,reliability:2,sport:3,longevity:170000,mpg:"22/31 mpg",mpgCombined:25,engine:"2.5L Duratec I4 NA (168hp) — engine code 8th VIN digit is 7",transmission:"6F35 6-spd automatic",drivetrain:"FWD",bestYears:"2015–2018 with 2.5L Duratec NA only",avoidYears:"ALL 1.6L EcoBoost (catastrophic coolant intrusion → head warp); ALL 1.5L EcoBoost replacement (same flaw, 2017+); 2.0L EcoBoost wastegate carbon (more salvageable but expensive)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact SUV. 36.8\" rear legroom (tight for class), 34 cu ft cargo behind 2nd row, rear vents on SEL+ trims.",summary:"Stylish on the outside, engine-roulette on the inside. The 2.5L NA is the only safe configuration.",pros:["Stylish for the segment — looks more expensive than it is","2.5L Duratec NA is the durable choice (don't be tempted by EcoBoost)","Decent cargo behind 2nd row","Cheap inventory"],cons:["1.6L EcoBoost has KNOWN coolant intrusion that warps heads → $4,000+ engine work. ENGINE CODE IS LIFE-OR-DEATH on this vehicle — verify before any test drive.","1.5L EcoBoost (2017+ replacement) has the same flaw, just renamed","PTU (Power Transfer Unit) on AWD models needs fluid service every 30k miles or fails completely ($1,500+) — almost never done","6F35 transmission has shift quality TSBs (2013-2015 especially) and 1-2 shift flare on cold mornings"]},
+  {id:"crosstrek-2014",make:"Subaru",model:"Crosstrek 2.0i Premium/Limited",years:"2014–2017",category:"SUV",tier:"strong",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:120000,priceLow:8500,priceHigh:12500,reliability:4,sport:2,longevity:200000,mpg:"26/33 mpg",mpgCombined:29,engine:"2.0L FB20 boxer-4 (148hp)",transmission:"CVT (Subaru Lineartronic) or 5-spd manual",drivetrain:"AWD standard",bestYears:"2014–2017 (post-launch, FB-era refinement)",avoidYears:"2013 launch year; 2018+ shifts to new platform",fScore:4,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"Lifted Impreza hatch. 35.4\" rear legroom, 22 cu ft cargo, no rear AC vents. 8.7\" ground clearance is the differentiator.",summary:"AWD standard on a hatchback budget. The Subaru oil-consumption pattern is the catch.",pros:["AWD standard at this price point — practically unique under $13k","8.7\" ground clearance handles dirt roads and Phoenix monsoon flooding","Subaru's CVT is more reliable than Nissan JF017E","Hatchback practicality with crossover height"],cons:["FB20 oil consumption pattern — check oil weekly, top up Subaru 0W-20 only","Head gasket pattern from EJ era mostly fixed but documented exceptions remain on FB","Slow — 148hp pushing 3,100 lbs of AWD","CVT fluid change at 60k often skipped (Subaru CVTF-II fluid only — universal causes shudder)"]},
+  {id:"elantra-nu-2014",make:"Hyundai",model:"Elantra GLS/Limited (1.8L Nu)",years:"2014–2016",category:"Sedan",tier:"strong",mileageLow:100000,mileageHigh:140000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:5500,priceHigh:8000,reliability:4,sport:2,longevity:180000,mpg:"28/38 mpg",mpgCombined:32,engine:"1.8L Nu I4 (148hp) — engine code 8th VIN digit is 5",transmission:"6-spd automatic or 6-spd manual",drivetrain:"FWD",bestYears:"2014–2016 with 1.8L Nu (engine code 5)",avoidYears:"2.0L Nu Sport variants (different tuning); 2.4L Theta II any year (rod-bearing exposure)",fScore:3,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"Compact sedan. 33.1\" rear legroom (modest), 14.8 cu ft trunk, no rear AC vents.",summary:"Cheapest sedan with 10/100 warranty in this database. 1.8L Nu is a sleeper-reliable engine.",pros:["Original 10yr/100k powertrain warranty (transferable 5yr/60k to second owner)","1.8L Nu engine surprisingly durable — among most reliable sub-$8k sedans","Cheap insurance and parts","Hyundai recall response (Theta II) was thorough — verify VIN at hyundaiusa.com"],cons:["Verify 1.8L Nu (engine code '5') — the 2.4L Theta II variants had rod-bearing recalls","Cabin road noise on highway is noticeable","Soft interior plastics wear faster than rivals","Resale value drops faster than Civic or Corolla (silver lining: cheaper to buy in)"]},
+  {id:"soul-2014",make:"Kia",model:"Soul Plus/Exclaim (2.0L Nu)",years:"2014–2017",category:"Sedan",tier:"strong",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:115000,priceLow:6500,priceHigh:9500,reliability:4,sport:2,longevity:180000,mpg:"24/30 mpg",mpgCombined:26,engine:"2.0L Nu I4 (164hp) — engine code 8th VIN digit is 5",transmission:"6-spd automatic or 6-spd manual",drivetrain:"FWD",bestYears:"2014–2017 with 2.0L Nu (Plus and Exclaim trims)",avoidYears:"1.6L GDI variant (Base trim) has carbon buildup issues; 2018+ (different platform)",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Box-on-wheels compact. 39.1\" rear legroom (extraordinary for its size), 24.2 cu ft cargo, rear AC vents on Plus+.",summary:"Quirky, practical, surprisingly roomy. Engine code is the decision: pick 2.0L Nu, skip 1.6L.",pros:["Cargo and rear-seat space punches way above its footprint","Box shape = easy parking, easy loading, great visibility","2.0L Nu engine durable (same engine as Elantra)","Original 10yr/100k powertrain warranty"],cons:["1.6L GDI base trim has intake valve carbon buildup at 80k+ — verify engine code","Engine code in 8th VIN digit: '5' = 2.0L Nu (safe); 'A' or 'B' = 1.6L (carbon issue)","No AWD option ever — limits winter buyers in northern states","Resale value drops faster than equivalent Honda/Toyota hatchbacks"]},
+  {id:"model-3-2018",make:"Tesla",model:"Model 3 Standard Range / Long Range",years:"2018–2019",category:"EV",tier:"strong",mileageLow:60000,mileageHigh:110000,sweetSpotLow:50000,sweetSpotHigh:100000,priceLow:15000,priceHigh:22000,reliability:3,sport:5,longevity:250000,mpg:"126 MPGe",mpgCombined:126,engine:"Single motor (Standard Range RWD) or dual motor (Long Range AWD)",transmission:"Single-speed direct drive",drivetrain:"RWD or AWD",range:"220–310 miles depending on config (degrades to 200–280 by 100k)",bestYears:"Late 2018 + 2019 (post-production-ramp build quality)",avoidYears:"Early-2018 builds (paint, panel gaps, door alignment well-documented)",fScore:4,fRear:1,fCargo:1,fVents:0,fThird:0,fSeats5:1,fNotes:"Compact sedan. 35.2\" rear legroom, 15 cu ft trunk + frunk, no rear AC vents (heat-pump variant only).",summary:"Cheapest entry to Tesla. Supercharger network is the value driver; 2018 build quality is the catch.",pros:["Tesla Supercharger network — fundamentally better road-trip experience than other EVs","Quick: 0-60 in 5.3s (RWD) or 4.4s (LR AWD)","Active battery thermal management handles Phoenix heat well","OTA updates continuously improve the car (rare among used cars)"],cons:["Verify battery range via Service Mode — 2018-19s often show 10-15% degradation by 100k miles","Early 2018 build quality is genuinely poor (paint runs, panel gaps, door alignment, water leaks)","No CarPlay or Android Auto, ever — locked into Tesla's UI","Out-of-warranty service is Tesla-only, slow scheduling, expensive parts"]},
+  {id:"rdx-2013",make:"Acura",model:"RDX (2nd gen)",years:"2013–2018",category:"SUV",tier:"top",mileageLow:110000,mileageHigh:150000,sweetSpotLow:100000,sweetSpotHigh:140000,priceLow:9000,priceHigh:13000,reliability:4,sport:3,longevity:230000,mpg:"20/28 mpg",mpgCombined:23,engine:"3.5L J35Y6 V6 (273hp)",transmission:"6-spd automatic",drivetrain:"FWD or SH-AWD",bestYears:"2013–2018 (2nd gen — V6 only, no turbo nonsense)",avoidYears:"2019+ (1st year of 3rd gen with new 2.0T engine)",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact luxury SUV. 38.3\" rear legroom, 26.1 cu ft cargo, rear AC vents standard. SH-AWD on AWD trims is excellent in snow.",summary:"MDX's smaller sibling. J35 V6 is bulletproof. Quiet luxury entry under $13k.",pros:["J35 V6 (Honda's legendary mid-size engine) — 230k+ routine","Quieter and more premium than CR-V at similar money","SH-AWD on AWD trims is genuinely excellent","Tech-trim features for the era (BlindSpot Info, lane keeping)"],cons:["Honda VCM on V6 = right rear motor mount wear by 90k ($500 fix; same story as Accord V6)","Power steering pump leaks at 100k+ ($600)","AcuraLink DVD navigation drive failure on Technology trim (~$500 used unit)","Premium fuel recommended for full power output"]},
+  {id:"wrangler-jku-2014",make:"Jeep",model:"Wrangler Unlimited (JK 4-door)",years:"2012–2017",category:"SUV",tier:"strong",mileageLow:100000,mileageHigh:140000,sweetSpotLow:90000,sweetSpotHigh:130000,priceLow:13000,priceHigh:18000,reliability:3,sport:3,longevity:200000,mpg:"16/21 mpg",mpgCombined:18,engine:"3.6L Pentastar V6 (285hp) — replaced 3.8L in 2012",transmission:"6-spd manual or 5-spd automatic",drivetrain:"4WD (Command-Trac or Rock-Trac)",bestYears:"2014–2017 (post-Pentastar cylinder-2 head fix)",avoidYears:"2012–2013 Pentastar without verified left-bank head replacement",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"4-door body. 37.2\" rear legroom, 31.5 cu ft cargo (top up), rear AC vents standard. The Wrangler that works as a family vehicle.",summary:"JKU is the only Wrangler that's family-practical. Pentastar cylinder-2 head and the death-wobble triangle are the inspections that matter.",pros:["Real off-road capability (Rubicon trim has lockers + sway bar disconnect)","Removable doors, top, windshield — open-air experience","Massive aftermarket support","Holds value better than any SUV in segment"],cons:["2012–2013 Pentastar cylinder-2 head failure ($3,500-$5,000) — verify TSB 09-005-12 completed","Death wobble triangle: track bar, steering damper, control arm bushings — common at 100k+ ($800-$1,500 to address all)","Front axle seal leaks (Dana 30 or Rubicon Dana 44) routine maintenance","Worst fuel economy on this list at 18 mpg combined"]},
+  {id:"mustang-gt-2015",make:"Ford",model:"Mustang GT (S550, 5.0L Coyote)",years:"2015–2017",category:"Sedan",tier:"strong",mileageLow:60000,mileageHigh:100000,sweetSpotLow:50000,sweetSpotHigh:90000,priceLow:18000,priceHigh:24000,reliability:4,sport:5,longevity:200000,mpg:"15/25 mpg",mpgCombined:18,engine:"5.0L Coyote V8 (435hp)",transmission:"6-spd manual or 6-spd automatic (10-spd from 2018)",drivetrain:"RWD",bestYears:"2015–2017 (S550, IRS suspension, pre-10-speed)",avoidYears:"EcoBoost variants if you want the muscle-car experience; pre-2015 S197 lacks IRS",fScore:1,fRear:0,fCargo:1,fVents:0,fThird:0,fSeats5:0,fNotes:"Coupe or convertible. 30.6\" rear legroom (kids only), 13.5 cu ft trunk, no rear AC vents. This is not a family car in any sense.",summary:"S550 Mustang GT with the legendary Coyote V8. IRS finally arrived in 2015 — handles like a proper sports car.",pros:["5.0L Coyote V8 — among the most reliable modern American V8s","IRS rear suspension finally appeared in 2015 (S550 redesign)","6-speed manual or auto — manuals hold value better","Massive aftermarket and performance community"],cons:["Premium fuel required for full power","BMR or MGW shifter often needed if previous owner abused — feel shift quality carefully","Coyote oil consumption pattern on some 2015-17 (Ford TSB) — check oil monitor and listen for ticking","Rear seats are emergency-only — 30.6\" legroom won't fit adults"]},
+  {id:"sorento-v6-2016",make:"Kia",model:"Sorento EX/SX V6 (3rd gen, 3-row)",years:"2016–2018",category:"SUV",tier:"strong",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:120000,priceLow:9500,priceHigh:13500,reliability:4,sport:2,longevity:200000,mpg:"18/26 mpg",mpgCombined:21,engine:"3.3L Lambda II V6 (290hp) — engine code 8th VIN digit is 8",transmission:"6-spd automatic",drivetrain:"FWD or AWD",bestYears:"2016–2018 with 3.3L V6 (Lambda II)",avoidYears:"2.4L Theta II (rod-bearing exposure on EX and lower trims); 2.0T (carbon buildup + DCT issues)",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:1,fSeats5:1,fNotes:"Midsize 3-row SUV. 39.4\" rear legroom 2nd row, 31.7\" 3rd row (kids only), rear AC vents standard. Real 3-row family rig.",summary:"3-row family SUV with V6 reliability and Kia's 10/100 warranty. Engine code matters here too.",pros:["3.3L Lambda II V6 is genuinely reliable — 200k+ documented","Original 10yr/100k powertrain warranty (transferable 5/60)","3-row seating + rear vents at compact-SUV money","Smoother and quieter than Honda Pilot equivalent year"],cons:["2.4L Theta II variant had rod-bearing recall — engine code 8th VIN digit '8' confirms 3.3L V6 (safe)","2.0T variant has carbon buildup + 7-spd DCT judder — skip","Sorento's 3rd-row is tighter than Explorer/Highlander — true 'occasional use' only","Resale value drops faster than Toyota/Honda equivalent"]},
+  {id:"tiguan-2013",make:"Volkswagen",model:"Tiguan S/SE/SEL",years:"2013–2017",category:"SUV",tier:"decent",mileageLow:90000,mileageHigh:130000,sweetSpotLow:80000,sweetSpotHigh:115000,priceLow:7500,priceHigh:11000,reliability:2,sport:3,longevity:170000,mpg:"21/26 mpg",mpgCombined:23,engine:"2.0L TSI EA888 I4 turbo (200hp)",transmission:"6-spd automatic (Tiptronic)",drivetrain:"FWD or 4Motion AWD",bestYears:"2013–2017 (2nd-gen EA888 with revised tensioner)",avoidYears:"Any without documented timing chain tensioner service history",fScore:4,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact SUV. 35.8\" rear legroom, 23.8 cu ft cargo, rear AC vents on SE and above. Premium feel for the segment.",summary:"VW's compact SUV with the EA888 turbo. Premium interior, VW reliability tax applies.",pros:["Premium interior feel for the price","2.0T (200hp) — quicker than CR-V/RAV4","AWD (4Motion) available","Tight, European driving feel"],cons:["EA888 timing chain tensioner is the trap — failure causes catastrophic engine damage ($4,000+). Verify service history","Carbon buildup on intake valves at 60-80k from direct injection ($400-$700 walnut blast)","Water pump (plastic impeller) common failure at 80-100k ($600)","VW parts and labor cost more than Japanese rivals — find an indie VW shop before buying"]},
+  {id:"nx-300h-2015",make:"Lexus",model:"NX 300h (Hybrid)",years:"2015–2018",category:"SUV",tier:"top",mileageLow:80000,mileageHigh:120000,sweetSpotLow:70000,sweetSpotHigh:110000,priceLow:13000,priceHigh:18000,reliability:5,sport:2,longevity:250000,mpg:"33/30 mpg",mpgCombined:31,engine:"2.5L 2AR-FXE Atkinson + hybrid motors (194hp combined)",transmission:"eCVT (planetary, Toyota Hybrid)",drivetrain:"AWD (electric rear axle)",bestYears:"2015–2018 (1st gen NX, Toyota Hybrid Synergy Drive)",avoidYears:"NX 200t (2.0T) variant — different engine, more issues; pick 300h",fScore:5,fRear:1,fCargo:1,fVents:1,fThird:0,fSeats5:1,fNotes:"Compact luxury SUV. 36.1\" rear legroom, 17.7 cu ft cargo, rear AC vents standard.",summary:"Luxury Lexus hybrid using the Camry Hybrid's drivetrain. Cheaper to run than a Corolla.",pros:["Toyota Hybrid Synergy Drive — bulletproof drivetrain","31 mpg combined for AWD luxury SUV is exceptional","Quieter than most Lexus models in this budget","HV traction battery often outlasts the chassis (15+ years routine)"],cons:["Pick NX 300h (hybrid) over NX 200t (2.0T) — 200t has carbon buildup + turbo wear at this mileage","Inverter coolant pump TSB (~$250 fix prevents $4k+ damage) — same story as Prius","HV battery degradation accelerated in Phoenix heat — verify SOH before buying","Brake actuator can fail expensively ($2,000+) — pedal feel is the early tell"]}
 ];
 const watchOuts = [
   {name:"Toyota RAV4 EV (any)",reason:"Tesla powertrain in a compliance-built Toyota. Parts orphaned, drive unit failures, $17k+ repairs. Stay away."},
@@ -2001,6 +2324,252 @@ document.getElementById("sport-toggle").addEventListener("click", async () => {
     btn.classList.toggle("open", isOpen);
     btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
+})();
+
+// ── AutoVetting research wizard ──────────────────────────────
+// 3-step overlay (budget / body / priority) shown on first visit.
+// On completion or skip the page transitions to the existing
+// faceted-filter view; mode persists in localStorage av-research-mode.
+// URL params from the homepage hub (?budget=&type=&priority=) are
+// honoured: if any are present we apply them and skip the wizard.
+(function() {
+  var MODE_KEY = "av-research-mode";
+  var shell = document.getElementById("av-wiz-shell");
+  if (!shell) return;
+  var qs = new URLSearchParams(window.location.search);
+  var hubBudget   = qs.get("budget")   || "";
+  var hubType     = qs.get("type")     || "";
+  var hubPriority = qs.get("priority") || "";
+  var hasHub = !!(hubBudget || hubType || hubPriority);
+
+  // Mapping from homepage-hub vocabulary to pinpoint internal state
+  var budgetBands = {
+    "under-10k": [0,     10000],
+    "10-15k":    [10000, 15000],
+    "15-20k":    [15000, 20000],
+    "20-30k":    [20000, 30000],
+    "30k-plus":  [30000, 100000]
+  };
+  var typeMap = {
+    "sedan":     "Sedan",
+    "suv":       "SUV",
+    "truck":     "Truck",
+    "wagon":     "all",
+    "hatch":     "all",
+    "hybrid-ev": "EV"
+  };
+  var priorityMap = {
+    "reliability":   "reliability",
+    "balance":       "balance",
+    "sport":         "sport",
+    "fun-to-drive":  "sport",
+    "family":        "family",
+    "cargo":         "family",
+    "fuel-economy":  "balance",
+    "cheap-to-fix":  "reliability",
+    "off-road":      "balance"
+  };
+
+  // Apply a wizard selection bundle to the existing pinpoint state machine
+  function apply(bundle) {
+    try {
+      if (bundle.budgetMin != null && bundle.budgetMax != null) {
+        state.budgetMin = bundle.budgetMin;
+        state.budgetMax = bundle.budgetMax;
+        var bmin = document.getElementById("budget-min");
+        var bmax = document.getElementById("budget-max");
+        if (bmin) bmin.value = bundle.budgetMin;
+        if (bmax) bmax.value = bundle.budgetMax;
+      }
+      if (bundle.body) {
+        state.category = bundle.body;
+        document.querySelectorAll("#category-filter .pill").forEach(function(p) {
+          p.classList.toggle("active", p.dataset.cat === bundle.body);
+        });
+      }
+      if (bundle.priority === "reliability") {
+        state.tier = "top";
+        document.querySelectorAll("#tier-filter .pill").forEach(function(p) {
+          p.classList.toggle("active", p.dataset.tier === "top");
+        });
+        state.sort = "reliability";
+      } else if (bundle.priority === "sport") {
+        state.sort = "sport";
+      } else if (bundle.priority === "family") {
+        state.familyFilters.add("top");
+        document.querySelectorAll("#family-filter .pill.family-pill").forEach(function(p) {
+          if (p.dataset.family === "top") p.classList.add("active");
+        });
+        state.sort = "family";
+      }
+      var sortSel = document.getElementById("sort-select");
+      if (sortSel) sortSel.value = state.sort;
+      if (typeof renderGrid === "function") renderGrid();
+      if (typeof renderStats === "function") renderStats();
+      if (typeof renderWatchOuts === "function") renderWatchOuts();
+    } catch (e) { console.warn("wizard apply failed", e); }
+  }
+
+  // Wizard state-machine
+  var step = 1;
+  var selection = { body: null, priority: null };
+
+  function showStep(n) {
+    step = n;
+    shell.querySelectorAll(".av-wiz-step").forEach(function(s) {
+      s.classList.toggle("active", parseInt(s.dataset.step, 10) === n);
+    });
+    shell.querySelectorAll(".av-wiz-dot").forEach(function(d) {
+      var idx = parseInt(d.dataset.dot, 10);
+      d.classList.toggle("done", idx < n);
+      d.classList.toggle("current", idx === n);
+    });
+    shell.querySelectorAll(".av-wiz-line").forEach(function(l) {
+      l.classList.toggle("done", parseInt(l.dataset.line, 10) < n);
+    });
+    var sn = document.getElementById("av-wiz-stepnum");
+    if (sn) sn.textContent = "Step " + n + " of 3";
+    var backBtn = shell.querySelector('[data-back-from="' + n + '"]');
+    if (backBtn) backBtn.disabled = (n === 1);
+    refreshChips();
+  }
+
+  function refreshChips() {
+    var chips = document.getElementById("av-wiz-chips");
+    if (!chips) return;
+    // Remove existing chips other than the label
+    [].slice.call(chips.querySelectorAll(".av-wiz-chip")).forEach(function(c) { c.remove(); });
+    var bmin = document.getElementById("av-wiz-budget-min");
+    var bmax = document.getElementById("av-wiz-budget-max");
+    if (bmin && bmax && bmin.value && bmax.value) {
+      var c = document.createElement("span");
+      c.className = "av-wiz-chip";
+      c.textContent = "$" + Number(bmin.value).toLocaleString() + " — $" + Number(bmax.value).toLocaleString();
+      chips.appendChild(c);
+    }
+    if (selection.body) {
+      var c2 = document.createElement("span");
+      c2.className = "av-wiz-chip";
+      c2.textContent = selection.body === "all" ? "Any body" : selection.body;
+      chips.appendChild(c2);
+    }
+    if (selection.priority) {
+      var labelMap = {
+        reliability: "Reliability first",
+        balance:     "Balanced",
+        sport:       "Sporty",
+        family:      "Family-friendly"
+      };
+      var c3 = document.createElement("span");
+      c3.className = "av-wiz-chip";
+      c3.textContent = labelMap[selection.priority] || selection.priority;
+      chips.appendChild(c3);
+    }
+  }
+
+  function commit() {
+    var bmin = document.getElementById("av-wiz-budget-min");
+    var bmax = document.getElementById("av-wiz-budget-max");
+    var bundle = {
+      budgetMin: bmin && bmin.value ? Number(bmin.value) : null,
+      budgetMax: bmax && bmax.value ? Number(bmax.value) : null,
+      body: selection.body && selection.body !== "all" ? selection.body : null,
+      priority: selection.priority
+    };
+    try { localStorage.setItem(MODE_KEY, "sidebar"); } catch(e) {}
+    apply(bundle);
+    closeWizard();
+  }
+
+  function skip() {
+    try { localStorage.setItem(MODE_KEY, "sidebar"); } catch(e) {}
+    closeWizard();
+  }
+
+  function openWizard() {
+    shell.classList.remove("av-hidden");
+    step = 1; selection = { body: null, priority: null };
+    shell.querySelectorAll(".av-wiz-option.selected").forEach(function(b) { b.classList.remove("selected"); });
+    showStep(1);
+    shell.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  function closeWizard() { shell.classList.add("av-hidden"); }
+
+  // Wire option clicks
+  document.getElementById("av-wiz-body").addEventListener("click", function(e) {
+    var b = e.target.closest(".av-wiz-option");
+    if (!b) return;
+    selection.body = b.dataset.body;
+    document.querySelectorAll("#av-wiz-body .av-wiz-option").forEach(function(x) { x.classList.toggle("selected", x === b); });
+    refreshChips();
+  });
+  document.getElementById("av-wiz-priority").addEventListener("click", function(e) {
+    var b = e.target.closest(".av-wiz-option");
+    if (!b) return;
+    selection.priority = b.dataset.priority;
+    document.querySelectorAll("#av-wiz-priority .av-wiz-option").forEach(function(x) { x.classList.toggle("selected", x === b); });
+    refreshChips();
+  });
+
+  // Wire next / back / skip
+  shell.addEventListener("click", function(e) {
+    var nxt = e.target.closest(".av-wiz-next");
+    var back = e.target.closest(".av-wiz-back");
+    var sk = e.target.closest(".av-wiz-skip");
+    if (nxt) {
+      var from = parseInt(nxt.dataset.nextFrom, 10);
+      if (from < 3) { showStep(from + 1); }
+      else { commit(); }
+    } else if (back) {
+      var bf = parseInt(back.dataset.backFrom, 10);
+      if (bf > 1) showStep(bf - 1);
+    } else if (sk) {
+      skip();
+    }
+  });
+
+  // Live chip update as user types budget
+  ["av-wiz-budget-min","av-wiz-budget-max"].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener("input", refreshChips);
+  });
+
+  // Inject "Quick start" restart pill into the controls bar
+  var collapsible = document.getElementById("filter-collapsible");
+  if (collapsible) {
+    var firstRow = collapsible.querySelector(".control-row");
+    if (firstRow) {
+      var restart = document.createElement("button");
+      restart.type = "button";
+      restart.className = "av-wiz-restart";
+      restart.id = "av-wiz-restart";
+      restart.innerHTML = "&#8635; Quick start";
+      restart.title = "Reopen the guided 3-step wizard";
+      restart.addEventListener("click", openWizard);
+      firstRow.appendChild(restart);
+    }
+  }
+
+  // Decide initial mode
+  var mode = null;
+  try { mode = localStorage.getItem(MODE_KEY); } catch(e) {}
+
+  if (hasHub) {
+    // Homepage hub already collected answers — apply them and skip wizard
+    var band = budgetBands[hubBudget];
+    var bundle = {
+      budgetMin: band ? band[0] : null,
+      budgetMax: band ? band[1] : null,
+      body:      typeMap[hubType] && typeMap[hubType] !== "all" ? typeMap[hubType] : null,
+      priority:  priorityMap[hubPriority] || null
+    };
+    try { localStorage.setItem(MODE_KEY, "sidebar"); } catch(e) {}
+    // Defer until after the IIFE init has run (it sets initial state)
+    setTimeout(function(){ apply(bundle); }, 0);
+  } else if (!mode) {
+    // First visit — show the wizard
+    openWizard();
+  }
 })();
 </script>
 </body>
