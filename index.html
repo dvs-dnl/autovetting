@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
   /* ===== HERO (compact, immediately gives way to teasers) ===== */
@@ -303,6 +303,180 @@
     .step-ribbon a { padding: 7px 11px; font-size: 12px; }
     .field-row > * { min-width: 100%; }
   }
+
+  /* ============================================================
+     Pinpoint brief showcase (auto-playing animated sentence)
+     ============================================================ */
+  .pp-showcase {
+    margin: 56px auto 0;
+    max-width: 1100px;
+    padding: 0 24px;
+  }
+  .pp-showcase-card {
+    position: relative;
+    background: linear-gradient(165deg, #0F172A 0%, #1E3A5F 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 48px 48px 44px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(15,23,42,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .pp-showcase-card::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 55%;
+    height: 80%;
+    background: radial-gradient(circle at top right, rgba(59,130,246,0.22), transparent 60%);
+    pointer-events: none;
+  }
+  .pp-showcase-eyebrow {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #3B82F6;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .pp-showcase-eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1.5px;
+    background: #3B82F6;
+  }
+  .pp-showcase-eyebrow .pp-live {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3B82F6;
+    box-shadow: 0 0 0 0 rgba(59,130,246,0.5);
+    animation: ppPulse 1.6s ease-out infinite;
+  }
+  @keyframes ppPulse {
+    0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.55); }
+    70% { box-shadow: 0 0 0 10px rgba(59,130,246,0); }
+    100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
+  }
+  .pp-showcase-sentence {
+    position: relative;
+    z-index: 1;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: -0.015em;
+    color: #CBD5E1;
+    margin: 0;
+    min-height: 200px;
+    display: block;
+  }
+  .pp-showcase-sentence .static {
+    color: #CBD5E1;
+    font-weight: 500;
+  }
+  .pp-reel {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    height: 1.5em;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 700;
+  }
+  .pp-reel-inner {
+    display: inline-block;
+    transition: transform 0.42s cubic-bezier(.5,0,.2,1), opacity 0.32s ease;
+    white-space: nowrap;
+  }
+  .pp-reel-inner.out-up { transform: translateY(-14px); opacity: 0; }
+  .pp-reel.money { color: #3B82F6; font-variant-numeric: tabular-nums; width: 130px; }
+  .pp-reel.miles { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; width: 130px; }
+  .pp-reel.use {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.18);
+    height: 1.7em;
+    width: 300px;
+    padding: 0 14px;
+  }
+  .pp-reel.answer {
+    background: #3B82F6;
+    color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 6px 18px rgba(59,130,246,0.35);
+    transition: background 0.3s, box-shadow 0.3s;
+    height: 1.7em;
+    width: 360px;
+    padding: 0 16px;
+  }
+  .pp-reel.answer.flash {
+    background: #2563EB;
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.25), 0 6px 18px rgba(59,130,246,0.45);
+  }
+  .pp-showcase-foot {
+    position: relative;
+    z-index: 1;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .pp-showcase-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: #0F172A;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.12s;
+  }
+  .pp-showcase-cta:hover { transform: translateY(-1px); text-decoration: none; color: #0F172A; }
+  .pp-showcase-meta {
+    font-size: 13px;
+    color: #94A3B8;
+  }
+  .pp-section-intro {
+    max-width: 760px;
+    margin: 48px auto 8px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .pp-section-intro h2 {
+    font-size: clamp(28px, 3.6vw, 38px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0F172A;
+    line-height: 1.15;
+    margin: 0 0 10px;
+  }
+  .pp-section-intro p {
+    font-size: 16px;
+    color: #64748B;
+    margin: 0;
+  }
+  @media (max-width: 720px) {
+    .pp-showcase-card { padding: 32px 22px 28px; }
+    .pp-showcase-sentence { font-size: 20px; line-height: 1.6; min-height: 240px; }
+    .pp-reel.use { width: 220px; }
+    .pp-reel.answer { width: 260px; }
+    .pp-reel.money, .pp-reel.miles { width: 110px; }
+  }
 </style>
 </head>
 <body>
@@ -335,11 +509,37 @@
 
 <section class="teasers">
 
+  
+  <div class="pp-showcase">
+    <div class="pp-showcase-card">
+      <p class="pp-showcase-eyebrow"><span class="pp-live" aria-hidden="true"></span> The brief &middot; Live</p>
+      <p class="pp-showcase-sentence" id="pp-brief-sentence">
+        <span class="static">For</span>
+        <span class="pp-reel money" data-pp-reel="money"><span class="pp-reel-inner">$7,500</span></span><span class="static">,</span>
+        <span class="static">if you need</span>
+        <span class="pp-reel use" data-pp-reel="use"><span class="pp-reel-inner">a family daily</span></span>
+        <span class="static">and you want it to last</span>
+        <span class="pp-reel miles" data-pp-reel="miles"><span class="pp-reel-inner">250,000</span></span><span class="static"> miles,</span>
+        <span class="static">we'd buy a</span>
+        <span class="pp-reel answer" data-pp-reel="answer"><span class="pp-reel-inner">2014 Acura TSX</span></span><span class="static">.</span>
+      </p>
+      <div class="pp-showcase-foot">
+        <span class="pp-showcase-meta">56 vehicles researched &middot; Updated May 2026</span>
+        <a class="pp-showcase-cta" href="#pinpoint-teaser">Build your brief &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-section-intro">
+    <h2>Find the right model for you.</h2>
+    <p>Three quick questions narrow our 56-vehicle catalog down to the ones worth your shortlist.</p>
+  </div>
+
   <article class="teaser pinpoint-block" id="pinpoint-teaser">
     <div class="teaser-hd">
       <div class="teaser-title">
         <span class="num">Step 01</span>
-        <h2>Pinpoint the right model</h2>
+        <h2>Pinpoint your shortlist</h2>
       </div>
       <a class="teaser-open" href="/pinpoint/">Open Pinpoint &rarr;</a>
     </div>

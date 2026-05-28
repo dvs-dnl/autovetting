@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inspection checklist &mdash; AutoVetting</title>
-<meta name="description" content="Enter a VIN or pick a vehicle. Get a model-specific pre-purchase inspection checklist built from real failure data, NHTSA recalls, and owner-reported issues.">
-<link rel="canonical" href="https://autovetting.com/inspect/">
+<title>More to come &mdash; AutoVetting (preview)</title>
+<meta name="description" content="Private preview of the AutoVetting inspection product, including the upcoming mechanic-network features. Not for public distribution.">
+<link rel="canonical" href="https://autovetting.com/next/">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="stylesheet" href="/assets/css/site.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -33,7 +33,7 @@
     --clear: #10B981;
     --info: #60A5FA;
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-mono: 'Inter', system-ui, -apple-system, sans-serif; /* aliased to sans — no mono face site-wide */
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --radius: 8px;
     --radius-lg: 12px;
     --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
@@ -1478,33 +1478,172 @@
     .checklist-item { page-break-inside: avoid; }
     .recall-item { page-break-inside: avoid; }
   }
-
-  /* Blog-post link wrapper on each checklist item title */
-  .item-title-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--navy);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .item-title-link:hover {
-    color: var(--electric);
-    text-decoration: none;
-  }
-  .item-title-link:hover .item-title { text-decoration: underline; text-decoration-color: var(--electric); text-underline-offset: 3px; }
-  .item-title-arrow {
-    opacity: 0;
-    transform: translateX(-4px);
-    color: var(--electric);
-    font-weight: 600;
-    transition: opacity 0.15s, transform 0.15s;
-  }
-  .item-title-link:hover .item-title-arrow {
-    opacity: 1;
-    transform: translateX(0);
-  }
 </style>
+<meta name="robots" content="noindex,nofollow">
+<meta name="googlebot" content="noindex,nofollow">
+
+<style id="mtc-gate-style">
+  .mtc-gate-backdrop {
+    position: fixed; inset: 0; z-index: 9999;
+    background: #0F172A; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-image:
+      radial-gradient(circle at 30% 30%, rgba(59,130,246,0.18), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(59,130,246,0.08), transparent 50%);
+  }
+  .mtc-gate {
+    width: 100%; max-width: 460px;
+    background: linear-gradient(165deg, #0F172A 0%, #1E3A5F 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+  }
+  .mtc-gate-brand {
+    font-size: 22px; font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+  .mtc-gate-brand .vet { color: #3B82F6; }
+  .mtc-gate-brand sup { font-size: 0.4em; vertical-align: super; color: #CBD5E1; font-weight: 500; margin-left: 2px; }
+  .mtc-gate-eyebrow {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #3B82F6;
+    margin-bottom: 22px;
+  }
+  .mtc-gate h1 {
+    font-size: 26px; font-weight: 800;
+    letter-spacing: -0.02em; line-height: 1.2;
+    margin: 0 0 10px;
+  }
+  .mtc-gate p {
+    font-size: 14.5px; color: #CBD5E1;
+    line-height: 1.55; margin: 0 0 22px;
+  }
+  .mtc-gate label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #94A3B8;
+    display: block; margin-bottom: 8px;
+  }
+  .mtc-gate input {
+    width: 100%; box-sizing: border-box;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #fff;
+    font-family: inherit; font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .mtc-gate input:focus { border-color: #3B82F6; background: rgba(255,255,255,0.1); }
+  .mtc-gate button {
+    width: 100%;
+    background: #3B82F6; color: #fff;
+    border: none; cursor: pointer;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    padding: 13px 18px;
+    border-radius: 10px;
+    margin-top: 14px;
+    transition: background 0.15s;
+  }
+  .mtc-gate button:hover { background: #1D4ED8; }
+  .mtc-gate-err {
+    color: #FCA5A5;
+    font-size: 13px;
+    margin-top: 12px;
+    min-height: 18px;
+  }
+  .mtc-gate-foot {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    color: #64748B;
+  }
+  body.mtc-locked { overflow: hidden; }
+  body.mtc-locked > *:not(.mtc-gate-backdrop) { display: none !important; }
+</style>
+<script id="mtc-gate-script">
+(function () {
+  var EXPECTED_HASH = "8727ec283d6c168c55d73d53b4b7330940ba10d8117a71f2958f807ca0c20c82";
+  var SESSION_KEY = "av-mtc-unlocked";
+
+  function sha256(str) {
+    if (!window.crypto || !window.crypto.subtle) {
+      return Promise.reject("crypto.subtle unavailable");
+    }
+    var buf = new TextEncoder().encode(str);
+    return crypto.subtle.digest("SHA-256", buf).then(function (h) {
+      return Array.from(new Uint8Array(h))
+        .map(function (b) { return b.toString(16).padStart(2, "0"); })
+        .join("");
+    });
+  }
+
+  function unlock() {
+    document.body.classList.remove("mtc-locked");
+    var b = document.querySelector(".mtc-gate-backdrop");
+    if (b && b.parentNode) b.parentNode.removeChild(b);
+  }
+
+  function showGate() {
+    document.body.classList.add("mtc-locked");
+    var html =
+      '<div class="mtc-gate-backdrop">' +
+      '  <form class="mtc-gate" autocomplete="off">' +
+      '    <div class="mtc-gate-brand">Auto<span class="vet">Vetting</span><sup>&trade;</sup></div>' +
+      '    <p class="mtc-gate-eyebrow">Private preview</p>' +
+      '    <h1>More to come.</h1>' +
+      '    <p>This is a private preview of the AutoVetting inspection product, including features that are not yet public. Enter the access phrase to continue.</p>' +
+      '    <label for="mtc-input">Access phrase</label>' +
+      '    <input id="mtc-input" type="password" autocomplete="off" autofocus>' +
+      '    <button type="submit">Continue</button>' +
+      '    <div class="mtc-gate-err" id="mtc-err">&nbsp;</div>' +
+      '    <p class="mtc-gate-foot">If you were given this URL by Daniel and don\u2019t have the phrase, email dvs.dnl@gmail.com.</p>' +
+      '  </form>' +
+      '</div>';
+    document.body.insertAdjacentHTML("afterbegin", html);
+
+    var form = document.querySelector(".mtc-gate");
+    var input = document.getElementById("mtc-input");
+    var err = document.getElementById("mtc-err");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var val = (input.value || "").trim();
+      if (!val) return;
+      sha256(val).then(function (h) {
+        if (h === EXPECTED_HASH) {
+          try { sessionStorage.setItem(SESSION_KEY, "1"); } catch (e) {}
+          unlock();
+        } else {
+          err.textContent = "That phrase isn\u2019t right. Try again.";
+          input.value = "";
+          input.focus();
+        }
+      }).catch(function () {
+        err.textContent = "This browser doesn\u2019t support the access gate.";
+      });
+    });
+  }
+
+  try {
+    if (sessionStorage.getItem(SESSION_KEY) === "1") return;
+  } catch (e) {}
+  // Lock immediately on script parse — before page paints
+  if (document.body) {
+    showGate();
+  } else {
+    document.addEventListener("DOMContentLoaded", showGate);
+  }
+})();
+</script>
 </head>
 <body>
 
@@ -1547,6 +1686,344 @@
 <section class="checklist-section checklist-hidden" id="checklist-section">
   <div id="checklist-content"></div>
 </section>
+
+<section class="booking-section">
+  <div class="booking-inner">
+    <h2>Take this checklist to your mechanic.</h2>
+    <p>$100&ndash;$150 at an independent shop is the single best money you can spend on a used car. A mechanic on a lift sees what a test drive misses. Print this checklist, walk it in, and ask them to work through each item.</p>
+    <p style="margin-bottom: 0;">No shop in mind? Look for an independent (not a chain), and call ahead to confirm they do pre-purchase inspections.</p>
+  </div>
+</section>
+
+<!-- ===== FIND A SHOP ===== -->
+<section class="find-shop-section">
+  <div class="mockup-inner">
+    <div class="preview-badge"><span class="pdot"></span>Launching Phoenix, AZ &middot; Summer 2026</div>
+    <p class="section-eyebrow"><span class="step-num">1</span> Find a shop</p>
+    <h2 class="section-title">Find a trusted mechanic near you.</h2>
+    <p class="section-lead">We surface independent shops with a track record on pre-purchase inspections &mdash; not oil-change chains. Enter the car&rsquo;s ZIP code and we&rsquo;ll show you the best options within 10 miles.</p>
+
+    <div class="shop-search-bar">
+      <input class="shop-zip-input" type="text" value="85004 &middot; Phoenix, AZ" readonly title="Enter the car's ZIP code — launching Summer 2026">
+      <select class="shop-filter-select" disabled>
+        <option>Within 10 miles</option>
+        <option>Within 5 miles</option>
+        <option>Within 20 miles</option>
+      </select>
+      <button class="shop-search-btn" disabled>Search</button>
+    </div>
+
+    <div class="view-toggle" aria-label="Map or list view">
+      <button class="view-btn active">Map</button>
+      <button class="view-btn">List</button>
+    </div>
+
+    <!-- Mock map SVG -->
+    <div class="mock-map-wrap">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#e8eef6;" aria-hidden="true">
+        <!-- Street grid -->
+        <rect width="880" height="260" fill="#e8eef6"/>
+        <!-- Horizontal streets -->
+        <rect x="0" y="60"  width="880" height="9" fill="#d0daea" rx="0"/>
+        <rect x="0" y="128" width="880" height="9" fill="#d0daea" rx="0"/>
+        <rect x="0" y="196" width="880" height="9" fill="#d0daea" rx="0"/>
+        <!-- Vertical streets -->
+        <rect x="100" y="0" width="9" height="260" fill="#d0daea" rx="0"/>
+        <rect x="320" y="0" width="9" height="260" fill="#d0daea" rx="0"/>
+        <rect x="540" y="0" width="9" height="260" fill="#d0daea" rx="0"/>
+        <rect x="760" y="0" width="9" height="260" fill="#d0daea" rx="0"/>
+        <!-- City blocks -->
+        <rect x="4"   y="4"   width="92"  height="52" fill="#dce6f2" rx="3"/>
+        <rect x="113" y="4"   width="203" height="52" fill="#dce6f2" rx="3"/>
+        <rect x="333" y="4"   width="203" height="52" fill="#dce6f2" rx="3"/>
+        <rect x="553" y="4"   width="203" height="52" fill="#dce6f2" rx="3"/>
+        <rect x="773" y="4"   width="103" height="52" fill="#dce6f2" rx="3"/>
+        <rect x="4"   y="73"  width="92"  height="51" fill="#dce6f2" rx="3"/>
+        <rect x="113" y="73"  width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="333" y="73"  width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="553" y="73"  width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="773" y="73"  width="103" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="4"   y="141" width="92"  height="51" fill="#dce6f2" rx="3"/>
+        <rect x="113" y="141" width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="333" y="141" width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="553" y="141" width="203" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="773" y="141" width="103" height="51" fill="#dce6f2" rx="3"/>
+        <rect x="4"   y="209" width="92"  height="47" fill="#dce6f2" rx="3"/>
+        <rect x="113" y="209" width="203" height="47" fill="#dce6f2" rx="3"/>
+        <rect x="333" y="209" width="203" height="47" fill="#dce6f2" rx="3"/>
+        <rect x="553" y="209" width="203" height="47" fill="#dce6f2" rx="3"/>
+        <rect x="773" y="209" width="103" height="47" fill="#dce6f2" rx="3"/>
+        <!-- You-are-here dot -->
+        <circle cx="440" cy="130" r="12" fill="#3B82F6" fill-opacity="0.2"/>
+        <circle cx="440" cy="130" r="6"  fill="#3B82F6"/>
+        <circle cx="440" cy="130" r="3"  fill="#fff"/>
+        <!-- Pin 1 (selected / top-pick) -->
+        <g transform="translate(220,88)">
+          <path d="M0-24 C-10-24 -16-17 -16-9 C-16 4 0 18 0 18 C0 18 16 4 16-9 C16-17 10-24 0-24Z" fill="#1D4ED8" stroke="#fff" stroke-width="2.5"/>
+          <text x="0" y="-6" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Inter,system-ui,sans-serif">1</text>
+        </g>
+        <!-- Pin 2 -->
+        <g transform="translate(616,166)">
+          <path d="M0-24 C-10-24 -16-17 -16-9 C-16 4 0 18 0 18 C0 18 16 4 16-9 C16-17 10-24 0-24Z" fill="#3B82F6" stroke="#fff" stroke-width="2.5"/>
+          <text x="0" y="-6" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Inter,system-ui,sans-serif">2</text>
+        </g>
+        <!-- Pin 3 -->
+        <g transform="translate(148,177)">
+          <path d="M0-24 C-10-24 -16-17 -16-9 C-16 4 0 18 0 18 C0 18 16 4 16-9 C16-17 10-24 0-24Z" fill="#3B82F6" stroke="#fff" stroke-width="2.5"/>
+          <text x="0" y="-6" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" font-family="Inter,system-ui,sans-serif">3</text>
+        </g>
+        <!-- Selected shop label -->
+        <rect x="116" y="48" width="200" height="28" rx="5" fill="#fff" stroke="#1D4ED8" stroke-width="1.5"/>
+        <text x="216" y="66" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4ED8" font-family="Inter,system-ui,sans-serif">Central Phoenix Automotive</text>
+      </svg>
+      <div class="map-control-cluster" aria-hidden="true">
+        <div class="map-ctrl">+</div>
+        <div class="map-ctrl">&minus;</div>
+      </div>
+    </div>
+
+    <!-- Shop list -->
+    <div class="shop-list">
+      <div class="shop-card top-pick">
+        <div>
+          <div class="shop-name-row">
+            <span class="shop-name">Central Phoenix Automotive</span>
+            <span class="shop-badge electric">Top pick</span>
+            <span class="shop-badge green">PPI Verified</span>
+          </div>
+          <div class="shop-meta">1847 N Central Ave &middot; 1.4 mi from listing</div>
+          <div class="shop-stats">
+            <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;4.9 (212 reviews) &middot; PPI avg. $120 &middot; ~90 min
+          </div>
+        </div>
+        <div class="shop-actions">
+          <span class="shop-avail">Next: Today 3&nbsp;PM</span>
+          <button class="book-btn" title="Launching Summer 2026">Book Inspection</button>
+          <span class="shop-price">PPI from $100</span>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div>
+          <div class="shop-name-row">
+            <span class="shop-name">Midtown Precision Auto</span>
+            <span class="shop-badge green">PPI Verified</span>
+          </div>
+          <div class="shop-meta">3210 E Thomas Rd &middot; 3.1 mi from listing</div>
+          <div class="shop-stats">
+            <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;4.8 (87 reviews) &middot; PPI avg. $140 &middot; ~2 hrs
+          </div>
+        </div>
+        <div class="shop-actions">
+          <span class="shop-avail">Next: Thu 9&nbsp;AM</span>
+          <button class="book-btn" title="Launching Summer 2026">Book Inspection</button>
+          <span class="shop-price">PPI from $125</span>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div>
+          <div class="shop-name-row">
+            <span class="shop-name">Desert Roads Imports</span>
+          </div>
+          <div class="shop-meta">512 W Roosevelt St &middot; 4.8 mi from listing</div>
+          <div class="shop-stats">
+            <span class="star-rating">&#9733;&#9733;&#9733;&#9733;</span>&nbsp;4.5 (54 reviews) &middot; PPI avg. $100 &middot; ~75 min
+          </div>
+        </div>
+        <div class="shop-actions">
+          <span class="shop-avail">Next: Fri 10&nbsp;AM</span>
+          <button class="book-btn" title="Launching Summer 2026">Book Inspection</button>
+          <span class="shop-price">PPI from $95</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCHEDULE ===== -->
+<section class="schedule-section">
+  <div class="mockup-inner">
+    <p class="section-eyebrow"><span class="step-num">2</span> Schedule</p>
+    <h2 class="section-title">Pick a date and time.</h2>
+    <p class="section-lead">The shop is notified the moment you request. Most confirmations come back within the hour &mdash; and the seller gets a heads-up automatically once the slot is locked.</p>
+
+    <div class="schedule-card">
+      <div class="sched-context-row">
+        <span class="sched-label">Inspecting at</span>
+        <span class="sched-shop">Central Phoenix Automotive</span>
+        <span class="sched-dot">&middot;</span>
+        <span class="sched-rating">&#9733; 4.9</span>
+        <span class="sched-dot">&middot;</span>
+        <span style="color:var(--slate-500);">1847 N Central Ave, Phoenix</span>
+      </div>
+
+      <div class="date-strip">
+        <div class="date-strip-lbl">Select date</div>
+        <div class="date-pills-row">
+          <div class="date-pill dim"><span class="dp-day">Mon</span><span class="dp-num">2</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill dim"><span class="dp-day">Tue</span><span class="dp-num">3</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill active"><span class="dp-day">Wed</span><span class="dp-num">4</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill"><span class="dp-day">Thu</span><span class="dp-num">5</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill"><span class="dp-day">Fri</span><span class="dp-num">6</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill"><span class="dp-day">Mon</span><span class="dp-num">9</span><span class="dp-mo">Jun</span></div>
+          <div class="date-pill"><span class="dp-day">Tue</span><span class="dp-num">10</span><span class="dp-mo">Jun</span></div>
+        </div>
+      </div>
+
+      <div class="time-slots-wrap">
+        <div class="time-period">
+          <div class="time-period-lbl">Morning</div>
+          <div class="slots-row">
+            <button class="slot-btn taken" disabled>8:00 AM</button>
+            <button class="slot-btn" disabled>9:00 AM</button>
+            <button class="slot-btn active" disabled>10:00 AM</button>
+            <button class="slot-btn taken" disabled>11:00 AM</button>
+          </div>
+        </div>
+        <div class="time-period">
+          <div class="time-period-lbl">Afternoon</div>
+          <div class="slots-row">
+            <button class="slot-btn" disabled>1:00 PM</button>
+            <button class="slot-btn" disabled>2:00 PM</button>
+            <button class="slot-btn" disabled>3:00 PM</button>
+            <button class="slot-btn taken" disabled>4:00 PM</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sched-summary">
+        <div class="sched-summary-lbl">Your request</div>
+        <strong>Central Phoenix Automotive &middot; Wed, Jun 4 &middot; 10:00&nbsp;AM</strong><br>
+        Pre-purchase inspection &middot; ~90 min &middot; $100&ndash;$150 due at shop
+      </div>
+      <button class="sched-submit-btn" disabled title="Launching Summer 2026">Request Inspection &mdash; Jun 4 at 10:00 AM &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORWARD TO SELLER ===== -->
+<section class="forward-section">
+  <div class="mockup-inner">
+    <p class="section-eyebrow"><span class="step-num">3</span> Forward to seller</p>
+    <h2 class="section-title">Loop in the seller.</h2>
+    <p class="section-lead">Once the shop confirms, use this ready-made email and calendar invite to notify the seller &mdash; so the car is at the right place at the right time. Your contact info stays private until you&rsquo;re ready to share it.</p>
+
+    <div class="forward-grid">
+      <!-- Email panel -->
+      <div class="forward-panel">
+        <div class="forward-panel-lbl">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M1 5.5l7 4.5 7-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Email to seller
+        </div>
+        <textarea class="email-tmpl-area" id="av-seller-email">Hi [seller],
+
+I'm interested in your 2014 Honda Accord and have booked a pre-purchase inspection.
+
+Inspection details:
+  Shop: Central Phoenix Automotive
+  Address: 1847 N Central Ave, Phoenix, AZ 85004
+  Date: Wednesday, June 4
+  Time: 10:00 AM - approx. 11:30 AM
+
+Could you have the car there by 9:45 AM? I'll pay for the inspection directly - nothing out of pocket for you. It takes about 90 minutes.
+
+Most sellers find the report reassuring too - it documents what the mechanic found so there are no surprises later.
+
+Thanks,
+[Your name]</textarea>
+        <div class="forward-actions">
+          <button class="fwd-btn" onclick="avCopyEmail(this)">Copy email</button>
+        </div>
+      </div>
+
+      <!-- Calendar panel -->
+      <div class="forward-panel">
+        <div class="forward-panel-lbl">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="2" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M5 1v2M11 1v2M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Calendar invite
+        </div>
+        <div class="cal-stub-card">
+          <div class="cal-stub-head">Pre-Purchase Inspection &middot; AutoVetting</div>
+          <div class="cal-stub-body">
+            <div class="cal-event-title">2014 Honda Accord &mdash; Pre-Purchase Inspection</div>
+            <div class="cal-event-meta">
+              <strong>&#128205;</strong> Central Phoenix Automotive &middot; 1847 N Central Ave, Phoenix<br>
+              <strong>&#128197;</strong> Wed, June 4 &middot; 10:00&nbsp;AM &ndash; 11:30&nbsp;AM<br>
+              <strong>&#128100;</strong> Buyer + seller (car must be present by 9:45&nbsp;AM)<br>
+              <strong>&#128176;</strong> $100&ndash;$150 paid by buyer at shop
+            </div>
+          </div>
+        </div>
+        <div class="forward-actions">
+          <button class="fwd-btn soon" disabled title="Launching Summer 2026">Download .ics</button>
+          <button class="fwd-btn soon" disabled title="Launching Summer 2026">Add to Google Calendar</button>
+        </div>
+        <p class="fwd-privacy-note">Your phone and email stay private until you choose to share them with the seller.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APP PREVIEW ===== -->
+<section class="app-preview-section">
+  <div class="app-preview-inner">
+    <div>
+      <div class="preview-badge-dark"><span class="pdot"></span>Launching Phoenix &middot; Summer 2026</div>
+      <p class="section-eyebrow" style="color:var(--slate-400);"><span class="step-num">4</span> Walk it yourself first</p>
+      <h2 class="section-title">The AutoVetting inspection app.</h2>
+      <p class="section-lead">Walk through your checklist item by item before the professional inspection. Flag anything suspicious, capture photos, add notes &mdash; then share the report with your mechanic so they know exactly what to focus on.</p>
+      <div class="app-feature-list">
+        <div class="app-feature"><span class="app-feature-chk" aria-hidden="true"></span>Vehicle-specific checklist with severity ratings</div>
+        <div class="app-feature"><span class="app-feature-chk" aria-hidden="true"></span>Photo capture for each flagged item</div>
+        <div class="app-feature"><span class="app-feature-chk" aria-hidden="true"></span>Shareable PDF report &mdash; send it ahead to your mechanic</div>
+        <div class="app-feature"><span class="app-feature-chk" aria-hidden="true"></span>Offline-ready &mdash; works in a parking lot with no signal</div>
+        <div class="app-feature"><span class="app-feature-chk" aria-hidden="true"></span>Syncs with your My Garage vehicles</div>
+      </div>
+    </div>
+
+    <!-- Phone frame mockup -->
+    <div class="phone-frame" aria-hidden="true">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="ph-nav"><span class="ph-brand-txt">Auto<span>Vetting</span>&trade;</span></div>
+        <div class="ph-body">
+          <div class="ph-vehicle-pill">2014 Honda Accord LX</div>
+          <div class="ph-progress-lbl">Engine Bay &middot; 7 of 20</div>
+          <div class="ph-prog-track"><div class="ph-prog-fill"></div></div>
+          <div class="ph-sec-lbl">Engine Bay</div>
+          <div class="ph-item">
+            <div class="ph-box chk"></div>
+            <div class="ph-item-txt">Oil level + condition<span class="ph-tag ok">OK</span></div>
+          </div>
+          <div class="ph-item">
+            <div class="ph-box chk"></div>
+            <div class="ph-item-txt">Coolant color + level<span class="ph-tag ok">OK</span></div>
+          </div>
+          <div class="ph-item">
+            <div class="ph-box flg"></div>
+            <div>
+              <div class="ph-item-txt">VTC actuator cold-start rattle<span class="ph-tag warn">Flagged</span></div>
+              <span class="ph-note">+ Add photo / note</span>
+            </div>
+          </div>
+          <div class="ph-item">
+            <div class="ph-box"></div>
+            <div class="ph-item-txt">Transmission fluid color</div>
+          </div>
+          <button class="ph-next-btn">Next item &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class="site-footer">
   <p>AutoVetting<sup class="tm" aria-hidden="true">™</sup> — Know before you buy.</p>
@@ -3636,22 +4113,13 @@ function findChecklistByYMMT(year, make, model) {
 let currentChecklist = null;
 let currentVin = null;
 
-function slugifyTitle(t) {
-  return (t || '')
-    .toLowerCase()
-    .replace(/['"().,/]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80);
-}
-
 function renderChecklist(c, vin) {
   currentChecklist = c;
   currentVin = vin;
   const riskClass = `risk-${c.overallRisk}`;
   const html = `
     <div class="checklist-actions">
-      <div class="actions-label">Pre-purchase inspection · ${c.year} ${c.make} ${c.model}</div>
+      <div class="actions-label">Take this to a shop · ${c.year} ${c.make} ${c.model}</div>
       <div class="actions-buttons">
         <button class="checklist-action-btn" id="cl-share">Copy link</button>
         <button class="checklist-action-btn" id="cl-text">Save as text</button>
@@ -3699,10 +4167,7 @@ function renderChecklist(c, vin) {
               <div class="item-risk-marker item-risk-${item.risk}"></div>
               <div class="item-content">
                 <div class="item-header">
-                  <a class="item-title-link" href="/blog/${slugifyTitle(item.title)}/" title="Read the deep-dive on this issue">
-                    <span class="item-title">${item.title}</span>
-                    <span class="item-title-arrow" aria-hidden="true">&rarr;</span>
-                  </a>
+                  <div class="item-title">${item.title}</div>
                   <div class="item-risk-label ${item.risk}">${item.riskLabel}</div>
                 </div>
                 <div class="item-desc">${item.desc}</div>
