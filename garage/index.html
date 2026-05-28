@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Garage &mdash; AutoVetting</title>
+<meta name="description" content="Track every vehicle you own. Add year, make, model, and mileage. Link straight to inspection checklists, maintenance logs, and repair guides. Saves locally &mdash; no account required.">
+<link rel="canonical" href="https://autovetting.com/garage/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== PAGE HERO ===== */
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--white);
+    padding: 56px 24px 68px;
+    text-align: center;
+  }
+  .page-hero .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--electric);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+  }
+  .page-hero h1 {
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .page-hero p {
+    font-size: 16px;
+    color: var(--slate-300);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ===== WRAP ===== */
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ===== GARAGE TOOLBAR ===== */
+  .garage-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .garage-count {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .btn-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--electric);
+    color: var(--white);
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: var(--font-sans);
+  }
+  .btn-add:hover { background: var(--electric-hover); }
+  .btn-add .plus { font-size: 17px; line-height: 1; font-weight: 300; }
+
+  /* ===== VEHICLE GRID ===== */
+  .vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .vehicle-card {
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: box-shadow 0.15s, border-color 0.15s, transform 0.1s;
+    text-align: left;
+  }
+  .vehicle-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric);
+    transform: translateY(-1px);
+  }
+  .vehicle-card:focus-visible {
+    outline: 2px solid var(--electric);
+    outline-offset: 2px;
+  }
+  .v-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .v-card-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+  .v-card-trim {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--slate-500);
+    margin-top: 3px;
+  }
+  .v-card-nick {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--electric);
+    margin-top: 5px;
+  }
+  .v-year-chip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--blue-50);
+    color: var(--electric);
+    padding: 4px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .v-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2px;
+    border-top: 1px solid var(--slate-100);
+    gap: 8px;
+  }
+  .v-mileage {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--slate-500);
+    font-weight: 500;
+  }
+  .btn-card-edit {
+    background: transparent;
+    border: 1px solid var(--slate-200);
+    color: var(--slate-400);
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.1s, border-color 0.1s, color 0.1s;
+    flex-shrink: 0;
+  }
+  .btn-card-edit:hover {
+    background: var(--slate-100);
+    color: var(--navy);
+    border-color: var(--slate-300);
+  }
+
+  /* ===== EMPTY STATE ===== */
+  .empty-state {
+    background: var(--white);
+    border: 2px dashed var(--slate-200);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    padding: 72px 24px;
+  }
+  .empty-icon { font-size: 44px; margin-bottom: 16px; line-height: 1; }
+  .empty-state h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .empty-state p {
+    font-size: 15px;
+    color: var(--slate-500);
+    max-width: 380px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+
+  /* ===== PROFILE VIEW ===== */
+  .profile-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--slate-500);
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 24px;
+    transition: color 0.15s;
+  }
+  .profile-back:hover { color: var(--electric); }
+
+  .profile-header {
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .ph-main {}
+  .ph-year-chip {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--electric);
+    background: var(--blue-50);
+    padding: 3px 8px;
+    border-radius: 5px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .ph-name {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .ph-trim {
+    font-size: 15px;
+    color: var(--slate-500);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .ph-nick {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--electric);
+  }
+  .ph-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .meta-pill {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--slate-100);
+    color: var(--navy);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .meta-pill.clear {
+    background: #DCFCE7;
+    color: #166534;
+  }
+  .ph-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .btn-edit-ph {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--electric);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-edit-ph:hover { background: var(--electric-hover); }
+  .btn-remove-ph {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    color: var(--critical);
+    border: 1px solid var(--slate-200);
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-remove-ph:hover { background: #FEF2F2; border-color: var(--critical); }
+
+  /* ===== MODULE CARDS ===== */
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .module-card {
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  a.module-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .module-card.soon {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  .module-icon { font-size: 20px; line-height: 1; margin-bottom: 2px; }
+  .module-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .badge-live {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #DCFCE7;
+    color: #166534;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .badge-soon {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--slate-100);
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .module-desc {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.55;
+  }
+
+  /* ===== DETAILS CARD ===== */
+  .details-card {
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .details-card .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .detail-item .d-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+  }
+  .detail-item .d-value {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .notes-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .notes-body {
+    font-size: 14px;
+    color: var(--slate-500);
+    line-height: 1.65;
+    white-space: pre-wrap;
+  }
+
+  /* ===== MODAL ===== */
+  .modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-bg.open { display: flex; }
+  .modal {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    width: 100%;
+    max-width: 540px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+  .modal h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 22px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--slate-400);
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
+    font-family: inherit;
+  }
+  .modal-close:hover { color: var(--navy); }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .form-grid .full { grid-column: 1 / -1; }
+  .fg label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+  }
+  .fg input,
+  .fg textarea {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--navy);
+    transition: border-color 0.15s;
+    -webkit-appearance: none;
+  }
+  .fg input:focus, .fg textarea:focus {
+    outline: none;
+    border-color: var(--electric);
+  }
+  .fg input.err { border-color: var(--critical); }
+  .fg textarea { resize: vertical; }
+  .fg .hint {
+    font-size: 11px;
+    color: var(--slate-400);
+    margin-top: 3px;
+  }
+  .fg .opt { font-weight: 400; text-transform: none; letter-spacing: normal; color: var(--slate-400); }
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--slate-100);
+  }
+  .btn-primary {
+    font-family: var(--font-sans);
+    background: var(--electric);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--electric-hover); }
+  .btn-ghost {
+    font-family: var(--font-sans);
+    background: transparent;
+    color: var(--slate-500);
+    border: 1px solid var(--slate-200);
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-ghost:hover { background: var(--slate-100); }
+  .btn-danger-ghost {
+    font-family: var(--font-sans);
+    background: transparent;
+    color: var(--critical);
+    border: 1px solid transparent;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-right: auto;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-danger-ghost:hover { background: #FEF2F2; border-color: var(--critical); }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: var(--navy);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 999px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 200;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 640px) {
+    .vehicle-grid { grid-template-columns: 1fr; }
+    .module-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-grid .full { grid-column: 1; }
+    .profile-header { flex-direction: column; gap: 16px; }
+    .ph-right { flex-direction: row; align-items: center; flex-wrap: wrap; }
+    .page-hero { padding: 44px 20px 56px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/" aria-current="page">My Garage</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ==================== GARAGE LIST VIEW ==================== -->
+<div id="view-garage">
+  <div class="page-hero">
+    <p class="eyebrow">Ownership Hub</p>
+    <h1>My Garage</h1>
+    <p>Every vehicle you own, all in one place. Link straight to inspections, maintenance logs, and repair guides. Saves locally &mdash; no account needed.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="garage-toolbar">
+      <span class="garage-count" id="garage-count">0 vehicles</span>
+      <button class="btn-add" id="btn-add-vehicle">
+        <span class="plus">&#43;</span> Add vehicle
+      </button>
+    </div>
+
+    <div id="vehicle-grid" class="vehicle-grid" role="list"></div>
+
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <div class="empty-icon">&#127951;</div>
+      <h2>No vehicles yet</h2>
+      <p>Add your first car to get model-specific inspections, track maintenance, and access repair guides.</p>
+      <button class="btn-add" id="btn-add-first">
+        <span class="plus">&#43;</span> Add your first vehicle
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== VEHICLE PROFILE VIEW ==================== -->
+<div id="view-profile" style="display:none;">
+  <div class="wrap">
+
+    <button class="profile-back" id="btn-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12L6 8l4-4"/></svg>
+      Back to garage
+    </button>
+
+    <div class="profile-header" id="profile-header"><!-- filled by JS --></div>
+
+    <div class="module-grid" id="module-grid"><!-- filled by JS --></div>
+
+    <div class="details-card" id="details-card" style="display:none;"><!-- filled by JS --></div>
+
+  </div>
+</div>
+
+<!-- ==================== ADD / EDIT VEHICLE MODAL ==================== -->
+<div class="modal-bg" id="vehModal" role="dialog" aria-modal="true" aria-labelledby="veh-modal-title">
+  <div class="modal">
+    <button class="modal-close" id="vehModalClose" aria-label="Close">&times;</button>
+    <h2 id="veh-modal-title">Add a vehicle</h2>
+    <div class="form-grid">
+      <div class="fg">
+        <label for="f-year">Year</label>
+        <input id="f-year" type="number" placeholder="2018" min="1960" max="2030" autocomplete="off">
+      </div>
+      <div class="fg">
+        <label for="f-make">Make</label>
+        <input id="f-make" type="text" placeholder="Toyota" autocomplete="off">
+      </div>
+      <div class="fg">
+        <label for="f-model">Model</label>
+        <input id="f-model" type="text" placeholder="Tacoma" autocomplete="off">
+      </div>
+      <div class="fg">
+        <label for="f-trim">Trim <span class="opt">(optional)</span></label>
+        <input id="f-trim" type="text" placeholder="TRD Off-Road" autocomplete="off">
+      </div>
+      <div class="fg full">
+        <label for="f-mileage">Current mileage</label>
+        <input id="f-mileage" type="number" placeholder="87500" min="0" autocomplete="off">
+      </div>
+      <div class="fg full">
+        <label for="f-nick">Nickname <span class="opt">(optional)</span></label>
+        <input id="f-nick" type="text" placeholder="e.g. &ldquo;White Whale&rdquo; or &ldquo;Daily Driver&rdquo;" autocomplete="off">
+        <div class="hint">Useful if you own more than one vehicle.</div>
+      </div>
+      <div class="fg full">
+        <label for="f-vin">VIN <span class="opt">(optional)</span></label>
+        <input id="f-vin" type="text" placeholder="1HGBH41JXMN109186" maxlength="17" autocomplete="off" style="font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.04em;">
+      </div>
+      <div class="fg full">
+        <label for="f-notes">Notes <span class="opt">(optional)</span></label>
+        <textarea id="f-notes" rows="3" placeholder="Engine specs, mods, known issues, maintenance history highlights &mdash; anything worth remembering"></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-danger-ghost" id="btn-modal-delete" style="display:none;">Remove vehicle</button>
+      <button class="btn-ghost" id="vehCancel">Cancel</button>
+      <button class="btn-primary" id="vehSave">Save vehicle</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONFIRM DELETE MODAL ==================== -->
+<div class="modal-bg" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+  <div class="modal" style="max-width:380px;text-align:center;">
+    <h2 id="confirm-title" style="font-size:18px;margin-bottom:10px;">Remove this vehicle?</h2>
+    <p id="confirm-body" style="font-size:14px;color:var(--slate-500);line-height:1.55;margin-bottom:24px;">This will permanently delete the vehicle and cannot be undone.</p>
+    <div class="form-actions" style="justify-content:center;border-top:none;margin-top:0;padding-top:0;">
+      <button class="btn-ghost" id="confirmCancel">Keep it</button>
+      <button class="btn-primary" id="confirmOk" style="background:var(--critical);">Yes, remove</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TOAST ==================== -->
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric);">Vetting</span><sup class="tm">&trade;</sup> &mdash; Know before you buy.</p>
+</footer>
+
+<script>
+(function () {
+'use strict';
+
+// ============================================================
+// CONSTANTS & STATE
+// ============================================================
+var STORAGE_KEY = 'av-garage';
+var state = loadState();
+var editingId = null;
+var confirmCb = null;
+
+function loadState() {
+  try {
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { vehicles: [], version: 1 };
+}
+
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  catch (e) { console.warn('garage: could not save', e); }
+}
+
+function uid() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+
+function fmtMi(n) {
+  return Number(n).toLocaleString() + ' mi';
+}
+
+function todayISO() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function esc(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ============================================================
+// ROUTING
+// ============================================================
+function getRouteId() {
+  return new URLSearchParams(window.location.search).get('id');
+}
+
+function navigate(id) {
+  var url = id ? '/garage/?id=' + encodeURIComponent(id) : '/garage/';
+  history.pushState({ id: id || null }, '', url);
+  render();
+}
+
+window.addEventListener('popstate', render);
+
+// ============================================================
+// TOP-LEVEL RENDER
+// ============================================================
+function render() {
+  var id = getRouteId();
+  if (id) {
+    var v = state.vehicles.find(function (x) { return x.id === id; });
+    if (v) {
+      document.getElementById('view-garage').style.display = 'none';
+      document.getElementById('view-profile').style.display = 'block';
+      renderProfile(v);
+      return;
+    }
+  }
+  document.getElementById('view-garage').style.display = 'block';
+  document.getElementById('view-profile').style.display = 'none';
+  renderGarage();
+}
+
+// ============================================================
+// GARAGE LIST VIEW
+// ============================================================
+function renderGarage() {
+  var vehicles = state.vehicles;
+  var countEl = document.getElementById('garage-count');
+  var grid = document.getElementById('vehicle-grid');
+  var empty = document.getElementById('empty-state');
+
+  countEl.textContent = vehicles.length + (vehicles.length === 1 ? ' vehicle' : ' vehicles');
+
+  if (vehicles.length === 0) {
+    grid.style.display = 'none';
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display = 'none';
+  grid.style.display = 'grid';
+  grid.innerHTML = vehicles.map(function (v) {
+    var name = esc(v.year) + ' ' + esc(v.make) + ' ' + esc(v.model);
+    return '<div class="vehicle-card" role="listitem button" tabindex="0"'
+      + ' data-id="' + esc(v.id) + '"'
+      + ' aria-label="View ' + name + '">'
+      + '<div class="v-card-top">'
+      +   '<div>'
+      +     '<div class="v-card-name">' + esc(v.make) + ' ' + esc(v.model) + '</div>'
+      +     (v.trim ? '<div class="v-card-trim">' + esc(v.trim) + '</div>' : '')
+      +     (v.nickname ? '<div class="v-card-nick">&ldquo;' + esc(v.nickname) + '&rdquo;</div>' : '')
+      +   '</div>'
+      +   '<span class="v-year-chip">' + esc(String(v.year)) + '</span>'
+      + '</div>'
+      + '<div class="v-card-bottom">'
+      +   '<span class="v-mileage">' + (v.mileage ? fmtMi(v.mileage) : 'Mileage not set') + '</span>'
+      +   '<button class="btn-card-edit" data-edit="' + esc(v.id) + '" aria-label="Edit ' + name + '" title="Edit">&#9998;</button>'
+      + '</div>'
+      + '</div>';
+  }).join('');
+}
+
+// ============================================================
+// VEHICLE PROFILE VIEW
+// ============================================================
+function renderProfile(v) {
+  var makeModel = esc(v.make) + ' ' + esc(v.model);
+  var fullName = esc(v.year) + ' ' + makeModel;
+
+  // ── Header ──
+  var ph = document.getElementById('profile-header');
+  ph.innerHTML = ''
+    + '<div class="ph-main">'
+    +   '<span class="ph-year-chip">' + esc(String(v.year)) + '</span>'
+    +   '<div class="ph-name">' + makeModel + '</div>'
+    +   (v.trim ? '<div class="ph-trim">' + esc(v.trim) + '</div>' : '')
+    +   (v.nickname ? '<div class="ph-nick">&ldquo;' + esc(v.nickname) + '&rdquo;</div>' : '')
+    + '</div>'
+    + '<div class="ph-right">'
+    +   (v.mileage ? '<span class="meta-pill clear">' + fmtMi(v.mileage) + '</span>' : '')
+    +   (v.addedAt ? '<span class="meta-pill">Added ' + esc(v.addedAt) + '</span>' : '')
+    +   '<div class="ph-actions">'
+    +     '<button class="btn-edit-ph" id="btn-edit-ph">Edit</button>'
+    +     '<button class="btn-remove-ph" id="btn-remove-ph">Remove</button>'
+    +   '</div>'
+    + '</div>';
+
+  document.getElementById('btn-edit-ph').addEventListener('click', function () {
+    openEditVehicle(v.id);
+  });
+  document.getElementById('btn-remove-ph').addEventListener('click', function () {
+    askConfirm(
+      'Remove ' + fullName + '?',
+      'This will permanently delete this vehicle. Maintenance records (once available) will also be removed.',
+      function () { deleteVehicle(v.id); }
+    );
+  });
+
+  // ── Module cards ──
+  var inspUrl = '/inspect/?year=' + encodeURIComponent(v.year)
+    + '&make=' + encodeURIComponent(v.make)
+    + '&model=' + encodeURIComponent(v.model);
+  var maintUrl = '/maintenance/?id=' + encodeURIComponent(v.id);
+  var repairUrl = '/repair/?make=' + encodeURIComponent(v.make)
+    + '&model=' + encodeURIComponent(v.model);
+
+  document.getElementById('module-grid').innerHTML = ''
+    + '<a href="' + inspUrl + '" class="module-card">'
+    +   '<div class="module-icon">&#128269;</div>'
+    +   '<div class="module-title">Pre-Purchase Inspection <span class="badge-live">Live</span></div>'
+    +   '<div class="module-desc">Model-specific checklist for the ' + fullName + '. Built from NHTSA recalls and real-world failure patterns.</div>'
+    + '</a>'
+    + '<div class="module-card soon">'
+    +   '<div class="module-icon">&#128295;</div>'
+    +   '<div class="module-title">Maintenance Log <span class="badge-soon">Coming soon</span></div>'
+    +   '<div class="module-desc">Log every service &mdash; oil changes, brakes, timing belts. Auto-surface upcoming intervals. Export a full history for resale disclosure.</div>'
+    + '</div>'
+    + '<div class="module-card soon">'
+    +   '<div class="module-icon">&#128296;</div>'
+    +   '<div class="module-title">Repair Guides <span class="badge-soon">Coming soon</span></div>'
+    +   '<div class="module-desc">Step-by-step DIY walkthroughs for common jobs on ' + esc(v.make) + ' ' + esc(v.model) + ' vehicles &mdash; tools, parts, torque specs, and common mistakes.</div>'
+    + '</div>';
+
+  // ── Details card (VIN / notes) ──
+  var dc = document.getElementById('details-card');
+  if (v.vin || v.notes) {
+    var rows = '';
+    if (v.vin) rows += '<div class="detail-item"><div class="d-label">VIN</div><div class="d-value">' + esc(v.vin.toUpperCase()) + '</div></div>';
+    if (v.mileage) rows += '<div class="detail-item"><div class="d-label">Mileage</div><div class="d-value">' + fmtMi(v.mileage) + '</div></div>';
+    dc.innerHTML = '<div class="section-label">Vehicle details</div>'
+      + (rows ? '<div class="details-grid">' + rows + '</div>' : '')
+      + (v.notes ? '<div class="notes-label">Notes</div><div class="notes-body">' + esc(v.notes) + '</div>' : '');
+    dc.style.display = 'block';
+  } else {
+    dc.style.display = 'none';
+  }
+}
+
+// ============================================================
+// VEHICLE CRUD
+// ============================================================
+function openAddVehicle() {
+  editingId = null;
+  document.getElementById('veh-modal-title').textContent = 'Add a vehicle';
+  document.getElementById('btn-modal-delete').style.display = 'none';
+  clearForm();
+  openModal('vehModal');
+  document.getElementById('f-year').focus();
+}
+
+function openEditVehicle(id) {
+  var v = state.vehicles.find(function (x) { return x.id === id; });
+  if (!v) return;
+  editingId = id;
+  document.getElementById('veh-modal-title').textContent = 'Edit vehicle';
+  document.getElementById('btn-modal-delete').style.display = '';
+  document.getElementById('f-year').value = v.year || '';
+  document.getElementById('f-make').value = v.make || '';
+  document.getElementById('f-model').value = v.model || '';
+  document.getElementById('f-trim').value = v.trim || '';
+  document.getElementById('f-mileage').value = v.mileage || '';
+  document.getElementById('f-nick').value = v.nickname || '';
+  document.getElementById('f-vin').value = v.vin || '';
+  document.getElementById('f-notes').value = v.notes || '';
+  clearFieldErrors();
+  openModal('vehModal');
+  document.getElementById('f-year').focus();
+}
+
+function clearForm() {
+  ['f-year','f-make','f-model','f-trim','f-mileage','f-nick','f-vin','f-notes'].forEach(function (id) {
+    document.getElementById(id).value = '';
+  });
+  clearFieldErrors();
+}
+
+function clearFieldErrors() {
+  ['f-year','f-make','f-model'].forEach(function (id) {
+    document.getElementById(id).classList.remove('err');
+  });
+}
+
+function saveVehicle() {
+  var yearRaw = document.getElementById('f-year').value.trim();
+  var make = document.getElementById('f-make').value.trim();
+  var model = document.getElementById('f-model').value.trim();
+  var year = parseInt(yearRaw, 10);
+  var valid = true;
+
+  clearFieldErrors();
+  if (!year || year < 1960 || year > 2030) {
+    document.getElementById('f-year').classList.add('err');
+    valid = false;
+  }
+  if (!make) {
+    document.getElementById('f-make').classList.add('err');
+    valid = false;
+  }
+  if (!model) {
+    document.getElementById('f-model').classList.add('err');
+    valid = false;
+  }
+  if (!valid) return;
+
+  var mileage = parseInt(document.getElementById('f-mileage').value, 10) || 0;
+  var trim    = document.getElementById('f-trim').value.trim();
+  var nick    = document.getElementById('f-nick').value.trim();
+  var vin     = document.getElementById('f-vin').value.trim().toUpperCase();
+  var notes   = document.getElementById('f-notes').value.trim();
+
+  if (editingId) {
+    var idx = state.vehicles.findIndex(function (x) { return x.id === editingId; });
+    if (idx > -1) {
+      Object.assign(state.vehicles[idx], {
+        year: year, make: make, model: model, trim: trim,
+        mileage: mileage, nickname: nick, vin: vin, notes: notes
+      });
+    }
+    saveState();
+    closeModal('vehModal');
+    showToast('Vehicle updated');
+    var routeId = getRouteId();
+    if (routeId === editingId) {
+      var updated = state.vehicles.find(function (x) { return x.id === editingId; });
+      if (updated) renderProfile(updated);
+    } else {
+      renderGarage();
+    }
+  } else {
+    var v = {
+      id: uid(), year: year, make: make, model: model, trim: trim,
+      mileage: mileage, nickname: nick, vin: vin, notes: notes,
+      addedAt: todayISO()
+    };
+    state.vehicles.push(v);
+    saveState();
+    closeModal('vehModal');
+    showToast('Vehicle added');
+    navigate(v.id);
+  }
+}
+
+function deleteVehicle(id) {
+  state.vehicles = state.vehicles.filter(function (x) { return x.id !== id; });
+  saveState();
+  showToast('Vehicle removed');
+  navigate(null);
+}
+
+// ============================================================
+// MODALS
+// ============================================================
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+function askConfirm(title, body, cb) {
+  document.getElementById('confirm-title').textContent = title;
+  document.getElementById('confirm-body').textContent = body;
+  confirmCb = cb;
+  openModal('confirmModal');
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+var toastTimer = null;
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2400);
+}
+
+// ============================================================
+// EVENT LISTENERS
+// ============================================================
+
+// Toolbar + empty state add buttons
+document.getElementById('btn-add-vehicle').addEventListener('click', openAddVehicle);
+document.getElementById('btn-add-first').addEventListener('click', openAddVehicle);
+
+// Back button (profile → garage)
+document.getElementById('btn-back').addEventListener('click', function () { navigate(null); });
+
+// Modal close / cancel
+document.getElementById('vehModalClose').addEventListener('click', function () { closeModal('vehModal'); });
+document.getElementById('vehCancel').addEventListener('click', function () { closeModal('vehModal'); });
+document.getElementById('vehSave').addEventListener('click', saveVehicle);
+
+// Enter key submits modal form
+document.getElementById('vehModal').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') saveVehicle();
+  if (e.key === 'Escape') closeModal('vehModal');
+});
+
+// Delete from modal
+document.getElementById('btn-modal-delete').addEventListener('click', function () {
+  if (!editingId) return;
+  var v = state.vehicles.find(function (x) { return x.id === editingId; });
+  if (!v) return;
+  closeModal('vehModal');
+  askConfirm(
+    'Remove ' + v.year + ' ' + v.make + ' ' + v.model + '?',
+    'This will permanently delete this vehicle and cannot be undone.',
+    function () { deleteVehicle(editingId); }
+  );
+});
+
+// Confirm modal
+document.getElementById('confirmOk').addEventListener('click', function () {
+  closeModal('confirmModal');
+  if (confirmCb) confirmCb();
+  confirmCb = null;
+});
+document.getElementById('confirmCancel').addEventListener('click', function () {
+  closeModal('confirmModal');
+  confirmCb = null;
+});
+document.getElementById('confirmModal').addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal('confirmModal');
+});
+
+// Vehicle grid: card click → profile, edit button → edit modal
+document.getElementById('vehicle-grid').addEventListener('click', function (e) {
+  var editBtn = e.target.closest('[data-edit]');
+  if (editBtn) { e.stopPropagation(); openEditVehicle(editBtn.dataset.edit); return; }
+  var card = e.target.closest('.vehicle-card');
+  if (card) navigate(card.dataset.id);
+});
+document.getElementById('vehicle-grid').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    var card = e.target.closest('.vehicle-card');
+    if (card) { e.preventDefault(); navigate(card.dataset.id); }
+  }
+});
+
+// Close modals on backdrop click
+['vehModal', 'confirmModal'].forEach(function (id) {
+  document.getElementById(id).addEventListener('click', function (e) {
+    if (e.target.id === id) closeModal(id);
+  });
+});
+
+// VIN → uppercase as you type
+document.getElementById('f-vin').addEventListener('input', function () {
+  var pos = this.selectionStart;
+  this.value = this.value.toUpperCase();
+  this.setSelectionRange(pos, pos);
+});
+
+// ============================================================
+// INIT
+// ============================================================
+render();
+
+}());
+</script>
+</body>
+</html>
