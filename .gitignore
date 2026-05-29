@@ -14,3 +14,14 @@
 
 # Editor
 .vscode/
+
+# --- SECRETS-POLICY standard block (added 2026-05-29) ---
+# See /Projects/SECRETS-POLICY.md
+*.pem
+*.key
+*-token.txt
+*-credentials.json
+push-*.sh
+secrets.*
+*.swp
+.COMMIT_EDITMSG
