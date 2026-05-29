@@ -1524,6 +1524,7 @@
 <meta name="twitter:title" content="Inspection checklist — AutoVetting">
 <meta name="twitter:description" content="Vehicle-specific pre-purchase inspection checklist built from NHTSA recalls, TSBs, owner-reported failures, and mechanic intel.">
 <meta name="twitter:image" content="https://autovetting.com/assets/img/og-default.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a pre-purchase inspection (PPI)?","acceptedAnswer":{"@type":"Answer","text":"A pre-purchase inspection is a 60\u201390 minute hands-on examination of a used car by an independent mechanic before you commit to buying it. A typical PPI costs $100\u2013$150 and is the single best money a used-car buyer can spend \u2014 a mechanic on a lift sees what a test drive misses."}},{"@type":"Question","name":"How is an AutoVetting checklist different from a generic PPI?","acceptedAnswer":{"@type":"Answer","text":"Generic mechanics inspect everything equally. AutoVetting checklists are vehicle-specific \u2014 they name the failure patterns documented for that exact year/make/model: VVT-i oil hoses on 2010 RX 350s, MDS lifters on Ram Hemis, K1 timing-chain tensioners on early Mk6 GTIs. The buyer walks in knowing what to ask, and the mechanic spends time where it matters."}},{"@type":"Question","name":"Can I bring this checklist to my own mechanic?","acceptedAnswer":{"@type":"Answer","text":"Yes. Print or text the checklist to any shop you trust. It's the same checklist our network of vetted Phoenix shops will use, so the format is mechanic-friendly. If you'd like a vetted shop near you instead, the Phoenix network launches Summer 2026."}},{"@type":"Question","name":"What does each risk level mean?","acceptedAnswer":{"@type":"Answer","text":"Critical Risk: must inspect, undriveable if failed. High Attention: known failure pattern with $1,000+ repair cost. Monitor: documented wear point worth tracking but not immediate. Low Risk: standard wear, expected at the mileage. No Known Issues: not a documented failure point on this vehicle."}}]}</script>
 </head>
 <body>
 
@@ -5011,6 +5012,393 @@ const CHECKLISTS = {
     ]
   },
 
+  'toyota-prius-2012': {
+    year: 2012,
+    make: 'Toyota',
+    model: 'Prius',
+    trim: 'Two / Three / Four / Five (ZVW30, 3rd gen 2010–2015)',
+    engine: '1.8L 2ZR-FXE Atkinson-cycle I4 + NiMH HV battery, CVT (electronically controlled)',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen Prius (ZVW30) is one of the most reliable used cars in any segment — 200,000+ mile examples are common with minimal powertrain drama. The hybrid system itself is robust. Three things require non-negotiable attention at this age: (1) catalytic converter theft is epidemic on Priuses — confirm the car still has one before you do anything else; (2) the HV battery pack is 9–13 years old and deserves a capacity check; and (3) the inverter water pump uses a plastic impeller that fails silently and can destroy the inverter if neglected. The rest is straightforward used-car inspection.",
+    stats: {
+      itemsToCheck: 17,
+      recalls: 4,
+      ownerComplaints: 1124,
+      topComplaintArea: 'Engine / Hybrid System'
+    },
+    categories: [
+      {
+        title: 'Hybrid System',
+        items: [
+          {
+            title: 'HV battery pack — state of health',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The ZVW30 uses a 201.6V NiMH HV battery. At 9–13 years old, capacity degradation is measurable. A weak pack causes the ICE to cycle more frequently, reducing fuel economy and adding engine wear. Severe cases trigger a red triangle warning and limp-home mode. The factory warranty covered HV battery to 10yr/150k in CARB states, 8yr/100k federally.',
+            check: '<strong>On a warm drive, watch the energy flow display — if the HV battery consistently shows only 4–5 bars of charge range (not 8), it is degraded.</strong> A Toyota-compatible scan tool (Techstream or BlueDriver with hybrid data) can pull State of Health data. Replacement packs are $1,500–$3,500 installed new, or $600–$1,200 refurbished.',
+            cost: '$600–$3,500 (refurb vs. new)',
+            source: 'Toyota HV battery warranty documentation; Prius Chat forums; owner complaint patterns'
+          },
+          {
+            title: 'Inverter cooling water pump',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The hybrid inverter is liquid-cooled. The pump uses a plastic impeller on early ZVW30 builds that corrodes and fails — often silently. Without coolant flow, the inverter overheats. Inverter replacement is $3,000–$5,000+. This is the most expensive surprise repair on a 3rd-gen Prius.',
+            check: '<strong>Park on level ground and listen: with the car in Ready mode (but not moving), the electric pump should hum faintly near the front of the engine bay.</strong> A rattling, grinding, or absent sound is a red flag. Check the inverter coolant reservoir (separate from the main coolant) — should be clean and at the correct level.',
+            cost: 'Pump: $200–$400 installed / Inverter if damaged: $3,000–$5,000+',
+            source: 'NHTSA complaint database; Prius community (priuschat.com)'
+          },
+          {
+            title: 'HV battery cooling fan — cabin air filter path',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The HV battery is cooled by a fan that draws cabin air through an inlet behind the rear passenger seat. This fan collects lint, pet hair, and debris over time. A clogged or seized fan causes the battery to run hot, shortening its life. Many owners never clean it.',
+            check: '<strong>Ask if the HV battery cooling fan has ever been cleaned or replaced.</strong> With the car in Ready mode, lean your head near the rear seat — you should hear a faint fan hum when the battery is warm. Check the inlet grille for debris.',
+            cost: '$0 (DIY clean) to $150–$300 (fan replacement)',
+            source: 'Toyota maintenance documentation; Prius Chat community'
+          }
+        ]
+      },
+      {
+        title: 'Catalytic Converter',
+        items: [
+          {
+            title: 'Catalytic converter — theft verification',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'Prius catalytic converters contain unusually high concentrations of platinum, palladium, and rhodium — at peak precious-metal prices, a Prius cat was worth $700–$1,500 on the scrap market. Theft became epidemic 2019–2023 and remains common. A stolen cat causes an immediate loud exhaust roar and multiple CELs. Replacement is $2,500–$4,000+ at dealer prices. Confirm the cat is physically present before anything else.',
+            check: '<strong>Walk around to the passenger-side front of the car and look under the engine bay with a flashlight — the catalytic converter should be visible as a metallic canister on the exhaust pipe upstream of the main pipe.</strong> Start the car: if it sounds like a motorcycle or hot rod, the cat is gone. A VIN-etched anti-theft shield on the underside is a good sign the car is protected.',
+            cost: '$2,500–$4,500 dealer replacement; $800–$1,500 aftermarket',
+            source: 'NHTSA complaint database; NICB theft data; CarFax theft reports'
+          }
+        ]
+      },
+      {
+        title: 'Engine & Drivetrain',
+        items: [
+          {
+            title: 'ICE oil consumption — 2ZR-FXE',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 1.8L 2ZR-FXE runs in Atkinson cycle, which keeps intake valves open longer — effective for economy, but can allow some oil to be drawn into the combustion chamber at high mileage. Consumption is generally mild (less severe than Subaru or Honda 1.5T) but worth checking on high-mileage examples.',
+            check: '<strong>Check the oil dipstick for level and condition.</strong> Oil should be golden-amber, not black. Ask when the last oil change was and compare oil level to dip. If oil is dark and below MIN, walk away.',
+            cost: '$0 (maintenance) to $1,000+ (piston ring job on severe cases)',
+            source: 'Toyota owner reports; Consumer Reports reliability data'
+          },
+          {
+            title: 'Brake actuator — spongy pedal under hard stops',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Early 2010 ZVW30 Priuses were subject to a brake actuator software recall that affected brake feel under certain low-speed ABS conditions. 2012–2015 models are not affected by that recall but the electro-hydraulic brake system can develop a spongy feel as the actuator ages.',
+            check: '<strong>At low speed (10 mph), apply firm brake pressure — the pedal should feel firm with no sponginess or unexpected ABS activation.</strong> One firm stop from 60 mph should also feel normal.',
+            cost: 'Software update: free / Actuator: $1,200–$2,500',
+            source: 'NHTSA recall database; Toyota TSB documentation'
+          },
+          {
+            title: 'Transaxle fluid — lifetime claim not realistic',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Toyota marketed the Prius transaxle fluid as lifetime — but at 12+ years and 100k+ miles, the fluid degrades and has been linked to transaxle noise and shudder on high-mileage examples. A fluid change is inexpensive insurance.',
+            check: '<strong>Ask about transaxle fluid history.</strong> A responsible previous owner will have changed it at 100k. If fluid has never been changed on a 100k+ car, factor $150–$300 into your offer.',
+            cost: '$150–$300 at an independent shop',
+            source: 'Toyota dealer service bulletins; Prius Chat long-term ownership threads'
+          }
+        ]
+      },
+      {
+        title: 'Interior & Technology',
+        items: [
+          {
+            title: 'Touch-screen / MFD display — delamination',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The center multi-function display on 2010–2015 Priuses can delaminate — a haze or "bubbling" appears between the display layers, most visibly in sunbelt states. It is cosmetic but distracting and costly to replace.',
+            check: '<strong>View the center display from multiple angles in bright light — look for clouding, hazing, or a "oil slick" appearance within the screen layers.</strong> Minor edge delamination is common and negotiating leverage.',
+            cost: '$300–$700 for refurbished display',
+            source: 'NHTSA complaint database; Prius owner community'
+          },
+          {
+            title: 'Auxiliary 12V battery',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The Prius has a small 12V auxiliary battery (in the trunk, under the cargo floor) that powers accessories and the HV system startup. This battery typically lasts 4–5 years. Many used Priuses are on their second or third 12V — an aged or weak 12V causes random error messages and can prevent the car from entering Ready mode.',
+            check: '<strong>Ask when the 12V auxiliary battery was last replaced.</strong> Check manufacture date on the battery label (under cargo floor). A battery over 4 years old is a near-term replacement.',
+            cost: '$200–$350 for OEM-spec AGM 12V',
+            source: 'Toyota documentation; Prius Chat community'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Body',
+        items: [
+          {
+            title: 'Headlamp lenses — UV hazing',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The Prius headlamp lenses are prone to UV oxidation and hazing, especially in sunbelt states. This is cosmetic but reduces light output noticeably.',
+            check: '<strong>Inspect headlamp lenses in daylight for yellowing or clouding.</strong> Polishing kits ($20–$40) resolve mild hazing; severe cases need lens replacement ($150–$400/pair aftermarket).',
+            cost: '$20–$40 (polish kit) to $300–$600 (replacement lenses)',
+            source: 'Common cosmetic issue; owner forums'
+          },
+          {
+            title: 'Rear hatch struts',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The large rear hatch struts weaken over time. At 10+ years, the hatch may drift down when open.',
+            check: '<strong>Open the hatch fully and release — it should hold position without support.</strong> Struts are $40–$80/pair DIY.',
+            cost: '$40–$80 (DIY)',
+            source: 'Common wear item; owner community'
+          }
+        ]
+      },
+      {
+        title: 'Recalls & Safety',
+        items: [
+          {
+            title: 'Open recall campaigns — verify via VIN',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2012–2015 Prius has been subject to multiple recall campaigns over its life. The most significant for the ZVW30 include fuel pump impeller (19V-752 / 20V-014, affects many Toyota models), seat belt pretensioner (select builds), and various software campaigns. All should be complete before purchase.',
+            check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaigns should be completed at a Toyota dealer at no cost before you sign.',
+            cost: 'Free dealer repair',
+            source: 'NHTSA recall database'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '19V-752', title: 'Fuel Pump Impeller', desc: 'Fuel pump may crack and cause engine stall — verify remedy complete.' },
+      { number: '20V-014', title: 'Fuel Pump (supplemental)', desc: 'Supplemental fuel pump campaign — verify via VIN.' },
+      { number: '12V-471', title: 'ABS Actuator Software (2010–2012)', desc: 'Brake actuator software update — applies to 2010–2012 builds; verify if applicable.' },
+      { number: 'Multiple', title: 'Seat belt / airbag campaigns', desc: 'Various safety system campaigns — verify all via VIN at nhtsa.gov/recalls.' }
+    ]
+  },
+
+  'mazda-cx5-2013': {
+    year: 2013,
+    make: 'Mazda',
+    model: 'CX-5',
+    trim: 'Sport / Touring / Grand Touring (KE, 1st gen 2013–2016)',
+    engine: '2.0L Skyactiv-G I4 (155hp) or 2.5L Skyactiv-G I4 (184hp), 6-speed automatic or manual',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 1st-gen CX-5 (KE) is one of the most reliable compact crossovers of its era — the Skyactiv platform was engineered with higher compression and direct injection but without the oil-dilution and carbon-buildup severity that plagues competitors. It drives like a car, seats five comfortably, and has a near-spotless long-term reliability record. The items to check at this age are modest: oil consumption on the 2.5L at high mileage, rear differential fluid on AWD models (often skipped), the infotainment hard drive on nav-equipped cars, and the known-weak rear wiper motor. Everything else is standard used-car diligence.",
+    stats: {
+      itemsToCheck: 14,
+      recalls: 3,
+      ownerComplaints: 312,
+      topComplaintArea: 'Visibility / Electrical'
+    },
+    categories: [
+      {
+        title: 'Engine & Drivetrain',
+        items: [
+          {
+            title: 'Skyactiv-G oil consumption — 2.5L at high mileage',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2.0L Skyactiv-G has a very clean oil-consumption record. The 2.5L is slightly more prone to consumption reports above 80k miles. It is not in the same class as Subaru\'s EJ or Honda\'s 1.5T — but verify on high-mileage examples.',
+            check: '<strong>Check the oil dipstick level and condition on a warmed engine.</strong> Compare to owner\'s claimed last-change interval. Oil should be golden-amber. Dark, low oil on a recently-changed car suggests consumption.',
+            cost: '$0 (monitoring) to $1,500+ (piston ring job on severe cases)',
+            source: 'NHTSA complaint database; Mazda CX-5 Forums; Consumer Reports'
+          },
+          {
+            title: 'AWD rear differential fluid — often neglected',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'AWD CX-5s use a rear coupling unit with its own fluid. Mazda specifies replacement at 30k–45k mile intervals but many owners skip it entirely. Neglected fluid leads to coupling chatter on tight turns and, eventually, rear coupler failure ($1,000–$2,000).',
+            check: '<strong>Ask if rear differential / rear coupling fluid has ever been serviced.</strong> On AWD models, confirm the service record shows this. A car with 100k miles and no record of this service needs it immediately.',
+            cost: '$100–$200 (fluid change) vs. $1,000–$2,000 (coupling replacement)',
+            source: 'Mazda service documentation; Mazda CX-5 Forum long-term reports'
+          },
+          {
+            title: 'Manual transmission — clutch condition',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Manual CX-5s (Sport trim mainly) are relatively rare. If you find one, inspect the clutch engagement point — should be firm and engage in the upper 40–60% of pedal travel. A clutch that engages very low is near end of life.',
+            check: '<strong>On a manual, find a hill: apply the parking brake, put it in first, and gently release the clutch.</strong> The car should pull forward and the engine should lug or stall — not slip. Slipping means the clutch is worn.',
+            cost: '$600–$1,200 (clutch replacement at independent shop)',
+            source: 'Standard used-car inspection procedure'
+          }
+        ]
+      },
+      {
+        title: 'Interior & Technology',
+        items: [
+          {
+            title: 'Navigation system hard drive — failure risk',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Grand Touring CX-5s with the Mazda navigation system use an internal hard disk drive (HDD) rather than solid-state storage. At 10+ years old, HDDs in cars exposed to heat and vibration fail. Symptoms: Nav becomes slow, freezes, or stops working. Replacement requires a dealer unit.',
+            check: '<strong>On nav-equipped cars, test the navigation system: enter an address and confirm routing works.</strong> A slow or unresponsive system is a sign of early HDD failure. Ask if the system has ever been serviced.',
+            cost: '$500–$900 (dealer replacement) or $150–$400 (aftermarket Android Auto retrofit)',
+            source: 'Mazda CX-5 Forum; NHTSA complaint patterns'
+          },
+          {
+            title: 'MazdaConnect infotainment responsiveness (2014–2016)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The rotary-knob MazdaConnect system introduced in 2014 is not fast by modern standards, but it is generally reliable. Units that run hot in Phoenix-style climates can develop touchpad sensitivity issues over time.',
+            check: '<strong>Test the rotary commander knob and all infotainment functions</strong> — audio, Bluetooth pairing, backup camera display, and climate controls. All should respond without lag over 2–3 seconds.',
+            cost: '$0 (software reset) to $400–$800 (unit replacement)',
+            source: 'Owner community; NHTSA complaint database'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Body',
+        items: [
+          {
+            title: 'Rear wiper motor — failure',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The rear wiper motor on KE CX-5s has a higher-than-average failure rate reported by owners — it stops working without a clear electrical cause. It is not safety-critical but is a known weak point.',
+            check: '<strong>Test the rear wiper and washer on a test drive.</strong> If it does not move, confirm whether it is a fuse or the motor. A dead rear wiper is useful negotiating leverage.',
+            cost: '$150–$350 (motor replacement at shop)',
+            source: 'Mazda CX-5 Forum; NHTSA complaint reports'
+          },
+          {
+            title: 'Headlamp condensation',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The CX-5 headlamp assemblies can collect moisture condensation in wet or high-humidity environments. Minor condensation that clears after running is normal; persistent pooling suggests a failed vent or seal.',
+            check: '<strong>Inspect both headlamps in the morning for moisture or droplets inside the lens.</strong> Sealed moisture that does not clear after 20 minutes of running is a concern.',
+            cost: '$0 (dried naturally) to $300–$600/side (assembly replacement)',
+            source: 'Owner community; insurance claim patterns'
+          },
+          {
+            title: 'Paint quality — Soul Red / Meteor Gray chipping',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The CX-5\'s Soul Red (and to a lesser extent, Meteor Gray) paint is visually stunning but requires careful inspection. The metallic flake layer chips more visibly than standard single-stage paint. Touch-up is harder to match perfectly.',
+            check: '<strong>Inspect the hood leading edge, front bumper, and roof rail edges for chipping.</strong> Normal car-its-age chipping is expected. Heavy frontal chipping may indicate high-speed highway exposure or prior hood replacement.',
+            cost: '$200–$600 (touch-up / detail) to $1,500+ (hood respray)',
+            source: 'Mazda owner community; detailing forums'
+          }
+        ]
+      },
+      {
+        title: 'Recalls & Safety',
+        items: [
+          {
+            title: 'Open recall campaigns — verify via VIN',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The KE CX-5 has had several recalls including HID headlamp compliance (15V-461, certain Grand Touring builds), windshield wiper (14V-292), and fuel pump (shared with broader Mazda 2.5L campaign). All should be closed before purchase.',
+            check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaigns are remedied free at a Mazda dealer.',
+            cost: 'Free dealer repair',
+            source: 'NHTSA recall database'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '15V-461', title: 'HID Headlamps (Grand Touring)', desc: 'HID headlamp aim may not meet FMVSS standards on select builds — verify via VIN.' },
+      { number: '14V-292', title: 'Windshield Wiper', desc: 'Wiper pivot shaft may corrode and cause failure — verify status.' },
+      { number: '20V-579', title: 'Fuel Pump / Electrical', desc: 'Shared Mazda fuel pump campaign — verify via VIN check.' }
+    ]
+  },
+
+  'ford-escape-2013': {
+    year: 2013,
+    make: 'Ford',
+    model: 'Escape',
+    trim: 'S / SE / SEL / Titanium (C520, 3rd gen 2013–2019)',
+    engine: '2.5L iVCT I4 (168hp) or 1.6L EcoBoost I4 (178hp) or 2.0L EcoBoost I4 (240hp), 6-speed SelectShift automatic',
+    overallRisk: 'medium',
+    overallRiskLabel: 'Medium Attention',
+    summary: "The 3rd-gen Ford Escape (C520) is a popular, well-packaged crossover with a critical asterisk: the 1.6L EcoBoost engine in 2013 models had a documented coolant-to-combustion-chamber intrusion issue that caused several engine fires and prompted major recalls. Resolved examples with verified recall completion are fine, but this must be confirmed before purchase. The 2.5L naturally-aspirated base engine has none of this drama and is a strong pick for reliability-focused buyers. The 2.0L EcoBoost is capable but has its own coolant crossover pipe issue. MyFord Touch infotainment is the other widely-reported frustration — expect a crash-prone system that Ford eventually patched but never fully resolved.",
+    stats: {
+      itemsToCheck: 17,
+      recalls: 6,
+      ownerComplaints: 4127,
+      topComplaintArea: 'Engine / Powertrain'
+    },
+    categories: [
+      {
+        title: 'Engine & Powertrain',
+        items: [
+          {
+            title: '1.6L EcoBoost — coolant intrusion / engine fire risk',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: "The 2013 Escape's 1.6L EcoBoost is subject to NHTSA recall 13V-261 (and related campaigns): coolant can enter the combustion chamber through the cylinder head, causing loss of power, overheating, and — in multiple documented cases — under-hood fires. Ford issued software and hardware fixes. The risk on a correctly-remedied car is low, but recall completion MUST be verified by VIN before purchase. Unresolved examples should not be purchased.",
+            check: '<strong>Run the VIN at nhtsa.gov/recalls — confirm all 1.6L EcoBoost campaigns are closed.</strong> Ask the seller for recall completion paperwork from a Ford dealer. On a test drive, check for any coolant smell, overheating gauge movement, or coolant loss between drives.',
+            cost: 'Free recall repair (if open) / Engine replacement if fire damage: $6,000–$10,000+',
+            source: 'NHTSA recall 13V-261; NHTSA complaint database (4,000+ complaints); NHTSC investigation PE12-020'
+          },
+          {
+            title: '2.0L EcoBoost — coolant crossover pipe',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 2.0L EcoBoost uses a plastic coolant crossover pipe that has a documented failure rate — it can crack or degrade, causing coolant loss and overheating. This is separate from the 1.6L fire issue but equally capable of causing a no-start or overheating situation. Many owners have proactively replaced it with an aluminum aftermarket unit.',
+            check: '<strong>On a 2.0L EcoBoost, inspect the coolant crossover pipe at the front of the engine for cracks, weeping, or discoloration.</strong> A pressure test of the cooling system should be part of any PPI. Ask if the pipe has been replaced.',
+            cost: '$300–$600 (pipe replacement at shop); $80–$150 (DIY aluminum pipe)',
+            source: 'Owner community; Escape City forum; independent shop TSB reports'
+          },
+          {
+            title: '2.5L iVCT — the no-drama choice',
+            risk: 'none', riskLabel: 'No Known Issues',
+            desc: 'The base 2.5L naturally-aspirated four-cylinder is the safest engine choice in the 2013–2016 Escape. It lacks the power of the EcoBoost engines but brings significantly better long-term reliability. No significant documented failure patterns.',
+            check: '<strong>Start the engine cold and listen for ticking, knocking, or rough idle.</strong> Check oil level and condition. The 2.5L should start and idle cleanly. Confirm no active CELs.',
+            cost: 'Normal maintenance only',
+            source: 'Consumer Reports reliability data; NHTSA complaint patterns'
+          },
+          {
+            title: '6-speed SelectShift automatic — transmission behavior',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 6F35 6-speed automatic used in the Escape has reports of shudder, harsh downshifts, and occasional engagement hesitation on higher-mileage examples. A fluid flush is often corrective. Not the systemic issue of the PowerShift DCT (which was never in this vehicle), but worth verifying.',
+            check: '<strong>On the test drive, pay attention to shifts from 1st–2nd and when downshifting at 30 mph for a stop.</strong> Any shudder, clunk, or hesitation should be noted. Confirm the transmission fluid is red (not dark brown) via the dipstick or service record.',
+            cost: '$150–$250 (fluid flush) / $800–$2,500 (solenoid or valve body) / $4,000–$6,000 (rebuild)',
+            source: 'NHTSA complaint database; Ford Escape Forum'
+          }
+        ]
+      },
+      {
+        title: 'Technology & Infotainment',
+        items: [
+          {
+            title: 'MyFord Touch — crash-prone infotainment',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'MyFord Touch (on SE, SEL, Titanium) is one of the most-complained-about infotainment systems in the Ford lineup. The system crashes, freezes, and loses Bluetooth/audio sources. Ford issued multiple software updates that improved but did not eliminate the issues. At this age, expect an imperfect experience. The non-MyFord Touch base system is more reliable.',
+            check: '<strong>Test all MyFord Touch functions: audio, climate touch controls, navigation (if equipped), Bluetooth pairing, and backup camera.</strong> Reboot the system by holding the power button 5 seconds — it should restart. Confirm it connects to your phone. A system that crashes during a 20-minute test drive is a red flag.',
+            cost: '$0 (software update) / Aftermarket head unit: $300–$800 installed',
+            source: 'NHTSA complaint database; JD Power reliability surveys (MyFord Touch consistently bottom-ranked)'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Body',
+        items: [
+          {
+            title: 'Door handle exterior — breakage',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The external door handles on the C520 Escape have a documented brittleness issue — the plastic mounting tabs break, causing the handle to pull out without operating the latch. Common on cold-weather states but also in sun-belt heat cycling.',
+            check: '<strong>Test all four exterior door handles — they should pull firmly and operate the latch smoothly.</strong> A handle that feels loose at the back of the pull or requires extra force has likely broken internally.',
+            cost: '$40–$100/handle (parts + DIY) / $150–$300/handle (shop)',
+            source: 'NHTSA complaint database; Ford Escape Forum'
+          },
+          {
+            title: 'Panoramic sunroof — drain clogs and wind noise',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The optional panoramic sunroof is a feature that attracts leaks and wind noise as drain tubes clog with debris over time. Common in wet or heavily-tree-sheltered environments.',
+            check: '<strong>Inspect headliner around the sunroof for any staining or moisture rings.</strong> With the car parked, pour a small amount of water at the sunroof corners and confirm it drains freely (not into the cabin).',
+            cost: '$0–$150 (drain cleaning) / $500–$1,500 (water damage remediation)',
+            source: 'Ford Escape Forum; owner complaint patterns'
+          },
+          {
+            title: 'Rust — salt-belt considerations',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The C520 Escape is not particularly rust-prone for its class, but like all vehicles, sub-frame and rocker panels deserve inspection on northeast and upper-midwest cars at 10+ years.',
+            check: '<strong>On any car with northeastern history, inspect the sub-frame mounting points and rocker panels from below.</strong> Surface rust is expected; pitting or scaling is a concern.',
+            cost: '$500–$3,000 depending on extent',
+            source: 'Standard inspection; salt-belt owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Recalls & Safety',
+        items: [
+          {
+            title: 'Multiple active recall campaigns — critical to verify',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'The 2013–2016 Escape has been subject to a large number of recall campaigns — among the highest for compact SUVs of its era. Beyond the 1.6L EcoBoost fire recall, campaigns include steering shaft coupler, airbag, fuel system, and HVAC-related items. Given the volume of campaigns, a VIN check is mandatory.',
+            check: '<strong>Run the VIN at nhtsa.gov/recalls — count the open campaigns.</strong> More than 2 open campaigns on a used car is a red flag. Ensure all safety-critical items (engine fire, steering, airbag) are confirmed closed at a Ford dealer.',
+            cost: 'Free dealer repair for open recalls',
+            source: 'NHTSA recall database (13V-261, 14V-090, 14V-350 among others)'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '13V-261', title: '1.6L EcoBoost Coolant Loss / Engine Fire', desc: 'Coolant enters combustion chamber, risk of engine fire — high priority; verify complete.' },
+      { number: '14V-350', title: 'Steering Shaft Coupler', desc: 'Steering shaft may separate — verify complete.' },
+      { number: '14V-090', title: 'MyFord Touch Software', desc: 'Software update campaign — verify via VIN.' },
+      { number: '17V-243', title: 'Fuel Injector / Engine Stall', desc: 'Engine may stall without warning — verify status.' },
+      { number: 'Multiple', title: 'Takata Airbag (select builds)', desc: 'Some C520 builds included in Takata campaign — verify via VIN.' },
+      { number: '16V-449', title: 'Power Liftgate / Brake Fluid', desc: 'Power liftgate wiring may cause brake fluid contamination on some builds — verify status.' }
+    ]
+  },
+
+
 };
 
 // ---------- AVAILABLE YMMT MENU (drives dropdowns) ----------
@@ -5158,7 +5546,12 @@ const VEHICLE_MENU = {
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' }
     ],
     'Mazda': [
-      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM gen)', key: 'mazda3-2014' }
+      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM gen)', key: 'mazda3-2014' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' }
+    ],
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -5170,16 +5563,15 @@ const VEHICLE_MENU = {
   },
   2015: {
     'Ford': [
-      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
-    ],
-    'Jeep': [
-      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' }
     ],
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' },
       { model: 'Forester', trim: '4th gen FB25', key: null }
     ],
     'Toyota': [
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' }
@@ -5187,6 +5579,9 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring (4th gen)', key: null },
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
+    ],
+    'Mazda': [
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
@@ -5214,6 +5609,7 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
@@ -5224,7 +5620,11 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' },
       { model: 'Mazda6', trim: '', key: null }
+    ],
+    'Ford': [
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' }
     ],
     'Chevrolet': [
       { model: 'Volt', trim: '', key: null },
@@ -5236,17 +5636,24 @@ const VEHICLE_MENU = {
     ]
   },
   2013: {
+    'Toyota': [
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
     'Honda': [
       { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' },
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
+    'Mazda': [
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' }
+    ],
+    'Ford': [
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' }
+    ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
-    ],
-    'Toyota': [
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
-      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
@@ -5271,6 +5678,7 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: '4Runner', trim: 'V6 SR5 / Trail / Limited', key: 'toyota-4runner-2008' }
     ],
