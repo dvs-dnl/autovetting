@@ -913,11 +913,11 @@ function renderProfile(v) {
     +   '<div class="module-title">Maintenance Log <span class="badge-live">Live</span></div>'
     +   '<div class="module-desc">Log every service &mdash; oil changes, brakes, timing belts. Auto-surface upcoming intervals. Export a full history for resale disclosure.</div>'
     + '</a>'
-    + '<div class="module-card soon">'
+    + '<a href="' + repairUrl + '" class="module-card">'
     +   '<div class="module-icon">&#128296;</div>'
-    +   '<div class="module-title">Repair Guides <span class="badge-soon">Coming soon</span></div>'
+    +   '<div class="module-title">Repair Guides <span class="badge-live">Live</span></div>'
     +   '<div class="module-desc">Step-by-step DIY walkthroughs for common jobs on ' + esc(v.make) + ' ' + esc(v.model) + ' vehicles &mdash; tools, parts, torque specs, and common mistakes.</div>'
-    + '</div>';
+    + '</a>';
 
   // ── Details card (VIN / notes) ──
   var dc = document.getElementById('details-card');

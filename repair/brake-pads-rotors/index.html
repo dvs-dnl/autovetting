@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brake Pads + Rotors — AutoVetting Repair Guides</title>
+<meta name="description" content="Replace brake pads and rotors — tools, parts list, torque specs, and a step-by-step progress walker. Plan on 1.5–3 hours and $80–$150 in parts.">
+<link rel="canonical" href="https://autovetting.com/repair/brake-pads-rotors/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">Symptoms</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">Symptoms</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "brake-pads-rotors",
+  "title": "Brake Pads + Rotors",
+  "summary": "The highest-return safety job on any used car. Worn pads and rotors reduce stopping distance, cause steering-wheel vibration, and telegraph every other problem in the brake system. Replace them in axle pairs — never one side at a time.",
+  "category": "safety",
+  "safety_critical": true,
+  "difficulty": 2,
+  "time_hours": { "low": 1.5, "high": 3.0 },
+  "cost_usd": { "low": 80, "high": 150 },
+  "last_updated": "2026-05-28",
+  "aeo_answer": "Front brake pads and rotors are a 1.5–3 hour job for both sides. Plan on $80–$150 in parts: quality pads, two rotors, and caliper grease. A torque wrench is required — the caliper bracket bolts carry the entire braking force of the axle. Always replace pads and rotors in axle pairs, never one side alone. Torque values vary by vehicle — always look up your specific year, make, and model before you start.",
+  "symptoms": [
+    "Squealing or grinding at low speed (wear indicator or metal-on-metal contact)",
+    "Pulsation or vibration through the steering wheel during braking (warped or scored rotor)",
+    "Vehicle pulls to one side under braking (seized caliper slide pin or uneven pad wear)",
+    "Visible pad thickness at or below 3mm through the caliper window",
+    "Deep grooves or a lip at the outer edge of the rotor face",
+    "Brake warning light (low pad sensor on some vehicles)"
+  ],
+  "tools_required": [
+    { "name": "Floor jack", "required": true, "note": "Minimum 2-ton capacity" },
+    { "name": "Jack stands (pair)", "required": true, "note": "Never rely on the jack alone" },
+    { "name": "Lug wrench or impact gun", "required": true },
+    { "name": "Socket set with ratchet and breaker bar", "required": true, "note": "Caliper and bracket bolts — size varies by vehicle" },
+    { "name": "Torque wrench (10–100 ft-lb)", "required": true },
+    { "name": "C-clamp or piston compressor tool", "required": true, "note": "To push the caliper piston back into its bore" },
+    { "name": "Wire coat hanger or bungee", "required": true, "note": "Hang the caliper — never let it dangle on the brake hose" },
+    { "name": "Brake cleaner (one can)", "required": true },
+    { "name": "Silicone caliper slide pin grease", "required": true },
+    { "name": "Anti-seize compound", "required": true, "note": "For the hub face, not the friction surfaces" },
+    { "name": "Turkey baster or syringe", "required": false, "note": "Remove some master cylinder fluid before compressing the piston" },
+    { "name": "Wheel chocks", "required": false, "note": "Chock the wheels not being lifted for safety" }
+  ],
+  "parts": [
+    { "name": "Brake pads (front or rear pair)", "tier": "recommended", "note": "Use a ceramic or semi-metallic pad from a reputable brand (Akebono, Bosch, Wagner). Match OEM spec or better. Buy axle pairs.", "price_estimate_usd": 40 },
+    { "name": "Rotors (pair — one per side)", "tier": "recommended", "note": "Buy quality — cheap rotors warp within a year. Centric Premium, PowerStop, Brembo, or OE replacement.", "price_estimate_usd": 65 },
+    { "name": "Silicone caliper grease", "tier": "required", "note": "For slide pins only. Not on the friction surfaces.", "price_estimate_usd": 6 },
+    { "name": "Anti-seize lubricant", "tier": "required", "note": "Thin film on hub face to prevent rust welding.", "price_estimate_usd": 4 },
+    { "name": "Brake fluid (DOT 3 or 4)", "tier": "required", "note": "Check your owner manual. DOT 4 is backward compatible with DOT 3.", "price_estimate_usd": 8 },
+    { "name": "No-name rotors from the parts-store bin", "tier": "avoid", "note": "They warp under load. You'll be doing this job again in a year." }
+  ],
+  "torque_specs": [
+    { "key": "caliper_slide_pins", "fastener": "Caliper slide pin bolts", "ft_lb": 26, "nm": 35, "notes": "Typical range 25–35 ft-lb. Verify for your model. Snug, not overtorqued — deforms the pins." },
+    { "key": "caliper_bracket", "fastener": "Caliper bracket bolts", "ft_lb": 65, "nm": 88, "notes": "Critical — carries full braking force. Typical range 50–100 ft-lb. Look up your vehicle." },
+    { "key": "lug_nuts", "fastener": "Lug nuts", "ft_lb": 95, "nm": 129, "notes": "Typical range 80–120 ft-lb. Star pattern in two passes." }
+  ],
+  "steps": [
+    { "headline": "Look up torque specs for your vehicle before you start.", "warn": "Torque specs for caliper brackets vary widely — 50 to 100+ ft-lb depending on the vehicle. Use the values in the spec above as a general reference only.", "body": "Search '[year] [make] [model] caliper bracket torque spec' to get the exact value. Write it down before you get under the car." },
+    { "headline": "Gather tools and parts. Inspect what you've got before touching anything.", "body": "Look at both front (or rear) calipers through the wheel spokes. If one side is obviously more worn than the other, you have a stuck slide pin — plan to clean both. If the rotor has a thick rust lip at the outer edge, the rotors need replacement regardless of thickness." },
+    { "headline": "Park on level ground, set the parking brake, and chock the wheels.", "warn": "The parking brake holds only the rear wheels. If working on rear brakes, chock the fronts.", "body": "Put the transmission in park (auto) or first gear (manual) in addition to the parking brake." },
+    { "headline": "Break the lug nuts loose while the wheel is still on the ground.", "body": "A quarter turn each — much easier than fighting a spinning wheel in the air." },
+    { "headline": "Raise the vehicle and support it on jack stands.", "warn": "Never work under a car supported only by a floor jack. Jack stands go under the frame or pinch-weld jack points shown in your owner manual.", "body": "Most vehicles have marked jack points in the owner manual. Find them before you lift." },
+    { "headline": "Remove the wheels. Set them aside out of the work zone.", "body": "While the wheel is in your hands, inspect the inner sidewall for wear or bubbling you can't see when mounted." },
+    { "headline": "Remove the two caliper slide pin bolts.", "torque": "caliper_slide_pins", "body": "These thread in from the back of the caliper. Size varies (typically 10–13mm hex or 7mm Allen). If they fight you, use penetrating oil and wait 5 minutes rather than rounding the head." },
+    { "headline": "Lift the caliper off the pads and rotor. Hang it immediately.", "warn": "Do not let the caliper hang by the brake hose. The hose isn't rated for that load — internal tears are invisible until the hose ruptures under braking.", "body": "Hang the caliper from the coil spring or strut with a wire hanger or bungee. It should clear the rotor with enough slack to work comfortably." },
+    { "headline": "Pull the old pads out of the bracket.", "body": "Note which pad has the wear indicator (the small metal tab) — it goes on the inboard (piston) side. Note how the anti-squeal shims are oriented before removing them; you'll reinstall them on the new pads or replace them if bent." },
+    { "headline": "Remove the caliper bracket from the steering knuckle.", "torque": "caliper_bracket", "body": "Two bolts, usually 17–19mm hex. These are torqued tight and often corroded — a breaker bar or impact gun is expected here. Set the bracket aside where it won't stress the brake line." },
+    { "headline": "Remove the old rotor.", "warn": "Don't pry against the wheel studs to free a rust-stuck rotor. Bent studs mean a hub replacement.", "body": "Most rotors are held only by the studs plus a small factory retaining clip (discard it). If rust-stuck, strike the rotor face between the studs with a dead-blow or rubber mallet." },
+    { "headline": "Clean the hub face with a wire brush.", "body": "Any rust scale here causes lateral runout in the new rotor — which feels exactly like a warped rotor. Wipe clean with brake cleaner after brushing." },
+    { "headline": "Wipe both faces of the new rotor with brake cleaner.", "body": "New rotors ship with an anti-rust oil coating. Skip this step and you'll contaminate the new pads on the first heat cycle. Spray and wipe until the rag comes up dry." },
+    { "headline": "Apply a thin smear of anti-seize to the hub face only.", "body": "Not the lug studs. Not the rotor friction surface. A thin ring on the hub mating surface stops rust welding. The rotor should still seat flush." },
+    { "headline": "Mount the new rotor. Thread on a lug nut hand-tight to hold it.", "body": "The lug nut just holds the rotor in place while you work — you'll re-torque after everything is assembled." },
+    { "headline": "Reinstall the caliper bracket.", "torque": "caliper_bracket", "body": "Hand start the threads before bringing the wrench in. Torque to spec with a torque wrench — these bolts hold the full braking force of the axle." },
+    { "headline": "Clean and regrease the slide pins.", "body": "Pull each pin out of the bracket, wipe it down with a rag, inspect the rubber boot for tears or cracking. Apply a thin coat of silicone caliper grease (not petroleum grease) and reinstall. Seized slide pins are the most common cause of uneven pad wear." },
+    { "headline": "Compress the caliper piston back into its bore.", "warn": "Before compressing: open the master cylinder cap and watch the level. Compressing the piston pushes fluid backward — if the reservoir is full, the overflow goes on the engine. Siphon out some fluid if needed.", "body": "Place an old pad or flat piece of wood against the piston face. Use the C-clamp or piston tool to push it straight back in. Some rear calipers require rotating the piston as you compress (if it won't go straight in, you need a piston wind-back tool)." },
+    { "headline": "Install the new pads into the bracket.", "body": "Most pads have a specific inboard/outboard orientation. The wear indicator (metal tab) goes inboard toward the piston. Pads should sit flat in their retaining clips without rocking." },
+    { "headline": "Reinstall the caliper over the new pads.", "torque": "caliper_slide_pins", "body": "Slide the caliper straight down over the pads and rotor. If it won't close, the piston isn't compressed enough — back up and compress further. Hand-thread the slide pin bolts before torquing to avoid cross-threading." },
+    { "headline": "Repeat the entire process on the other side of the axle.", "body": "Always do both sides of an axle in the same session. Mixing old and new pads or rotors on the same axle causes pull under braking." },
+    { "headline": "Top off the brake fluid reservoir.", "body": "Use the fluid type stamped on the reservoir cap (DOT 3 or DOT 4). Never use DOT 5 (silicone) in a DOT 3/4 system." },
+    { "headline": "Mount the wheels and torque the lug nuts in a star pattern.", "torque": "lug_nuts", "body": "Do the final torque with all four wheels on the ground after lowering the vehicle." },
+    { "headline": "Pump the brake pedal until it is firm before driving anywhere.", "warn": "The first pedal after caliper service is long and goes to the floor. Do not drive until the pedal is firm and high.", "body": "Pump 10–15 times from the driver's seat with the vehicle stationary. If the pedal doesn't firm up, you have a leak, an unbled caliper, or the piston wasn't evenly compressed. Diagnose before driving." },
+    { "headline": "Bed the new pads.", "warn": "Do not park with your foot on the brake pedal during the cool-down after bedding. Pad material transfers to the rotor in a single spot and permanently mimics warped-rotor vibration.", "body": "Find an empty road. Do 8–10 medium-pressure stops from 40 mph down to 5 mph without coming to a full stop. Then 2–3 firm stops from 50 mph. Drive 2–3 miles at light throttle to cool the brakes. Park with the handbrake." }
+  ],
+  "verify": [
+    "Brake pedal is firm and high after 4–5 pumps from cold (not spongy or low)",
+    "No fluid weeping at caliper, hose, or bracket after pumping",
+    "Vehicle tracks straight under medium-pressure braking from 40 mph",
+    "No grinding or metal-on-metal noise during the bedding-in stops",
+    "No steering wheel vibration after the first 100 miles",
+    "Pad material visible at both sides of each rotor looks even"
+  ],
+  "common_mistakes": [
+    "Letting the caliper hang by the brake hose. Internal hose tears are invisible until the hose fails — often at the worst possible moment.",
+    "Skipping the rotor-face wipe-down. New rotors ship coated in anti-rust oil. That oil contaminates the new pads on the first heat cycle.",
+    "Buying cheap no-name rotors to save $20. They warp under load. You do the job again in a year.",
+    "Not torquing the caliper bracket bolts to spec. The bracket holds the entire braking force of that axle.",
+    "Installing pads or rotors on only one side of the axle. This causes pull under braking that alignment shops can't fix.",
+    "Parking on the brake pedal during bed-in cool-down. Pad material deposits on one spot of the rotor and permanently mimics a warped rotor."
+  ],
+  "related_guides": [
+    { "slug": "oil-change", "label": "Oil Change — while you're under there" },
+    { "slug": "air-filter", "label": "Engine Air Filter — quick win" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

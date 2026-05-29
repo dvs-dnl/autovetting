@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engine Air Filter — AutoVetting Repair Guides</title>
+<meta name="description" content="Replace the engine air filter in 10–20 minutes. No tools needed on most vehicles. Improves fuel economy and prevents engine wear.">
+<link rel="canonical" href="https://autovetting.com/repair/air-filter/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to replace</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to replace</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque" style="display:none">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "air-filter",
+  "title": "Engine Air Filter",
+  "summary": "The engine air filter stops dust, pollen, and debris from entering the combustion chamber. A clogged filter reduces power, hurts fuel economy, and can cause a rough idle. Replacement takes under 20 minutes and requires no tools on most vehicles.",
+  "category": "filters",
+  "safety_critical": false,
+  "difficulty": 1,
+  "time_hours": { "low": 0.15, "high": 0.33 },
+  "cost_usd": { "low": 15, "high": 35 },
+  "last_updated": "2026-05-28",
+  "aeo_answer": "Engine air filter replacement is the easiest job in this list. Open the airbox (usually secured by 2–4 spring clips or wing nuts), lift out the old filter, drop in the new one, close the lid. The filter is located in a black plastic box in the engine bay connected to the throttle body by a rubber intake tube. The whole job takes 15 minutes and doesn't require lifting the car.",
+  "symptoms": [
+    "Reduced throttle response or sluggish acceleration",
+    "Worse fuel economy than normal (a clogged filter forces the engine to work harder)",
+    "Rough idle or minor misfires (especially if the filter is completely blocked)",
+    "Filter appears gray, brown, or black when held up to light (should be white or light tan for paper filters)",
+    "It has been 15,000–30,000 miles since the last replacement, or 1–2 years (shorter interval in dusty or desert environments)"
+  ],
+  "tools_required": [
+    { "name": "None on most vehicles", "required": true, "note": "Most airboxes open by hand using spring clips or wing nuts" },
+    { "name": "Flathead screwdriver", "required": false, "note": "Some airbox clips need a little help to pop open" },
+    { "name": "7mm nut driver or socket", "required": false, "note": "Some airboxes use small bolts instead of clips" }
+  ],
+  "parts": [
+    { "name": "Engine air filter (correct part for your vehicle)", "tier": "required", "note": "Look up by year, make, model, and engine size. Paper or cotton gauze. OEM, Fram, K&N, or Wix are all fine.", "price_estimate_usd": 20 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Locate the airbox in the engine bay.", "body": "The airbox is a black plastic box connected to the throttle body by a ribbed rubber or plastic intake tube. It is usually in one of the front corners of the engine bay. On some vehicles it's in the center or behind the headlight assembly — consult your owner manual if you can't find it." },
+    { "headline": "Open the airbox lid.", "body": "Most airboxes use 2–4 spring clips on the sides of the lid. Pinch the ears of each clip and rotate it outward. Some vehicles use wing nuts or small bolts. You may need to loosen the clamp on the intake tube if the lid won't lift fully — usually one hose clamp screw." },
+    { "headline": "Remove the old filter.", "body": "Note which way the filter is seated and which side faces up. Most filters have an arrow or 'THIS SIDE UP' marking. Lift the old filter out and hold it up to the sky or a bright light — if you can't see light through the filter material, it's definitely time." },
+    { "headline": "Wipe out the inside of the airbox with a dry rag.", "body": "Remove any dust, debris, or insects. Do not use water or spray cleaners inside the airbox — moisture in the intake can cause a hydrolock if it gets into the combustion chamber." },
+    { "headline": "Install the new filter in the same orientation as the old one.", "body": "The filter should seat flat against the bottom of the airbox with no folded edges. On vehicles with a rectangular box, the filter should fit snugly with no gaps around the frame seal." },
+    { "headline": "Close the airbox lid and re-engage all clips.", "body": "All clips should snap shut without forcing. A lid that won't close fully means the filter is misaligned — reopen, reseat, and try again. An open or partially open airbox lets unfiltered air bypass the filter directly into the engine." },
+    { "headline": "Tighten the intake tube clamp if you loosened it.", "body": "Snug only — these are usually plastic or soft metal. An air leak at the intake tube sets a MAF sensor fault code and causes rough running." }
+  ],
+  "verify": [
+    "Airbox lid is fully closed with all clips engaged",
+    "Intake tube clamp is tightened if it was loosened",
+    "No check engine light (a P0101 or P0102 MAF sensor code can occur if the airbox is left open or the tube is loose)"
+  ],
+  "common_mistakes": [
+    "Installing the filter backwards. The airflow arrow points toward the throttle body, not away from it.",
+    "Leaving the airbox lid partially open or with one clip unlatched. Unfiltered air enters the engine and erodes the cylinder walls over time.",
+    "Forgetting to retighten the intake tube clamp. An air leak downstream of the MAF sensor sets a fault code and causes rough running.",
+    "Using a wet-oiled performance filter (like an oiled K&N) on a vehicle that wasn't designed for it. The oil can contaminate the MAF sensor and cause a lean condition."
+  ],
+  "related_guides": [
+    { "slug": "cabin-filter", "label": "Cabin Air Filter — same 15 minutes, different filter" },
+    { "slug": "oil-change", "label": "Oil Change — do it on the same day" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

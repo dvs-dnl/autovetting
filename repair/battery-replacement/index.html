@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battery Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="Replace a dead or weak car battery in 15–30 minutes. Negative terminal off first. Step-by-step guide with safety tips.">
+<link rel="canonical" href="https://autovetting.com/repair/battery-replacement/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">Symptoms</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">Symptoms</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque" style="display:none">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "battery-replacement",
+  "title": "Battery Replacement",
+  "summary": "A dead or dying battery can leave you stranded without warning. Replacement takes 15–30 minutes and requires nothing more than a 10mm wrench. The order of terminal removal matters — negative first, always.",
+  "category": "electrical",
+  "safety_critical": true,
+  "difficulty": 1,
+  "time_hours": { "low": 0.25, "high": 0.5 },
+  "cost_usd": { "low": 100, "high": 200 },
+  "last_updated": "2026-05-28",
+  "aeo_answer": "Battery replacement is the easiest job in this list. Disconnect negative first, disconnect positive, lift out the old battery (it weighs 30–50 lbs), drop in the new one, reconnect positive first, then negative. The only thing you can really get wrong is the terminal order — get it backward and you risk a short that can damage the ECU or start a fire. Use a memory saver or keep a note of any radio codes before disconnecting.",
+  "symptoms": [
+    "Slow or labored cranking on startup (the starter motor is working harder than normal)",
+    "Battery warning light on the dashboard (charging system issue or dead cell)",
+    "Vehicle won't start at all — clicks rapidly or nothing happens",
+    "Headlights dim noticeably when cranking",
+    "Battery is 5 or more years old (average lifespan is 3–5 years; Arizona/desert heat shortens this to 2–3)",
+    "Swollen or cracked battery case (replace immediately — a failing battery can vent hydrogen gas)"
+  ],
+  "tools_required": [
+    { "name": "10mm wrench or socket", "required": true, "note": "Most battery terminal bolts are 10mm. Some vehicles use 12mm or 13mm." },
+    { "name": "Ratchet or box wrench", "required": true },
+    { "name": "Terminal cleaning brush", "required": false, "note": "Cleans corrosion from terminal clamps and battery posts" },
+    { "name": "Memory saver / OBD keep-alive", "required": false, "note": "Maintains radio presets and ECU adaptations during the swap — plugs into the OBD port and runs from a 9V battery" },
+    { "name": "Battery hold-down socket (often 10mm hex)", "required": false, "note": "Many vehicles have a hold-down bracket that retains the battery — remove it before trying to lift the battery out" }
+  ],
+  "parts": [
+    { "name": "Replacement battery (correct group size)", "tier": "required", "note": "Group size is stamped on the old battery's label (e.g., Group 35, 51R, 94R). Match group size exactly — a battery that doesn't fit the tray can damage the tray and vibrate loose. For AGM-equipped vehicles (many post-2013 stop-start systems), replace only with AGM.", "price_estimate_usd": 150 },
+    { "name": "Dielectric grease", "tier": "recommended", "note": "Apply to terminal posts after installation to prevent corrosion.", "price_estimate_usd": 4 },
+    { "name": "Battery terminal anti-corrosion pads", "tier": "recommended", "note": "Felt washers coated in anti-corrosion compound — sit between terminal and post.", "price_estimate_usd": 3 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Turn the ignition completely off. Remove the key.", "warn": "Never disconnect a battery with the ignition on. You can damage the ECU or airbag system.", "body": "Confirm all lights and accessories are off. On vehicles with push-button start, press the stop button until all dash lights go out." },
+    { "headline": "If you have a memory saver, plug it into the OBD port and activate it now.", "body": "Memory savers are available for under $20. They're not required, but without one you'll lose radio presets, power window auto-up/down calibration, and the ECU's learned idle and fuel trim adaptations. The car will still run without them — it just takes a few miles to relearn." },
+    { "headline": "Locate the battery. Confirm which terminal is negative (-).", "body": "The negative terminal is marked with a minus sign (-) and is usually connected by a black cable. The positive (+) terminal connects to a red cable. Some vehicles have a secondary ground point under the hood — the main battery may be in the trunk or under the rear seat in European makes." },
+    { "headline": "Disconnect the negative (-) terminal first.", "warn": "This is the most critical safety step. If you disconnect positive first and your wrench touches any grounded metal, you create a direct short from the battery's positive terminal through your wrench to ground. That arc can damage the ECU, blow fuses, or start a fire.", "body": "Loosen the clamp bolt and wiggle the terminal off the post. Move the cable away from the battery so it can't accidentally touch the post." },
+    { "headline": "Disconnect the positive (+) terminal.", "body": "Loosen, remove, and move the cable clear of the battery. On some vehicles the positive cable routes under the battery hold-down — leave it in place for now." },
+    { "headline": "Remove the battery hold-down bracket (if present).", "body": "Common styles: a J-bolt through a bottom bracket, or a small plate and bolt over the top of the battery. Remove it completely and set it aside." },
+    { "headline": "Lift the old battery straight out.", "warn": "Car batteries weigh 30–50 lbs. If your vehicle has side handles, use them. Lead-acid batteries can crack if dropped — and spilled battery acid eats metal and skin. Wear gloves if you have them.", "body": "If there's visible white or blue powder corrosion on the terminal area, avoid touching it with bare hands. A baking soda and water mix neutralizes battery acid on the tray." },
+    { "headline": "Clean the battery tray and terminal clamps.", "body": "Wipe the tray dry. If corrosion is present on the clamps, use the terminal brush to clean both the inside of the clamps and the tray posts. A mix of baking soda and water dissolves white corrosion — rinse and dry before installing the new battery." },
+    { "headline": "Set the new battery in the tray. Confirm it sits flush and the terminal orientation matches.", "warn": "If the positive and negative terminals are on the wrong sides, the cables won't reach. Verify the group size matches before buying.", "body": "The positive post should be closest to the positive cable. Never force the cable to reach — that stresses the terminal and can crack the battery case." },
+    { "headline": "Reinstall the hold-down bracket.", "body": "The battery must be physically restrained. An unrestrained battery vibrates against engine mounts and can short against the hood or bodywork." },
+    { "headline": "If using dielectric grease or anti-corrosion pads, apply them to the posts now.", "body": "Slide the felt pads over the posts before connecting the cables, or apply a thin film of dielectric grease to the posts." },
+    { "headline": "Connect the positive (+) terminal first.", "warn": "Connect in reverse order from removal: positive first, then negative. With negative still disconnected, there is no complete circuit — no risk of a short even if your wrench touches ground.", "body": "Seat the clamp over the post and tighten the bolt until snug. The clamp should not be able to rock on the post." },
+    { "headline": "Connect the negative (-) terminal.", "body": "Seat and tighten. Do a final check that both terminals are secure and the hold-down bracket is in place." },
+    { "headline": "Start the vehicle.", "body": "It should start immediately and confidently. If you used a memory saver, disconnect it now." },
+    { "headline": "Reset any components that need recalibration.", "body": "Common items: power windows (run each window fully down and fully up to re-register the auto-up feature), sunroof (open fully and close fully), radio presets (if no memory saver). Some vehicles require a throttle body relearn at idle — check your owner manual." }
+  ],
+  "verify": [
+    "Vehicle starts immediately and confidently (no slow crank)",
+    "Battery warning light goes out after starting",
+    "No corrosion visible at terminals (a small amount of white powder is normal after a few months)",
+    "Terminal clamps cannot be rocked on the battery posts by hand",
+    "Hold-down bracket is in place and secure"
+  ],
+  "common_mistakes": [
+    "Disconnecting positive first. If the wrench touches any grounded metal, you create a direct short through the battery's full amperage. Negative first, always.",
+    "Installing the wrong group size. A battery that doesn't fit the tray will rattle loose and can short against the hood latch.",
+    "Using an AGM battery in a flooded-battery vehicle (or vice versa). The charging system is calibrated for the battery type. Mismatches shorten the replacement battery's life.",
+    "Not removing the hold-down bracket. Without it, the battery vibrates against the engine and will eventually crack or short.",
+    "Forgetting that some vehicles need ECU or throttle body relearning after a power disconnect. The car runs fine but idles roughly for a few days if you don't reset."
+  ],
+  "related_guides": [
+    { "slug": "oil-change", "label": "Oil Change — while you have the hood up" },
+    { "slug": "air-filter", "label": "Engine Air Filter — quick while you're there" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

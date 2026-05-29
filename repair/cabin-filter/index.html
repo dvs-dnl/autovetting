@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabin Air Filter — AutoVetting Repair Guides</title>
+<meta name="description" content="Replace the cabin air filter in 15–30 minutes. Usually behind the glove box. Improves air quality and HVAC performance.">
+<link rel="canonical" href="https://autovetting.com/repair/cabin-filter/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to replace</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to replace</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque" style="display:none">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "cabin-filter",
+  "title": "Cabin Air Filter",
+  "summary": "The cabin air filter cleans the air that enters the passenger compartment through the vents. A clogged filter causes musty smells, reduced airflow, and a struggling HVAC system. It's the most-skipped filter on used cars — often untouched for 30,000+ miles.",
+  "category": "filters",
+  "safety_critical": false,
+  "difficulty": 1,
+  "time_hours": { "low": 0.25, "high": 0.5 },
+  "cost_usd": { "low": 15, "high": 40 },
+  "last_updated": "2026-05-28",
+  "aeo_answer": "Cabin air filter replacement is quick and takes no mechanical skill. On most vehicles the filter lives behind the glove box — you open the box, squeeze the sides to release stop tabs, drop the door down, and slide the filter out. The whole job is 15–20 minutes. If the car has a musty or moldy smell from the vents, the filter (and potentially the evaporator core) is the first thing to check.",
+  "symptoms": [
+    "Musty, dusty, or stale smell from the vents — especially when first turning on the AC",
+    "Reduced airflow even at maximum fan speed",
+    "HVAC fan sounds louder than usual (working harder to push air through a clogged filter)",
+    "Excessive dust or debris visible on the dashboard vents",
+    "Filter appears gray, black, or contains visible debris when inspected",
+    "It has been more than 15,000–25,000 miles or 1–2 years since last replacement"
+  ],
+  "tools_required": [
+    { "name": "None on most vehicles", "required": true, "note": "Most cabin filters are clip-in, no tools needed" },
+    { "name": "Flathead screwdriver", "required": false, "note": "Occasional use for prying open the filter housing cover" },
+    { "name": "Flashlight", "required": false, "note": "Helpful for seeing inside the housing and confirming airflow direction arrow" }
+  ],
+  "parts": [
+    { "name": "Cabin air filter (correct part for your vehicle)", "tier": "required", "note": "Look up by year, make, model. Activated charcoal filters eliminate odors and cost a few dollars more — worth it on a used car. Brands: Bosch, Fram, Purolator, WIX, OEM.", "price_estimate_usd": 22 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Find the cabin filter location for your vehicle.", "body": "On most vehicles the filter lives behind the glove box. On some vehicles it's under the dashboard on the passenger side, or under the hood at the base of the windshield (called the cowl). Check your owner manual under 'cabin filter' or 'pollen filter' if you're unsure." },
+    { "headline": "Open the glove box fully.", "body": "Remove anything stored in the glove box — it will need to drop forward or be removed completely." },
+    { "headline": "Release the glove box stop tabs to allow it to drop further open.", "body": "On most vehicles, squeezing both sides of the open glove box inward releases the stop tabs (small plastic protrusions that hit the door frame). This lets the door drop down to expose the filter housing behind it. On some vehicles you need to remove 2–3 small screws or clips instead." },
+    { "headline": "Open or remove the filter housing cover.", "body": "The cover is usually a rectangular plastic panel with clips or tabs on the front. Press or slide the tabs and pull the cover off. On some vehicles the housing cover slides out on tracks." },
+    { "headline": "Note the airflow direction arrow on the old filter before removing it.", "body": "The arrow points in the direction air flows through the filter — usually downward or toward the rear of the car. You must install the new filter in the same orientation. Incorrect orientation reduces filtration efficiency." },
+    { "headline": "Slide the old filter out.", "body": "The filter slides out horizontally on most vehicles. It may be a single flat panel or two stacked panels. Hold it horizontally as you remove it — tilting it can dump debris onto the floor of the vehicle." },
+    { "headline": "Wipe out the housing with a dry cloth.", "body": "Remove any loose leaves, pollen, or insect debris from the housing. Do not use water." },
+    { "headline": "Slide the new filter in with the arrow pointing the correct direction.", "body": "The filter should slide in smoothly with no resistance or bent edges. If it doesn't fit cleanly, you have the wrong part — do not force it." },
+    { "headline": "Reinstall the housing cover and re-engage all clips.", "body": "All clips should snap shut without forcing." },
+    { "headline": "Raise the glove box door back to the closed position.", "body": "Squeeze the sides inward to guide the stop tabs back over their catches, then let go. The box should feel and open normally." }
+  ],
+  "verify": [
+    "Glove box opens and closes normally",
+    "Fan airflow noticeably improved (compare before/after at the same fan speed setting)",
+    "Musty smell from the vents is reduced or eliminated after the first few minutes of operation",
+    "No odd noises from the blower motor (debris caught in the fan can cause a rattling or ticking noise)"
+  ],
+  "common_mistakes": [
+    "Installing the filter backwards. The airflow direction arrow matters — a reversed filter has reduced filtration efficiency.",
+    "Forcing a filter that doesn't fit cleanly. You have the wrong part number. Forcing it bends the filter frame and leaves gaps.",
+    "Not releasing the glove box stops and instead pulling hard on the box to open it further — breaks the stop tabs.",
+    "Skipping it entirely because the old filter 'looks okay.' A used car's cabin filter is usually at least 2–3 years old. If the previous owner didn't document it, replace it."
+  ],
+  "related_guides": [
+    { "slug": "air-filter", "label": "Engine Air Filter — do both on the same day" },
+    { "slug": "oil-change", "label": "Oil Change — easy maintenance combo" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repair Guides — AutoVetting</title>
+<meta name="description" content="Step-by-step DIY repair guides for common used-car jobs. Tools, parts lists, torque specs, and a step-by-step walker you can check off from the garage floor.">
+<link rel="canonical" href="https://autovetting.com/repair/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== PAGE HERO ===== */
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--white);
+    padding: 56px 24px 68px;
+    text-align: center;
+  }
+  .page-hero .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--electric);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+  }
+  .page-hero h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .page-hero p {
+    font-size: 16px;
+    color: var(--slate-300);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ===== WRAP ===== */
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ===== VEHICLE BANNER ===== */
+  .vehicle-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--blue-50);
+    border: 1.5px solid rgba(59,130,246,0.25);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-bottom: 28px;
+  }
+  .vehicle-banner .icon { font-size: 22px; line-height: 1; }
+  .vehicle-banner .text { flex: 1; font-size: 14px; color: var(--navy); }
+  .vehicle-banner .text strong { font-weight: 700; }
+  .vehicle-banner .back-link { font-size: 13px; color: var(--electric); font-weight: 500; }
+
+  /* ===== FILTER TABS ===== */
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .filter-tab {
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    color: var(--slate-500);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 99px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: all 0.15s;
+  }
+  .filter-tab:hover { border-color: var(--electric); color: var(--electric); }
+  .filter-tab.active { background: var(--electric); border-color: var(--electric); color: var(--white); }
+  .filter-count {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    border-radius: 99px;
+    padding: 0px 6px;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .filter-tab:not(.active) .filter-count {
+    background: var(--slate-100);
+    color: var(--slate-500);
+  }
+
+  /* ===== GUIDES GRID ===== */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  /* ===== GUIDE CARD ===== */
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1.5px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: var(--navy);
+    transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .guide-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric);
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: var(--navy);
+  }
+  .guide-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .guide-icon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .guide-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .guide-desc {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .guide-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--slate-100);
+  }
+  .meta-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 99px;
+    background: var(--slate-100);
+    color: var(--slate-500);
+    white-space: nowrap;
+  }
+  .meta-pill.safety { background: rgba(239,68,68,0.1); color: var(--critical); }
+  .meta-pill.fluids { background: rgba(59,130,246,0.1); color: var(--electric); }
+  .meta-pill.electrical { background: rgba(245,158,11,0.1); color: var(--warning); }
+  .meta-pill.filters { background: rgba(16,185,129,0.1); color: var(--clear); }
+  .meta-pill.diff1 { background: rgba(16,185,129,0.1); color: var(--clear); }
+  .meta-pill.diff2 { background: rgba(59,130,246,0.1); color: var(--electric); }
+  .meta-pill.diff3 { background: rgba(245,158,11,0.1); color: var(--warning); }
+  .guide-card .arrow {
+    font-size: 16px;
+    color: var(--electric);
+    margin-left: auto;
+    align-self: center;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  .guide-card:hover .arrow { opacity: 1; }
+
+  /* ===== EMPTY STATE ===== */
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--slate-500);
+    font-size: 15px;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section-toolbar {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .guide-count {
+    font-size: 13px;
+    color: var(--slate-500);
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .guides-grid { grid-template-columns: 1fr; }
+    .filter-tabs { gap: 6px; }
+    .filter-tab { padding: 7px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">AutoVetting — DIY Repair</div>
+  <h1>Repair Guides</h1>
+  <p>Step-by-step walkthroughs for common jobs — tools, parts, torque specs, and a progress tracker you can use from the garage floor.</p>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <div class="vehicle-banner" id="vehicleBanner" hidden>
+      <div class="icon">&#128663;</div>
+      <div class="text">Showing guides for <strong id="vehicleLabel">your vehicle</strong>. All guides are general-purpose — verify specs for your specific year and model.</div>
+      <a href="/garage/" class="back-link" id="garageBack">&larr; Garage</a>
+    </div>
+
+    <div class="section-toolbar">
+      <nav class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter by category">
+        <!-- built by JS -->
+      </nav>
+      <span class="guide-count" id="guideCount"></span>
+    </div>
+
+    <div class="guides-grid" id="guidesGrid">
+      <!-- built by JS -->
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/pinpoint/">Pinpoint</a> &middot;
+    <a href="/inspect/">Inspect</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/repair/">Repair</a>
+  </p>
+</footer>
+
+<script>
+(function () {
+  var guides = [
+    {
+      id: 'brake-pads-rotors',
+      title: 'Brake Pads + Rotors',
+      icon: '&#129521;',
+      category: 'safety',
+      difficulty: 2,
+      time: '1.5–3 hrs',
+      cost: '$80–$150',
+      desc: 'The highest-return safety job on any used car. Replace worn pads and rotors on both sides of an axle. Includes torque specs and step-by-step walker.'
+    },
+    {
+      id: 'oil-change',
+      title: 'Oil Change',
+      icon: '&#129520;',
+      category: 'fluids',
+      difficulty: 1,
+      time: '30–45 min',
+      cost: '$40–$80',
+      desc: 'Drain the old oil, replace the filter, refill. The most common maintenance job on any vehicle and straightforward to do yourself.'
+    },
+    {
+      id: 'battery-replacement',
+      title: 'Battery Replacement',
+      icon: '&#9889;',
+      category: 'electrical',
+      difficulty: 1,
+      time: '15–30 min',
+      cost: '$100–$200',
+      desc: 'Swap a dead or weak battery in 20 minutes. Negative terminal off first, positive first when reinstalling. Safety precautions included.'
+    },
+    {
+      id: 'air-filter',
+      title: 'Engine Air Filter',
+      icon: '&#128168;',
+      category: 'filters',
+      difficulty: 1,
+      time: '10–20 min',
+      cost: '$15–$35',
+      desc: 'Open the airbox, swap the filter. No tools required on most vehicles. A clogged filter reduces power and fuel economy.'
+    },
+    {
+      id: 'cabin-filter',
+      title: 'Cabin Air Filter',
+      icon: '&#127914;',
+      category: 'filters',
+      difficulty: 1,
+      time: '15–30 min',
+      cost: '$15–$40',
+      desc: 'Replace the filter that cleans the air inside your car. Usually behind the glove box. Simple, cheap, and often skipped for years.'
+    }
+  ];
+
+  var catLabels = {
+    all: 'All guides',
+    safety: 'Safety',
+    fluids: 'Fluids',
+    electrical: 'Electrical',
+    filters: 'Filters'
+  };
+  var diffLabels = ['', 'Beginner', 'Beginner', 'Intermediate', 'Advanced', 'Pro'];
+
+  // URL params
+  var params = new URLSearchParams(window.location.search);
+  var urlMake = params.get('make') || '';
+  var urlModel = params.get('model') || '';
+
+  // Vehicle banner
+  if (urlMake || urlModel) {
+    var banner = document.getElementById('vehicleBanner');
+    var label = document.getElementById('vehicleLabel');
+    var garageBack = document.getElementById('garageBack');
+    banner.hidden = false;
+    label.textContent = [urlMake, urlModel].filter(Boolean).join(' ');
+    if (urlMake || urlModel) {
+      garageBack.href = '/garage/';
+    }
+  }
+
+  // Build category counts
+  var counts = { all: guides.length };
+  guides.forEach(function (g) {
+    counts[g.category] = (counts[g.category] || 0) + 1;
+  });
+
+  // Filter state
+  var activeFilter = 'all';
+
+  function renderTabs() {
+    var tabs = document.getElementById('filterTabs');
+    tabs.innerHTML = '';
+    Object.keys(catLabels).forEach(function (cat) {
+      if (!counts[cat] && cat !== 'all') return;
+      var btn = document.createElement('button');
+      btn.className = 'filter-tab' + (cat === activeFilter ? ' active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', cat === activeFilter ? 'true' : 'false');
+      btn.setAttribute('data-cat', cat);
+      btn.innerHTML = catLabels[cat] +
+        '<span class="filter-count">' + (counts[cat] || 0) + '</span>';
+      btn.addEventListener('click', function () {
+        activeFilter = cat;
+        renderTabs();
+        renderGrid();
+      });
+      tabs.appendChild(btn);
+    });
+  }
+
+  function renderGrid() {
+    var grid = document.getElementById('guidesGrid');
+    grid.innerHTML = '';
+    var visible = guides.filter(function (g) {
+      return activeFilter === 'all' || g.category === activeFilter;
+    });
+    document.getElementById('guideCount').textContent =
+      visible.length === guides.length
+        ? guides.length + ' guides'
+        : visible.length + ' of ' + guides.length + ' guides';
+
+    if (!visible.length) {
+      var emp = document.createElement('div');
+      emp.className = 'empty-state';
+      emp.textContent = 'No guides in this category yet.';
+      grid.appendChild(emp);
+      return;
+    }
+
+    visible.forEach(function (g) {
+      var a = document.createElement('a');
+      a.className = 'guide-card';
+      a.href = '/repair/' + g.id + '/';
+      a.innerHTML =
+        '<div class="guide-card-header">' +
+          '<div class="guide-icon">' + g.icon + '</div>' +
+          '<div class="guide-title">' + g.title + '</div>' +
+        '</div>' +
+        '<div class="guide-desc">' + g.desc + '</div>' +
+        '<div class="guide-meta">' +
+          '<span class="meta-pill ' + g.category + '">' + catLabels[g.category] + '</span>' +
+          '<span class="meta-pill diff' + g.difficulty + '">' + diffLabels[g.difficulty] + '</span>' +
+          '<span class="meta-pill">' + g.time + '</span>' +
+          '<span class="meta-pill">' + g.cost + '</span>' +
+        '</div>' +
+        '<span class="arrow" aria-hidden="true">&rarr;</span>';
+      grid.appendChild(a);
+    });
+  }
+
+  renderTabs();
+  renderGrid();
+})();
+</script>
+
+</body>
+</html>

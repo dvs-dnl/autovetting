@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oil Change — AutoVetting Repair Guides</title>
+<meta name="description" content="How to change your oil — drain plug, filter, refill. 30–45 minutes, $40–$80. Step-by-step guide with torque specs.">
+<link rel="canonical" href="https://autovetting.com/repair/oil-change/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "oil-change",
+  "title": "Oil Change",
+  "summary": "The single most important maintenance job on any car. Fresh oil lubricates engine bearings, dissipates heat, and carries away contaminants. Most vehicles need it every 5,000–10,000 miles depending on oil type and driving conditions.",
+  "category": "fluids",
+  "safety_critical": false,
+  "difficulty": 1,
+  "time_hours": { "low": 0.5, "high": 0.75 },
+  "cost_usd": { "low": 40, "high": 80 },
+  "last_updated": "2026-05-28",
+  "aeo_answer": "An oil change takes 30–45 minutes and costs $40–$80 in parts depending on oil type. You need a drain pan, the correct filter, and a socket for the drain plug. Always warm the engine first (hot oil drains faster and carries more contaminants), and always verify the correct oil viscosity in your owner manual — the spec on the cap is the one to follow, not whatever is 'common.'",
+  "symptoms": [
+    "Maintenance reminder light (most post-2010 vehicles track oil life electronically)",
+    "Dark brown or black oil on the dipstick (healthy used oil is dark amber; black gummy oil is overdue)",
+    "Low oil level on the dipstick (topping off delays the change but doesn't substitute for it)",
+    "Ticking or clattering noise on cold start (low oil pressure from depleted additive package)",
+    "It has been more than 5,000 miles or 6 months since the last change (conventional oil)",
+    "It has been more than 10,000 miles or 1 year since the last change (full synthetic)"
+  ],
+  "tools_required": [
+    { "name": "Oil drain pan (at least 6-quart capacity)", "required": true },
+    { "name": "Oil filter wrench", "required": true, "note": "Size varies by vehicle. Cap-style or band-style both work." },
+    { "name": "Socket set + ratchet", "required": true, "note": "For the drain plug — typically 14–17mm, varies by vehicle" },
+    { "name": "Torque wrench", "required": true, "note": "Drain plug is easy to overtorque and strip the oil pan threads" },
+    { "name": "Funnel", "required": true, "note": "Prevents spills when adding oil" },
+    { "name": "Rags or paper towels", "required": true },
+    { "name": "Nitrile gloves", "required": false, "note": "Hot oil is roughly 180°F — gloves prevent burns" },
+    { "name": "Jack and jack stands", "required": false, "note": "Only needed if you can't access the drain plug from above" }
+  ],
+  "parts": [
+    { "name": "Engine oil (check owner manual for viscosity)", "tier": "required", "note": "Most modern vehicles use 0W-20 or 5W-30 full synthetic. The spec is on the oil cap. Do not substitute.", "price_estimate_usd": 35 },
+    { "name": "Oil filter (OEM or quality aftermarket)", "tier": "required", "note": "Motorcraft, AC Delco, Bosch, Mann, Wix, or OEM. Buy the correct filter for your engine.", "price_estimate_usd": 10 },
+    { "name": "Drain plug crush washer", "tier": "required", "note": "Most vehicles use a copper or aluminum crush washer — replace it every change to prevent leaks. Some vehicles use a self-sealing plug that doesn't need a washer.", "price_estimate_usd": 2 }
+  ],
+  "torque_specs": [
+    { "key": "drain_plug", "fastener": "Oil drain plug", "ft_lb": 25, "nm": 34, "notes": "Typical range 20–30 ft-lb. Look up your specific vehicle — overtorquing strips aluminum oil pans. Snug plus a quarter turn is the practical standard if you don't have specs." }
+  ],
+  "steps": [
+    { "headline": "Find your oil type and capacity in the owner manual or on the oil filler cap.", "body": "Do not substitute a different viscosity. The spec exists because modern engines are machined to tight tolerances designed around a specific oil film thickness. Using the wrong viscosity causes wear." },
+    { "headline": "Warm up the engine for 3–5 minutes.", "body": "Warm oil drains in about 3 minutes. Cold oil takes 10+ minutes and leaves more sludge behind. Don't run it to full operating temperature — drain plug and filter work done with the engine off need it warm, not scalding." },
+    { "headline": "Pop the hood and remove the oil filler cap. Set it somewhere visible so you don't drive away without it.", "body": "Removing the cap before draining allows air into the crankcase and helps the oil drain faster and more completely." },
+    { "headline": "Position the drain pan under the drain plug at the bottom of the oil pan.", "body": "Confirm the drain pan is large enough for your engine's oil capacity (usually 4.5–7 quarts). The oil stream may shoot out at an angle on the first drain — position the pan accordingly." },
+    { "headline": "Remove the drain plug with the correct socket.", "torque": "drain_plug", "warn": "Hot oil burns. Keep your arm out of the oil stream path as you pull the plug free. Let the oil drain for at least 3 minutes.", "body": "Set the plug where it won't roll into the drain pan. Inspect the threads for cross-threading or damage. If stripped, a drain plug repair kit (Helicoil) can save the pan." },
+    { "headline": "While the oil drains, move the pan under the oil filter and remove it.", "warn": "The filter contains up to a quart of oil. It will spill — keep the pan close.", "body": "Use the filter wrench to break it loose, then turn by hand. Point the open end up as you pull it free to minimize spills." },
+    { "headline": "Wipe the filter mounting surface clean. Check the old filter for the old gasket.", "warn": "If the old rubber gasket stayed stuck to the engine block and you install the new filter on top of it, you will have a double-gasket leak that can run the engine dry.", "body": "The old gasket must come off with the old filter. If it's stuck to the block, peel it off with a fingernail or a rag — never a screwdriver that could score the sealing surface." },
+    { "headline": "Apply a thin film of fresh oil to the new filter's gasket.", "body": "Use your fingertip. This ensures a proper seal and makes the filter easier to remove next time." },
+    { "headline": "Thread the new filter on by hand until the gasket contacts the block, then turn an additional 3/4 turn.", "body": "Do not use the filter wrench to tighten. Hand-tight plus 3/4 turn is the universal standard. Overtightening distorts the gasket and causes leaks." },
+    { "headline": "Install a new crush washer on the drain plug and reinstall.", "torque": "drain_plug", "body": "If you don't have a new washer, reuse the old one for one more change — but order a new one for next time. Thread the plug in by hand first to avoid cross-threading." },
+    { "headline": "Move the drain pan away and lower the vehicle if you had it raised.", "body": "Do a quick visual check that nothing is dripping before you add new oil." },
+    { "headline": "Add oil through the filler hole. Start with one quart less than capacity.", "body": "Pour slowly with the funnel. Capacity is listed in the owner manual and often on the oil cap (e.g., '5.0W WITH FILTER'). Add 4 quarts first if capacity is 5 — you'll check and top off." },
+    { "headline": "Reinstall the oil filler cap. Start the engine and let it idle for 30 seconds.", "warn": "Watch the oil pressure warning light. It should go off within 3–5 seconds. If it stays on after 10 seconds, shut the engine off immediately — you have a leak or low oil.", "body": "The oil light may flicker for a moment as the new filter fills. That's normal. If it stays on or the engine makes unusual noise, shut it off." },
+    { "headline": "Turn the engine off. Wait 2 minutes for the oil to drain back into the pan.", "body": "Oil takes 1–2 minutes to settle before a dipstick reading is accurate." },
+    { "headline": "Check the oil level on the dipstick and top off to the full mark.", "body": "The dipstick has a MIN and MAX mark. Add oil in half-quart increments if below MAX. Do not overfill — too much oil causes aeration (the crankshaft whips air into the oil) and can damage seals." },
+    { "headline": "Check under the vehicle for leaks at the drain plug and filter.", "body": "A drip at the drain plug means the crush washer isn't seated or the plug isn't torqued. A drip at the filter means the gasket isn't seated or you have a double-gasket situation — shut the engine off and investigate." },
+    { "headline": "Reset the oil life monitor (if equipped).", "body": "Procedure varies by vehicle. Common methods: hold the trip reset button while the ignition is on, or use the infotainment menu (Settings → Vehicle → Oil Life). Check your owner manual." }
+  ],
+  "verify": [
+    "Oil pressure warning light goes off within 5 seconds of starting",
+    "No oil drips at the drain plug or oil filter after 5 minutes at idle",
+    "Oil level reads at or near MAX on the dipstick (not over)",
+    "Oil life monitor reset (if your vehicle has one)",
+    "Filler cap reinstalled — check before driving"
+  ],
+  "common_mistakes": [
+    "Forgetting to reinstall the filler cap. The engine will pump oil all over the engine bay in about 30 seconds.",
+    "Overtorquing the drain plug. Aluminum oil pans strip easily — snug plus a quarter turn is the practical standard.",
+    "Double-gasketing the filter. The old gasket stuck to the block; the new filter went on top of it. The result is an immediate catastrophic oil leak.",
+    "Not warming up the engine first. Cold oil takes 3x longer to drain and leaves more sludge behind.",
+    "Overfilling. Too much oil foams under the crankshaft, which aerates the oil and causes bearing wear.",
+    "Using the wrong viscosity. The spec on the cap is the one to follow. '5W-30 is close enough to 0W-20' is not true for modern variable-valve-timing engines."
+  ],
+  "related_guides": [
+    { "slug": "air-filter", "label": "Engine Air Filter — do it at the same time" },
+    { "slug": "cabin-filter", "label": "Cabin Air Filter — while you have the tools out" },
+    { "slug": "brake-pads-rotors", "label": "Brake Pads + Rotors — if due soon" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>
