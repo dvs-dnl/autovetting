@@ -313,10 +313,288 @@
   }
 
   /* ============================================================
+     Vehicle Search Section
+     ============================================================ */
+  .vehicle-search-section {
+    background: var(--slate-white);
+    border-top: 3px solid var(--electric);
+    padding: 72px 24px 80px;
+  }
+  .vs-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .vs-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .vs-header .vs-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--electric);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .vs-header h2 {
+    font-size: clamp(28px, 3.8vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+  .vs-header p {
+    font-size: 16px;
+    color: var(--slate-500);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+  /* Big search bar */
+  .vs-search-wrap {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto 36px;
+  }
+  .vs-search-input {
+    width: 100%;
+    padding: 18px 52px 18px 24px;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    color: var(--navy);
+    border: 2px solid var(--slate-300);
+    border-radius: 999px;
+    background: var(--white);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    box-shadow: 0 4px 16px rgba(15,23,42,0.08);
+  }
+  .vs-search-input:focus {
+    border-color: var(--electric);
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.12), 0 4px 16px rgba(15,23,42,0.08);
+  }
+  .vs-search-input::placeholder { color: var(--slate-400); }
+  .vs-search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--slate-400);
+    pointer-events: none;
+    font-size: 18px;
+    line-height: 1;
+  }
+  /* Filter rows */
+  .vs-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .vs-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .vs-filter-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--slate-500);
+    min-width: 64px;
+    flex-shrink: 0;
+  }
+  .vchip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .vchip {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1.5px solid var(--slate-300);
+    background: var(--white);
+    color: var(--slate-500);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color .13s, background .13s, color .13s;
+  }
+  .vchip:hover {
+    border-color: var(--electric);
+    color: var(--electric-hover);
+  }
+  .vchip.active {
+    border-color: var(--electric);
+    background: #EFF6FF;
+    color: var(--electric-hover);
+    font-weight: 600;
+  }
+  /* Result meta row */
+  .vs-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 2px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .vs-count-text {
+    font-size: 13px;
+    color: var(--slate-500);
+    font-weight: 500;
+  }
+  .vs-reset-btn {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--electric);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .vs-reset-btn:hover { color: var(--electric-hover); }
+  /* Card grid */
+  .vs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .vc {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px 18px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: box-shadow .15s, border-color .15s;
+  }
+  .vc:hover {
+    border-color: var(--electric);
+    box-shadow: var(--shadow-md);
+  }
+  .vc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .vc-type {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--slate-500);
+  }
+  .vc-tier {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .vc-tier-top {
+    background: #ECFDF5;
+    color: #10B981;
+  }
+  .vc-tier-strong {
+    background: #EFF6FF;
+    color: var(--electric);
+  }
+  .vc-name {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .vc-years {
+    font-size: 12px;
+    color: var(--slate-500);
+    font-weight: 500;
+  }
+  .vc-tagline {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-top: 4px;
+  }
+  .vc-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--slate-100);
+  }
+  .vc-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .vc-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--electric);
+  }
+  .vc-link:hover { color: var(--electric-hover); }
+  .vs-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--slate-500);
+    font-size: 15px;
+  }
+  .vs-empty-reset-btn {
+    background: none;
+    border: none;
+    color: var(--electric);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    padding: 0;
+  }
+  .vs-footer {
+    margin-top: 44px;
+    text-align: center;
+  }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border: 2px solid var(--electric);
+    border-radius: 999px;
+    color: var(--electric);
+    font-weight: 600;
+    font-size: 15px;
+    transition: background .15s, color .15s;
+  }
+  .btn-outline:hover {
+    background: var(--electric);
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  /* ============================================================
      Pinpoint brief showcase (auto-playing animated sentence)
      ============================================================ */
+  .pp-showcase-section {
+    background: var(--slate-white);
+    padding: 0 0 72px;
+  }
   .pp-showcase {
-    margin: 56px auto 0;
+    margin: 0 auto;
     max-width: 1100px;
     padding: 0 24px;
   }
@@ -437,7 +715,7 @@
     margin-top: 32px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 16px;
     flex-wrap: wrap;
   }
@@ -455,35 +733,37 @@
     transition: transform 0.12s;
   }
   .pp-showcase-cta:hover { transform: translateY(-1px); text-decoration: none; color: #0F172A; }
-  .pp-showcase-meta {
-    font-size: 13px;
-    color: #94A3B8;
-  }
   .pp-section-intro {
     max-width: 760px;
-    margin: 48px auto 8px;
+    margin: 32px auto 0;
     padding: 0 24px;
     text-align: center;
   }
   .pp-section-intro h2 {
-    font-size: clamp(28px, 3.6vw, 38px);
-    font-weight: 800;
+    font-size: clamp(22px, 2.8vw, 30px);
+    font-weight: 700;
     letter-spacing: -0.02em;
-    color: #0F172A;
-    line-height: 1.15;
-    margin: 0 0 10px;
+    color: #64748B;
+    line-height: 1.2;
+    margin: 0 0 8px;
   }
   .pp-section-intro p {
-    font-size: 16px;
-    color: #64748B;
+    font-size: 15px;
+    color: #94A3B8;
     margin: 0;
   }
+
   @media (max-width: 720px) {
     .pp-showcase-card { padding: 32px 22px 28px; }
     .pp-showcase-sentence { font-size: 20px; line-height: 1.6; min-height: 240px; }
     .pp-reel.use { width: 220px; }
     .pp-reel.answer { width: 260px; }
     .pp-reel.money, .pp-reel.miles { width: 110px; }
+    .vehicle-search-section { padding: 56px 16px 60px; }
+    .vs-filter-group { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .vs-filter-label { min-width: auto; }
+    .vs-grid { grid-template-columns: 1fr; }
+    .pp-showcase-section { padding: 0 0 56px; }
   }
 </style>
 </head>
@@ -501,6 +781,9 @@
   </nav>
 </header>
 
+<!-- ============================================================
+     1. HERO — brand + value prop
+     ============================================================ -->
 <section class="hero">
   <div class="hero-inner">
     <p class="eyebrow">Used-Car Buyer's Tool</p>
@@ -515,33 +798,10 @@
   </div>
 </section>
 
+<!-- ============================================================
+     2+3. THE FOUR STEPS — individual section per step
+     ============================================================ -->
 <section class="teasers">
-
-  
-  <div class="pp-showcase">
-    <div class="pp-showcase-card">
-      <p class="pp-showcase-eyebrow"><span class="pp-live" aria-hidden="true"></span> The brief &middot; Live</p>
-      <p class="pp-showcase-sentence" id="pp-brief-sentence">
-        <span class="static">For</span>
-        <span class="pp-reel money" data-pp-reel="money"><span class="pp-reel-inner">$7,500</span></span><span class="static">,</span>
-        <span class="static">if you need</span>
-        <span class="pp-reel use" data-pp-reel="use"><span class="pp-reel-inner">a family daily</span></span>
-        <span class="static">and you want it to last</span>
-        <span class="pp-reel miles" data-pp-reel="miles"><span class="pp-reel-inner">250,000</span></span><span class="static"> miles,</span>
-        <span class="static">we'd buy a</span>
-        <span class="pp-reel answer" data-pp-reel="answer"><span class="pp-reel-inner">2014 Acura TSX</span></span><span class="static">.</span>
-      </p>
-      <div class="pp-showcase-foot">
-        <span class="pp-showcase-meta">56 vehicles researched &middot; Updated May 2026</span>
-        <a class="pp-showcase-cta" href="#pinpoint-teaser">Build your brief &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="pp-section-intro">
-    <h2>Find the right model for you.</h2>
-    <p>Three quick questions narrow our 56-vehicle catalog down to the ones worth your shortlist.</p>
-  </div>
 
   <article class="teaser pinpoint-block" id="pinpoint-teaser">
     <div class="teaser-hd">
@@ -551,7 +811,7 @@
       </div>
       <a class="teaser-open" href="/pinpoint/">Open Pinpoint &rarr;</a>
     </div>
-    <p class="teaser-sub">Three quick questions narrow a 56-vehicle catalog down to the handful worth shortlisting. Tuned to long-lived used picks &mdash; not what's hot on the dealer lot.</p>
+    <p class="teaser-sub">Three quick questions narrow a vetted catalog of reliable used picks down to the handful worth shortlisting. Tuned to long-lived used choices &mdash; not what's hot on the dealer lot.</p>
     <div class="teaser-body">
       <form id="pinpoint-form" novalidate>
         <div class="field-row">
@@ -693,6 +953,117 @@
 
 </section>
 
+<!-- ============================================================
+     4. VEHICLE SEARCH & FILTER — prominent, first interactive element
+        after users understand the product
+     ============================================================ -->
+<section class="vehicle-search-section" id="find-your-car">
+  <div class="vs-inner">
+
+    <div class="vs-header">
+      <span class="vs-eyebrow">Our picks &middot; Vetted catalog</span>
+      <h2>Find your next car.</h2>
+      <p>Filter our catalog of reliable used picks by body type, budget, and priority. Every vehicle here we'd actually buy.</p>
+    </div>
+
+    <!-- Big search bar -->
+    <div class="vs-search-wrap">
+      <input
+        type="search"
+        id="vs-search"
+        class="vs-search-input"
+        placeholder="Search by make or model&hellip;"
+        autocomplete="off"
+        aria-label="Search vehicles by make or model"
+      >
+      <span class="vs-search-icon" aria-hidden="true">&#128269;</span>
+    </div>
+
+    <!-- Filter chips -->
+    <div class="vs-filters">
+      <div class="vs-filter-group">
+        <span class="vs-filter-label">Type</span>
+        <div class="vchip-row" role="group" aria-label="Filter by body type">
+          <button class="vchip active" data-filter="type" data-value="">Any</button>
+          <button class="vchip" data-filter="type" data-value="sedan">Sedan</button>
+          <button class="vchip" data-filter="type" data-value="suv">SUV</button>
+          <button class="vchip" data-filter="type" data-value="truck">Truck</button>
+          <button class="vchip" data-filter="type" data-value="wagon">Wagon</button>
+          <button class="vchip" data-filter="type" data-value="hatch">Hatchback</button>
+          <button class="vchip" data-filter="type" data-value="hybrid-ev">Hybrid&nbsp;/&nbsp;EV</button>
+        </div>
+      </div>
+      <div class="vs-filter-group">
+        <span class="vs-filter-label">Budget</span>
+        <div class="vchip-row" role="group" aria-label="Filter by budget">
+          <button class="vchip active" data-filter="budget" data-value="">Any</button>
+          <button class="vchip" data-filter="budget" data-value="under-10k">Under $10k</button>
+          <button class="vchip" data-filter="budget" data-value="10-15k">$10k &ndash; $15k</button>
+          <button class="vchip" data-filter="budget" data-value="15-20k">$15k &ndash; $20k</button>
+          <button class="vchip" data-filter="budget" data-value="20-30k">$20k+</button>
+        </div>
+      </div>
+      <div class="vs-filter-group">
+        <span class="vs-filter-label">Priority</span>
+        <div class="vchip-row" role="group" aria-label="Filter by priority">
+          <button class="vchip active" data-filter="purpose" data-value="">Any</button>
+          <button class="vchip" data-filter="purpose" data-value="reliability">Reliability</button>
+          <button class="vchip" data-filter="purpose" data-value="fuel-economy">Fuel economy</button>
+          <button class="vchip" data-filter="purpose" data-value="cargo">Cargo / family</button>
+          <button class="vchip" data-filter="purpose" data-value="off-road">Off-road</button>
+          <button class="vchip" data-filter="purpose" data-value="fun-to-drive">Fun to drive</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result count + reset -->
+    <div class="vs-meta">
+      <span class="vs-count-text" id="vs-count-text">Loading picks&hellip;</span>
+      <button class="vs-reset-btn" id="vs-reset">Clear filters</button>
+    </div>
+
+    <!-- Vehicle cards — rendered by JS -->
+    <div class="vs-grid" id="vs-grid" aria-live="polite"></div>
+
+    <div class="vs-footer">
+      <a href="/pinpoint/" class="btn-outline">Browse all picks on Pinpoint &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     5. PP-SHOWCASE — example recommendation, animated live brief
+        (placed after search so vehicle content follows filters)
+     ============================================================ -->
+<section class="pp-showcase-section">
+  <div class="pp-showcase">
+    <div class="pp-showcase-card">
+      <p class="pp-showcase-eyebrow"><span class="pp-live" aria-hidden="true"></span> Example brief &middot; Auto-cycling</p>
+      <p class="pp-showcase-sentence" id="pp-brief-sentence">
+        <span class="static">For</span>
+        <span class="pp-reel money" data-pp-reel="money"><span class="pp-reel-inner">$7,500</span></span><span class="static">,</span>
+        <span class="static">if you need</span>
+        <span class="pp-reel use" data-pp-reel="use"><span class="pp-reel-inner">a family daily</span></span>
+        <span class="static">and you want it to last</span>
+        <span class="pp-reel miles" data-pp-reel="miles"><span class="pp-reel-inner">250,000</span></span><span class="static"> miles,</span>
+        <span class="static">we'd buy a</span>
+        <span class="pp-reel answer" data-pp-reel="answer"><span class="pp-reel-inner">2014 Acura TSX</span></span><span class="static">.</span>
+      </p>
+      <div class="pp-showcase-foot">
+        <a class="pp-showcase-cta" href="/pinpoint/">Build your brief &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="pp-section-intro">
+    <h2>This is what a Pinpoint brief looks like.</h2>
+    <p>Answer three questions &mdash; budget, use case, longevity target &mdash; and get a specific recommendation with full editorial backing.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY SECTION
+     ============================================================ -->
 <section class="why-section">
   <div class="why-inner">
     <h2>Why we built this.</h2>
@@ -980,6 +1351,272 @@
     params.set('model', mod);
     window.location.href = '/inspect/?' + params.toString();
   });
+
+  // ============================================================
+  // PP-SHOWCASE — auto-cycling animated brief
+  // The CSS transitions exist; this JS drives the scenario cycle.
+  // ============================================================
+  (function () {
+    var SCENARIOS = [
+      { money: '$7,500',  use: 'a family daily',        miles: '250,000', answer: '2014 Acura TSX' },
+      { money: '$10,000', use: 'a weekend truck',        miles: '200,000', answer: '2014 Toyota Tacoma' },
+      { money: '$6,500',  use: 'a long commuter',        miles: '200,000', answer: '2015 Toyota Prius' },
+      { money: '$12,000', use: 'a practical SUV',        miles: '200,000', answer: '2013 Subaru Forester' },
+      { money: '$8,000',  use: 'fun daily driving',      miles: '150,000', answer: '2014 Mazda3 SKYACTIV' },
+      { money: '$16,000', use: 'serious off-roading',    miles: '150,000', answer: '2014 Toyota 4Runner' },
+      { money: '$11,000', use: 'a reliable family SUV',  miles: '200,000', answer: '2012 Honda CR-V EX-L' }
+    ];
+
+    var REEL_KEYS = ['money', 'use', 'miles', 'answer'];
+    var reels = {};
+    REEL_KEYS.forEach(function (k) {
+      var el = document.querySelector('[data-pp-reel="' + k + '"] .pp-reel-inner');
+      if (el) reels[k] = el;
+    });
+    // Exit silently if the showcase isn't on the page
+    if (!reels.money || !reels.use || !reels.miles || !reels.answer) return;
+
+    var answerReel = document.querySelector('[data-pp-reel="answer"]');
+    var current = 0;
+
+    function cycleScenario() {
+      current = (current + 1) % SCENARIOS.length;
+      var s = SCENARIOS[current];
+
+      // Step 1: animate all reels out
+      REEL_KEYS.forEach(function (k) { reels[k].classList.add('out-up'); });
+      if (answerReel) answerReel.classList.add('flash');
+
+      // Step 2: after fade-out completes, swap text and fade back in
+      setTimeout(function () {
+        reels.money.textContent  = s.money;
+        reels.use.textContent    = s.use;
+        reels.miles.textContent  = s.miles;
+        reels.answer.textContent = s.answer;
+
+        REEL_KEYS.forEach(function (k) { reels[k].classList.remove('out-up'); });
+
+        setTimeout(function () {
+          if (answerReel) answerReel.classList.remove('flash');
+        }, 400);
+      }, 360);
+    }
+
+    // First cycle after 4 s, then every 4 s
+    setInterval(cycleScenario, 4000);
+  }());
+
+  // ============================================================
+  // VEHICLE SEARCH & FILTER
+  // ============================================================
+  (function () {
+
+    // --- Data -----------------------------------------------
+    var VEHICLES = [
+      {
+        name: 'Acura TSX', make: 'Acura', years: '2011–2014',
+        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        price: '$7,500', tier: 'Top',
+        tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.'
+      },
+      {
+        name: 'Honda Ridgeline RTL', make: 'Honda', years: '2010–2012',
+        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        price: '$7,200', tier: 'Top',
+        tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.'
+      },
+      {
+        name: 'Subaru Outback 2.5i', make: 'Subaru', years: '2010–2014',
+        type: 'wagon', budget: 'under-10k', purpose: 'reliability',
+        price: '$7,500', tier: 'Strong',
+        tagline: 'The AWD wagon answer. Practical, capable, and proven. Watch for FB25 oil consumption.'
+      },
+      {
+        name: 'Toyota Tacoma SR5', make: 'Toyota', years: '2010–2014',
+        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        price: '$8,500', tier: 'Top',
+        tagline: 'King of long-haul reliability. Body-on-frame proven past 300k. Verify clean frame.'
+      },
+      {
+        name: 'Honda CR-V EX-L', make: 'Honda', years: '2008–2011',
+        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        price: '$7,000', tier: 'Top',
+        tagline: 'RepairPal\'s #2 compact SUV. $407 average annual repair cost. K24 I4 under the hood.'
+      },
+      {
+        name: 'Toyota Prius', make: 'Toyota', years: '2010–2015',
+        type: 'hybrid-ev', budget: 'under-10k', purpose: 'fuel-economy',
+        price: '$6,500', tier: 'Top',
+        tagline: 'Most reliable hybrid ever built. 50+ MPG, liquid-cooled NiMH battery is the only real risk.'
+      },
+      {
+        name: 'Mazda3 SKYACTIV', make: 'Mazda', years: '2014–2015',
+        type: 'hatch', budget: 'under-10k', purpose: 'fun-to-drive',
+        price: '$7,200', tier: 'Top',
+        tagline: 'Most fun-per-dollar in the budget. SKYACTIV engine is bulletproof. Tight rear seat for families.'
+      },
+      {
+        name: 'Toyota Highlander V6', make: 'Toyota', years: '2008–2011',
+        type: 'suv', budget: 'under-10k', purpose: 'cargo',
+        price: '$7,500', tier: 'Strong',
+        tagline: 'Smoother family hauler than Pilot or 4Runner. 3.5L V6, optional 3rd row, FWD or AWD.'
+      },
+      {
+        name: 'Chevy Bolt EV', make: 'Chevrolet', years: '2017–2019',
+        type: 'hybrid-ev', budget: '10-15k', purpose: 'fuel-economy',
+        price: '$13,000', tier: 'Top',
+        tagline: 'Best used EV value in America — but only if the battery replacement recall is VIN-verified.'
+      },
+      {
+        name: 'Subaru Forester 2.5i', make: 'Subaru', years: '2012–2016',
+        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        price: '$11,000', tier: 'Top',
+        tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.'
+      },
+      {
+        name: 'Honda Accord EX-L', make: 'Honda', years: '2013–2016',
+        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        price: '$10,500', tier: 'Top',
+        tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.'
+      },
+      {
+        name: 'Toyota Camry XSE V6', make: 'Toyota', years: '2015–2017',
+        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        price: '$11,500', tier: 'Top',
+        tagline: 'Bulletproof 2.5L four or 3.5L V6. 35+ MPG highway on the I4. Essentially nothing to fix.'
+      },
+      {
+        name: 'Toyota 4Runner SR5', make: 'Toyota', years: '2010–2016',
+        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        price: '$16,000', tier: 'Top',
+        tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.'
+      },
+      {
+        name: 'Jeep Wrangler Sport', make: 'Jeep', years: '2013–2017',
+        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        price: '$17,500', tier: 'Strong',
+        tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.'
+      },
+      {
+        name: 'Lexus RX 350', make: 'Lexus', years: '2010–2015',
+        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        price: '$15,000', tier: 'Top',
+        tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.'
+      }
+    ];
+
+    var TYPE_LABELS = {
+      sedan: 'Sedan', suv: 'SUV', truck: 'Truck',
+      wagon: 'Wagon', hatch: 'Hatchback', 'hybrid-ev': 'Hybrid / EV'
+    };
+
+    // --- State ----------------------------------------------
+    var state = { type: '', budget: '', purpose: '', q: '' };
+
+    // --- DOM refs -------------------------------------------
+    var grid     = document.getElementById('vs-grid');
+    var countEl  = document.getElementById('vs-count-text');
+    var searchEl = document.getElementById('vs-search');
+    var resetBtn = document.getElementById('vs-reset');
+
+    if (!grid || !countEl) return; // guard if elements missing
+
+    // --- Filter logic ---------------------------------------
+    function getFiltered() {
+      var q = state.q.toLowerCase();
+      return VEHICLES.filter(function (v) {
+        if (q && v.name.toLowerCase().indexOf(q) === -1 && v.make.toLowerCase().indexOf(q) === -1) return false;
+        if (state.type   && v.type    !== state.type)    return false;
+        if (state.budget && v.budget  !== state.budget)  return false;
+        if (state.purpose && v.purpose !== state.purpose) return false;
+        return true;
+      });
+    }
+
+    // --- Render ---------------------------------------------
+    function render() {
+      var results = getFiltered();
+      var total   = VEHICLES.length;
+
+      // Update count label
+      if (results.length === total) {
+        countEl.textContent = 'Showing all ' + total + ' picks';
+      } else {
+        countEl.textContent = results.length + ' of ' + total + ' picks match';
+      }
+
+      // Empty state
+      if (results.length === 0) {
+        grid.innerHTML = '<div class="vs-empty">No picks match those filters. <button class="vs-empty-reset-btn" id="vs-empty-reset">Clear filters</button></div>';
+        var emptyReset = document.getElementById('vs-empty-reset');
+        if (emptyReset) emptyReset.addEventListener('click', resetFilters);
+        return;
+      }
+
+      // Build cards
+      var html = results.map(function (v) {
+        var tierClass = v.tier.toLowerCase() === 'top' ? 'vc-tier-top' : 'vc-tier-strong';
+        return '<div class="vc">' +
+          '<div class="vc-head">' +
+            '<span class="vc-type">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
+            '<span class="vc-tier ' + tierClass + '">' + v.tier + '</span>' +
+          '</div>' +
+          '<h3 class="vc-name">' + v.name + '</h3>' +
+          '<p class="vc-years">' + v.years + '</p>' +
+          '<p class="vc-tagline">' + v.tagline + '</p>' +
+          '<div class="vc-foot">' +
+            '<span class="vc-price">' + v.price + '</span>' +
+            '<a class="vc-link" href="/pinpoint/">Full brief &rarr;</a>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      grid.innerHTML = html;
+    }
+
+    // --- Reset ----------------------------------------------
+    function resetFilters() {
+      state = { type: '', budget: '', purpose: '', q: '' };
+      if (searchEl) searchEl.value = '';
+      document.querySelectorAll('.vchip').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-value') === '');
+      });
+      render();
+    }
+
+    // --- Filter chip clicks ---------------------------------
+    document.querySelectorAll('.vchip').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+        var val    = btn.getAttribute('data-value');
+        if (!filter) return;
+        state[filter] = val;
+        // Toggle active within this filter group only
+        document.querySelectorAll('.vchip[data-filter="' + filter + '"]').forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+        });
+        render();
+      });
+    });
+
+    // --- Search input ---------------------------------------
+    if (searchEl) {
+      searchEl.addEventListener('input', function () {
+        state.q = searchEl.value.trim();
+        render();
+      });
+    }
+
+    // --- Reset button ---------------------------------------
+    if (resetBtn) {
+      resetBtn.addEventListener('click', resetFilters);
+    }
+
+    // --- Initial render -------------------------------------
+    render();
+
+  }());
+
 })();
 </script>
 
