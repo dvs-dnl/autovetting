@@ -3738,6 +3738,418 @@ const CHECKLISTS = {
       { number: '15V-258', title: 'Rear Camera Display', desc: 'Backup camera image may fail to display. Free software update.' }
     ]
   },
+  'toyota-rav4-2016': {
+    year: 2016,
+    make: 'Toyota',
+    model: 'RAV4',
+    trim: 'LE / XLE / SE / Limited / Platinum (4th gen, 2013–2018)',
+    engine: '2.5L 2AR-FE inline-4 (176hp), FWD or AWD',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen RAV4 (2013–2018) is one of the safest used-SUV picks available — the 2AR-FE engine runs to 200,000+ miles with basic maintenance and Toyota reliability holds firm. The Takata airbag recall is the biggest outstanding issue: verify completion before anything else. Backup cameras fail or fog on high-mileage examples, and liftgate hinges rattle. Otherwise you're buying a well-documented, easy-to-maintain commuter with an excellent parts supply.",
+    stats: {
+      itemsToCheck: 18,
+      recalls: 3,
+      ownerComplaints: 1240,
+      topComplaintArea: 'Electrical System'
+    },
+    sections: [
+      {
+        title: 'Engine & Powertrain',
+        items: [
+          {
+            title: 'Takata airbag recall — verify completion first',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'The 2016 RAV4 may be covered by the Takata airbag inflator recall — one of the largest automotive safety recalls in history. The defective inflator can rupture and send metal fragments into the cabin. Unrepaired vehicles are not safe to drive.',
+            check: '<strong>Look up the VIN at nhtsa.gov/recalls before purchase.</strong> Any open Takata recall = do not buy until the dealer repairs it at no charge. If the seller says it was repaired, confirm via VIN lookup — repairs are logged in NHTSA\'s system.',
+            cost: 'Free under recall',
+            source: 'NHTSA Takata airbag recall (nationwide scope)'
+          },
+          {
+            title: 'Oil level and consumption (2.5L 2AR-FE)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2AR-FE is generally oil-tight, but some owners report gradual consumption on high-mileage units or vehicles used primarily on short trips. Not as severe as Subaru\'s EJ-series, but worth verifying.',
+            check: '<strong>Pull the dipstick with the engine cold.</strong> Oil should be at or near "full." If it\'s 1+ quart low between changes and the engine is over 100,000 miles, track oil level between fill-ups before committing.',
+            cost: '$0 if normal / engine wear concern if chronic',
+            source: 'Toyota 2AR-FE owner reports'
+          },
+          {
+            title: 'Timing chain (2AR-FE — no belt required)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 2AR-FE uses a timing chain, not a belt — no scheduled replacement. The chain is extremely durable. Occasional startup rattle reported at very high mileage (150,000+) when oil changes have been neglected.',
+            check: '<strong>Cold-start and listen for any chain rattle in the first 5 seconds.</strong> Should be silent within 2 seconds of startup. Sustained rattle = chain wear from oil neglect.',
+            cost: '$800–$1,500 chain service if worn (rare under normal maintenance)',
+            source: 'Toyota 2AR-FE reliability documentation'
+          },
+          {
+            title: 'AWD rear coupling (AWD models)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: "Toyota's RAV4 AWD uses an electronically-controlled rear coupling — generally reliable, but mismatched tire sizes (different diameters front vs. rear) can bind and wear the coupling prematurely.",
+            check: '<strong>Verify all four tires are the same size and brand.</strong> In an empty lot, drive a slow tight circle — no binding or clicking. Engage AWD Lock if equipped and confirm it releases cleanly.',
+            cost: '$800–$2,000 rear coupling if worn',
+            source: 'Toyota RAV4 AWD system documentation'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Technology',
+        items: [
+          {
+            title: 'Backup camera failure and fogging',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Backup camera failure is the #1 NHTSA complaint for 4th-gen RAV4. Water intrusion causes fogging inside the lens, progressive image degradation, or complete failure. Most common on 2013–2015, less frequent on 2016+, but worth checking on any example.',
+            check: '<strong>Shift to Reverse and evaluate the backup camera image.</strong> Look for fogging, condensation inside the lens, washed-out color, flickering, or black screen. Test in changing temperature if possible — fogging often appears after cool overnight sits.',
+            cost: '$200–$450 camera replacement',
+            source: 'NHTSA complaint data — top complaint category for 4th gen'
+          },
+          {
+            title: 'Power door lock actuator failure (rear doors)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Rear door lock actuators — particularly driver-rear — are a common failure point. The actuator motor strip-gears or fails to engage. The door still opens manually, but power locks become unreliable.',
+            check: '<strong>Lock and unlock all four doors from every control point: door buttons, key fob, and driver\'s master switch.</strong> Listen for the click of all four locks moving. A click with no movement = failing actuator.',
+            cost: '$150–$300 actuator replacement (DIY-friendly)',
+            source: 'RAV4 4th gen owner forums'
+          },
+          {
+            title: 'Pre-Collision System calibration (PCS-equipped 2016+)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Toyota Safety Sense P (TSS-P) was optional/standard on 2016 RAV4. The radar and camera require recalibration after windshield replacement or front-end collision repairs.',
+            check: '<strong>Verify any PCS or collision-warning lights on the dash are not illuminated.</strong> Ask about windshield replacement history — if replaced, confirm recalibration was done at a Toyota dealer.',
+            cost: '$200–$400 dealer recalibration after windshield work',
+            source: 'Toyota TSS-P system requirements'
+          }
+        ]
+      },
+      {
+        title: 'Body & Interior',
+        items: [
+          {
+            title: 'Liftgate hinge rattle',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Rear liftgate rattle is endemic to the 4th-gen RAV4 — the hinge pivot points develop slop and the weatherstripping around the liftgate aperture compresses with age. Results in a rattle or thump over rough pavement.',
+            check: '<strong>Drive over a rough surface with rear windows closed and listen.</strong> A rattle from the rear = liftgate hinge. Push on the liftgate from inside the cargo area — any give or movement confirms looseness.',
+            cost: '$50–$200 weatherstripping / $300–$600 if hinge replacement needed',
+            source: 'RAV4 4th gen owner reports (widespread pattern)'
+          },
+          {
+            title: 'Windshield stress cracks',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Less common than on the Honda CR-V, but 4th-gen RAV4 windshields are reported to develop stress fractures at the base of the glass or near the wiper cowl area, especially in cold climates.',
+            check: '<strong>Inspect the full windshield in direct sunlight from inside looking out.</strong> Check the lower edge and both lower corners for any crack pattern without an obvious impact point.',
+            cost: '$300–$700 windshield replacement / $50–$150 chip repair if minor',
+            source: 'RAV4 4th gen windshield complaint reports'
+          },
+          {
+            title: 'HVAC blower and cabin air filter',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Cabin air filters are often skipped and can become so clogged they restrict airflow and create mold odor. The blower motor itself is durable.',
+            check: '<strong>Set the fan to max and feel for strong, even airflow across all vents.</strong> Musty smell on max fan = clogged or moldy cabin filter. Ask for cabin filter service history.',
+            cost: '$20–$40 cabin filter (DIY) / $100–$200 if evaporator treatment needed',
+            source: 'Common HVAC maintenance item'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Front strut wear at high mileage',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'OEM RAV4 struts are tuned for comfort and wear relatively quickly — many examples over 80,000 miles show front-end float or nose-dive under braking.',
+            check: '<strong>Press firmly on each front corner and release — one controlled return (no bounce).</strong> More than one bounce = strut worn. Highway drive: steering should feel planted, not vague or wandery.',
+            cost: '$600–$1,000 front strut pair (OEM) / $400–$700 aftermarket',
+            source: 'RAV4 4th gen suspension wear pattern'
+          },
+          {
+            title: 'Brake rotor warping',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'RAV4 rotors are adequate for normal use but warp from repeated aggressive braking (mountain driving, towing). A pulse in the pedal during highway deceleration is the tell.',
+            check: '<strong>Brake firmly from 60 mph on the highway.</strong> Any pulsation or shimmy through the steering wheel = warped rotors.',
+            cost: '$250–$500 rotors + pads (front or rear)',
+            source: 'Common brake maintenance'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: 'Takata Airbag', title: 'Takata Airbag Inflator — Critical Safety Recall', desc: 'Inflator may rupture and send metal shrapnel into cabin. Verify VIN at nhtsa.gov/recalls before purchase. Free dealer repair.' },
+      { number: '17V-226', title: 'Fuel Pump — Potential Engine Stall', desc: 'Fuel pump may fail at high temperatures, causing engine stall. Verify completion by VIN.' },
+      { number: '18V-228', title: 'Pre-Collision System Software Update', desc: 'PCS may issue a false braking event. Free software update — verify completion.' }
+    ]
+  },
+
+  'honda-crv-2015': {
+    year: 2015,
+    make: 'Honda',
+    model: 'CR-V',
+    trim: 'LX / SE / EX / EX-L (4th gen, 2012–2016)',
+    engine: '2.4L K24Z7 inline-4 (185hp), 5-speed automatic',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen CR-V (2012–2016) is a dependable compact SUV — the K24 engine is Honda's most bulletproof four-cylinder design, and the 5-speed automatic is straightforward and durable. The standout issue: windshield stress fractures. A significant share of 4th-gen CR-Vs develop a crack pattern along the base or sides of the windshield without impact. Honda issued TSB 14-005 but declined to extend a recall. Buy one without a crack, inspect thoroughly, and verify the A/C evaporator for mold. Note: the 5th gen (2017+) switched to a 1.5T turbo with an oil dilution problem far worse than anything on the 4th gen — stick with 2012–2016 if you want the simpler, proven drivetrain.",
+    stats: {
+      itemsToCheck: 17,
+      recalls: 2,
+      ownerComplaints: 892,
+      topComplaintArea: 'Visibility / Windshield'
+    },
+    sections: [
+      {
+        title: 'Engine & Transmission',
+        items: [
+          {
+            title: 'K24Z7 engine — overall health check',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The K24 is one of Honda\'s most durable four-cylinders with a timing chain (no belt to replace). Documented weakness is oil consumption on very high-mileage units or cars with stretched oil change intervals.',
+            check: '<strong>Pull the dipstick and check oil level — should be at or near full.</strong> Check oil condition on a white paper towel: very black = old oil; metallic sheen = bearing wear. Cold-start and listen for chain rattle in the first 5 seconds — should be quiet.',
+            cost: '$0 if maintained / chain service rare on K24',
+            source: 'Honda K24 engine documentation'
+          },
+          {
+            title: '5-speed automatic — shift quality',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 5-speed automatic (2012–2016) is generally reliable and simpler than the CVTs introduced on the 5th-gen. Watch for hesitation or hard shifts, which indicate delayed service. Honda ATF-DW1 fluid only — generic fluid causes shudder.',
+            check: '<strong>Drive through all gears: light throttle, moderate, and a brief full-throttle acceleration.</strong> Shifts should be prompt and smooth. Hard clunk into gear = worn bands or solenoid. Verify fluid change history.',
+            cost: '$150 fluid service (ATF-DW1) / $2,000–$4,000 rebuild if neglected',
+            source: 'Honda CR-V 4th gen transmission service notes'
+          }
+        ]
+      },
+      {
+        title: 'Windshield & Visibility',
+        items: [
+          {
+            title: 'Windshield stress fractures (TSB 14-005)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'This is the defining defect of the 4th-gen CR-V. Stress cracks initiate at the base of the windshield (near the cowl/wiper area) or along the lower side edges — often without any impact point. Honda issued TSB 14-005 but declined to issue a formal recall. Replacement windshields can crack again in the same location if the root cause isn\'t addressed.',
+            check: '<strong>Inspect the windshield from inside in bright light — look specifically at the bottom 6 inches and both lower corners.</strong> A crack pattern without a clear impact point (no bull\'s-eye, no star) is a stress fracture. Do not accept a seller\'s claim that "it just happened" — check if any replacement glass is OEM Honda.',
+            cost: '$300–$700 windshield replacement (may recur) / no Honda recall reimbursement',
+            source: 'Honda TSB 14-005 + NHTSA complaint data'
+          },
+          {
+            title: 'Backup camera fogging (EX / EX-L)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Backup cameras on 4th-gen CR-Vs develop fogging or degraded image quality from water intrusion into the camera housing over time.',
+            check: '<strong>Reverse with the camera active and inspect image clarity.</strong> Fogging inside the lens, persistent condensation, or a washed-out image = camera housing seal failed.',
+            cost: '$150–$350 camera replacement',
+            source: 'Honda CR-V 4th gen camera complaint reports'
+          }
+        ]
+      },
+      {
+        title: 'HVAC & Electrical',
+        items: [
+          {
+            title: 'A/C evaporator mold smell (Honda-wide pattern)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Honda\'s HVAC evaporator design allows the evaporator to stay wet during short trips, creating mold — usually strongest when A/C first turns on after sitting overnight.',
+            check: '<strong>Start cold and run A/C on max fan — smell the vents immediately.</strong> A musty, locker-room smell = evaporator mold. Common but not a mechanical failure — more of a comfort issue.',
+            cost: '$100–$300 evaporator treatment / $800–$1,500 replacement if severe',
+            source: 'Honda A/C evaporator mold pattern (widely documented)'
+          },
+          {
+            title: 'Rear wiper motor failure',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Rear wiper motors on 4th-gen CR-Vs develop internal gear wear and fail to sweep a full arc, stopping midway or parking off-center.',
+            check: '<strong>Activate the rear wiper and watch: full sweep stop-to-stop, clean pause, and return.</strong> Hesitation, partial sweep, or grinding = motor failing.',
+            cost: '$150–$350 rear wiper motor (DIY-accessible)',
+            source: 'Honda CR-V 4th gen owner reports'
+          },
+          {
+            title: 'Keyless entry range issues',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The smart-entry module can fail, causing intermittent key-fob range issues or door-unlock delays. Most commonly a dead fob battery — rule that out first.',
+            check: '<strong>Test the key fob at 30+ feet from the car.</strong> Doors should lock/unlock reliably. Walk all the way around. Weak range = try a new CR2032 battery first, then investigate the module.',
+            cost: '$10 fob battery / $200–$400 module if needed',
+            source: 'Honda keyless entry module reports'
+          },
+          {
+            title: 'Power liftgate struts (EX-L)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Power liftgate struts on EX-L trim lose tension with age and fail to hold the hatch fully open, especially in cold weather.',
+            check: '<strong>Open the liftgate fully — hands off — and let it rest for 60 seconds.</strong> If it slowly drifts down, struts are tired. Cold weather test is most revealing.',
+            cost: '$80–$180 strut pair (DIY)',
+            source: 'Honda CR-V EX-L liftgate strut reports'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Front strut mount bearing wear',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Strut mount bearings wear by 80,000–100,000 miles, causing a popping or groaning sound during low-speed turns — especially in cold weather.',
+            check: '<strong>In a parking lot, turn the steering wheel lock-to-lock slowly at idle.</strong> Any grinding or popping from the front strut towers = strut mount bearings worn.',
+            cost: '$300–$600 strut mount pair',
+            source: 'Honda CR-V 4th gen strut mount wear pattern'
+          },
+          {
+            title: 'Rear brake caliper sticking',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Rear disc brakes develop sticking calipers, usually from infrequent parking brake use. A stuck caliper causes premature rear pad wear and a pull under light braking.',
+            check: '<strong>After a highway drive, carefully feel the radiated heat from each rear rotor (don\'t touch — just hover your hand near the wheel opening).</strong> One rear dramatically hotter than the other = stuck caliper on the hot side.',
+            cost: '$200–$400 caliper rebuild or replacement per side',
+            source: 'Honda CR-V rear caliper sticking — common pattern'
+          },
+          {
+            title: 'Brake pedal feel and rotor condition',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'CR-V brake pads wear at a normal rate. Factory rear pads are smaller and wear faster than fronts.',
+            check: '<strong>Brake firmly from 40 mph.</strong> Pedal should be firm and consistent. No pulsation = rotors flat. Ask for brake service history.',
+            cost: '$200–$400 brake service (pads + rotors front or rear)',
+            source: 'Standard CR-V maintenance'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: 'Takata Airbag', title: 'Takata Airbag Inflator — Critical Safety Recall', desc: 'Inflator rupture risk — metal fragments into cabin. Verify VIN at nhtsa.gov/recalls. Free dealer repair.' },
+      { number: '19V-965', title: 'Seat Belt Latch', desc: 'Seat belt latch may not engage properly. Verify completion by VIN. Free repair.' }
+    ]
+  },
+
+  'chevy-silverado-2014': {
+    year: 2014,
+    make: 'Chevrolet',
+    model: 'Silverado 1500',
+    trim: 'WT / LS / LT / LTZ / High Country (K2XX gen, 2014–2018)',
+    engine: '4.3L EcoTec3 V6 (285hp) · 5.3L EcoTec3 V8 (355hp) · 6.2L EcoTec3 V8 (420hp)',
+    overallRisk: 'medium',
+    overallRiskLabel: 'Medium Risk',
+    summary: "The K2XX Silverado (2014–2018) is a well-built, capable full-size truck — but the 5.3L and 6.2L V8 engines carry a serious AFM (Active Fuel Management) lifter failure risk that can cost $3,000–$6,000 if it materializes. AFM deactivates cylinders to save fuel, and the deactivating lifters are prone to collapse between 60,000–130,000 miles. The 4.3L V6 avoids AFM entirely and is the lower-risk powertrain choice. If you buy a V8, verify the AFM system history carefully and verify oil consumption rates. The 2014 is the first model year of this generation — check NHTSA for any open first-year recalls.",
+    stats: {
+      itemsToCheck: 20,
+      recalls: 4,
+      ownerComplaints: 3124,
+      topComplaintArea: 'Engine (AFM System)'
+    },
+    sections: [
+      {
+        title: 'Engine — AFM V8 (5.3L / 6.2L)',
+        items: [
+          {
+            title: 'AFM lifter failure — the V8\'s biggest risk',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'Active Fuel Management (AFM) deactivates cylinders 1, 4, 6, and 7 under light load to improve fuel economy. The special "AFM lifters" are prone to collapse at 60,000–130,000 miles. Symptoms: tick or tap at idle, elevated oil consumption, check engine misfire codes (P0300–P0308 range), and eventually catastrophic engine damage if ignored. This is a documented GM pattern across Silverado, Sierra, Tahoe, Yukon, and Escalade. Disabling AFM via an aftermarket tune or DoD delete kit is a common and legitimate fix.',
+            check: '<strong>At idle with the engine fully warm, listen for any ticking or tapping — especially from the passenger side of the engine (cylinders 1 and 4 are AFM cylinders).</strong> Pull OBDII codes — any P030X misfire codes = serious. Ask the seller if AFM has been disabled. Check oil level (consumption = AFM wear). Verify oil change intervals — stretched changes accelerate failure.',
+            cost: '$3,000–$6,000 lifter replacement with AFM delete / $8,000+ full engine repair if catastrophic',
+            source: 'GM AFM/DoD lifter failure — documented across Silverado/Sierra/Tahoe/Yukon/Escalade'
+          },
+          {
+            title: 'Oil consumption (AFM-linked, 5.3L)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The AFM system is linked to elevated oil consumption on the 5.3L — oil passes valve stem seals on deactivated cylinders. GM settled a class action. High consumption often precedes the classic lifter failure.',
+            check: '<strong>Check oil level on the dipstick — should be at FULL between changes.</strong> Ask the owner how often they add oil between changes. More than 1 quart per 3,000 miles = concerning. 1 quart per 1,000 miles = failing engine or pre-failure AFM wear.',
+            cost: '$0 short-term / significant engine longevity risk long-term',
+            source: 'GM oil consumption class action + NHTSA complaints'
+          },
+          {
+            title: '4.3L V6 — the safer engine choice',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 4.3L EcoTec3 V6 does NOT use AFM and avoids the lifter failure pattern entirely. Adequate for most use cases outside heavy towing, and significantly lower risk than the V8.',
+            check: '<strong>If the truck has the 4.3L V6: check for clean startup, smooth idle, and responsive acceleration.</strong> No AFM concerns apply. Verify transmission fluid condition and oil change history.',
+            cost: 'N/A — no AFM system',
+            source: 'EcoTec3 4.3L V6 powertrain documentation'
+          }
+        ]
+      },
+      {
+        title: 'Transmission & Driveline',
+        items: [
+          {
+            title: '6L80 torque converter shudder (V8 models)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 6-speed 6L80 automatic (paired with the 5.3L V8) develops torque converter clutch (TCC) shudder — a vibration or flutter felt at light throttle between 45–60 mph during lock-up. Caused by degraded TCC friction material. A Dexron-VI fluid drain-and-fill often resolves early-stage shudder; a rebuild is needed if advanced.',
+            check: '<strong>Drive at 50 mph in light throttle and feel for a rhythmic shudder or flutter through the seat or floor.</strong> It\'s distinct from road surface roughness — hold steady throttle in the 45–60 mph range. If it comes and goes with throttle changes, it\'s the TCC.',
+            cost: '$150 fluid service (may resolve early cases) / $1,500–$3,000 TCC replacement',
+            source: 'GM 6L80 TCC shudder — well-documented pattern'
+          },
+          {
+            title: 'Driveshaft vibration at highway speed',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Driveshafts on the Silverado can develop vibration at 65–80 mph from imbalance, worn U-joints, or slip-yoke wear. It resonates at a specific speed — not present across the whole range like a tire balance issue.',
+            check: '<strong>Highway drive at 65–75 mph and feel for vibration through the floor or seat that peaks at a specific speed.</strong> A tire balance issue is usually more diffuse; driveshaft resonance peaks and then clears.',
+            cost: '$150–$400 driveshaft balance or U-joint service',
+            source: 'K2XX Silverado driveline vibration reports'
+          },
+          {
+            title: '4WD transfer case engagement',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The Autotrac transfer case is generally reliable. Verify clean engagement on 4WD-equipped trucks.',
+            check: '<strong>Test 4WD-Hi and 4WD-Lo engagement from a slow roll on a safe surface.</strong> The selector (button or shifter) should engage cleanly — no grinding, hesitation, or "stuck in 4WD" indicator.',
+            cost: '$500–$1,500 if transfer case shift motor fails',
+            source: 'GM Autotrac transfer case documentation'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Recalls',
+        items: [
+          {
+            title: 'Open recalls — verify all (first model year)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 2014 Silverado is the first year of the K2XX generation and may have first-year open recalls including airbag, oil cooler line, and brake-related campaigns. Not all have been completed on every truck.',
+            check: '<strong>Look up the VIN at nhtsa.gov/recalls and check every open recall.</strong> Do not purchase with open safety recalls unless the dealer agrees to complete them before delivery (confirmed in writing).',
+            cost: 'Free under any open recall',
+            source: 'NHTSA VIN lookup — verify all items'
+          },
+          {
+            title: 'HVAC mode actuator failure',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The blend door and mode actuators behind the dashboard are a known failure point on K2XX trucks — when they fail, the temperature defaults to one setting or vents stop switching. Replacement requires partial dash removal.',
+            check: '<strong>Test every HVAC mode: dash vents / floor / defrost / floor+dash combo.</strong> Set temperature from 60°F to 90°F and confirm heat and cold reach each vent mode. Any mode stuck on the wrong output = bad actuator.',
+            cost: '$400–$900 actuator replacement (labor-heavy)',
+            source: 'K2XX HVAC actuator failure — widespread pattern'
+          },
+          {
+            title: 'Window regulator failure',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Power window regulators — especially driver front — fail more than average on this generation. The plastic clips on the regulator assembly break and the window drops into the door.',
+            check: '<strong>Operate all four windows fully down and fully up.</strong> Listen for grinding, hesitation, or a window dropping faster than powered on descent (cable slack = imminent failure).',
+            cost: '$150–$300 regulator replacement (DIY-moderate)',
+            source: 'K2XX Silverado window regulator reports'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Front ball joints and CV boots (4WD)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Upper ball joints on the K2XX double-wishbone front suspension wear faster on trucks used for towing or light off-road. 4WD half-shaft CV boots crack with age and spread grease.',
+            check: '<strong>On a lift, grasp each front tire at 12 and 6 o\'clock — no vertical play should be detectable.</strong> Inspect CV boots on 4WD models for tears or grease spray.',
+            cost: '$300–$700 ball joints / $200–$400 CV axle',
+            source: 'K2XX front suspension wear documentation'
+          },
+          {
+            title: 'Brake rotor warp (heavy truck under tow load)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Full-size truck brakes run hot under load — rotors warp from repeated heat cycling, especially on trucks used for towing. A pulsation in the pedal under highway deceleration is the primary tell.',
+            check: '<strong>Brake firmly from 55 mph on the highway.</strong> Any pulsation through the pedal or shimmy in the steering wheel = warped rotors. Ask about towing history.',
+            cost: '$400–$700 front rotors + pads',
+            source: 'Standard full-size truck brake wear'
+          },
+          {
+            title: 'Tow package check (if equipped)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'If the truck was spec\'d for towing, inspect hitch receiver, 7-pin connector, and any trailer brake controller. Hard towing accelerates transmission and brake wear.',
+            check: '<strong>Look for a trailer brake controller in the cab and test the 7-pin trailer socket.</strong> Inspect the receiver tube for rust or deformation. Heavy tow use = check transmission fluid condition immediately.',
+            cost: '$50–$200 connector or controller if needed',
+            source: 'Standard tow package inspection'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '14V-346', title: 'Front Passenger Airbag (Takata)', desc: 'Takata airbag inflator rupture risk. Verify VIN at nhtsa.gov/recalls. Free dealer repair.' },
+      { number: '14V-293', title: 'Engine Oil Cooler Line — Fire Risk', desc: 'Oil cooler line may leak causing fire risk. Verify completion by VIN. Free repair.' },
+      { number: '16V-065', title: 'Brake Fluid Pressure Sensor', desc: 'Sensor may fail, causing extended stopping distance. Verify completion. Free repair.' },
+      { number: '14V-355', title: 'Front Seat Belt', desc: 'Belt may not properly restrain occupant in a crash. Free repair — verify completion.' }
+    ]
+  },
+
 
 };
 
@@ -3765,13 +4177,17 @@ const VEHICLE_MENU = {
   },
   2018: {
     'Toyota': [
-      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ],
+    'Chevrolet': [
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ]
   },
   2017: {
@@ -3788,7 +4204,11 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
-      { model: 'Tacoma', trim: '3rd gen', key: null }
+      { model: 'Tacoma', trim: '3rd gen', key: null },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Chevrolet': [
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ]
   },
   2016: {
@@ -3796,7 +4216,8 @@ const VEHICLE_MENU = {
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
     ],
     'Honda': [
-      { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' }
+      { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' },
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' }
@@ -3808,7 +4229,11 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
-      { model: '4Runner', trim: 'SR5 / Trail / Limited', key: null }
+      { model: '4Runner', trim: 'SR5 / Trail / Limited', key: null },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Chevrolet': [
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ]
   },
   2015: {
@@ -3821,12 +4246,22 @@ const VEHICLE_MENU = {
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' },
       { model: 'Forester', trim: '4th gen FB25', key: null }
+    ],
+    'Toyota': [
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Honda': [
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
+    ],
+    'Chevrolet': [
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ]
   },
   2014: {
     'Honda': [
       { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
-      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' }
+      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' },
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
     'Acura': [
       { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' }
@@ -3835,14 +4270,16 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
       { model: 'Mazda6', trim: '', key: null }
     ],
     'Chevrolet': [
-      { model: 'Volt', trim: '', key: null }
+      { model: 'Volt', trim: '', key: null },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ],
     'Volkswagen': [
       { model: 'Jetta GLI', trim: '', key: null },
@@ -3851,13 +4288,15 @@ const VEHICLE_MENU = {
   },
   2013: {
     'Honda': [
-      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' }
+      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' },
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
     'Jeep': [
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Subaru': [
       { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' }
@@ -3868,7 +4307,8 @@ const VEHICLE_MENU = {
   },
   2012: {
     'Honda': [
-      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' }
+      { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' },
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
     'Lexus': [
       { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
