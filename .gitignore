@@ -1,0 +1,16 @@
+# Security — never commit credentials or tokens
+.env
+.env.*
+*.env
+*secret*
+*token*
+*credential*
+*config.json
+!package.json
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Editor
+.vscode/
