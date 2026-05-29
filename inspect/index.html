@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X00YY58X2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X00YY58X2R');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inspection checklist &mdash; AutoVetting</title>
@@ -3301,7 +3309,435 @@ const CHECKLISTS = {
       { number: '18V-114', title: 'Driveshaft (manual transmission)', desc: 'Si and Sport 6MT — driveshaft may crack and separate. Verify completion.' },
       { number: '16V-061', title: 'Takata Airbag', desc: 'Certain build dates received affected inflators. Verify replacement.' }
     ]
-  }
+  },
+
+
+  'mazda3-2014': {
+    year: 2014,
+    make: 'Mazda',
+    model: 'Mazda3',
+    trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring (BM 3rd gen)',
+    engine: '2.0L Skyactiv-G P3 I4 (155hp) or 2.5L Skyactiv-G PY I4 (184hp), 6MT or 6AT',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 2014 Mazda3 (BM gen) is one of the best used compact buys — athletic, efficient, and well-built. The 2.0L Skyactiv-G has early oil-consumption reports that deserve a check. The infotainment is slow by modern standards but reliable. Key things to verify: wiper transmission, oil level habit, and rear beam condition in salt-belt states.",
+    stats: {
+      itemsToCheck: 16,
+      recalls: 3,
+      ownerComplaints: 452,
+      topComplaintArea: 'Engine'
+    },
+    sections: [
+      {
+        title: 'Engine & Powertrain',
+        items: [
+          {
+            title: 'Skyactiv-G 2.0L oil consumption (2013-2015)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Early Skyactiv-G 2.0L engines (2013-2014 specifically) have documented oil consumption ranging from 1 qt per 2,000 miles to 1 qt per 5,000 miles. Mazda issued extended warranty coverage for qualifying vehicles. The 2.5L is less affected.',
+            check: '<strong>Pull the dipstick and check the oil level.</strong> Ask how frequently the owner adds oil between changes. Request service records — frequent oil-top-off notes are a red flag. Do a cold start and watch for any blue smoke at the tailpipe.',
+            cost: '$0 if monitored / $4,000-$7,000 engine rebuild if chronic and ignored',
+            source: 'Mazda TSB 01-007/14 + NHTSA consumer complaints'
+          },
+          {
+            title: 'Timing chain (chain-driven, no belt)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Both Skyactiv-G engines use a timing chain — no scheduled replacement. Generally bulletproof, but listen at cold start.',
+            check: '<strong>Cold-start the car and listen for any rattling for the first 3-5 seconds.</strong> Normal: quiet. Any sustained chain rattle = tensioner wear.',
+            cost: '$800-$1,500 if chain service needed (uncommon)',
+            source: 'Skyactiv-G architecture documentation'
+          },
+          {
+            title: 'i-Stop auto start-stop wear',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Mazda i-Stop uses a direct injection restart (not a traditional starter) on Skyactiv engines. This reduces starter motor wear but requires a specific AGM battery. A standard replacement battery will disable i-Stop and may trip codes.',
+            check: '<strong>Test i-Stop: at a warm traffic light with the system enabled, confirm it restarts instantly.</strong> A delayed or rough restart = system degrading. Check the battery — i-Stop requires an AGM-type battery.',
+            cost: '$250-$400 AGM battery / $600-$1,200 ring gear if worn',
+            source: 'Mazda Skyactiv i-Stop documentation'
+          },
+          {
+            title: '6AT transmission fluid (ATF-MV required)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Mazda specifies ATF-MV fluid and a 45,000-mile change interval for the 6AT. Many owners skip this, causing a slight shudder or hesitation at low speeds.',
+            check: '<strong>Warm up the car fully and test all upshift/downshift transitions.</strong> Any hesitation from 1st-2nd or slip at highway cruise = fluid or solenoid issue. Verify ATF change history in service records.',
+            cost: '$150 fluid service / $2,500-$4,000 rebuild if neglected',
+            source: 'Mazda ATF-MV service requirement'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Infotainment',
+        items: [
+          {
+            title: 'Mazda Connect CMU infotainment',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The Mazda Connect system (Commander dial + center screen) is reliable but slow. Firmware updates help, but the unit can freeze or reboot. More annoyance than failure, but expensive to replace.',
+            check: '<strong>Test all infotainment functions: nav, Bluetooth call and audio, radio, backup camera.</strong> Time how fast it wakes up from cold start — sluggish but functional is normal; failing to boot or constant reboots is a defect.',
+            cost: '$800-$1,500 CMU replacement',
+            source: 'Mazda community documentation'
+          },
+          {
+            title: 'TPMS sensor battery failure',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: '2014 Mazda3 TPMS sensors have a battery life of roughly 5-7 years — many are dead or dying at this age.',
+            check: '<strong>Check the TPMS warning light.</strong> If lit, verify actual tire pressures first. Budget for 4 replacement sensors if all original.',
+            cost: '$200-$350 for all 4 sensors',
+            source: 'Standard TPMS lifespan'
+          }
+        ]
+      },
+      {
+        title: 'Body & Structure',
+        items: [
+          {
+            title: 'Windshield wiper transmission failure (recall)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'A documented wiper transmission defect can cause the wiper arm to strip gears, stopping wipers mid-sweep. Mazda issued recall 16V-433 covering some VINs; many cars never received the repair.',
+            check: '<strong>Run wipers at all speeds including intermittent.</strong> Listen for grinding or observe any erratic sweep pattern. Verify recall 16V-433 completion at nhtsa.gov/recalls using the VIN.',
+            cost: 'Free under recall / $300-$500 if recall missed',
+            source: 'NHTSA recall 16V-433'
+          },
+          {
+            title: 'Rear torsion beam rust (salt-belt states)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The rear torsion beam axle on the BM Mazda3 corrodes in northeastern and Midwest salt-belt states. Surface rust is cosmetic, but pitting rust can compromise structural integrity.',
+            check: '<strong>On a lift, inspect the rear torsion beam and trailing arms for rust depth.</strong> Surface oxidation is fine. Pitting, flaking, or perforation is a structural concern. Any car from a salt-belt state warrants this check.',
+            cost: '$0 if cosmetic / walk away if structural perforation found',
+            source: 'Mazda community + rust-prone pattern documentation'
+          },
+          {
+            title: 'Paint chips on hood and front bumper',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The Mazda3 hood chips easily from gravel. Normal on any car over 5 years old, but Soul Red and Machine Gray show chips most visibly.',
+            check: '<strong>Inspect hood and leading edge of front bumper under good lighting.</strong> Touch up chips promptly to prevent rust.',
+            cost: '$50 touch-up paint / $600-$1,200 hood respray if severe',
+            source: 'Standard paint wear pattern'
+          }
+        ]
+      },
+      {
+        title: 'Steering, Suspension & Brakes',
+        items: [
+          {
+            title: 'Front strut noise (sport-tuned suspension)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The Mazda3\'s sport-tuned struts are stiffer than average, which can make wear-related noise more noticeable earlier.',
+            check: '<strong>Drive over rough pavement and listen for any clunking from the front corners.</strong> Sharp single clunks = worn strut mounts or sway bar end links. Both are cheap fixes.',
+            cost: '$200-$400 sway bar links / $500-$900 front struts if needed',
+            source: 'Standard wear pattern'
+          },
+          {
+            title: 'Brake pad squeal (Mazda OEM pads)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Mazda OEM brake pads are prone to squeal, particularly the front. This is a pad compound issue, not a safety defect.',
+            check: '<strong>Brake normally from 30 mph and listen for squealing.</strong> Squealing only when cold = normal. Squealing when warm + grinding = worn pads.',
+            cost: '$180-$300 front pads (aftermarket Hawk HPS recommended)',
+            source: 'Mazda community consensus'
+          },
+          {
+            title: 'Electric Power Steering (EPS)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'EPAS is reliable on the BM Mazda3. Steering feel should be consistent through lock-to-lock range.',
+            check: '<strong>Check for any steering warning lights.</strong> Verify consistent feel through the full lock-to-lock range — no sudden lightening or notchiness.',
+            cost: '$1,200-$1,800 EPS column if needed (uncommon)',
+            source: 'Standard EPS check'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '16V-433', title: 'Windshield Wiper Transmission', desc: 'Wiper arm may strip gears and stop mid-sweep. Free repair — verify completion.' },
+      { number: '14V-327', title: 'ABS Modulator Overheating', desc: 'ABS modulator may overheat on some build dates. Verify completion.' },
+      { number: '18V-575', title: 'Fuel Pump (i-Stop Models)', desc: 'Fuel pump may fail causing stall. Free dealer replacement.' }
+    ]
+  },
+
+  'toyota-camry-2018': {
+    year: 2018,
+    make: 'Toyota',
+    model: 'Camry',
+    trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD (XV70 8th gen)',
+    engine: '2.5L A25A-FKS I4 (203hp) or 3.5L 2GR-FKS V6 (301hp) — also Hybrid 2.5L',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 8th-gen Camry (XV70) is a major redesign — sharper to drive and better-built than its predecessor. The 4-cylinder A25A has a small oil consumption window to watch. The acoustic laminated windshield on XSE/XLE trims is expensive to replace. A fuel pump recall (20V-391) hits a subset of 2018s. Overall, one of the safest used-car buys under $25k.",
+    stats: {
+      itemsToCheck: 18,
+      recalls: 3,
+      ownerComplaints: 823,
+      topComplaintArea: 'Electrical System'
+    },
+    sections: [
+      {
+        title: 'Powertrain',
+        items: [
+          {
+            title: 'A25A-FKS 2.5L oil consumption monitoring',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Toyota\'s 2.5L A25A-FKS has some owner reports of consuming 1 qt per 3,000-5,000 miles. Not universal, but worth a dipstick check. Toyota defines "acceptable" at up to 1 qt per 1,200 miles — you should expect significantly better.',
+            check: '<strong>Pull the dipstick and check oil level.</strong> Ask how often the owner adds oil between changes. Request service records and watch for frequent top-off notes. Do a cold start and watch for any blue smoke from the exhaust.',
+            cost: '$0 if monitored / $5,000-$9,000 engine if chronic consumption ignored',
+            source: 'A25A-FKS owner forums + NHTSA complaints'
+          },
+          {
+            title: '8-speed Direct Shift-8AT transmission',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The DA8AT is Toyota\'s excellent 8-speed direct-shift automatic. It requires Toyota ATF-WS fluid — non-OEM fluid causes shudder.',
+            check: '<strong>Confirm fluid changes every 60k miles using Toyota ATF-WS only.</strong> Test all gears. Any shudder at light throttle around 40 mph = fluid service needed.',
+            cost: '$150-$200 fluid service / $3,500+ rebuild if severely neglected',
+            source: 'Toyota ATF-WS service requirement'
+          },
+          {
+            title: 'V6 timing chain (3.5L 2GR-FKS)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2GR-FKS V6 timing chain is robust. Some V6s at 80,000+ miles show minor stretch — listen at cold start.',
+            check: '<strong>Cold start the V6 and listen for 5-10 seconds.</strong> Brief 1-second rattle that clears = normal. Sustained rattle = tensioner wear.',
+            cost: '$1,500-$2,500 timing service if needed',
+            source: '2GR-FKS pattern documentation'
+          },
+          {
+            title: 'Hybrid battery state of health (Hybrid trim only)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'If the car is the Hybrid trim, the high-voltage NiMH battery should be verified. Battery capacity typically holds 80%+ for 150,000 miles, but a degraded pack will reduce EV range and fuel economy.',
+            check: '<strong>Check for any Hybrid Battery warning light on dash.</strong> Use a Toyota Techstream scan or OBD tool to read battery state-of-charge and cell balance. Test in EV mode — should drive smoothly on battery alone at low speeds.',
+            cost: '$3,000-$5,500 battery replacement / $800-$1,500 refurbished pack',
+            source: 'Toyota Hybrid service documentation'
+          }
+        ]
+      },
+      {
+        title: 'Body & Glass',
+        items: [
+          {
+            title: 'Acoustic laminated windshield cost (XSE/XLE/TRD trims)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'XSE, XLE, XSE V6, XLE V6, and TRD trims use acoustic laminated windshield glass for noise reduction. It is NOT replaceable with a standard windshield. A simple chip can mean $500-$1,100 versus $250 on a base LE.',
+            check: '<strong>Inspect the windshield carefully for chips, cracks, and edge delamination.</strong> A crack over 6 inches typically requires full replacement. Confirm OEM acoustic glass was used on any prior replacement — improper glass interferes with ADAS camera calibration.',
+            cost: '$500-$1,100 acoustic windshield replacement',
+            source: 'Toyota trim-level parts specification'
+          },
+          {
+            title: 'ADAS recalibration after windshield work',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Pre-Collision System (PCS), Lane Departure Alert, and Radar Cruise Control sensors mount to the windshield. Any replacement requires full ADAS recalibration.',
+            check: '<strong>Confirm that any prior windshield replacement was followed by Toyota dealer or ADAS-certified shop recalibration.</strong> A non-calibrated system can false-brake or fail to detect hazards.',
+            cost: '$200-$400 recalibration at dealer',
+            source: 'Toyota Safety Sense documentation'
+          },
+          {
+            title: 'Sunroof drain tube blockage (moonroof-equipped)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Toyota moonroofs have a known drain tube clog pattern. Blocked drains overflow into the headliner and A-pillar — by the time water stains appear, significant damage has accumulated.',
+            check: '<strong>Inspect headliner around the moonroof frame and the A-pillars for any water staining.</strong> Smell the interior for mustiness. Ask if drains have ever been flushed.',
+            cost: '$75-$200 drain flush / $500-$2,000 headliner repair if soaked',
+            source: 'Toyota moonroof drain pattern'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Safety',
+        items: [
+          {
+            title: 'Denso fuel pump recall (20V-391)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Some 2018 Camry 4-cylinders received Denso low-pressure fuel pumps that can fail, causing stalling or no-start. NHTSA recall 20V-391 — free dealer replacement.',
+            check: '<strong>Check recall 20V-391 completion at nhtsa.gov/recalls using the VIN.</strong> If not completed, schedule dealer appointment or negotiate repair into the deal.',
+            cost: 'Free under recall',
+            source: 'NHTSA recall 20V-391'
+          },
+          {
+            title: 'Toyota Safety Sense-P (TSS-P)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 2018 Camry has TSS-P standard: Pre-Collision System, Lane Departure Alert, Auto High Beams, Radar Cruise Control. Reliable systems — verify sensors are clean and unobstructed.',
+            check: '<strong>On a clear highway stretch, test Radar Cruise Control and verify it adjusts to traffic.</strong> Check for any ADAS warning lights. Verify the forward camera (behind rearview mirror) and front radar (under bumper) are undamaged.',
+            cost: '$400-$800 sensor replacement if damaged',
+            source: 'Toyota Safety Sense documentation'
+          },
+          {
+            title: 'Entune 3.0 Apple CarPlay retrofit',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 2018 Camry launched without Apple CarPlay/Android Auto — Toyota added support via a free dealer software update. Verify update status.',
+            check: '<strong>Test all infotainment inputs.</strong> Ask if the Apple CarPlay retrofit has been applied. Free at any Toyota dealer if not done.',
+            cost: 'Free software update',
+            source: 'Toyota Entune 3.0 update history'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Front brake wear (commuter mileage)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Commuter/city mileage Camrys can wear front pads by 50,000 miles.',
+            check: '<strong>Ask for brake service history.</strong> Visually check pad thickness through wheel spokes if service records are absent.',
+            cost: '$250-$400 front pads + rotors',
+            source: 'Standard wear pattern'
+          },
+          {
+            title: 'Electric Power Steering (EPS)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'EPS is mature and reliable on this generation. Some SE/XSE buyers note lighter-than-expected steering feel — that is by design.',
+            check: '<strong>No steering warning lights should be present.</strong> Steering should be consistent through the full lock range.',
+            cost: '$1,200-$1,800 if column replacement needed (rare)',
+            source: 'Standard EPS check'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '20V-391', title: 'Denso Low-Pressure Fuel Pump', desc: 'May fail causing stall or no-start. Free dealer replacement — verify VIN.' },
+      { number: '19V-133', title: 'Pre-Collision System Calibration', desc: 'PCS may not detect certain hazards. Free software update.' },
+      { number: '18V-004', title: 'Seat Recliner Mechanism', desc: 'Seat may not lock in position; injury risk. Free repair — verify VIN.' }
+    ]
+  },
+
+  'ford-f150-2015': {
+    year: 2015,
+    make: 'Ford',
+    model: 'F-150',
+    trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen, first aluminum-body year)',
+    engine: '2.7L EcoBoost V6 (325hp) · 3.5L EcoBoost V6 (365hp) · 5.0L Coyote V8 (385hp) · 3.5L V6 base (282hp)',
+    overallRisk: 'medium',
+    overallRiskLabel: 'Medium Risk',
+    summary: "The 2015 F-150 debuted Ford's all-aluminum body — a major engineering move. 2015 is the most inspection-intensive year of this generation: the 2.7L EcoBoost was brand-new and has documented first-year head gasket and timing chain issues. Aluminum body changes accident-repair costs dramatically. A critical fire-risk recall (16V-170) covers a large share of 2015 trucks. Steer toward a 2016+ or the 5.0L V8 if the 2.7L EcoBoost history is unclear.",
+    stats: {
+      itemsToCheck: 22,
+      recalls: 5,
+      ownerComplaints: 2847,
+      topComplaintArea: 'Engine'
+    },
+    sections: [
+      {
+        title: 'Engine (Powertrain-Specific)',
+        items: [
+          {
+            title: '2.7L EcoBoost head gasket failure (2015 ONLY)',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'The 2015 2.7L EcoBoost had a documented first-year head gasket defect — coolant intrusion into the cylinder, white exhaust smoke, overheating, and potential hydrolock. Ford acknowledged the issue and extended warranty coverage to 10 years/150,000 miles for affected VINs. A 2015 2.7L without documented head gasket repair is a significant risk.',
+            check: '<strong>If the truck has the 2.7L: check coolant reservoir level (low = loss).</strong> At startup, look for white smoke at the tailpipe. Remove the oil cap and look for cream/milky foam = coolant mixing with oil. Check NHTSA lookup for TSB 17-0039. Do NOT buy a 2015 2.7L without head gasket repair documentation.',
+            cost: '$3,000-$6,000 head gasket repair / walk away if no documentation and VIN is in affected range',
+            source: 'Ford TSB 17-0039 + extended warranty + NHTSA complaints'
+          },
+          {
+            title: '2.7L EcoBoost timing chain rattle (2015-2016)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 2.7L EcoBoost has upper and lower timing chain cassette wear. At cold start, a rattle persisting beyond 3-4 seconds or at warm idle indicates cassette wear. Ford released updated parts.',
+            check: '<strong>Cold-start and listen at idle for chain rattle from the front driver-side of the engine.</strong> Sustained rattle beyond 4 seconds = chain cassettes worn. Ask for repair documentation.',
+            cost: '$1,200-$2,400 dual chain cassette replacement',
+            source: 'Ford TSB 18-2202 + community documentation'
+          },
+          {
+            title: '3.5L EcoBoost — proven and reliable (2011+)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 3.5L twin-turbo EcoBoost has been in production since 2011 and is well-debugged by 2015. Watch for spark plug fouling on high-mileage trucks and verify plug changes.',
+            check: '<strong>Test under hard acceleration — power should be strong and smooth.</strong> Any misfires or hesitation at WOT = plug or coil. Verify plugs changed at 60,000 miles.',
+            cost: '$400-$600 plugs + coils service at 60k',
+            source: '3.5L EcoBoost production history'
+          },
+          {
+            title: '5.0L Coyote V8 — cam phaser noise at startup',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 5.0L Coyote is the most reliable powertrain choice for this generation. Its quirk: variable valve timing cam phasers can rattle 1-2 seconds on cold start, especially if oil changes have been stretched.',
+            check: '<strong>Cold-start from an overnight sit and listen for a metallic rattle from the top of the engine for the first 3-5 seconds.</strong> Brief rattle that clears = normal Coyote behavior. Sustained rattle = phaser wear.',
+            cost: '$800-$2,000 phaser service if worn',
+            source: 'Coyote V8 cam phaser pattern'
+          }
+        ]
+      },
+      {
+        title: 'Aluminum Body',
+        items: [
+          {
+            title: 'Accident repair cost (aluminum body)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Aluminum body panels cost 2-3x more to repair than steel and require Ford-certified aluminum shops. A fender-bender that costs $1,500 on a steel truck can cost $3,000-$5,000 on this F-150.',
+            check: '<strong>Run the VIN through CARFAX or AutoCheck before anything else.</strong> Inspect every panel gap — aluminum doesn\'t rust but folds differently than steel. Any uneven gaps, mismatched paint sheen, or overspray = prior repair. Ask if it was done at a Ford-certified aluminum shop.',
+            cost: '$3,000-$10,000+ per panel at a certified shop',
+            source: 'Ford aluminum body repair certification program'
+          },
+          {
+            title: 'Galvanic corrosion at steel-aluminum junctions',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The F-150 has a steel frame with an aluminum body. Ford uses isolation tape at junctions, but in salt-belt states these can fail. Galvanic corrosion forms at the bolt points where dissimilar metals contact.',
+            check: '<strong>On a lift, inspect junctions where the aluminum body meets the steel frame — A-pillar base, rocker seams, and bed mounting bolts.</strong> White powder or oxidation at these interfaces = galvanic corrosion starting. Essential check for any northern-state truck.',
+            cost: '$500-$3,000 corrosion treatment / more for structural repairs',
+            source: 'Ford F-150 aluminum body engineering + salt-belt reports'
+          }
+        ]
+      },
+      {
+        title: 'Drivetrain & 4WD',
+        items: [
+          {
+            title: 'IWE front hub failure (4WD models)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The Integrated Wheel End (IWE) system that engages front hubs is vacuum-operated — a known weak point. Failed IWE causes a grinding rattle at highway speed in 2WD. The vacuum lines to the hubs dry-rot and collapse.',
+            check: '<strong>Drive at 60+ mph in 2WD and listen for grinding or groaning from the front axle area.</strong> Engage 4WD-Hi and verify the 4WD light confirms engagement, then disengage and verify it returns to 2WD cleanly.',
+            cost: '$300-$800 IWE repair / $1,200+ if both sides fail',
+            source: 'Ford F-150 IWE pattern + community documentation'
+          },
+          {
+            title: '6-speed 6R80 transmission (Mercon LV fluid only)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 6R80 is generally reliable when properly maintained. Uses Mercon LV fluid — Mercon V is incorrect and causes damage.',
+            check: '<strong>Test all 6 gears under light and hard acceleration.</strong> Shifts should be smooth. Verify fluid change history — 60,000-mile changes recommended.',
+            cost: '$150 fluid service / $3,500-$5,000 rebuild if neglected',
+            source: '6R80 service recommendation'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Recalls',
+        items: [
+          {
+            title: 'Recall 16V-170 — instrument panel wiring fire risk',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'NHTSA recall 16V-170: instrument panel wiring harness can overheat and cause a fire. Covers a large portion of 2015-2016 F-150s. Verify completion by VIN at nhtsa.gov/recalls.',
+            check: '<strong>Look up recall 16V-170 at nhtsa.gov/recalls before purchase.</strong> If not completed, this is a no-drive, no-buy situation until remedied at the dealer. Free repair.',
+            cost: 'Free under recall / fire risk if unrepaired',
+            source: 'NHTSA recall 16V-170'
+          },
+          {
+            title: 'MyFord Touch vs. SYNC 3 infotainment',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: '2015 F-150 launched with MyFord Touch — a slow, unreliable system. Many owners have retrofitted SYNC 3, which is vastly better. Verify what is currently installed.',
+            check: '<strong>Test all infotainment functions: navigation, Bluetooth, reverse camera, USB.</strong> MyFord Touch has slow, laggy response. SYNC 3 is fast and responsive.',
+            cost: '$600-$1,200 SYNC 3 retrofit if desired',
+            source: 'Ford infotainment generation history'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Front IFS ball joints and CV axle boots',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The independent front suspension (coil-over-shock) wears faster under heavy load or rough use. At 100,000+ miles, ball joints and CV axle boots are due.',
+            check: '<strong>Inspect front suspension for torn CV boots, leaking shocks, and worn ball joints.</strong> Grab the front tire at 12 and 6 o\'clock and try to wiggle — any movement = ball joint play.',
+            cost: '$400-$800 per ball joint / $300-$500 CV axle',
+            source: 'F-150 IFS wear pattern'
+          },
+          {
+            title: 'Front brake wear (heavy truck)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The F-150 is a heavy vehicle — front brakes wear faster than its size might suggest, especially on tow-spec or 4WD trucks.',
+            check: '<strong>Ask for brake service history.</strong> Brake firmly from 45 mph — no shimmy or pulsation (warped rotors).',
+            cost: '$350-$600 front pads + rotors',
+            source: 'Standard heavy-truck brake wear'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '16V-170', title: 'Instrument Panel Wiring — Fire Risk', desc: 'Critical safety recall. Wiring may overheat and ignite. Free repair — verify before purchase.' },
+      { number: '15V-554', title: 'Transmission Shift Cable Bushing', desc: 'Bushing may disconnect; vehicle may move when gear selector shows Park. Verify completion.' },
+      { number: '15V-303', title: 'Knee Airbag Deployment', desc: 'Knee airbag may not deploy in crash. Free dealer repair.' },
+      { number: '19V-075', title: 'Rear Axle Shaft Bearing', desc: 'Bearing may fracture; rear axle separation risk. Verify completion.' },
+      { number: '15V-258', title: 'Rear Camera Display', desc: 'Backup camera image may fail to display. Free software update.' }
+    ]
+  },
 
 };
 
@@ -3311,7 +3747,37 @@ const CHECKLISTS = {
 const VEHICLE_MENU = {
   // [year]: { [make]: [ {model, trim, key} ] }
   // key matches CHECKLISTS keys for available content; absent = coming soon
+  2020: {
+    'Toyota': [
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+    ],
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ]
+  },
+  2019: {
+    'Toyota': [
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+    ],
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ]
+  },
+  2018: {
+    'Toyota': [
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+    ],
+    'Mazda': [
+      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' }
+    ],
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ]
+  },
   2017: {
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ],
     'Honda': [
       { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' }
     ],
@@ -3326,11 +3792,17 @@ const VEHICLE_MENU = {
     ]
   },
   2016: {
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ],
     'Honda': [
       { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' }
     ],
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' }
+    ],
+    'Mazda': [
+      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM gen)', key: 'mazda3-2014' }
     ],
     'Jeep': [
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
@@ -3340,6 +3812,9 @@ const VEHICLE_MENU = {
     ]
   },
   2015: {
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    ],
     'Jeep': [
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
@@ -3363,7 +3838,7 @@ const VEHICLE_MENU = {
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
     ],
     'Mazda': [
-      { model: 'Mazda3', trim: '', key: null },
+      { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
       { model: 'Mazda6', trim: '', key: null }
     ],
     'Chevrolet': [
