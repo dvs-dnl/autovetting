@@ -4150,6 +4150,414 @@ const CHECKLISTS = {
     ]
   },
 
+  'toyota-corolla-2014': {
+    year: 2014,
+    make: 'Toyota',
+    model: 'Corolla',
+    trim: 'L / LE / S / LE Eco (E170, 11th gen, 2014–2019)',
+    engine: '1.8L 2ZR-FE inline-4 (132hp), CVTi-S or 6-speed manual',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 11th-gen Corolla (2014–2019) is one of the most reliable used cars on the market — the 1.8L 2ZR-FE is proven and simple, and documented issues are mostly minor. The Takata airbag recall is critical to verify first; beyond that, check oil consumption at higher miles and CVT fluid history. Cars from salt-belt states need a close look at lower body rust. This is a strong buy at any mileage when properly maintained.",
+    stats: {
+      itemsToCheck: 16,
+      recalls: 5,
+      ownerComplaints: 843,
+      topComplaintArea: 'Air Bags / Powertrain'
+    },
+    sections: [
+      {
+        title: 'Safety Recall — Check First',
+        items: [
+          {
+            title: 'Takata airbag inflator recall (CRITICAL)',
+            risk: 'critical', riskLabel: 'Critical — Verify Before Purchase',
+            desc: 'The 2014–2017 Corolla is covered by the Takata airbag inflator recall — one of the largest automotive recalls in history. A defective inflator can rupture and send metal shrapnel into the cabin. Several fatalities have been linked to this defect and many vehicles remain unrepaired.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before you see the car.</strong> If the recall shows as open and unrepaired, the seller or dealer must arrange the free repair before sale. Do not purchase or drive the vehicle until this is confirmed repaired.',
+            cost: 'Free dealer repair — non-negotiable safety item',
+            source: 'NHTSA recall database (multiple campaigns by model year)'
+          }
+        ]
+      },
+      {
+        title: 'Engine & Oil',
+        items: [
+          {
+            title: 'Oil consumption — 2ZR-FE (high mileage)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 1.8L 2ZR-FE engine can develop notable oil consumption above 100,000 miles, especially on cars with stretched oil-change intervals. Toyota issued a Consumption Inspection Procedure and covered piston ring replacements on earlier models; the 2014+ version is improved but not immune.',
+            check: '<strong>Check the oil level cold on the dipstick — should be at or near full.</strong> If it reads below the midpoint mid-interval, the engine is consuming. Ask for oil-change records and look for intervals stretched past 5,000 miles.',
+            cost: '$0 if caught early / $1,500–$3,000 piston ring service if chronic',
+            source: 'Toyota TSB T-SB-0094-11 (oil consumption) + owner reports'
+          },
+          {
+            title: 'Water pump seep and coolant condition',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2ZR-FE water pump can develop slow seeps at 80,000–120,000 miles. Coolant that looks rust-colored or has never been changed accelerates pump and seal wear.',
+            check: '<strong>Open the coolant reservoir — should be pink/orange Toyota Super Long Life with no rust flakes.</strong> Look at the water pump area (passenger side, low on the engine) for weeping residue or dried coolant stains.',
+            cost: '$400–$700 water pump + coolant flush',
+            source: 'Toyota 2ZR-FE maintenance pattern'
+          },
+          {
+            title: 'Timing chain noise (cold start)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 2ZR-FE uses a timing chain — no belt service needed. Chain stretch and tensioner wear are uncommon before 150,000 miles when oil is changed regularly, but high-mileage cars with a dirty oil history deserve a listen.',
+            check: '<strong>Cold-start and listen for 2–3 seconds before oil pressure builds.</strong> A brief rattle that vanishes immediately is normal; a sustained tick or rattle past 5 seconds is a warning sign.',
+            cost: '$800–$1,500 timing chain + tensioner service (uncommon)',
+            source: 'Toyota 2ZR-FE engine documentation'
+          }
+        ]
+      },
+      {
+        title: 'Transmission',
+        items: [
+          {
+            title: 'CVTi-S shudder and fluid condition',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The CVTi-S automatic (most Corolla trims) can develop low-speed shudder if the fluid has never been changed. Toyota\'s interval is 60,000 miles; many owners skip it. Toyota-spec WS transmission fluid only — generic fluid causes shudder.',
+            check: '<strong>Drive at 20–35 mph on light throttle, then briefly release and re-apply.</strong> A vibration or judder during that transition indicates CVT fluid degradation. Ask for fluid change history.',
+            cost: '$150–$250 fluid service / $2,500–$4,500 CVT replacement if severely neglected',
+            source: 'Toyota CVT service documentation + owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Body',
+        items: [
+          {
+            title: 'Rocker panel and wheel well rust (salt-belt)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Salt-belt Corollas (Midwest, Northeast, Canada) are prone to rust on the lower rocker panels, inside the rear wheel arches, and along the bottom edge of the doors. Surface rust is cosmetic; bubbling or perforated metal is structural.',
+            check: '<strong>Crouch at each corner and inspect the rocker panels end-to-end.</strong> Press on the metal — solid is good, soft or crinkly = rot underneath. Check inside the rear wheel arches above the bumper seam.',
+            cost: '$300–$1,500 cosmetic / $1,500–$4,000 if structural rockers are affected',
+            source: 'Salt-belt Corolla owner documentation'
+          },
+          {
+            title: 'Paint chipping — hood leading edge and front bumper',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: '2014–2016 Corolla factory clear coat is thin by class standards. Rock chips on the leading edge of the hood and front bumper are nearly universal on cars above 60,000 highway miles.',
+            check: '<strong>Inspect the hood leading edge and front bumper in direct sunlight.</strong> Light chips are cosmetic; look for chips that have rusted (orange halo around the chip) — those need touch-up before the rust spreads.',
+            cost: '$50–$200 touch-up / $600–$1,200 front-end respray if severe',
+            source: 'Corolla owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Electrical & Interior',
+        items: [
+          {
+            title: 'Backup camera wiring harness (trunk hinge)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The backup camera wiring harness runs through the trunk lid hinge area and can develop an intermittent short from repeated flexion — most common after 80,000 miles.',
+            check: '<strong>Put the car in Reverse and verify the camera image appears immediately and holds steady.</strong> If the image flickers or cuts out, gently flex the trunk lid — flickering with movement confirms a harness short.',
+            cost: '$100–$300 harness repair / $250–$500 camera replacement',
+            source: 'Toyota Corolla owner reports'
+          },
+          {
+            title: 'Entune infotainment — touchscreen responsiveness',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Early Entune units (2014–2016) can develop sluggish touch response or Bluetooth connectivity issues. Not a safety item, but a daily nuisance.',
+            check: '<strong>Test every function: FM/AM, Bluetooth audio, phone call, navigation if equipped.</strong> A unit that takes more than 2 seconds to respond to a tap or drops Bluetooth mid-song may need a software update or head-unit replacement.',
+            cost: '$0 for a software update / $400–$900 head-unit replacement',
+            source: 'Toyota Entune documented issues'
+          },
+          {
+            title: 'A/C performance (high-mileage, hot-climate cars)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'A/C compressor clutch wear and refrigerant loss are reported across the 11th-gen at 100,000+ miles, especially in cars that run A/C year-round in hot climates.',
+            check: '<strong>Run A/C at max on a warm day — should blow near-freezing air within 60 seconds at idle.</strong> Warm air or a chattering compressor clutch noise on engagement = service needed.',
+            cost: '$150 recharge / $800–$1,500 compressor replacement',
+            source: 'Corolla owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Brakes & Suspension',
+        items: [
+          {
+            title: 'Front brake wear (city-use cars)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The Corolla\'s front brakes are properly sized for the car\'s weight, but city-driven cars can wear fronts by 40,000–50,000 miles of heavy stop-and-go use.',
+            check: '<strong>Listen for squealing or grinding and ask when pads were last replaced.</strong> If no records and mileage exceeds 50,000 since last service, budget for front pads and rotor inspection.',
+            cost: '$150–$300 front pads / $300–$500 pads + rotors',
+            source: 'Toyota brake service intervals'
+          },
+          {
+            title: 'Strut bearing click on low-speed turns',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Front strut top mounts (strut bearings) wear on 11th-gen Corollas and produce a clicking or creaking sound when turning the wheel at low speed — often worse in cold weather.',
+            check: '<strong>At a complete stop, turn the steering wheel slowly lock-to-lock.</strong> A clicking or grinding felt through the steering column = strut bearing wear. Also listen for groaning over speed bumps.',
+            cost: '$200–$450 per side (strut + bearing assembly)',
+            source: 'Toyota Corolla suspension owner reports'
+          }
+        ]
+      }
+    ]
+  },
+
+  'nissan-altima-2013': {
+    year: 2013,
+    make: 'Nissan',
+    model: 'Altima',
+    trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen, 2013–2018)',
+    engine: '2.5L QR25DE inline-4 (182hp) or 3.5L VQ35DE V6 (270hp)',
+    overallRisk: 'high',
+    overallRiskLabel: 'High Attention',
+    summary: "The 5th-gen Altima (2013–2018) is the highest-risk car in its class for used buyers. The Jatco CVT is the defining problem: it fails at a statistically alarming rate between 70,000–120,000 miles, and replacement costs $3,500–$5,000. Nissan extended the CVT warranty to 84 months/84,000 miles on affected models under regulatory pressure — confirm warranty status before buying. The QR25DE 4-cylinder also burns oil and has a known timing chain tensioner issue. Buy only with documented CVT fluid history, verified warranty transfer, and a pre-purchase inspection by a Nissan-specialist shop.",
+    stats: {
+      itemsToCheck: 18,
+      recalls: 6,
+      ownerComplaints: 2841,
+      topComplaintArea: 'Power Train / CVT Transmission'
+    },
+    sections: [
+      {
+        title: 'CVT Transmission — Primary Risk',
+        items: [
+          {
+            title: 'Jatco CVT shudder, hesitation, and failure (CRITICAL)',
+            risk: 'critical', riskLabel: 'Critical — Primary Risk',
+            desc: 'The Jatco CVT (JF015E on 4-cyl, JF018E on V6) used in the 2013–2018 Altima is the most significant defect on this car. NHTSA received over 2,000 complaints specifically about CVT shudder, sudden hesitation at highway speed, and outright failure in the 70,000–120,000 mile range. Nissan extended the powertrain warranty for CVT issues to 84 months/84,000 miles on certain model years after regulatory pressure. A failed CVT costs $3,500–$5,000 to replace.',
+            check: '<strong>Before the test drive: enter the VIN at nhtsa.gov to check for open recalls and confirm warranty history.</strong> During the drive: accelerate briskly from 20 to 60 mph — the CVT should pull smoothly and continuously; any shudder, belt-slip sensation, or power interruption = CVT wear. Also hold 45 mph at light throttle for 30 seconds and feel for vibration through the seat.',
+            cost: '$3,500–$5,000 CVT replacement (remanufactured unit)',
+            source: 'NHTSA: 2,000+ CVT complaints + Nissan extended warranty campaign'
+          },
+          {
+            title: 'CVT fluid change history (non-negotiable check)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Nissan spec\'s a 60,000-mile CVT fluid service, but many dealerships told buyers "lifetime fluid" — that guidance has been widely acknowledged as wrong. Degraded fluid dramatically accelerates CVT wear. This is the most important maintenance record to verify.',
+            check: '<strong>Ask for documented CVT fluid change records and confirm Nissan NS-3 fluid was used.</strong> NS-3 is red; dark brown fluid has never been changed. If history is unknown, factor $150–$200 for an immediate fluid service into your offer.',
+            cost: '$150–$200 fluid service (do immediately if unknown) / $3,500–$5,000 CVT replacement',
+            source: 'Nissan CVT service documentation'
+          },
+          {
+            title: 'V6 3.5L CVT — lower risk but same inspection applies',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The V6 Altima uses the larger JF018E CVT, which has a somewhat better failure rate than the 4-cylinder\'s JF015E. Still warrants the same inspection — shudder and hesitation are the early warnings.',
+            check: '<strong>Same test as the 4-cylinder CVT.</strong> Smooth continuous pull; no shudder at any speed; no surging at highway cruise.',
+            cost: '$3,500–$5,500 if replacement needed',
+            source: 'Nissan V6 CVT owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Engine — QR25DE 2.5L',
+        items: [
+          {
+            title: 'Timing chain tensioner rattle',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The QR25DE uses a timing chain, but the chain tensioner is known to weaken prematurely — producing a rattle on cold startup that fades once oil pressure builds. A failing tensioner can allow chain skip and catastrophic engine damage if ignored.',
+            check: '<strong>Cold-start the engine first thing.</strong> Listen for any tick or rattle in the first 3–5 seconds. A rattle that fades in under 2 seconds is borderline; a rattle lasting more than 5 seconds or reappearing at warm idle = tensioner service needed.',
+            cost: '$600–$1,200 timing chain + tensioner service',
+            source: 'Nissan QR25DE timing chain pattern + NHTSA reports'
+          },
+          {
+            title: 'Oil consumption — QR25DE',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The QR25DE is documented to consume oil — often 1 quart per 1,500–3,000 miles on higher-mileage engines or those run on extended oil change intervals. Nissan\'s own procedure defined abnormal consumption as over 1 qt/1,200 miles, but many owners experience worse.',
+            check: '<strong>Pull the dipstick — engine should be within ½ quart of full at any point in the interval.</strong> If the seller doesn\'t know when oil was last changed and the dipstick reads low, walk away or budget for a consumption test. Milky oil = head gasket issue (immediate walk-away).',
+            cost: '$0 if mild / $2,500–$5,000 piston ring or head gasket service',
+            source: 'Nissan QR25DE documented consumption pattern'
+          }
+        ]
+      },
+      {
+        title: 'Water Intrusion',
+        items: [
+          {
+            title: 'Sunroof drain tube clogs — cabin flooding (sunroof-equipped)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Altimas with a sunroof develop clogged drain tubes at the front corners of the sunroof frame. The drains run down through the A-pillar and exit at the front bumper or rocker. When clogged, water backs up and floods the cabin, soaking carpet and potentially destroying interior electronics.',
+            check: '<strong>Press firmly on both front floor mats — damp carpet is a major red flag.</strong> Inspect the headliner at the sunroof perimeter for watermarks. With the sunroof open, slowly pour a cup of water into each front corner drain hole and watch for it to exit at the rocker or bumper within 15 seconds.',
+            cost: '$0 proactive flush / $500–$2,000 mold remediation + electronics if flooded',
+            source: 'Nissan Altima sunroof drain clog pattern (widespread)'
+          },
+          {
+            title: 'Trunk seal separation — rear water intrusion',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The trunk lid seal on the L33 Altima can harden and separate at the lower corners, allowing water to enter the trunk and wet the spare tire well. Long-term intrusion rusts the spare hardware and trunk floor pan.',
+            check: '<strong>Open the trunk and press on the spare tire well carpet — should be bone dry.</strong> Inspect the entire trunk seal for brittleness or gaps — a $30 part and 10-minute fix if caught early.',
+            cost: '$30–$60 trunk seal / $200–$800 if spare well is rusted through',
+            source: 'Nissan Altima L33 owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Steering & HVAC',
+        items: [
+          {
+            title: 'Steering intermediate shaft click',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'A clicking or popping sound when turning the wheel — especially at low speed — is a known Altima trait caused by wear in the intermediate steering shaft slip joint. Not an immediate safety issue, but annoying and progressive.',
+            check: '<strong>In a parking lot, turn the wheel fully lock-to-lock slowly while rolling at 1–2 mph.</strong> A single occasional clunk is borderline normal; repeating clicks or pops on every turn = intermediate shaft service needed.',
+            cost: '$300–$600 intermediate shaft replacement (DIY-accessible)',
+            source: 'Nissan Altima steering pattern (widely reported)'
+          },
+          {
+            title: 'HVAC blend door actuator failure',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The blend door actuator (controls temperature transition from cold to hot) is a plastic gear assembly known to fail in the L33 — producing a clicking from behind the dashboard when temperature is adjusted, then eventually refusing to change temperature.',
+            check: '<strong>Adjust the temperature from max cold to max hot while the fan runs.</strong> Listen for clicking from behind the center dash area. No click = good. Clicking = actuator gear is stripped and will fail soon.',
+            cost: '$50–$150 part (DIY: 1–3 hours behind the glove box) / $200–$400 at a shop',
+            source: 'Nissan Altima blend door actuator pattern'
+          }
+        ]
+      },
+      {
+        title: 'Suspension & Brakes',
+        items: [
+          {
+            title: 'Rear lateral links — rust (salt-belt)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Rear suspension lateral links on salt-belt Altimas (Midwest, Northeast, Canada) develop serious corrosion — not just surface rust but scaling that can cause bolts to seize or links to crack. A safety issue on high-mileage rust-belt cars.',
+            check: '<strong>On a lift, visually inspect the rear lateral arms and mounting hardware.</strong> Surface rust is cosmetic; scaling or flaking rust on the arms or bolt threads = replace before highway driving.',
+            cost: '$300–$700 rear lateral links + hardware',
+            source: 'Nissan Altima salt-belt rear suspension pattern'
+          },
+          {
+            title: 'Brake rotor pulsation (front)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Front brake rotor warping is common on the L33 Altima from aggressive driving, occasional trailer use, or improper pad break-in.',
+            check: '<strong>Brake firmly from 50 mph.</strong> The pedal should be firm and consistent with zero vibration. A pulsating pedal or steering wheel shimmy during braking = warped front rotors.',
+            cost: '$200–$400 front pads + rotors',
+            source: 'Nissan Altima brake rotor complaint pattern'
+          }
+        ]
+      }
+    ]
+  },
+
+  'honda-pilot-2016': {
+    year: 2016,
+    make: 'Honda',
+    model: 'Pilot',
+    trim: 'LX / EX / EX-L / Touring / Elite (3rd gen, 2016–2022)',
+    engine: '3.5L V6 i-VTEC Earth Dreams (280hp), 6-speed or 9-speed automatic',
+    overallRisk: 'medium',
+    overallRiskLabel: 'Medium Attention',
+    summary: "The 3rd-gen Pilot (2016–2022) is a capable three-row SUV that arrived with two meaningful first-generation problems. The ZF 9-speed automatic (2016–2017) had calibration issues causing harsh, hunting shifts — software updates improved but did not fully solve this. The 3.5L V6 VCM system also destroys the right-rear motor mount prematurely, the same issue seen on Accord V6s. 2018 and newer are better-sorted with revised 9-speed tuning from the factory. Buy a well-maintained 2018+ if the budget allows; if buying 2016–2017, confirm the 9-speed software updates have been applied and check the motor mounts carefully.",
+    stats: {
+      itemsToCheck: 17,
+      recalls: 4,
+      ownerComplaints: 1102,
+      topComplaintArea: 'Power Train / Transmission'
+    },
+    sections: [
+      {
+        title: 'Transmission',
+        items: [
+          {
+            title: '9-speed automatic — hunting and harsh shifts (2016–2017)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The first two years of the 3rd-gen Pilot used a ZF 9-speed automatic that was poorly calibrated at launch. Owners reported harsh downshifts, gear hunting on gentle grades, jerky stop-and-go behavior, and delayed throttle response. Honda issued multiple software updates. 2018+ Pilots received revised factory calibration and are meaningfully smoother.',
+            check: '<strong>Test drive at highway speeds (55–70 mph) on a gently rolling road — watch for unprompted downshifts on slight grades.</strong> Also test in light city traffic: gradual acceleration from 5 to 30 mph should feel smooth. If buying a 2016–2017, ask a Honda dealer to confirm all 9-speed software updates are applied via VIN check.',
+            cost: '$0 if software update resolves / $3,000–$5,000 valve body or transmission rebuild if mechanical damage',
+            source: 'Honda TSB (multiple ZF 9HP calibration campaigns) + NHTSA complaints'
+          },
+          {
+            title: '6-speed automatic (LX trim) — reliable baseline',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'LX trim Pilots used a conventional Honda 6-speed automatic that is far more predictable than the 9-speed. If the 9-speed\'s reputation is a concern, LX is the lowest-risk transmission choice.',
+            check: '<strong>Standard test: drive through all gears smoothly.</strong> No hesitation, no unexpected downshifts, clean engagement into Reverse. Verify ATF-DW1 Honda fluid has been serviced every 30,000 miles.',
+            cost: '$150 fluid service / $2,500–$4,000 rebuild if neglected',
+            source: 'Honda Pilot 3rd gen transmission documentation'
+          }
+        ]
+      },
+      {
+        title: 'VCM & Engine Mounts',
+        items: [
+          {
+            title: 'VCM right-rear motor mount wear',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 3.5L V6 uses Honda\'s Variable Cylinder Management (VCM), switching between 3, 4, and 6 cylinders based on load. The cylinder transition vibration prematurely destroys the right-rear motor mount — typically by 80,000–100,000 miles. This is the same issue as on the Accord V6, but on a heavier vehicle with more total engine mass.',
+            check: '<strong>With the engine running in Drive, foot on brake, hood open: watch the engine for visible movement at idle.</strong> Minor vibration is normal; significant rocking or a visible gap in the right-rear mount = replacement needed. A mechanic on a lift can compress the mount by hand — it should resist firmly.',
+            cost: '$400–$700 right-rear mount / $1,200+ if all mounts are affected',
+            source: 'Honda VCM motor mount pattern (shared with Accord V6)'
+          },
+          {
+            title: 'VCM deactivation device (positive modification)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Many Pilot owners install aftermarket "VCM Muzzler" or similar devices to prevent the V6 from dropping to 3-cylinder mode, protecting the motor mounts. This is widely regarded as a smart preventive modification.',
+            check: '<strong>Ask if a VCM Muzzler or similar has been installed.</strong> If yes — this is a positive sign of a proactive owner. If not, factor future motor mount wear into your cost estimate.',
+            cost: '$50–$100 device — preventive investment',
+            source: 'Honda VCM Muzzler documentation'
+          }
+        ]
+      },
+      {
+        title: 'Safety Systems',
+        items: [
+          {
+            title: 'Honda Sensing false-positive braking (2016–2018)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Honda Sensing (collision mitigation, lane keeping, adaptive cruise) became standard on most 3rd-gen Pilot trims. Early units had false-positive CMBS events — unexpected braking on highway with no actual hazard. Honda issued radar and camera software updates.',
+            check: '<strong>During a highway test drive, verify Honda Sensing does not activate unexpectedly on a clear road.</strong> Ask if Honda Sensing software updates have been applied (dealer VIN check is free).',
+            cost: '$0 software update / $1,500–$3,000 camera or radar module if replacement needed',
+            source: 'Honda TSB (Honda Sensing calibration, multiple years)'
+          },
+          {
+            title: 'Open recall check — airbag and restraint campaigns',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 3rd-gen Pilot has had recall campaigns related to airbag sensing and seat belt pretensioners. Not all vehicles have been repaired.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before seeing the vehicle.</strong> Any open airbag or restraint recall = require dealer repair before purchase.',
+            cost: 'Free dealer repair',
+            source: 'NHTSA recall database'
+          }
+        ]
+      },
+      {
+        title: 'Interior & Infotainment',
+        items: [
+          {
+            title: 'CarPlay / Android Auto — 2019+ only',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 3rd-gen Pilot was sold without CarPlay / Android Auto from 2016–2018. Honda released a dealer retrofit kit for some 2018 models, but earlier cars require aftermarket head units if wireless projection is a priority. Not a defect — just a generational feature gap.',
+            check: '<strong>If CarPlay matters to you, confirm model year and trim support before the test drive.</strong> 2019+ EX and above have it standard. 2016–2018 require the Honda retrofit or aftermarket.',
+            cost: '$0 awareness item / $200–$800 Honda retrofit or aftermarket unit',
+            source: 'Honda Pilot trim/feature history'
+          },
+          {
+            title: 'Second-row captain\'s seat walk-in mechanism (Touring / Elite)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Power second-row captain\'s chairs (Elite and some Touring trims) have a walk-in mechanism that can bind, resist, or fail to return to position. Motors and track mechanisms are complex and expensive to repair.',
+            check: '<strong>Fully cycle both second-row captain\'s chairs through their walk-in positions.</strong> They should move smoothly forward, lock in the walk-in position, and return fully to the seated position with a firm click. Grinding, resistance, or incomplete return = mechanism service needed.',
+            cost: '$300–$600 track/mechanism repair per side',
+            source: 'Honda Pilot 3rd gen owner reports (Touring/Elite)'
+          },
+          {
+            title: 'Infotainment screen responsiveness (2016–2018)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2016–2018 Pilot infotainment abandons physical controls for a touch-heavy interface — the screen hardware is generally reliable, but early units did see responsiveness degradation.',
+            check: '<strong>Tap through every screen menu and test voice command activation.</strong> Response should be under 1 second per touch. Phantom taps or frozen screens = head unit issue.',
+            cost: '$400–$1,200 head unit replacement if screen fails',
+            source: 'Honda Pilot 3rd gen infotainment reports'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Mechanical',
+        items: [
+          {
+            title: 'Power tailgate motor and latch (EX and above)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The power tailgate on EX and above can slow down or stall from a weak motor or misadjusted control arms — especially on cold-weather cars. The latch mechanism can also fail to fully engage.',
+            check: '<strong>Open and close the power tailgate at least three times.</strong> It should travel smoothly in both directions and latch with a single firm click. Hesitation mid-travel or failure to fully close = motor or latch service.',
+            cost: '$150–$400 motor or latch adjustment / $600–$900 full motor replacement',
+            source: 'Honda Pilot owner reports'
+          },
+          {
+            title: 'Undercarriage corrosion — brake lines and heat shields (salt-belt)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The Pilot uses a unibody construction — resistant to the severe frame rust that affects truck-based SUVs. However, salt-belt cars can develop corrosion on brake lines, exhaust hangers, and heat shields.',
+            check: '<strong>On a lift, inspect the undercarriage for flaking or pitted corrosion on brake lines and fuel lines.</strong> Surface rust on heat shields is cosmetic; any brake line that has pitted into the metal = immediate replacement before driving.',
+            cost: '$0 cosmetic / $300–$1,500 if brake lines need replacement',
+            source: 'Honda Pilot salt-belt inspection pattern'
+          }
+        ]
+      }
+    ]
+  },
 
 };
 
@@ -4159,9 +4567,29 @@ const CHECKLISTS = {
 const VEHICLE_MENU = {
   // [year]: { [make]: [ {model, trim, key} ] }
   // key matches CHECKLISTS keys for available content; absent = coming soon
+  2022: {
+    'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null }
+    ],
+    'Honda': [
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+    ]
+  },
+  2021: {
+    'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null }
+    ],
+    'Honda': [
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+    ]
+  },
   2020: {
     'Toyota': [
-      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null }
+    ],
+    'Honda': [
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
@@ -4169,7 +4597,11 @@ const VEHICLE_MENU = {
   },
   2019: {
     'Toyota': [
-      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' }
+      { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' }
+    ],
+    'Honda': [
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
@@ -4178,7 +4610,14 @@ const VEHICLE_MENU = {
   2018: {
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Honda': [
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' }
@@ -4191,11 +4630,17 @@ const VEHICLE_MENU = {
     ]
   },
   2017: {
-    'Ford': [
-      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+    'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
+      { model: 'Tacoma', trim: '3rd gen', key: null },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Honda': [
-      { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' }
+      { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' },
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' }
@@ -4203,9 +4648,8 @@ const VEHICLE_MENU = {
     'Jeep': [
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
-    'Toyota': [
-      { model: 'Tacoma', trim: '3rd gen', key: null },
-      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    'Ford': [
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
@@ -4215,9 +4659,18 @@ const VEHICLE_MENU = {
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
     ],
+    'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
+      { model: '4Runner', trim: 'SR5 / Trail / Limited', key: null },
+      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
     'Honda': [
       { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' },
-      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
+      { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' },
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Subaru': [
       { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' }
@@ -4227,10 +4680,6 @@ const VEHICLE_MENU = {
     ],
     'Jeep': [
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
-    ],
-    'Toyota': [
-      { model: '4Runner', trim: 'SR5 / Trail / Limited', key: null },
-      { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
@@ -4248,10 +4697,14 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: '4th gen FB25', key: null }
     ],
     'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
     ],
     'Honda': [
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
@@ -4270,8 +4723,12 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Toyota': [
+      { model: 'Corolla', trim: 'L / LE / S / LE Eco (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
@@ -4297,6 +4754,9 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' }
+    ],
+    'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Subaru': [
       { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' }
