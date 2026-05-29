@@ -118,16 +118,16 @@
   }
 
   /* ============================================================
-     THE BRIEF (hero)
+     THE PINPOINT (hero)
      ============================================================ */
-  .brief {
+  .pinpoint-result {
     background: var(--navy);
     color: var(--white);
     padding: 80px 24px 120px;
     position: relative;
     overflow: hidden;
   }
-  .brief::after {
+  .pinpoint-result::after {
     content: '';
     position: absolute;
     top: -20%;
@@ -137,7 +137,7 @@
     background: radial-gradient(ellipse at center, rgba(59,130,246,0.18) 0%, transparent 60%);
     pointer-events: none;
   }
-  .brief::before {
+  .pinpoint-result::before {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -147,13 +147,13 @@
     background: linear-gradient(180deg, transparent, var(--slate-white));
     pointer-events: none;
   }
-  .brief-inner {
+  .pinpoint-result-inner {
     max-width: var(--container);
     margin: 0 auto;
     position: relative;
     z-index: 1;
   }
-  .brief-eyebrow {
+  .pinpoint-result-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -165,13 +165,13 @@
     text-transform: uppercase;
     margin-bottom: 24px;
   }
-  .brief-eyebrow::before {
+  .pinpoint-result-eyebrow::before {
     content: '';
     width: 24px;
     height: 1.5px;
     background: var(--electric);
   }
-  .brief-headline {
+  .pinpoint-result-headline {
     font-size: clamp(38px, 6vw, 64px);
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -179,23 +179,23 @@
     margin-bottom: 32px;
     max-width: 920px;
   }
-  .brief-headline em {
+  .pinpoint-result-headline em {
     font-style: normal;
     color: var(--electric);
     font-weight: 800;
   }
-  .brief-sentence {
+  .pinpoint-result-sentence {
     font-size: 21px;
     line-height: 1.55;
     color: var(--slate-300);
     max-width: 820px;
     margin-bottom: 36px;
   }
-  .brief-sentence strong {
+  .pinpoint-result-sentence strong {
     color: var(--white);
     font-weight: 700;
   }
-  .brief-control {
+  .pinpoint-result-control {
     display: inline-flex;
     align-items: baseline;
     gap: 6px;
@@ -210,23 +210,23 @@
     font-family: inherit;
     line-height: 1.2;
   }
-  .brief-control::after {
+  .pinpoint-result-control::after {
     content: '▾';
     font-size: 12px;
     color: var(--slate-400);
     margin-left: 2px;
   }
-  .brief-control:hover {
+  .pinpoint-result-control:hover {
     background: rgba(59,130,246,0.18);
     border-color: var(--electric);
   }
-  .brief-control.active {
+  .pinpoint-result-control.active {
     background: var(--electric);
     border-color: var(--electric);
     color: var(--white);
   }
-  .brief-control.active::after { color: var(--white); }
-  .brief-answer {
+  .pinpoint-result-control.active::after { color: var(--white); }
+  .pinpoint-result-answer {
     display: inline-block;
     background: var(--electric);
     color: var(--white);
@@ -235,13 +235,13 @@
     font-weight: 700;
     box-shadow: 0 4px 14px rgba(59,130,246,0.4);
   }
-  .brief-actions {
+  .pinpoint-result-actions {
     display: flex;
     gap: 14px;
     align-items: center;
     flex-wrap: wrap;
   }
-  .brief-btn {
+  .pinpoint-result-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -253,8 +253,8 @@
     border-radius: var(--radius);
     transition: transform 0.12s;
   }
-  .brief-btn:hover { transform: translateY(-1px); text-decoration: none; color: var(--navy); }
-  .brief-meta {
+  .pinpoint-result-btn:hover { transform: translateY(-1px); text-decoration: none; color: var(--navy); }
+  .pinpoint-result-meta {
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--slate-400);
@@ -937,10 +937,10 @@
      Responsive
      ============================================================ */
   @media (max-width: 920px) {
-    .brief { padding: 56px 24px 100px; }
-    .brief-headline { font-size: 36px; }
-    .brief-sentence { font-size: 18px; }
-    .brief-control { font-size: 17px; }
+    .pinpoint-result { padding: 56px 24px 100px; }
+    .pinpoint-result-headline { font-size: 36px; }
+    .pinpoint-result-sentence { font-size: 18px; }
+    .pinpoint-result-control { font-size: 17px; }
     .pick-1-body { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
     .pick-1-title { font-size: 32px; }
     .pick-1-tagline { font-size: 18px; }
@@ -972,26 +972,26 @@
 </header>
 
 <!-- ============================================================
-     THE BRIEF
+     THE PINPOINT
      ============================================================ -->
-<section class="brief">
-  <div class="brief-inner">
-    <p class="brief-eyebrow">The brief &middot; Step 01 &middot; Pinpoint</p>
-    <h1 class="brief-headline">The five used cars worth <em>your</em> shortlist.</h1>
+<section class="pinpoint-result">
+  <div class="pinpoint-result-inner">
+    <p class="pinpoint-result-eyebrow">Your Pinpoint &middot; Step 01</p>
+    <h1 class="pinpoint-result-headline">The five used cars worth <em>your</em> shortlist.</h1>
 
-    <p class="brief-sentence">
+    <p class="pinpoint-result-sentence">
       For
-      <button class="brief-control active">$7,500</button>,
+      <button class="pinpoint-result-control active">$7,500</button>,
       if you need
-      <button class="brief-control active">a family-friendly daily driver</button>
+      <button class="pinpoint-result-control active">a family-friendly daily driver</button>
       and you want it to last
-      <button class="brief-control active">250,000 miles</button>,
-      we'd buy a <span class="brief-answer">2014 Acura TSX</span>.
+      <button class="pinpoint-result-control active">250,000 miles</button>,
+      we'd buy a <span class="pinpoint-result-answer">2014 Acura TSX</span>.
     </p>
 
-    <div class="brief-actions">
-      <a class="brief-btn" href="#pick-1">Read the brief <span>&rarr;</span></a>
-      <span class="brief-meta">56 vehicles researched &middot; Updated May 2026</span>
+    <div class="pinpoint-result-actions">
+      <a class="pinpoint-result-btn" href="#pick-1">Read your Pinpoint <span>&rarr;</span></a>
+      <span class="pinpoint-result-meta">56 vehicles researched &middot; Updated May 2026</span>
     </div>
   </div>
 </section>
@@ -1152,6 +1152,41 @@
       </div>
       <span class="runner-open">Open &darr;</span>
     </article>
+
+    <article class="runner">
+      <div class="runner-head">
+        <span class="runner-rank">No. 06</span>
+        <span class="runner-tier strong">Strong</span>
+      </div>
+      <h3 class="runner-title">Subaru Forester 2.5i Premium</h3>
+      <p class="runner-years">2014&ndash;2017 &middot; AWD &middot; 2.5L FB25 boxer-4</p>
+      <p class="runner-tagline">AWD standard on a CR-V budget. The pick when you actually need all-wheel drive every winter, not just on paper.</p>
+      <div class="runner-stats">
+        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$8,500</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">90&ndash;130k</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">26 cmb</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">220k</span></div>
+      </div>
+      <span class="runner-open">Open &darr;</span>
+    </article>
+
+    <article class="runner">
+      <div class="runner-head">
+        <span class="runner-rank">No. 07</span>
+        <span class="runner-tier strong">Strong</span>
+      </div>
+      <h3 class="runner-title">Mazda6 Sport/Touring</h3>
+      <p class="runner-years">2014&ndash;2015 &middot; FWD &middot; 2.5L Skyactiv-G I4</p>
+      <p class="runner-tagline">Driver-focused midsize, 240k-mile Skyactiv-G. Sportier than the Accord, less premium than the TSX, sometimes cheaper than both.</p>
+      <div class="runner-stats">
+        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$7,800</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">100&ndash;140k</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">28 cmb</span></div>
+        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">240k</span></div>
+      </div>
+      <span class="runner-open">Open &darr;</span>
+    </article>
+
   </div>
 </section>
 
@@ -1161,7 +1196,7 @@
 <section class="sharpen">
   <div class="sharpen-inner">
     <div class="sharpen-head">
-      <span class="sharpen-eyebrow">Sharpen the brief</span>
+      <span class="sharpen-eyebrow">Sharpen your Pinpoint</span>
       <span class="sharpen-step">Adjust to your situation</span>
     </div>
     <h2>Different budget? Different needs? Re-aim.</h2>
@@ -1225,7 +1260,7 @@
 <section class="section">
   <p class="section-eyebrow">The wider field</p>
   <h2 class="section-head">The rest of the 56 picks.</h2>
-  <p class="section-sub">Filtered to your sharpened brief. Click any row to open the full editorial entry.</p>
+  <p class="section-sub">Filtered to your Pinpoint. Click any row to open the full editorial entry.</p>
 
   <div class="wider-field">
     <table class="wider-table">
@@ -1307,7 +1342,7 @@
       </tbody>
     </table>
     <div class="wider-foot">
-      Showing <strong>7 of 12</strong> matches in your brief. <a href="#">Show all 12 in this band &rarr;</a> &nbsp;&middot;&nbsp; <a href="#">Browse all 56 &rarr;</a>
+      Showing <strong>7 of 12</strong> matches in your Pinpoint. <a href="#">Show all 12 in this band &rarr;</a> &nbsp;&middot;&nbsp; <a href="#">Browse all 56 &rarr;</a>
     </div>
   </div>
 </section>
