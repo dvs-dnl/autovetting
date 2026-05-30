@@ -587,183 +587,135 @@
   }
 
   /* ============================================================
-     Pinpoint brief showcase (auto-playing animated sentence)
+     Pinpoint showcase (auto-playing animated sentence)
      ============================================================ */
-  .pp-showcase-section {
-    background: var(--slate-white);
-    padding: 0 0 72px;
-  }
-  .pp-showcase {
-    margin: 0 auto;
-    max-width: 1100px;
+  /* ============================================================
+     5. PP-BRIEF — slot-wheel auto-cycling Pinpoint module
+     ============================================================ */
+  .pp-brief-section {
+    max-width: 1180px;
+    margin: 56px auto 0;
     padding: 0 24px;
   }
-  .pp-showcase-card {
-    position: relative;
+  .pp-brief {
     background: linear-gradient(165deg, #0F172A 0%, #1E3A5F 100%);
     color: #fff;
     border-radius: 24px;
-    padding: 48px 48px 44px;
+    padding: 60px 56px 56px;
+    position: relative;
     overflow: hidden;
     box-shadow: 0 18px 44px rgba(15,23,42,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
   }
-  .pp-showcase-card::before {
+  .pp-brief::before {
     content: '';
-    position: absolute;
-    top: -30%;
-    right: -10%;
-    width: 55%;
-    height: 80%;
+    position: absolute; top: -30%; right: -10%;
+    width: 55%; height: 80%;
     background: radial-gradient(circle at top right, rgba(59,130,246,0.22), transparent 60%);
     pointer-events: none;
   }
-  .pp-showcase-eyebrow {
-    position: relative;
-    z-index: 1;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #3B82F6;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 22px;
+  .pp-brief-title {
+    font-size: clamp(28px, 3.6vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
   }
-  .pp-showcase-eyebrow::before {
-    content: '';
-    width: 22px;
-    height: 1.5px;
-    background: #3B82F6;
+  .pp-brief-lines {
+    display: flex; flex-direction: column;
+    gap: 14px;
+    position: relative; z-index: 1;
+    max-width: 920px;
   }
-  .pp-showcase-eyebrow .pp-live {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #3B82F6;
-    box-shadow: 0 0 0 0 rgba(59,130,246,0.5);
-    animation: ppPulse 1.6s ease-out infinite;
-  }
-  @keyframes ppPulse {
-    0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.55); }
-    70% { box-shadow: 0 0 0 10px rgba(59,130,246,0); }
-    100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
-  }
-  .pp-showcase-sentence {
-    position: relative;
-    z-index: 1;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.7;
-    letter-spacing: -0.015em;
-    color: #CBD5E1;
-    margin: 0;
-    min-height: 200px;
-    display: block;
-  }
-  .pp-showcase-sentence .static {
-    color: #CBD5E1;
+  .pp-brief-line {
+    font-size: clamp(20px, 2.6vw, 28px);
     font-weight: 500;
+    color: #CBD5E1;
+    display: flex; align-items: center; gap: 16px;
+    flex-wrap: wrap;
+    line-height: 1.4;
   }
-  .pp-reel {
-    position: relative;
+  .pp-brief-line .static { color: #CBD5E1; font-weight: 500; }
+  .pp-slot {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; justify-content: center;
     vertical-align: middle;
     overflow: hidden;
-    text-align: center;
-    height: 1.5em;
-    line-height: 1.2;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
     color: #fff;
     font-weight: 700;
-  }
-  .pp-reel-inner {
-    display: inline-block;
-    transition: transform 0.42s cubic-bezier(.5,0,.2,1), opacity 0.32s ease;
-    white-space: nowrap;
-  }
-  .pp-reel-inner.out-up { transform: translateY(-14px); opacity: 0; }
-  .pp-reel.money { color: #3B82F6; font-variant-numeric: tabular-nums; width: 130px; }
-  .pp-reel.miles { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; width: 130px; }
-  .pp-reel.use {
-    background: rgba(255,255,255,0.08);
-    color: #fff;
     border-radius: 100px;
-    border: 1px solid rgba(255,255,255,0.18);
-    height: 1.7em;
-    width: 300px;
-    padding: 0 14px;
+    height: 1.65em;
+    padding: 0 18px;
+    position: relative;
   }
-  .pp-reel.answer {
+  .pp-slot.type     { width: 320px; }
+  .pp-slot.money    { color: #3B82F6; font-variant-numeric: tabular-nums; width: 150px; padding: 0 14px; }
+  .pp-slot.priority { width: 260px; }
+  .pp-slot.answer {
     background: #3B82F6;
+    border-color: #3B82F6;
     color: #fff;
-    border-radius: 100px;
     box-shadow: 0 6px 18px rgba(59,130,246,0.35);
-    transition: background 0.3s, box-shadow 0.3s;
+    width: 440px;
     height: 1.7em;
-    width: 360px;
-    padding: 0 16px;
   }
-  .pp-reel.answer.flash {
+  .pp-slot.answer.flash {
     background: #2563EB;
     box-shadow: 0 0 0 4px rgba(59,130,246,0.25), 0 6px 18px rgba(59,130,246,0.45);
+    transition: background .35s ease, box-shadow .35s ease;
   }
-  .pp-showcase-foot {
-    position: relative;
-    z-index: 1;
-    margin-top: 32px;
-    display: flex;
+  .pp-reel {
+    display: flex; flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    gap: 16px;
+    will-change: transform;
+    transition: transform 0.55s cubic-bezier(.5,0,.2,1);
+  }
+  .pp-reel.snap { transition: none; }
+  .pp-cell {
+    height: 1.65em;
+    line-height: 1.65em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  .pp-slot.answer .pp-cell { height: 1.7em; line-height: 1.7em; }
+  .pp-brief-answer-line {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 28px;
     flex-wrap: wrap;
+    position: relative; z-index: 1;
   }
-  .pp-showcase-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    color: #0F172A;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 12px 22px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: transform 0.12s;
-  }
-  .pp-showcase-cta:hover { transform: translateY(-1px); text-decoration: none; color: #0F172A; }
-  .pp-section-intro {
-    max-width: 760px;
-    margin: 32px auto 0;
-    padding: 0 24px;
-    text-align: center;
-  }
-  .pp-section-intro h2 {
-    font-size: clamp(22px, 2.8vw, 30px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #64748B;
-    line-height: 1.2;
-    margin: 0 0 8px;
-  }
-  .pp-section-intro p {
-    font-size: 15px;
+  .pp-brief-answer-cue {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
     color: #94A3B8;
-    margin: 0;
   }
+  .pp-brief-foot {
+    margin-top: 40px;
+    display: flex; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .pp-brief-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #fff; color: #0F172A;
+    font-weight: 700; font-size: 14px;
+    padding: 12px 24px; border-radius: 100px;
+    text-decoration: none;
+    transition: transform .12s;
+  }
+  .pp-brief-cta:hover { transform: translateY(-1px); text-decoration: none; color: #0F172A; }
+  .pp-brief-cta::after { content: '→'; font-weight: 800; }
 
   @media (max-width: 720px) {
-    .pp-showcase-card { padding: 32px 22px 28px; }
-    .pp-showcase-sentence { font-size: 20px; line-height: 1.6; min-height: 240px; }
-    .pp-reel.use { width: 220px; }
-    .pp-reel.answer { width: 260px; }
-    .pp-reel.money, .pp-reel.miles { width: 110px; }
-    .vehicle-search-section { padding: 56px 16px 60px; }
-    .vs-filter-group { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .vs-filter-label { min-width: auto; }
-    .vs-grid { grid-template-columns: 1fr; }
-    .pp-showcase-section { padding: 0 0 56px; }
+    .pp-brief { padding: 36px 24px; }
+    .pp-brief-line { font-size: 18px; }
+    .pp-slot.type     { width: 220px; }
+    .pp-slot.priority { width: 200px; }
+    .pp-slot.money    { width: 120px; }
+    .pp-slot.answer   { width: 300px; }
   }
 </style>
 </head>
@@ -1033,34 +985,34 @@
 </section>
 
 <!-- ============================================================
-     5. PP-SHOWCASE — example recommendation, animated live brief
-        (placed after search so vehicle content follows filters)
+     5. PP-BRIEF — auto-cycling slot-wheel Pinpoint module
      ============================================================ -->
-<section class="pp-showcase-section">
-  <div class="pp-showcase">
-    <div class="pp-showcase-card">
-      <p class="pp-showcase-eyebrow"><span class="pp-live" aria-hidden="true"></span> Example brief &middot; Auto-cycling</p>
-      <p class="pp-showcase-sentence" id="pp-brief-sentence">
-        <span class="static">For</span>
-        <span class="pp-reel money" data-pp-reel="money"><span class="pp-reel-inner">$7,500</span></span><span class="static">,</span>
-        <span class="static">if you need</span>
-        <span class="pp-reel use" data-pp-reel="use"><span class="pp-reel-inner">a family daily</span></span>
-        <span class="static">and you want it to last</span>
-        <span class="pp-reel miles" data-pp-reel="miles"><span class="pp-reel-inner">250,000</span></span><span class="static"> miles,</span>
-        <span class="static">we'd buy a</span>
-        <span class="pp-reel answer" data-pp-reel="answer"><span class="pp-reel-inner">2014 Acura TSX</span></span><span class="static">.</span>
+<section class="pp-brief-section">
+  <div class="pp-brief">
+    <h2 class="pp-brief-title">Pinpoint the car you need.</h2>
+    <div class="pp-brief-lines">
+      <p class="pp-brief-line">
+        <span class="static">I'm looking for</span>
+        <span class="pp-slot type"><span class="pp-reel" data-pp-reel="type"></span></span>
       </p>
-      <div class="pp-showcase-foot">
-        <a class="pp-showcase-cta" href="/pinpoint/">Build your brief &rarr;</a>
-      </div>
+      <p class="pp-brief-line">
+        <span class="static">Under</span>
+        <span class="pp-slot money"><span class="pp-reel" data-pp-reel="budget"></span></span>
+      </p>
+      <p class="pp-brief-line">
+        <span class="static">That's</span>
+        <span class="pp-slot priority"><span class="pp-reel" data-pp-reel="priority"></span></span>
+      </p>
+    </div>
+    <div class="pp-brief-answer-line">
+      <span class="pp-brief-answer-cue">↳ we'd buy</span>
+      <span class="pp-slot answer" id="pp-brief-answer-slot"><span class="pp-reel" data-pp-reel="answer"></span></span>
+    </div>
+    <div class="pp-brief-foot">
+      <a class="pp-brief-cta" href="/pinpoint/">See why</a>
     </div>
   </div>
-  <div class="pp-section-intro">
-    <h2>This is what a Pinpoint brief looks like.</h2>
-    <p>Answer three questions &mdash; budget, use case, longevity target &mdash; and get a specific recommendation with full editorial backing.</p>
-  </div>
 </section>
-
 <!-- ============================================================
      WHY SECTION
      ============================================================ -->
@@ -1353,57 +1305,86 @@
   });
 
   // ============================================================
-  // PP-SHOWCASE — auto-cycling animated brief
-  // The CSS transitions exist; this JS drives the scenario cycle.
+  // PP-BRIEF — auto-cycling slot-wheel
   // ============================================================
   (function () {
-    var SCENARIOS = [
-      { money: '$7,500',  use: 'a family daily',        miles: '250,000', answer: '2014 Acura TSX' },
-      { money: '$10,000', use: 'a weekend truck',        miles: '200,000', answer: '2014 Toyota Tacoma' },
-      { money: '$6,500',  use: 'a long commuter',        miles: '200,000', answer: '2015 Toyota Prius' },
-      { money: '$12,000', use: 'a practical SUV',        miles: '200,000', answer: '2013 Subaru Forester' },
-      { money: '$8,000',  use: 'fun daily driving',      miles: '150,000', answer: '2014 Mazda3 SKYACTIV' },
-      { money: '$16,000', use: 'serious off-roading',    miles: '150,000', answer: '2014 Toyota 4Runner' },
-      { money: '$11,000', use: 'a reliable family SUV',  miles: '200,000', answer: '2012 Honda CR-V EX-L' }
+    var FRAMES = [
+      { type: "a family vehicle",   budget: 7500,  priority: "sporty",          answer: "2014 Acura TSX" },
+      { type: "a luxury cruiser",   budget: 9500,  priority: "mud-capable",     answer: "2007 Lexus GX 470" },
+      { type: "a minivan",          budget: 9000,  priority: "actually quick",  answer: "2014 Honda Odyssey EX-L" },
+      { type: "a truck",            budget: 7500,  priority: "smooth-riding",   answer: "2012 Honda Ridgeline RTL" },
+      { type: "a wagon",            budget: 7500,  priority: "trail-ready",     answer: "2013 Subaru Outback" },
+      { type: "a sports car",       budget: 12500, priority: "reliable",        answer: "2015 Mazda MX-5 Miata" },
+      { type: "a sedan",            budget: 8200,  priority: "built for 300k",  answer: "2014 Honda Accord LX" },
+      { type: "a teen's first car", budget: 9000,  priority: "forgiving",       answer: "2013 Honda Civic LX" },
+      { type: "a 3-row SUV",        budget: 8500,  priority: "cheap to fix",    answer: "2010 Toyota Highlander" },
+      { type: "an EV",              budget: 14000, priority: "Phoenix-proof",   answer: "2018 Chevy Bolt EV" },
+      { type: "a daily commuter",   budget: 7500,  priority: "premium feel",    answer: "2014 Acura TSX" },
+      { type: "a PHEV",             budget: 7500,  priority: "no anxiety",      answer: "2014 Chevy Volt" },
+      { type: "an SUV",             budget: 8500,  priority: "actually fun",    answer: "2014 Mazda CX-5" },
+      { type: "a full-size truck",  budget: 11000, priority: "300k V8",         answer: "2012 Toyota Tundra" },
+      { type: "a 4x4",              budget: 9500,  priority: "Lexus refined",   answer: "2007 Lexus GX 470" },
+      { type: "a minivan",          budget: 10000, priority: "AWD-equipped",    answer: "2014 Toyota Sienna XLE" },
+      { type: "a 3-row",            budget: 7000,  priority: "drives well",     answer: "2012 Mazda CX-9" },
+      { type: "a compact SUV",      budget: 7000,  priority: "K24-powered",     answer: "2010 Honda CR-V EX-L" },
+      { type: "a luxury 3-row",     budget: 8000,  priority: "Honda DNA",       answer: "2010 Acura MDX" },
+      { type: "a work truck",       budget: 35000, priority: "factory locker",  answer: "2017 Ram Power Wagon" },
+      { type: "a cheap runabout",   budget: 7000,  priority: "300k-capable",    answer: "2010 Toyota Prius" },
+      { type: "a luxury SUV",       budget: 9000,  priority: "Toyota inside",   answer: "2011 Lexus RX 350" },
+      { type: "a sport hatch",      budget: 7500,  priority: "long-lived",      answer: "2014 Mazda3 SKYACTIV" },
+      { type: "an old-school SUV",  budget: 8400,  priority: "still safe",      answer: "2010 Toyota 4Runner" }
     ];
+    var STEP_MS = 3200;
+    var CELL_EM = 1.65;
+    var ANSWER_CELL_EM = 1.7;
+    var SPIN_MS = 550;
+    var fmtMoney = function (v) { return "$" + v.toLocaleString(); };
 
-    var REEL_KEYS = ['money', 'use', 'miles', 'answer'];
-    var reels = {};
-    REEL_KEYS.forEach(function (k) {
-      var el = document.querySelector('[data-pp-reel="' + k + '"] .pp-reel-inner');
-      if (el) reels[k] = el;
-    });
-    // Exit silently if the showcase isn't on the page
-    if (!reels.money || !reels.use || !reels.miles || !reels.answer) return;
-
-    var answerReel = document.querySelector('[data-pp-reel="answer"]');
-    var current = 0;
-
-    function cycleScenario() {
-      current = (current + 1) % SCENARIOS.length;
-      var s = SCENARIOS[current];
-
-      // Step 1: animate all reels out
-      REEL_KEYS.forEach(function (k) { reels[k].classList.add('out-up'); });
-      if (answerReel) answerReel.classList.add('flash');
-
-      // Step 2: after fade-out completes, swap text and fade back in
-      setTimeout(function () {
-        reels.money.textContent  = s.money;
-        reels.use.textContent    = s.use;
-        reels.miles.textContent  = s.miles;
-        reels.answer.textContent = s.answer;
-
-        REEL_KEYS.forEach(function (k) { reels[k].classList.remove('out-up'); });
-
-        setTimeout(function () {
-          if (answerReel) answerReel.classList.remove('flash');
-        }, 400);
-      }, 360);
+    function buildReel(key, formatter) {
+      var reel = document.querySelector('[data-pp-reel="' + key + '"]');
+      if (!reel) return null;
+      var values = FRAMES.map(function (f) { return formatter ? formatter(f[key]) : f[key]; });
+      var allValues = values.concat([values[0]]);
+      reel.innerHTML = allValues.map(function (v) { return '<span class="pp-cell">' + v + '</span>'; }).join("");
+      return { reel: reel, count: values.length, isAnswer: key === "answer" };
     }
 
-    // First cycle after 4 s, then every 4 s
-    setInterval(cycleScenario, 4000);
+    var reels = {
+      type:     buildReel("type", null),
+      money:    buildReel("budget", fmtMoney),
+      priority: buildReel("priority", null),
+      answer:   buildReel("answer", null)
+    };
+    if (!reels.type || !reels.money || !reels.priority || !reels.answer) return;
+
+    var answerSlot = document.getElementById("pp-brief-answer-slot");
+
+    function advance(info, idx) {
+      var em = info.isAnswer ? ANSWER_CELL_EM : CELL_EM;
+      info.reel.classList.remove("snap");
+      info.reel.style.transform = "translateY(-" + (idx * em) + "em)";
+      if (idx === info.count) {
+        setTimeout(function () {
+          info.reel.classList.add("snap");
+          info.reel.style.transform = "translateY(0)";
+        }, SPIN_MS + 30);
+      }
+    }
+
+    var current = 0;
+    setInterval(function () {
+      current = (current + 1) % FRAMES.length;
+      setTimeout(function () { advance(reels.type, current); }, 0);
+      setTimeout(function () { advance(reels.money, current); }, 130);
+      setTimeout(function () { advance(reels.priority, current); }, 260);
+      setTimeout(function () {
+        advance(reels.answer, current);
+        if (answerSlot) {
+          answerSlot.classList.add("flash");
+          setTimeout(function () { answerSlot.classList.remove("flash"); }, 650);
+        }
+      }, 400);
+    }, STEP_MS);
   }());
 
   // ============================================================
@@ -1566,7 +1547,7 @@
           '<p class="vc-tagline">' + v.tagline + '</p>' +
           '<div class="vc-foot">' +
             '<span class="vc-price">' + v.price + '</span>' +
-            '<a class="vc-link" href="/pinpoint/">Full brief &rarr;</a>' +
+            '<a class="vc-link" href="/pinpoint/">Full Pinpoint &rarr;</a>' +
           '</div>' +
         '</div>';
       }).join('');
