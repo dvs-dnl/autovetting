@@ -5279,6 +5279,223 @@ const CHECKLISTS = {
     ]
   },
 
+  'ford-f150-2018': {
+    year: 2018,
+    make: 'Ford',
+    model: 'F-150',
+    trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh, 2018–2020)',
+    engine: '3.3L Ti-VCT V6 (290hp) · 2.7L EcoBoost V6 (325hp) · 5.0L Coyote V8 (395hp) · 3.5L EcoBoost V6 (375hp) · 3.5L EcoBoost H.O. Raptor (450hp)',
+    overallRisk: 'medium',
+    overallRiskLabel: 'Medium Risk — Engine-Dependent',
+    vinNote: 'The 2018 F-150\u2019s 8th VIN digit encodes engine family \u2014 five options with meaningfully different failure profiles. Always decode the full VIN at <a href="/decode/">autovetting.com/decode</a> before negotiating. Key split: 3.5L EcoBoost V6 (popular tow rig, most cam phaser complaints) vs. 5.0L Coyote V8 (plastic oil pan leak + spark plug risk) vs. 3.3L Ti-VCT V6 (base, fewest catastrophic failure modes). The NHTSA vPIC database confirms which engine is certified for this specific VIN.',
+    blogUrl: '/blog/2018-ford-f150-buyers-guide',
+    summary: "The 2018 F-150 is America\u2019s best-selling truck with an aluminum body that doesn\u2019t rust, a deep parts ecosystem, and the 10R80 ten-speed that handles highway towing well. The catch: cam phasers on the 3.5L EcoBoost and 5.0L Coyote are a four-figure liability if oil changes were skipped, and the 10R80 has a documented shift-quality complaint history. Buy one with verified service records and the brake recall closed, and you have a 200,000-mile truck.",
+    stats: {
+      itemsToCheck: 20,
+      recalls: 4,
+      ownerComplaints: 3200,
+      topComplaintArea: 'Engine / Drivetrain'
+    },
+    sections: [
+      {
+        title: 'Engine \u2014 Cam Phasers (3.5L EcoBoost + 5.0L Coyote)',
+        items: [
+          {
+            title: 'Cam phaser rattle on cold start \u2014 3.5L EcoBoost V6 (highest risk)',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'The 3.5L EcoBoost\u2019s variable cam phaser system is the single most-reported mechanical issue on the 2018 F-150. Onset as early as 40,000 miles has been documented. Continuous rattle at warm idle \u2014 not just the first 2\u20133 seconds of cold start \u2014 means the phasers are already failing. Ford TSB 22-2200 covers phaser replacement on the 3.5L EcoBoost. Cam phaser failure on the 3.5L is a $3,000\u2013$5,000 repair.',
+            check: '<strong>Start the engine fully cold (overnight sit ideal) and listen at idle for metallic ticking from the front of the engine for the first 5\u201310 seconds.</strong> Two to three seconds of cold-start tick then silence = normal. Sustained tick beyond 10 seconds, or any rattle at warm idle = phasers failing. Sellers sometimes pre-warm trucks \u2014 ask explicitly if the engine is cold.',
+            cost: '$3,000\u2013$5,000 cam phaser replacement (3.5L EcoBoost) \u2014 Ford TSB 22-2200',
+            source: 'Ford TSB 22-2200 + NHTSA complaint aggregation + F150ecoboost.net forum data'
+          },
+          {
+            title: 'Cam phaser rattle on cold start \u2014 5.0L Coyote V8',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 5.0L Coyote V8 shares the cam phaser design concern. Oil-change intervals matter most: stretched changes past 7,500 miles are the most consistent predictor of early phaser wear. Pull OBD codes \u2014 P0022, P0021, P0012, P0011 are cam timing/phaser fault codes.',
+            check: '<strong>Cold-start and listen from the driver\u2019s-side front of the engine.</strong> A 2\u20133 second tick that clears = normal Coyote behavior. Rattle persisting beyond 5 seconds, continuing into warm-up, or audible at highway speed = phaser wear. Verify oil change records.',
+            cost: '$2,000\u2013$4,000 cam phaser replacement (5.0L Coyote)',
+            source: 'Ford 5.0L Coyote cam phaser pattern + NHTSA complaint data'
+          },
+          {
+            title: '5.0L Coyote plastic oil pan leak',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 2018 5.0L Coyote uses a two-piece plastic oil pan with a documented seal-failure pattern. Leaks develop at the gasket seam. OEM patch repairs often re-leak; many shops replace with an aftermarket aluminum pan for a permanent fix.',
+            check: '<strong>On a lift, inspect the oil pan gasket seam at the front and rear of the pan.</strong> Wet seepage or crusted black residue at the seam = active or prior leak. Fresh RTV at the seam = prior patch attempt (higher recurrence risk).',
+            cost: '$400\u2013$1,200 depending on OEM patch vs. aluminum aftermarket pan',
+            source: 'Ford 5.0L Coyote oil pan seal complaint pattern'
+          },
+          {
+            title: '5.0L spark plug ejection risk at 100k+ miles',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 5.0L Coyote aluminum cylinder heads have relatively few threads for the spark plug seat. A plug never torque-checked with anti-seize can eject when disturbed, destroying head threads and turning a $40 part into a $500\u2013$2,500 repair. Trucks past 100,000 miles with no documented plug service are a material risk.',
+            check: '<strong>Ask about plug service history on any 5.0L past 80,000 miles.</strong> A careful change with anti-seize and proper torque spec should be documented. No record + 100k+ odometer = budget for a careful plug change before driving hard.',
+            cost: '$200\u2013$400 careful plug service / $500\u2013$2,500 thread repair if plug ejects',
+            source: 'Ford Modular V8 spark plug ejection pattern (non-trivial on aluminum head at high mileage)'
+          },
+          {
+            title: '2.7L EcoBoost \u2014 well-regarded, verify timing belt service',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Unlike the 2015 first-year model (which had a documented head gasket defect), the 2018 2.7L EcoBoost has a solid track record. Its main maintenance item is the wet timing belt running in the oil bath \u2014 Ford specifies replacement at 150,000 miles but many mechanics inspect earlier. Cam phaser complaints are less frequent than on the 3.5L.',
+            check: '<strong>Verify oil change history \u2014 the timing belt runs in oil, so sustained clean oil matters.</strong> Check for cam phaser rattle at cold start (same test as 3.5L). Confirm timing belt service if the truck is past 120,000 miles.',
+            cost: '$600\u2013$1,200 timing belt service / $1,500\u2013$3,000 if phasers also needed',
+            source: 'Ford 2.7L EcoBoost production documentation + 2015 vs. 2018 model year comparison'
+          }
+        ]
+      },
+      {
+        title: '10R80 Ten-Speed Automatic Transmission',
+        items: [
+          {
+            title: '10R80 shudder and harsh shifts (30\u201345 mph)',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The 10R80 ten-speed automatic (introduced on the 2018 F-150 across all but the base 3.3L) generated enough shift-quality complaints to spawn a 2019 class-action lawsuit. Symptoms: shudder in the 30\u201345 mph torque-converter lockup zone, harsh 1\u21922 upshifts, and shift hunting at light throttle. Ford issued multiple calibration reflashes. A truck with the latest Ford tune often improves significantly; an unaddressed 10R80 that still shudders is a negotiation item.',
+            check: '<strong>Hold steady throttle at 35\u201345 mph on flat road and feel for a rhythmic vibration or shudder.</strong> Roll on and off throttle lightly at that speed. From a stop, accelerate moderately to 30 mph and feel for a harsh jolt on the 1\u21922 upshift. Confirm with a Ford dealer whether the latest 10R80 calibration is loaded.',
+            cost: '$0 if software reflash resolves / $3,500\u2013$6,000+ if torque converter or valve body replacement needed',
+            source: 'Ford 10R80 class-action documentation + NHTSA complaint data + Ford Authority coverage'
+          },
+          {
+            title: '10R80 transmission fluid condition',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Ford marketed the 10R80 as "fill for life" \u2014 that\u2019s a marketing claim, not an engineering specification. Fluid degrades under towing heat. On a truck past 100,000 miles with no fluid service, budget for a drain-and-fill.',
+            check: '<strong>Ask whether transmission fluid has been serviced.</strong> "Never \u2014 Ford says fill for life" on a 100k truck = price in $300\u2013$600 for proper service. Burnt smell or visibly dark fluid = hard signal.',
+            cost: '$300\u2013$600 transmission fluid service / $5,000+ rebuild if heat-damaged',
+            source: 'Ford 10R80 service guidance + industry technician documentation'
+          },
+          {
+            title: '6-speed automatic on 3.3L Ti-VCT V6 (base trim)',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The base 3.3L V6 uses Ford\u2019s conventional six-speed automatic \u2014 not the 10R80. If the 10R80\u2019s complaint history concerns you, the base trim with the 6-speed is the lower-risk powertrain combination.',
+            check: '<strong>Standard test through all gears: smooth engagement, no hesitation, clean Reverse.</strong> Verify ATF service every 60,000 miles.',
+            cost: '$150\u2013$250 fluid service / $2,500\u2013$4,000 rebuild if neglected',
+            source: 'Ford 6R80 transmission documentation'
+          }
+        ]
+      },
+      {
+        title: 'Brake System',
+        items: [
+          {
+            title: 'Brake master cylinder \u2014 NHTSA 25V236000 (open recall check)',
+            risk: 'critical', riskLabel: 'Critical \u2014 Open Recall',
+            desc: 'NHTSA recall 25V236000 covers certain 2017\u20132018 F-150: brake fluid can leak from the front-circuit reservoir into the brake booster, reducing front-brake effectiveness. This is an expansion of prior campaigns 22V150 and 20V332. The dealer remedy is master cylinder replacement at no charge. A 2018 F-150 with this recall still open should not be purchased until the recall work is scheduled.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before the test drive and confirm 25V236000 is closed.</strong> Signs of active failure: sinking or soft brake pedal, unusually long stopping distances, ABS warning light. If open, require dealer repair before purchase or delivery.',
+            cost: 'Free dealer repair under recall / Do not drive home with soft pedal',
+            source: 'NHTSA recall 25V236000 + prior campaigns 22V150 + 20V332'
+          },
+          {
+            title: 'Brake pad and rotor wear',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Front brake pads on a towing-use F-150 wear faster than on passenger cars. Warped rotors from towing heat show up as pedal pulsation under braking.',
+            check: '<strong>Brake firmly from 50 mph \u2014 the pedal should be firm and consistent with no vibration.</strong> Pulsation or steering shimmer during braking = warped front rotors. Budget brakes as a normal consumable on any truck over 60k.',
+            cost: '$400\u2013$800 front pads + rotors',
+            source: 'F-150 brake wear pattern'
+          }
+        ]
+      },
+      {
+        title: 'Frame, Body & Underbody',
+        items: [
+          {
+            title: 'Steel frame rust \u2014 salt-belt trucks',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'The aluminum body is a genuine rust-resistance feature. The frame is conventional steel and can rust in salt-belt states. Rear sections \u2014 behind the rear wheels, spare tire mount, crossmembers, and rear shock mounts \u2014 are most vulnerable. Surface flash rust is universal. Scaling, flaking, or through-pitting on structural sections is a safety concern.',
+            check: '<strong>On a lift, inspect the rear half of the frame: rear crossmembers, boxed sections behind the rear wheels, spare tire winch mount, and rear shock mounts.</strong> Surface rust = cosmetic. Scaled or flaking rust = structural concern. Through-pitting on a crossmember = walk away. Bring a flashlight.',
+            cost: '$0 cosmetic surface rust / $1,500\u2013$5,000+ structural frame repair',
+            source: 'F-150 salt-belt frame inspection pattern'
+          },
+          {
+            title: 'Aluminum body collision repair cost',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The aluminum body does not rust, but collision repairs cost 2\u20133\xd7 more than equivalent steel repairs. A minor collision that runs $800\u2013$1,200 on a steel truck can cost $2,500\u2013$4,000 on an aluminum-panel F-150. Any accident with structural damage to the bed or cab corners should get a certified aluminum-repair shop estimate.',
+            check: '<strong>Walk all four sides in bright sunlight and look for panel color, texture, or sheen mismatches.</strong> Check door gap consistency. Inspect the tailgate and bed rail for dents \u2014 the highest-cost aluminum panels to replace.',
+            cost: '$2,500\u2013$8,000+ aluminum accident repair vs. $800\u2013$2,500 equivalent steel',
+            source: 'Ford F-150 aluminum body repair cost documentation'
+          },
+          {
+            title: 'Brake lines and fuel lines \u2014 underbody (salt-belt)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Even on salt-belt trucks where the aluminum body looks pristine, steel brake lines and fuel lines can develop pitting corrosion. Pinhole corrosion in a brake line can cause sudden pressure loss.',
+            check: '<strong>On a lift, trace brake lines from the master cylinder to all four corners.</strong> Surface rust on steel lines is normal. Pitting or bubbling in the metal wall = replacement required before driving.',
+            cost: '$300\u2013$1,500 brake line replacement',
+            source: 'Salt-belt truck underbody inspection pattern'
+          },
+          {
+            title: '4x4 system \u2014 all modes',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The electric-shift-on-the-fly 4x4 system uses a vacuum-actuated front axle disconnect and an electronic transfer case. Both need to be exercised on the test drive. A vacuum line failure is a $50 fix; a transfer case actuator is $400\u2013$800.',
+            check: '<strong>At low speed in a safe area, cycle through all 4x4 modes: 2WD \u2192 4A \u2192 4H \u2192 4L \u2192 4H \u2192 2WD.</strong> Each engagement should be smooth and confirmed by the dash indicator. Any grinding or failure to engage = vacuum line or actuator issue.',
+            cost: '$50\u2013$150 vacuum line / $400\u2013$800 transfer case actuator / $1,500+ transfer case',
+            source: 'F-150 4x4 system common service items'
+          }
+        ]
+      },
+      {
+        title: 'Electrical, Infotainment & Accessories',
+        items: [
+          {
+            title: 'Door latch sticking or not latching fully',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Door latch failures are the second-most-common complaint category for the 2018 F-150 on CarComplaints. A door that requires a firm slam, resists opening from inside, or does not click fully shut is a known failure mode. Latches are relatively inexpensive but labor-intensive to replace behind the door panel.',
+            check: '<strong>Cycle every door \u2014 all four doors plus the tailgate \u2014 from inside and outside.</strong> Each should open and close with moderate force and latch with a single firm click. A door that needs to be slammed, lifted slightly on closing, or pulled hard to open = latch assembly service needed.',
+            cost: '$200\u2013$450 per door latch (parts + labor)',
+            source: 'NHTSA complaint data + CarComplaints 2018 F-150 door latch category'
+          },
+          {
+            title: 'Sync 3 infotainment \u2014 reboot and Bluetooth pairing',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Sync 3 on the 2018 F-150 has aged into intermittent reboots and Bluetooth pairing issues. A single reboot on the test drive is not alarming; inability to pair a phone or a frozen screen requiring a full power cycle is a concern.',
+            check: '<strong>Pair your phone via Bluetooth before the test drive, confirm audio plays, and verify CarPlay if the trim supports it.</strong> Test voice commands. Screen response should be under 1 second per touch. A software update from a Ford dealer resolves most Sync 3 issues at no charge.',
+            cost: '$0 software update / $400\u2013$1,200 head unit replacement (last resort)',
+            source: 'Ford Sync 3 documentation + 2018 F-150 owner reports'
+          },
+          {
+            title: 'Power tailgate \u2014 cycle and latch check',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Power-up/down tailgates (available on higher trims) can develop motor hesitation, rattles, or latch issues. Cycle the tailgate completely on the test drive.',
+            check: '<strong>Cycle the power tailgate from fully closed to fully open and back at least twice.</strong> It should travel smoothly and latch with a firm click. Hesitation mid-travel or failure to latch cleanly = motor or latch service.',
+            cost: '$200\u2013$600 power tailgate motor or latch service',
+            source: 'F-150 power tailgate owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Open Recalls',
+        items: [
+          {
+            title: 'NHTSA 25V236000 \u2014 brake master cylinder (covered above)',
+            risk: 'critical', riskLabel: 'Critical',
+            desc: 'Detailed in the Brake System section. Verify this recall is closed before purchase. This is the safety-critical recall on the 2018 F-150.',
+            check: '<strong>VIN check at nhtsa.gov/recalls.</strong> Any open brake recall = do not finalize purchase until dealer repair is scheduled.',
+            cost: 'Free dealer repair',
+            source: 'NHTSA recall 25V236000'
+          },
+          {
+            title: 'Tailgate latch recall \u2014 verify VIN',
+            risk: 'high', riskLabel: 'High Attention',
+            desc: 'Some 2018 F-150 units have had a tailgate latch recall where the gate can open unexpectedly while driving. Not all VINs are affected \u2014 confirm against this specific truck\u2019s VIN.',
+            check: '<strong>Run the full VIN at nhtsa.gov/recalls and confirm all open recalls.</strong> Any tailgate recall = require dealer completion before delivery. Cycle the tailgate manually: it should resist opening from road vibration when latched.',
+            cost: 'Free dealer repair',
+            source: 'NHTSA recall database \u2014 F-150 tailgate campaigns'
+          },
+          {
+            title: 'Additional recalls \u2014 LED headlamp/DRL, engine heater, tires',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Additional recall categories affecting some 2018 F-150 production include LED headlamp/DRL software, engine block heater wiring (cold-climate builds), and Continental tire production issues. Lower safety urgency than the brake recall but should be verified as closed.',
+            check: '<strong>Print the NHTSA recall report for this VIN before any negotiation.</strong> Each open recall is free dealer work the prior owner skipped \u2014 and each is a negotiation point.',
+            cost: 'Free dealer repair on all open recalls',
+            source: 'NHTSA recall database \u2014 2018 Ford F-150'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '25V236000', title: 'Brake Master Cylinder Leak', desc: 'Brake fluid can leak from front-circuit reservoir into brake booster, reducing front-brake effectiveness. Expansion of 22V150 and 20V332. Dealer remedy: master cylinder replacement.' },
+      { number: '22V150', title: 'Brake Master Cylinder (prior campaign)', desc: 'Prior brake master cylinder campaign superseded by 25V236000. Verify closed status at nhtsa.gov/recalls.' },
+      { number: 'see nhtsa.gov', title: 'Tailgate Latch', desc: 'Some builds: gate can open unexpectedly while driving. Verify VIN-specific applicability.' },
+      { number: 'see nhtsa.gov', title: 'Additional campaigns', desc: 'LED headlamp/DRL software, engine block heater (cold-climate builds), Continental tire production. Verify full recall list for this VIN.' }
+    ]
+  },
+
   'ford-escape-2013': {
     year: 2013,
     make: 'Ford',
@@ -5623,7 +5840,7 @@ const VEHICLE_MENU = {
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
     ],
     'Ford': [
-      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ]
   },
   2019: {
@@ -5644,7 +5861,7 @@ const VEHICLE_MENU = {
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
     ],
     'Ford': [
-      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ]
   },
   2018: {
@@ -5672,7 +5889,7 @@ const VEHICLE_MENU = {
       { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' }
     ],
     'Ford': [
-      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
