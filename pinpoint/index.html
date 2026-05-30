@@ -638,74 +638,6 @@
   }
 
   /* ============================================================
-     WIDER FIELD (table)
-     ============================================================ */
-  .wider-field {
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--slate-200);
-    overflow: hidden;
-  }
-  .wider-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .wider-table thead {
-    background: var(--slate-100);
-    border-bottom: 1px solid var(--slate-200);
-  }
-  .wider-table th {
-    text-align: left;
-    padding: 14px 20px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--slate-500);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-family: var(--font-mono);
-  }
-  .wider-table td {
-    padding: 18px 20px;
-    border-bottom: 1px solid var(--slate-100);
-    font-size: 14.5px;
-  }
-  .wider-table tbody tr {
-    cursor: pointer;
-    transition: background 0.12s;
-  }
-  .wider-table tbody tr:hover { background: var(--slate-100); }
-  .wider-table tbody tr:last-child td { border-bottom: none; }
-  .wt-rank { font-family: var(--font-mono); color: var(--slate-400); font-weight: 600; width: 50px; }
-  .wt-vehicle { font-weight: 600; color: var(--navy); }
-  .wt-vehicle .years { display: block; font-family: var(--font-mono); font-size: 11px; color: var(--slate-500); font-weight: 500; margin-top: 2px; }
-  .wt-price { font-family: var(--font-mono); font-weight: 600; }
-  .wt-tier-cell { width: 100px; }
-  .wt-tier {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .wt-tier.top { background: var(--clear-bg); color: #065F46; }
-  .wt-tier.strong { background: var(--electric-50); color: var(--electric-hover); }
-  .wt-tier.decent { background: var(--slate-100); color: var(--slate-500); }
-  .wt-note { color: var(--slate-500); }
-  .wt-mileage { font-family: var(--font-mono); color: var(--slate-500); }
-
-  .wider-foot {
-    padding: 18px 24px;
-    background: var(--slate-100);
-    border-top: 1px solid var(--slate-200);
-    text-align: center;
-    font-size: 14px;
-    color: var(--slate-500);
-  }
-  .wider-foot a { font-weight: 600; }
-
-  /* ============================================================
      SKIP THESE
      ============================================================ */
   .skip-grid {
@@ -811,8 +743,6 @@
     .section { padding: 56px 24px; }
     .section-head { font-size: 28px; }
     .verdict-bar { padding: 18px 24px; }
-    .wider-table th, .wider-table td { padding: 12px 14px; font-size: 13px; }
-    .wt-note { display: none; }
   }
 
   /* ============================================================
@@ -1010,6 +940,10 @@
   .vc-tier-strong {
     background: #EFF6FF;
     color: var(--electric);
+  }
+  .vc-tier-caution {
+    background: #FFF7ED;
+    color: #C2410C;
   }
   .vc-name {
     font-size: 18px;
@@ -1594,106 +1528,6 @@
   </div>
 </section>
 
-<!-- ============================================================
-     WIDER FIELD
-     ============================================================ -->
-<section class="section">
-  <p class="section-eyebrow">The wider field</p>
-  <h2 class="section-head">The rest of the 56 picks.</h2>
-  <p class="section-sub">Filtered to your Pinpoint. Click any row to open the full editorial entry.</p>
-
-  <div class="wider-field">
-    <table class="wider-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Vehicle</th>
-          <th>Tier</th>
-          <th>Price</th>
-          <th>Mileage band</th>
-          <th class="wt-note">One-line note</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="wt-rank">06</td>
-          <td class="wt-vehicle">Subaru Outback 2.5i<span class="years">2010–2014 · AWD · CVT</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier strong">Strong</span></td>
-          <td class="wt-price">$7,500</td>
-          <td class="wt-mileage">120–160k</td>
-          <td class="wt-note">The "I want an AWD wagon" answer. Watch the FB25 oil consumption.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">07</td>
-          <td class="wt-vehicle">Toyota Tacoma SR5<span class="years">2010–2014 · 4WD opt · 4.0L V6</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier top">Top</span></td>
-          <td class="wt-price">$8,500</td>
-          <td class="wt-mileage">200–250k</td>
-          <td class="wt-note">King of long-haul reliability. Verify clean frame (no salt-state rust).</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">08</td>
-          <td class="wt-vehicle">Honda CR-V EX-L<span class="years">2008–2011 · FWD/AWD · K24 I4</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier top">Top</span></td>
-          <td class="wt-price">$7,000</td>
-          <td class="wt-mileage">130–170k</td>
-          <td class="wt-note">RepairPal #2 compact SUV. $407 annual repair. AC compressor on 2007–2009.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">09</td>
-          <td class="wt-vehicle">Toyota Prius<span class="years">2010–2015 · FWD · 1.8L hybrid</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier top">Top</span></td>
-          <td class="wt-price">$6,500</td>
-          <td class="wt-mileage">130–180k</td>
-          <td class="wt-note">Most reliable hybrid ever built. Hybrid battery is the only real risk.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">10</td>
-          <td class="wt-vehicle">Mazda3 SKYACTIV<span class="years">2014–2015 · FWD · 2.0L/2.5L</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier top">Top</span></td>
-          <td class="wt-price">$7,200</td>
-          <td class="wt-mileage">90–130k</td>
-          <td class="wt-note">Most fun-per-dollar in the budget. Tight rear seat for families.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">11</td>
-          <td class="wt-vehicle">Toyota Highlander V6<span class="years">2008–2011 · FWD/AWD · 3.5L V6</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier strong">Strong</span></td>
-          <td class="wt-price">$7,500</td>
-          <td class="wt-mileage">150–190k</td>
-          <td class="wt-note">Smoother family hauler than Pilot or 4Runner. Optional 3rd row.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">12</td>
-          <td class="wt-vehicle">Chevy Bolt EV (replaced pack)<span class="years">2017–2019 · FWD · 66 kWh</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier top">Top</span></td>
-          <td class="wt-price">$13,000</td>
-          <td class="wt-mileage">50–100k</td>
-          <td class="wt-note">Best used EV value in America &mdash; only if VIN-verified battery replacement.</td>
-        </tr>
-        <tr>
-          <td class="wt-rank">13</td>
-          <td class="wt-vehicle">Nissan Rogue SV / SL<span class="years">2017 · FWD/AWD · 2.5L QR25DE I4</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier caution">Caution</span></td>
-          <td class="wt-price">$14,500</td>
-          <td class="wt-mileage">50–90k</td>
-          <td class="wt-note">#5 most popular used vehicle in America. One catch: the JF017E CVT. Verify NS-3 fluid history before any offer. <a href="/inspect/?year=2017&amp;make=Nissan&amp;model=Rogue">Full checklist &rarr;</a></td>
-        </tr>
-        <tr>
-          <td class="wt-rank">14</td>
-          <td class="wt-vehicle">Ford F-150 XLT / Lariat<span class="years">2018 · RWD/4WD · 5.0L V8 or 3.5L EcoBoost</span></td>
-          <td class="wt-tier-cell"><span class="wt-tier caution">Caution</span></td>
-          <td class="wt-price">$24,000</td>
-          <td class="wt-mileage">60–100k</td>
-          <td class="wt-note">America's best-seller with an aluminum body that doesn't rust. Must-verify: cam phasers (cold-start listen), 10R80 shudder test, brake recall 25V236 closed. <a href="/inspect/?year=2018&amp;make=Ford&amp;model=F-150">Full checklist &rarr;</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="wider-foot">
-      Showing <strong>8 of 13</strong> matches in your Pinpoint. <a href="#">Show all 13 in this band &rarr;</a> &nbsp;&middot;&nbsp; <a href="#">Browse all 56 &rarr;</a>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      SKIP THESE
@@ -1881,91 +1715,120 @@
         name: 'Acura TSX', make: 'Acura', years: '2011–2014',
         type: 'sedan', budget: 'under-10k', purpose: 'reliability',
         price: '$7,500', tier: 'Top',
-        tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.'
+        tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.',
+        inspectUrl: '/inspect/?year=2014&make=Acura&model=TSX'
       },
       {
         name: 'Honda Ridgeline RTL', make: 'Honda', years: '2010–2012',
         type: 'truck', budget: 'under-10k', purpose: 'reliability',
         price: '$7,200', tier: 'Top',
-        tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.'
+        tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.',
+        inspectUrl: ''
       },
       {
         name: 'Subaru Outback 2.5i', make: 'Subaru', years: '2010–2014',
         type: 'wagon', budget: 'under-10k', purpose: 'reliability',
         price: '$7,500', tier: 'Strong',
-        tagline: 'The AWD wagon answer. Practical, capable, and proven. Watch for FB25 oil consumption.'
+        tagline: 'The "I want an AWD wagon" answer. Watch the FB25 oil consumption.',
+        inspectUrl: ''
       },
       {
         name: 'Toyota Tacoma SR5', make: 'Toyota', years: '2010–2014',
         type: 'truck', budget: 'under-10k', purpose: 'reliability',
         price: '$8,500', tier: 'Top',
-        tagline: 'King of long-haul reliability. Body-on-frame proven past 300k. Verify clean frame.'
+        tagline: 'King of long-haul reliability. Verify clean frame (no salt-state rust).',
+        inspectUrl: ''
       },
       {
         name: 'Honda CR-V EX-L', make: 'Honda', years: '2008–2011',
         type: 'suv', budget: 'under-10k', purpose: 'reliability',
         price: '$7,000', tier: 'Top',
-        tagline: 'RepairPal\'s #2 compact SUV. $407 average annual repair cost. K24 I4 under the hood.'
+        tagline: 'RepairPal #2 compact SUV. $407 annual repair. AC compressor on 2007–2009.',
+        inspectUrl: ''
       },
       {
         name: 'Toyota Prius', make: 'Toyota', years: '2010–2015',
         type: 'hybrid-ev', budget: 'under-10k', purpose: 'fuel-economy',
         price: '$6,500', tier: 'Top',
-        tagline: 'Most reliable hybrid ever built. 50+ MPG, liquid-cooled NiMH battery is the only real risk.'
+        tagline: 'Most reliable hybrid ever built. Hybrid battery is the only real risk.',
+        inspectUrl: ''
       },
       {
         name: 'Mazda3 SKYACTIV', make: 'Mazda', years: '2014–2015',
         type: 'hatch', budget: 'under-10k', purpose: 'fun-to-drive',
         price: '$7,200', tier: 'Top',
-        tagline: 'Most fun-per-dollar in the budget. SKYACTIV engine is bulletproof. Tight rear seat for families.'
+        tagline: 'Most fun-per-dollar in the budget. Tight rear seat for families.',
+        inspectUrl: ''
       },
       {
         name: 'Toyota Highlander V6', make: 'Toyota', years: '2008–2011',
         type: 'suv', budget: 'under-10k', purpose: 'cargo',
         price: '$7,500', tier: 'Strong',
-        tagline: 'Smoother family hauler than Pilot or 4Runner. 3.5L V6, optional 3rd row, FWD or AWD.'
+        tagline: 'Smoother family hauler than Pilot or 4Runner. Optional 3rd row.',
+        inspectUrl: ''
       },
       {
         name: 'Chevy Bolt EV', make: 'Chevrolet', years: '2017–2019',
         type: 'hybrid-ev', budget: '10-15k', purpose: 'fuel-economy',
         price: '$13,000', tier: 'Top',
-        tagline: 'Best used EV value in America — but only if the battery replacement recall is VIN-verified.'
+        tagline: 'Best used EV value in America — only if VIN-verified battery replacement.',
+        inspectUrl: ''
       },
       {
         name: 'Subaru Forester 2.5i', make: 'Subaru', years: '2012–2016',
         type: 'suv', budget: '10-15k', purpose: 'reliability',
         price: '$11,000', tier: 'Top',
-        tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.'
+        tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.',
+        inspectUrl: ''
       },
       {
         name: 'Honda Accord EX-L', make: 'Honda', years: '2013–2016',
         type: 'sedan', budget: '10-15k', purpose: 'reliability',
         price: '$10,500', tier: 'Top',
-        tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.'
+        tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.',
+        inspectUrl: '/inspect/?year=2014&make=Honda&model=Accord'
       },
       {
         name: 'Toyota Camry XSE V6', make: 'Toyota', years: '2015–2017',
         type: 'sedan', budget: '10-15k', purpose: 'reliability',
         price: '$11,500', tier: 'Top',
-        tagline: 'Bulletproof 2.5L four or 3.5L V6. 35+ MPG highway on the I4. Essentially nothing to fix.'
+        tagline: 'Bulletproof 2.5L four or 3.5L V6. 35+ MPG highway on the I4. Essentially nothing to fix.',
+        inspectUrl: ''
+      },
+      {
+        name: 'Nissan Rogue SV / SL', make: 'Nissan', years: '2017',
+        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        price: '$14,500', tier: 'Caution',
+        tagline: '#5 most popular used vehicle in America. One catch: the JF017E CVT. Verify NS-3 fluid history before any offer.',
+        inspectUrl: '/inspect/?year=2017&make=Nissan&model=Rogue'
       },
       {
         name: 'Toyota 4Runner SR5', make: 'Toyota', years: '2010–2016',
         type: 'suv', budget: '15-20k', purpose: 'off-road',
         price: '$16,000', tier: 'Top',
-        tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.'
+        tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.',
+        inspectUrl: ''
       },
       {
         name: 'Jeep Wrangler Sport', make: 'Jeep', years: '2013–2017',
         type: 'suv', budget: '15-20k', purpose: 'off-road',
         price: '$17,500', tier: 'Strong',
-        tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.'
+        tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.',
+        inspectUrl: ''
       },
       {
         name: 'Lexus RX 350', make: 'Lexus', years: '2010–2015',
         type: 'suv', budget: '15-20k', purpose: 'reliability',
         price: '$15,000', tier: 'Top',
-        tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.'
+        tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.',
+        inspectUrl: '/inspect/?year=2012&make=Lexus&model=RX%20350'
+      },
+      {
+        name: 'Ford F-150 XLT / Lariat', make: 'Ford', years: '2018',
+        type: 'truck', budget: '20-30k', purpose: 'cargo',
+        price: '$24,000', tier: 'Caution',
+        tagline: "America's best-seller with an aluminum body that doesn't rust. Must-verify: cam phasers (cold-start listen), 10R80 shudder test, brake recall 25V236 closed.",
+        inspectUrl: '/inspect/?year=2018&make=Ford&model=F-150'
       }
     ];
 
@@ -2019,7 +1882,8 @@
 
       // Build cards
       var html = results.map(function (v) {
-        var tierClass = v.tier.toLowerCase() === 'top' ? 'vc-tier-top' : 'vc-tier-strong';
+        var tl = v.tier.toLowerCase();
+        var tierClass = tl === 'top' ? 'vc-tier-top' : tl === 'caution' ? 'vc-tier-caution' : 'vc-tier-strong';
         return '<div class="vc">' +
           '<div class="vc-head">' +
             '<span class="vc-type">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
@@ -2030,7 +1894,7 @@
           '<p class="vc-tagline">' + v.tagline + '</p>' +
           '<div class="vc-foot">' +
             '<span class="vc-price">' + v.price + '</span>' +
-            '<a class="vc-link" href="/pinpoint/">Full Pinpoint &rarr;</a>' +
+            (v.inspectUrl ? '<a class="vc-link" href="' + v.inspectUrl + '">Full checklist &rarr;</a>' : '<span class="vc-link-muted">No checklist yet</span>') +
           '</div>' +
         '</div>';
       }).join('');
