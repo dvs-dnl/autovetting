@@ -10358,6 +10358,490 @@ const CHECKLISTS = {
       { number: '19V-485', title: 'Fuel Injector Seal', desc: 'May leak — fire risk.' },
       { number: '20V-077', title: 'Backup Camera', desc: 'Display delay — software fix.' }
     ]
+  },
+
+  'kia-niro-2019': {
+    year: 2019, make: 'Kia', model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)',
+    engine: '1.6L Atkinson GDI I4 + 43.5 kW electric motor (139hp Hybrid) / PHEV (26 mi EV) / 64 kWh BEV (239hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The DE Niro is Kia's most fuel-efficient crossover — available as Hybrid (52 mpg combined), PHEV, or full EV. The hybrid drivetrain is shared with Hyundai Ioniq. Main buyer checks depend on variant: Hybrid — 6-speed DCT fluid service; PHEV — plug-in battery health; EV — HV battery health (64 kWh should provide 220+ miles). Outstanding fuel economy buy in any form.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 60, topComplaintArea: 'DCT shudder (Hybrid) / EV battery health / charging compatibility' },
+    sections: [
+      { title: 'Powertrain (Hybrid/PHEV)', items: [
+        { title: '6-speed DCT fluid service (Hybrid)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The Niro Hybrid uses a 6-speed DCT. Shudder at low speed = overdue fluid.',
+          check: '<strong>Test stop-and-go under 15 mph. Request DCT fluid service receipt.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 clutch pack', source: 'Kia DCT service standard' },
+        { title: 'PHEV / EV battery health', risk: 'high', riskLabel: 'High Attention',
+          desc: 'PHEV: test EV range (26 mi EPA). EV: should show 200+ miles on 90% charge.',
+          check: '<strong>Charge to 90% and verify range estimate.</strong>',
+          cost: '$4,000–$10,000 battery depending on variant', source: 'Kia battery data' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Generally well-received on Niro.',
+          check: '<strong>Test CarPlay and all functions.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'DE Niro paint is soft by industry standards.',
+          check: '<strong>Inspect hood for chips.</strong>',
+          cost: '$0–$300 touch-up', source: 'Consumer pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DCT/battery health + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DCT fluid or battery health check depending on variant. Three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Verify appropriate powertrain document.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify by VIN.' },
+      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+    ]
+  },
+
+  'hyundai-ioniq-2019': {
+    year: 2019, make: 'Hyundai', model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)',
+    engine: '1.6L Atkinson GDI I4 + electric (Hybrid 139hp) / PHEV (29 mi EV) / Electric 118hp (28 kWh)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The AE Ioniq is the most fuel-efficient non-plugin hybrid available — 58 mpg combined on the Blue trim. The smaller 28 kWh battery on the Ioniq Electric gives only 124 miles — adequate for urban use but less than Bolt or Model 3. Hybrid DCT fluid service is the critical maintenance item. Outstanding total cost of ownership for city commuters.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 55, topComplaintArea: 'DCT shudder / Ioniq EV limited range / ADAS windshield' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '6-speed DCT fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same Niro DCT — shudder at low speed = overdue fluid.',
+          check: '<strong>Test stop-and-go. Request DCT fluid receipt.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 clutch', source: 'Hyundai DCT standard' },
+        { title: 'Ioniq Electric battery health (28 kWh)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Ioniq Electric should achieve 105+ miles range (124 EPA) on 90% charge.',
+          check: '<strong>Charge to 90% and verify range estimate.</strong>',
+          cost: '$4,000–$8,000 battery', source: 'Ioniq EV battery data' }
+      ]},
+      { title: 'Safety', items: [
+        { title: 'ADAS windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Camera at windshield doubles replacement cost.',
+          check: '<strong>Inspect windshield top-center zone.</strong>',
+          cost: '$800–$1,800 windshield + recalibration', source: 'ADAS service' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Bluelink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known connectivity issues. Software updates help.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Hyundai campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DCT service + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DCT fluid history is the critical document.',
+          check: '<strong>Run nhtsa.gov/recalls. Request DCT receipt.</strong>',
+          cost: 'Walk away from DCT without history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack.' },
+      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain may not deploy.' }
+    ]
+  },
+
+  'ram-1500-classic-2019': {
+    year: 2019, make: 'Ram', model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)',
+    engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp, MDS)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Ram 1500 Classic is the DS-platform prior-gen Ram, sold alongside the newer DT in 2019–2021. It's a proven, simpler platform without eTorque complexity. The 5.7L Hemi has the same MDS lifter failure risk as in older Rams. The 3.6L Pentastar V6 is the lower-risk choice. Coil-spring rear suspension and reasonable reliability make this a strong value truck at lower prices than the DT.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / 8HP45/70 transmission shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same MDS failure as all Hemi-equipped Rams. Lifters fail 60k–120k on neglected oil.',
+          check: '<strong>Cold-start ticking + P0300 scan + oil interval records.</strong>',
+          cost: '$3,000–$6,500 lifter replacement', source: 'Hemi MDS documented pattern' },
+        { title: 'ZF 8-speed transmission fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at light throttle 25–45 mph = fluid contamination.',
+          check: '<strong>Test highway light throttle.</strong>',
+          cost: '$350–$550 flush', source: '8HP service pattern' }
+      ]},
+      { title: 'Frame & Suspension', items: [
+        { title: 'Coil-spring rear ride and wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Coil-spring rear is comfortable. Isolator squeak at 80k+ miles.',
+          check: '<strong>Drive over rough pavement and listen for rear squeak.</strong>',
+          cost: '$150–$400 isolators', source: 'Common Ram wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 8.4 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect is generally reliable.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Ram campaigns' }
+      ]},
+      { title: 'Rust', items: [
+        { title: 'Frame rust (salt-belt trucks)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'DS-platform Ram frames rust in salt-belt states.',
+          check: '<strong>Undercarriage inspection.</strong>',
+          cost: 'Walk away from through-rust', source: 'Truck standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Hemi oil history + Takata recall', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Hemi MDS history and Takata recall status are both walk-away items.',
+          check: '<strong>Run nhtsa.gov/recalls. Require Hemi service records.</strong>',
+          cost: 'Walk away from Takata unresolved', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free replacement.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage.' },
+      { number: '17V-225', title: 'Fuel Tank Strap', desc: 'Strap may corrode on salt-belt trucks.' },
+      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' }
+    ]
+  },
+
+  'ford-f150-2021': {
+    year: 2021, make: 'Ford', model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (14th gen P702)',
+    engine: '3.3L Ti-VCT V6 (290hp) / 2.7L EcoBoost V6 (325hp) / 3.5L EcoBoost V6 (400hp) / 5.0L Coyote V8 (400hp) / 3.5L PowerBoost Hybrid (430hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 14th-gen F-150 (2021+) introduced the aluminium body to a fully-redesigned interior — Pro Power Onboard generator, available MAX Recline seats, and the PowerBoost hybrid. The 3.5T EcoBoost cam phaser concern carries forward from the 13th gen. 10-speed transmission has been refined. PowerBoost hybrid is the most capable and efficient option but adds battery complexity.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 215, topComplaintArea: '3.5T cam phasers / 10-speed shudder / Pro Power Onboard reliability' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5T EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Cam phaser rattle on cold start above 60k miles.',
+          check: '<strong>Cold-start listen for rattle in first 5 seconds.</strong>',
+          cost: '$1,200–$3,000 cam phaser replacement', source: 'Ford 3.5T pattern' },
+        { title: '10-speed transmission shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '10R80 TSBs for shudder at 25–45 mph under light throttle.',
+          check: '<strong>Test extensively at light throttle 25–45 mph.</strong>',
+          cost: '$350–$550 fluid + calibration', source: 'Ford TSB' },
+        { title: 'PowerBoost hybrid battery health (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'PowerBoost 1.5 kWh battery and electric motor add complexity.',
+          check: '<strong>Test Pro Power Onboard and verify all hybrid functions.</strong>',
+          cost: '$2,000–$5,000 battery if failed', source: 'PowerBoost system data' }
+      ]},
+      { title: 'Frame & Body', items: [
+        { title: 'Aluminium body panel awareness', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Aluminium panels are rust-resistant but expensive post-collision.',
+          check: '<strong>Run CARFAX. Inspect all panels.</strong>',
+          cost: 'Aluminium repair 30–50% premium', source: 'Insurance data' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 4 / SYNC 4A infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 4 is the best Ford infotainment system to date.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + transmission TSB', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Four recalls possible. 10-speed TSB documentation matters.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10-speed may leak — fire risk.' },
+      { number: '21V-485', title: 'Fuel Injector Seal', desc: '3.5T: may leak — fire risk.' },
+      { number: '22V-486', title: 'Rear Axle (some 4x4)', desc: 'Verify bolt fracture recall by VIN.' },
+      { number: '20V-373', title: 'Carbon Monoxide (some builds)', desc: 'Verify by VIN.' }
+    ]
+  },
+
+  'toyota-camry-hybrid-2018': {
+    year: 2018, make: 'Toyota', model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)',
+    engine: '2.5L A25A-FXS Hybrid (208hp system)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The XV70 Camry Hybrid achieves 52 mpg combined with Toyota's proven hybrid reliability. The 2.5L A25A-FXS is the same engine as the RAV4 Hybrid and Venza — extensively proven. Battery degradation is slow (NiMH). No cam phaser or oil dilution concerns that affect the standard 2.5L Camry. One of the most fuel-efficient midsize sedans available.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 50, topComplaintArea: 'Minimal — Toyota hybrid platform well proven' },
+    sections: [
+      { title: 'Hybrid System', items: [
+        { title: 'HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota NiMH battery should achieve 50+ mpg combined. Degradation is gradual.',
+          check: '<strong>Test fuel economy in mixed driving. Under 46 mpg = meaningful degradation.</strong>',
+          cost: '$2,000–$3,500 battery replacement (rare)', source: 'Toyota hybrid reliability data' },
+        { title: 'A25A-FXS hybrid engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Atkinson-cycle engine optimized for efficiency. No significant failure modes.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Toyota hybrid track record' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Toyota Multimedia infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Functional. Verify CarPlay compatibility on your trim year.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front MacPherson strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test each corner.</strong>',
+          cost: '$400–$800 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'XV70 paint quality is above average.',
+          check: '<strong>Inspect leading edges for chips.</strong>',
+          cost: '$0–$300 touch-up', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery health test + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Two recalls possible. Fuel economy test is the key purchase step.',
+          check: '<strong>Test mpg. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
+  },
+
+  'honda-accord-2018': {
+    year: 2018, make: 'Honda', model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring / Sport 2.0T (10th gen CV)',
+    engine: '1.5L L15B7 Turbo I4 (192hp) / 2.0L K20C1 Turbo I4 (252hp) with 10-speed AT or 6MT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 10th-gen Accord (2018–2022) is one of Honda's best engineering achievements — sharp to drive, spacious, and well-built. The 1.5T L15B7 has the same cold-weather oil dilution history as the Civic. The 2.0T K20C1 is the Sport 2.0T and Touring trim choice — generally free of oil dilution but requires verified CVT or 10AT service. Outstanding midsize sedan value.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 295, topComplaintArea: '1.5T oil dilution (cold climate) / CVT/10AT fluid service' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T L15B7 oil dilution (cold climate 1.5T)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same cold-weather oil dilution as 10th-gen Civic. PCM update (TSB 19-049) helps but does not eliminate.',
+          check: '<strong>Pull dipstick on any 1.5T.</strong> Oil at MAX or above = dilution active. Verify PCM update.',
+          cost: '$5,500+ engine if severe', source: 'Browning v. Honda settlement' },
+        { title: '2.0T K20C1 — preferred powertrain', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Sport 2.0T does not share the 1.5T dilution issue. K20C1 is a strong, well-proven engine.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Honda K20C1 reliability' },
+        { title: 'CVT / 10AT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT requires HCF-2 every 30k miles. 10AT benefits from service at 60k.',
+          check: '<strong>Request fluid service records.</strong>',
+          cost: '$200–$400 CVT service / $300–$500 10AT service', source: 'Honda service standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Honda Sensing windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Camera at top-center windshield — chip doubles replacement cost.',
+          check: '<strong>Inspect windshield top-center zone.</strong>',
+          cost: '$1,000–$2,200 windshield + recal', source: 'Honda Sensing service' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and rear multi-link wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test and drive over rough pavement.</strong>',
+          cost: '$400–$800 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine variant + PCM update + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Identify 1.5T vs 2.0T. 1.5T: dipstick check + PCM update required. Four recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Dipstick check before negotiation on 1.5T.</strong>',
+          cost: 'Walk away from 1.5T with active dilution', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' },
+      { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
+  },
+
+  'toyota-rav4-hybrid-2019': {
+    year: 2019, make: 'Toyota', model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)',
+    engine: '2.5L A25A-FXS Hybrid AWD (219hp system, electric rear motor)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The XA50 RAV4 Hybrid is one of the best-selling and most practical hybrid SUVs ever made — 41 mpg combined with standard electric AWD that provides genuine all-weather traction. The hybrid system is the same proven platform across Venza, Camry Hybrid, and Highlander Hybrid. Minimal known failure modes. Battery degradation is slow. Outstanding buy for families who want efficiency with capability.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 55, topComplaintArea: 'Minimal — TNGA-K hybrid platform extensively proven' },
+    sections: [
+      { title: 'Hybrid System', items: [
+        { title: 'HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota NiMH hybrid battery is among the most reliable in the industry.',
+          check: '<strong>Test fuel economy — should hit 39–43 mpg combined.</strong>',
+          cost: '$2,500–$4,500 battery (rare failure)', source: 'Toyota hybrid data' },
+        { title: 'Electric AWD rear motor', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rear electric motor provides AWD without mechanical coupling — no fluid service required.',
+          check: '<strong>Test AWD mode engagement.</strong>',
+          cost: 'Maintenance only', source: 'Toyota e-AWD design' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: 'A25A-FXS engine reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota\'s most proven modern hybrid engine. No significant failure modes.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Toyota hybrid track record' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Toyota Multimedia / Entune', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Functional. Verify CarPlay on your trim year.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$400–$800 standard', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery health + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Fuel economy test is the primary purchase check.',
+          check: '<strong>Test mpg. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
+  },
+
+  'chevrolet-trax-2019': {
+    year: 2019, make: 'Chevrolet', model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)',
+    engine: '1.4L LUJ Ecotec Turbo I4 (138hp) with 6-speed automatic',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Gamma II Trax is GM's entry-level subcompact SUV — smallest and least expensive. The 1.4T Ecotec shares the timing chain and oil consumption concern with the Encore. Limited interior space and power are the honest tradeoffs. Strong value for urban buyers who need something small, affordable, and easy to park.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 155, topComplaintArea: '1.4T timing chain / oil consumption / limited power' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.4T Ecotec timing chain and oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same 1.4T concerns as Encore — timing chain rattle on cold start, oil consumption above 80k on neglected service.',
+          check: '<strong>Cold-start rattle check + dipstick check.</strong>',
+          cost: '$600–$1,400 timing chain / $4,500–$6,500 engine if severe', source: '1.4T Ecotec pattern' },
+        { title: 'Turbo wastegate rattle', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'High-frequency rattle at idle on warm engine = wastegate.',
+          check: '<strong>Warm engine idle listen.</strong>',
+          cost: '$150–$400 wastegate repair', source: '1.4T turbo pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'IntelliLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known Bluetooth issues. Software updates help.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'GM campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$300–$600 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Interior space awareness', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Trax rear seat is tight for adults — verify before purchase.',
+          check: '<strong>Sit in the rear seat and check headroom/legroom.</strong>',
+          cost: 'N/A — preference', source: 'Consumer experience' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Oil change history on 1.4T is the critical document. Three recalls possible.',
+          check: '<strong>Request all maintenance records. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from 1.4T without oil change history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
+      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update.' }
+    ]
+  },
+
+  'toyota-tacoma-2019': {
+    year: 2019, make: 'Toyota', model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)',
+    engine: '2.7L 2TR-FE I4 (159hp) / 3.5L 2GR-FKS V6 (278hp) with 6-speed AT or 6MT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 3rd-gen Tacoma is the dominant mid-size truck — legendary reliability and near-unlimited aftermarket support. The 3.5L 2GR-FKS V6 has direct injection, which means potential carbon buildup at high mileage. The manual transmission has a well-known notchy engagement when cold. Frame rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 145, topComplaintArea: '6AT hunting/shudder / frame rust (salt-belt) / catalytic converter theft' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '6AT transmission hunting (V6)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 6-speed automatic on 3rd-gen Tacoma V6 is notorious for hunting and downshifting aggressively in normal driving. Toyota issued multiple TSBs and a software update.',
+          check: '<strong>Test transmission behavior in highway stop-and-go — any aggressive hunting or repeated downshifts = TSB update needed.</strong>',
+          cost: '$0 TSB software update / $4,000–$7,000 transmission if mechanical', source: 'Toyota TSB T-SB-0245-19' },
+        { title: '2GR-FKS GDI carbon buildup (V6)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Direct injection carbon deposits on intake valves at 80k+ miles.',
+          check: '<strong>Test idle smoothness and cold-start response.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI pattern' }
+      ]},
+      { title: 'Frame & Undercarriage', items: [
+        { title: 'Frame rust on salt-belt trucks', risk: 'high', riskLabel: 'High Attention',
+          desc: '3rd-gen Tacoma frames rust in Northeast/Midwest states.',
+          check: '<strong>Full undercarriage inspection.</strong>',
+          cost: 'Walk away from through-rust', source: 'Truck inspection standard' },
+        { title: 'Catalytic converter theft', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Tacoma is a top catalytic converter theft target.',
+          check: '<strong>Listen for loud exhaust.</strong>',
+          cost: '$1,500–$3,000 per cat', source: 'High theft vehicle list' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Entune / Toyota Multimedia', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Functional. Verify CarPlay on your trim.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: '6AT TSB update + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Confirm TSB T-SB-0245-19 is documented. Three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Ask for TSB record.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
+      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+    ]
+  },
+
+  'honda-pilot-2023': {
+    year: 2023, make: 'Honda', model: 'Pilot', trim: 'Sport / EX-L / TrailSport / Touring / Elite (4th gen YF6)',
+    engine: '3.5L V6 DOHC i-VTEC (285hp) with 10-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen Pilot (2023+) is a complete redesign over the 3rd-gen — new 3.5L DOHC engine without VCM (eliminating the motor mount vibration issue), improved interior, and the TrailSport adds real off-road capability. No VCM = no motor mount vibration. The 10-speed automatic is smooth. Outstanding 3-row family SUV with Honda reliability.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 35, topComplaintArea: 'Minimal — new platform with early production quality variance' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L DOHC i-VTEC — no VCM', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 4th-gen 3.5L does NOT use VCM — the motor mount vibration issue from 3rd gen is eliminated.',
+          check: '<strong>Standard check — cold-start, oil level, smooth acceleration.</strong>',
+          cost: 'Maintenance only', source: 'Honda 4th-gen Pilot engineering change' },
+        { title: '10-speed automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda\'s 10-speed auto is smooth and well-sorted. Test all driving scenarios.',
+          check: '<strong>Test all driving scenarios.</strong>',
+          cost: '$300–$500 fluid service at 60k', source: 'Honda 10AT reliability' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'i-VTM4 AWD torque vectoring fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD rear differential requires DPS-F fluid every 30k miles.',
+          check: '<strong>Test tight parking lot turns for vibration. Request service receipt.</strong>',
+          cost: '$150–$300 service', source: 'Honda AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Honda Multimedia 9-inch infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: '4th-gen Pilot has wireless CarPlay standard on most trims. Test all features.',
+          check: '<strong>Test all infotainment and safety features.</strong>',
+          cost: '$0 update', source: 'Honda campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension quality (early production)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early 4th-gen production had some reports of suspension noise. Test on rough pavement.',
+          check: '<strong>Drive over rough pavement and listen for any noise.</strong>',
+          cost: '$0–$500 adjustment', source: 'Early production pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced 4th-gen Pilot is a strong buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'May not activate — OTA fix.' },
+      { number: '22V-592', title: 'Camera Software', desc: 'Camera display update.' }
+    ]
   }
 
 };
