@@ -9488,6 +9488,445 @@ const CHECKLISTS = {
       { number: '19V-154', title: 'Electronic Park Release', desc: 'May disengage.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
+  },
+
+  'lincoln-navigator-2018': {
+    year: 2018, make: 'Lincoln', model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)',
+    engine: '3.5L EcoBoost V6 (450hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 4th-gen Navigator shares the F-150/Expedition platform with a premium Lincoln interior and air suspension standard. The 3.5T EcoBoost cam phasers and 10-speed shudder are the same concerns as the Expedition. Air suspension repair is a significant additional cost. Outstanding luxury full-size value versus European competition.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 140, topComplaintArea: '3.5T cam phasers / air suspension / 10-speed shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same cam phaser rattle as F-150/Expedition above 60k miles.',
+          check: '<strong>Cold-start rattle check first 5 seconds.</strong>',
+          cost: '$1,200–$3,000 cam phaser replacement', source: 'Ford 3.5T pattern' },
+        { title: '10-speed 10R80 shudder', risk: 'high', riskLabel: 'High Attention',
+          desc: 'TSB shudder at 25–45 mph under light throttle.',
+          check: '<strong>Test extensively at light throttle 25–45 mph.</strong>',
+          cost: '$350–$550 fluid + calibration / $4,500+ transmission', source: 'Ford TSB' }
+      ]},
+      { title: 'Air Suspension', items: [
+        { title: 'Air suspension airbag and compressor', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Standard air suspension bags and compressor fail at 80k–120k miles.',
+          check: '<strong>Check ride height level. Listen for compressor cycling at idle.</strong>',
+          cost: '$600–$1,500 per bag / $800–$1,800 compressor', source: 'Full-size SUV air suspension pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 and Lincoln-specific features', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is reliable. Test all luxury features — massage, panoramic, ambient lighting.',
+          check: '<strong>Test all features.</strong>',
+          cost: '$0 update', source: 'Ford/Lincoln campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Aluminium body panel damage cost', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Aluminium panels are expensive to repair after collision.',
+          check: '<strong>Inspect all panels for repair evidence. Run CARFAX.</strong>',
+          cost: 'Aluminium repair 30–50% premium over steel', source: 'Insurance data' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + air suspension service history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Three recalls possible. Air suspension service history is a key document.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from unresolved critical recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'May shatter.' },
+      { number: '19V-485', title: 'Fuel Injector Seal', desc: 'May leak — fire risk.' },
+      { number: '20V-077', title: 'Backup Camera', desc: 'Delay — software fix.' }
+    ]
+  },
+
+  'toyota-venza-2021': {
+    year: 2021, make: 'Toyota', model: 'Venza', trim: 'LE / XLE / Limited (2nd gen AX10)',
+    engine: '2.5L A25A-FXS Hybrid (219hp system) — Hybrid only',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Venza (2021+) returned as a hybrid-only crossover on the TNGA-K platform — it's essentially a RAV4 Hybrid with a more premium interior and coupe-like roofline. The 2.5L hybrid system is Toyota's most proven and reliable. Battery degradation is slow. Strong buy for buyers who want RAV4 Hybrid driving dynamics with more premium touches.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 40, topComplaintArea: 'Minimal — TNGA hybrid platform well-proven' },
+    sections: [
+      { title: 'Hybrid System', items: [
+        { title: 'HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota nickel-MH hybrid battery is among the most durable in the industry. Should achieve 38+ mpg combined.',
+          check: '<strong>Test fuel economy in mixed driving. Should hit 38–42 mpg.</strong>',
+          cost: '$2,000–$4,000 battery replacement (rare on this platform)', source: 'Toyota hybrid reliability' },
+        { title: '2.5L A25A-FXS engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'TNGA hybrid engine is one of Toyota\'s most reliable.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Toyota hybrid track record' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'e-AWD system (rear electric motor)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota e-AWD uses a rear electric motor — no mechanical coupling to service.',
+          check: '<strong>Test AWD engagement in low-traction scenario if possible.</strong>',
+          cost: 'Maintenance only', source: 'Toyota e-AWD design' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Toyota Multimedia / Star Gaze roof', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Limited models have electrochromic Star Gaze glass roof — verify it switches correctly.',
+          check: '<strong>Test all infotainment and roof features.</strong>',
+          cost: '$0 update / $1,500–$3,000 glass if failed', source: 'Consumer experience' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test and steering check.</strong>',
+          cost: '$400–$800 standard', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Venza is a strong straightforward buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-737', title: 'Backup Camera Software', desc: 'Display delay — OTA fix.' },
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+    ]
+  },
+
+  'subaru-legacy-2018': {
+    year: 2018, make: 'Subaru', model: 'Legacy', trim: '2.5i / 2.5i Premium / 2.5i Sport / 3.6R Limited (BN gen)',
+    engine: '2.5L FB25 Boxer-4 (175hp) / 3.6L EZ36D Boxer-6 (256hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The BN Legacy is Subaru's midsize sedan — comfortable, standard AWD, and reasonable fuel economy. The FB25 boxer-4 has improved versus prior EJ-series but still warrants an oil consumption check above 80k miles. The 3.6L boxer-6 is smooth and powerful but consumes more fuel. CVT fluid service every 30k miles is the critical maintenance item.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 85, topComplaintArea: 'FB25 oil consumption / CVT fluid service' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FB25 oil consumption (80k+ miles)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'FB25 can consume oil above 80k miles with extended intervals.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: '$0 if early / $4,500–$7,000 engine', source: 'Subaru FB-series pattern' },
+        { title: 'CVT Lineartronic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT requires fluid every 30k–40k miles. Shudder = overdue.',
+          check: '<strong>Test highway acceleration for shudder. Request CVT fluid receipts.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 CVT', source: 'Subaru CVT interval' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Rear differential fluid (AWD)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear differential fluid service every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$100–$200 service', source: 'Subaru AWD standard' }
+      ]},
+      { title: 'Safety Systems', items: [
+        { title: 'EyeSight windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EyeSight cameras at top-center windshield — any chip or repair doubles replacement cost.',
+          check: '<strong>Inspect windshield top-center zone.</strong>',
+          cost: '$1,200–$2,200 windshield + recalibration', source: 'Subaru EyeSight service' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Rust (salt-belt cars)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Legacy rockers rust on salt-belt cars.',
+          check: '<strong>Inspect both rockers.</strong>',
+          cost: '$200–$1,500 depending on severity', source: 'Subaru rust pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT fluid history is the critical document.',
+          check: '<strong>Run nhtsa.gov/recalls. Request CVT receipts.</strong>',
+          cost: 'Walk away from CVT without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-394', title: 'EyeSight Camera', desc: 'May deactivate — software fix.' },
+      { number: '18V-307', title: 'EyeSight ECU', desc: 'Calibration update.' },
+      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk.' }
+    ]
+  },
+
+  'nissan-maxima-2018': {
+    year: 2018, make: 'Nissan', model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)',
+    engine: '3.5L VQ35DE V6 (300hp) with Xtronic CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The A36 Maxima markets itself as a 4-door sports car — the 3.5L VQ35DE is genuinely powerful. The CVT is the primary risk: under a powerful V6, the belt wears faster than in lighter vehicles. CVT fluid service with genuine NS-3 fluid every 30k miles is essential. Outstanding value for buyers who want near-luxury sport sedan performance at a mainstream price.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'CVT fluid under V6 load / NissanConnect infotainment' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Xtronic CVT under V6 load', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The CVT paired with the 300hp VQ35 is under more load than in lighter Nissan CVT cars. NS-3 fluid every 30k miles is non-negotiable.',
+          check: '<strong>Request CVT fluid service receipts. Test hard acceleration for any belt slip or shudder.</strong>',
+          cost: '$200–$350 service / $3,500–$5,500 CVT replacement', source: 'Nissan CVT service standard' },
+        { title: 'VQ35DE oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VQ35 can consume oil above 100k miles.',
+          check: '<strong>Pull dipstick before test drive.</strong>',
+          cost: 'Monitor', source: 'VQ35 pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment / navigation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'NissanConnect has known freeze and slow-response issues.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update / $1,000–$2,000 head unit', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Sport suspension wear (SR)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sport suspension in SR trim is firmer — struts wear faster on rough roads.',
+          check: '<strong>Test ride quality and bounce each corner.</strong>',
+          cost: '$400–$800 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality and finish', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'A36 paint quality is above average.',
+          check: '<strong>Standard body inspection.</strong>',
+          cost: '$0–$300 touch-up', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT fluid receipts + recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT history under V6 is the defining purchase variable.',
+          check: '<strong>Run nhtsa.gov/recalls. Require complete CVT service history.</strong>',
+          cost: 'Walk away from CVT without documented service', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds on some builds.' },
+      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag software update.' }
+    ]
+  },
+
+  'honda-fit-2018': {
+    year: 2018, make: 'Honda', model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)',
+    engine: '1.5L L15B7 I4 (130hp) with CVT or 6-speed manual',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The GK Fit is one of the most practical subcompact cars ever made — the Magic Seat system creates more usable space configurations than any car in its class. The 1.5L L15B7 naturally-aspirated engine is reliable and fuel-efficient. CVT fluid service every 30k miles. Discontinued after 2020 in North America, making used supply finite — prices hold well.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 65, topComplaintArea: 'CVT fluid service / Takata airbag (some builds)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'CVT fluid service (Honda HCF-2)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT requires HCF-2 fluid every 30k miles. Neglected fluid leads to shudder and failure.',
+          check: '<strong>Request CVT fluid service history.</strong>',
+          cost: '$200–$400 service / $3,500–$5,000 CVT', source: 'Honda CVT service standard' },
+        { title: '1.5L L15B7 reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally-aspirated and exceptionally reliable.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Honda L15 track record' }
+      ]},
+      { title: 'Safety Recalls', items: [
+        { title: 'Takata airbag recall (some builds)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Some Fit build dates received Takata inflators. Verify on VIN immediately.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before any test drive.</strong>',
+          cost: 'Free dealer replacement / walk away if incomplete', source: 'NHTSA Takata recall' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$300–$600 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Rust on salt-belt cars', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GK Fit develops rocker panel rust on salt-belt cars.',
+          check: '<strong>Inspect rockers with flashlight.</strong>',
+          cost: '$200–$1,200 depending on severity', source: 'Honda compact rust pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT history + Takata recall — both critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT fluid history and Takata recall are both walk-away items if unresolved.',
+          check: '<strong>Request CVT receipts. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from Takata incomplete', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' },
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' }
+    ]
+  },
+
+  'mazda-mazda6-2018': {
+    year: 2018, make: 'Mazda', model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)',
+    engine: '2.5L SkyActiv-G I4 (187hp) / 2.5T SkyActiv-T Turbo I4 (227hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The GJ Mazda6 is one of the best midsize sedans ever built — genuinely premium interior quality, engaging chassis, and excellent reliability. Discontinued in North America after 2023, making used supply finite. The 2.5T Turbo (Signature/Grand Touring) is a meaningful upgrade. No significant failure modes documented. Outstanding value against Accord and Camry.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 55, topComplaintArea: 'Minimal — limited cargo space / discontinued availability' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L SkyActiv-G reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'No significant failure modes documented.',
+          check: '<strong>Standard pre-purchase check.</strong>',
+          cost: 'Maintenance only', source: 'Mazda SkyActiv track record' },
+        { title: '2.5T Turbo oil maintenance', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbo variant requires synthetic oil every 5k miles.',
+          check: '<strong>Verify oil condition and service history.</strong>',
+          cost: 'Maintenance only if serviced', source: 'Mazda service standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '6-speed automatic fluid condition', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda 6AT is reliable. Fluid change every 60k miles.',
+          check: '<strong>Check fluid color.</strong>',
+          cost: '$200–$350 fluid service', source: 'Mazda service interval' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Mazda Connect with rotary dial', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Polarizing but reliable. CarPlay available on 2018+.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Mazda campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Trunk space awareness', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda6 trunk is slightly smaller than Accord/Camry due to sportier roofline.',
+          check: '<strong>Load your typical luggage to verify fit.</strong>',
+          cost: 'N/A — preference', source: 'Consumer experience' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced Mazda6 is outstanding.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-307', title: 'i-ACTIVSENSE Software', desc: 'Camera calibration update.' },
+      { number: '20V-501', title: 'Fuel Injector O-ring (some builds)', desc: 'May leak — fire risk.' }
+    ]
+  },
+
+  'toyota-chr-2018': {
+    year: 2018, make: 'Toyota', model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)',
+    engine: '2.0L 3ZR-FBE I4 (144hp) with CVT — FWD only',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The AX10 C-HR is Toyota's most distinctive styling departure — available only in FWD with a 2.0L engine and CVT. Extremely reliable with no significant failure modes documented. Limited power (144hp) is the honest tradeoff. No AWD is a real limitation for snowy climates. Outstanding reliability for urban buyers who prioritize style and low ownership cost.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 45, topComplaintArea: 'FWD-only limitation / limited power / limited cargo access' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L 3ZR-FBE engine reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota naturally-aspirated 4-cylinder with outstanding reliability record.',
+          check: '<strong>Standard check — cold-start, oil level, smooth acceleration.</strong>',
+          cost: 'Maintenance only', source: 'Toyota 3ZR reliability' },
+        { title: 'CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota CVT requires fluid every 60k miles.',
+          check: '<strong>Test highway acceleration for any shudder.</strong>',
+          cost: '$200–$350 service', source: 'Toyota CVT interval' }
+      ]},
+      { title: 'Practical Limitations', items: [
+        { title: 'Rear door and cargo access', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'C-HR rear doors have a suicide-door-style cutline — limited rear entry and visibility. Assess before purchase.',
+          check: '<strong>Sit in the rear seat and load cargo to assess usability.</strong>',
+          cost: 'N/A — preference', source: 'Consumer experience' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Entune / Toyota Multimedia', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Entune is functional. Verify CarPlay availability on your build.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Strong reliability record.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-737', title: 'Backup Camera Software', desc: 'Display delay — OTA fix.' },
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+    ]
+  },
+
+  'hyundai-elantra-2021': {
+    year: 2021, make: 'Hyundai', model: 'Elantra', trim: 'SE / SEL / N Line / Limited / Hybrid (CN7 gen)',
+    engine: '2.0L MPI Nu2 I4 (147hp) / 1.6T Gamma Turbo (201hp N Line) / 1.6L Smartstream Hybrid (139hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The CN7 Elantra (2021+) is Hyundai's most significant compact sedan redesign in years — dramatic styling, improved interior quality, and the 2.0L Nu2 is an updated engine that reduces some of the prior-gen bearing concerns. However, KSDS recall coverage should still be verified on the VIN. The N Line 1.6T is genuinely fun. Hybrid version achieves 50 mpg combined.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 85, topComplaintArea: 'Nu2 engine KSDS verification / DCT (N Line) shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L Nu2 KSDS recall check (verify by VIN)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The CN7 Elantra 2.0L is an updated Nu2 engine. Verify this specific VIN against all KSDS campaigns — some CN7 VINs are included.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls and verify all KSDS campaigns.</strong>',
+          cost: '$0 under recall / $5,500–$8,000 engine if seizure', source: 'Hyundai KSDS recall family' },
+        { title: '1.6T N Line DCT shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'N Line DCT shudder at low speed = overdue fluid.',
+          check: '<strong>Test stop-and-go under 15 mph.</strong>',
+          cost: '$250–$450 fluid service / $3,500–$5,500 clutch pack', source: 'Hyundai DCT pattern' }
+      ]},
+      { title: 'Hybrid System', items: [
+        { title: 'Hybrid battery health (Hybrid model)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Hybrid system should achieve 48–50 mpg combined.',
+          check: '<strong>Test fuel economy in mixed driving.</strong>',
+          cost: '$3,000–$5,000 battery if degraded', source: 'Hyundai hybrid data' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Bluelink / Display Audio', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CN7 infotainment is well-received.',
+          check: '<strong>Test CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'Hyundai campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear (early high-mileage)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CN7 is new enough that significant wear is uncommon under 60k miles.',
+          check: '<strong>Standard bounce test.</strong>',
+          cost: '$400–$700 standard wear', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'KSDS recall verification + service history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'VIN-level KSDS check is required even on CN7 builds.',
+          check: '<strong>Run nhtsa.gov/recalls before any test drive.</strong>',
+          cost: 'Walk away from open KSDS campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-159', title: 'KSDS Engine Check (verify by VIN)', desc: 'Verify if this specific CN7 VIN is included.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify by VIN.' }
+    ]
+  },
+
+  'kia-forte-2019': {
+    year: 2019, make: 'Kia', model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD gen)',
+    engine: '2.0L MPI Nu I4 (147hp) / 1.6T Gamma Turbo (201hp GT)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The BD Forte is Kia's best compact sedan — well-styled, feature-rich, and priced aggressively. The 2.0L Nu engine carries KSDS recall exposure (same family as Sonata). Verify all recall campaigns before purchase. The 1.6T GT is genuinely fun. IVT/CVT fluid service is the critical maintenance document on the base 2.0L. Strong value when recalls are confirmed complete.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L Nu engine KSDS recall', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Nu engine has KSDS rod bearing recall exposure. Multiple campaigns may apply.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls BEFORE any test drive.</strong>',
+          cost: '$0 under recall / $5,500–$8,000 engine', source: 'Kia KSDS recall family' },
+        { title: 'IVT/CVT fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'IVT requires fluid every 30k miles.',
+          check: '<strong>Request IVT fluid service receipts.</strong>',
+          cost: '$200–$400 service / $3,500–$5,000 IVT', source: 'Kia IVT service standard' }
+      ]},
+      { title: 'GT Powertrain', items: [
+        { title: '1.6T DCT fluid and service (GT)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '7-speed DCT shudder at low speed = overdue fluid.',
+          check: '<strong>Test stop-and-go under 15 mph.</strong>',
+          cost: '$250–$450 service', source: 'Kia DCT pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Connectivity issues. Test all functions.',
+          check: '<strong>Test CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$300–$600 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine recall complete — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'ALL KSDS campaigns must be confirmed complete before purchase.',
+          check: '<strong>Run nhtsa.gov/recalls. Walk away from any open engine campaign.</strong>',
+          cost: 'Walk away from unresolved KSDS', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Nu rod bearing monitoring update.' },
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+    ]
   }
 
 };
