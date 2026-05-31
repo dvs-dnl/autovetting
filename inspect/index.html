@@ -3607,7 +3607,9 @@ const CHECKLISTS = {
       { number: '20V-391', title: 'Denso Low-Pressure Fuel Pump', desc: 'May fail causing stall or no-start. Free dealer replacement — verify VIN.' },
       { number: '19V-133', title: 'Pre-Collision System Calibration', desc: 'PCS may not detect certain hazards. Free software update.' },
       { number: '18V-004', title: 'Seat Recliner Mechanism', desc: 'Seat may not lock in position; injury risk. Free repair — verify VIN.' }
-    ]
+    ],
+    vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-391), while the 2GR-FKS V6 is one of Toyota's most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
+    blogUrl: '/blog/2018-toyota-camry-buyers-guide'
   },
 
   'ford-f150-2015': {
