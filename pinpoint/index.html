@@ -217,6 +217,12 @@
     text-transform: uppercase;
   }
   .pick-1-rec strong { color: var(--electric); }
+  /* ---- Tier badge colour variants (used by dynamic cards) ---- */
+  .pick-1-tier--top    { background: var(--clear-bg); color: #065F46; }
+  .pick-1-tier--strong { background: var(--electric-50); color: var(--electric-hover); }
+  .pick-1-tier--caution{ background: #FEF3C7; color: #92400E; }
+  /* Single-column body for dynamic result cards (no right sidebar) */
+  .pick-1-body--full   { grid-template-columns: 1fr; gap: 0; max-width: 820px; }
   .pick-1-body {
     padding: 48px 36px 40px;
     display: grid;
@@ -382,106 +388,6 @@
   }
   .verdict-btn:hover { background: var(--electric-hover); color: var(--white); text-decoration: none; }
 
-  /* ============================================================
-     RUNNERS-UP
-     ============================================================ */
-  .runners-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .runner {
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: 28px;
-    border: 1px solid var(--slate-200);
-    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
-    cursor: pointer;
-    position: relative;
-  }
-  .runner:hover {
-    border-color: var(--electric);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-  .runner-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 14px;
-  }
-  .runner-rank {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--electric);
-    letter-spacing: 0.04em;
-  }
-  .runner-tier {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 4px;
-  }
-  .runner-tier.top { background: var(--clear-bg); color: #065F46; }
-  .runner-tier.strong { background: var(--electric-50); color: var(--electric-hover); }
-  .runner-title {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-  .runner-years {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--slate-500);
-    margin-bottom: 14px;
-  }
-  .runner-tagline {
-    font-size: 15px;
-    color: var(--navy);
-    font-weight: 500;
-    line-height: 1.45;
-    margin-bottom: 20px;
-  }
-  .runner-stats {
-    display: flex;
-    gap: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--slate-200);
-    flex-wrap: wrap;
-  }
-  .runner-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .runner-stat-label {
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--slate-500);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .runner-stat-val {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--navy);
-  }
-  .runner-open {
-    position: absolute;
-    top: 28px;
-    right: 28px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--slate-400);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
 
   /* ============================================================
      SHARPEN — inline precision tool
@@ -738,7 +644,6 @@
     .pick-1-body { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
     .pick-1-title { font-size: 32px; }
     .pick-1-tagline { font-size: 18px; }
-    .runners-grid { grid-template-columns: 1fr; }
     .sharpen { padding: 28px 24px; margin: 56px 16px; border-radius: var(--radius-xl); }
     .skip-grid { grid-template-columns: 1fr; }
     .due-grid { grid-template-columns: 1fr; }
@@ -895,98 +800,12 @@
     padding: 0;
   }
   .vs-reset-btn:hover { color: var(--electric-hover); }
-  /* Card grid */
+  /* Card grid — stacked detail cards */
   .vs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .vc {
-    background: var(--white);
-    border: 1px solid var(--slate-200);
-    border-radius: var(--radius-lg);
-    padding: 20px 22px 18px;
-    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    transition: box-shadow .15s, border-color .15s;
+    gap: 28px;
   }
-  .vc:hover {
-    border-color: var(--electric);
-    box-shadow: var(--shadow-md);
-  }
-  .vc-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  .vc-type {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.10em;
-    color: var(--slate-500);
-  }
-  .vc-tier {
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 9px;
-    border-radius: 999px;
-  }
-  .vc-tier-top {
-    background: #ECFDF5;
-    color: #10B981;
-  }
-  .vc-tier-strong {
-    background: #EFF6FF;
-    color: var(--electric);
-  }
-  .vc-tier-caution {
-    background: #FFF7ED;
-    color: #C2410C;
-  }
-  .vc-name {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--navy);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-  }
-  .vc-years {
-    font-size: 12px;
-    color: var(--slate-500);
-    font-weight: 500;
-  }
-  .vc-tagline {
-    font-size: 13px;
-    color: var(--slate-500);
-    line-height: 1.5;
-    flex-grow: 1;
-    margin-top: 4px;
-  }
-  .vc-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 14px;
-    padding-top: 12px;
-    border-top: 1px solid var(--slate-100);
-  }
-  .vc-price {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
-  }
-  .vc-link {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--electric);
-  }
-  .vc-link:hover { color: var(--electric-hover); }
   .vs-empty {
     grid-column: 1 / -1;
     text-align: center;
@@ -1280,201 +1099,6 @@
     <div class="vs-grid" id="vs-grid" aria-live="polite"></div></div>
 </section>
 
-<!-- ============================================================
-
-<!-- ============================================================
-     THE TOP PICK
-     ============================================================ -->
-<div class="pick-1" id="pick-1">
-  <div class="pick-1-card">
-    <div class="pick-1-meta">
-      <div class="pick-1-meta-left">
-        <span class="pick-1-rank">#1</span>
-        <span class="pick-1-tier">Top tier</span>
-      </div>
-      <span class="pick-1-rec">Best-fit answer for <strong>$7,500 / family daily / 250k mi</strong></span>
-    </div>
-
-    <div class="pick-1-body">
-      <div class="pick-1-left">
-        <h2 class="pick-1-title">Acura TSX</h2>
-        <p class="pick-1-years">2014 &middot; FWD &middot; 2.4L K24 I4 (201hp) or 3.5L V6 (280hp)</p>
-        <p class="pick-1-tagline">The strongest single pick. <em>Premium feel, K24 reliability, sporty handling.</em></p>
-
-        <div class="pick-1-prose">
-          <p>The TSX is built on the same <strong>K24 four-cylinder</strong> you'll find in a CR-V, the Acura RDX, and (until 2015) the Honda Accord. It's one of the most reliable Japanese engines of the last 30 years &mdash; owners regularly hit 250,000 miles with nothing more than oil, filters, and tires.</p>
-          <p>The 2014 was the last model year. Acura killed it to consolidate on the TLX, which means inventory is now low but the bugs were worked out. The interior is leather and sunroof standard; the optional Technology Package adds ELS audio that punches well above its segment.</p>
-          <p><strong>For your budget, this is the one we'd buy.</strong> Not because it's the most exciting, but because nothing else at $7,500 gives you premium-segment feel with this kind of mechanical certainty.</p>
-        </div>
-
-        <div class="pick-1-stats">
-          <div class="stat-block">
-            <span class="stat-label">Sweet spot</span>
-            <span class="stat-val">90–130k mi</span>
-            <span class="stat-vs">Best value before timing belt</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">Realistic price</span>
-            <span class="stat-val">$7,000–$8,000</span>
-            <span class="stat-vs">Phoenix metro, May 2026</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">Annual repair</span>
-            <span class="stat-val up">$415</span>
-            <span class="stat-vs">vs $739 segment avg</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">Expected lifespan</span>
-            <span class="stat-val">250,000 mi</span>
-            <span class="stat-vs">With routine maintenance</span>
-          </div>
-        </div>
-      </div>
-
-      <aside class="pick-1-side">
-        <div class="lens">
-          <h3>What you're getting</h3>
-          <ul>
-            <li>K24 engine, regularly hits 250k+ with basic upkeep</li>
-            <li>Premium interior: leather, sunroof, heated seats standard</li>
-            <li>Rare 6-speed manual option (sporty and durable)</li>
-            <li>Rear AC vents standard &mdash; matters in Phoenix</li>
-            <li>Lower repair costs than any rival in segment</li>
-          </ul>
-        </div>
-        <div class="lens warn">
-          <h3>What to watch</h3>
-          <ul>
-            <li>Premium fuel required (91+ octane)</li>
-            <li>Modest power on the I4 vs turbo competitors</li>
-            <li>FWD only &mdash; no AWD option</li>
-            <li>Avoid 2012 model year (157 logged complaints &mdash; PS, engine)</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-
-    <div class="verdict-bar">
-      <span class="verdict-label">The verdict</span>
-      <span class="verdict-text">Find a 2014 TSX with under 130k, full service records, and clean Carfax. Drive it home for under $8,000. Run a pre-purchase inspection. Drive it for the next decade.</span>
-      <a class="verdict-btn" href="/inspect/?year=2014&make=Acura&model=TSX">Run the inspection <span>&rarr;</span></a>
-    </div>
-  </div>
-</div>
-
-<!-- ============================================================
-     RUNNERS-UP
-     ============================================================ -->
-<section class="section">
-  <p class="section-eyebrow">The runners-up</p>
-  <h2 class="section-head">If you can't find a clean TSX.</h2>
-  <p class="section-sub">Same budget, same criteria. Each of these would survive 200,000 miles and most are easier to find than a TSX.</p>
-
-  <div class="runners-grid">
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 02</span>
-        <span class="runner-tier top">Top tier</span>
-      </div>
-      <h3 class="runner-title">Honda Ridgeline RTL</h3>
-      <p class="runner-years">2010–2012 &middot; AWD &middot; 3.5L J35 V6</p>
-      <p class="runner-tagline">The most honest used truck under $8k. AWD crew cab, unibody, in-bed trunk.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$7,200</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">140–170k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">17 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">230k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 03</span>
-        <span class="runner-tier top">Top tier</span>
-      </div>
-      <h3 class="runner-title">Toyota 4Runner V6 SR5</h3>
-      <p class="runner-years">2007–2010 &middot; 4WD &middot; 4.0L 1GR-FE V6</p>
-      <p class="runner-tagline">The closest thing to a guaranteed 100k more miles at any price. Body-on-frame Toyota dependability.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$8,400</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">180–230k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">18 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">350k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 04</span>
-        <span class="runner-tier top">Top tier</span>
-      </div>
-      <h3 class="runner-title">Lexus RX 350</h3>
-      <p class="runner-years">2010–2012 &middot; AWD opt &middot; 3.5L 2GR-FE V6</p>
-      <p class="runner-tagline">Toyota Highlander mechanicals with Lexus refinement. Quiet, durable, boring &mdash; that's a feature.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$7,500</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">140–190k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">20 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">280k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 05</span>
-        <span class="runner-tier strong">Strong</span>
-      </div>
-      <h3 class="runner-title">Honda Accord LX/EX</h3>
-      <p class="runner-years">2014 &middot; FWD &middot; 2.4L K24W I4</p>
-      <p class="runner-tagline">Same K24-family engine as the TSX. Less premium, more inventory, often cheaper at this mileage band.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$8,200</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">100–140k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">31 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">250k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 06</span>
-        <span class="runner-tier strong">Strong</span>
-      </div>
-      <h3 class="runner-title">Subaru Forester 2.5i Premium</h3>
-      <p class="runner-years">2014&ndash;2017 &middot; AWD &middot; 2.5L FB25 boxer-4</p>
-      <p class="runner-tagline">AWD standard on a CR-V budget. The pick when you actually need all-wheel drive every winter, not just on paper.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$8,500</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">90&ndash;130k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">26 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">220k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-    <article class="runner">
-      <div class="runner-head">
-        <span class="runner-rank">No. 07</span>
-        <span class="runner-tier strong">Strong</span>
-      </div>
-      <h3 class="runner-title">Mazda6 Sport/Touring</h3>
-      <p class="runner-years">2014&ndash;2015 &middot; FWD &middot; 2.5L Skyactiv-G I4</p>
-      <p class="runner-tagline">Driver-focused midsize, 240k-mile Skyactiv-G. Sportier than the Accord, less premium than the TSX, sometimes cheaper than both.</p>
-      <div class="runner-stats">
-        <div class="runner-stat"><span class="runner-stat-label">Price</span><span class="runner-stat-val">$7,800</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Miles</span><span class="runner-stat-val">100&ndash;140k</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">MPG</span><span class="runner-stat-val">28 cmb</span></div>
-        <div class="runner-stat"><span class="runner-stat-label">Lifespan</span><span class="runner-stat-val">240k</span></div>
-      </div>
-      <span class="runner-open">Open &darr;</span>
-    </article>
-
-  </div>
-</section>
 
 
 <!-- ============================================================
@@ -2503,22 +2127,73 @@
         return;
       }
 
-      // Build cards
-      var html = results.map(function (v) {
-        var tl = v.tier.toLowerCase();
-        var tierClass = tl === 'top' ? 'vc-tier-top' : tl === 'caution' ? 'vc-tier-caution' : 'vc-tier-strong';
-        return '<div class="vc">' +
-          '<div class="vc-head">' +
-            '<span class="vc-type">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
-            '<span class="vc-tier ' + tierClass + '">' + v.tier + '</span>' +
+      // Build cards — pick-1 style
+      var BUDGET_LABELS = {
+        'under-10k': 'Under $10k', '10-15k': '$10–15k',
+        '15-20k': '$15–20k', '20-30k': '$20–30k'
+      };
+      var PURPOSE_LABELS = {
+        'reliability': 'Reliability', 'fuel-economy': 'Fuel economy',
+        'fun-to-drive': 'Fun to drive', 'cargo': 'Cargo / towing',
+        'off-road': 'Off-road'
+      };
+      var html = results.map(function (v, i) {
+        var rank = i + 1;
+        var tl   = v.tier.toLowerCase();
+        var tierLabel = tl === 'top'    ? 'Top tier'    :
+                        tl === 'strong' ? 'Strong pick' :
+                        tl === 'caution'? 'Caution'     : v.tier;
+        var tierMod   = tl === 'top'    ? 'pick-1-tier--top'    :
+                        tl === 'strong' ? 'pick-1-tier--strong' :
+                                          'pick-1-tier--caution';
+        // "Best-fit answer for …" label from active chip filters
+        var fitParts = [];
+        if (state.budget)  fitParts.push(BUDGET_LABELS[state.budget]   || state.budget);
+        if (state.type)    fitParts.push(TYPE_LABELS[state.type]        || state.type);
+        if (state.purpose) fitParts.push(PURPOSE_LABELS[state.purpose]  || state.purpose);
+        var recHtml = fitParts.length
+          ? '<span class="pick-1-rec">Best-fit answer for <strong>' + fitParts.join(' / ') + '</strong></span>'
+          : '';
+        var verdictHtml = v.inspectUrl
+          ? '<div class="verdict-bar">' +
+              '<span class="verdict-label">The verdict</span>' +
+              '<a class="verdict-btn" href="' + v.inspectUrl + '">Run the inspection <span>&rarr;</span></a>' +
+            '</div>'
+          : '';
+        return '<div class="pick-1-card">' +
+          '<div class="pick-1-meta">' +
+            '<div class="pick-1-meta-left">' +
+              '<span class="pick-1-rank">#' + rank + '</span>' +
+              '<span class="pick-1-tier ' + tierMod + '">' + tierLabel + '</span>' +
+            '</div>' +
+            recHtml +
           '</div>' +
-          '<h3 class="vc-name">' + v.name + '</h3>' +
-          '<p class="vc-years">' + v.years + '</p>' +
-          '<p class="vc-tagline">' + v.tagline + '</p>' +
-          '<div class="vc-foot">' +
-            '<span class="vc-price">' + v.price + '</span>' +
-            (v.inspectUrl ? '<a class="vc-link" href="' + v.inspectUrl + '">Full checklist &rarr;</a>' : '<span class="vc-link-muted">No checklist yet</span>') +
+          '<div class="pick-1-body pick-1-body--full">' +
+            '<div>' +
+              '<h2 class="pick-1-title">' + v.name + '</h2>' +
+              '<p class="pick-1-years">' + v.years + '</p>' +
+              '<p class="pick-1-tagline">' + v.tagline + '</p>' +
+              '<div class="pick-1-stats">' +
+                '<div class="stat-block">' +
+                  '<span class="stat-label">Price range</span>' +
+                  '<span class="stat-val">' + v.price + '</span>' +
+                '</div>' +
+                '<div class="stat-block">' +
+                  '<span class="stat-label">Body type</span>' +
+                  '<span class="stat-val">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
+                '</div>' +
+                '<div class="stat-block">' +
+                  '<span class="stat-label">Budget band</span>' +
+                  '<span class="stat-val">' + (BUDGET_LABELS[v.budget] || v.budget) + '</span>' +
+                '</div>' +
+                '<div class="stat-block">' +
+                  '<span class="stat-label">Best for</span>' +
+                  '<span class="stat-val">' + (PURPOSE_LABELS[v.purpose] || v.purpose) + '</span>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
           '</div>' +
+          verdictHtml +
         '</div>';
       }).join('');
 
