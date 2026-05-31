@@ -6723,6 +6723,399 @@ const CHECKLISTS = {
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner may not deploy correctly.' },
       { number: '18V-239', title: 'Tire Pressure Sensor', desc: 'TPMS may not alert correctly.' }
     ]
+  },
+
+  'dodge-challenger-2018': {
+    year: 2018, make: 'Dodge', model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)',
+    engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (375hp) / 6.4L 392 HEMI (485hp) / 6.2L Supercharged (717hp+ Hellcat)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The LC Challenger is the most American muscle car you can buy used — the platform is virtually unchanged since 2008, which means proven reliability and low-cost parts. The 5.7L Hemi MDS lifter failure is the same issue as the Charger and Ram 1500. Hellcat buyers: expect high-mileage brake and tire wear from track use. The 3.6L V6 is the most trouble-free option and still moves quickly.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / abuse history on performance models' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'MDS deactivating lifters fail at 60k–120k miles on neglected oil schedules.',
+          check: '<strong>Cold-start the engine and listen for persistent ticking.</strong> Scan for P0300-series codes. Verify oil interval records.',
+          cost: '$3,000–$6,500 lifter replacement', source: 'Hemi MDS documented pattern' },
+        { title: 'Transmission fluid (8HP70 ZF)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at 25–45 mph light throttle = torque converter fluid contamination on the 8-speed.',
+          check: '<strong>Test light throttle at highway speed.</strong>',
+          cost: '$350–$550 fluid flush', source: '8HP70 service pattern' }
+      ]},
+      { title: 'Performance/Abuse Checks', items: [
+        { title: 'Launch control and track use evidence (Scat Pack / Hellcat)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Performance trims are frequently launched hard. Worn differentials, clutch pack, and driveline indicate abuse.',
+          check: '<strong>Inspect tires for uneven wear. Listen for rear differential whine at speed. Check for any drag strip timing slips in the glovebox.</strong>',
+          cost: '$1,200–$3,500 differential service / rebuild', source: 'Performance car inspection standard' }
+      ]},
+      { title: 'Brakes', items: [
+        { title: 'Brake pad and rotor inspection', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'High-performance brakes wear rapidly when driven hard.',
+          check: '<strong>Inspect pad thickness and feel for rotor vibration during test stops.</strong>',
+          cost: '$400–$1,200 full brake service', source: 'Standard inspection' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 8.4 freeze / GPS', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same UConnect system as Charger — freeze and GPS antenna issues.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update / $500–$1,500 unit', source: 'Dodge campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Takata recall + performance history audit', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Takata airbag recall affects certain build dates. Performance models need abuse-history assessment.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Walk away from Hellcat/Scat Pack without full service history.',
+          cost: 'Walk away from Takata-unresolved or abuse-evident cars', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free dealer replacement.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
+    ]
+  },
+
+  'jeep-cherokee-2018': {
+    year: 2018, make: 'Jeep', model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)',
+    engine: '2.4L Tigershark I4 (180hp) / 2.0L Turbo I4 (270hp) / 3.2L Pentastar V6 (271hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The KL Cherokee is a comfortable, capable crossover with a unique 9-speed transmission that had significant early problems. The 9-speed was substantially revised through TSB updates and by 2018 is much improved, but always test the transmission carefully. The 2.4L Tigershark has documented oil consumption. The 3.2L V6 is the most reliable powertrain in this generation.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 320, topComplaintArea: '9-speed transmission / 2.4L oil consumption' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '9-speed ZF 948TE shudder and hunting', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Early KL Cherokee 9-speed had severe hunting and refusal to upshift. By 2018, major TSB updates improved behavior significantly but shudder at 30–45 mph is still possible.',
+          check: '<strong>Test the transmission extensively — all speed ranges, light throttle at highway, stop-and-go, and parking lot maneuvers.</strong> Any hesitation, hunting, or refusal to shift = transmission issue.',
+          cost: '$350–$600 fluid + calibration / $4,500–$7,500 transmission replacement', source: 'ZF 948TE revision history' },
+        { title: '2.4L Tigershark oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The Tigershark I4 has documented oil consumption — some engines consume 1 qt per 1,000 miles.',
+          check: '<strong>Pull dipstick before any test drive.</strong> Low on recent change = active consumption.',
+          cost: '$0 if early / $5,000–$7,500 engine rebuild', source: 'Chrysler Tigershark documented issue' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect infotainment / Bluetooth', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect 8.4 is generally good. Occasional Bluetooth pairing failures.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Jeep campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front lower control arm bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Lower control arm bushings wear at 80k+ miles causing handling vagueness.',
+          check: '<strong>Test steering feel at highway speed for any wander.</strong>',
+          cost: '$400–$800 per side', source: 'KL Cherokee wear pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Active Drive AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid service required every 30–45k miles.',
+          check: '<strong>Test cornering at highway speed for shudder.</strong>',
+          cost: '$150–$300 service / $800–$1,500 coupling', source: 'Jeep AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Transmission and oil consumption history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Transmission service records and oil change history are the key documents on KL Cherokee.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Request all service records.</strong>',
+          cost: 'Walk away from Tigershark without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag', desc: 'Passenger inflator may rupture — free replacement.' },
+      { number: '18V-239', title: 'TPMS Sensor', desc: 'TPMS may not alert correctly.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
+    ]
+  },
+
+  'nissan-pathfinder-2017': {
+    year: 2017, make: 'Nissan', model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)',
+    engine: '3.5L VQ35DE V6 (284hp) with Xtronic CVT',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The R52 Pathfinder replaced the 4WD body-on-frame model with an FWD-based unibody crossover — a controversial move. The CVT paired with the 3.5L V6 on a heavy 3-row SUV is the headline concern: the transmission is under more load than in lighter vehicles, and failure has been documented earlier than on Altima/Rogue. Radiator coolant mixing with CVT fluid (via a cross-contamination failure) is the most catastrophic documented issue.",
+    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
+    sections: [
+      { title: 'Transmission — Most Critical', items: [
+        { title: 'CVT radiator cross-contamination check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The R52 Pathfinder has a known failure mode where the transmission oil cooler inside the radiator leaks coolant into the CVT fluid, destroying the CVT. Pink/milky CVT fluid or pink coolant in the reservoir = catastrophic failure in progress.',
+          check: '<strong>Pull CVT dipstick and inspect color — should be clear reddish-amber. Any pink, milky, or foamy appearance = walk away immediately.</strong> Also check coolant reservoir for pink or brown discoloration.',
+          cost: '$3,500–$5,500 CVT + $800–$1,500 radiator replacement', source: 'NHTSA class action + Nissan TSB NTB13-118' },
+        { title: 'CVT fluid service history (NS-3)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Even without contamination, the CVT under V6 3-row SUV load requires NS-3 fluid every 30k miles.',
+          check: '<strong>Ask for all CVT fluid change receipts.</strong>',
+          cost: '$200–$350 flush / $3,500–$5,500 CVT', source: 'Nissan service interval' }
+      ]},
+      { title: 'Engine', items: [
+        { title: 'VQ35DE oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VQ35 can consume oil above 100k miles with extended intervals.',
+          check: '<strong>Check dipstick before driving.</strong>',
+          cost: 'Monitor', source: 'VQ35 pattern' }
+      ]},
+      { title: 'Cooling System', items: [
+        { title: 'Radiator condition and coolant color', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Radiator is the source of the CVT contamination problem. Inspect carefully for any leaks.',
+          check: '<strong>Inspect radiator for leaks. Check coolant color — should be green or orange, never pink or milky.</strong>',
+          cost: '$800–$1,500 radiator replacement', source: 'Nissan TSB NTB13-118' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known freeze and connectivity issues. Software updates help.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT + radiator service history — walk-away items', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The CVT contamination issue and fluid service history are deal-breakers without documentation.',
+          check: '<strong>Run nhtsa.gov/recalls. Inspect CVT dipstick and coolant BEFORE any test drive.</strong>',
+          cost: 'Walk away from any contamination evidence', source: 'NHTSA + Nissan TSB' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-400', title: 'CVT Cooler Cross-Contamination', desc: 'Radiator may allow coolant to mix with CVT fluid — critical failure.' },
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'Fuel pump may fail — engine stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Welds may be defective.' },
+      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be incorrectly disabled.' }
+    ]
+  },
+
+  'nissan-frontier-2018': {
+    year: 2018, make: 'Nissan', model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)',
+    engine: '2.5L QR25DE I4 (152hp) / 4.0L VQ40DE V6 (261hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The D40 Frontier ran largely unchanged from 2005–2021 — which makes parts cheap and reliability a known quantity. The 4.0L VQ40DE V6 is a proven workhorse. Main buyer concern: the 4.0L V6 radiator coolant cross-contaminating the automatic transmission (same family issue as Pathfinder). Also inspect for frame rust and catalytic converter theft on street-parked trucks.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'Radiator/trans coolant cross-contamination (V6 auto) / catalytic converter theft' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '4.0L VQ40 auto transmission contamination check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The radiator on VQ40 Frontiers with automatic transmission can leak coolant into the transmission fluid — same class of failure as the Pathfinder CVT contamination. Pink or milky transmission fluid = walk away.',
+          check: '<strong>Check transmission fluid color before driving — should be red, never pink or milky.</strong>',
+          cost: '$800–$1,500 radiator + $2,500–$4,000 transmission flush or rebuild', source: 'Nissan radiator/trans contamination pattern' },
+        { title: '4.0L VQ40DE valve cover seepage', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Valve cover gaskets seep oil past 100k miles on VQ40.',
+          check: '<strong>Inspect valve cover edges with engine warm.</strong>',
+          cost: '$300–$600 gaskets', source: 'VQ40 pattern' }
+      ]},
+      { title: 'Frame & Undercarriage', items: [
+        { title: 'Frame rust (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'D40 Frontier frames rust in Northeast/Midwest states. Through-rust on the frame is structural.',
+          check: '<strong>Inspect frame with flashlight — check cab corners, crossmembers, and rear section.</strong>',
+          cost: 'Walk away from through-rust on structural sections', source: 'Truck inspection standard' },
+        { title: 'Catalytic converter theft marks', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Frontier is a high-theft target for catalytic converter theft due to its height and accessible exhaust.',
+          check: '<strong>Listen for loud exhaust note — missing cats are unmistakable.</strong> Inspect exhaust flanges for cut or clamp marks.',
+          cost: '$800–$2,000 catalytic converter replacement', source: 'High theft vehicle list' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment — older platform', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'D40 Frontier uses an older NissanConnect that lacks wireless CarPlay. Functions are basic but reliable.',
+          check: '<strong>Verify backup camera (if equipped) and basic audio functions.</strong>',
+          cost: '$0–$300 aftermarket upgrade', source: 'Consumer acceptance' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Transmission fluid check + recall verification', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Transmission contamination check is non-negotiable. Run nhtsa.gov/recalls.',
+          check: '<strong>Inspect fluid before driving.</strong>',
+          cost: 'Walk away from contaminated fluid', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '14V-168', title: 'Fuel Tank Strap', desc: 'Strap corrosion may cause tank to drop.' },
+      { number: '12V-395', title: 'Brake Booster', desc: 'Reduced braking effort on some 2012+ builds.' }
+    ]
+  },
+
+  'bmw-3series-2018': {
+    year: 2018, make: 'BMW', model: '3 Series', trim: '320i / 328i / 330i / 340i / M340i (F30)',
+    engine: '2.0L B48 Turbo I4 (248–258hp) / 3.0L B58 Turbo I6 (320–382hp) / 3.0L N55/S55 (M models)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The F30 3 Series is one of the most satisfying driving experiences available used — but maintenance costs are above-average and must be budgeted honestly. The B48 4-cylinder is the most cost-effective engine. The N20 in 2012–2015 cars had timing chain issues; the B48 (2016+) resolved most of them. Budget $1,500–$3,000/year for maintenance on any used BMW. Pre-purchase inspection by a BMW specialist is non-negotiable.",
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 190, topComplaintArea: 'High maintenance costs / N20 timing chain on earlier builds' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'N20 timing chain (2012–2015 only)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The N20 2.0T engine used in 2012–2015 328i has a documented upper timing chain guide failure. Rattling at startup on a warm engine is a pre-failure sign. 2016+ B48 does not share this issue.',
+          check: '<strong>2016+ cars with B48: lower risk. For any 2012–2015: cold-start the engine and listen for startup rattle. Ask for timing chain service records.</strong>',
+          cost: '$1,500–$3,000 timing chain / guide replacement', source: 'BMW N20 class action' },
+        { title: 'B48 / B58 coolant system (water pump and thermostat)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'BMW electric water pumps and expansion tanks fail at 80k–120k miles — often without warning. Loss of coolant quickly leads to overheating.',
+          check: '<strong>Check coolant level and inspect expansion tank for cracks.</strong> Any low coolant without external leak = suspect water pump or tank.',
+          cost: '$600–$1,200 water pump + thermostat', source: 'BMW electric water pump known failure' },
+        { title: 'Oil consumption and VANOS seals', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'BMW engines consume oil by design — 1 qt per 1,000 miles is considered "normal" by BMW. VANOS solenoid seals leak at 80k+ miles.',
+          check: '<strong>Pull oil dipstick before driving.</strong> Ask seller how often oil is added between changes.',
+          cost: '$0–$500 VANOS solenoid seals', source: 'BMW consumption standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'ZF 8HP automatic fluid (DCT on M models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'BMW specifies "lifetime" fluid — but independent shops recommend change at 60k. Low-speed shudder indicates fluid degradation.',
+          check: '<strong>Test low-speed maneuvering for shudder.</strong>',
+          cost: '$400–$600 fluid service', source: 'BMW independent shop consensus' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'iDrive system and control module faults', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'F30 iDrive can accumulate module fault codes that are expensive to diagnose and repair.',
+          check: '<strong>Have the car scanned with BMW-compatible ISTA or BIMMERCODE before purchase.</strong> Any uncleared module faults are a negotiation point.',
+          cost: '$200–$2,000+ depending on fault', source: 'Pre-purchase BMW scan standard' }
+      ]},
+      { title: 'Chassis', items: [
+        { title: 'Front control arms and bushings', risk: 'high', riskLabel: 'High Attention',
+          desc: 'F30 control arm bushings and ball joints wear at 60k–80k miles — earlier than competitors.',
+          check: '<strong>Lift the car and inspect front suspension components, or have shop do it.</strong>',
+          cost: '$800–$2,000 front suspension refresh', source: 'F30 common repair list' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'BMW specialist pre-purchase inspection required', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Do not buy any used BMW without a pre-purchase inspection by a BMW-trained independent shop with ISTA access.',
+          check: '<strong>Budget $150–$200 for PPI. Non-negotiable on any F30.</strong>',
+          cost: '$150–$200 PPI / $2,000–$15,000+ deferred repairs discovered', source: 'BMW ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-044', title: 'Electric Fuel Pump', desc: 'Pump may fail — engine stall risk.' },
+      { number: '17V-376', title: 'Airbag Inflator (Takata)', desc: 'Driver airbag inflator on some builds — verify completion.' },
+      { number: '16V-028', title: 'Engine Compartment Cover', desc: 'Cover may contact fuel line — fire risk.' }
+    ]
+  },
+
+  'chevy-tahoe-2018': {
+    year: 2018, make: 'Chevrolet', model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)',
+    engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "K2XX Tahoe is a full-size body-on-frame 3-row SUV — genuine towing capacity (8,600 lbs) and large-family utility at a fraction of a new model price. But ALL K2XX Tahoes have the 5.3L or 6.2L V8 with AFM cylinder deactivation — and both are subject to the same lifter failure pattern as the Silverado. Every Tahoe buyer must verify AFM lifter status. Budget for a $3,500–$7,000 repair if not already addressed.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 380, topComplaintArea: 'AFM lifter failure (5.3L and 6.2L)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'AFM lifter failure — all Tahoe V8 engines', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The 5.3L L83 and 6.2L L86 both use AFM. Under the extra load of a 5,800 lb SUV, AFM lifters fail at 60k–100k miles. This is not an "if" question on used Tahoes — it\'s a "when and was it already fixed" question.',
+          check: '<strong>Cold-start the engine and listen for persistent ticking.</strong> Scan for P0300-series codes. Verify oil change records and whether AFM-deletion has been performed.',
+          cost: '$3,500–$7,000 lifter replacement (all 16) or AFM delete kit + tune', source: 'K2XX AFM failure pattern' },
+        { title: '6L80 transmission shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at 30–45 mph light throttle = torque converter fluid contamination.',
+          check: '<strong>Test light throttle at highway speed.</strong>',
+          cost: '$350–$550 fluid flush', source: '6L80 service pattern' }
+      ]},
+      { title: 'Frame & Body', items: [
+        { title: 'Frame rust inspection (salt-belt Tahoes)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Full-size BOF SUVs from salt-belt states develop frame rust on cross-members and cab corners.',
+          check: '<strong>Full undercarriage inspection with flashlight and magnet.</strong>',
+          cost: 'Walk away from through-rust on structural sections', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Third Row & Interior', items: [
+        { title: 'Third-row seat fold mechanism', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Fold-flat third-row mechanism can jam on high-mileage Tahoes.',
+          check: '<strong>Fold and unfold third row fully.</strong>',
+          cost: '$150–$400 mechanism repair', source: 'Common wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MyLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known Bluetooth and freeze issues. Software updates available.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'GM campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'AFM history + recall check — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Has AFM been deleted? Are lifters known to be original? These are the questions that determine the Tahoe\'s value.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Require AFM service documentation or delete confirmation.</strong>',
+          cost: 'Walk away from Tahoe without AFM history documentation', source: 'NHTSA + GM service records' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-394', title: 'Power Steering Fluid Leak', desc: 'Hydraulic hose may crack — fire risk.' },
+      { number: '14V-290', title: 'Seat Belt Buckle', desc: 'Pretensioner may not function correctly.' },
+      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy as designed.' },
+      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing may cause CEL or no-start.' }
+    ]
+  },
+
+  'ford-ranger-2019': {
+    year: 2019, make: 'Ford', model: 'Ranger', trim: 'XL / XLT / Lariat (T6 platform)',
+    engine: '2.3L EcoBoost I4 (270hp) with 10-speed automatic',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The T6 Ranger returned to North America after an 8-year absence and brought the excellent 2.3L EcoBoost with it. First-year (2019) quality issues existed but were resolved in 2020+. The 10-speed automatic received TSB updates for hesitation and shudder. Cam phaser noise on cold start is reported on some early examples — the same family issue as the F-150 EcoBoost. Strong mid-size truck value when first-year issues are addressed.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 185, topComplaintArea: '10-speed transmission shudder / EcoBoost cam phasers' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.3L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Cam phaser rattle on cold start is reported on Ranger EcoBoost above 60k miles — same engine family as F-150 EcoBoost.',
+          check: '<strong>Cold-start the engine and listen for any rattle in the first 5 seconds.</strong>',
+          cost: '$800–$2,500 cam phaser replacement', source: 'Ford 2.3T EcoBoost pattern' },
+        { title: '10-speed transmission shudder / TSB', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 10R80 in the Ranger received multiple TSBs for shudder at 25–45 mph and hesitation under light throttle.',
+          check: '<strong>Test extensively at light throttle 25–45 mph for any shudder.</strong>',
+          cost: '$350–$550 fluid + calibration / $4,500+ transmission', source: 'Ford TSB 19-2200' }
+      ]},
+      { title: 'Frame', items: [
+        { title: 'Frame and undercarriage rust (salt-belt trucks)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'T6 Ranger is aluminum-bodied but the frame is steel — rust on salt-belt trucks.',
+          check: '<strong>Inspect frame undercarriage with flashlight.</strong>',
+          cost: 'Walk away from structural rust', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 infotainment / Apple CarPlay', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is generally reliable. Test CarPlay and backup camera.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check (4 campaigns) + transmission TSB verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Multiple recalls including 19V-888 and transmission calibration TSBs.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm transmission TSB updates are on record.</strong>',
+          cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'Roof glass may crack — dealer inspection.' },
+      { number: '19V-485', title: 'Fuel Injector Seal', desc: '2.3T: fuel injector may leak — fire risk.' },
+      { number: '20V-077', title: 'Backup Camera Delay', desc: 'Software update for camera image delay.' },
+      { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10-speed may leak fluid — fire risk.' }
+    ]
+  },
+
+  'chevy-suburban-2018': {
+    year: 2018, make: 'Chevrolet', model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)',
+    engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The Suburban is the Tahoe with a 21-inch longer wheelbase — same platform, same engines, same AFM lifter risk. All Suburban V8s have AFM. The extended wheelbase provides genuine 3-row space and 8,300 lb tow rating. Budget the AFM lifter repair ($3,500–$7,000) as a near-certain cost on any high-mileage example. Preferred play: find one where AFM has already been deleted.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 290, topComplaintArea: 'AFM lifter failure — same as Tahoe' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'AFM lifter failure — mandatory check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Same AFM lifter failure as Tahoe and Silverado. All Suburban V8s use AFM. Lifters fail at 60k–100k on neglected oil.',
+          check: '<strong>Cold-start + listen for ticking. Scan for P0300 codes. Request oil interval documentation.</strong>',
+          cost: '$3,500–$7,000 lifter replacement', source: 'K2XX AFM pattern' },
+        { title: '6L80 transmission', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at highway light throttle = fluid issue.',
+          check: '<strong>Test light throttle at 35–50 mph.</strong>',
+          cost: '$350–$550 fluid flush', source: '6L80 service pattern' }
+      ]},
+      { title: 'Frame & Body', items: [
+        { title: 'Frame rust and undercarriage inspection', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Large BOF vehicles from salt states accumulate rust on frame rails and cross-members.',
+          check: '<strong>Full undercarriage inspection — focus on rear frame and spare tire carrier.</strong>',
+          cost: 'Walk away from structural rust', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Electronic level control (ELC) air system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear air leveling system airbags and compressor wear at 100k+ miles.',
+          check: '<strong>Verify rear sits level side-to-side and height adjusts.</strong>',
+          cost: '$400–$900 per airbag / $600–$1,200 compressor', source: 'Common Suburban wear' }
+      ]},
+      { title: 'Third Row', items: [
+        { title: 'Power fold third-row operation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Power-fold third row can fail to fold/unfold reliably.',
+          check: '<strong>Cycle third row through all positions.</strong>',
+          cost: '$200–$500 mechanism', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'AFM documentation + recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'AFM history is the defining variable in Suburban value.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Demand AFM history documentation.</strong>',
+          cost: 'Walk away from AFM-undocumented high-mileage Suburban', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
+      { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly.' },
+      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
+      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
+    ]
   }
 
 };
