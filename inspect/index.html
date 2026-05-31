@@ -6231,6 +6231,498 @@ const CHECKLISTS = {
       { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS hydraulic control unit fire risk.' },
       { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
     ]
+  },
+
+  'kia-sportage-2017': {
+    year: 2017, make: 'Kia', model: 'Sportage', trim: 'LX / EX / SX Turbo / SX Limited (QL gen)',
+    engine: '2.4L GDI Nu I4 (181hp) / 2.0L T-GDI Turbo I4 (240hp SX)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The QL Sportage is a solid compact SUV — good value retention and a comfortable ride. The 2.4L Nu engine is subject to Kia's KSDS recall campaign for rod bearing wear. Verified recall completion is the single most important pre-purchase step. The 2.0T SX is the performance option but requires strict oil intervals.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 165, topComplaintArea: 'Engine KSDS recall / bearing wear' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Nu engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Rod bearing wear can lead to engine seizure. Multiple KSDS campaigns apply to Nu I4 engines.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> All engine bearing campaigns must be complete. Listen for metallic knock at warm idle.',
+          cost: '$0 under recall / $5,500–$8,000 engine', source: 'Kia KSDS recall family' },
+        { title: '2.0T turbo oil maintenance (SX)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'SX turbo requires full-synthetic oil every 5k miles. Extended intervals lead to turbo coking.',
+          check: '<strong>Check oil condition + confirm service record on any SX.</strong>',
+          cost: '$800–$2,200 turbo repair', source: '2.0T GDI maintenance standard' },
+        { title: 'DCT / 6AT fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Low-speed shudder on DCT trims indicates clutch wear or fluid degradation.',
+          check: '<strong>Test stop-and-go driving under 15 mph.</strong>',
+          cost: '$250–$450 fluid service', source: 'Kia DCT pattern' }
+      ]},
+      { title: 'AWD System', items: [
+        { title: 'Rear coupling fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid required every 30–45k. Neglect causes vibration and whine at highway speed.',
+          check: '<strong>Test highway cornering for vibration or pull.</strong>',
+          cost: '$150–$300 service / $800–$1,500 coupling', source: 'AWD maintenance requirement' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UVO connectivity issues are common; software updates resolve most.',
+          check: '<strong>Test CarPlay/Android Auto and backup camera.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine recall complete — mandatory check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'KSDS campaigns are non-negotiable. Service history proves oil discipline on turbo models.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Walk away if engine campaigns are open.</strong>',
+          cost: 'Walk away from unresolved engine recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Rod bearing wear monitoring — software update required.' },
+      { number: '20V-051', title: 'Engine Fire Risk', desc: 'Oil can contact hot exhaust on some engines — fire risk.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit fire risk — dealer replacement.' },
+      { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
+    ]
+  },
+
+  'kia-soul-2017': {
+    year: 2017, make: 'Kia', model: 'Soul', trim: 'Base / + / ! Turbo / Exclaim (2nd gen PS)',
+    engine: '1.6L Gamma GDI I4 (130hp) / 2.0L Nu GDI I4 (161hp) / 1.6T Turbo (201hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Soul is one of the best-value urban cars on the used market. Practical, distinctive, and generally reliable. The 2.0L Nu engine has KSDS recall exposure; the 1.6L Gamma base engine is largely exempt. Strong value buy when recall history is confirmed.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'Nu engine recall / infotainment screen' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L Nu engine KSDS check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 2.0L Nu engine has KSDS recall exposure for rod bearing wear. 1.6L Gamma trims are lower risk.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: '$0 under recall / $5,500+ engine', source: 'Kia KSDS campaign' },
+        { title: 'IVT / CVT fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT requires IVT fluid every 30k miles. Brown fluid = overdue service.',
+          check: '<strong>Check fluid color at dipstick.</strong>',
+          cost: '$200–$400 flush / $3,500–$5,000 CVT', source: 'Kia IVT service interval' },
+        { title: '1.6T oil discipline (Turbo/Exclaim)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbo Soul needs synthetic oil every 5k. Check records on any turbo variant.',
+          check: '<strong>Check oil condition and service history.</strong>',
+          cost: '$800–$2,000 turbo repair', source: 'Turbo service standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut mount noise', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Upper strut mount clunk over bumps is common at 80k+ miles.',
+          check: '<strong>Drive over rough pavement at low speed.</strong>',
+          cost: '$200–$400 per side', source: 'Common wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO screen delamination', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Screen delamination or dead touch zones reported on aging 2nd-gen Soul displays.',
+          check: '<strong>Inspect screen for delamination or unresponsive areas.</strong>',
+          cost: '$300–$800 head unit', source: 'Consumer reports' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + service records', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Run VIN for KSDS and safety campaigns.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from unresolved engine campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk on Nu engine.' },
+      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Rod bearing wear monitoring update.' },
+      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'May crack — reduced braking.' }
+    ]
+  },
+
+  'kia-sorento-2016': {
+    year: 2016, make: 'Kia', model: 'Sorento', trim: 'LX / EX / SX / SX Limited (3rd gen UM)',
+    engine: '2.4L GDI Nu I4 (185hp) / 2.0T GDI Turbo I4 (240hp) / 3.3L V6 Lambda (290hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "3rd-gen Sorento is a well-rounded family SUV. The 2.4L Nu and 2.0T engines carry KSDS recall exposure. The 3.3L Lambda V6 avoids the bearing issue entirely and is the most reliable choice. AWD coupling fluid service is the most commonly missed maintenance item. Strong value when recall history and AWD service are confirmed.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 180, topComplaintArea: 'Nu/2.0T engine bearing recall / AWD coupling' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Nu / 2.0T engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Multiple Kia KSDS campaigns apply. Lambda V6 is exempt — buyers should prefer V6 for lower risk.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Prefer V6 if concerned about engine risk.</strong>',
+          cost: '$0 under recall / $5,500–$8,000 engine', source: 'Kia KSDS recall family' },
+        { title: '3.3L Lambda V6 — low risk powertrain', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lambda V6 runs reliably past 200k with synthetic oil. No KSDS exposure.',
+          check: '<strong>Verify synthetic oil change records.</strong>',
+          cost: 'Maintenance only', source: 'Lambda V6 track record' }
+      ]},
+      { title: 'AWD System', items: [
+        { title: 'AWD coupling fluid — commonly skipped', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Rear coupling requires fluid every 30k miles. Neglect causes shudder on cornering and eventual failure.',
+          check: '<strong>Test highway-speed cornering for vibration or shudder.</strong>',
+          cost: '$150–$300 fluid / $800–$1,600 coupling replacement', source: 'AWD maintenance requirement' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '6AT automatic fluid condition', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Fluid change every 60k. Dark fluid = overdue.',
+          check: '<strong>Check fluid color and smell.</strong>',
+          cost: '$200–$350 flush', source: 'Kia service interval' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO infotainment connectivity', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UVO connectivity issues; software updates available.',
+          check: '<strong>Test all infotainment and CarPlay/Android Auto.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine recall + AWD service proof', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Both engine recall completion and AWD fluid service history are required documents.',
+          check: '<strong>Run nhtsa.gov/recalls + request service records including AWD fluid change.</strong>',
+          cost: 'Walk away from unresolved engine campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Nu rod bearing monitoring update.' },
+      { number: '20V-051', title: 'Engine Fire Risk', desc: 'Oil/exhaust contact fire risk.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '18V-013', title: 'Brake Booster Check Valve', desc: 'May fail — reduced braking assist.' }
+    ]
+  },
+
+  'vw-jetta-2018': {
+    year: 2018, make: 'Volkswagen', model: 'Jetta', trim: 'S / SE / SEL / R-Line / GLI (A7 gen)',
+    engine: '1.4L TSI EA211 I4 (147hp) / 2.0L TSI Turbo I4 (228hp GLI)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The A7 Jetta is a refined, well-built compact sedan — better value than a comparable Audi or BMW entry-luxury car. The DSG dual-clutch transmission shudder is the main buyer risk; it requires strict mechatronic fluid service. 1.4L TSI EA211 is a significant improvement over EA111-era engines. Ensure Takata airbag recall is resolved on eligible VINs.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 120, topComplaintArea: 'DSG shudder / Takata airbag (pre-2019 VINs)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'DSG DQ200 shudder under 15 mph', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The DQ200 dry-clutch 7-speed DSG shudders or jerks at 5–15 mph when mechatronic fluid service is overdue.',
+          check: '<strong>Test in stop-and-go traffic at under 15 mph.</strong> Any shudder or jerk = DSG service needed immediately.',
+          cost: '$350–$600 fluid service / $1,800–$3,500 mechatronic unit', source: 'VW DSG maintenance pattern' },
+        { title: '1.4 TSI timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EA211 timing chain tensioner wear past 100k miles with extended oil intervals. Cold-start rattle check.',
+          check: '<strong>Cold-start the engine — sustained rattle past 10 seconds = tensioner wear.</strong>',
+          cost: '$600–$1,400 timing chain kit', source: 'EA211 service pattern' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front control arm bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Control arm bushings wear at 80k–100k miles, causing steering wander.',
+          check: '<strong>Test straight-line tracking at highway speed.</strong>',
+          cost: '$400–$800 control arms', source: 'VW suspension wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MIB2 infotainment / CarPlay', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MIB2 has known CarPlay drop issues. Software updates help.',
+          check: '<strong>Test wired CarPlay and all functions.</strong>',
+          cost: '$0 update', source: 'VW campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Sunroof drain clog (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sunroof drains clog with debris causing interior water intrusion at A-pillar.',
+          check: '<strong>Check headliner and A-pillar for water stains.</strong>',
+          cost: '$100–$300 drain cleaning', source: 'Common VW complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DSG service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DSG fluid service history is the most critical document. Takata recall must be verified.',
+          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from DSG without service history', source: 'NHTSA + VW maintenance' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag Inflator', desc: 'Passenger airbag inflator may rupture — free replacement.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'Bosch HPFP may fail — engine stall risk.' },
+      { number: '20V-127', title: 'ABS Module Software', desc: 'Stability control software update.' }
+    ]
+  },
+
+  'toyota-sienna-2015': {
+    year: 2015, make: 'Toyota', model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (3rd gen XL30)',
+    engine: '3.5L 2GR-FE V6 (296hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "3rd-gen Sienna is the reliability benchmark for family minivans. The 3.5L 2GR-FE V6 runs 250k+ with regular maintenance. AWD models are in high demand. Key buyer check: power sliding door motor operation. Minor oil seepage at valve covers is common past 100k but manageable. Outstanding family van value.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Sliding door motors / valve cover seeps' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2GR-FE valve cover oil seepage', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Oil seeps at valve cover gaskets past 100k miles. Minor drips are cosmetic; heavy seepage causes smoke at exhaust.',
+          check: '<strong>Inspect valve cover edges with engine warm.</strong>',
+          cost: '$400–$800 valve cover gaskets', source: 'Toyota 2GR-FE known wear' },
+        { title: '6AT transmission fluid condition', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'UA80E is reliable; fluid change every 60k miles recommended.',
+          check: '<strong>Check fluid color — translucent pink/red is correct.</strong>',
+          cost: '$200–$350 fluid service', source: 'Toyota service interval' }
+      ]},
+      { title: 'Doors & Sliding Mechanisms', items: [
+        { title: 'Power sliding door motor wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Most common Sienna repair. Motor or track wear causes doors to stick, grind, or stop mid-cycle.',
+          check: '<strong>Cycle each power sliding door 3–4 times.</strong> Any hesitation, grinding, or mid-cycle stop = motor service.',
+          cost: '$400–$900 per door motor', source: 'Sienna NHTSA complaints' },
+        { title: 'Power liftgate struts', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Struts weaken past 100k miles — gate drifts down when opened.',
+          check: '<strong>Open liftgate fully and release — should hold position.</strong>',
+          cost: '$150–$300 struts', source: 'Common wear' }
+      ]},
+      { title: 'HVAC', items: [
+        { title: 'Rear blower motor resistor', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear zone loses fan speeds when resistor fails — common at 100k+ miles.',
+          check: '<strong>Test rear HVAC on all fan speeds from rear-zone control.</strong>',
+          cost: '$150–$350 resistor', source: 'Common minivan pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + maintenance records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Three minor recalls possible. Well-serviced Sienna is a strong buy.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' },
+      { number: '15V-579', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly on some builds.' },
+      { number: '16V-561', title: 'Fuel Vapor Leak', desc: 'Fire risk on select VINs.' }
+    ]
+  },
+
+  'subaru-crosstrek-2018': {
+    year: 2018, make: 'Subaru', model: 'Crosstrek', trim: '2.0i / Premium / Limited (2nd gen GT)',
+    engine: '2.0L FB20B Boxer-4 (152hp) / 2.0L PHEV Hybrid (148hp system)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "2nd-gen Crosstrek (GT platform, 2018+) is the best Crosstrek Subaru has made. Improved ride, better reliability than SH-gen, and the FB20 engine avoids the EJ head-gasket failures. Oil consumption check at 80k+ miles is still good practice on any Subaru. EyeSight windshield replacement is expensive — inspect carefully.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 80, topComplaintArea: 'FB20 oil consumption / EyeSight windshield cost' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FB20 oil consumption (80k+ miles)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'FB20 can consume up to 1 qt per 1,000 miles above 80k miles with extended intervals.',
+          check: '<strong>Pull dipstick before driving.</strong> Below MIN on recent change = consumption concern.',
+          cost: '$0 if early / $4,500–$7,000 engine rebuild', source: 'Subaru FB-series pattern' },
+        { title: 'Lineartronic CVT fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT requires fluid change every 30k–40k miles. Shudder under moderate acceleration = overdue.',
+          check: '<strong>Test highway acceleration for any shudder.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 CVT', source: 'Subaru CVT service interval' }
+      ]},
+      { title: 'Safety Systems', items: [
+        { title: 'EyeSight camera windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EyeSight recalibration required after any windshield replacement — doubles the cost.',
+          check: '<strong>Inspect top-center windshield zone for chips, cracks, or repair residue.</strong>',
+          cost: '$1,200–$2,200 windshield + EyeSight recal', source: 'Subaru service requirement' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Struts wear at 80k–100k miles — minor clunk over rough pavement.',
+          check: '<strong>Bounce each front corner.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Rocker panel rust (salt-belt cars)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Subaru Crosstreks from Northeast/Midwest develop rocker rust early.',
+          check: '<strong>Inspect both rockers with flashlight.</strong>',
+          cost: '$200–$1,500 depending on severity', source: 'Subaru rust pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil dipstick check + recall verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Verify oil level has not dropped since last change. Run nhtsa.gov/recalls.',
+          check: '<strong>Check dipstick + recall check.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-394', title: 'EyeSight Camera Deactivation', desc: 'May deactivate in certain light — software fix.' },
+      { number: '18V-307', title: 'EyeSight ECU Update', desc: 'ECU calibration update.' },
+      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk on select VINs.' }
+    ]
+  },
+
+  'ford-fusion-2017': {
+    year: 2017, make: 'Ford', model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid (6th gen)',
+    engine: '1.5L EcoBoost I4 (181hp) / 2.0L EcoBoost I4 (245hp) / 2.7L V6 Sport / 2.0L Hybrid',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Fusion is a well-built, attractive midsize sedan. The 1.5L EcoBoost has a documented cylinder 3 coolant loss issue — the 2.0T is the preferred powertrain and avoids this. Hybrid models are reliable but HV battery should be checked above 100k miles. The Fusion was discontinued in 2020, making used supply abundant and prices attractive.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5L EcoBoost coolant loss (cylinder 3)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Documented cylinder head micro-failure on the 1.5T in Fusion/Escape allows coolant to disappear without external leak. White smoke on warmup is the symptom.',
+          check: '<strong>Check coolant level cold before starting.</strong> Any unexplained loss = suspect head gasket. White exhaust smoke confirms.',
+          cost: '$1,800–$3,500 cylinder head replacement', source: 'Ford 1.5T CD4 platform issue' },
+        { title: '2.0T EcoBoost — preferred powertrain', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0T does not share the 1.5T coolant issue and is the stronger used pick.',
+          check: '<strong>Standard check — no specific failure mode.</strong>',
+          cost: 'Maintenance only', source: 'Ford 2.0T record' },
+        { title: 'Hybrid HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Lithium-ion HV battery degrades past 100k miles on Fusion Hybrid.',
+          check: '<strong>Test fuel economy in mixed driving — should achieve 38–42 mpg.</strong>',
+          cost: '$2,500–$5,500 HV battery', source: 'Hybrid battery wear pattern' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Door handle cable failure', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Exterior door handle cable breaks — door cannot be opened from outside.',
+          check: '<strong>Open all four doors from outside repeatedly.</strong>',
+          cost: '$100–$250 per cable', source: 'Common Fusion complaint' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '6F35 / 6F50 fluid condition', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at light throttle 30–45 mph = fluid contamination.',
+          check: '<strong>Test light-throttle highway acceleration.</strong>',
+          cost: '$300–$500 fluid flush', source: 'Ford 6F service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is reliable. Early builds had CarPlay connectivity issues resolved by OTA update.',
+          check: '<strong>Test all functions including CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'Ford software campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine variant check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Identify 1.5T vs 2.0T before purchase. Coolant check required on 1.5T. Four recalls possible.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Coolant check on 1.5T.</strong>',
+          cost: 'Walk away from 1.5T with unexplained coolant loss', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '17V-178', title: 'Door Latch Release', desc: 'Doors may open while driving — replace latch.' },
+      { number: '19V-006', title: 'Fuel Injector O-ring (2.0T)', desc: 'Fuel leak fire risk.' },
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '18V-117', title: 'Supplemental Restraint Module', desc: 'Side airbag may not inflate correctly.' }
+    ]
+  },
+
+  'nissan-sentra-2017': {
+    year: 2017, make: 'Nissan', model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)',
+    engine: '1.8L MRA8DE I4 (130hp) with Xtronic CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "B17 Sentra is among the most affordable used compact sedans available. The 1.8L engine itself is reasonably reliable — the Xtronic CVT is the buyer risk. CVT failure mirrors the Altima pattern when NS-3 fluid was not changed every 30k miles. Service history is everything on any CVT Nissan.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Xtronic CVT fluid and reliability', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Nissan CVTs require NS-3 fluid every 30k miles. Neglected service leads to belt slip, shudder, and failure.',
+          check: '<strong>Ask for CVT fluid service history.</strong> Test highway acceleration — any shudder or hunting = CVT wear.',
+          cost: '$200–$350 fluid service / $3,000–$4,500 CVT replacement', source: 'Nissan CVT maintenance requirement' },
+        { title: 'Engine oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MRA8 can consume oil above 100k miles with extended service intervals.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: 'Monitor / $0 if caught early', source: 'Consumer reports' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and bearing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Common at 80k+ miles. Hum that changes with steering input = bearing.',
+          check: '<strong>Highway noise check; bounce each front corner.</strong>',
+          cost: '$300–$600 per strut assembly', source: 'Common wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known slow-boot and freeze issues. Software updates resolve most.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality and rust', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'B17 paint chips easily. Salt-belt rockers can rust early.',
+          check: '<strong>Inspect rocker panels.</strong>',
+          cost: '$0–$500 treatment', source: 'Consumer pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT fluid history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT fluid service history is the most critical document on any Sentra.',
+          check: '<strong>Run nhtsa.gov/recalls. Request all maintenance records.</strong>',
+          cost: 'Walk away from CVT without fluid history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — engine stall risk.' },
+      { number: '17V-224', title: 'Seat Belt Anchor', desc: 'May not hold correctly.' },
+      { number: '14V-344', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' }
+    ]
+  },
+
+  'nissan-murano-2018': {
+    year: 2018, make: 'Nissan', model: 'Murano', trim: 'S / SV / SL / Platinum (3rd gen Z52)',
+    engine: '3.5L VQ35DE V6 (260hp) with Xtronic CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "Z52 Murano is Nissan's most premium crossover with a genuinely upscale interior. The 3.5L VQ35DE V6 is one of Nissan's most proven engines — the CVT remains the risk vector. CVT service at 30k miles with genuine NS-3 fluid is mandatory. Body on Frame alternative? No — this is unibody-only. Strong buy for buyers who prioritize comfort and have documented service history.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Xtronic CVT fluid service history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same CVT reliability concern as the Altima and Rogue — NS-3 fluid required every 30k miles. Neglected fluid = belt slip, shudder, eventual failure.',
+          check: '<strong>Ask for CVT fluid service history.</strong> Test highway acceleration for hesitation or shudder.',
+          cost: '$200–$350 fluid service / $3,500–$5,500 CVT replacement', source: 'Nissan CVT service standard' },
+        { title: 'VQ35DE oil consumption check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VQ35 can consume oil above 100k miles with extended intervals.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: 'Monitor / $0 if caught early', source: 'VQ35 pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment / navigation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'NissanConnect with navigation has known slow response and freeze issues on 2018 Z52.',
+          check: '<strong>Test all infotainment functions including navigation and backup camera.</strong>',
+          cost: '$0 update / $1,000–$2,000 head unit', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Suspension & Steering', items: [
+        { title: 'Rear cross-traffic and 360-degree camera calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Around-View Monitor camera requires calibration after any body work — verify all cameras are clean and focused.',
+          check: '<strong>Test backup and all Around-View cameras.</strong>',
+          cost: '$150–$400 calibration', source: 'Common camera issue' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Panoramic roof seals', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Moonroof drain tubes clog causing water intrusion at A-pillar.',
+          check: '<strong>Check headliner and A-pillar for water stains.</strong>',
+          cost: '$100–$300 drain cleaning', source: 'Common complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT service proof + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT fluid history is the critical document. Three recalls possible.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Require CVT service receipts.</strong>',
+          cost: 'Walk away from CVT without documented service', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'Fuel pump impeller may fail — engine stall risk.' },
+      { number: '18V-027', title: 'Occupant Classification System', desc: 'Passenger airbag may be incorrectly disabled.' },
+      { number: '16V-244', title: 'OCS Software Update', desc: 'Passenger airbag software calibration update.' }
+    ]
+  },
+
+  'dodge-charger-2018': {
+    year: 2018, make: 'Dodge', model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / Daytona / SRT 392',
+    engine: '3.6L Pentastar V6 (292hp) / 5.7L Hemi V8 (370hp) / 6.4L 392 HEMI V8 (485hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The LD Charger is the last truly large American rear-drive sedan — roomier than any competitor and available with V8 power at used-car prices. The 5.7L Hemi MDS cylinder deactivation lifters are the primary mechanical risk (same as Ram 1500 and Durango). The V6 Pentastar avoids MDS entirely and is the budget-friendly reliable choice. Strong performance value when service history is documented.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 260, topComplaintArea: 'Hemi MDS lifter failure / electronics (UConnect)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'MDS deactivating lifters in the 5.7L Hemi collapse at 60k–120k miles with neglected oil changes. Ticking at idle + misfire codes = lifter failure.',
+          check: '<strong>Cold-start the engine and listen for persistent ticking.</strong> Scan for P0300-series misfire codes. Verify oil interval records.',
+          cost: '$3,000–$6,500 lifter replacement', source: 'Hemi MDS well-documented pattern' },
+        { title: 'Transmission fluid and torque converter', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '8HP70 ZF 8-speed is excellent but shudder at 25–45 mph = torque converter fluid contamination.',
+          check: '<strong>Test under light throttle at highway on-ramp.</strong>',
+          cost: '$350–$550 fluid flush / $2,500–$4,000 torque converter', source: '8HP70 service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 8.4 freeze / GPS antenna', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'UConnect 8.4 on LD Charger has documented freeze and GPS antenna failure issues.',
+          check: '<strong>Test navigation, Bluetooth, and backup camera.</strong>',
+          cost: '$0 update / $500–$1,500 head unit', source: 'Dodge campaigns' }
+      ]},
+      { title: 'Brakes', items: [
+        { title: 'Brake pad and rotor wear (high-performance models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Scat Pack and R/T models are often driven hard — brake wear is accelerated. Inspect pad thickness and rotor runout.',
+          check: '<strong>Test brakes at varying speeds for pull, vibration, or squealing.</strong>',
+          cost: '$400–$800 full brake service', source: 'Performance car inspection standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Control arm bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Lower control arm bushings wear at 80k+ miles on the LD platform.',
+          check: '<strong>Check for clunking over bumps and inspect bushings visually.</strong>',
+          cost: '$400–$800 per side', source: 'LD platform wear pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine variant + Takata airbag recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Takata airbag recall covers certain Charger build dates. Hemi MDS service history is required.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Takata = walk away if unresolved. Hemi oil records = required.',
+          cost: 'Walk away from unresolved Takata on Hemi', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag Inflator', desc: 'Driver or passenger airbag may rupture — free dealer replacement.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage unexpectedly — software fix.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner may not deploy correctly.' },
+      { number: '18V-239', title: 'Tire Pressure Sensor', desc: 'TPMS may not alert correctly.' }
+    ]
   }
 
 };
@@ -6307,6 +6799,32 @@ const VEHICLE_MENU = {
     ]
   },
   2019: {
+    'Nissan': [
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+    ],
+    'Dodge': [
+      { model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
+    ],
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
+      { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+    ],
+    'Volkswagen': [
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 gen)', key: 'vw-jetta-2018' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
+    'Subaru': [
+      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' }
+    ],
+    'Ford': [
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+    ],
     'Ram': [
       { model: 'Ram 1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' }
     ],
@@ -6346,6 +6864,32 @@ const VEHICLE_MENU = {
     ]
   },
   2018: {
+    'Nissan': [
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+    ],
+    'Dodge': [
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
+    ],
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
+      { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+    ],
+    'Volkswagen': [
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 first year)', key: 'vw-jetta-2018' }
+    ],
+    'Subaru': [
+      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' }
+    ],
+    'Ford': [
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
@@ -6395,6 +6939,32 @@ const VEHICLE_MENU = {
     ]
   },
   2017: {
+    'Nissan': [
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+    ],
+    'Dodge': [
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
+    ],
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
+      { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+    ],
+    'Volkswagen': [
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI', key: 'vw-jetta-2018' }
+    ],
+    'Subaru': [
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen ending)', key: null }
+    ],
+    'Ford': [
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'LS / LT / Premier (2nd gen ending)', key: null },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
@@ -6440,6 +7010,26 @@ const VEHICLE_MENU = {
     ]
   },
   2016: {
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
+      { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+    ],
+    'Volkswagen': [
+      { model: 'Jetta', trim: '1.4T S / SE / SE Sport / SEL', key: null }
+    ],
+    'Subaru': [
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen)', key: null }
+    ],
+    'Ford': [
+      { model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
     'Chevrolet': [
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
@@ -6493,6 +7083,18 @@ const VEHICLE_MENU = {
     ]
   },
   2015: {
+    'Toyota': [
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
+    'Subaru': [
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen XV)', key: null }
+    ],
+    'Ford': [
+      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+    ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
     ],
@@ -6581,6 +7183,19 @@ const VEHICLE_MENU = {
     ]
   },
   2013: {
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX (3rd gen SL)', key: null },
+      { model: 'Sorento', trim: 'LX / EX / SX (2nd gen XM)', key: null }
+    ],
+    'Volkswagen': [
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A6 gen)', key: null }
+    ],
+    'Nissan': [
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 first year)', key: 'nissan-sentra-2017' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+    ],
     'Ford': [
       { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' }
     ],
