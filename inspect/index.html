@@ -8553,6 +8553,501 @@ const CHECKLISTS = {
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
+  },
+
+  'ford-expedition-2018': {
+    year: 2018, make: 'Ford', model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)',
+    engine: '3.5L EcoBoost V6 (375hp) / 3.5L EcoBoost High Output (400hp Limited)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 4th-gen Expedition is Ford's full-size 3-row BOF SUV — aluminium body panels over a steel frame, twin-turbo EcoBoost V6. The 3.5L EcoBoost is proven in F-150 applications; the main buyer checks are cam phaser noise on cold start and 10-speed transmission shudder. MAX wheelbase adds genuine third-row legroom. Strong full-size SUV value versus GM competition.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 195, topComplaintArea: '3.5T EcoBoost cam phasers / 10-speed transmission shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Cam phaser rattle on cold start is reported on 3.5T EcoBoost above 60k miles — same issue as F-150 EcoBoost.',
+          check: '<strong>Cold-start and listen for rattle in first 5 seconds.</strong>',
+          cost: '$1,200–$3,000 cam phaser replacement', source: 'Ford 3.5T EcoBoost pattern' },
+        { title: '10-speed 10R80 transmission shudder', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 10R80 has TSBs for shudder at 25–45 mph under light throttle — same as F-150.',
+          check: '<strong>Test extensively at light throttle 25–45 mph for shudder.</strong>',
+          cost: '$350–$550 fluid + calibration / $4,500+ transmission', source: 'Ford TSB 19-2200' }
+      ]},
+      { title: 'Frame & Body', items: [
+        { title: 'Aluminium body panel repair cost awareness', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Aluminium panels are rust-resistant but expensive to repair after collision. Any accident history = higher repair costs.',
+          check: '<strong>Run CARFAX. Inspect all body panels for repair or replacement evidence.</strong>',
+          cost: 'Aluminium repair typically 30–50% more than steel', source: 'Insurance industry data' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 and Ford Co-Pilot360 features', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is reliable. Test all driver assist features.',
+          check: '<strong>Test CarPlay, backup camera, and all safety system indicators.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Third Row', items: [
+        { title: 'Power fold third-row operation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Power-fold third row can bind at 80k+ miles.',
+          check: '<strong>Cycle third row through all positions.</strong>',
+          cost: '$200–$500 mechanism', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + transmission TSB history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Four recalls possible. 10-speed TSB documentation is important.',
+          check: '<strong>Run nhtsa.gov/recalls. Confirm transmission software update.</strong>',
+          cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'Roof glass may shatter.' },
+      { number: '19V-485', title: 'Fuel Injector Seal', desc: '3.5T: injector may leak — fire risk.' },
+      { number: '20V-077', title: 'Backup Camera Delay', desc: 'Software update.' },
+      { number: '18V-117', title: 'Supplemental Restraint', desc: 'Side airbag deployment concern.' }
+    ]
+  },
+
+  'toyota-tundra-2018': {
+    year: 2018, make: 'Toyota', model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)',
+    engine: '4.6L 1UR-FE V8 (310hp) / 5.7L 3UR-FE V8 (381hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The XK50 Tundra ran nearly unchanged from 2007–2021 — which makes it the most proven full-size truck drivetrain on the road. The 5.7L 3UR-FE is legendary for longevity past 300k miles. No AFM, no turbocharging complexity, no EcoBoost cam phasers. Tundra's weakness is fuel economy (13–15 city) and an older infotainment. Rust is the only real concern on salt-belt trucks. Outstanding reliability.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L 3UR-FE reliability — outstanding', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 5.7L is one of the most reliable V8 truck engines available. Documented to 400k+ miles with regular oil changes.',
+          check: '<strong>Standard pre-purchase check — no specific failure mode.</strong>',
+          cost: 'Maintenance only', source: 'Toyota 3UR-FE track record' },
+        { title: '4.6L 1UR-FE — adequate but less desirable', risk: 'low', riskLabel: 'Low Risk',
+          desc: '4.6L is reliable but buyers typically prefer the 5.7L — affects resale and towing capacity.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Consumer preference' }
+      ]},
+      { title: 'Frame & Undercarriage', items: [
+        { title: 'Frame rust on salt-belt trucks', risk: 'high', riskLabel: 'High Attention',
+          desc: 'XK50 frames rust aggressively in Northeast/Midwest. Toyota issued frame replacement programs for earlier gens — XK50 is generally better but still warrants inspection.',
+          check: '<strong>Full undercarriage inspection with flashlight.</strong>',
+          cost: 'Walk away from through-rust on structural frame sections', source: 'Truck inspection standard' },
+        { title: 'Catalytic converter theft target', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Tundra is a high-value catalytic converter theft target due to truck height and precious metal content.',
+          check: '<strong>Listen for loud exhaust — missing cats are unmistakable.</strong>',
+          cost: '$1,500–$3,000 catalytic converter replacement', source: 'High theft vehicle list' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Entune infotainment — dated', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'XK50 Entune is functional but feels dated vs. competitors. Verify CarPlay compatibility on newer builds.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0–$500 aftermarket head unit', source: 'Consumer experience' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Ball joint wear (high-mileage trucks)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Front ball joints wear at 120k+ miles on XK50 Tundras — especially on trucks used for towing.',
+          check: '<strong>Jack front wheel and check for play.</strong>',
+          cost: '$400–$800 per ball joint', source: 'High-mileage Tundra pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + rust assessment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Three recalls possible. Frame rust assessment is the primary inspection.',
+          check: '<strong>Run nhtsa.gov/recalls. Undercarriage inspection.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner Weld', desc: 'Defective welds on some builds.' },
+      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+    ]
+  },
+
+  'chevy-colorado-2018': {
+    year: 2018, make: 'Chevrolet', model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)',
+    engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 2nd-gen Colorado is the best mid-size truck GM has made. The 3.6L LFX V6 is the preferred engine — proven and powerful. The 2.5L I4 is adequate for light duty. The 2.8L Duramax diesel is fuel-efficient and torquey but DEF system maintenance is required. No AFM on the Colorado — a significant advantage over Silverado/Sierra siblings.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 120, topComplaintArea: 'DEF system (diesel) / 8-speed shudder (V6) / frame rust' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.6L LFX V6 — solid choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'LFX is GM\'s proven V6 — runs reliably past 200k miles with synthetic oil.',
+          check: '<strong>Standard check — cold-start, oil level, transmission shudder test.</strong>',
+          cost: 'Maintenance only', source: 'GM LFX reliability record' },
+        { title: '2.8L Duramax diesel DEF system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Diesel Exhaust Fluid (DEF) system requires fluid top-up every 5,000 miles. DEF pump and injector failures are reported.',
+          check: '<strong>Check DEF level and verify DEF system warning lights are off.</strong>',
+          cost: '$300–$1,500 DEF system repair', source: 'Duramax diesel service standard' }
+      ]},
+      { title: 'Frame', items: [
+        { title: 'Frame rust (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Colorado frames rust on salt-belt trucks.',
+          check: '<strong>Full undercarriage inspection.</strong>',
+          cost: 'Walk away from through-rust', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '8-speed automatic shudder (V6)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'V6 Colorado 8-speed can shudder at light throttle. Fluid service resolves most cases.',
+          check: '<strong>Test highway light throttle for shudder.</strong>',
+          cost: '$300–$500 fluid flush', source: 'GM 8L90 service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MyLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known Bluetooth issues. Software updates help.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'GM campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Frame rust check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Frame rust is the primary concern. Three recalls possible.',
+          check: '<strong>Undercarriage inspection + run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from through-rust', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage.' },
+      { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
+    ]
+  },
+
+  'mazda-cx9-2018': {
+    year: 2018, make: 'Mazda', model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)',
+    engine: '2.5L SkyActiv-T DISI Turbo I4 (227hp / 250hp premium fuel)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The TC CX-9 is the best 3-row family crossover under $35k new — and one of the best used values in its class. The 2.5T SkyActiv engine is responsive and efficient. GDI carbon buildup is possible at very high mileage but less severe than competitors due to Mazda's port injection supplementation. The interior quality punches well above price. Outstanding buy with documented service history.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 75, topComplaintArea: '2.5T carbon buildup (mild) / third-row access' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5T SkyActiv-T oil and air filter maintenance', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The turbocharged SkyActiv requires full-synthetic oil and clean air filters. Extended intervals reduce power.',
+          check: '<strong>Check oil condition and air filter.</strong>',
+          cost: 'Maintenance only', source: 'Mazda service standard' },
+        { title: '6-speed automatic fluid condition', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda 6AT is generally reliable. Fluid change every 60k miles.',
+          check: '<strong>Check fluid color.</strong>',
+          cost: '$200–$350 fluid service', source: 'Mazda service interval' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'i-Activ AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid service every 30k–45k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Mazda AWD standard' }
+      ]},
+      { title: 'Third Row', items: [
+        { title: 'Third-row access and space', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CX-9 third row is tight for adults — inspect fold mechanism and seat comfort.',
+          check: '<strong>Cycle third row and sit in it.</strong>',
+          cost: 'N/A — preference issue', source: 'Consumer experience' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Mazda Connect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda Connect rotary dial is polarizing but reliable. CarPlay is available on 2018+.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Mazda campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced CX-9 is an outstanding buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-307', title: 'EyeSight / i-ACTIVSENSE Software', desc: 'Camera calibration update.' },
+      { number: '19V-394', title: 'Airbag Software', desc: 'Frontal airbag calibration update.' }
+    ]
+  },
+
+  'honda-hrv-2018': {
+    year: 2018, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L / Touring (RU gen)',
+    engine: '1.8L L15B i-VTEC I4 (141hp) with CVT or 6-speed manual',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The RU HR-V is one of the most practical subcompact SUVs available — the Magic Seat rear-seat system creates genuinely useful cargo configurations. The 1.8L L15B is a naturally-aspirated Honda engine with an outstanding reliability record. CVT is the standard; the 6-speed manual is a rarer and fun option. Limited power is the main tradeoff for fuel efficiency and low ownership cost.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 80, topComplaintArea: 'CVT fluid history / limited power / Takata airbag recall' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'CVT fluid service history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Honda CVT requires HCF-2 fluid every 30k miles. Neglected fluid leads to shudder and failure.',
+          check: '<strong>Ask for CVT fluid service history.</strong>',
+          cost: '$200–$400 fluid service / $3,500–$5,000 CVT replacement', source: 'Honda CVT service standard' },
+        { title: '1.8L i-VTEC — outstanding reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The L15B naturally-aspirated engine is one of Honda\'s most reliable small engines.',
+          check: '<strong>Standard pre-purchase check.</strong>',
+          cost: 'Maintenance only', source: 'Honda L15B track record' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Real Time AWD rear differential fluid (AWD models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear differential requires DPS-F fluid service every 30k miles on AWD cars.',
+          check: '<strong>Test tight parking lot turns for any vibration.</strong>',
+          cost: '$150–$300 service', source: 'Honda AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Takata airbag recall (some 2018 builds)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Some 2018 HR-V build dates received Takata inflators. Verify on VIN before purchase.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls immediately.</strong>',
+          cost: 'Free dealer replacement / walk away if incomplete', source: 'NHTSA Takata recall' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear at high mileage', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test at each corner.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT history + Takata recall check — both critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT fluid history and Takata recall status are both required checks.',
+          check: '<strong>Request CVT service record. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from Takata incomplete or CVT without service', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' },
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser pinhole leaks.' }
+    ]
+  },
+
+  'subaru-impreza-2018': {
+    year: 2018, make: 'Subaru', model: 'Impreza', trim: '2.0i / Premium / Sport / Limited (5th gen GK/GT)',
+    engine: '2.0L FB20 Boxer-4 (152hp) with Lineartronic CVT or 6-speed manual',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "5th-gen Impreza on the SGP platform is the most advanced Impreza ever made. Standard AWD on all trims, updated FB20 engine, and available EyeSight. Head gasket failures that plagued EJ-series engines are minimal on the FB-series. Oil consumption check at 80k+ miles is still good practice. Strong value as an all-weather commuter.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 75, topComplaintArea: 'FB20 oil consumption / CVT fluid / EyeSight windshield' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FB20 oil consumption (80k+ miles)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'FB20 boxer can consume oil above 80k miles with extended intervals.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: '$0 if early / $4,500–$7,000 engine', source: 'Subaru FB-series pattern' },
+        { title: 'Lineartronic CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT requires fluid every 30k–40k miles.',
+          check: '<strong>Test highway acceleration for any shudder.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 CVT', source: 'Subaru CVT interval' }
+      ]},
+      { title: 'Safety Systems', items: [
+        { title: 'EyeSight windshield zone (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EyeSight recalibration required after windshield replacement.',
+          check: '<strong>Inspect top-center windshield for chips or repair.</strong>',
+          cost: '$1,200–$2,200 windshield + recalibration', source: 'Subaru EyeSight service' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test each corner.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Rust (salt-belt cars)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Subaru Imprezas develop rocker panel rust on salt-belt cars.',
+          check: '<strong>Inspect both rockers with flashlight.</strong>',
+          cost: '$200–$1,500 depending on severity', source: 'Subaru rust pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil dipstick + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Oil check and recall verification are the primary steps.',
+          check: '<strong>Check dipstick. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-394', title: 'EyeSight Camera Deactivation', desc: 'May deactivate in certain light — software fix.' },
+      { number: '18V-307', title: 'EyeSight ECU Update', desc: 'ECU calibration update.' },
+      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk on select VINs.' }
+    ]
+  },
+
+  'hyundai-sonata-2018': {
+    year: 2018, make: 'Hyundai', model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)',
+    engine: '2.4L GDI Nu I4 (185hp) / 2.0T Theta II I4 (245hp Sport) / 1.6T Eco I4 (178hp)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The LF Sonata is a well-designed midsize sedan at a value price — but both the 2.4L Nu and 2.0T Theta II engines are in the Hyundai KSDS recall family for rod bearing wear. Multiple campaigns apply. This is the most important pre-purchase check. The 1.6T Eco is less common and somewhat lower risk. Sonata is a strong value when all recall campaigns are verified complete.",
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 280, topComplaintArea: 'Nu / Theta II engine bearing recall — multiple KSDS campaigns' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Nu / Theta II engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Multiple KSDS recall campaigns cover both Sonata engines. Bearing wear can lead to engine seizure.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls BEFORE any test drive.</strong> All campaigns must be complete.',
+          cost: '$0 under recall / $6,000–$9,000 engine seizure', source: 'Hyundai KSDS recall family' },
+        { title: 'Theta II 2.0T oil maintenance (Sport)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Theta II requires synthetic oil every 5k miles. Extended intervals = accelerated bearing wear.',
+          check: '<strong>Check oil condition and confirm complete service records on any 2.0T.</strong>',
+          cost: '$6,000–$9,000 engine', source: 'Hyundai 2.0T service requirement' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Display Audio / navigation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'LF Sonata infotainment has known connectivity issues. Software updates help.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Hyundai campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and rear multi-link wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Standard wear items at 80k+ miles on LF Sonata.',
+          check: '<strong>Bounce test and drive over rough pavement.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint chip vulnerability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'LF Sonata paint is soft by industry standards.',
+          check: '<strong>Inspect hood leading edge for chips.</strong>',
+          cost: '$0–$300 touch-up', source: 'Consumer pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'ALL engine recall campaigns — walk-away if any open', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Multiple KSDS campaigns apply. None can be skipped.',
+          check: '<strong>Run nhtsa.gov/recalls. Walk away from any open engine campaign.</strong>',
+          cost: 'Walk away from unresolved KSDS campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-159', title: 'KSDS Engine Bearing — Nu', desc: 'Rod bearing monitoring update.' },
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Theta II Fire Risk', desc: 'Oil/exhaust contact fire risk.' },
+      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+    ]
+  },
+
+  'kia-telluride-2020': {
+    year: 2020, make: 'Kia', model: 'Telluride', trim: 'LX / S / EX / SX / SX Prestige',
+    engine: '3.8L Lambda II V6 GDI (291hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Telluride is one of the most acclaimed 3-row family SUVs launched in years — 2020 North American Car of the Year winner. The 3.8L Lambda II V6 is Kia/Hyundai's most proven large-displacement engine and does NOT carry the KSDS recall exposure of smaller Nu/Theta engines. Outstanding interior quality and space. Used Tellurides hold value aggressively. Strong buy when AWD coupling service is documented.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 65, topComplaintArea: 'HTRAC AWD coupling service / GDI carbon (long term)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.8L Lambda II V6 — strong engine choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lambda V6 is exempt from KSDS recall concerns and proven past 200k miles with synthetic oil.',
+          check: '<strong>Standard check — cold-start, oil level, smooth acceleration.</strong>',
+          cost: 'Maintenance only', source: 'Lambda V6 reliability record' },
+        { title: 'GDI carbon buildup (long term)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'GDI carbon at 80k+ miles — less severe than some competitors.',
+          check: '<strong>Test idle smoothness on higher-mileage cars.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'HTRAC AWD coupling fluid — critical service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'HTRAC requires fluid every 30k miles. Neglect causes shudder and coupling failure.',
+          check: '<strong>Test highway cornering for vibration. Request coupling fluid service receipts.</strong>',
+          cost: '$150–$300 service / $800–$1,800 coupling', source: 'Kia HTRAC service standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO / Kia Connect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Telluride infotainment is generally well-received. Test all features.',
+          check: '<strong>Test CarPlay, navigation, all zone HVAC.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear (early high-mileage)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Telluride is new enough that serious wear is uncommon below 80k miles.',
+          check: '<strong>Standard bounce test and steering check.</strong>',
+          cost: '$400–$800 standard wear', source: 'Standard wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'AWD coupling service + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'HTRAC service history is the critical document. Three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Request AWD fluid service receipt.</strong>',
+          cost: 'Walk away from AWD without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-159', title: 'Engine Monitoring (KSDS — Lambda exempt but verify)', desc: 'Run VIN to confirm this specific Telluride VIN is not in any campaign.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Engine Fire Risk (verify by VIN)', desc: 'Some Lambda V6 builds — verify completion.' }
+    ]
+  },
+
+  'toyota-4runner-2018': {
+    year: 2018, make: 'Toyota', model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)',
+    engine: '4.0L 1GR-FE V6 (270hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 5th-gen 4Runner has run nearly unchanged since 2010 — which means a proven, documented reliability record and broad aftermarket support. The 4.0L 1GR-FE V6 is virtually bulletproof past 300k miles. The off-road capability (especially TRD Pro and TRD Off-Road) is genuine. Fuel economy is poor (17 city, 19 hwy). Rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 85, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft / dated interior' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '4.0L 1GR-FE V6 — outstanding reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 1GR-FE is one of Toyota\'s most durable engines — documented past 300k miles with regular maintenance.',
+          check: '<strong>Standard pre-purchase check — no specific failure mode.</strong>',
+          cost: 'Maintenance only', source: 'Toyota 1GR-FE track record' }
+      ]},
+      { title: 'Frame & Undercarriage', items: [
+        { title: 'Frame rust (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: '5th-gen 4Runner frames rust in Northeast/Midwest states.',
+          check: '<strong>Full undercarriage inspection with flashlight and magnet.</strong>',
+          cost: 'Walk away from through-rust on structural sections', source: 'Truck inspection standard' },
+        { title: 'Catalytic converter theft', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '4Runner is a premium catalytic converter theft target.',
+          check: '<strong>Listen for loud exhaust.</strong>',
+          cost: '$1,500–$3,000 per cat replacement', source: 'High theft vehicle list' }
+      ]},
+      { title: 'Drivetrain', items: [
+        { title: 'Front differential and transfer case fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Front diff and transfer case require fluid every 30–45k miles — often skipped.',
+          check: '<strong>Test 4WD engagement and test tight turns in 4H for binding.</strong>',
+          cost: '$150–$350 fluid service', source: 'Toyota 4WD service standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Entune infotainment — dated but functional', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'N280 4Runner Entune lacks wireless CarPlay on older builds. Test all functions.',
+          check: '<strong>Test all infotainment features.</strong>',
+          cost: '$0–$500 aftermarket upgrade', source: 'Consumer experience' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Undercarriage + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Frame rust assessment and recall verification are the primary steps.',
+          check: '<strong>Undercarriage inspection. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+    ]
+  },
+
+  'volkswagen-passat-2018': {
+    year: 2018, make: 'Volkswagen', model: 'Passat', trim: 'S / SE / SEL / R-Line / V6 SE (B8 NMS)',
+    engine: '1.8L TSI EA888 I4 (170hp) / 2.0T TSI EA888 I4 (174hp) / 3.6L VR6 (280hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The NMS B8 Passat is built in Tennessee for the North American market — simpler and larger than the European B8, and positioned as a value alternative to Camry/Accord. The 1.8T and 2.0T EA888 engines share the timing chain tensioner concern. DSG fluid service is required. Strong value in the used midsize sedan segment for buyers who are budget-conscious with their own PPI.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 135, topComplaintArea: 'EA888 timing chain / DSG fluid / Takata recall' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same timing chain tensioner concern as Audi A4 and VW Jetta. Cold-start rattle on warm engine = tensioner wear.',
+          check: '<strong>Cold-start rattle check (first 5 seconds).</strong>',
+          cost: '$1,200–$2,500 timing chain kit', source: 'EA888 pattern' },
+        { title: 'DSG mechatronic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DSG shudder at under 15 mph = overdue fluid service.',
+          check: '<strong>Test stop-and-go at under 15 mph.</strong>',
+          cost: '$350–$600 DSG service / $1,800–$3,500 mechatronic', source: 'VW DSG maintenance' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MIB2 infotainment / CarPlay', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MIB2 is reliable. CarPlay drop issues resolved by software.',
+          check: '<strong>Test wired CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'VW campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front control arm bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Control arm bushings wear at 80k–100k miles.',
+          check: '<strong>Highway tracking test.</strong>',
+          cost: '$400–$800 control arms', source: 'VW wear pattern' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Sunroof drain clog', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sunroof drains clog causing A-pillar water intrusion.',
+          check: '<strong>Check headliner at A-pillar for water stains.</strong>',
+          cost: '$100–$300 drain cleaning', source: 'Common VW complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DSG service + Takata recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'DSG fluid history and Takata recall are both critical checks.',
+          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls. Walk away from Takata incomplete.</strong>',
+          cost: 'Walk away from Takata unresolved', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free replacement.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+    ]
   }
 
 };
