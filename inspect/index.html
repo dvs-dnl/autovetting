@@ -9927,6 +9927,437 @@ const CHECKLISTS = {
       { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
       { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
     ]
+  },
+
+  'toyota-prius-prime-2017': {
+    year: 2017, make: 'Toyota', model: 'Prius Prime', trim: 'Plus / Premium / Advanced (ZVW52)',
+    engine: '1.8L 2ZR-FXE Hybrid I4 + 8.8 kWh plug-in battery (121hp system / 25 mi EV)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Prius Prime is the PHEV version of the Gen 4 Prius — 25 miles of EV range covers most daily commutes, then seamless hybrid mode. The 1.8L Toyota hybrid system is among the most proven powertrains in the industry. Plug-in battery health check at 80k+ miles. Minimal known failure modes. Outstanding total cost of ownership for urban buyers.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 40, topComplaintArea: 'Plug-in battery health / cargo space (5 seats only in Prime)' },
+    sections: [
+      { title: 'Plug-in Battery', items: [
+        { title: 'PHEV battery health (8.8 kWh)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Prius Prime battery should provide at least 20 miles of EV range (25 EPA). Degradation is gradual.',
+          check: '<strong>Charge to 100% and test EV-only range. Under 18 miles = meaningful degradation.</strong>',
+          cost: '$3,000–$5,500 battery replacement', source: 'Toyota PHEV battery data' },
+        { title: '1.8L hybrid system reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota Gen 4 hybrid system is among the most proven in the industry.',
+          check: '<strong>Test fuel economy — should hit 54+ mpg in hybrid mode.</strong>',
+          cost: 'Maintenance only', source: 'Toyota hybrid track record' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Toyota Multimedia infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota multimedia system is functional. Verify CarPlay compatibility.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Rear cargo space (5-seat only)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Prime loses the rear center seat vs regular Prius due to battery packaging. 5-passenger only.',
+          check: '<strong>Verify seating meets your needs.</strong>',
+          cost: 'N/A — preference', source: 'Spec difference' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test each corner.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery health check + recall verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Two recalls possible. Battery range check is the key purchase step.',
+          check: '<strong>Charge to full and test EV range. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-737', title: 'Backup Camera Software', desc: 'Display delay — OTA fix.' },
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+    ]
+  },
+
+  'chevy-bolt-ev-2020': {
+    year: 2020, make: 'Chevrolet', model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)',
+    engine: 'Electric — Single Motor FWD (200hp, 66 kWh)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Bolt EV revolutionized the affordable long-range EV segment when it launched. The critical buyer check: confirm recall 22V-076 (fire risk from battery defect) is fully resolved on this VIN — GM performed battery module replacements on the affected population. 2020 model years were included. With confirmed battery replacement and the updated software, the Bolt is a reliable and excellent value EV at this price point.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 145, topComplaintArea: 'Battery fire recall 22V-076 — verify complete before purchase' },
+    sections: [
+      { title: 'Battery & Safety', items: [
+        { title: 'Battery fire recall 22V-076 — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'GM recalled certain Bolt EVs for a battery defect that caused fires in parked vehicles. Battery module replacement was the remedy. Verify this VIN\'s recall status before any purchase decision.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls BEFORE viewing the car.</strong> Recall 22V-076 must show "Remedy Available" and "Owner Notified" with dealer-completed work.',
+          cost: 'Free dealer battery module replacement under recall', source: 'NHTSA recall 22V-076' },
+        { title: 'Battery health after recall remedy', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Post-recall battery health. Should show 200+ miles on a 90% charge.',
+          check: '<strong>Charge to 90% and verify range estimate. Under 185 miles = degradation.</strong>',
+          cost: '$8,000–$15,000 battery if severe degradation', source: 'Bolt EV battery data' }
+      ]},
+      { title: 'Charging', items: [
+        { title: 'Level 2 and DC fast charge functionality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Gen 1 Bolt max DC fast charge is 55 kW — slower than modern EVs.',
+          check: '<strong>Test Level 2 charging.</strong>',
+          cost: '$400–$1,200 EVSE charging system', source: 'Standard EV check' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MyLink / Bolt infotainment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MyLink has known freeze issues. Test all functions.',
+          check: '<strong>Test all infotainment and CarPlay.</strong>',
+          cost: '$0 update', source: 'GM campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear. EVs have front suspension loaded by motor weight.',
+          check: '<strong>Bounce test and drive over rough pavement.</strong>',
+          cost: '$400–$700 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery recall resolution proof — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Do not purchase any Gen 1 Bolt without confirmed recall 22V-076 completion.',
+          check: '<strong>Run nhtsa.gov/recalls. Walk away if recall is open or unresolved.</strong>',
+          cost: 'Walk away from recall-incomplete Bolt EVs', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-076', title: 'Battery Module Fire Risk — CRITICAL', desc: 'Battery may cause fire. MODULE REPLACEMENT required — verify complete.' },
+      { number: '21V-650', title: 'Onboard Charging Module', desc: 'OBCM may cause fire — replacement required.' },
+      { number: '20V-583', title: 'Battery Module Software', desc: 'Interim software fix before hardware remedy.' }
+    ]
+  },
+
+  'honda-crv-2017': {
+    year: 2017, make: 'Honda', model: 'CR-V', trim: 'LX / EX / EX-L / Touring (5th gen RW/RT)',
+    engine: '2.4L K24W I4 (184hp FWD) / 1.5L L15B7 Turbo I4 (190hp AWD/higher trims) with CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 5th-gen CR-V is one of the best compact SUVs in its class — but the 1.5T L15B7 turbocharged engine has the same oil dilution problem as the 10th-gen Civic. Cold-climate buyers must check dipstick and verify PCM update. LX FWD uses the 2.4L K24W (no dilution) and is the low-risk choice. Outstanding feature content and interior space for the price.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 420, topComplaintArea: '1.5T oil dilution (cold climate) — same as 2017 Civic' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T L15B7 oil dilution (cold climates)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same cold-weather oil dilution as 10th-gen Civic and 2022 Odyssey. Class action settled. PCM update (TSB 19-049) partially addresses.',
+          check: '<strong>Pull dipstick on any 1.5T.</strong> Oil at or above MAX = dilution active. Verify PCM update on service record.',
+          cost: '$5,500+ engine replacement if severe', source: 'Browning v. Honda settlement' },
+        { title: '2.4L K24W — safe choice (LX FWD)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'LX FWD trims use the 2.4L with no dilution exposure.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Honda K24W reliability' },
+        { title: 'CVT fluid service (Honda HCF-2)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT requires HCF-2 fluid every 30k miles.',
+          check: '<strong>Request CVT service records.</strong>',
+          cost: '$200–$400 service / $3,500–$5,500 CVT', source: 'Honda CVT service standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Real Time AWD rear differential fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear differential fluid (DPS-F) every 30k miles on AWD models.',
+          check: '<strong>Test tight parking lot turns for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Honda AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Honda Sensing windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Honda Sensing camera at top-center windshield doubles replacement cost.',
+          check: '<strong>Inspect windshield top-center zone for chips.</strong>',
+          cost: '$1,000–$2,200 windshield + recal', source: 'Honda Sensing service' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine variant check + PCM update + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Identify 1.5T vs 2.4L. 1.5T: require dipstick check + PCM update record. Four recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Dipstick check on 1.5T before negotiation.</strong>',
+          cost: 'Walk away from 1.5T with active dilution', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' },
+      { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '18V-114', title: 'Drive Shaft (manual-adjacent)', desc: 'Verify on eligible VINs.' }
+    ]
+  },
+
+  'nissan-rogue-sport-2018': {
+    year: 2018, make: 'Nissan', model: 'Rogue Sport', trim: 'S / SV / SL (J11)',
+    engine: '2.0L MR20DD I4 (141hp) with Xtronic CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Rogue Sport (Qashqai) is the subcompact sibling to the Rogue — smaller, lower base price, same CVT platform. The 2.0L MR20 is less powerful than the Rogue's 2.5L but more fuel-efficient. CVT fluid service (NS-3 every 30k miles) is the identical critical maintenance item. Strong value for buyers who don't need Rogue cargo space.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 90, topComplaintArea: 'Xtronic CVT fluid service / limited power' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT requires NS-3 fluid every 30k miles. Same failure profile as all Nissan CVT cars.',
+          check: '<strong>Request CVT fluid service receipts.</strong>',
+          cost: '$200–$350 service / $3,000–$4,500 CVT', source: 'Nissan CVT standard' },
+        { title: '2.0L MR20 oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some MR20 engines report oil consumption above 80k miles.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: 'Monitor', source: 'Consumer reports' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Intelligent AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid service every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Nissan AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known freeze issues. Software updates resolve most.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Cargo space awareness', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rogue Sport has 36% less cargo than the Rogue. Verify it meets your needs.',
+          check: '<strong>Load your typical cargo.</strong>',
+          cost: 'N/A — preference', source: 'Consumer experience' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT fluid history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT history is the primary document. Three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Require CVT fluid receipts.</strong>',
+          cost: 'Walk away from CVT without history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
+      { number: '16V-244', title: 'OCS Software', desc: 'Airbag software update.' }
+    ]
+  },
+
+  'subaru-outback-2020': {
+    year: 2020, make: 'Subaru', model: 'Outback', trim: '2.5i / Premium / Sport / Limited / Onyx XT / Limited XT (BT gen)',
+    engine: '2.5L FB25D Boxer-4 (182hp) / 2.4L FA24F Turbo Boxer-4 (260hp XT)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The BT Outback (2020+) is a significant improvement over the BN gen — bigger, quieter, better tech, and the XT turbo is genuinely quick. The 2.5L FB25D is updated but still warrants oil consumption check above 80k miles. The 2.4T FA24F XT adds turbo maintenance requirements. CVT fluid service remains the critical maintenance item. Standard EyeSight on all trims adds windshield replacement cost.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'FB25D oil consumption / 2.4T XT oil maintenance / CVT fluid / EyeSight windshield' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FB25D / 2.4T oil consumption check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'FB-series oil consumption check at 80k+. 2.4T requires synthetic oil every 5k.',
+          check: '<strong>Pull dipstick before driving. Verify synthetic oil service on any XT.</strong>',
+          cost: '$0 if early / $4,500–$7,000 engine', source: 'Subaru FB/FA pattern' },
+        { title: 'CVT Lineartronic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT requires fluid every 30k–40k miles.',
+          check: '<strong>Test highway acceleration for shudder. Request CVT receipts.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 CVT', source: 'Subaru CVT interval' }
+      ]},
+      { title: 'Safety', items: [
+        { title: 'EyeSight windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Standard EyeSight on all BT trims doubles windshield replacement cost.',
+          check: '<strong>Inspect top-center windshield zone carefully.</strong>',
+          cost: '$1,200–$2,200 windshield + recalibration', source: 'Subaru EyeSight service' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Rear differential fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear diff fluid service every 30k miles.',
+          check: '<strong>Test highway cornering.</strong>',
+          cost: '$100–$200 service', source: 'Subaru AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT history and three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Request CVT receipts.</strong>',
+          cost: 'Walk away from CVT without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-394', title: 'EyeSight Camera', desc: 'May deactivate — software fix.' },
+      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk.' },
+      { number: '22V-092', title: 'Air Bag Module', desc: 'Software update for deployment.' }
+    ]
+  },
+
+  'vw-golf-2018': {
+    year: 2018, make: 'Volkswagen', model: 'Golf', trim: 'S / SE / Wolfsburg / GTI S / GTI SE / R (Mk7.5)',
+    engine: '1.4L TSI EA211 I4 (147hp) / 2.0T TSI EA888 (220hp GTI / 292hp R)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Mk7.5 Golf is one of the best all-around compact hatchbacks ever built — the GTI is a benchmark hot hatch and the base Golf is practical and well-engineered. EA211 timing chain and DSG fluid service are the maintenance items on both. GTI R buyers need abuse-history assessment. Outstanding driver's cars across the lineup when service is current.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 115, topComplaintArea: 'DSG fluid / EA888 timing chain (GTI) / abuse history (GTI/R)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'DSG mechatronic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DSG shudder at under 15 mph = overdue fluid service.',
+          check: '<strong>Test stop-and-go under 15 mph.</strong>',
+          cost: '$350–$600 fluid service / $1,800–$3,500 mechatronic', source: 'VW DSG maintenance standard' },
+        { title: 'EA888 timing chain (GTI/R)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EA888 gen3 timing chain tensioner wear past 60k on neglected oil.',
+          check: '<strong>Cold-start rattle check first 5 seconds on GTI/R.</strong>',
+          cost: '$1,200–$2,500 timing chain', source: 'EA888 pattern' }
+      ]},
+      { title: 'GTI / R History', items: [
+        { title: 'Track and performance abuse (GTI/R)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'GTI and R are frequently driven hard. Assess brake wear, tire wear, and diff condition.',
+          check: '<strong>Inspect brake thickness, tire wear pattern, and test differential for whine.</strong>',
+          cost: '$1,000–$3,000 performance service', source: 'Performance car inspection standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MIB2 / CarPlay connectivity', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known CarPlay drop issues. Software updates help.',
+          check: '<strong>Test CarPlay and all functions.</strong>',
+          cost: '$0 update', source: 'VW campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Sunroof drain clog', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Panoramic sunroof drains clog — A-pillar water intrusion.',
+          check: '<strong>Check A-pillar headliner for water stains.</strong>',
+          cost: '$100–$300 drain cleaning', source: 'VW group complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DSG service + GTI/R abuse check + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DSG fluid history and performance history are both required on GTI/R.',
+          check: '<strong>Run nhtsa.gov/recalls. Request DSG receipt.</strong>',
+          cost: 'Walk away from GTI/R with unknown history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+    ]
+  },
+
+  'mazda-cx5-2017': {
+    year: 2017, make: 'Mazda', model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)',
+    engine: '2.5L SkyActiv-G I4 (187hp) / 2.5T SkyActiv-T Turbo I4 (227hp Signature)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The KF CX-5 (2017+) is the definitive mainstream compact SUV — best-in-class interior quality, engaging chassis, and exceptional reliability. The 2.5L naturally-aspirated is the proven baseline; the 2.5T Turbo is available on Signature trim. Direct injection does not carbon-foul at the same rate as German competitors due to Mazda's dual-port/direct injection approach. Outstanding used value.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 60, topComplaintArea: 'Minimal — cargo space vs class average / Mazda Connect interface preference' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L SkyActiv-G — no known failure modes', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Outstanding reliability record with no significant failure modes.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Mazda SkyActiv track record' },
+        { title: '6-speed automatic fluid condition', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Reliable. Fluid change every 60k miles.',
+          check: '<strong>Check fluid color.</strong>',
+          cost: '$200–$350 service', source: 'Mazda service interval' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'i-Activ AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid every 30k–45k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Mazda AWD standard' }
+      ]},
+      { title: 'Safety', items: [
+        { title: 'i-ACTIVSENSE windshield zone', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Camera and radar at windshield — chip doubles replacement cost on equipped trims.',
+          check: '<strong>Inspect windshield zone.</strong>',
+          cost: '$800–$1,800 windshield + recalibration', source: 'Mazda ADAS service' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Mazda Connect rotary dial', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Polarizing but reliable. CarPlay on 2018+ trims.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Mazda campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced KF CX-5 is an outstanding buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-307', title: 'i-ACTIVSENSE Camera', desc: 'Calibration update.' },
+      { number: '19V-394', title: 'Airbag Software', desc: 'Frontal airbag update.' }
+    ]
+  },
+
+  'toyota-highlander-hybrid-2018': {
+    year: 2018, make: 'Toyota', model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)',
+    engine: '3.5L 2GR-FKS V6 + Hybrid system (306hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "XU50 Highlander Hybrid is one of the most family-capable hybrid SUVs available — 28+ mpg combined in a 3-row body with proven Toyota hybrid reliability. The 2GR-FKS + NiMH battery combination is extensively proven. Battery degradation is slow. Main buyer checks are identical to the standard Highlander plus HV battery health test.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 55, topComplaintArea: 'GDI carbon (2GR-FKS) / HV battery health / valve cover seeps' },
+    sections: [
+      { title: 'Hybrid System', items: [
+        { title: 'HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota Ni-MH hybrid battery should achieve 27–29 mpg combined. Degradation is gradual.',
+          check: '<strong>Test fuel economy in mixed city/highway driving.</strong>',
+          cost: '$2,500–$4,500 HV battery (rare failure on this platform)', source: 'Toyota hybrid reliability data' },
+        { title: '2GR-FKS V6 GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GDI deposits on intake valves at 80k+ miles.',
+          check: '<strong>Test idle smoothness and acceleration response.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI V6 carbon pattern' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: 'Valve cover oil seeps (2GR-FKS)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Oil seepage at valve covers past 100k miles.',
+          check: '<strong>Inspect valve covers with engine warm.</strong>',
+          cost: '$400–$800 gaskets', source: 'Toyota 2GR-FKS pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Entune / Toyota Multimedia', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Functional. Test all zone HVAC and infotainment.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Toyota campaigns' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Electric rear motor (AWD — e-Four)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Highlander Hybrid AWD uses an electric rear motor — no mechanical coupling fluid service.',
+          check: '<strong>Test AWD engagement on a low-traction surface if possible.</strong>',
+          cost: 'Maintenance only', source: 'Toyota e-AWD design' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'HV battery test + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Two recalls possible. Fuel economy test is the key purchase step.',
+          check: '<strong>Test mpg. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
+  },
+
+  'ford-ecosport-2018': {
+    year: 2018, make: 'Ford', model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)',
+    engine: '1.0L EcoBoost I3 (123hp) / 2.0L Ti-VCT I4 (166hp) / 1.5L Ti-VCT I4 (123hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The B4A EcoSport is Ford's entry-level subcompact SUV — limited cargo space due to the side-hinged rear door is the headline quirk. The 1.0L EcoBoost 3-cylinder is the most fuel-efficient option but the smallest engine in Ford's lineup. Main buyer checks: 1.0T oil consumption reports and transmission behavior on early builds. Lower-cost alternative to the Escape or Bronco Sport.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 140, topComplaintArea: '1.0T oil consumption / side-swing tailgate limitation / transmission shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.0L EcoBoost I3 oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '3-cylinder EcoBoost has oil consumption reports above 60k miles.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: '$0 if early / $4,500+ engine', source: 'Consumer reports' },
+        { title: '2.0L Ti-VCT — more robust choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0L naturally-aspirated is the more durable engine choice.',
+          check: '<strong>Standard check.</strong>',
+          cost: 'Maintenance only', source: 'Ford 2.0L reliability' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Side-hinged rear door functionality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The side-swing rear door is unusual — requires clearance to open fully. Assess if this works for your loading situations.',
+          check: '<strong>Open rear door in a tight parking spot to assess usability.</strong>',
+          cost: 'N/A — preference', source: 'Consumer experience' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is reliable on EcoSport.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test.</strong>',
+          cost: '$300–$600 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil consumption check + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Dipstick check on 1.0T is the primary step. Three recalls possible.',
+          check: '<strong>Check dipstick. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'May shatter.' },
+      { number: '19V-485', title: 'Fuel Injector Seal', desc: 'May leak — fire risk.' },
+      { number: '20V-077', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
   }
 
 };
