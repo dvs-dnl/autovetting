@@ -1,5 +1,7 @@
 # autovetting
 
+> Master index: [INDEX.md](../INDEX.md) — map of every project under `/Users/danieldavis/Documents/Claude/`, including cross-project artifacts and shared research.
+
 A four-step used-car research tool: pinpoint the right model, find listings, decode a VIN, get a model-specific pre-purchase inspection checklist. Built from NHTSA recall data, owner-reported failure patterns, and decades of mechanic intel.
 
 **Live at:** [autovetting.com](https://autovetting.com)
