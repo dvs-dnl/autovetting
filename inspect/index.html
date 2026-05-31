@@ -1487,30 +1487,12 @@
     .recall-item { page-break-inside: avoid; }
   }
 
-  /* Blog-post link wrapper on each checklist item title */
+  /* Checklist item title wrapper */
   .item-title-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     color: var(--navy);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .item-title-link:hover {
-    color: var(--electric);
-    text-decoration: none;
-  }
-  .item-title-link:hover .item-title { text-decoration: underline; text-decoration-color: var(--electric); text-underline-offset: 3px; }
-  .item-title-arrow {
-    opacity: 0;
-    transform: translateX(-4px);
-    color: var(--electric);
-    font-weight: 600;
-    transition: opacity 0.15s, transform 0.15s;
-  }
-  .item-title-link:hover .item-title-arrow {
-    opacity: 1;
-    transform: translateX(0);
   }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://autovetting.com/"},{"@type":"ListItem","position":2,"name":"Inspect","item":"https://autovetting.com/inspect/"}]}</script>
@@ -3610,7 +3592,7 @@ const CHECKLISTS = {
       { number: '19V-133', title: 'Pre-Collision System Calibration', desc: 'PCS may not detect certain hazards. Free software update.' },
       { number: '18V-004', title: 'Seat Recliner Mechanism', desc: 'Seat may not lock in position; injury risk. Free repair — verify VIN.' }
     ],
-    vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-391), while the 2GR-FKS V6 is one of Toyota's most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
+    vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-391), while the 2GR-FKS V6 is one of Toyota\'s most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
     blogUrl: '/blog/2018-toyota-camry-buyers-guide'
   },
 
@@ -6148,7 +6130,7 @@ const CHECKLISTS = {
       ]},
       { title: 'Electrical', items: [
         { title: 'SYNC 3 infotainment', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'SYNC 3 is one of Ford's better systems but has known CarPlay connectivity issues on early software.',
+          desc: 'SYNC 3 is one of Ford\'s better systems but has known CarPlay connectivity issues on early software.',
           check: '<strong>Test wireless/wired CarPlay, backup camera, heated seat controls.</strong>',
           cost: '$0 software update', source: 'Ford campaigns' }
       ]},
@@ -11624,10 +11606,9 @@ function renderChecklist(c, vin) {
               <div class="item-risk-marker item-risk-${item.risk}"></div>
               <div class="item-content">
                 <div class="item-header">
-                  <a class="item-title-link" href="/blog/${slugifyTitle(item.title)}/" title="Read the deep-dive on this issue">
+                  <span class="item-title-link">
                     <span class="item-title">${item.title}</span>
-                    <span class="item-title-arrow" aria-hidden="true">&rarr;</span>
-                  </a>
+                  </span>
                   <div class="item-risk-label ${item.risk}">${item.riskLabel}</div>
                 </div>
                 <div class="item-desc">${item.desc}</div>
