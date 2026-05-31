@@ -5802,6 +5802,437 @@ const CHECKLISTS = {
     ]
   },
 
+  'ram-1500-2019': {
+    year: 2019, make: 'Ram', model: '1500', trim: 'Tradesman / Big Horn / Rebel / Laramie / Limited (DT platform)',
+    engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp) / 5.7L Hemi eTorque V8 (395hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The DT Ram 1500 is the most refined half-ton truck on the market — but buyers must identify whether they have an eTorque mild-hybrid (BSG belt-starter-generator) and whether the 5.7L Hemi has MDS active fuel management. MDS cylinder deactivation lifters are the same failure vector as the GM AFM units — at 60k–120k miles on neglected oil. The eTorque system adds battery and generator service complexity. Coil-spring rear suspension (not leaf springs) is a major comfort upgrade but limits payload vs competitors.",
+    stats: { itemsToCheck: 14, recalls: 5, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'MDS (Multi-Displacement System) cylinder deactivation lifters fail at 60k–120k miles when oil changes were neglected or extended. Symptoms: ticking, misfire codes (P0301–P0308), oil consumption.',
+          check: '<strong>Cold-start the engine and listen for a tick that persists past 30 seconds.</strong> Scan for cylinder misfire codes. Check oil change interval records — beyond 7,500 miles increases MDS risk.',
+          cost: '$3,000–$6,500 lifter replacement (all 16 + cam)', source: 'NHTSA complaints + Ram service campaigns' },
+        { title: 'eTorque BSG system (eTorque models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The belt-starter-generator mild hybrid adds a 48V battery and BSG unit. Early 2019 software had drivability bugs; recall 20V-032 updated PCM calibration.',
+          check: '<strong>Verify recall 20V-032 is complete on eTorque VINs.</strong> Test engine auto-stop/restart — rough restart indicates BSG wear.',
+          cost: '$1,200–$3,500 BSG replacement', source: 'NHTSA recall 20V-032' },
+        { title: '8HP75 transmission fluid and shift quality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The ZF 8-speed is generally excellent but shudder at 25–45 mph indicates torque converter contamination from neglected fluid.',
+          check: '<strong>Test at highway on-ramp in sport mode.</strong> Shudder during light acceleration is torque converter shudder.',
+          cost: '$350–$550 fluid flush / $2,800–$4,500 torque converter', source: 'ZF 8HP service pattern' }
+      ]},
+      { title: 'Air Suspension (if equipped)', items: [
+        { title: 'Air suspension compressor and airbag wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Active-level air suspension is a premium feature but airbags fail at 80k–120k miles. Compressor runs excessively when a bag is leaking.',
+          check: '<strong>Check truck ride height — it should be level side to side.</strong> Listen for compressor cycling at idle or after parking. Confirm Air Suspension module control in the infotainment.',
+          cost: '$600–$1,200 per airbag / $800–$1,500 compressor', source: 'Common Ram air-susp failure pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Uconnect infotainment freeze / reboot', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Uconnect 8.4 and 12-inch systems on DT Ram have known freeze/reboot issues. Multiple OTA and dealer software updates issued.',
+          check: '<strong>Cycle through all infotainment functions including Apple CarPlay, backup camera, and radio.</strong> Verify latest software version installed.',
+          cost: '$0 software update / $1,500–$2,500 head unit if hardware failed', source: 'Ram software campaigns' }
+      ]},
+      { title: 'Suspension & Frame', items: [
+        { title: 'Coil spring rear suspension squeak/wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: "DT Ram's coil-spring rear is more comfortable than competitors but produces squeak over rough pavement when isolators wear.",
+          check: '<strong>Drive over rough pavement at low speed.</strong> Squeak or knock from rear is isolator wear.',
+          cost: '$150–$400 isolator replacement', source: 'Common wear pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall verification (5 open campaigns)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Run VIN at nhtsa.gov/recalls before purchase. Key campaigns: 20V-032 (eTorque calibration), 19V-154 (park-release software), and any 2019 safety campaigns.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls.</strong> Confirm all campaigns show "remedy available" and "owner notified" — or that dealer-completed records exist.',
+          cost: 'Walk away from unrepaired critical safety recalls', source: 'NHTSA recall database' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-032', title: 'eTorque PCM Calibration', desc: 'eTorque models: PCM update improves auto-stop/restart behavior.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage unexpectedly — software update.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Certain 2019 models: pretensioner may not deploy correctly.' },
+      { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' },
+      { number: '21V-037', title: 'Transmission Software', desc: 'Transmission may not downshift correctly in cold temps.' }
+    ]
+  },
+
+  'chevy-equinox-2018': {
+    year: 2018, make: 'Chevrolet', model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)',
+    engine: '1.5L Ecotec LFV Turbo I4 (170hp) / 2.0L LSY Turbo I4 (252hp) / 1.6L Duramax Diesel I4 (137hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 3rd-gen Equinox was a significant step up from the 2nd gen — but the dominant engine, the 1.5L LFV turbo, has documented oil consumption and timing chain stretch issues that buyers must investigate. The 2.0L LSY is the stronger used pick. The 1.6L diesel is uncommon and requires DEF system maintenance. Avoid the 1.5T if oil change records are incomplete.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 380, topComplaintArea: 'Engine / oil consumption (1.5T)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5L LFV turbo oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 1.5T LFV has documented oil consumption on higher-mileage examples (80k+). Piston ring wear causes oil burning; check engine light may follow with catalyst codes.',
+          check: '<strong>Pull the oil dipstick on 1.5T cars before driving.</strong> Low oil between changes is the key indicator. Ask for service records — changes more frequent than 5k miles suggest known consumption.',
+          cost: '$0–$1,500 under extended warranty / $4,500–$7,000 engine replacement', source: 'NHTSA complaints + GM service campaign 18208' },
+        { title: '1.5L LFV timing chain stretch', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Timing chain on the LFV can stretch prematurely with low oil or extended intervals. Rattle at cold start (first 3–5 seconds) is the audible warning.',
+          check: '<strong>Cold-start the engine (after overnight sit).</strong> A rattle in the first few seconds of startup that clears is early stretch; sustained rattle is advanced failure.',
+          cost: '$1,800–$3,200 timing chain kit + guides', source: 'GM LFV known failure pattern' },
+        { title: 'CVT / 6-speed fluid condition', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '1.5T models pair with a CVT; 2.0T uses a 9-speed. Both require factory-spec fluid. Brown, burnt, or opaque fluid means service is overdue.',
+          check: '<strong>Check fluid color via dipstick (CVT) or at the fill plug.</strong> Dark fluid on a CVT warrants a flush before purchase.',
+          cost: '$200–$450 fluid service / $3,500–$5,500 CVT replacement', source: 'GM service intervals' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment software and MyLink freeze', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MyLink infotainment on 2018 Equinox has known freeze and reboot loop issues. OTA updates and dealer reflash campaigns were issued.',
+          check: '<strong>Test Bluetooth, Apple CarPlay, backup camera, and all audio sources.</strong> Reboot during test = software issue.',
+          cost: '$0 software update', source: 'GM campaigns' }
+      ]},
+      { title: 'HVAC', items: [
+        { title: 'A/C compressor failure', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'A/C compressor failure rate is above average for this generation — typically at 70k–120k miles.',
+          check: '<strong>Run A/C at idle for 5+ minutes.</strong> Vent temp should reach low 40s F. Clicking from under hood is compressor clutch wear.',
+          cost: '$800–$1,600 compressor replacement', source: 'NHTSA consumer complaints' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and sway bar link wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Clunking over bumps from the front is typically worn sway bar end links — common at 60k+ miles.',
+          check: '<strong>Drive over a speed bump slowly.</strong> Clunk from front = end link or strut mount. Bounce test at front corners.',
+          cost: '$150–$350 end links / $400–$700 struts', source: 'Common wear pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall verification and oil consumption documentation', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Check VIN for open campaigns including 20V-012 (fuel pump) and service campaign 18208 (oil consumption on 1.5T). Oil consumption is the key disqualifier on this vehicle.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> For 1.5T cars: require proof the oil consumption campaign was addressed.',
+          cost: 'Walk away from 1.5T cars with undocumented high-mileage oil issues', source: 'NHTSA + GM service records' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'Fuel pump may fail — free dealer replacement.' },
+      { number: '19V-268', title: 'Infotainment USB Fire Risk', desc: 'USB port can overheat — dealer fix required.' },
+      { number: '21V-259', title: 'Rear Cross-Traffic Braking Software', desc: 'False activation under certain conditions — software update.' },
+      { number: '18V-239', title: 'Tire Pressure Sensor', desc: 'TPMS may not alert correctly — sensor replacement.' }
+    ]
+  },
+
+  'ford-explorer-2020': {
+    year: 2020, make: 'Ford', model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)',
+    engine: '2.3L EcoBoost I4 (300hp) / 3.0L EcoBoost V6 (365hp) / 3.3L Ti-VCT V6 (290hp)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The 6th-gen Explorer (2020+) is a significant redesign — but it launched with serious quality issues. The most critical: NHTSA recall 22V-486 covers rear axle bolt fracture that can cause the rear axle to separate, a catastrophic safety issue. Carbon monoxide intrusion from exhaust leaks near the rear HVAC was also recalled. Verify both recalls are complete before purchase — these are deal-breakers if unresolved.",
+    stats: { itemsToCheck: 14, recalls: 6, ownerComplaints: 890, topComplaintArea: 'Safety systems / rear axle recall' },
+    sections: [
+      { title: 'Safety Recalls — Verify First', items: [
+        { title: 'Rear axle bolt fracture — 22V-486 (CRITICAL)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Rear axle pinion bolt can fracture under load, allowing the rear axle to separate from the vehicle. This is a catastrophic failure mode that caused accidents. NHTSA investigation resulted in Recall 22V-486.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls BEFORE any test drive.</strong> If 22V-486 shows as open/incomplete, do not drive the vehicle. Walk away or require dealer remedy before proceeding.',
+          cost: 'Free dealer repair under recall — or walk away', source: 'NHTSA recall 22V-486' },
+        { title: 'Carbon monoxide intrusion — 20V-373', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Exhaust gases can enter the rear passenger cabin through gaps in the body, raising CO levels. Primarily affects rear passengers. Recall 20V-373.',
+          check: '<strong>Verify recall 20V-373 is complete on the VIN.</strong> Ask dealer for proof of body sealing repair.',
+          cost: 'Free dealer repair under recall', source: 'NHTSA recall 20V-373' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '10R60 transmission shudder / software', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 10-speed auto on the Explorer has TSBs for shudder, harsh downshift, and hunting in stop-go traffic.',
+          check: '<strong>Test in stop-and-go at 15–30 mph for 5+ minutes.</strong> Shudder during light acceleration is torque converter shudder or software issue.',
+          cost: '$350–$550 fluid flush + calibration / $4,500–$7,000 torque converter', source: 'Ford TSB 20-2157' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '2.3L EcoBoost coolant consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some 2020–2021 2.3L EcoBoost engines have reported gradual coolant loss without external leaks — suspect head gasket or degas bottle.',
+          check: '<strong>Check coolant level cold before starting.</strong> Any loss between services = suspect head gasket. Check for white exhaust on warm engine.',
+          cost: '$1,800–$3,500 head gasket', source: 'NHTSA complaints' },
+        { title: '3.0L EcoBoost water pump (internal)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 3.0L Platinum/ST uses an internal water pump driven by the timing chain. Failure allows coolant to contaminate oil — catastrophic engine damage.',
+          check: '<strong>Verify coolant color and oil appearance on 3.0L engines.</strong> Any mayonnaise on oil cap = coolant intrusion. Check service history for water pump replacement.',
+          cost: '$2,500–$4,500 internal water pump', source: 'Ford 3.0 Cyclone known failure pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 4 / infotainment issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 4 is generally better than prior generations but has known freeze and connectivity issues on early 2020 production.',
+          check: '<strong>Test all infotainment functions including wireless CarPlay/Android Auto.</strong>',
+          cost: '$0 software update', source: 'Ford software campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Full recall verification', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Six open campaigns possible including the two critical safety recalls. VIN check is non-negotiable before purchase.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Any unrepaired critical safety recall = walk away until remedied.',
+          cost: 'Walk away from critical unrepaired recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-486', title: 'Rear Axle Bolt Fracture — CRITICAL', desc: 'Rear axle can separate from vehicle. Do not drive until repaired.' },
+      { number: '20V-373', title: 'Carbon Monoxide Intrusion', desc: 'Exhaust gases can enter rear cabin. Verify body seal repair complete.' },
+      { number: '19V-888', title: 'Panoramic Roof Glass Breakage', desc: 'Roof glass may crack unexpectedly — dealer inspection required.' },
+      { number: '21V-485', title: 'Fuel Injector Leak', desc: 'Fuel injector seals on 2.3L EcoBoost may leak — fire risk.' },
+      { number: '20V-077', title: 'Rear Camera Image Delay', desc: 'Software update for backup camera delay.' },
+      { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10R60 transmission may leak fluid — fire risk.' }
+    ]
+  },
+
+  'chevy-malibu-2016': {
+    year: 2016, make: 'Chevrolet', model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)',
+    engine: '1.5L Ecotec LFV Turbo I4 (160hp) / 2.0L Ecotec LSY Turbo I4 (250hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "9th-gen Malibu uses the same LFV 1.5T engine as the Equinox — with the same oil consumption and timing chain concerns. The used market is flooded with fleet/rental Malibus driving prices low, but rental-fleet mileage accumulation combined with extended oil intervals is exactly the scenario that creates LFV timing chain and consumption problems. Service history is the critical variable.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 310, topComplaintArea: 'Engine / oil consumption (1.5T)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T LFV oil consumption and timing chain', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same failure pattern as Equinox 1.5T: oil consumption above 80k miles and timing chain rattle on cold start.',
+          check: '<strong>Pull dipstick + cold-start check for chain rattle (first 5 sec).</strong> Fleet/rental history with gaps in service = elevated risk.',
+          cost: '$1,800–$3,200 timing chain / $4,500–$7,000 engine', source: 'GM LFV known failure pattern' },
+        { title: '9-speed automatic shudder (2.0T)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '2.0T Malibu uses a 9-speed auto that shudders under light throttle at 25–45 mph if fluid is contaminated.',
+          check: '<strong>Test in light city traffic — shudder at low speed is transmission torque converter issue.</strong>',
+          cost: '$350–$550 fluid flush / $3,500–$5,000 torque converter', source: 'GM 9T65 service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment / MyLink freeze', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'IntelliLink on the 9th gen has known slow boot and occasional freeze. Software updates resolve most issues.',
+          check: '<strong>Cycle all infotainment functions.</strong>',
+          cost: '$0 software update', source: 'GM campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear and road noise', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Strut wear on fleet-used Malibus can accelerate due to high mileage accumulation.',
+          check: '<strong>Bounce test at each corner and listen on rough pavement.</strong>',
+          cost: '$400–$700 per strut assembly', source: 'Common wear pattern' }
+      ]},
+      { title: 'Body & Interior', items: [
+        { title: 'Interior wear from fleet/rental use', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Fleet and rental Malibus have disproportionately worn interiors relative to odometer reading.',
+          check: '<strong>Check door panel edges, steering wheel leather, and seat bolsters for wear inconsistent with mileage.</strong>',
+          cost: '$0–$500 interior reconditioning', source: 'Fleet car inspection standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall verification (fleet cars often skip dealer visits)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Fleet vehicles often miss recall repairs. Key recall 19V-777 covers park pawl failure.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-777', title: 'Park Pawl Fracture', desc: 'Parking pawl can fracture — vehicle may roll. Free repair.' },
+      { number: '18V-139', title: 'Steering Gear Seals', desc: 'Power steering seals may leak — fire risk.' },
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'Same Delphi pump as Equinox — may fail.' },
+      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update for ignition switch behavior.' }
+    ]
+  },
+
+  'gmc-sierra-2014': {
+    year: 2014, make: 'GMC', model: 'Sierra 1500', trim: 'Regular / Double / Crew Cab — SLE / SLT / Denali (K2XX)',
+    engine: '4.3L EcoTec3 V6 LV3 (285hp) / 5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The K2XX Sierra 1500 is mechanically identical to the Chevrolet Silverado 1500 — shared platform, same engines, same known issues. The AFM (Active Fuel Management) cylinder deactivation lifter failure on the 5.3L and 6.2L V8 engines is the defining buyer risk. Decode position 8 of the VIN: U = 4.3L V6 (no AFM, lower risk), Z = 5.3L V8 (AFM, lifter risk), B = 6.2L V8 (AFM). Ask for oil change records regardless of engine.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 520, topComplaintArea: 'Engine / AFM lifter failure (5.3L + 6.2L)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.3L / 6.2L AFM lifter failure (critical for V8 buyers)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'AFM deactivating lifters in the L83/L86 collapse at 60k–130k miles when oil changes were beyond 7,500 miles. Ticking + misfire + oil consumption = lifter failure. Cost is significant.',
+          check: '<strong>Cold-start the engine and listen for a persistent tick.</strong> Scan for P0300-series misfire codes. Pull service records — intervals beyond 7,500 miles = elevated risk.',
+          cost: '$3,500–$7,000 full lifter replacement (16 lifters + cam)', source: 'K2XX well-documented failure pattern' },
+        { title: 'AFM oil consumption (5.3L)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Even before lifter failure, AFM V8s can consume 1 quart per 2,000 miles — rings wear from oil starvation during 4-cylinder mode.',
+          check: '<strong>Check oil level before the test drive.</strong> Low on recent change = active consumption. Ask owner how often they add oil between changes.',
+          cost: '$0 if early / $4,500–$7,000 for engine rebuild if rings are gone', source: 'GM AFM complaints' },
+        { title: 'Transmission fluid and torque converter', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '6-speed 6L80/6L90 auto. Shudder at 30–45 mph under light throttle = contaminated torque converter fluid.',
+          check: '<strong>Test transmission shudder at light throttle on highway on-ramp.</strong>',
+          cost: '$300–$500 flush / $2,500–$4,000 torque converter', source: '6L80 service pattern' }
+      ]},
+      { title: 'Frame & Chassis', items: [
+        { title: 'Frame rust inspection (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'K2XX trucks from Northeast/Midwest states can develop significant frame rust at rocker panels and cab corners.',
+          check: '<strong>Inspect all four cab corners and rocker panels with a flashlight and magnet.</strong> Surface rust is normal; through-rust on structural sections is a deal-breaker.',
+          cost: 'Walk away from through-rust on frame or structural body panels', source: 'Standard truck inspection' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment / MyLink', risk: 'low', riskLabel: 'Low Risk',
+          desc: '2014 MyLink has known Bluetooth pairing and occasional freeze issues.',
+          check: '<strong>Pair phone and test audio + backup camera.</strong>',
+          cost: '$0 software update', source: 'GM campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Tailgate and bed rust', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Steel bed floors and tailgates rust from moisture under bed liners. Check under any aftermarket liner.',
+          check: '<strong>Remove the bed liner or check the edges.</strong> Any rust perforation on the bed floor is a negotiation point.',
+          cost: '$0–$600 bed treatment / $800–$2,500 bed replacement', source: 'Standard truck inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'VIN decode + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Decode position 8 (engine: U=4.3L, Z=5.3L, B=6.2L) and position 10 (E=2014, F=2015). Run all four listed recalls.',
+          check: '<strong>Decode VIN at autovetting.com/decode and run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from unresolved critical recalls', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-394', title: 'Power Steering Fluid Leak', desc: 'Hydraulic power steering hose may crack — fire risk.' },
+      { number: '14V-290', title: 'Seat Belt Buckle Pretensioner', desc: 'Pretensioner may not function correctly.' },
+      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'Air bag may not deploy as designed.' },
+      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Wiring chafing may cause CEL or no-start.' }
+    ]
+  },
+
+  'hyundai-tucson-2017': {
+    year: 2017, make: 'Hyundai', model: 'Tucson', trim: 'SE / Eco / Sport / Limited / Ultimate (TL gen)',
+    engine: '2.0L Nu MPI I4 (164hp) / 1.6L Gamma GDI Turbo I4 (175hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The TL Tucson is a competent compact SUV with good road manners — but the 2.0L Nu engine has a documented history of bearing failure and engine seizure (the Theta II successor shares some characteristics). Hyundai's broad engine recall campaign (22V-159 and related) covers select VINs. The 1.6T is the more engaging choice but requires turbo oil-feed line inspection. Confirm knock sensor monitoring (KSDS) recall coverage before purchasing any Tucson in this generation.",
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 290, topComplaintArea: 'Engine (bearing failure / seizure)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L Nu engine bearing / seizure risk', risk: 'high', riskLabel: 'High Attention',
+          desc: "Hyundai's KSDS (Knock Sensor Detection System) recall campaign covers Nu and Theta II engines with bearing wear that can lead to engine seizure. Recall 22V-159 and earlier campaigns apply to specific production ranges.",
+          check: '<strong>Run the VIN at nhtsa.gov/recalls to confirm all engine recall campaigns are complete.</strong> Listen for a metallic knock at idle — not to be confused with normal injector tick.',
+          cost: '$0 under recall / $5,500–$8,500 engine replacement if seizure occurs', source: 'NHTSA recall 22V-159 + Hyundai KSDS campaign' },
+        { title: '1.6T turbo oil feed line inspection', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 1.6 Gamma turbo oil-feed banjo bolt can develop small leaks at the cylinder head junction at 80k+ miles.',
+          check: '<strong>Inspect the banjo bolt fitting on the turbo oil line for seepage.</strong> Any leak = address before purchase.',
+          cost: '$150–$400 banjo bolt + gaskets', source: '1.6 Gamma service pattern' },
+        { title: 'DCT / automatic transmission fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The Eco 1.6T uses a 7-speed DCT that requires fluid service at 40k miles — often skipped. DCT shudder under 15 mph is the symptom.',
+          check: '<strong>Test low-speed crawl in stop-and-go traffic.</strong> Any shudder or jerkiness at under 15 mph = DCT service needed.',
+          cost: '$250–$450 DCT fluid service / $3,500–$5,500 clutch pack', source: 'Hyundai DCT service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment and touchscreen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AVN system has known responsiveness issues. Verify all functions including Android Auto/Apple CarPlay compatibility.',
+          check: '<strong>Test infotainment fully.</strong>', cost: '$0 software update', source: 'Common complaint' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Rear trailing arm bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear trailing arm bushings wear at 80k–100k miles on TL Tucson, causing vague handling and tire wear.',
+          check: '<strong>Check rear tire wear pattern — uneven inner wear indicates trailing arm bushing wear or alignment loss.</strong>',
+          cost: '$300–$600 bushing replacement', source: 'Common wear pattern' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'TL Tucson has softer-than-average paint that chips and scratches easily.',
+          check: '<strong>Inspect hood leading edge and door handles for paint chips.</strong>',
+          cost: '$0–$500 touch-up or wrap', source: 'Consumer reports' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine recall completion (multiple campaigns)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Multiple Hyundai engine recall campaigns apply to this VIN range. Non-completion = potential engine seizure risk.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> All Hyundai KSDS and engine bearing recall campaigns must show complete.',
+          cost: 'Walk away if critical engine recalls are unresolved', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-159', title: 'Engine Bearing Wear — KSDS', desc: 'Knock sensor monitoring for bearing wear. Software update + inspection.' },
+      { number: '20V-051', title: '1.6T Fire Risk — Brake Fluid', desc: 'Brake fluid may contact engine components — fire risk on 1.6T.' },
+      { number: '21V-065', title: 'ABS Hydraulic Control Unit', desc: 'ABS HCU fire risk — dealer replacement.' },
+      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Airbag side curtain may not deploy — repair required.' },
+      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking performance.' }
+    ]
+  },
+
+  'ford-edge-2017': {
+    year: 2017, make: 'Ford', model: 'Edge', trim: 'SE / SEL / Titanium / Sport / ST (2nd gen)',
+    engine: '2.0L EcoBoost I4 (245hp) / 2.7L EcoBoost V6 (315hp) / 2.0L EcoBoost AWD Titanium',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "2nd-gen Ford Edge is a refined midsize crossover — the 2.7L EcoBoost V6 is the standout powertrain choice, with the 2.0L EcoBoost being adequate but carrying the same internal water pump issue as its sibling engines. PTU (Power Transfer Unit) fluid service on AWD models is the most commonly missed maintenance item and leads to premature failure. The Edge is a solid used buy with documented service history.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L EcoBoost internal water pump', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 2.0L EcoBoost uses a timing-chain-driven internal water pump. Failure allows coolant to contaminate engine oil — catastrophic damage results.',
+          check: '<strong>Check for mayonnaise residue under oil cap and in coolant reservoir.</strong> Any contamination = walk away.',
+          cost: '$1,800–$3,500 internal water pump', source: 'Ford 2.0 EcoBoost known pattern' },
+        { title: 'AWD PTU fluid service (AWD models)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The Power Transfer Unit requires fluid changes every 30k–40k miles — almost universally skipped. Dry PTU = bearing whine and eventual failure.',
+          check: '<strong>Ask for PTU fluid service history.</strong> Listen for a 35–55 mph whine that changes with load or deceleration.',
+          cost: '$150–$300 PTU service / $1,200–$2,200 PTU replacement', source: 'Ford AWD service requirement' },
+        { title: '6F55 / 8F57 automatic transmission fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Transmission fluid should be clean reddish-amber. Dark or burnt fluid = overdue service.',
+          check: '<strong>Check fluid at dipstick (if accessible) or at fill plug.</strong>',
+          cost: '$250–$400 fluid service', source: 'Ford service intervals' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is one of Ford's better systems but has known CarPlay connectivity issues on early software.',
+          check: '<strong>Test wireless/wired CarPlay, backup camera, heated seat controls.</strong>',
+          cost: '$0 software update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut top mount and noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Upper strut mount noise over bumps is a common 60k+ wear item on Edge.',
+          check: '<strong>Drive over rough pavement slowly.</strong> Knock from front = strut mount.',
+          cost: '$300–$600 per side', source: 'Common wear pattern' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Panoramic roof seals', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Panoramic roof drain tubes can clog, leading to water intrusion at A-pillar.',
+          check: '<strong>Check headliner at A-pillar for water stains or musty smell.</strong>',
+          cost: '$100–$300 drain tube clean / $500–$1,500 headliner if saturated', source: 'Common complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'PTU service record + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Key recalls: 17V-178 (door latch) and 19V-006 (fuel injector). PTU service documentation is the most important non-recall item.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls and ask specifically for PTU service receipt.</strong>',
+          cost: 'Walk away from AWD without documented PTU service', source: 'NHTSA + Ford maintenance' }
+      ]}
+    ],
+    recalls: [
+      { number: '17V-178', title: 'Door Latch Release Mechanism', desc: 'Door may open unexpectedly while driving — replace latch.' },
+      { number: '19V-006', title: 'Fuel Injector Seals', desc: '2.0T: fuel injector O-rings may leak — fire risk.' },
+      { number: '18V-117', title: 'Supplemental Restraint System', desc: 'Side airbag may not inflate correctly.' },
+      { number: '20V-127', title: 'ABS Control Module Software', desc: 'ABS software update for stability control behavior.' }
+    ]
+  },
+
+  'hyundai-elantra-2017': {
+    year: 2017, make: 'Hyundai', model: 'Elantra', trim: 'SE / Value Edition / Eco / Sport / Limited (AD gen)',
+    engine: '2.0L Nu MPI I4 (147hp) / 1.4L Gamma GDI Turbo I4 (128hp, Eco) / 1.6T Sport',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The AD-generation Elantra is a well-built, refined compact sedan — value-priced on the used market. The 2.0L Nu engine shares the broad Hyundai KSDS recall exposure that requires VIN verification. The 1.4T Eco is fuel-efficient but has an unusual bore stroke ratio that warrants careful inspection. The 1.6T Sport is the fun choice. At this price point, Elantra is strong value when recall campaigns are verified complete.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 195, topComplaintArea: 'Engine recall coverage (Nu engine)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L Nu engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same Hyundai KSDS engine bearing recall family as Sonata and Tucson — verify all campaigns are complete on this VIN.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Listen for metallic knock at idle on warm engine.',
+          cost: '$0 under recall / $5,500–$8,000 engine', source: 'Hyundai KSDS campaign' },
+        { title: '1.4T / 1.6T turbo oil maintenance', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbo engines require synthetic oil and strict intervals. Sludge from extended changes degrades turbo bearing life.',
+          check: '<strong>Check oil color on dipstick — black/sludgy = neglected intervals.</strong>',
+          cost: '$800–$2,500 turbo replacement', source: 'Turbo maintenance standard' },
+        { title: 'DCT (Eco and Sport models) shudder at low speed', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '7-speed DCT in Eco and Sport trims: shudder under 15 mph = clutch pack or fluid issue.',
+          check: '<strong>Test in stop-and-go traffic below 15 mph.</strong>',
+          cost: '$250–$450 service / $3,500–$5,500 clutch pack', source: 'Hyundai DCT service pattern' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Rear torsion beam bushing', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rear torsion beam is simple and durable; bushings wear at 100k+ miles.',
+          check: '<strong>Check rear tire wear — uneven inner wear = bushing or alignment loss.</strong>',
+          cost: '$200–$500 bushing replacement', source: 'Common wear pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment / Display Audio', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Display Audio has known intermittent touch issues; software updates resolve most.',
+          check: '<strong>Test all infotainment functions including backup camera.</strong>',
+          cost: '$0 software update', source: 'Hyundai campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint chip vulnerability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AD Elantra has soft paint that chips easily on hood and leading edge of roof.',
+          check: '<strong>Inspect hood center and leading roof edge for chips.</strong>',
+          cost: '$0–$300 touch-up', source: 'Consumer pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Engine recall completion + service history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Two or more open KSDS-related campaigns possible on 2.0L cars. Must verify complete.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls and confirm all campaigns resolved.</strong>',
+          cost: 'Walk away from unresolved engine safety campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak near engine can cause fire — inspect and repair.' },
+      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain airbag may not deploy — repair required.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS hydraulic control unit fire risk.' },
+      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
+    ]
+  }
+
 };
 
 // ---------- AVAILABLE YMMT MENU (drives dropdowns) ----------
@@ -5837,6 +6268,24 @@ const VEHICLE_MENU = {
     ]
   },
   2020: {
+    'Ram': [
+      { model: 'Ram 1500', trim: 'DT platform — eTorque / Hemi / Rebel / Laramie', key: 'ram-1500-2019' }
+    ],
+    'Chevrolet': [
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
+    'Ford': [
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' }
+    ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+    ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null },
@@ -5858,6 +6307,24 @@ const VEHICLE_MENU = {
     ]
   },
   2019: {
+    'Ram': [
+      { model: 'Ram 1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' }
+    ],
+    'Chevrolet': [
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+    ],
+    'Ford': [
+      { model: 'Edge', trim: 'SE / SEL / Titanium / ST (2nd gen)', key: 'ford-edge-2017' }
+    ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
@@ -5879,6 +6346,21 @@ const VEHICLE_MENU = {
     ]
   },
   2018: {
+    'Chevrolet': [
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+    ],
+    'Ford': [
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' }
+    ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
@@ -5913,6 +6395,21 @@ const VEHICLE_MENU = {
     ]
   },
   2017: {
+    'Chevrolet': [
+      { model: 'Equinox', trim: 'LS / LT / Premier (2nd gen ending)', key: null },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+    ],
+    'Ford': [
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' }
+    ],
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Tacoma', trim: '3rd gen', key: null },
@@ -5943,6 +6440,17 @@ const VEHICLE_MENU = {
     ]
   },
   2016: {
+    'Chevrolet': [
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL first year)', key: 'hyundai-tucson-2017' },
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+    ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
     ],
@@ -5985,6 +6493,12 @@ const VEHICLE_MENU = {
     ]
   },
   2015: {
+    'Chevrolet': [
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'GMC': [
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+    ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
       { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' }
@@ -6067,6 +6581,9 @@ const VEHICLE_MENU = {
     ]
   },
   2013: {
+    'Ford': [
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' }
+    ],
     'Toyota': [
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
