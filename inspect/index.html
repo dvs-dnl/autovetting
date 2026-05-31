@@ -7561,6 +7561,510 @@ const CHECKLISTS = {
       { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
       { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update.' }
     ]
+  },
+
+  'cadillac-escalade-2018': {
+    year: 2018, make: 'Cadillac', model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)',
+    engine: '6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The K2XX Escalade uses exclusively the 6.2L V8 with AFM — the most expensive AFM failure scenario of any K2XX vehicle. Lifter failure at 60k–100k miles on neglected service costs $5,000–$8,000+. Every used Escalade buyer must verify AFM status. Magnetic Ride Control (MRC) suspension is a significant additional cost when dampers fail. Budget $6,000–$10,000 for deferred repairs on any high-mileage example.",
+    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 310, topComplaintArea: 'AFM lifter failure (6.2L) / MRC suspension / air suspension' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '6.2L AFM lifter failure — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'All K2XX Escalades use the 6.2L L86 with AFM. Premium fuel + AFM + heavy vehicle = accelerated failure at 60k–100k miles with extended oil intervals.',
+          check: '<strong>Cold-start ticking + P0300 scan + oil interval records. Walk away if no records.</strong>',
+          cost: '$5,000–$8,000 lifter replacement', source: 'K2XX 6.2L AFM pattern' },
+        { title: '10-speed 10L90 transmission', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '2017+ Escalade uses the 10-speed, which has shudder TSBs. Pre-2017 uses 6L80.',
+          check: '<strong>Test light throttle 30–50 mph for shudder.</strong>',
+          cost: '$400–$600 fluid + calibration', source: '10L90 service pattern' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Magnetic Ride Control damper failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'MRC adaptive dampers fail at 80k–100k miles. Replacement is expensive.',
+          check: '<strong>Drive over rough pavement — harsh ride or clunking = failed MRC dampers.</strong>',
+          cost: '$800–$1,500 per corner for MRC dampers', source: 'MRC failure pattern' },
+        { title: 'Air ride level control (rear)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear air leveling compressor and airbags wear at 100k+ miles.',
+          check: '<strong>Verify truck sits level side-to-side.</strong>',
+          cost: '$400–$900 per bag / $600–$1,200 compressor', source: 'Common K2XX wear' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'CUE infotainment system reliability', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Cadillac CUE touch-sensitive buttons and screen delaminate and fail. A well-known defect on 2015–2018 Escalades.',
+          check: '<strong>Test all CUE touch controls — any ghost touches, dead zones, or delamination = CUE failure.</strong>',
+          cost: '$1,200–$2,500 CUE replacement', source: 'Escalade CUE known defect' }
+      ]},
+      { title: 'Frame', items: [
+        { title: 'Frame and undercarriage inspection', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Luxury BOF SUV + salt-belt = expensive frame rust.',
+          check: '<strong>Full undercarriage inspection.</strong>',
+          cost: 'Walk away from through-rust', source: 'Truck standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'AFM history + MRC + CUE audit — all critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'AFM, MRC, and CUE are all significant expense items on an Escalade. All require documentation.',
+          check: '<strong>Run nhtsa.gov/recalls. Require full service history. Have a specialist inspect MRC dampers and scan CUE.</strong>',
+          cost: 'Budget $6,000–$10,000 deferred repair potential on unknown-history Escalades', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
+      { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly.' },
+      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
+      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
+    ]
+  },
+
+  'chevrolet-traverse-2018': {
+    year: 2018, make: 'Chevrolet', model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)',
+    engine: '3.6L LGX V6 (310hp) / 2.0L LSY Turbo I4 (257hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "2nd-gen Traverse (2018+) on the C1 platform is a substantial improvement — more space, better quality, and the 3.6L LGX is a known reliable engine. The 9-speed auto had early hesitation issues mostly resolved by 2019+. GDI carbon buildup is a long-term service item on the LGX. One of the better-value 3-row family crossovers on the used market.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 165, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '9-speed 9T65 hesitation (2018 first-year builds)', risk: 'high', riskLabel: 'High Attention',
+          desc: '2018 first-year Traverse had the worst 9T65 hesitation and hunting behavior. 2019+ improved significantly after TSB updates.',
+          check: '<strong>Test all driving scenarios thoroughly — especially low-speed stop-and-go and highway on-ramp.</strong>',
+          cost: '$350–$550 fluid + calibration / $3,500–$5,500 transmission', source: 'GM 9T65 TSB history' },
+        { title: '3.6L LGX GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GDI deposits on intake valves at 80k+ miles. Loss of power and rough idle.',
+          check: '<strong>Test idle smoothness and acceleration response.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI pattern' }
+      ]},
+      { title: 'Transmission & AWD', items: [
+        { title: 'AWD coupling fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling requires fluid every 45k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'AWD maintenance' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment and third-row controls', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Infotainment is generally reliable. Test rear entertainment if equipped.',
+          check: '<strong>Test all zone HVAC and infotainment functions.</strong>',
+          cost: '$0 update', source: 'GM campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Third-row access and fold mechanism', risk: 'low', riskLabel: 'Low Risk',
+          desc: '2nd-row tumble-and-slide to third row mechanism can bind at 80k+ miles.',
+          check: '<strong>Cycle second and third rows fully.</strong>',
+          cost: '$150–$400 mechanism', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + 9T65 TSB verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Confirm 9T65 TSB updates are documented. Three recalls possible.',
+          check: '<strong>Run nhtsa.gov/recalls. Ask for transmission service history.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-259', title: 'Cross-Traffic Braking Software', desc: 'False activation possible.' }
+    ]
+  },
+
+  'gmc-acadia-2017': {
+    year: 2017, make: 'GMC', model: 'Acadia', trim: 'SL / SLE / SLT / Denali (C1 2nd gen)',
+    engine: '2.5L LCV I4 (193hp) / 3.6L LGX V6 (310hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "2nd-gen Acadia (2017+) downsized significantly from the first gen — shorter wheelbase, optional 2.5L 4-cylinder, and FWD-biased platform. The 3.6L LGX V6 is the preferred powertrain. The 2.5L 4-cylinder is underpowered for a 3-row SUV. 6-speed automatic is more proven than the 9-speed in early-production Traverse/Enclave. Strong value for buyers who don't need maximum interior space.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 125, topComplaintArea: '2.5L underpowered / GDI carbon on 3.6L' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L I4 performance adequacy', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2.5L base engine is genuinely underpowered for a 3-row family SUV. Not a failure mode — an experience issue.',
+          check: '<strong>Test highway on-ramp acceleration with the 2.5L. Some buyers find it unacceptable.</strong>',
+          cost: 'N/A — preference issue', source: 'Consumer experience' },
+        { title: '3.6L LGX GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GDI deposits on intake valves at 80k+ miles.',
+          check: '<strong>Test idle and cold-start smoothness.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid service every 45k miles.',
+          check: '<strong>Test highway cornering.</strong>',
+          cost: '$150–$300 service', source: 'AWD maintenance' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'IntelliLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known Bluetooth issues. Software updates help.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'GMC campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut noise', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Strut top mount clunk at 80k+ miles.',
+          check: '<strong>Drive over rough pavement.</strong>',
+          cost: '$300–$600 per side', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + powertrain history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Three recalls possible. Confirm oil change history on LGX.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
+      { number: '21V-259', title: 'Cross-Traffic Braking Software', desc: 'False activation.' }
+    ]
+  },
+
+  'hyundai-santa-fe-2019': {
+    year: 2019, make: 'Hyundai', model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)',
+    engine: '2.4L GDI Nu I4 (185hp) / 2.0T GDI Theta II I4 (235hp)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The TM Santa Fe (2019+) refreshed the model but retained the same engine concerns as prior generations. The 2.4L Nu and 2.0T Theta II engines are both subject to KSDS recall campaigns. Any unresolved engine campaign is a walk-away. AWD coupling fluid service is the most commonly missed maintenance item. Strong family SUV value when recall history is fully documented.",
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 245, topComplaintArea: 'Engine KSDS recall (Nu / Theta II) — multiple campaigns' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Nu / Theta II engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Both Santa Fe engines are in the KSDS recall family for rod bearing wear leading to seizure. Multiple campaigns apply.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls BEFORE any test drive.</strong> All KSDS campaigns must be complete.',
+          cost: '$0 under recall / $6,000–$9,000 engine seizure', source: 'Hyundai KSDS recall family' },
+        { title: '2.0T Theta II oil maintenance', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The Theta II requires synthetic oil every 5k miles and is extremely sensitive to neglect.',
+          check: '<strong>Check oil condition and request full service records on 2.0T.</strong>',
+          cost: '$6,000–$9,000 engine if neglected', source: 'Hyundai 2.0T service requirement' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'HTRAC AWD coupling fluid', risk: 'high', riskLabel: 'High Attention',
+          desc: 'HTRAC AWD coupling requires fluid every 30k miles — almost universally skipped.',
+          check: '<strong>Test highway cornering for vibration or shudder. Request fluid service receipt.</strong>',
+          cost: '$150–$300 fluid service / $800–$1,800 coupling', source: 'Hyundai AWD maintenance' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'AVN infotainment and BlueLink', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AVN has known connectivity issues. BlueLink may require subscription.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Hyundai campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Rear MDPS software update', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some TM Santa Fes received a motor-driven power steering software update for steering feel.',
+          check: '<strong>Test steering feel at all speeds — confirm update is on record.</strong>',
+          cost: '$0 update', source: 'Hyundai TSB' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'ALL engine recall campaigns + AWD service — both required', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Two non-negotiable documents: engine KSDS recall completion proof + AWD fluid service history.',
+          check: '<strong>Run nhtsa.gov/recalls. Walk away from any open engine campaign.</strong>',
+          cost: 'Walk away from unresolved KSDS campaigns', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-159', title: 'KSDS Engine Bearing', desc: 'Rod bearing monitoring — software update.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Engine Fire Risk (2.0T)', desc: 'Oil contact exhaust — fire risk.' },
+      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' },
+      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain may not deploy.' }
+    ]
+  },
+
+  'tesla-model3-2019': {
+    year: 2019, make: 'Tesla', model: 'Model 3', trim: 'Standard Range Plus / Long Range / Performance (MIC/FC)',
+    engine: 'Dual Motor AWD (346hp) / Single Motor RWD (283hp) / Performance (450hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Model 3 is the best-selling EV in history and a genuinely excellent car. Battery degradation is slow on 2019+ units. Main buyer concerns: panel gap quality on early builds (mostly cosmetic), high-voltage battery health (check remaining range vs. EPA rating), and rear motor bearing noise on pre-2020 LR AWD cars. OTA updates resolve most software issues. Independent EV inspection to check battery health before purchase.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 280, topComplaintArea: 'Panel gaps (cosmetic) / HV battery range degradation / rear motor bearing noise' },
+    sections: [
+      { title: 'Battery & Range', items: [
+        { title: 'HV battery health and range degradation', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Battery capacity degrades with age and charge cycles. Compare current range reading to EPA rating — more than 15% loss on a 3-year-old car is above average degradation.',
+          check: '<strong>Charge to 90% and check range estimate. Compare to EPA rating. Any degradation over 15% = negotiate or walk away.</strong>',
+          cost: '$8,000–$15,000 HV battery replacement if severe', source: 'Tesla battery degradation data' },
+        { title: 'Charging port and onboard charger', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Charging port latch, NACS/CCS adapter compatibility, and onboard charger faults are reported.',
+          check: '<strong>Test charging with a Level 2 charger before purchase.</strong>',
+          cost: '$400–$1,500 charging port', source: 'Tesla service pattern' }
+      ]},
+      { title: 'Drive Unit', items: [
+        { title: 'Rear motor bearing noise (pre-2020 LR AWD)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Pre-2020 Dual Motor Long Range cars had rear motor bearing whine. Tesla revised the design. Listen for a whine that increases with speed.',
+          check: '<strong>Highway speed listen test — any whine proportional to speed = rear motor concern.</strong>',
+          cost: '$2,500–$5,000 drive unit', source: 'Tesla LR AWD known issue' }
+      ]},
+      { title: 'Body Quality', items: [
+        { title: 'Panel gaps and paint quality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early Model 3 production had larger-than-average panel gaps. Mostly cosmetic but indicates QC variation.',
+          check: '<strong>Inspect all panel gaps — hood, trunk, doors. Any gap larger than 5mm is above average.</strong>',
+          cost: '$0–$500 adjustment / cosmetic issue only', source: 'Consumer reports' }
+      ]},
+      { title: 'Interior', items: [
+        { title: 'Glass roof seals and wind noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Glass roof seals degrade causing wind noise at highway speed.',
+          check: '<strong>Test at 70 mph for wind noise from roof edges.</strong>',
+          cost: '$150–$400 seal replacement', source: 'Common Tesla complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery health report + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Tesla publishes battery health data on service app. Four recalls possible including Autopilot-related campaigns.',
+          check: '<strong>Request service history from Tesla app. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from >20% battery degradation without price adjustment', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior update — software OTA.' },
+      { number: '22V-592', title: 'Backup Camera Software', desc: 'Camera may not display on reverse — OTA fix.' },
+      { number: '21V-020', title: 'In-Car Camera', desc: 'Camera monitoring software update.' },
+      { number: '20V-066', title: 'Touchscreen eMMC Wear', desc: 'MCU1 eMMC chip may wear out — display replacement.' }
+    ]
+  },
+
+  'tesla-model-y-2021': {
+    year: 2021, make: 'Tesla', model: 'Model Y', trim: 'Standard Range / Long Range / Performance',
+    engine: 'Dual Motor AWD (384hp) / Long Range (330hp) / Performance (450hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Model Y surpassed the Model 3 to become the world's best-selling vehicle in 2023. 2021+ Giga Texas and Fremont builds have improved panel quality over early production. Battery degradation is minimal on cars under 50k miles. Heat pump (standard 2021+) reduces range anxiety in cold climates. Main buyer check: battery health and any service history from the Tesla app.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: 'Panel gaps (early builds) / battery health / heat pump in extreme cold' },
+    sections: [
+      { title: 'Battery & Range', items: [
+        { title: 'HV battery health check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Battery capacity degrades with age and cycle count. 2021+ Model Y should show less than 10% degradation under 50k miles.',
+          check: '<strong>Charge to 90% and compare range estimate to EPA rating. More than 12% loss = negotiate.</strong>',
+          cost: '$8,000–$16,000 HV battery if severely degraded', source: 'Tesla battery data' },
+        { title: 'Heat pump performance in cold (2021+)', risk: 'low', riskLabel: 'Low Risk',
+          desc: '2021+ Model Y has a heat pump that improves cold-weather range vs. resistive heater. Verify heat pump is installed (pre-2021 Model Y did not have it).',
+          check: '<strong>Verify build date is 2021 or later for heat pump inclusion.</strong>',
+          cost: 'N/A — verify by build date', source: 'Tesla hardware change' }
+      ]},
+      { title: 'Drive Unit', items: [
+        { title: 'Drive unit whine (early builds)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some early Model Y builds had rear drive unit whine. 2021+ Giga Texas builds generally resolved this.',
+          check: '<strong>Highway speed listen test for any speed-proportional whine.</strong>',
+          cost: '$2,500–$5,000 drive unit if confirmed', source: 'Tesla service pattern' }
+      ]},
+      { title: 'Body Quality', items: [
+        { title: 'Panel gaps and body alignment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early Model Y had worse panel gaps than Model 3. 2021+ Giga Texas production improved this.',
+          check: '<strong>Inspect all body panel gaps — focus on the rear hatch and door edges.</strong>',
+          cost: 'Cosmetic only / $0–$500 adjustment', source: 'Consumer data' }
+      ]},
+      { title: 'Interior', items: [
+        { title: 'Glass roof seals and water intrusion', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Roof seals on some Model Y builds fail — water enters at rear corners.',
+          check: '<strong>Check headliner at rear corners for water stains or moisture.</strong>',
+          cost: '$300–$800 seal replacement / $1,500–$3,000 headliner if damaged', source: 'Common Model Y complaint' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Tesla service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Tesla service history visible through seller\'s Tesla app — request screenshot. Three recalls possible.',
+          check: '<strong>Request Tesla app service history. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from >15% battery degradation without price adjustment', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-592', title: 'Backup Camera Display', desc: 'Camera may not display — OTA fix.' },
+      { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior — OTA fix.' },
+      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'Chime may not activate — OTA fix.' }
+    ]
+  },
+
+  'ford-mustang-2018': {
+    year: 2018, make: 'Ford', model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550)',
+    engine: '2.3L EcoBoost I4 (310hp) / 5.0L Coyote V8 (460hp) / 5.2L Voodoo V8 (526hp GT350)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The S550 Mustang is one of the most satisfying performance cars available used. The 5.0L Coyote V8 is a proven workhorse; EcoBoost 4-cylinder is the fuel-efficient daily driver. Main buyer risk: assess track use and abuse on any GT, GT Premium, or GT350. Cam phaser noise is reported on EcoBoost cars above 60k miles. MT82 manual transmission has known notchy shift quality that worsened with use.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same 2.3T EcoBoost cam phaser rattle as Ranger — reported above 60k miles.',
+          check: '<strong>Cold-start listen for rattle in first 5 seconds.</strong>',
+          cost: '$800–$2,500 cam phaser replacement', source: 'Ford 2.3T pattern' },
+        { title: '5.0L Coyote — healthy engine check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 5.0L Coyote is highly robust. Standard pre-purchase checks apply.',
+          check: '<strong>Cold-start, oil check, standard inspection.</strong>',
+          cost: 'Maintenance only', source: 'Coyote reliability record' }
+      ]},
+      { title: 'Performance/Abuse', items: [
+        { title: 'Track use and abuse assessment', risk: 'high', riskLabel: 'High Attention',
+          desc: 'GT350 and GT Performance Pack cars are frequently tracked. Clutch, brakes, tires, and differential wear dramatically on track use.',
+          check: '<strong>Inspect brake pad thickness, tire wear pattern (inner vs. outer), and listen for differential whine.</strong>',
+          cost: '$1,500–$4,000 performance brake and clutch service', source: 'Performance car inspection standard' },
+        { title: 'MT82 manual transmission shift quality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MT82 is notoriously notchy when cold — this is a known characteristic, not always a defect.',
+          check: '<strong>Test all gears cold and warm. Any grinding or difficulty engaging 3rd = synchro wear.</strong>',
+          cost: '$200–$400 fluid service (helps) / $1,500–$3,000 synchro rebuild', source: 'MT82 known characteristic' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'MagneRide or standard shock wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MagneRide shocks fail when driven hard. Standard shocks wear normally.',
+          check: '<strong>Drive over rough pavement — harsh impacts or bottoming = shock wear.</strong>',
+          cost: '$500–$1,500 per corner (MagneRide is expensive)', source: 'Mustang suspension pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 3 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 3 is reliable. Test all functions.',
+          check: '<strong>Test CarPlay, backup camera, heated/cooled seat controls.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Track history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Track use is the critical variable on any GT or GT350.',
+          check: '<strong>Run nhtsa.gov/recalls. Walk away from undocumented track-use cars without price adjustment.</strong>',
+          cost: 'Walk away from high-track GT350 without specialist PPI', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-044', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-178', title: 'Door Latch', desc: 'May open while driving.' },
+      { number: '16V-028', title: 'Axle Shaft', desc: 'Rear axle shaft may fracture — wheel separation.' }
+    ]
+  },
+
+  'mitsubishi-outlander-2017': {
+    year: 2017, make: 'Mitsubishi', model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)',
+    engine: '2.4L MIVEC I4 (166hp) / 3.0L SOHC V6 (224hp) / PHEV Hybrid (2nd gen 2.0L)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen Outlander is one of the most affordable used 3-row SUVs available. The powertrain is simple and reliable — the 2.4L 4-cylinder and CVT are proven Mitsubishi units. CVT fluid service is still the primary buyer check. The Outlander PHEV is one of the most capable plug-in SUVs at this price. Main weaknesses: below-average interior quality and limited powertrain power vs. competitors.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 90, topComplaintArea: 'CVT fluid service / below-average interior quality' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'CVT fluid service (Jatco unit)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The Jatco CVT requires dedicated Mitsubishi CVTF-J4 fluid every 30k miles.',
+          check: '<strong>Ask for CVT fluid service receipts.</strong>',
+          cost: '$200–$350 service / $3,000–$4,500 CVT replacement', source: 'Mitsubishi CVT service standard' },
+        { title: 'PHEV battery health (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Outlander PHEV battery degrades. Check EV mode range vs. spec (22 miles EPA).',
+          check: '<strong>Charge to full and test EV mode range — under 15 miles = meaningful degradation.</strong>',
+          cost: '$4,000–$8,000 HV battery', source: 'PHEV battery wear' }
+      ]},
+      { title: 'AWD (Super All-Wheel Control)', items: [
+        { title: 'S-AWC rear motor (PHEV) or coupling service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'S-AWC coupling requires fluid service. PHEV rear motor is electric and separate.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 coupling fluid', source: 'Mitsubishi AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment — dated system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 3rd-gen Outlander infotainment feels dated by 2024 standards. Verify CarPlay/Android Auto availability.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0–$500 aftermarket head unit', source: 'Consumer pattern' }
+      ]},
+      { title: 'Interior', items: [
+        { title: 'Interior material quality', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Outlander interior quality is notably below Honda/Toyota competitors at similar prices.',
+          check: '<strong>Inspect door panels, seat bolsters, and trim quality for wear.</strong>',
+          cost: '$0–$300 reconditioning', source: 'Consumer quality data' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT service history is the critical document.',
+          check: '<strong>Run nhtsa.gov/recalls. Require CVT fluid receipts.</strong>',
+          cost: 'Walk away from CVT without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Rear Seat Latch', desc: 'Latch may not fully engage — safety risk.' },
+      { number: '17V-148', title: 'PCV Valve (some builds)', desc: 'PCV valve may fail on certain 2.4L engines.' },
+      { number: '18V-307', title: 'Fuel Injector Seal', desc: 'May leak on early builds.' }
+    ]
+  },
+
+  'infiniti-qx60-2018': {
+    year: 2018, make: 'INFINITI', model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)',
+    engine: '3.5L VQ35DE V6 (295hp) with CVT (JF016E)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 2nd-gen QX60 (2022+) is a major improvement over the 1st gen. For the popular 2016–2021 1st-gen QX60 (same platform): the 3.5L VQ35 is proven but the CVT carries the same cross-contamination risk as the Pathfinder — inspect fluid before driving. Rear seat comfort is exceptional for a 3-row. The 2022+ QX60 with 9-speed auto is the stronger used buy if budget allows.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'CVT radiator contamination check (1st gen 2016–2021)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Same radiator-to-CVT cross-contamination failure mode as Pathfinder. Pink or milky CVT fluid = walk away.',
+          check: '<strong>Pull CVT dipstick BEFORE any test drive.</strong> Pink, milky, or foamy = contamination — walk away.',
+          cost: '$3,500–$5,500 CVT + $800–$1,500 radiator', source: 'Infiniti/Nissan CVT contamination pattern' },
+        { title: 'VQ35 oil consumption check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VQ35 can consume oil above 100k miles with extended intervals.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: 'Monitor', source: 'VQ35 pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Rear coupling fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'AWD coupling requires fluid every 30k miles. Vibration at highway speed = neglected.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service / $800–$1,500 coupling', source: 'AWD maintenance requirement' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'InTouch infotainment (dual-screen 1st gen)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Dual-screen InTouch system on 1st-gen QX60 has known reliability issues and feels dated.',
+          check: '<strong>Test both screens, including climate controls on lower screen.</strong>',
+          cost: '$500–$2,000 screen replacement', source: 'Infiniti infotainment complaint' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and bushing wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Strut noise and bushing wear at 80k+ miles.',
+          check: '<strong>Drive over rough pavement and bounce test.</strong>',
+          cost: '$400–$800 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT dipstick check + recall verification', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT contamination inspection is non-negotiable on 1st-gen QX60. Run all recalls.',
+          check: '<strong>CVT dipstick check before driving. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from contaminated fluid', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
+      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be disabled incorrectly.' },
+      { number: '14V-400', title: 'CVT Cooler Contamination', desc: 'Radiator coolant may mix with CVT fluid.' }
+    ]
+  },
+
+  'volvo-xc90-2017': {
+    year: 2017, make: 'Volvo', model: 'XC90', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)',
+    engine: '2.0L T5 Drive-E Turbo I4 (250hp) / 2.0L T6 Supercharged+Turbo I4 (316hp) / T8 PHEV (400hp)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The 2nd-gen XC90 on the SPA platform is one of the most beautiful and technologically advanced SUVs at this price point. But Volvo SPA ownership carries real maintenance costs. The Drive-E 4-cylinder (T5/T6) has timing belt/chain service requirements; the T8 PHEV adds HV battery complexity. Sensus infotainment has known reliability issues. Budget $3,000–$5,000/year for maintenance and require a Volvo specialist PPI.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 190, topComplaintArea: 'Sensus infotainment reliability / Drive-E timing service / high maintenance cost' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Drive-E timing belt/chain service (T5/T6)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'T5/T6 Drive-E engines use a timing belt that requires replacement at 100k miles or 10 years.',
+          check: '<strong>Request timing belt service record on any T5/T6 with 80k+ miles.</strong>',
+          cost: '$800–$1,500 timing belt service', source: 'Volvo Drive-E service requirement' },
+        { title: 'T8 PHEV battery health (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'T8 18.8 kWh battery degrades — should provide at least 17 miles EV range (22 EPA).',
+          check: '<strong>Charge to full and test EV-only range.</strong>',
+          cost: '$6,000–$12,000 HV battery', source: 'T8 battery wear pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Sensus infotainment freeze and reboot', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Sensus is the most commonly complained-about feature on the SPA XC90. Freeze, reboot loops, and GPS failures are all reported.',
+          check: '<strong>Test Sensus extensively — CarPlay, navigation, climate control, all audio sources.</strong> Any reboot during test = known issue.',
+          cost: '$0 software update / $1,500–$3,500 head unit', source: 'Volvo Sensus complaints' }
+      ]},
+      { title: 'Suspension & Air Ride', items: [
+        { title: 'Air suspension (Four-C / standard) wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Air springs and compressor on XC90 air ride fail at 80k–120k miles.',
+          check: '<strong>Check ride height level side-to-side and front-to-rear.</strong>',
+          cost: '$600–$1,200 per air spring / $800–$1,500 compressor', source: 'XC90 air suspension pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Haldex AWD coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Annual Haldex fluid service is required. Vibration at highway speed = neglected.',
+          check: '<strong>Test highway cornering.</strong>',
+          cost: '$150–$300 Haldex service', source: 'Haldex AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Volvo specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Any used Volvo XC90 requires a specialist PPI with Volvo VIDA/DiCE diagnostic scan.',
+          check: '<strong>Budget $150–$200 for PPI. Non-negotiable.</strong>',
+          cost: '$150–$200 PPI / unknown deferred costs without', source: 'Volvo ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-394', title: 'Airbag Control Module', desc: 'Software update for airbag deployment.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+    ]
   }
 
 };
