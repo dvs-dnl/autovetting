@@ -9048,6 +9048,446 @@ const CHECKLISTS = {
       { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
     ]
+  },
+
+  'nissan-kicks-2019': {
+    year: 2019, make: 'Nissan', model: 'Kicks', trim: 'S / SV / SR (P15)',
+    engine: '1.6L MR16DDT I4 (122hp) with Xtronic CVT — FWD only',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The P15 Kicks is Nissan's most fuel-efficient non-hybrid crossover — 36 mpg combined with the 1.6L naturally-aspirated engine. FWD only (no AWD option). CVT fluid service every 30k miles with NS-3 fluid is the critical maintenance item. Exterior styling is distinctive. Outstanding commuter value for urban buyers who don't need AWD.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT requires NS-3 fluid every 30k miles. Same failure profile as Altima and Rogue on neglected service.',
+          check: '<strong>Request CVT fluid service receipts.</strong>',
+          cost: '$200–$350 service / $3,000–$4,500 CVT', source: 'Nissan CVT standard' },
+        { title: '1.6L MR16 engine oil consumption', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally-aspirated and generally reliable. Standard pre-purchase check.',
+          check: '<strong>Pull dipstick before driving.</strong>',
+          cost: 'Maintenance only', source: 'Consumer pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'NissanConnect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known freeze and connectivity issues. Software updates resolve most.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'Nissan campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut wear at high mileage', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test each corner.</strong>',
+          cost: '$300–$600 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Exterior panel and trim durability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'P15 trim quality is adequate. Check door panel fit and paint condition.',
+          check: '<strong>Inspect paint and panel gaps.</strong>',
+          cost: '$0–$200', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT fluid history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'CVT history is the primary document.',
+          check: '<strong>Run nhtsa.gov/recalls. Require CVT fluid receipts.</strong>',
+          cost: 'Walk away from CVT without history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-224', title: 'Seat Belt Anchor', desc: 'Anchor may not hold correctly.' }
+    ]
+  },
+
+  'honda-passport-2019': {
+    year: 2019, make: 'Honda', model: 'Passport', trim: 'Sport / EX-L / Touring / Elite (2nd gen)',
+    engine: '3.5L J35Y V6 (280hp) with 9-speed ZF automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Passport (2019+) is a 2-row Pilot — shorter wheelbase, same J35Y V6, no third row. Excellent for buyers who want Pilot capability without the minivan-like proportions. The 9-speed ZF auto on the 2019+ Passport is the same unit that had issues in the Pilot — test thoroughly. SH-AWD differential fluid is the critical maintenance document. Strong family crossover value.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 80, topComplaintArea: '9-speed ZF transmission / SH-AWD fluid service' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '9-speed ZF auto transmission testing', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same 9HP-family ZF transmission as Pilot. Test all driving scenarios thoroughly.',
+          check: '<strong>Test stop-and-go, highway on-ramp, and light-throttle cruise.</strong>',
+          cost: '$400–$600 fluid service / $4,000–$7,000 transmission', source: 'ZF 9HP service pattern' },
+        { title: 'J35Y V6 VCM motor mount', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same VCM motor mount vibration at idle as Pilot and Odyssey.',
+          check: '<strong>Feel for vibration at warm idle with AC on.</strong>',
+          cost: '$300–$600 motor mount', source: 'Honda VCM pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'SH-AWD rear differential fluid', risk: 'high', riskLabel: 'High Attention',
+          desc: 'SH-AWD rear diff requires DPS-F fluid every 30k miles. Most commonly missed service.',
+          check: '<strong>Test tight parking lot turns for vibration. Request service receipt.</strong>',
+          cost: '$150–$300 service / $1,500–$3,000 rear diff', source: 'Honda SH-AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Honda Display Audio / CarPlay', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Reliable. Test CarPlay and backup camera.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Honda campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear at 80k+ miles.',
+          check: '<strong>Bounce test and drive over rough pavement.</strong>',
+          cost: '$400–$800 standard wear', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'SH-AWD service + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'SH-AWD fluid service history is the critical document.',
+          check: '<strong>Run nhtsa.gov/recalls. Request SH-AWD receipts.</strong>',
+          cost: 'Walk away from SH-AWD without history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' },
+      { number: '19V-394', title: 'Airbag Software', desc: 'Deployment calibration update.' }
+    ]
+  },
+
+  'mazda-cx30-2020': {
+    year: 2020, make: 'Mazda', model: 'CX-30', trim: 'Base / Select / Preferred / Premium / Turbo (DM gen)',
+    engine: '2.5L SkyActiv-G I4 (186hp) / 2.5T SkyActiv-T Turbo I4 (227hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The CX-30 is Mazda's best subcompact crossover — premium interior quality, genuinely engaging chassis, and outstanding build quality. The 2.5L naturally-aspirated is the reliable baseline; the 2.5T Turbo is a meaningful upgrade. No significant known failure modes. CVT is Mazda's Skyactiv-Drive 6-speed automatic (not a traditional CVT). Outstanding used value.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 55, topComplaintArea: 'Minimal — cargo space limitation / Mazda Connect rotary interface' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L SkyActiv-G reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'No significant failure modes documented. Standard pre-purchase check.',
+          check: '<strong>Standard check — cold-start, oil level, smooth acceleration.</strong>',
+          cost: 'Maintenance only', source: 'Mazda SkyActiv reliability record' },
+        { title: '2.5T Turbo oil maintenance', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbo requires synthetic oil every 5k miles.',
+          check: '<strong>Verify oil condition and service history.</strong>',
+          cost: 'Maintenance only if serviced', source: 'Mazda service standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'i-Activ AWD coupling service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid every 30k–45k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Mazda AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Mazda Connect rotary dial interface', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Polarizing but reliable. 2020+ CX-30 has Apple CarPlay as standard.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0', source: 'Consumer preference' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Cargo space limitation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CX-30 has 20.2 cu ft cargo — tight for families. Inspect to confirm it meets your needs.',
+          check: '<strong>Load your typical cargo to verify fit.</strong>',
+          cost: 'N/A — preference issue', source: 'Consumer experience' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced CX-30 is an outstanding buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-088', title: 'Fuel Injector Seal', desc: 'May leak on some builds.' },
+      { number: '20V-501', title: 'Airbag Software', desc: 'Calibration update.' }
+    ]
+  },
+
+  'hyundai-ioniq5-2022': {
+    year: 2022, make: 'Hyundai', model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)',
+    engine: 'Electric — Single Motor RWD (225hp) / Dual Motor AWD (320hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The IONIQ 5 on the E-GMP platform is one of the best EVs launched since the Tesla Model 3 — 800V architecture enables ultra-fast charging (18 min to 80% at 350kW DCFC), distinctive retro styling, and a flat floor that maximizes interior space. Main buyer concerns: heat pump on cold-climate cars (standard on AWD, optional on RWD), charge port compatibility, and early production quality. Battery degradation is minimal on cars under 40k miles.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
+    sections: [
+      { title: 'Battery & Charging', items: [
+        { title: 'HV battery health and range', risk: 'high', riskLabel: 'High Attention',
+          desc: 'IONIQ 5 battery should show minimal degradation under 40k miles. Compare current range to EPA rating (266 mi LR RWD, 266 mi LR AWD).',
+          check: '<strong>Charge to 80% and verify range estimate matches EPA. More than 10% loss = investigate.</strong>',
+          cost: '$8,000–$16,000 HV battery if degraded', source: 'E-GMP battery data' },
+        { title: '800V DCFC capability — verify charger compatibility', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'IONIQ 5 uses 800V architecture with NACS/CCS port. Verify adapter situation for your charging network.',
+          check: '<strong>Verify charging port type and adapter availability for your preferred network.</strong>',
+          cost: '$0–$400 adapters', source: 'EV charging network compatibility' }
+      ]},
+      { title: 'Heat Pump', items: [
+        { title: 'Heat pump cold-weather range (cold climate buyers)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Heat pump standard on AWD, optional on RWD. Cold climates without heat pump lose significant range.',
+          check: '<strong>Verify heat pump is installed (AWD standard, RWD: check order sheet).</strong>',
+          cost: 'N/A — verify before purchase', source: 'IONIQ 5 spec sheet' }
+      ]},
+      { title: 'Software & OTA', items: [
+        { title: 'OTA software update status', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'IONIQ 5 receives regular OTA updates. Verify the car is running current software — outdated versions may have charging bugs.',
+          check: '<strong>Check software version in vehicle settings.</strong>',
+          cost: '$0 OTA update', source: 'Hyundai EV campaigns' }
+      ]},
+      { title: 'Body Quality', items: [
+        { title: 'Early production panel gaps', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early 2022 production IONIQ 5s had panel gap inconsistencies — mostly cosmetic.',
+          check: '<strong>Inspect all body panel gaps, especially hood and rear hatch.</strong>',
+          cost: 'Cosmetic / $0–$500 adjustment', source: 'Consumer reports' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Battery health + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Four recalls possible. Battery health is the primary purchase variable.',
+          check: '<strong>Charge to 80% and check range. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from >15% battery degradation without price adjustment', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-714', title: 'Battery Management Software', desc: 'BMS update to prevent overcharge.' },
+      { number: '23V-127', title: 'Seat Belt Warning', desc: 'Chime may not activate — OTA fix.' },
+      { number: '22V-592', title: 'Charge Port Software', desc: 'Charge port may not communicate correctly — OTA fix.' },
+      { number: '21V-827', title: 'ADAS Software', desc: 'Driver assist behavior update.' }
+    ]
+  },
+
+  'kia-stinger-2018': {
+    year: 2018, make: 'Kia', model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)',
+    engine: '2.0T Lambda I4 (255hp) / 3.3T Lambda V6 Twin-Turbo (365hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Stinger is one of the most surprising used performance cars available — a genuine driver's car with Porsche Panamera proportions at a fraction of the price. The 3.3T biturbo V6 is the standout choice. The 2.0T 4-cylinder is adequate. Rear-drive or AWD available. Key buyer checks: ZF 8-speed fluid service and any track-use history on GT/GT2 models. Outstanding performance-per-dollar on the used market.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 95, topComplaintArea: 'ZF 8-speed service / track use assessment on GT models' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.3T Lambda V6 — strong and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lambda V6 is Kia/Hyundai\'s proven V6 platform. KSDS recall does not apply to the 3.3T.',
+          check: '<strong>Standard check — cold-start, oil level, acceleration test.</strong>',
+          cost: 'Maintenance only', source: 'Lambda V6 reliability record' },
+        { title: 'ZF 8HP76 transmission fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'ZF 8-speed is excellent but requires fluid service at 60k miles. Shudder at 25–45 mph = fluid issue.',
+          check: '<strong>Test at light throttle 25–45 mph for shudder.</strong>',
+          cost: '$400–$600 fluid service / $2,500–$4,500 torque converter', source: 'ZF 8HP service standard' }
+      ]},
+      { title: 'Performance History', items: [
+        { title: 'Track use and abuse assessment (GT/GT2)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'GT and GT2 models are frequently driven hard. Assess brake wear, tire wear pattern, and differential condition.',
+          check: '<strong>Inspect brake pad thickness, tire inner/outer wear, and listen for rear differential whine.</strong>',
+          cost: '$1,000–$3,000 performance brake and tire service', source: 'Performance car inspection standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'AWD coupling fluid service (AWD models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid required every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Kia AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO / infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UVO has known connectivity issues. Test all functions.',
+          check: '<strong>Test CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Track history + ZF service + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'ZF fluid history and track-use assessment are both required on any GT.',
+          check: '<strong>Run nhtsa.gov/recalls. Request ZF fluid service receipt.</strong>',
+          cost: 'Walk away from track-evident GT without specialist PPI', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
+      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify this VIN is not in any engine fire campaign.' },
+      { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'May crack — reduced braking.' }
+    ]
+  },
+
+  'kia-carnival-2022': {
+    year: 2022, make: 'Kia', model: 'Carnival', trim: 'LX / EX / SX / SX Prestige (KA4 gen)',
+    engine: '3.5L Lambda II V6 GDI (290hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The KA4 Carnival replaces the Sedona and is the most contemporary family van/crossover available. The 3.5L Lambda V6 is Kia's most proven large engine and does NOT carry KSDS recall exposure. 8-speed automatic is smooth and well-sorted. Interior quality and features are outstanding for the price. Strong family vehicle value with minimal known failure modes.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 45, topComplaintArea: 'Minimal — sliding door motor durability (early assessment)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L Lambda V6 — reliable platform', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lambda V6 is proven and KSDS-exempt. Standard pre-purchase check.',
+          check: '<strong>Cold-start, oil level, smooth acceleration.</strong>',
+          cost: 'Maintenance only', source: 'Lambda V6 reliability' },
+        { title: '8-speed automatic fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Fluid service at 60k miles. Shudder at light throttle = fluid degradation.',
+          check: '<strong>Test highway light throttle.</strong>',
+          cost: '$200–$350 fluid service', source: 'Kia 8AT service standard' }
+      ]},
+      { title: 'Sliding Doors', items: [
+        { title: 'Power sliding door operation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'KA4 Carnival sliding door motors are newer-design than prior Kia vans. Still important to cycle.',
+          check: '<strong>Cycle each sliding door 3–4 times.</strong>',
+          cost: '$400–$900 per door motor', source: 'Minivan standard inspection' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UVO / Kia Connect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Generally well-received on the KA4. Test all functions.',
+          check: '<strong>Test CarPlay, rear entertainment, all zone HVAC.</strong>',
+          cost: '$0 update', source: 'Kia campaigns' }
+      ]},
+      { title: 'Interior', items: [
+        { title: 'Captain\'s chair fold and slide mechanism', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Second-row captain\'s chairs with slide-and-fold mechanism should operate smoothly.',
+          check: '<strong>Operate both second-row captain\'s chairs fully.</strong>',
+          cost: '$150–$400 if binding', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + service history', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Well-serviced Carnival is a strong buy.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '22V-714', title: 'Brake Warning Indicator', desc: 'Indicator may activate incorrectly — software fix.' },
+      { number: '21V-065', title: 'ABS HCU Fire Risk (verify)', desc: 'Verify if this VIN is covered.' }
+    ]
+  },
+
+  'jeep-gladiator-2020': {
+    year: 2020, make: 'Jeep', model: 'Gladiator', trim: 'Sport / Overland / Rubicon / Mojave (JT)',
+    engine: '3.6L Pentastar V6 (285hp) / 3.0L EcoDiesel V6 (260hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The JT Gladiator is the only mid-size convertible pickup truck on the market — it combines Wrangler JL capability with a 5-foot bed. The 3.6L Pentastar V6 is proven. Main buyer concerns: Death Wobble risk from worn front end components (same as Wrangler), throttle position sensor failure on early builds, and eTorque BSG concerns on equipped models. Strong buy for buyers who need both off-road capability and a bed.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 190, topComplaintArea: 'Death Wobble (front end wear) / throttle position sensor / eTorque BSG (equipped models)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Throttle position sensor (early builds)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Early JT Gladiators had throttle position sensor failures causing sudden power loss. TSB and recall addressed most.',
+          check: '<strong>Verify recall 20V-191 is complete on this VIN.</strong>',
+          cost: 'Free under recall / $300–$600 if out-of-warranty', source: 'NHTSA recall 20V-191' },
+        { title: 'eTorque BSG system (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same BSG concerns as Ram 1500 eTorque. Verify recall 20V-032.',
+          check: '<strong>Verify recall 20V-032 complete on eTorque VINs.</strong>',
+          cost: '$1,200–$3,500 BSG if failed', source: 'NHTSA recall 20V-032' }
+      ]},
+      { title: 'Steering & Suspension', items: [
+        { title: 'Death Wobble — front end wear', risk: 'critical', riskLabel: 'Critical',
+          desc: 'JT Gladiator inherits the JL Wrangler platform\'s Death Wobble risk from worn track bar, drag link, or worn front end components.',
+          check: '<strong>Test at 55–75 mph — any shimmy or oscillation after a bump = Death Wobble. Inspect track bar mounting bolts and bushings.</strong>',
+          cost: '$300–$1,500 front end repair depending on components', source: 'Wrangler/Gladiator Death Wobble pattern' }
+      ]},
+      { title: 'Bed & Cargo', items: [
+        { title: 'Bed and tailgate fit and function', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Inspect bed for damage, tailgate operation, and bed liner condition.',
+          check: '<strong>Operate tailgate, inspect bed floor.</strong>',
+          cost: '$0–$500 depending on damage', source: 'Standard truck inspection' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 8.4 reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect is generally good. Test all functions.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Jeep campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall 20V-191 + Death Wobble inspection', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Throttle recall and Death Wobble check are both mandatory.',
+          check: '<strong>Run nhtsa.gov/recalls. 70 mph test drive is required.</strong>',
+          cost: 'Walk away from Death Wobble without front-end repair quote', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-191', title: 'Throttle Position Sensor', desc: 'Sudden power loss — free dealer replacement.' },
+      { number: '20V-032', title: 'eTorque PCM Calibration', desc: 'eTorque drivability update.' },
+      { number: '21V-037', title: 'Transmission Software', desc: 'Transmission downshift update.' },
+      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+    ]
+  },
+
+  'ford-bronco-sport-2021': {
+    year: 2021, make: 'Ford', model: 'Bronco Sport', trim: 'Base / Big Bend / Badlands / First Edition / Outer Banks',
+    engine: '1.5L EcoBoost I3 (181hp) / 2.0L EcoBoost I4 (250hp Badlands)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Bronco Sport is the Escape-based off-road capable small SUV that fills the gap between a standard crossover and a Wrangler. The 1.5L 3-cylinder is fuel-efficient but the 2.0L I4 on the Badlands is the more capable choice for off-road use. Ford SYNC 4 is well-received. Main concerns: 1.5T 3-cylinder oil consumption reports and 8-speed transmission behavior on early builds.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 115, topComplaintArea: '1.5T I3 oil consumption / 8-speed transmission shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5L EcoBoost I3 oil consumption reports', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 3-cylinder EcoBoost has reported oil consumption above 60k miles on some vehicles.',
+          check: '<strong>Pull dipstick before driving.</strong> Any consumption on a recent change = elevated risk.',
+          cost: '$0 if early / $4,500+ engine', source: 'Consumer reports' },
+        { title: '8-speed automatic shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 8-speed auto has TSBs for shudder at light throttle.',
+          check: '<strong>Test at light throttle 25–40 mph.</strong>',
+          cost: '$300–$500 fluid flush + calibration', source: 'Ford TSB pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'GOAT (Goes Over Any Type) AWD system service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD system fluid service at 45k miles.',
+          check: '<strong>Verify AWD system switches correctly between modes.</strong>',
+          cost: '$150–$300 service', source: 'Ford AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'SYNC 4 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC 4 is one of Ford\'s better systems. Test CarPlay and all functions.',
+          check: '<strong>Test all infotainment features.</strong>',
+          cost: '$0 update', source: 'Ford campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Roof rack and exterior accessory condition', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Bronco Sport has integrated roof crossbars — inspect for damage from loading.',
+          check: '<strong>Inspect roof crossbars and all exterior accessories.</strong>',
+          cost: '$0–$300', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil consumption check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Dipstick check is the key step. Three recalls possible.',
+          check: '<strong>Check dipstick. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '21V-641', title: 'Transmission Fluid Leak', desc: 'May leak — fire risk.' },
+      { number: '21V-485', title: 'Fuel Injector Seal', desc: '2.0T: may leak — fire risk.' },
+      { number: '20V-077', title: 'Backup Camera', desc: 'Display delay — software fix.' }
+    ]
+  },
+
+  'gmc-canyon-2018': {
+    year: 2018, make: 'GMC', model: 'Canyon', trim: 'Base / SLE / SLT / All Terrain / Denali (2nd gen)',
+    engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Canyon is mechanically identical to the Chevrolet Colorado — same platform, same engines, same reliability profile. GMC badge adds slightly nicer trim. The 3.6L LFX V6 is the preferred engine (no AFM). The 2.8L Duramax diesel is fuel-efficient but DEF system maintenance is required. Frame rust on salt-belt trucks is the primary structural concern.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'Frame rust / 8-speed shudder (V6) / DEF system (diesel)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.6L LFX V6 — preferred engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'LFX is GM\'s proven V6. No AFM, no known major failure modes.',
+          check: '<strong>Standard check — cold-start, oil level, transmission shudder test.</strong>',
+          cost: 'Maintenance only', source: 'GM LFX reliability' },
+        { title: '2.8L Duramax DEF system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'DEF fluid required every 5,000 miles. DEF pump failures are reported.',
+          check: '<strong>Check DEF level and verify no DEF warning lights.</strong>',
+          cost: '$300–$1,500 DEF system', source: 'Duramax service standard' }
+      ]},
+      { title: 'Frame', items: [
+        { title: 'Frame rust (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Canyon frames rust in Northeast/Midwest states.',
+          check: '<strong>Full undercarriage inspection.</strong>',
+          cost: 'Walk away from through-rust', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '8-speed shudder (V6)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'V6 Canyon 8-speed can shudder at light throttle.',
+          check: '<strong>Highway light throttle test.</strong>',
+          cost: '$300–$500 fluid flush', source: 'GM 8L90 pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'IntelliLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Bluetooth and freeze issues. Software updates help.',
+          check: '<strong>Test all functions.</strong>',
+          cost: '$0 update', source: 'GMC campaigns' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Frame check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Frame rust is the defining variable. Three recalls possible.',
+          check: '<strong>Undercarriage inspection + run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from through-rust', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'May disengage.' },
+      { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
+    ]
   }
 
 };
