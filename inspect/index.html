@@ -7116,6 +7116,451 @@ const CHECKLISTS = {
       { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
     ]
+  },
+
+  'gmc-yukon-2018': {
+    year: 2018, make: 'GMC', model: 'Yukon', trim: 'SLE / SLT / Denali (K2XX BOF)',
+    engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "Mechanically identical to the Tahoe — same K2XX platform, same engines, same AFM lifter failure risk. The Yukon/Yukon XL adds GMC premium trim over the Chevrolet badge. Denali models are well-appointed but all Yukon V8s have AFM. The calculation is identical to the Tahoe: document AFM history or budget $3,500–$7,000.",
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 280, topComplaintArea: 'AFM lifter failure — same as Tahoe/Suburban/Silverado' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'AFM lifter failure — mandatory check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'All Yukon V8s use AFM. Lifters fail at 60k–100k miles on oil neglect.',
+          check: '<strong>Cold-start ticking check + P0300 scan + oil change records.</strong>',
+          cost: '$3,500–$7,000 lifter replacement', source: 'K2XX AFM pattern' },
+        { title: '6L80 transmission fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Light-throttle shudder at 30–45 mph = fluid contamination.',
+          check: '<strong>Test at highway light throttle.</strong>',
+          cost: '$350–$550 flush', source: '6L80 service pattern' }
+      ]},
+      { title: 'Air Suspension (Denali)', items: [
+        { title: 'Rear air leveling system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Air leveling bags and compressor wear at 100k+ miles.',
+          check: '<strong>Verify rear sits level. Listen for compressor cycling at idle.</strong>',
+          cost: '$400–$900 per bag / $600–$1,200 compressor', source: 'Common K2XX wear' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'IntelliLink / GMC infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Known freeze and Bluetooth issues. Software updates resolve most.',
+          check: '<strong>Test all infotainment functions.</strong>', cost: '$0 update', source: 'GMC campaigns' }
+      ]},
+      { title: 'Frame', items: [
+        { title: 'Undercarriage rust (salt-belt trucks)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Full-size BOF trucks from northern states accumulate frame rust.',
+          check: '<strong>Full undercarriage inspection.</strong>',
+          cost: 'Walk away from structural rust', source: 'Truck inspection standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'AFM documentation + recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Same importance as Tahoe/Suburban — AFM history determines value.',
+          check: '<strong>Run nhtsa.gov/recalls. Demand AFM documentation.</strong>',
+          cost: 'Walk away without AFM history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
+      { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire.' },
+      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
+      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
+    ]
+  },
+
+  'buick-enclave-2018': {
+    year: 2018, make: 'Buick', model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)',
+    engine: '3.6L LGX V6 (310hp) with 9-speed automatic',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "2nd-gen Enclave (2018+) is a premium 3-row crossover sharing the C1 platform with the Chevrolet Traverse. The 3.6L LGX V6 is a strong engine but the 9-speed auto had early hesitation and shudder issues addressed by TSBs. Direct injection carbon buildup on intake valves is a known long-term service item. Premium interior quality is genuine — one of the better luxury-adjacent values in its class.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 145, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '9-speed Hydra-Matic hesitation / shudder', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 9T65 9-speed auto had documented hesitation and shudder on 2018 first-year builds. TSB updates improved behavior significantly.',
+          check: '<strong>Test transmission in all driving conditions — stop-and-go, highway on-ramp, light-throttle cruise.</strong>',
+          cost: '$350–$550 fluid flush + calibration / $3,500–$5,500 transmission', source: 'GM 9T65 TSB series' },
+        { title: '3.6L LGX GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Direct injection causes carbon deposits on intake valves past 80k miles. Loss of power and rough idle are symptoms.',
+          check: '<strong>Test idle quality and acceleration smoothness.</strong>',
+          cost: '$400–$800 walnut blast intake cleaning', source: 'GDI carbon pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Rear coupling service (AWD models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid service every 45k miles. Neglect causes vibration.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service / $800–$1,500 coupling', source: 'AWD service requirement' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment and wireless features', risk: 'low', riskLabel: 'Low Risk',
+          desc: '2nd-gen Enclave infotainment is generally reliable.',
+          check: '<strong>Test CarPlay, navigation, heated seats, and all zone HVAC controls.</strong>',
+          cost: '$0 update', source: 'Buick campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut mount noise', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Clunk over bumps from strut mount is common at 80k+ miles.',
+          check: '<strong>Drive over rough pavement.</strong>',
+          cost: '$300–$600 per side', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + transmission TSB verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Three recalls possible. Confirm transmission TSB updates are documented.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-259', title: 'Cross-Traffic Braking Software', desc: 'False activation possible — update.' }
+    ]
+  },
+
+  'audi-a4-2018': {
+    year: 2018, make: 'Audi', model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)',
+    engine: '2.0L TFSI EA888 Turbo I4 (190–252hp) with 7-speed S tronic DSG',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The B9 Audi A4 is a genuinely excellent executive sedan — refined, comfortable, and well-built. But like all German luxury cars at this price point, maintenance costs are significantly above average. DSG fluid service, carbon walnut blasting on the EA888, timing chain service at 80k+ miles, and coolant flange cracks are all known line items. Audi-specialist PPI is mandatory. Budget $2,000–$4,000/year honestly.",
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 140, topComplaintArea: 'High maintenance costs / EA888 carbon buildup / DSG service' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
+          desc: 'EA888 gen 3 timing chain tensioner can fail at 60k–100k miles if oil changes were extended. Startup rattle is the warning sign.',
+          check: '<strong>Cold-start and listen for a rattle in the first 5 seconds.</strong>',
+          cost: '$1,200–$2,500 timing chain service', source: 'EA888 gen3 known pattern' },
+        { title: 'GDI carbon buildup on intake valves', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Port injection was added on gen3 EA888 to reduce carbon — but older B9 builds still accumulate deposits.',
+          check: '<strong>Test idle smoothness and cold-start behavior.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI carbon pattern' },
+        { title: 'Coolant flange (plastic) failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The plastic coolant flange on the B9 A4 cracks and causes rapid coolant loss — a well-known VW/Audi EA888 failure mode.',
+          check: '<strong>Inspect coolant level cold before driving. Check for any coolant smell in engine bay.</strong>',
+          cost: '$300–$600 coolant flange + flush', source: 'Audi EA888 documented issue' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '7-speed S tronic DSG fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'S tronic (DQ500 or DL382) requires mechatronic fluid every 40k miles. Shudder at low speed = overdue service.',
+          check: '<strong>Test low-speed stop-and-go for shudder or jerk.</strong>',
+          cost: '$400–$700 DSG service / $2,000–$4,000 mechatronic', source: 'Audi DSG service standard' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'MMI / Virtual Cockpit faults', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Audi MMI and Virtual Cockpit accumulate fault codes. Scan with VCDS before purchase.',
+          check: '<strong>Have car scanned with VCDS at an Audi specialist.</strong>',
+          cost: '$150–$200 PPI scan / $300–$2,000+ module faults', source: 'Pre-purchase Audi scan standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Air suspension or CDDS faults (equipped models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Air suspension and electronic damper faults appear on higher-spec B9 A4s.',
+          check: '<strong>Test ride quality over rough pavement and check for any fault lights.</strong>',
+          cost: '$400–$2,500 per corner depending on component', source: 'Common Audi suspension' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Audi specialist PPI — non-negotiable', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Any used Audi requires a specialist PPI with VCDS diagnostic scan.',
+          check: '<strong>Budget $150–$200 for PPI. Walk away from any seller who refuses.</strong>',
+          cost: '$150–$200 PPI / unknown deferred costs without it', source: 'Audi ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-411', title: 'High-Pressure Fuel Pump', desc: 'HPFP may fail — stall risk.' },
+      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '20V-127', title: 'ABS Control Software', desc: 'Stability control software update.' }
+    ]
+  },
+
+  'bmw-x3-2018': {
+    year: 2018, make: 'BMW', model: 'X3', trim: 'sDrive30i / xDrive30i / M40i (G01 platform)',
+    engine: '2.0L B48 Turbo I4 (248hp) / 3.0L B58 Turbo I6 (355hp M40i)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The G01 X3 (2018+) is BMW's best X3 yet — the B48 engine is significantly more reliable than predecessor N20 units and the B58 6-cylinder is excellent. Main buyer concerns: electric water pump/thermostat failure (all BMW B-series engines), control arm bushing wear front and rear, and maintenance costs. BMW specialist PPI with iDrive scan is required on any used G01 purchase.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 135, topComplaintArea: 'Water pump failure / control arm wear / maintenance costs' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Electric water pump and thermostat failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'BMW electric water pumps fail at 80k–120k miles on B48 and B58 engines. Failure without warning can cause rapid overheating.',
+          check: '<strong>Check coolant level cold and inspect expansion tank for cracks.</strong> Any coolant loss = suspect water pump.',
+          cost: '$600–$1,200 water pump + thermostat', source: 'BMW electric water pump known pattern' },
+        { title: 'Oil consumption (B48/B58)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'BMW considers up to 1 qt per 1,000 miles as within spec. Check dipstick before every purchase.',
+          check: '<strong>Pull dipstick. Ask seller how often they add oil between changes.</strong>',
+          cost: 'Monitor', source: 'BMW consumption standard' }
+      ]},
+      { title: 'Chassis', items: [
+        { title: 'Front and rear control arm bushing wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'G01 control arm bushings wear at 60k–80k miles. Steering wander and noise over bumps are symptoms.',
+          check: '<strong>Test straight-line tracking at highway speed.</strong> Consult PPI for bushing condition.',
+          cost: '$800–$2,500 front and rear suspension refresh', source: 'G01 common repair list' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'iDrive faults and module errors', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'G01 iDrive accumulates fault codes. Scan with BMW ISTA before purchase.',
+          check: '<strong>PPI with ISTA scan is non-negotiable.</strong>',
+          cost: '$150–$200 PPI / $300–$2,000+ module faults', source: 'BMW pre-purchase standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'xDrive transfer case fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Transfer case fluid service every 50k miles — often skipped at dealer.',
+          check: '<strong>Ask for transfer case service history.</strong>',
+          cost: '$200–$400 fluid service', source: 'BMW AWD service standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'BMW specialist PPI required', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Non-negotiable on any used BMW. ISTA scan reveals all fault codes and deferred maintenance.',
+          check: '<strong>$150–$200 PPI at BMW-trained independent shop before any commitment.</strong>',
+          cost: '$150–$200 PPI / unknown without it', source: 'BMW ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-044', title: 'Electric Fuel Pump', desc: 'Pump may fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' },
+      { number: '19V-394', title: 'Airbag Software', desc: 'Frontal airbag calibration update.' }
+    ]
+  },
+
+  'mercedes-c300-2018': {
+    year: 2018, make: 'Mercedes-Benz', model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)',
+    engine: '2.0L M274 Turbo I4 (255hp) / 3.0L M276 Biturbo V6 (385hp C43)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The W205 C-Class is one of the most satisfying-to-drive executive sedans available used — genuine premium quality, excellent ride, and the 2.0L M274 is a strong engine. But Mercedes ownership costs are above-average: 7G-Tronic transmission service is often skipped, sunroof drain clogs are common, and the electronics suite can generate expensive fault codes. Specialist PPI is required.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 160, topComplaintArea: 'High maintenance cost / 7G-Tronic service / sunroof drains' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'M274 timing chain (early B9 builds)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early M274 builds had timing chain adjuster issues. 2016+ with updated tensioner is less prone.',
+          check: '<strong>Cold-start rattle check — any sustained rattle = tensioner concern.</strong>',
+          cost: '$1,200–$2,800 timing chain service', source: 'M274 service pattern' },
+        { title: '7G-Tronic automatic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Mercedes marks 7G-Tronic fluid as lifetime — but shudder at 60k+ miles is common without a fluid change. Service at 60k–80k miles is strongly recommended.',
+          check: '<strong>Test transmission in stop-and-go and on highway for shudder or hesitation.</strong>',
+          cost: '$400–$700 fluid service / $3,500–$6,000 transmission', source: 'Independent Mercedes service consensus' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'COMAND infotainment faults', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'W205 COMAND system has known freeze and navigation errors. Module faults can be expensive.',
+          check: '<strong>Test all functions. Scan with Mercedes XENTRY or iCarsoft at a specialist.</strong>',
+          cost: '$150–$200 PPI scan / $300–$3,000+ faults', source: 'Mercedes pre-purchase standard' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Panoramic sunroof drain clog', risk: 'high', riskLabel: 'High Attention',
+          desc: 'W205 panoramic sunroof drains are notorious for clogging, causing water to drip into cabin or accumulate in door sills.',
+          check: '<strong>Check headliner at A and B-pillar for water stains or musty smell.</strong>',
+          cost: '$150–$400 drain cleaning / $1,500–$3,000 headliner or electronics damage', source: 'W205 well-known issue' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front control arm and bushing wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'W205 control arms wear at 60k–80k miles — similar timeline to BMW.',
+          check: '<strong>Front suspension noise check + PPI inspection.</strong>',
+          cost: '$800–$2,000 front suspension', source: 'W205 common repair' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Mercedes specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Any used Mercedes requires PPI with XENTRY diagnostic scan.',
+          check: '<strong>Budget $150–$250 PPI. Non-negotiable.</strong>',
+          cost: '$150–$250 PPI / unknown without it', source: 'Mercedes ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-411', title: 'Seat Belt Buckle', desc: 'Buckle may not lock correctly.' },
+      { number: '17V-376', title: 'Takata Airbag (select VINs)', desc: 'Verify on eligible builds.' },
+      { number: '19V-394', title: 'Brake Assist Software', desc: 'Software update for emergency brake assist.' }
+    ]
+  },
+
+  'vw-tiguan-2018': {
+    year: 2018, make: 'Volkswagen', model: 'Tiguan', trim: 'S / SE / SEL / SEL Premium R-Line (MQB 2nd gen)',
+    engine: '2.0L TSI EA888 Turbo I4 (184hp) with 8-speed Tiptronic',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. DSG fluid service is required regularly. Strong compact SUV value for buyers who maintain the service schedule.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'DSG service / EA888 carbon buildup' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'EA888 timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same EA888 timing chain tensioner concern as Audi A4. Cold-start rattle = tensioner wear.',
+          check: '<strong>Cold-start rattle check first 5 seconds.</strong>',
+          cost: '$1,200–$2,500 timing chain service', source: 'EA888 pattern' },
+        { title: 'DSG fluid service (if DSG-equipped)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The DSG (DQ381 8-speed wet-clutch) on 2nd-gen Tiguan shudders at low speed when fluid is overdue.',
+          check: '<strong>Test stop-and-go under 15 mph.</strong>',
+          cost: '$400–$600 DSG fluid / $2,000–$3,500 clutch pack', source: 'VW DSG maintenance standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: '4MOTION coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Haldex AWD coupling requires annual fluid service. Vibration at highway speed = neglected.',
+          check: '<strong>Test highway cornering.</strong>',
+          cost: '$150–$300 Haldex fluid service', source: 'Haldex AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MIB2 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MIB2 is reliable. Known CarPlay drop issues resolved by software update.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'VW campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Panoramic roof drain', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same panoramic drain clog issue as other VW group vehicles.',
+          check: '<strong>Check A-pillar headliner for water stains.</strong>',
+          cost: '$100–$300 drain cleaning', source: 'VW group common issue' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'DSG service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'DSG fluid history is critical. Three recalls possible.',
+          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from DSG without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software Update', desc: 'Stability control behavior update.' },
+      { number: '18V-307', title: 'Panoramic Roof Glass', desc: 'May shatter unexpectedly.' }
+    ]
+  },
+
+  'jeep-compass-2018': {
+    year: 2018, make: 'Jeep', model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)',
+    engine: '2.4L Tigershark I4 (180hp) / 1.4T MultiAir (177hp) / 2.0L Tigershark (158hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The MP-generation Compass (2017+) is a significant improvement over its predecessor — better quality, refined interior, and genuine trail capability on Trailhawk. The 2.4L Tigershark has the same oil consumption concern as in the Cherokee. The 9-speed ZF automatic needs careful testing. Value pricing makes it one of the more affordable new Jeep entry points on the used market.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 145, topComplaintArea: '2.4L oil consumption / 9-speed hesitation' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.4L Tigershark oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same Tigershark oil consumption issue as Cherokee. Pull dipstick before driving.',
+          check: '<strong>Check oil level before test drive.</strong> Low on recent change = active consumption.',
+          cost: '$0 if early / $5,000–$7,500 engine rebuild', source: 'Chrysler Tigershark documented issue' },
+        { title: '9-speed ZF auto hesitation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same ZF 9-speed as Cherokee — improved by 2018 but still warrants thorough testing.',
+          check: '<strong>Test all driving scenarios thoroughly.</strong>',
+          cost: '$350–$600 fluid + calibration', source: 'ZF 948TE revision history' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Active Drive AWD coupling service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling fluid every 30–45k miles.',
+          check: '<strong>Test highway cornering for shudder.</strong>',
+          cost: '$150–$300 service', source: 'Jeep AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 7/8.4 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect is generally reliable. Test all functions.',
+          check: '<strong>Test CarPlay and backup camera.</strong>',
+          cost: '$0 update', source: 'Jeep campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Interior trim quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MP Compass interior quality is above predecessor but still below Honda/Toyota. Inspect door panels and trim clips.',
+          check: '<strong>Check door panels and trim for loose or broken clips.</strong>',
+          cost: '$0–$200 trim clips', source: 'Consumer reports' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil consumption check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Oil dipstick check is the primary pre-purchase step. Three recalls possible.',
+          check: '<strong>Dipstick check + run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from consumption evidence', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
+      { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
+    ]
+  },
+
+  'jeep-renegade-2018': {
+    year: 2018, make: 'Jeep', model: 'Renegade', trim: 'Sport / Latitude / Limited / Trailhawk (BU)',
+    engine: '1.4L MultiAir Turbo I4 (160hp) / 2.4L Tigershark I4 (180hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The BU Renegade is Jeep's entry-level crossover — affordable, distinctive, and genuinely capable off-road on the Trailhawk. The 1.4T MultiAir has a documented timing belt failure pattern on neglected maintenance schedules. The 2.4L Tigershark has the same oil consumption history as the Cherokee and Compass. Neither powertrain is a disaster — both require documentation.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: '1.4T timing belt / 2.4L oil consumption' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.4T MultiAir timing belt service', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The 1.4T MultiAir uses a rubber timing belt (not chain) that must be replaced every 100k miles or 10 years. Belt failure = catastrophic engine damage.',
+          check: '<strong>Ask specifically for timing belt service record on any 1.4T with 80k+ miles.</strong>',
+          cost: '$400–$800 timing belt service / $5,000–$8,000 engine if belt breaks', source: 'Chrysler 1.4T service requirement' },
+        { title: '2.4L Tigershark oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same consumption pattern as Cherokee and Compass.',
+          check: '<strong>Check dipstick before driving.</strong>',
+          cost: '$5,000–$7,500 engine if severe', source: 'Chrysler Tigershark pattern' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '6-speed manual shift quality (if equipped)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Manual transmission Renegades: check clutch bite and synchronizer feel.',
+          check: '<strong>Test all gears through full range.</strong>',
+          cost: '$400–$800 clutch', source: 'Standard manual inspection' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect on Renegade is generally fine for entry-level trim. Test all functions.',
+          check: '<strong>Test backup camera and CarPlay.</strong>',
+          cost: '$0 update', source: 'Jeep campaigns' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Entry-level interior durability', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'BU Renegade interior quality is entry-level — door panels and trim wear faster than competitors.',
+          check: '<strong>Inspect all interior panels and seat fabric.</strong>',
+          cost: '$0–$300 reconditioning', source: 'Consumer pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: '1.4T timing belt record — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Timing belt service history is the single most important document on any 1.4T Renegade.',
+          check: '<strong>Require timing belt service receipt on any 1.4T with 80k+ miles. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from 1.4T without timing belt history at 80k+', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
+      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+    ]
+  },
+
+  'buick-encore-2018': {
+    year: 2018, make: 'Buick', model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)',
+    engine: '1.4L LUJ/LUV Ecotec Turbo I4 (138hp) / 1.4T Sport Touring (153hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The Encore is Buick's entry-level crossover — the smallest and most fuel-efficient. The 1.4T Ecotec is a known commodity: reliable when maintained, but the turbo requires synthetic oil and regular changes. Oil consumption is reported on high-mileage examples. The premium Buick interior quality is the main selling point. Strong value when oil changes are documented.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 175, topComplaintArea: '1.4T oil consumption / timing chain' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.4T Ecotec oil consumption and timing', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 1.4T can consume oil above 80k miles. Timing chain noise on cold start is common with extended intervals.',
+          check: '<strong>Cold-start check for chain rattle + dipstick check.</strong>',
+          cost: '$600–$1,400 timing chain / $4,500–$6,500 engine if severe', source: '1.4T Ecotec documented pattern' },
+        { title: 'Turbo wastegate rattle', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 1.4T turbo wastegate rattles at idle on some builds — common and inexpensive to fix.',
+          check: '<strong>Listen for a high-frequency rattle at idle on a warm engine.</strong>',
+          cost: '$150–$400 wastegate repair', source: '1.4T turbo rattle pattern' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'Automatic transmission fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Shudder at 25–40 mph = fluid contamination.',
+          check: '<strong>Test light-throttle acceleration for shudder.</strong>',
+          cost: '$250–$400 fluid flush', source: 'GM service pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'IntelliLink infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'IntelliLink on Encore has known Bluetooth and CarPlay issues.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0 update', source: 'Buick campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut bearing noise', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Strut bearing clunk over bumps at 80k+ miles.',
+          check: '<strong>Drive over rough pavement at low speed.</strong>',
+          cost: '$200–$400 per side', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Oil change history on a 1.4T is the key document. Three recalls possible.',
+          check: '<strong>Request all maintenance records. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from 1.4T without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '19V-268', title: 'USB Port Fire Risk', desc: 'USB charger may overheat.' },
+      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update.' }
+    ]
   }
 
 };
