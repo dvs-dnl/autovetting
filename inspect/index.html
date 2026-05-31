@@ -8065,6 +8065,494 @@ const CHECKLISTS = {
       { number: '19V-394', title: 'Airbag Control Module', desc: 'Software update for airbag deployment.' },
       { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
     ]
+  },
+
+  'volvo-xc60-2018': {
+    year: 2018, make: 'Volvo', model: 'XC60', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)',
+    engine: '2.0L T5 Turbo I4 (250hp) / 2.0L T6 Supercharged+Turbo I4 (316hp) / T8 PHEV (400hp)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "2nd-gen XC60 on the SPA platform is the XC90's smaller sibling — shared platform means shared issues. Sensus infotainment reliability is the most common real-world complaint. Drive-E timing belt service required at 100k miles. Air suspension (if equipped) and T8 battery health are additional considerations. Volvo specialist PPI with VIDA scan is mandatory.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 155, topComplaintArea: 'Sensus infotainment / Drive-E timing belt / air suspension' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'Drive-E timing belt service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'T5 and T6 Drive-E engines use a rubber timing belt requiring replacement at 100k miles or 10 years.',
+          check: '<strong>Request timing belt service record on any T5/T6 with 80k+ miles.</strong>',
+          cost: '$800–$1,500 timing belt service / $6,000–$9,000 engine if belt breaks', source: 'Volvo Drive-E service schedule' },
+        { title: 'T8 PHEV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'T8 PHEV battery should provide 17+ miles EV range (18.8 kWh usable).',
+          check: '<strong>Charge to full, test EV range.</strong>',
+          cost: '$6,000–$12,000 HV battery', source: 'T8 wear pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Sensus infotainment freeze and reboot', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Sensus on SPA XC60 freezes, reboots, and loses GPS — same pattern as XC90.',
+          check: '<strong>Test all functions extensively during inspection.</strong>',
+          cost: '$0 update / $1,500–$3,500 head unit', source: 'Volvo Sensus complaints' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Air suspension (if equipped)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Air spring and compressor wear at 80k–120k miles.',
+          check: '<strong>Check ride height level. Listen for compressor cycling.</strong>',
+          cost: '$600–$1,200 per spring / $800–$1,500 compressor', source: 'SPA air suspension pattern' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Haldex AWD coupling annual service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Annual Haldex fluid service required.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 Haldex service', source: 'Haldex standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Volvo specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'VIDA/DiCE diagnostic scan reveals all fault codes.',
+          check: '<strong>$150–$200 PPI at Volvo-trained shop. Non-negotiable.</strong>',
+          cost: '$150–$200 PPI', source: 'Volvo ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' },
+      { number: '19V-394', title: 'Airbag Control Module', desc: 'Software update.' }
+    ]
+  },
+
+  'acura-mdx-2018': {
+    year: 2018, make: 'Acura', model: 'MDX', trim: 'Base / Technology / A-Spec / Advance / Sport Hybrid (3rd gen YD3)',
+    engine: '3.5L J35Y V6 (290hp) / Sport Hybrid: 3.0L J30A5 V6 + 3 electric motors (321hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The YD3 MDX is one of the most proven luxury 3-row SUVs on the market. The 3.5L J35Y V6 is Honda's most reliable large engine — runs to 250k+ miles with synthetic oil. 9-speed ZF auto had early hesitation issues but is largely resolved in 2018. Sport Hybrid is genuinely fuel-efficient and the hybrid system is proven. One of the most recommended used luxury SUVs in its class.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 105, topComplaintArea: '9-speed ZF hesitation (early) / VCM motor mount wear' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'V6 VCM right-rear motor mount wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The Variable Cylinder Management (VCM) system vibrates the right-rear motor mount at idle in 3-cylinder mode. Worn mount causes interior vibration.',
+          check: '<strong>With engine warm and AC on at idle, feel steering wheel and seat for vibration.</strong>',
+          cost: '$300–$600 motor mount', source: 'Honda VCM mount pattern' },
+        { title: '9-speed ZF transmission fluid and behavior', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '2018 MDX 9-speed is substantially improved over 2016–2017. Fluid service at 60k miles is recommended despite "lifetime" designation.',
+          check: '<strong>Test all driving scenarios.</strong>',
+          cost: '$400–$600 fluid service', source: 'ZF 9HP service pattern' }
+      ]},
+      { title: 'Hybrid System (if equipped)', items: [
+        { title: 'Sport Hybrid IMA battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MDX Sport Hybrid uses a 1.3 kWh IMA battery. Degradation is modest but affects EV assist.',
+          check: '<strong>Test fuel economy — should hit 25+ mpg combined.</strong>',
+          cost: '$2,000–$4,000 IMA battery', source: 'Hybrid wear pattern' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'AcuraLink / infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AcuraLink is generally reliable. Test all functions.',
+          check: '<strong>Test CarPlay, navigation, and all three zone HVAC.</strong>',
+          cost: '$0 update', source: 'Acura campaigns' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'SH-AWD rear differential fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'SH-AWD rear differential requires Honda DPS-F fluid every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Acura SH-AWD service standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + SH-AWD service history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Three recalls possible. SH-AWD fluid service is the key maintenance document.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '18V-307', title: 'EyeSight ECU Software', desc: 'Camera calibration update.' },
+      { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+    ]
+  },
+
+  'acura-rdx-2019': {
+    year: 2019, make: 'Acura', model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)',
+    engine: '2.0L VTEC Turbo K20C4 I4 (272hp) with 10-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen RDX is Acura's best product in a decade — sharp, well-built, and the turbocharged 2.0L VTEC is genuinely strong. The 10-speed Honda/Acura transmission is smoother than competitors. SH-AWD is one of the most sophisticated systems in the segment. Main buyer checks: 2.0T VTEC oil dilution concern in cold climates (less severe than Honda 1.5T but present) and SH-AWD differential fluid service.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 90, topComplaintArea: '2.0T oil dilution (cold climate) / SH-AWD fluid' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0T VTEC oil dilution in cold climates', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The K20C4 has a mild oil dilution profile in very cold climates — less severe than the 1.5T L15B7 but present. Check if car came from a cold-weather state.',
+          check: '<strong>Check oil level and smell on 2.0T.</strong> Gasoline odor in oil of a cold-climate car = dilution.',
+          cost: '$0 if mild / $5,500+ if severe', source: 'Acura 2.0T cold-climate pattern' },
+        { title: '10-speed transmission shift quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda/Acura 10-speed is one of the smoother 10-speeds available. Standard checks apply.',
+          check: '<strong>Test all driving scenarios.</strong>',
+          cost: '$300–$500 fluid service at 60k', source: 'Honda 10AT reliability' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'SH-AWD rear differential fluid (critical)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'SH-AWD rear diff requires Honda DPS-F fluid every 30k miles. Neglect causes shudder on tight turns.',
+          check: '<strong>Test tight parking lot turns at full lock — any vibration = fluid needed.</strong>',
+          cost: '$150–$300 fluid service / $1,500–$3,000 rear diff', source: 'Acura SH-AWD standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'True Touchpad interface learning curve', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The touchpad-based infotainment is polarizing but functional. Verify CarPlay and navigation work.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0', source: 'Consumer experience' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'EyeSight / Honda Sensing windshield', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Camera zone windshield chip = expensive repair.',
+          check: '<strong>Inspect top-center windshield zone.</strong>',
+          cost: '$1,000–$2,000 windshield + recalibration', source: 'Safety system service' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'SH-AWD fluid service + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'SH-AWD fluid service history is the critical document.',
+          check: '<strong>Run nhtsa.gov/recalls. Request SH-AWD fluid service receipts.</strong>',
+          cost: 'Walk away from SH-AWD without service history', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera Software', desc: 'Camera display delay — OTA fix.' },
+      { number: '19V-394', title: 'Airbag Software', desc: 'Airbag control update.' }
+    ]
+  },
+
+  'lexus-es-2019': {
+    year: 2019, make: 'Lexus', model: 'ES', trim: '350 / 300h Hybrid / F Sport (7th gen XZ10)',
+    engine: '3.5L 2GR-FKS V6 (302hp) / 2.5L A25A-FXS Hybrid (215hp system)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 7th-gen Lexus ES is one of the most refined front-wheel-drive luxury sedans available. The 2GR-FKS V6 and 2.5L hybrid system are Toyota's most proven large-displacement platforms. GDI carbon buildup on the 2GR-FKS is the only long-term service item of note. The ES 300h hybrid is one of the most efficient luxury sedans ever built. Outstanding reliability per dollar.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'GDI carbon buildup (3.5L) / minimal issues' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2GR-FKS V6 GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2GR-FKS direct-injection V6 accumulates carbon on intake valves at 80k+ miles. Loss of power and rough idle are early signs.',
+          check: '<strong>Test idle smoothness and acceleration linearity.</strong>',
+          cost: '$400–$800 walnut blast cleaning', source: 'GDI V6 carbon pattern' },
+        { title: 'ES 300h HV battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota/Lexus hybrid batteries are among the most durable in the industry. Degradation is slow.',
+          check: '<strong>Test fuel economy — should hit 44+ mpg combined.</strong>',
+          cost: '$2,000–$3,500 HV battery if needed (rare on this platform)', source: 'Lexus hybrid reliability record' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Remote Touch interface', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lexus Remote Touch has a learning curve. 7th-gen XZ10 added Apple CarPlay. Verify compatibility.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0', source: 'Consumer preference' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front suspension wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'ES uses McPherson front suspension — durable with standard wear timeline.',
+          check: '<strong>Standard bounce test and steering check.</strong>',
+          cost: '$400–$800 standard wear', source: 'Standard wear pattern' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Paint quality', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lexus paint quality is above average but not immune to chips.',
+          check: '<strong>Inspect leading edges of hood and fenders.</strong>',
+          cost: '$0–$300 touch-up', source: 'Standard inspection' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + full service history', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Two recalls possible. Full Lexus dealer service history is the ideal.',
+          check: '<strong>Run nhtsa.gov/recalls. Verify service records.</strong>',
+          cost: 'Standard', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Fuel Pump (Denso)', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera Software', desc: 'Camera display update.' }
+    ]
+  },
+
+  'lexus-nx-2018': {
+    year: 2018, make: 'Lexus', model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)',
+    engine: '2.0L 8AR-FTS Turbo I4 (235hp) / 2.5L 2AR-FXE Hybrid (194hp system)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The 1st-gen Lexus NX (2015–2021) brought Lexus into the compact luxury SUV segment. The 2.0T 8AR-FTS is less proven than Toyota's naturally-aspirated engines and has documented oil consumption reports. The 300h hybrid system is the more reliable choice and avoids the turbo concerns. Lexus quality is still above average even on the turbo — just verify oil condition and check service records.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: '2.0T 8AR-FTS oil consumption / Remote Touch interface' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '8AR-FTS 2.0T oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 8AR-FTS turbocharged engine has documented oil consumption reports — some engines consume 1 qt per 1,000–2,000 miles above 80k.',
+          check: '<strong>Pull dipstick before test drive.</strong> Below MIN on a recent change = active consumption.',
+          cost: '$0 if early / $6,000–$9,000 engine rebuild', source: 'Lexus 8AR-FTS consumption reports' },
+        { title: 'NX 300h hybrid battery health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Hybrid system is Toyota-proven and durable. Should achieve 33+ mpg combined.',
+          check: '<strong>Test fuel economy.</strong>',
+          cost: '$2,000–$3,500 battery if needed', source: 'Toyota hybrid reliability' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Remote Touch interface usability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Remote Touch trackpad is polarizing. 2018+ has optional Apple CarPlay.',
+          check: '<strong>Test all infotainment functions.</strong>',
+          cost: '$0', source: 'Consumer preference' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'AWD coupling fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD coupling requires fluid service every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$150–$300 service', source: 'Toyota AWD standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front strut and lower arm wear', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard wear items at 80k+ miles.',
+          check: '<strong>Bounce test and drive over rough pavement.</strong>',
+          cost: '$400–$800 per strut', source: 'Common wear' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil dipstick check + recall verification', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Oil consumption check is the most important pre-purchase step on 2.0T models.',
+          check: '<strong>Check dipstick. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away from 2.0T with active consumption', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software update.' },
+      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+    ]
+  },
+
+  'bmw-5series-2018': {
+    year: 2018, make: 'BMW', model: '5 Series', trim: '530i / 540i / M550i / 530e PHEV (G30)',
+    engine: '2.0L B48 Turbo I4 (248hp) / 3.0L B58 Turbo I6 (335hp) / 4.4L N63 Biturbo V8 (523hp M550i)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The G30 5 Series is BMW's executive sedan flagship — refined, powerful, and technologically sophisticated. Ownership costs are the highest of any BMW outside M cars. The B58 I6 is excellent; the N63 V8 has documented rod bearing and carbon buildup concerns. Electric water pump, control arm wear, and iDrive module faults are all real line items. BMW specialist PPI with ISTA scan is non-negotiable.",
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 165, topComplaintArea: 'N63 V8 reliability / water pump / control arm bushings / iDrive faults' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'N63 V8 — rod bearing and carbon (M550i / 550i)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The N63 biturbo V8 has documented rod bearing concerns and significant carbon buildup on intake valves. Avoid unless confirmed CPO or with full service history. B58 I6 is significantly more reliable.',
+          check: '<strong>If buying N63 V8: require full oil change history, scan for fault codes, and get a specialist PPI.</strong>',
+          cost: '$6,000–$12,000 rod bearing + carbon service if neglected', source: 'BMW N63 known pattern' },
+        { title: 'B48 / B58 electric water pump and thermostat', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Electric water pump failure at 80k–120k miles on all B-series engines.',
+          check: '<strong>Check coolant level and expansion tank condition.</strong>',
+          cost: '$600–$1,200 water pump + thermostat', source: 'BMW B-series water pump pattern' }
+      ]},
+      { title: 'Chassis', items: [
+        { title: 'Front and rear control arm bushing wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'G30 control arms and bushings wear at 60k–80k miles.',
+          check: '<strong>Highway tracking test + PPI front suspension inspection.</strong>',
+          cost: '$1,000–$2,500 suspension refresh', source: 'G30 common repair' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'iDrive 6 faults and module errors', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'G30 iDrive 6 is generally reliable but accumulates module fault codes.',
+          check: '<strong>PPI with ISTA diagnostic scan.</strong>',
+          cost: '$200–$3,000+ depending on fault', source: 'BMW pre-purchase scan standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'ZF 8HP fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '"Lifetime" ZF fluid but independent shops recommend change at 60k.',
+          check: '<strong>Test for shudder at 25–45 mph.</strong>',
+          cost: '$400–$600 fluid service', source: 'BMW shop consensus' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'BMW specialist PPI — mandatory on any G30', risk: 'critical', riskLabel: 'Critical',
+          desc: 'G30 complexity means hidden costs without a specialist scan.',
+          check: '<strong>$150–$250 PPI with ISTA. Walk away from any seller who refuses.</strong>',
+          cost: '$150–$250 PPI', source: 'BMW ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-044', title: 'Electric Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify completion.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+    ]
+  },
+
+  'bmw-x5-2019': {
+    year: 2019, make: 'BMW', model: 'X5', trim: 'xDrive40i / xDrive50i / M50i / X5 PHEV (G05)',
+    engine: '3.0L B58 Turbo I6 (335hp) / 4.4L N63 Biturbo V8 (456hp) / 3.0L B57 Diesel I6',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "G05 X5 (2019+) is BMW's most popular SAV — the B58 I6 xDrive40i is the sweet spot powertrain. N63 V8 on xDrive50i and M50i is the risk vector — same bearing and carbon issues as 5 Series. Air suspension wear at 80k–100k miles is a significant cost item. Budget BMW ownership costs honestly: $3,000–$5,000/year on any X5.",
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 155, topComplaintArea: 'N63 V8 concerns / air suspension / control arm wear' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'N63 V8 — avoid without full history (xDrive50i/M50i)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Same N63 rod bearing and carbon buildup as 5 Series. B58 I6 xDrive40i is the significantly lower-risk choice.',
+          check: '<strong>Prefer xDrive40i with B58. If buying V8: require specialist PPI and full oil history.</strong>',
+          cost: '$6,000–$12,000 N63 service if neglected', source: 'BMW N63 pattern' },
+        { title: 'B58 water pump and thermostat', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Electric water pump fails at 80k–120k miles on B58.',
+          check: '<strong>Coolant level and expansion tank check.</strong>',
+          cost: '$600–$1,200 water pump', source: 'BMW B58 pattern' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Air suspension airbag and compressor wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'G05 air suspension bags fail at 80k–120k miles. Compressor follows.',
+          check: '<strong>Check ride height level and listen for compressor cycling at idle.</strong>',
+          cost: '$600–$1,500 per corner / $800–$1,800 compressor', source: 'BMW air suspension pattern' },
+        { title: 'Control arm bushing wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'X5 G05 control arm bushings wear at 60k–80k miles.',
+          check: '<strong>PPI suspension inspection + highway tracking test.</strong>',
+          cost: '$1,000–$2,500 suspension refresh', source: 'G05 common repair' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'iDrive 7 faults', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'PPI ISTA scan reveals accumulated fault codes.',
+          check: '<strong>ISTA scan at BMW specialist PPI.</strong>',
+          cost: '$200–$3,000+ depending on fault', source: 'BMW pre-purchase standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'BMW specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'G05 complexity and cost potential require specialist evaluation.',
+          check: '<strong>$150–$250 PPI with ISTA. Non-negotiable.</strong>',
+          cost: '$150–$250 PPI', source: 'BMW ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-044', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' },
+      { number: '21V-037', title: 'Airbag Deployment', desc: 'Software calibration update.' }
+    ]
+  },
+
+  'audi-q5-2018': {
+    year: 2018, make: 'Audi', model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)',
+    engine: '2.0L TFSI EA888 Turbo I4 (248hp) / 3.0L TFSI V6 (354hp SQ5)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "2nd-gen Q5 (2018+) on the MLB Evo platform is well-engineered and premium — but like all Audi, maintenance costs are above-average. EA888 timing chain tensioner and coolant flange are the known failure modes. DSG fluid service is often skipped. SQ5 with 3.0T V6 adds complexity. Audi specialist PPI with VCDS scan is required.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 145, topComplaintArea: 'EA888 timing chain / coolant flange / DSG fluid service / high maintenance costs' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Same timing chain tensioner concern as Audi A4 — failure at 60k–100k miles on neglected oil.',
+          check: '<strong>Cold-start rattle check (first 5 seconds).</strong>',
+          cost: '$1,200–$2,500 timing chain service', source: 'EA888 gen3 pattern' },
+        { title: 'Coolant flange (plastic) failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Plastic coolant flange cracks and causes rapid coolant loss — a well-known FY Q5 failure.',
+          check: '<strong>Check coolant level and inspect engine bay for coolant smell.</strong>',
+          cost: '$300–$600 coolant flange + flush', source: 'Audi FY Q5 documented issue' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'DSG fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: 'S tronic DSG requires fluid service every 40k miles. Shudder at low speed = overdue.',
+          check: '<strong>Test stop-and-go under 15 mph for shudder or jerk.</strong>',
+          cost: '$400–$700 DSG service / $2,000–$4,000 mechatronic', source: 'Audi DSG standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Quattro / Haldex coupling service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear differential and coupling fluid service required every 30k miles.',
+          check: '<strong>Test highway cornering for vibration.</strong>',
+          cost: '$200–$400 service', source: 'Audi Quattro standard' }
+      ]},
+      { title: 'Electronics', items: [
+        { title: 'MMI faults and Virtual Cockpit', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VCDS scan before purchase reveals accumulated fault codes.',
+          check: '<strong>PPI with VCDS at Audi specialist.</strong>',
+          cost: '$150–$200 PPI scan', source: 'Audi pre-purchase standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Audi specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Coolant flange, timing chain, and DSG are all real cost items requiring specialist evaluation.',
+          check: '<strong>$150–$200 PPI with VCDS. Non-negotiable.</strong>',
+          cost: '$150–$200 PPI', source: 'Audi ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-411', title: 'High-Pressure Fuel Pump', desc: 'HPFP may fail — stall risk.' },
+      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
+      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+    ]
+  },
+
+  'mercedes-glc-2018': {
+    year: 2018, make: 'Mercedes-Benz', model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)',
+    engine: '2.0L M274 Turbo I4 (255hp) / 3.0L M276 Biturbo V6 (385hp GLC 43)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "X253 GLC is one of the most popular luxury compact SUVs in the world — quality is genuine and the interior is excellent. Same maintenance concerns as the C-Class: 9G-Tronic fluid service, sunroof drain clogs, and M274 timing chain. Mercedes specialist PPI with XENTRY scan before purchase is mandatory. Budget $3,000–$5,000/year honestly.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 145, topComplaintArea: 'Sunroof drain clogs / 9G-Tronic fluid / M274 timing / high maintenance costs' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'M274 2.0T timing chain concern (early builds)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early M274 timing chain adjuster can wear — listen for cold-start rattle.',
+          check: '<strong>Cold-start the engine and listen for sustained rattle.</strong>',
+          cost: '$1,200–$2,800 timing chain', source: 'M274 pattern' },
+        { title: '9G-Tronic fluid service', risk: 'high', riskLabel: 'High Attention',
+          desc: '9G-Tronic 9-speed is marked as lifetime fluid by Mercedes but benefits from service at 60k–80k miles.',
+          check: '<strong>Test all driving scenarios for shudder or hesitation.</strong>',
+          cost: '$400–$700 fluid service / $3,500–$6,000 transmission', source: 'Independent Mercedes consensus' }
+      ]},
+      { title: 'Body', items: [
+        { title: 'Panoramic sunroof drain clog', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Sunroof drains clog on X253 — water enters A-pillar or door sills.',
+          check: '<strong>Check headliner at A-pillar and door sills for water stains.</strong>',
+          cost: '$150–$400 drain cleaning / $1,500–$3,000 water damage repair', source: 'GLC well-known issue' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'COMAND infotainment faults', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'COMAND faults require XENTRY scan.',
+          check: '<strong>PPI with XENTRY at Mercedes specialist.</strong>',
+          cost: '$150–$250 PPI / $300–$3,000+ faults', source: 'Mercedes pre-purchase standard' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front control arm wear', risk: 'high', riskLabel: 'High Attention',
+          desc: 'GLC control arms wear at 60k–80k miles.',
+          check: '<strong>PPI suspension inspection.</strong>',
+          cost: '$800–$2,000 front suspension refresh', source: 'X253 common repair' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Mercedes specialist PPI — mandatory', risk: 'critical', riskLabel: 'Critical',
+          desc: 'XENTRY scan reveals all hidden fault codes before purchase.',
+          check: '<strong>$150–$250 PPI. Non-negotiable.</strong>',
+          cost: '$150–$250 PPI', source: 'Mercedes ownership standard' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-411', title: 'Seat Belt Buckle', desc: 'May not lock — replacement.' },
+      { number: '17V-376', title: 'Takata Airbag (select VINs)', desc: 'Verify completion.' },
+      { number: '19V-394', title: 'Brake Assist Software', desc: 'Software update.' }
+    ]
+  },
+
+  'dodge-durango-2018': {
+    year: 2018, make: 'Dodge', model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)',
+    engine: '3.6L Pentastar V6 (295hp) / 5.7L Hemi V8 (360hp) / 6.4L SRT 392 (475hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Watchful',
+    summary: "The WD Durango is a body-on-frame 3-row SUV that survives on tow capacity (7,400–8,700 lbs) and V8 power. The 5.7L Hemi MDS lifters are the same failure mode as the Ram 1500 and Charger — same oil-interval dependency, same $3,000–$6,500 repair cost. The 3.6L Pentastar V6 avoids MDS. TIPM electrical module failures are less common on WD than WK2 but still possible.",
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 215, topComplaintArea: 'Hemi MDS lifters / ZF 8-speed shudder' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
+          desc: 'MDS deactivating lifters on the 5.7L Hemi fail at 60k–120k miles on neglected oil schedules.',
+          check: '<strong>Cold-start ticking + P0300 scan + oil interval records.</strong>',
+          cost: '$3,000–$6,500 lifter replacement', source: 'Hemi MDS documented pattern' },
+        { title: '8HP70 ZF 8-speed fluid', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Light-throttle shudder at 25–45 mph = torque converter fluid contamination.',
+          check: '<strong>Test at highway light throttle.</strong>',
+          cost: '$350–$550 fluid flush', source: '8HP70 service pattern' }
+      ]},
+      { title: 'Frame & Tow', items: [
+        { title: 'Towing history and drivetrain wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Durangos used for heavy towing accumulate drivetrain wear faster. Check hitch receiver rust and brake wear.',
+          check: '<strong>Inspect hitch receiver area for rust. Test trailer brake controller if equipped.</strong>',
+          cost: '$0–$1,500 depending on wear found', source: 'Tow vehicle inspection standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'UConnect 8.4 reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UConnect is generally reliable on WD. Test all functions.',
+          check: '<strong>Test all infotainment.</strong>',
+          cost: '$0 update', source: 'Dodge campaigns' }
+      ]},
+      { title: 'Suspension', items: [
+        { title: 'Front lower control arm bushing', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'LCA bushings wear at 80k+ miles causing handling vagueness.',
+          check: '<strong>Test steering at highway speed for wander.</strong>',
+          cost: '$400–$800 per side', source: 'WD wear pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Hemi oil history + Takata recall check', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Hemi oil interval history and Takata recall status are both walk-away items if unresolved.',
+          check: '<strong>Run nhtsa.gov/recalls. Require complete Hemi service history.</strong>',
+          cost: 'Walk away from Takata unresolved or oil-neglected Hemi', source: 'NHTSA' }
+      ]}
+    ],
+    recalls: [
+      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free replacement.' },
+      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage.' },
+      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
+      { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
+    ]
   }
 
 };
