@@ -10775,7 +10775,9 @@ const CHECKLISTS = {
       { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
       { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
-    ]
+    ],
+    vinNote: "The 3rd-gen Tacoma (2016\u20132022) comes in two powertrains \u2014 and which one you\u2019re buying changes the inspection entirely. The 8th VIN digit is the fastest split: T\u202f=\u202f3.5L 2GR-FKS V6 (278\u00a0hp, by far the most common trim \u2014 SR5, TRD Sport, TRD Off-Road, Limited, TRD Pro); G\u202f=\u202f2.7L 2TR-FE I4 (159\u00a0hp, SR trim access cab only, older port-injection design, no GDI carbon concern). V6 buyers must verify two things the I4 doesn\u2019t need: (1) TSB T-SB-0245-19 \u2014 the 6-speed automatic hunting/downshift fix; if the dealer can\u2019t produce the software update record, budget $0\u2013$200 for a dealer re-flash, or simply drive the truck on the highway for 10+ minutes and feel for repeated aggressive downshifts under light throttle. (2) GDI carbon buildup on the 2GR-FKS intake valves \u2014 high-mileage V6 trucks (80k+) may benefit from a $400\u2013$800 walnut-blast cleaning. Model-year digit is position 10: G\u202f=\u202f2016, H\u202f=\u202f2017, J\u202f=\u202f2018, K\u202f=\u202f2019, L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022. Run the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine and model year before applying this checklist.",
+    blogUrl: '/blog/2016-toyota-tacoma-buyers-guide'
   },
 
   'honda-pilot-2023': {
@@ -15179,6 +15181,7 @@ const VEHICLE_MENU = {
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen, final year)', key: 'toyota-tacoma-2019' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
@@ -15294,6 +15297,7 @@ const VEHICLE_MENU = {
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' },
@@ -15437,6 +15441,7 @@ const VEHICLE_MENU = {
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
@@ -15527,6 +15532,7 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
@@ -15571,6 +15577,7 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
     'Honda': [
@@ -15653,6 +15660,7 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
@@ -15742,7 +15750,7 @@ const VEHICLE_MENU = {
     ],
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
-      { model: 'Tacoma', trim: '3rd gen', key: null },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
