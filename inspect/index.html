@@ -14139,6 +14139,352 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'chevy-suburban-2021': {
+    year: 2021, make: 'Chevrolet', model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country (5th gen T1XX, 2021–present)',
+    engine: '5.3L EcoTec3 V8 (355 hp), 6.2L EcoTec3 V8 (420 hp), or 3.0L Duramax Diesel',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 5th-gen Suburban is the extended-length sibling to the Tahoe on the T1XX platform — independent rear suspension, dramatically more third-row and cargo space, and optional air ride. Same powertrain considerations as Tahoe: 5.3L DFM lifter failure risk, air suspension compressor failure on higher trims. The 3.0L diesel delivers exceptional range. Outstanding for large families or those who need maximum interior volume.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 280, topComplaintArea: 'Engine (DFM) / Air Suspension' },
+    sections: [
+      { title: 'DFM Lifter Risk', items: [
+        { title: '5.3L DFM lifter failure at 80k+', risk: 'high', riskLabel: 'High Risk on 5.3L',
+          desc: 'Same pattern as Tahoe/Silverado. Warm idle tick = lifter failure.',
+          check: '<strong>Warm engine fully. Listen for persistent tick at idle post-warm-up.</strong>',
+          cost: '$3,000–$6,000', source: 'GM DFM pattern' }
+      ]},
+      { title: 'Air Suspension', items: [
+        { title: 'Air ride compressor (Premier / High Country)', risk: 'high', riskLabel: 'High Risk if equipped',
+          desc: 'Same compressor failure as Tahoe/Yukon. Overnight level test.',
+          check: '<strong>Park level overnight. Any corner sag = compressor failing.</strong>',
+          cost: '$1,200–$2,500', source: 'GM air ride pattern' }
+      ]},
+      { title: 'Towing', items: [
+        { title: 'Towing history and receiver wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Suburbans frequently tow. Transmission and rear axle wear from heavy use.',
+          check: '<strong>Inspect hitch receiver. Request transmission fluid records.</strong>',
+          cost: '$200–$500 service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + DFM status', risk: 'high', riskLabel: 'High Risk on 5.3L without',
+          desc: 'V8 oil interval and DFM disable status are the key facts to obtain.',
+          check: '<strong>Request all records. Ask about DFM disable device.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'audi-e-tron-2019': {
+    year: 2019, make: 'Audi', model: 'e-tron', trim: 'Standard / Prestige / S (1st gen GE, 2019–present)',
+    engine: 'AWD 355 hp (95 kWh) or e-tron S AWD 496 hp (95 kWh)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The e-tron is Audi's first mass-market EV — comfortable, premium, and practical. Early production had a water ingress recall affecting the battery cooling system. The 95 kWh battery delivers good range. Air suspension compressor failure (Audi standard pattern) is the main mechanical concern. Audi dealer service is essential and expensive. Confirm all recalls closed and check HV battery SoH carefully.",
+    stats: { itemsToCheck: 10, recalls: 3, ownerComplaints: 220, topComplaintArea: 'Battery / Air Suspension / Recalls' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'Battery cooling water ingress recall (20V-092)', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'Audi recalled early e-tron units for water ingress into the battery cooling system that could cause a fire.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. 20V-092 must be confirmed closed before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 20V-092' }
+      ]},
+      { title: 'HV Battery', items: [
+        { title: 'Battery SoH check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'e-tron batteries degrade at a moderate rate. Check displayed range vs EPA at 100%.',
+          check: '<strong>Compare displayed range at 100% vs rated range. Request Audi battery health report.</strong>',
+          cost: 'Free Audi battery check', source: 'Audi e-tron battery standard' }
+      ]},
+      { title: 'Air Suspension', items: [
+        { title: 'Air ride compressor failure', risk: 'high', riskLabel: 'High Risk at 50k+',
+          desc: 'Standard Audi air suspension compressor failure pattern.',
+          check: '<strong>Overnight level test. Any corner sag = compressor failing.</strong>',
+          cost: '$1,500–$2,800', source: 'Audi air suspension pattern' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'Audi EV service requirements', risk: 'high', riskLabel: 'High Risk without records',
+          desc: 'EV reduces maintenance but Audi dealer service for suspension and software is still expensive.',
+          check: '<strong>Request all Audi dealer records. Verify CPO coverage.</strong>',
+          cost: '$600–$1,500 per service interval', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: '20V-092', description: 'Battery cooling water ingress — fire risk on early e-tron', severity: 'Critical', remedy: 'Free dealer battery cooling repair' }]
+  },
+  'genesis-gv70-2022': {
+    year: 2022, make: 'Genesis', model: 'GV70', trim: 'Standard / Advanced / Advanced Plus / Sport / Sport Plus (1st gen JK1, 2022–present)',
+    engine: '2.5T I4 (300 hp) or 3.5T V6 TT (375 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The GV70 is one of the standout luxury compact SUV launches in recent years — striking exterior design, genuinely premium interior, and strong powertrain options. The 3.5T twin-turbo V6 is excellent. No chronic failure modes. Very competitive with BMW X3 and Mercedes GLC at a significant price advantage. Genesis CPO with 100k powertrain warranty is the preferred buying path given limited independent service options.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 70, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5T I4 — competent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Capable 2.5T with no widespread failure modes.',
+          check: '<strong>Cold-start check. Smooth idle. Oil level.</strong>',
+          cost: 'Routine maintenance', source: 'Genesis GV70 reliability data' },
+        { title: '3.5T V6 TT — outstanding', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Twin-turbo V6 is smooth and powerful. The preferred powertrain choice.',
+          check: '<strong>Test boost delivery. Both turbos should spool cleanly.</strong>',
+          cost: 'Higher maintenance cost', source: 'Genesis 3.5T reliability' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'AWD coupling fluid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD coupling fluid service every 30k miles.',
+          check: '<strong>Tight parking turn test. No binding expected.</strong>',
+          cost: '$150–$200 service', source: 'Genesis AWD standard' }
+      ]},
+      { title: 'Genesis Service Network', items: [
+        { title: 'Genesis dealer proximity', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Genesis dealers are fewer than Korean competitors. Confirm service access.',
+          check: '<strong>Confirm nearest Genesis dealer location.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO + service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Genesis CPO covers 100k powertrain.',
+          check: '<strong>Verify CPO status and request service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'tesla-model-3-2022': {
+    year: 2022, make: 'Tesla', model: 'Model 3', trim: 'Standard Range / Long Range / Performance (2022–present)',
+    engine: 'RWD 272 hp / AWD Long Range 358 hp / Performance 450 hp; 60–82 kWh battery',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2022+ Model 3 received significant updates — improved range, heat pump standard, and better build quality over earlier years. The Long Range and Performance have excellent range. 12V battery failure is the most common issue. Autopilot camera calibration after windshield replacement is a watch item. Check all OTA recalls are closed and inspect panel gaps. Outstanding value EV sedan.",
+    stats: { itemsToCheck: 7, recalls: 1, ownerComplaints: 290, topComplaintArea: 'Body / Electrical / 12V battery' },
+    sections: [
+      { title: 'Battery', items: [
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Tesla LFP (Standard Range) and NMC (LR/Performance) both degrade slowly.',
+          check: '<strong>Check displayed range at 100% vs EPA rated range. No significant deficit expected on young examples.</strong>',
+          cost: 'n/a', source: 'Tesla battery health standard' },
+        { title: '12V battery failure', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Small 12V battery can fail and strand vehicle. Common on all Tesla models.',
+          check: '<strong>Ask if 12V has been replaced. Check for any low voltage alert history.</strong>',
+          cost: '$200–$400', source: 'Tesla 12V pattern' }
+      ]},
+      { title: 'Build Quality', items: [
+        { title: 'Panel gaps inspection', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '2022+ improved but still varies. Check all body panel gaps.',
+          check: '<strong>Inspect all door, hood, trunk gaps for consistency.</strong>',
+          cost: '$0 Tesla adjustment', source: 'Tesla quality standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'OTA recalls + charging history', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Run VIN check and ask about DC fast charge frequency.',
+          check: '<strong>Run nhtsa.gov/recalls. Ask about typical charging behavior.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'jeep-wrangler-4xe-2021': {
+    year: 2021, make: 'Jeep', model: 'Wrangler 4xe', trim: 'Sahara 4xe / Rubicon 4xe (JL PHEV, 2021–present)',
+    engine: '2.0T eTorque I4 + electric motors (375 hp combined) with 17 kWh PHEV battery',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The Wrangler 4xe is the plug-in hybrid JL — 22 miles all-electric range in a capable off-roader. The hybrid system adds significant weight and complexity. Early production had multiple electrical recalls. The PHEV battery adds to the Wrangler's already-high purchase and maintenance costs. Strong buy for buyers who want off-road capability plus commute-friendly EV range, but verify all recalls are closed — there were many on early 4xe builds.",
+    stats: { itemsToCheck: 11, recalls: 5, ownerComplaints: 380, topComplaintArea: 'Electrical / HV Battery / Software' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'Multiple 4xe PHEV recalls (2021)', risk: 'critical', riskLabel: 'Critical — Run VIN',
+          desc: 'Early 4xe had recalls including HV battery management, powertrain software, and thermal management issues.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. All must be confirmed closed — there were 5+ early production recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Jeep 4xe recalls' }
+      ]},
+      { title: 'PHEV System', items: [
+        { title: 'HV battery SoH and charging', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '17 kWh battery provides 22 miles EV range. Check it charges to full and depletes normally.',
+          check: '<strong>Verify PHEV charges normally and EV mode engages. No HV warning lights.</strong>',
+          cost: 'Routine PHEV maintenance', source: 'Jeep 4xe PHEV standard' }
+      ]},
+      { title: 'Off-Road & JL Issues', items: [
+        { title: 'Death wobble (if lifted)', risk: 'high', riskLabel: 'High Risk if lifted',
+          desc: 'Same as standard JL — death wobble on lifted or modified 4xe.',
+          check: '<strong>Check track bar bolts and lift height. Test at highway speed for shimmy.</strong>',
+          cost: '$200–$1,500', source: 'Jeep JL death wobble pattern' },
+        { title: 'Off-road damage check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Inspect underside for rock strikes on off-road-used examples.',
+          check: '<strong>Inspect skid plates and underbody with flashlight.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'All recalls + PHEV charging records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Multiple recalls and PHEV complexity make documentation essential.',
+          check: '<strong>Request all recall completions and service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Multiple 4xe 2021', description: 'HV battery, powertrain software, and thermal management recalls on early PHEV builds', severity: 'Critical', remedy: 'Free dealer repairs; verify at nhtsa.gov' }]
+  },
+  'ram-1500-trx-2021': {
+    year: 2021, make: 'Ram', model: '1500 TRX', trim: 'Launch Edition / Standard (DT, 2021–2024)',
+    engine: '6.2L Supercharged HEMI V8 (702 hp) with 8-speed automatic',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The TRX is the most powerful factory truck ever sold — 702 hp supercharged HEMI V8, Fox shocks, and genuine Raptor-rival off-road performance. Extremely expensive to maintain and insure. Main risks: supercharger belt service at 60k miles, HEMI spark plug ejection (known on high-output versions), transmission cooling on sustained off-road use, and any use on the drag strip or sand dunes. Only buy with complete service history and no drag/race use.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Engine / Cooling / Electrical' },
+    sections: [
+      { title: 'Supercharged Engine', items: [
+        { title: 'Supercharger belt inspection', risk: 'high', riskLabel: 'High Risk at 60k+',
+          desc: 'The Roots-type supercharger belt must be replaced every 60k miles. Belt failure destroys the engine.',
+          check: '<strong>Ask if supercharger belt has been replaced. Request service records for supercharger service date.</strong>',
+          cost: '$1,200–$2,000 supercharger belt service', source: 'Ram TRX supercharger service schedule' },
+        { title: 'Spark plug ejection (6.2L Hellcat)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'High-compression Hellcat engines have documented spark plug thread stripping and ejection, especially after repeated heat cycles from drag racing.',
+          check: '<strong>Check for any misfire codes (P0300 family). Ask about drag strip or performance driving frequency.</strong>',
+          cost: '$1,000–$3,000 thread repair', source: 'Stellantis Hellcat spark plug pattern' }
+      ]},
+      { title: 'Off-Road & Cooling', items: [
+        { title: 'Transmission/differential cooling for off-road', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sustained off-road dunes or rock crawling cycles transmission fluid rapidly.',
+          check: '<strong>Ask about off-road use intensity. Request transmission fluid service records.</strong>',
+          cost: '$300–$500 fluid service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Performance Use History', items: [
+        { title: 'Drag strip / competition use', risk: 'high', riskLabel: 'High Risk if drag-raced',
+          desc: 'Any drag strip, 0–60 competition use significantly stresses the supercharger, transmission, and driveline.',
+          check: '<strong>Ask seller directly about competition use. Look for launch control indicator wear on steering wheel buttons.</strong>',
+          cost: '$3,000–$10,000 depending on damage', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Complete service records mandatory', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'At this price point and performance level, service records are non-negotiable.',
+          check: '<strong>Request ALL records. TRX without supercharger belt history = walk.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'honda-passport-2023': {
+    year: 2023, make: 'Honda', model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite (2nd gen, 2022–present)',
+    engine: '3.5L SOHC V6 i-VTEC (280 hp) with 9-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2022+ Passport refresh added the TrailSport trim with improved off-road capability, updated styling, and enhanced safety tech. The 3.5L V6 is the same reliable engine in Pilot and Ridgeline. No VCM on the 2nd-gen Passport — motor mount vibration from the older 3.5L is eliminated. i-VTM4 AWD fluid service is the main maintenance item. Outstanding mid-size SUV value.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L V6 — no VCM motor mount issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2nd-gen Passport does not use VCM. No motor mount vibration pattern.',
+          check: '<strong>Cold-start smooth idle. No vibration in Drive.</strong>',
+          cost: 'Routine maintenance', source: 'Honda V6 2nd gen Passport reliability' },
+        { title: '9-speed automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda 9AT is smooth and reliable.',
+          check: '<strong>Test smooth shifts through all gears.</strong>',
+          cost: '$150–$250 fluid service', source: 'Honda 9AT standard' }
+      ]},
+      { title: 'i-VTM4 AWD', items: [
+        { title: 'Rear differential fluid — critical service', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'i-VTM4 rear diff fluid every 15–30k miles. Critical to prevent bearing failure.',
+          check: '<strong>Request differential service records. Tight turn test in parking lot.</strong>',
+          cost: '$150–$300 diff service; $1,500+ if neglected', source: 'Honda i-VTM4 standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records including diff fluid', risk: 'high', riskLabel: 'High Risk without diff records',
+          desc: 'i-VTM4 diff fluid is the most important service record on this vehicle.',
+          check: '<strong>Request oil change and diff fluid records specifically.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'hyundai-elantra-2022': {
+    year: 2022, make: 'Hyundai', model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid (7th gen CN7, 2021–present)',
+    engine: '2.0L MPI I4 (147 hp), 1.6T GDI I4 (201 hp N Line), 2.0L N (276 hp), or 1.6L Hybrid (139 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 7th-gen Elantra is one of the most attractive compact sedans available — dramatic styling, available N performance variant, and hybrid option. No Theta II concerns on any variant. The N Line 1.6T is an excellent sport-oriented choice; the Elantra N is a proper hot hatch rival. Clean platform with no established failure modes.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 85, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L MPI — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Straightforward 2.0L. No recall concerns. Good daily driver choice.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Hyundai 2.0L reliability' },
+        { title: '1.6T N Line / Elantra N — DCT check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'DCT-equipped performance variants may shudder at low speed. Same pattern as Kona 1.6T.',
+          check: '<strong>Test slow city driving behavior. Any shudder = request software update.</strong>',
+          cost: '$0 software update', source: 'Hyundai DCT pattern' }
+      ]},
+      { title: 'Hybrid (if equipped)', items: [
+        { title: 'Elantra Hybrid battery health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Hybrid system is reliable. Confirm EV mode engagement and no HV warnings.',
+          check: '<strong>No HV warning lights. Test EV mode at low speed.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Hyundai hybrid standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Standard record check.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-sienna-2021': {
+    year: 2021, make: 'Toyota', model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (5th gen XL50, 2021–present)',
+    engine: '2.5L A25A-FXS Hybrid (245 hp combined) with eCVT — Hybrid standard on all trims',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "Toyota made the bold move to offer the 5th-gen Sienna as hybrid-only — and the results are excellent. 36 mpg combined, Toyota THS-II reliability, and available AWD. Outstanding family minivan with no known failure modes. Main checks are hybrid battery health, AWD coupling fluid (if equipped), and confirming Toyota Safety Sense 2.0 calibration. Best minivan for fuel efficiency and long-term reliability.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 90, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Hybrid System', items: [
+        { title: 'THS-II hybrid — reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota Hybrid System II is proven. 36 mpg combined in a minivan.',
+          check: '<strong>Confirm EV mode engages. No HV battery warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Toyota THS-II reliability' },
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young enough that significant degradation is unlikely. Verify no alerts.',
+          check: '<strong>No HV battery warnings. Test EV range estimate.</strong>',
+          cost: 'Free Toyota battery check', source: 'Toyota hybrid standard' }
+      ]},
+      { title: 'AWD (if equipped)', items: [
+        { title: 'Electric rear AWD coupling fluid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rear electric motor adds AWD. Coupling fluid every 30k.',
+          check: '<strong>Confirm AWD mode engages. No binding in tight turns.</strong>',
+          cost: '$150–$200 service', source: 'Toyota Sienna AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Standard checks.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'kia-stinger-2022': {
+    year: 2022, make: 'Kia', model: 'Stinger', trim: 'GT-Line / GT1 / GT2 (1st gen CK, 2018–2023)',
+    engine: '2.5T I4 (300 hp) or 3.3T V6 (368 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Stinger is one of the most driver-focused sedans available at a mass-market price — rear-wheel drive (or AWD), 3.3T twin-turbo V6 option, and genuine sports car dynamics. The 3.3T is the standout powertrain. No chronic failure modes. Final year is 2023. Main buyer checks: DCT smoothness, brake wear from spirited use, and modification history. Kia CPO with extended warranty recommended.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Transmission / Brakes / Electrical' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.3T Lambda V6 TT — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'One of the best sport sedan engines available. Smooth, powerful, no widespread issues.',
+          check: '<strong>Both turbos should spool cleanly. Test all performance modes.</strong>',
+          cost: 'Routine maintenance', source: 'Kia 3.3T reliability data' },
+        { title: '2.5T I4 — capable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'New-gen 2.5T replacing the original 2.0T. Solid powertrain.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Kia 2.5T reliability' }
+      ]},
+      { title: 'Performance Use', items: [
+        { title: 'Brake pad/rotor wear from spirited use', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Stingers attract enthusiast buyers. Check brake pad and rotor condition.',
+          check: '<strong>Look through wheel spokes at pads. Inspect rotor surface for grooves or heat bluing.</strong>',
+          cost: '$400–$800 full brake service', source: 'AutoVetting editorial' },
+        { title: 'Suspension modifications', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Check for aftermarket suspension on enthusiast-owned examples.',
+          check: '<strong>Inspect ride height and wheel wells for coilover tops.</strong>',
+          cost: '$500–$2,000 restoration if modified', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service + modification records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'For a performance sedan, both maintenance history and modification history matter.',
+          check: '<strong>Request all records. Ask about any performance modifications.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
   }
 
 };
@@ -14156,7 +14502,8 @@ const VEHICLE_MENU = {
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
-      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
+      { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -14168,14 +14515,16 @@ const VEHICLE_MENU = {
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' },
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
+      { model: 'Wrangler', trim: '4xe Sahara / 4xe Rubicon (PHEV)', key: 'jeep-wrangler-4xe-2021' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' },
       { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
-      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' },
+      { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
@@ -14201,7 +14550,8 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
-      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
+      { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevy-suburban-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -14217,14 +14567,16 @@ const VEHICLE_MENU = {
     ],
     'Kia': [
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
-      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' },
+      { model: 'Stinger', trim: 'GT-Line / GT1 / GT2', key: 'kia-stinger-2022' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
-      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' }
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' },
+      { model: 'e-tron', trim: 'Standard / Prestige / S / S Sportback', key: 'audi-e-tron-2019' }
     ],
     'Mercedes-Benz': [
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
@@ -14252,7 +14604,8 @@ const VEHICLE_MENU = {
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' },
-      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
+      { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -14263,7 +14616,8 @@ const VEHICLE_MENU = {
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' },
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk (WL)', key: 'jeep-grand-cherokee-2021' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk (WL)', key: 'jeep-grand-cherokee-2021' },
+      { model: 'Wrangler', trim: '4xe Sahara / 4xe Rubicon (PHEV)', key: 'jeep-wrangler-4xe-2021' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
@@ -14298,7 +14652,8 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
-      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
+      { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevy-suburban-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -14323,7 +14678,8 @@ const VEHICLE_MENU = {
     ],
     'Audi': [
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
-      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' }
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' },
+      { model: 'e-tron', trim: 'Standard / Prestige / S / S Sportback', key: 'audi-e-tron-2019' }
     ],
     'Mercedes-Benz': [
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
@@ -14333,7 +14689,8 @@ const VEHICLE_MENU = {
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
     ],
     'Genesis': [
-      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' }
+      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' },
+      { model: 'GV70', trim: 'Standard / Advanced / Sport / Sport Plus', key: 'genesis-gv70-2022' }
     ],
     'Chrysler': [
       { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' }
@@ -14341,7 +14698,9 @@ const VEHICLE_MENU = {
   },
   2020: {
     'Ram': [
-      { model: 'Ram 1500', trim: 'DT platform — eTorque / Hemi / Rebel / Laramie', key: 'ram-1500-2019' }
+      { model: 'Ram 1500', trim: 'DT platform — eTorque / Hemi / Rebel / Laramie', key: 'ram-1500-2019' },
+      { model: '1500 TRX', trim: 'Launch Edition / Standard', key: 'ram-1500-trx-2021' },
+      { model: '1500 TRX', trim: 'Standard', key: 'ram-1500-trx-2021' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
@@ -14423,7 +14782,8 @@ const VEHICLE_MENU = {
     ],
     'Audi': [
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
-      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
+      { model: 'e-tron', trim: 'Standard / Prestige / S', key: 'audi-e-tron-2019' }
     ],
     'Mercedes-Benz': [
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-gla-2020' },
@@ -15063,7 +15423,8 @@ const VEHICLE_MENU = {
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
       { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' },
-      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' }
+      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' },
+      { model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite', key: 'honda-passport-2023' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
@@ -15072,11 +15433,13 @@ const VEHICLE_MENU = {
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
       { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
       { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
-      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
+      { model: 'e-tron', trim: 'Standard / Prestige', key: 'audi-e-tron-2019' }
     ],
     'Genesis': [
       { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' },
-      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' }
+      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' },
+      { model: 'GV70', trim: 'Standard / Advanced / Sport / Sport Plus / Electrified', key: 'genesis-gv70-2022' }
     ],
     'Mazda': [
       { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' }
@@ -15111,7 +15474,9 @@ const VEHICLE_MENU = {
     ],
     'Tesla': [
       { model: 'Model Y', trim: 'Standard Range / Long Range / Performance', key: 'tesla-model-y-2022' },
-      { model: 'Model Y', trim: 'RWD / Long Range / Performance', key: 'tesla-model-y-2022' }
+      { model: 'Model Y', trim: 'RWD / Long Range / Performance', key: 'tesla-model-y-2022' },
+      { model: 'Model 3', trim: 'Standard Range / Long Range / Performance', key: 'tesla-model-3-2022' },
+      { model: 'Model 3', trim: 'RWD / Long Range / Performance / Highland', key: 'tesla-model-3-2022' }
     ],
     'Land Rover': [
       { model: 'Defender', trim: '90 S / 90 SE / 110 S / 110 SE / 110 HSE / 110 X', key: 'land-rover-defender-2020' },
@@ -15144,7 +15509,8 @@ const VEHICLE_MENU = {
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' },
-      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' },
+      { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' }
     ],
     'Toyota': [
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
@@ -15152,7 +15518,8 @@ const VEHICLE_MENU = {
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
       { model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (Hybrid)', key: 'toyota-camry-2024' },
-      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
+      { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -15180,7 +15547,8 @@ const VEHICLE_MENU = {
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
+      { model: 'Wrangler', trim: '4xe Sahara / 4xe Rubicon (PHEV)', key: 'jeep-wrangler-4xe-2021' }
     ],
     'Nissan': [
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
@@ -15257,6 +15625,30 @@ const VEHICLE_MENU = {
     'INFINITI': [
       { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph / ProACTIV', key: 'infiniti-qx80-2018' }
     ],
+    'Audi': [
+      { model: 'e-tron', trim: 'Standard / Prestige (now Q8 e-tron)', key: 'audi-e-tron-2019' }
+    ],
+    'Genesis': [
+      { model: 'GV70', trim: 'Standard / Advanced / Sport / Sport Plus / Electrified', key: 'genesis-gv70-2022' }
+    ],
+    'Tesla': [
+      { model: 'Model 3', trim: 'RWD / Long Range / Performance', key: 'tesla-model-3-2022' }
+    ],
+    'Jeep': [
+      { model: 'Wrangler', trim: '4xe Sahara / 4xe Rubicon (PHEV)', key: 'jeep-wrangler-4xe-2021' }
+    ],
+    'Ram': [
+      { model: '1500 TRX', trim: 'Standard / Final Edition', key: 'ram-1500-trx-2021' }
+    ],
+    'Hyundai': [
+      { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' }
+    ],
+    'Toyota': [
+      { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' }
+    ],
+    'Kia': [
+      { model: 'Stinger', trim: 'GT-Line / GT1 / GT2 / Tribute Edition', key: 'kia-stinger-2022' }
+    ],
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
@@ -15270,7 +15662,9 @@ const VEHICLE_MENU = {
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
       { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2', key: 'chevy-colorado-2023' },
-      { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2 / Bison', key: 'chevy-colorado-2023' }
+      { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2 / Bison', key: 'chevy-colorado-2023' },
+      { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevy-suburban-2021' },
+      { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevy-suburban-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -15294,7 +15688,8 @@ const VEHICLE_MENU = {
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
       { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / TrailSport / Black Edition', key: 'honda-ridgeline-2021' },
       { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' },
-      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' }
+      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' },
+      { model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite', key: 'honda-passport-2023' }
     ]
   ,},
 };
