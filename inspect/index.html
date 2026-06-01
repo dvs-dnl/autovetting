@@ -13066,6 +13066,368 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
+  },
+  'mercedes-gle-2020': {
+    year: 2020, make: 'Mercedes-Benz', model: 'GLE', trim: 'GLE 350 / GLE 350 4MATIC / GLE 450 / AMG GLE 53 (W167, 2020–present)',
+    engine: '2.0T M264 I4 (255 hp, GLE 350) or 3.0T M256 I6 (362 hp, GLE 450)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The W167 GLE is a generational improvement — new MBUX infotainment, optional E-Active Body Control suspension, and a modern platform. The M264 2.0T is capable but struggles on this heavy vehicle. The M256 inline-six with EQ Boost mild hybrid is the superior choice. Main risks: air suspension compressor failure on Airmatic-equipped units, 48V EQ Boost system teething issues, and Mercedes maintenance costs. Only buy with complete MB service records.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 290, topComplaintArea: 'Air Suspension / Electrical / Engine' },
+    sections: [
+      { title: 'Air Suspension', items: [
+        { title: 'Airmatic suspension compressor (if equipped)', risk: 'high', riskLabel: 'High Risk at 60k+',
+          desc: 'Airmatic (standard on most GLE 4MATIC) compressors fail, causing sagging corners. One of the most common W167 repairs.',
+          check: '<strong>Park overnight, check all four corners are level in the morning. Any corner lower = compressor failing.</strong>',
+          cost: '$1,500–$3,000 compressor replacement', source: 'Mercedes W167 air suspension pattern' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: 'M264 2.0T (GLE 350) — adequate but strained', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2.0T 4-cylinder in a 4,800-lb GLE works hard. Oil change every 5,000 miles critical for turbo longevity.',
+          check: '<strong>Check oil level and color. Test full-throttle acceleration — any hesitation or smoke = turbo wear.</strong>',
+          cost: 'Higher maintenance cost', source: 'Mercedes M264 in GLE context' },
+        { title: 'M256 I6 EQ Boost (GLE 450) — preferred choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The inline-six with integrated starter-generator is smoother and more powerful. 48V system adds mild hybrid function.',
+          check: '<strong>Test all driving modes. Confirm 48V system has no warning lights.</strong>',
+          cost: 'Higher maintenance cost', source: 'Mercedes M256 reliability data' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'MB service records — non-negotiable', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'MB services run $1,200–$2,500 per interval on the GLE. Missing records = budget $5,000+ for deferred work.',
+          check: '<strong>Request ALL MB dealer records. No records on GLE = negotiate aggressively or walk.</strong>',
+          cost: '$1,200–$2,500 per service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO warranty status + recall check', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'MB CPO extends coverage to 100k. Essential for ownership cost management.',
+          check: '<strong>Verify CPO status at MB dealer. Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'audi-q7-2018': {
+    year: 2018, make: 'Audi', model: 'Q7', trim: 'Premium / Premium Plus / Prestige (2nd gen 4M, 2017–present)',
+    engine: '2.0T TFSI I4 (252 hp) or 3.0T TFSI V6 (335 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen Q7 is a well-proportioned 3-row luxury SUV — lighter than the 1st gen, more refined interior, and standard quattro AWD. The 2.0T is adequate but the 3.0T supercharged V6 is the preferred choice for this large vehicle. Timing chain (EA888) and oil consumption apply to the 2.0T. The 3.0T supercharger belt should be inspected at high mileage. Air suspension compressor failure is the most common repair. Audi service records are mandatory.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 280, topComplaintArea: 'Engine / Air Suspension / Electrical' },
+    sections: [
+      { title: 'Air Suspension', items: [
+        { title: 'Air ride compressor failure', risk: 'high', riskLabel: 'High Risk at 60k+',
+          desc: 'Q7 air suspension compressor is the most common repair — same pattern as Range Rover/GLE.',
+          check: '<strong>Overnight level test — park on level ground and check all four corners next morning.</strong>',
+          cost: '$1,500–$2,800 compressor', source: 'Audi Q7 air suspension pattern' }
+      ]},
+      { title: 'Engine', items: [
+        { title: '2.0T EA888 timing chain + oil consumption', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Same EA888 issues as other VAG vehicles. Cold-start rattle = chain worn. Oil consumption check.',
+          check: '<strong>Cold-start rattle check and dipstick check.</strong>',
+          cost: '$800–$1,500 chain; $0–$2,500 consumption', source: 'VAG EA888 pattern' },
+        { title: '3.0T supercharged V6 (preferred) — supercharger belt', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 3.0T TFSI has a Roots-type supercharger belt that should be replaced every 60k–80k miles. No widespread engine failures.',
+          check: '<strong>Ask if supercharger belt has been replaced. Request service records for 3.0T supercharger service.</strong>',
+          cost: '$800–$1,200 supercharger belt service', source: 'Audi 3.0T TFSI service schedule' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'Audi service records essential', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Audi Q7 services run $900–$1,800 per interval.',
+          check: '<strong>Request all VAG-authorized records. No records = $3,000+ deferred maintenance backlog.</strong>',
+          cost: '$900–$1,800 per service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO status + recall check', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Audi CPO with extended warranty recommended on any Q7.',
+          check: '<strong>Verify CPO at Audi dealer. Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-land-cruiser-2018': {
+    year: 2018, make: 'Toyota', model: 'Land Cruiser', trim: 'Base (J200, 2008–2021)',
+    engine: '5.7L 3UR-FE V8 (381 hp) with 6-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The J200 Land Cruiser is one of the most durable vehicles ever made — legendary off-road capability, ultra-reliable drivetrain, and Toyota build quality. They commonly reach 300k–400k miles with routine maintenance. The 5.7L 3UR-FE is the same engine as the Sequoia. Takata airbag recall must be verified. Frame rust in northern states is worth checking. High purchase price reflects the high residual value.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 90, topComplaintArea: 'Minimal — very low complaint volume' },
+    sections: [
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'J200 Land Cruisers are in the Takata recall scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '5.7L 3UR-FE V8 — exceptional reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'One of the most reliable V8 engines Toyota has made. Change oil every 5,000 miles. Timing chain robust. Check valve cover seeps at high mileage.',
+          check: '<strong>Cold-start check. Oil level and color. Valve cover area for seeps.</strong>',
+          cost: 'Routine maintenance', source: 'Toyota 3UR-FE reliability data' },
+        { title: '6-speed automatic A750F — durable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same transmission as Sequoia and Tundra. Very durable. Change WS fluid every 60k.',
+          check: '<strong>Test all gears including tow mode. Smooth shifts expected.</strong>',
+          cost: '$150–$200 fluid service', source: 'Toyota A750F standard' }
+      ]},
+      { title: 'Underbody & Frame', items: [
+        { title: 'Frame rust (northern states)', risk: 'high', riskLabel: 'High Risk (rust belt)',
+          desc: 'Land Cruiser frames rust in salt states. Inspect from below with flashlight.',
+          check: '<strong>Full underbody inspection. Southern-state car is strongly preferred.</strong>',
+          cost: 'Varies; perforation = totaling', source: 'AutoVetting editorial' },
+        { title: 'KDSS hydraulic stabilizer (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'KDSS leaks at high mileage. Check actuators for oil weeping.',
+          check: '<strong>Inspect KDSS actuators at each axle for oil seepage.</strong>',
+          cost: '$1,500–$3,500', source: 'Toyota KDSS pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + VIN origin check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Land Cruisers are imported in gray market — verify US-spec VIN. Records confirm maintenance quality.',
+          check: '<strong>Verify VIN is US-market spec. Request all service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'ford-f250-2019': {
+    year: 2019, make: 'Ford', model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (4th gen P558, 2017–present)',
+    engine: '6.2L Godzilla V8 (385 hp), 7.3L Godzilla V8 (430 hp, 2020+), or 6.7L Power Stroke Diesel (450 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The Super Duty F-250 is the workhorse of the truck segment — built for heavy towing and payload. The 6.7L Power Stroke diesel is the towing king but requires DEF and has injector/turbo maintenance. The 6.2L/7.3L gasoline V8s are simpler. Main buyer risks: diesel injector failure at high mileage, turbo oil supply tube (known diesel issue), transmission wear from heavy towing, and cab/frame corrosion on work trucks.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 420, topComplaintArea: 'Diesel Engine / Transmission / Electrical' },
+    sections: [
+      { title: 'Diesel Engine (6.7L Power Stroke)', items: [
+        { title: 'Fuel injector wear at high mileage', risk: 'high', riskLabel: 'High Risk at 150k+ diesel',
+          desc: 'Power Stroke injectors are expensive and wear on heavy-use trucks. A full set replacement is $3,000–$5,000.',
+          check: '<strong>Test cold-start idle quality. Any rough running, smoke, or misfires = request injector test.</strong>',
+          cost: '$3,000–$5,000 full injector set', source: 'Ford Power Stroke maintenance pattern' },
+        { title: 'Turbocharger oil supply tube (CP4 related)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The CP4.2 high-pressure fuel pump had metal contamination issues on early 6.7L builds. Later builds improved.',
+          check: '<strong>Ask for fuel system service history. Any HPFP replacement documented = healthy sign the issue was addressed.</strong>',
+          cost: '$2,000–$8,000 if HPFP fails', source: 'Ford 6.7L CP4 pattern' },
+        { title: 'DEF system maintenance', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Diesel Exhaust Fluid top-up every 5k miles and SCR catalyst service.',
+          check: '<strong>Check DEF level and confirm no emissions fault codes.</strong>',
+          cost: '$50/fill-up + periodic SCR service', source: 'Ford DEF standard' }
+      ]},
+      { title: 'Gasoline (6.2L / 7.3L)', items: [
+        { title: '6.2L / 7.3L Godzilla V8 — simpler and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Both gasoline engines are straightforward and reliable. No significant failure modes.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Ford Godzilla V8 reliability' }
+      ]},
+      { title: 'Heavy Work History', items: [
+        { title: 'Transmission wear from towing', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Super Duties used for max-payload towing experience accelerated transmission wear. Check fluid color and records.',
+          check: '<strong>Request transmission fluid service records. Dark fluid with particles = worn.</strong>',
+          cost: '$300–$500 fluid service; $4,000+ rebuild', source: 'AutoVetting editorial' },
+        { title: 'Hitch and frame wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Inspect 5th-wheel or gooseneck hitch bed for heavy use signs.',
+          check: '<strong>Inspect bed floor for 5th-wheel mounting wear. Check frame rails for stress cracks near hitch.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Commercial use history + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Super Duties from commercial fleets have very different wear profiles than personal-use trucks.',
+          check: '<strong>Request Carfax for fleet/commercial history. Ask for all service records including diesel service.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'honda-insight-2019': {
+    year: 2019, make: 'Honda', model: 'Insight', trim: 'LX / EX / Touring (3rd gen ZE4, 2019–2022)',
+    engine: '1.5L Atkinson-cycle I4 + electric motor (151 hp combined) with eCVT',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen Insight revives the nameplate as a practical hybrid sedan with Civic-based styling. Honda two-motor hybrid system is the same architecture as the Accord Hybrid — proven reliability. No chronic failure modes. Battery degradation is minimal on these young examples. The 55 mpg city EPA rating makes it extremely cheap to operate. Main checks are standard: battery health, oil change history, Honda Sensing calibration.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 60, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Hybrid Drivetrain', items: [
+        { title: 'Honda two-motor hybrid system — reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same proven system as Accord Hybrid. No widespread failure modes. Battery degradation is typically <5% on these young vehicles.',
+          check: '<strong>Confirm no HV battery warning lights. Test EV-only mode engagement at low speed.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Honda hybrid system reliability' },
+        { title: 'IPU (battery pack) health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Verify full-charge range estimate is consistent with EPA rating at its age.',
+          check: '<strong>Test EV mode range at low speed. Any rapid depletion of EV indicator = battery check.</strong>',
+          cost: 'Free dealer battery health check', source: 'Honda hybrid standard' }
+      ]},
+      { title: 'Honda Sensing', items: [
+        { title: 'Honda Sensing calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard on all trims. Camera calibration if windshield replaced.',
+          check: '<strong>Confirm no Sensing warning lights on dash.</strong>',
+          cost: '$0–$300 calibration', source: 'Honda Sensing standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Hybrid engine runs less often, extending oil life — but still requires changes per OLM.',
+          check: '<strong>Request oil change records. Confirm OLM-based changes were performed.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'lexus-rx350-2019': {
+    year: 2019, make: 'Lexus', model: 'RX350', trim: 'Base / F SPORT / Executive / Premium (4th gen AL20, 2016–2022)',
+    engine: '3.5L 2GR-FKS V6 (295 hp) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The AL20 RX350 is among the most reliable luxury midsize SUVs available. The 2GR-FKS direct-injection V6 is proven and Toyota/Lexus have eliminated the head gasket issues of earlier engines. The 8-speed automatic is smooth and durable. GDI carbon buildup on intake valves is the main watch item on high-mileage examples. Takata airbag recall must be confirmed closed. Outstanding 3-row (RX350L) or 5-seat choice.",
+    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 160, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'AL20 RX models are in Takata scope on certain VINs.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '3.5L 2GR-FKS — reliable with GDI carbon watch', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Direct-injection V6 is reliable but can accumulate carbon on intake valves at 70k+ miles. Test idle smoothness.',
+          check: '<strong>Cold-start idle smoothness. Any rough idle on 80k+ example = carbon service possible.</strong>',
+          cost: '$400–$700 carbon clean if needed', source: 'Lexus 3.5L GDI pattern' },
+        { title: '8-speed automatic — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Smooth and reliable. Change Toyota WS fluid every 60k.',
+          check: '<strong>Test all gears. Smooth shifts expected.</strong>',
+          cost: '$200 fluid service', source: 'Lexus drivetrain standard' }
+      ]},
+      { title: 'AWD & Suspension', items: [
+        { title: 'Dynamic Torque Control AWD fluid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD coupling fluid every 30k. Tight turn test in parking lot.',
+          check: '<strong>Parking lot tight turn — no vibration or binding.</strong>',
+          cost: '$150–$200 service', source: 'Lexus AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lexus buyers maintain their vehicles well. Records typically available.',
+          check: '<strong>Request Lexus dealer records. Carbon build-up risk increases with poor oil history.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation on select VINs', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'subaru-brz-2022': {
+    year: 2022, make: 'Subaru', model: 'BRZ', trim: 'Premium / Limited (2nd gen ZD8, 2022–present)',
+    engine: '2.4L FA24 naturally aspirated I4 (228 hp) with 6-speed manual or 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen BRZ is a significant improvement — 228 hp (up from 205 hp), better low-end torque, improved suspension tuning. No head gasket issues that plagued the FA20 (the FA24 is more robust). The main used buyer risks are modification history (wheel spacers, coilovers, aggressive track use) and clutch wear on manual transmission. Lightly modified or stock 2nd-gen BRZ/GR86 is one of the best sports cars available used.",
+    stats: { itemsToCheck: 9, recalls: 0, ownerComplaints: 45, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FA24 2.4L — no FA20 head gasket issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The new FA24 eliminated the FA20 head gasket concern. Reliable naturally-aspirated engine.',
+          check: '<strong>Cold-start idle smooth. Check coolant level and color — no white exhaust expected.</strong>',
+          cost: 'Routine maintenance', source: 'Subaru FA24 reliability data' },
+        { title: '6MT clutch wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sports cars get driven hard. Check clutch engagement height — very low = worn.',
+          check: '<strong>Test clutch engagement point. Should engage in middle 1/3 of pedal travel.</strong>',
+          cost: '$800–$1,400 clutch replacement', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Suspension & Modification', items: [
+        { title: 'Coilovers / alignment from track use', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sports car buyers should inspect for aggressive lowering and tire wear patterns indicating track or autocross use.',
+          check: '<strong>Inspect ride height — overly low = coilovers. Check tires for aggressive wear patterns.</strong>',
+          cost: '$500–$2,000 suspension restoration', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + modification history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'For a sports car, both maintenance history and modification history matter.',
+          check: '<strong>Request all records. Ask about any track or autocross participation.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'buick-encore-gx-2020': {
+    year: 2020, make: 'Buick', model: 'Encore GX', trim: 'Preferred / Select / Essence (1st gen, 2020–present)',
+    engine: '1.2T I3 (137 hp) or 1.3T I3 (155 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Encore GX shares the GM VSS-S platform with Chevrolet Trailblazer. The larger, more refined sibling of the original Encore. The 1.3T is the preferred engine. Same turbocharged 3-cylinder considerations as Trailblazer. For a premium small crossover, the Encore GX delivers good value with Buick comfort features at a reasonable used price.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 85, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.3T — preferred over 1.2T', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 1.3T produces adequate power and torque. No widespread issues.',
+          check: '<strong>Standard cold-start. No turbo smoke.</strong>',
+          cost: 'Routine maintenance', source: 'GM 1.3T reliability' },
+        { title: 'CVT / 9-speed fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Fluid service every 30k miles. Test for smooth acceleration.',
+          check: '<strong>Smooth acceleration with no shudder.</strong>',
+          cost: '$150–$200 fluid service', source: 'GM transmission standard' }
+      ]},
+      { title: 'Buick Comfort Features', items: [
+        { title: 'Infotainment and connectivity', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test wireless CarPlay/Android Auto and Buick QuietTuning features.',
+          check: '<strong>Test all infotainment and connectivity functions.</strong>',
+          cost: '$0', source: 'Buick standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbocharged 3-cylinder needs attentive oil changes.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'acura-mdx-2022': {
+    year: 2022, make: 'Acura', model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra (4th gen YD3, 2022–present)',
+    engine: '3.5L SOHC V6 i-VTEC (290 hp) or 3.0T V6 Type S (355 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen MDX is the best MDX ever made — longer, wider, lower, with a gorgeous interior and optional Type S performance variant. The naturally-aspirated 3.5L is the same proven engine in many Honda/Acura products; no VCM on this generation. SH-AWD standard on Technology and above. Very young platform with no established failure modes. Main checks: SH-AWD fluid service, infotainment update, and warranty status.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 75, topComplaintArea: 'Minimal — new platform' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L V6 — no VCM on 4th gen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Acura removed VCM from the 4th-gen MDX — the motor mount vibration issue from 3rd gen is gone. Clean, reliable engine.',
+          check: '<strong>Cold-start: smooth idle. No motor mount vibration.</strong>',
+          cost: 'Routine maintenance', source: 'Acura MDX 4th gen engineering change' },
+        { title: 'Type S 3.0T V6 — performance but complex', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Twin-turbo V6 is new but no widespread issues. Higher maintenance cost at Acura dealer.',
+          check: '<strong>Both turbos should build boost cleanly. No smoke under load.</strong>',
+          cost: 'Higher maintenance cost', source: 'Acura Type S reliability data' }
+      ]},
+      { title: 'SH-AWD', items: [
+        { title: 'SH-AWD coupling fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SH-AWD differential fluid every 15–30k miles. Young vehicle — confirm service if 30k+ miles.',
+          check: '<strong>Parking lot tight turn. No vibration expected.</strong>',
+          cost: '$150–$300 service', source: 'Acura SH-AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Warranty status + service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Verify Acura warranty coverage at dealer.',
+          check: '<strong>Confirm warranty status. Request service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'hyundai-sonata-2020': {
+    year: 2020, make: 'Hyundai', model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid (8th gen DN8, 2020–present)',
+    engine: '1.6T GDI I4 (180 hp), 2.5L MPI I4 (191 hp), 2.5T (290 hp, N Line), or 2.0L Hybrid',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 8th-gen Sonata is a complete redesign — flush door handles, distinctive styling, and a strong powertrain lineup. No Theta II concerns on this generation. The 2.5L naturally-aspirated is the reliable workhorse; the 1.6T is fun with no significant issues; the N Line with 2.5T is the performance choice. Main buyer checks: 8-speed DCT smoothness on turbocharged variants and confirming no open recalls.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 115, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L MPI — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'New 2.5L is not a Theta II. Clean engine with no recall exposure.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Hyundai 2.5L MPI reliability data' },
+        { title: '1.6T GDI / 2.5T — DCT operation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbocharged variants use an 8-speed wet DCT. Test for shudder at low speeds.',
+          check: '<strong>Test 15–25 mph light throttle engagement for shudder.</strong>',
+          cost: '$0 software update; $2,000+ if clutch worn', source: 'Hyundai DCT TSB pattern' }
+      ]},
+      { title: 'Hybrid (if equipped)', items: [
+        { title: 'Hybrid battery health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Sonata Hybrid uses a 1.7 kWh battery. No widespread issues. Confirm no HV warning lights.',
+          check: '<strong>No HV battery warning lights. Test EV mode engagement.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Hyundai hybrid standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle with clean powertrain. Standard record check.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
   }
 
 };
@@ -13087,7 +13449,8 @@ const VEHICLE_MENU = {
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
-      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' },
+      { model: 'Insight', trim: 'LX / EX / Touring', key: 'honda-insight-2019' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -13097,12 +13460,14 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
-      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' }
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
       { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
-      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV / ST-Line', key: 'ford-escape-2020' }
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV / ST-Line', key: 'ford-escape-2020' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' },
@@ -13113,7 +13478,8 @@ const VEHICLE_MENU = {
       { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S', key: 'vw-id4-2021' }
     ],
     'Lexus': [
-      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
@@ -13139,16 +13505,19 @@ const VEHICLE_MENU = {
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
-      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' }
     ],
     'Mercedes-Benz': [
-      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
+      { model: 'GLE', trim: 'GLE 350 / GLE 450 / AMG GLE 53 / AMG GLE 63 S', key: 'mercedes-gle-2020' }
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
     ],
     'Subaru': [
-      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
+      { model: 'BRZ', trim: 'Premium / Limited', key: 'subaru-brz-2022' }
     ],
     'Nissan': [
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
@@ -13161,12 +13530,14 @@ const VEHICLE_MENU = {
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
-      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
-      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' },
+      { model: 'Insight', trim: 'LX / EX / Touring', key: 'honda-insight-2019' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -13175,7 +13546,8 @@ const VEHICLE_MENU = {
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
-      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
     ],
     'Subaru': [
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
@@ -13183,7 +13555,8 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
-      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' }
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' },
@@ -13194,7 +13567,8 @@ const VEHICLE_MENU = {
       { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro', key: 'vw-id4-2021' }
     ],
     'Lexus': [
-      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
@@ -13221,10 +13595,12 @@ const VEHICLE_MENU = {
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
-      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' }
     ],
     'Mercedes-Benz': [
-      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
+      { model: 'GLE', trim: 'GLE 350 / GLE 350 4MATIC / GLE 450 / AMG GLE 53', key: 'mercedes-gle-2020' }
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
@@ -13254,13 +13630,15 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
-      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' }
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
       { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
-      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
     ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
@@ -13268,12 +13646,14 @@ const VEHICLE_MENU = {
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
-      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
-      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' },
+      { model: 'Insight', trim: 'LX / EX / Touring', key: 'honda-insight-2019' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -13305,16 +13685,19 @@ const VEHICLE_MENU = {
     ],
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
-      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
+      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
-      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
     ],
     'Mercedes-Benz': [
-      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-gla-2020' }
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-gla-2020' },
+      { model: 'GLE', trim: 'GLE 350 / GLE 350 4MATIC / GLE 450 / AMG GLE 53', key: 'mercedes-gle-2020' }
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
@@ -13343,7 +13726,8 @@ const VEHICLE_MENU = {
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
-      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
     ],
     'Subaru': [
       { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
@@ -13352,7 +13736,8 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
-      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum', key: 'ford-f250-2019' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13388,7 +13773,8 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
-      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' },
+      { model: 'Insight', trim: 'LX / EX / Touring', key: 'honda-insight-2019' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -13431,7 +13817,8 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
-      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum', key: 'ford-f250-2019' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13439,7 +13826,8 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
@@ -13530,7 +13918,8 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'LS / LT / Premier (2nd gen ending)', key: null },
@@ -13605,7 +13994,8 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' }
     ],
     'Chevrolet': [
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
@@ -13729,7 +14119,11 @@ const VEHICLE_MENU = {
       { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
       { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
       { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
-      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
+      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
     ],
     'Chrysler': [
       { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
@@ -13749,7 +14143,8 @@ const VEHICLE_MENU = {
     'Acura': [
       { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' },
       { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
-      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
+      { model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S', key: 'acura-mdx-2022' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -13940,7 +14335,10 @@ const VEHICLE_MENU = {
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
-      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
     ],
     'Genesis': [
       { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' },
@@ -13957,6 +14355,12 @@ const VEHICLE_MENU = {
     ],
     'Volkswagen': [
       { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S', key: 'vw-id4-2021' }
+    ],
+    'Buick': [
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' }
     ]
   },
     'Ford': [
@@ -13993,7 +14397,8 @@ const VEHICLE_MENU = {
     ],
     'Subaru': [
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
-      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
+      { model: 'BRZ', trim: 'Premium / Limited / tS', key: 'subaru-brz-2022' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' }
@@ -14014,13 +14419,32 @@ const VEHICLE_MENU = {
     ],
     'Acura': [
       { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
-      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
+      { model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra', key: 'acura-mdx-2022' }
     ],
     'Kia': [
       { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
     ],
     'Toyota': [
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'GLE', trim: 'GLE 350 / GLE 450 / AMG GLE 53 / AMG GLE 63 S', key: 'mercedes-gle-2020' }
+    ],
+    'Audi': [
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige / 55 TFSI', key: 'audi-q7-2018' }
+    ],
+    'Subaru': [
+      { model: 'BRZ', trim: 'Premium / Limited / tS', key: 'subaru-brz-2022' }
+    ],
+    'Buick': [
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' }
+    ],
+    'Acura': [
+      { model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra', key: 'acura-mdx-2022' }
+    ],
+    'Hyundai': [
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
     ],
   2023: {
     'Volkswagen': [

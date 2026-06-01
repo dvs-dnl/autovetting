@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#000"/>
   <defs>
-    <linearGradient id="fg" x1="9" y1="0" x2="55" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="fg" x1="8" y1="0" x2="56" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#7C3AED"/>
       <stop offset="48%" stop-color="#3B82F6"/>
       <stop offset="100%" stop-color="#06B6D4"/>
     </linearGradient>
     <mask id="fm">
-      <path d="M 11,54 L 11,10 L 53,54 L 53,10"
-            stroke="white" stroke-width="11"
+      <path d="M 8,54 C 10,39 10,8 16,8 C 22,8 42,56 48,56 C 54,56 54,24 56,8"
+            stroke="white" stroke-width="10"
             stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </mask>
   </defs>
