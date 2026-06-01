@@ -95,14 +95,13 @@
   }
   .brand {
     display: inline-flex;
-    align-items: baseline;
-    gap: 2px;
+    align-items: center;
+    gap: 10px;
     color: var(--white);
     font-weight: 800;
     font-size: 22px;
     letter-spacing: -0.02em;
   }
-  .brand .vet { color: var(--electric); }
   .brand .tm { font-size: 0.4em; vertical-align: super; line-height: 0; margin-left: 2px; color: var(--slate-300); font-weight: 500; }
   .nav-links { display: flex; gap: 6px; align-items: center; font-size: 14px; flex-wrap: wrap; }
   .nav-links a {
@@ -416,7 +415,7 @@
   .sharpen-inner { position: relative; z-index: 1; }
   .sharpen-head {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 14px;
     margin-bottom: 6px;
     flex-wrap: wrap;
@@ -987,7 +986,7 @@
 
 <header class="site-header">
   <nav class="nav">
-    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm">&trade;</sup></a>
+    <a href="/" class="brand"><img src="/assets/img/logo-mark.svg" class="brand-mark" height="34" width="34" alt="" aria-hidden="true">AutoVetting<sup class="tm" aria-hidden="true">&trade;</sup></a>
     <div class="nav-links">
       <a href="/pinpoint/" aria-current="page">Pinpoint</a>
       <a href="/search/">Search</a>
@@ -2261,6 +2260,66 @@
         price: '$24,000', tier: 'Strong',
         tagline: '5th-gen Forester fixed the head gasket issue — FB25D is clean. EyeSight standard, spacious cargo. CVT fluid change history is the one key document to verify.',
         inspectUrl: '/inspect/?year=2019&make=Subaru&model=Forester'
+      },
+      { name: 'Honda HR-V LX / Sport / EX (3rd gen)', make: 'Honda', years: '2023–present',
+        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        price: '$24,000', tier: 'Strong',
+        tagline: 'Completely redesigned 3rd-gen HR-V on the Civic platform — larger, premium interior, Honda reliability. Simple 2.0L with no turbo complexity. Strong first buy.',
+        inspectUrl: '/inspect/?year=2023&make=Honda&model=HR-V'
+      },
+      { name: 'GMC Sierra 1500 SLE / SLT / AT4 / Denali (T1XX)', make: 'GMC', years: '2019–present',
+        type: 'truck', budget: '20-30k', purpose: 'value',
+        price: '$35,000', tier: 'Caution',
+        tagline: 'Premium Silverado sibling with MultiPro tailgate — same AFM lifter risk on the 5.3L V8 at 80k+ miles. Prefer 6.2L Denali or 2.7T, or verify AFM has been disabled.',
+        inspectUrl: '/inspect/?year=2022&make=GMC&model=Sierra 1500'
+      },
+      { name: 'Genesis G70 2.0T / 3.3T Sport', make: 'Genesis', years: '2019–2021',
+        type: 'sedan', budget: '20-30k', purpose: 'performance',
+        price: '$28,000', tier: 'Strong',
+        tagline: 'RWD sport sedan that punches above its price point — 3.3T twin-turbo V6 is excellent. Genesis CPO with extended warranty is the preferred buy path given limited independent shop coverage.',
+        inspectUrl: '/inspect/?year=2019&make=Genesis&model=G70'
+      },
+      { name: 'Honda Ridgeline Sport / RTL / RTL-E (2nd gen)', make: 'Honda', years: '2017–2023',
+        type: 'truck', budget: '20-30k', purpose: 'reliability',
+        price: '$30,000', tier: 'Strong',
+        tagline: 'Best daily-driver truck on the market — Honda V6 reliability in a unibody body. i-VTM4 diff fluid service is the one critical item; VCM motor mounts watch item. Outstanding commuter truck.',
+        inspectUrl: '/inspect/?year=2021&make=Honda&model=Ridgeline'
+      },
+      { name: 'Hyundai Tucson SE / SEL / Hybrid (4th gen)', make: 'Hyundai', years: '2022–present',
+        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        price: '$26,000', tier: 'Strong',
+        tagline: 'Completely redesigned 4th-gen Tucson — no Theta II engine concerns, available hybrid, great interior. CVT-7 shudder is software-fixable. Strong compact crossover buy.',
+        inspectUrl: '/inspect/?year=2022&make=Hyundai&model=Tucson'
+      },
+      { name: 'Kia Sportage LX / EX / Hybrid (5th gen)', make: 'Kia', years: '2023–present',
+        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        price: '$27,000', tier: 'Strong',
+        tagline: 'Best-in-class 5th-gen Sportage — roomier interior, no Theta II engine concerns, hybrid available. Straightforward buy; check recalls and CVT smoothness.',
+        inspectUrl: '/inspect/?year=2023&make=Kia&model=Sportage'
+      },
+      { name: 'Jeep Grand Cherokee (WL, 2021+)', make: 'Jeep', years: '2021–present',
+        type: 'suv', budget: '30k+', purpose: 'value',
+        price: '$38,000', tier: 'Caution',
+        tagline: 'Completely redesigned WL Grand Cherokee — much improved over WK2 but early builds had recalls and Uconnect issues. Prefer 2023+; verify all recalls closed; skip HEMI without AFM disable confirmation.',
+        inspectUrl: '/inspect/?year=2021&make=Jeep&model=Grand Cherokee'
+      },
+      { name: 'Mazda CX-50 2.5 / 2.5 Turbo', make: 'Mazda', years: '2023–present',
+        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        price: '$30,000', tier: 'Strong',
+        tagline: 'Adventure-oriented CX-50 above the CX-5 — wider, better ground clearance, 2.5T available. Mazda SKYACTIV reliability with no known issues. Straightforward buy.',
+        inspectUrl: '/inspect/?year=2023&make=Mazda&model=CX-50'
+      },
+      { name: 'Chrysler 300 / 300S / 300C', make: 'Chrysler', years: '2011–2022',
+        type: 'sedan', budget: '15-20k', purpose: 'value',
+        price: '$22,000', tier: 'Strong',
+        tagline: 'Best-value large luxury sedan on the market — ZF 8-speed, available HEMI V8, premium presence. V6 Pentastar is reliable; HEMI with MDS lifter history is the main risk. Excellent highway car.',
+        inspectUrl: '/inspect/?year=2016&make=Chrysler&model=300'
+      },
+      { name: 'BMW X7 xDrive40i / xDrive50i / M50i', make: 'BMW', years: '2019–2022',
+        type: 'suv', budget: '30k+', purpose: 'value',
+        price: '$55,000', tier: 'Caution',
+        tagline: 'BMW flagship 3-row SUV — get the B58 I6 (xDrive40i) and avoid the N63 V8. Complete BMW service records are non-negotiable. N63 without records is a $5,000–$10,000 risk.',
+        inspectUrl: '/inspect/?year=2019&make=BMW&model=X7'
       },
     ];
 

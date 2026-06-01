@@ -80,7 +80,7 @@
   }
   .brand {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 10px;
     color: var(--white);
     font-weight: 800;
@@ -88,7 +88,7 @@
     letter-spacing: -0.02em;
   }
   .brand:hover { text-decoration: none; }
-  .brand .vet { color: var(--electric); }
+  .brand-mark { height: 34px; width: auto; flex-shrink: 0; display: block; }
   .brand .tm {
     font-size: 0.4em;
     vertical-align: super;
@@ -446,7 +446,7 @@
   .item-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     gap: 12px;
     margin-bottom: 6px;
     flex-wrap: wrap;
@@ -1512,7 +1512,7 @@
 
 <header class="site-header">
   <nav class="nav">
-    <a href="/" class="brand">Auto<span class="vet">Vetting</span><sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <a href="/" class="brand"><img src="/assets/img/logo-mark.svg" class="brand-mark" height="34" width="34" alt="" aria-hidden="true">AutoVetting<sup class="tm" aria-hidden="true">&trade;</sup></a>
     <div class="nav-links">
       <a href="/pinpoint/">Pinpoint</a>
       <a href="/search/">Search</a>
@@ -12342,6 +12342,372 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
+  },
+  'honda-hrv-2023': {
+    year: 2023, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L (3rd gen RU4, 2023–present)',
+    engine: '2.0L DOHC i-VTEC I4 (158 hp) with CVT',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen HR-V is a complete redesign on the Civic platform — significantly larger, with a premium interior and much-improved driving dynamics over the 2nd gen. Naturally aspirated 2.0L engine is simple and reliable. Main checks are CVT fluid history and confirming Honda Sensing camera calibration. No widespread failure modes on this very young platform.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L i-VTEC — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally aspirated 2.0L K20C2. No turbo complexity. No oil dilution risk. Change oil every 7,500 miles or per OLM.',
+          check: '<strong>Cold-start check. Smooth idle expected. Check oil color and level.</strong>',
+          cost: 'Routine maintenance', source: 'Honda K20C2 reliability' },
+        { title: 'CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Honda CVT is reliable with fluid changes every 30k miles. Verify service history.',
+          check: '<strong>Test smooth acceleration with no belt noise. Confirm CVT fluid in records.</strong>',
+          cost: '$150–$200 fluid service', source: 'Honda CVT service standard' }
+      ]},
+      { title: 'Honda Sensing', items: [
+        { title: 'Sensing camera calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda Sensing standard on all trims. Windshield camera recalibration needed if windshield replaced.',
+          check: '<strong>No Sensing warning lights on dash. Ask about windshield work.</strong>',
+          cost: '$0–$300 calibration', source: 'Honda Sensing standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle with simple drivetrain. Low concern overall.',
+          check: '<strong>Request oil and CVT fluid records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'gmc-sierra-2022': {
+    year: 2022, make: 'GMC', model: 'Sierra 1500', trim: 'Regular / Double / Crew Cab — SLE / SLT / Elevation / AT4 / Denali (T1XX, 2019–present)',
+    engine: '2.7T I4 (310 hp), 5.3L V8 EcoTec3 (355 hp), 6.2L V8 EcoTec3 (420 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The T1XX Sierra is the premium sibling to the Silverado — same platform, more refined interior, MultiPro tailgate. Same powertrain considerations apply: the 5.3L V8 AFM (Active Fuel Management) lifter failure is the main risk at 80k–120k miles. The Denali with the 6.2L V8 or the 2.7T are the smarter choices to avoid AFM concerns. Well-maintained T1XX Sierras are excellent used trucks.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Engine (AFM) / Electrical' },
+    sections: [
+      { title: 'AFM Lifter Failure (V8)', items: [
+        { title: '5.3L EcoTec3 AFM lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ on V8',
+          desc: 'AFM cylinder deactivation collapses lifters at highway cruise speeds. Failure sounds like a tick after warm-up. Very common at 80k–120k on unmodified 5.3L.',
+          check: '<strong>Warm engine fully. Listen at idle for any persistent tick post-warm-up. Ask if AFM has been disabled.</strong>',
+          cost: '$2,500–$5,000 lifter replacement', source: 'GM AFM pattern' },
+        { title: '6.2L L87 — AFM present but less problematic', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 6.2L also has AFM/DFM but at lower highway RPM it cycles less aggressively. Still recommend disabling.',
+          check: '<strong>Same tick check. Ask about AFM disable status.</strong>',
+          cost: '$60 Range AFM device (preventive)', source: 'GM L87 pattern' }
+      ]},
+      { title: 'MultiPro Tailgate', items: [
+        { title: 'MultiPro tailgate mechanism', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test all six positions of the MultiPro tailgate. Latches should engage firmly in all positions.',
+          check: '<strong>Test all tailgate positions and inner gate fold functions.</strong>',
+          cost: '$0–$300', source: 'GMC Sierra standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'GMC infotainment / Bose system', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test infotainment and audio. Early T1XX had minor software bugs resolved by updates.',
+          check: '<strong>Test CarPlay, backup camera, and trailer reverse guidance if equipped.</strong>',
+          cost: '$0 update', source: 'GM infotainment standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + AFM history', risk: 'high', riskLabel: 'High Risk on V8 without',
+          desc: 'AFM lifter risk is directly tied to oil change frequency and usage patterns. Records are critical on V8 examples.',
+          check: '<strong>Request all oil change records. V8 without records = factor in $3,000 lifter risk premium.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'genesis-g70-2019': {
+    year: 2019, make: 'Genesis', model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced (1st gen IK, 2019–2021)',
+    engine: '2.0T Lambda I4 (252 hp) or 3.3T Lambda V6 Twin-Turbo (365 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The G70 is Genesis' BMW 3 Series competitor — rear-wheel drive, optional AWD, excellent driving dynamics, and premium interior at a significant discount to German rivals. No chronic powertrain failures. The 3.3T is the standout choice. The 8-speed DCT on some trims can shudder; the 8-speed automatic is smooth. Genesis is relatively new so certified pre-owned with extended Genesis warranty coverage is preferred. Independent shop support is limited.",
+    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 120, topComplaintArea: 'Transmission / Electrical (minor)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.3T Lambda V6 Twin-Turbo — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 3.3T is one of the best performance engines in the segment. No widespread failure modes. Change oil every 5,000 miles on turbocharged units.',
+          check: '<strong>Cold-start idle. Listen for any unusual noise. Both turbos should build boost cleanly.</strong>',
+          cost: 'Routine maintenance', source: 'Genesis/Hyundai 3.3T reliability data' },
+        { title: '2.0T Lambda — solid but less exciting', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0T Lambda is reliable. No Theta II recall concerns on the G70. Good daily driver choice.',
+          check: '<strong>Standard turbo and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Genesis 2.0T reliability' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '8-speed automatic (most trims) — smooth', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AISIN 8-speed is smooth and reliable. Preferred over the DCT on certain configurations.',
+          check: '<strong>Test smooth shifts all gears including kickdown.</strong>',
+          cost: '$200 fluid service', source: 'AISIN 8AT standard' },
+        { title: '8-speed DCT shudder (select configurations)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some G70 configurations use a DCT that can shudder at low speed. Test carefully.',
+          check: '<strong>Test slow traffic behavior at 15–25 mph. Any shudder = request software update history.</strong>',
+          cost: '$0–$2,000', source: 'Genesis DCT pattern' }
+      ]},
+      { title: 'Genesis Network Consideration', items: [
+        { title: 'Genesis dealer / independent shop availability', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Genesis dealerships are fewer than Korean or domestic brands. Confirm your area has adequate Genesis service access.',
+          check: '<strong>Confirm nearest Genesis dealer distance. Preferred: Genesis CPO with extended warranty coverage.</strong>',
+          cost: 'Varies by location', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + warranty status', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Genesis CPO extends coverage to 100k powertrain. Check if original or CPO warranty still applies.',
+          check: '<strong>Verify warranty status at dealer. Request all service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'honda-ridgeline-2021': {
+    year: 2021, make: 'Honda', model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition / RTL-E (2nd gen YK2, 2017–2023)',
+    engine: '3.5L i-VTEC V6 (280 hp) with 9-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Ridgeline is a refined unibody truck — better for daily commuting and lighter hauling than ladder-frame pickups. The 3.5L V6 is highly reliable (same engine family as Odyssey/Pilot). Main checks are the i-VTM4 AWD rear differential fluid (critical service), any VCM (cylinder deactivation) motor mount wear on high-mileage units, and bed integrity. Outstanding used truck choice for buyers who do not need serious towing or off-road capability.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.5L VCM V6 — motor mount wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'VCM (Variable Cylinder Management) activates in fuel-saving 3-cylinder mode, causing vibration that wears motor mounts prematurely. Replacement mounts or VCM disabler ($60) prevent recurrence.',
+          check: '<strong>At warm idle in Drive, feel for vibration through steering wheel and shifter. Any shudder = motor mounts likely worn.</strong>',
+          cost: '$200–$600 motor mounts; $60 VCM Muzzler (preventive)', source: 'Honda VCM mount pattern' },
+        { title: '9-speed automatic — smooth and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda 9AT is well-sorted. No widespread issues. Change fluid every 30k for towing applications.',
+          check: '<strong>Test all gears including tow mode. Smooth shifts expected.</strong>',
+          cost: '$150–$250 fluid service', source: 'Honda 9AT reliability' }
+      ]},
+      { title: 'i-VTM4 AWD', items: [
+        { title: 'Rear differential fluid — critical service', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'The i-VTM4 rear diff requires DPS-F fluid every 15k–30k miles. Neglected fluid leads to chatter and bearing failure. Check service records specifically for this item.',
+          check: '<strong>Request differential fluid service records. Tight turn test: no vibration or binding expected.</strong>',
+          cost: '$150–$300 diff fluid service; $1,500–$3,000 diff repair if neglected', source: 'Honda i-VTM4 service requirement' }
+      ]},
+      { title: 'Bed & Frunk', items: [
+        { title: 'In-bed trunk and dual-action tailgate', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test the lockable in-bed storage trunk and the tailgate side-swing/drop-down functions.',
+          check: '<strong>Test all tailgate modes and confirm in-bed trunk seal is intact and dry.</strong>',
+          cost: '$0–$200', source: 'Honda Ridgeline standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'i-VTM4 diff fluid + VCM history', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Two maintenance items above standard: diff fluid at 15–30k, and VCM motor mount status.',
+          check: '<strong>Request diff service records. Ask about VCM disabler install.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'hyundai-tucson-2022': {
+    year: 2022, make: 'Hyundai', model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / Plug-in Hybrid (4th gen NX4, 2022–present)',
+    engine: '2.5L MPI I4 (187 hp), 1.6T Hybrid (226 hp combined), or 1.6T PHEV (261 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen Tucson is a completely redesigned and substantially improved crossover over the 3rd-gen. Distinctive styling, spacious interior, and an available hybrid drivetrain. The 2.5L and 1.6T hybrid do not share the Theta II recall concerns. Main checks on this young platform are hybrid battery SoH (Hybrid/PHEV), CVT-7 transmission on the base engine, and confirming no outstanding recalls.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Electrical / Minor' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L MPI I4 — no Theta II concerns', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The NX4 uses a new 2.5L engine that is NOT the Theta II. No recall exposure. Clean engine.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Hyundai NX4 powertrain data' },
+        { title: '1.6T Hybrid system', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Tucson Hybrid uses a 48V or full HEV system depending on variant. No widespread issues on this young platform.',
+          check: '<strong>Confirm EV mode engages. No HV battery warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Hyundai hybrid system standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'CVT-7 (base 2.5L) — monitor', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some early CVT-7 units reported shudder under acceleration. Software updates address most cases.',
+          check: '<strong>Test smooth acceleration. Any shudder or hunting = request software update history.</strong>',
+          cost: '$0 software; $2,000+ if hardware needed', source: 'Hyundai NX4 CVT TSBs' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Check VIN for any open recalls', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'New enough platform that recall history is still accumulating.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Basic oil changes are the main service need.',
+          check: '<strong>Request service records and recall history printout.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'kia-sportage-2023': {
+    year: 2023, make: 'Kia', model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Line / X-Pro / Hybrid / PHEV (5th gen NQ5, 2023–present)',
+    engine: '2.5L MPI I4 (187 hp), 1.6T Hybrid (227 hp combined), or 1.6T PHEV (261 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 5th-gen Sportage is a major improvement over the 4th gen — substantially larger interior, available hybrid and PHEV powertrains, and Kia Connect suite. No Theta II exposure. The base 2.5L is competent; the 1.6T Hybrid is the sweet spot for fuel economy. Main buyer check on this young platform: confirm no open NHTSA recalls and test the DCT or CVT for smooth operation.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 75, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L MPI — clean engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Kia NQ5 2.5L is not a Theta II engine. No recall exposure. Straightforward maintenance.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Kia NQ5 powertrain data' },
+        { title: '1.6T Hybrid (preferred)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 1.6T Hybrid delivers 38+ mpg combined. No widespread issues on this young system.',
+          check: '<strong>Confirm EV mode engages at low speed. No HV warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Kia hybrid system standard' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'CVT / DCT operation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test for smooth operation under all driving conditions. No widespread complaints on this generation.',
+          check: '<strong>Test all city and highway throttle scenarios. Report any shudder.</strong>',
+          cost: '$0 software update if needed', source: 'Kia NQ5 standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Run VIN check and request basic oil change records.',
+          check: '<strong>Run nhtsa.gov/recalls. Request service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'jeep-grand-cherokee-2021': {
+    year: 2021, make: 'Jeep', model: 'Grand Cherokee', trim: 'Laredo / Altitude / Limited / Overland / Summit / Trailhawk (WL, 2021–present)',
+    engine: '3.6L Pentastar V6 (293 hp), 5.7L HEMI V8 (357 hp), or 4xe Plug-in Hybrid (375 hp combined)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The WL-generation Grand Cherokee is a complete redesign and a significant improvement over the WK2. However, early 2021–2022 production had notable quality issues: 8.4-inch Uconnect freezing, 4xe plug-in hybrid electrical problems, and a 3.6L camshaft recall on some VINs. 2023+ models are substantially more polished. The V8 HEMI with MDS (cylinder deactivation) shares the same lifter concern as Ram/Durango. Preferred: 2023+ 3.6L base or Summit with clean records.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 580, topComplaintArea: 'Electrical / Infotainment / Engine' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: '3.6L camshaft / VVT recall (some 2021–2022)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Some 2021–2022 WL models were recalled for a variable valve timing solenoid issue that could cause engine stalling.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm all open recalls are closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Jeep WL recall' },
+        { title: '4xe electrical / software recall', risk: 'high', riskLabel: 'High Risk on 4xe',
+          desc: 'Early 4xe models had multiple electrical and software recalls including HV battery management issues.',
+          check: '<strong>4xe buyers: confirm ALL outstanding recalls are closed before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Jeep 4xe recalls' }
+      ]},
+      { title: 'Engine', items: [
+        { title: '3.6L Pentastar — solid post-recall', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Post-recall Pentastar is reliable. Standard valve train tick at cold start is normal on warm-up.',
+          check: '<strong>Cold-start check. Minor tick is normal; persistent knock is not.</strong>',
+          cost: 'Routine maintenance', source: 'Stellantis Pentastar reliability' },
+        { title: '5.7L HEMI V8 MDS lifter', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MDS (cylinder deactivation) on the HEMI shares the same lifter failure pattern as Ram 1500. Risk increases at 80k+ miles.',
+          check: '<strong>Warm engine and listen for tick at idle. Ask if MDS has been disabled.</strong>',
+          cost: '$2,500–$5,000 lifter service', source: 'Stellantis HEMI MDS pattern' }
+      ]},
+      { title: 'Infotainment', items: [
+        { title: 'Uconnect 5 freezing (early builds)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early 2021–2022 Uconnect 5 systems had freezing and reboot issues. Software updates largely resolved this.',
+          check: '<strong>Test full infotainment including wireless CarPlay. Any persistent freeze = request software update history.</strong>',
+          cost: '$0 OTA update', source: 'Stellantis Uconnect TSBs' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall completion + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Multiple recalls on early WL builds make paperwork essential. Prefer 2023+ for cleaner ownership.',
+          check: '<strong>Request all recall completion paperwork and service history.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Multiple WL', description: 'Camshaft/VVT and 4xe electrical recalls on 2021-2022 builds', severity: 'High', remedy: 'Free dealer repair; run VIN at nhtsa.gov' }]
+  },
+  'mazda-cx50-2023': {
+    year: 2023, make: 'Mazda', model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo (1st gen, 2023–present)',
+    engine: '2.5L SKYACTIV-G I4 (187 hp) or 2.5T Turbo (256 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The CX-50 is a new model positioned above the CX-5 for outdoor-activity buyers — wider, slightly taller, better approach angle, available Meridian audio and off-road specific Meridian Green paint. Both SKYACTIV engines are highly reliable with no known failure modes. The 2.5T is the clear powertrain choice. Main buyer check is simply confirming AWD coupling fluid service on all-wheel-drive trims.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 35, topComplaintArea: 'Minimal — very new vehicle' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L / 2.5T SKYACTIV — excellent reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda SKYACTIV engines are among the most reliable naturally-aspirated and turbocharged units in the segment. No widespread failure modes.',
+          check: '<strong>Cold-start: smooth idle. Oil color and level check. No unusual sounds.</strong>',
+          cost: 'Routine maintenance', source: 'Mazda SKYACTIV reliability data' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'i-ACTIV AWD coupling fluid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD rear coupling fluid every 30k miles. Very young vehicle — confirm any service was done if 30k+ miles.',
+          check: '<strong>Test tight-radius parking turn. No vibration expected. Confirm fluid service.</strong>',
+          cost: '$150–$200 service', source: 'Mazda AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Very new vehicle. Run VIN at nhtsa.gov and request basic records.',
+          check: '<strong>Run nhtsa.gov/recalls. Request oil change records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'chrysler-300-2016': {
+    year: 2016, make: 'Chrysler', model: '300', trim: '300 / 300S / 300C / 300C Platinum (2nd gen LD, 2011–2022)',
+    engine: '3.6L Pentastar V6 (292 hp) or 5.7L HEMI V8 (363 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Chrysler 300 is one of the best value large luxury sedans available — premium presence, rear-wheel-drive or AWD, and the 3.6L Pentastar V6 is well-proven. The HEMI V8 with MDS cylinder deactivation carries lifter failure risk at 80k+ miles (same as Ram/Durango). Main checks: HEMI lifter tick, Uconnect version for infotainment, and transmission fluid service. Outstanding highway car at a fraction of German competitor pricing.",
+    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 260, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
+    sections: [
+      { title: 'HEMI V8 (if equipped)', items: [
+        { title: '5.7L HEMI MDS lifter failure', risk: 'high', riskLabel: 'High Risk on HEMI at 80k+',
+          desc: 'MDS cylinder deactivation causes accelerated lifter wear. Symptoms: persistent tick at warm idle.',
+          check: '<strong>Warm engine completely. Listen at idle for tick. Ask if MDS has been disabled.</strong>',
+          cost: '$2,500–$5,000 lifter service', source: 'Stellantis HEMI MDS pattern' }
+      ]},
+      { title: 'Powertrain (3.6L V6)', items: [
+        { title: '3.6L Pentastar V6 — reliable choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Pentastar is well-refined by this generation. Minor tick at cold start is normal. No widespread failure modes.',
+          check: '<strong>Cold-start check. Smooth idle within 30 seconds.</strong>',
+          cost: 'Routine maintenance', source: 'Stellantis Pentastar reliability data' },
+        { title: '8-speed ZF automatic — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'ZF 8HP is one of the best automatics available. Smooth shifts. Change fluid every 40–50k miles.',
+          check: '<strong>Test all gears including kickdown. No hesitation expected.</strong>',
+          cost: '$200–$350 fluid service', source: 'ZF 8HP reliability standard' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN (some years)', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Some 2nd-gen 300 model years fall in Takata scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records — HEMI owners especially', risk: 'high', riskLabel: 'High Risk on HEMI without',
+          desc: 'HEMI oil change frequency predicts lifter health. V6 is more forgiving.',
+          check: '<strong>Request all records. HEMI without records = $3,000 risk premium.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator risk on select model years', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'bmw-x7-2019': {
+    year: 2019, make: 'BMW', model: 'X7', trim: 'xDrive40i / xDrive50i / M50i (1st gen G07, 2019–2022)',
+    engine: '3.0L B58 Turbo I6 (335 hp xDrive40i) or 4.4L N63 V8 (456 hp xDrive50i)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The X7 is BMW flagship 3-row SUV — imposing presence, genuine luxury interior, and strong powertrain options. The B58 inline-six is excellent; the N63 V8 has documented oil consumption and injector issues. On any used X7: BMW maintenance costs are unforgiving, extended warranty or CPO is highly recommended, and the B58 is strongly preferred over the N63 for ownership cost. Only buy with complete BMW dealer service history.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 280, topComplaintArea: 'Engine (N63) / Cooling / Electrical' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: 'B58 I6 (xDrive40i) — excellent engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The B58 is one of the best modern BMW engines — reliable, smooth, and tunable. Oil leak watch on valve cover at high mileage.',
+          check: '<strong>Check valve cover and oil filter housing for seeps. Cold-start smooth idle expected.</strong>',
+          cost: '$400–$700 valve cover if seeping', source: 'BMW B58 reliability data' },
+        { title: 'N63 V8 (xDrive50i/M50i) — oil consumption + injectors', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The N63 is notorious for high oil consumption, injector failures, and cooling system issues. BMW issued an extended warranty on some N63 units. Factor $3,000–$8,000 in potential deferred maintenance.',
+          check: '<strong>Check dipstick immediately. N63 consuming >1 qt per 1,000 miles is a known problem. Ask for all N63 Customer Care Package history.</strong>',
+          cost: '$3,000–$8,000 N63 deferred maintenance package', source: 'BMW N63 reliability pattern' }
+      ]},
+      { title: 'Cooling System', items: [
+        { title: 'Water pump and thermostat (B58 and N63)', risk: 'high', riskLabel: 'High Risk at 60k+',
+          desc: 'BMW electric water pumps and thermostats fail on schedule. Both B58 and N63 need service around 60k–80k miles.',
+          check: '<strong>Test heat output at idle and confirm temperature gauge stable. Any temp fluctuation = pump service due.</strong>',
+          cost: '$600–$1,200 pump + thermostat', source: 'BMW water pump pattern' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'BMW service requirement — X7 is expensive', risk: 'high', riskLabel: 'High Risk without records',
+          desc: 'X7 dealer services run $1,500–$3,000 per interval. Without documented BMW service history, assume $5,000–$10,000 deferred maintenance backlog.',
+          check: '<strong>Request ALL BMW dealer service records. No records = walk away or negotiate aggressively.</strong>',
+          cost: '$1,500–$3,000 per service interval', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO warranty status + recall check', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'BMW CPO extends coverage to 100k miles. On a vehicle this expensive, CPO or remaining warranty is critical.',
+          check: '<strong>Confirm CPO status at BMW dealer. Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
   }
 
 };
@@ -12361,22 +12727,26 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
-      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
-      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' }
+      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' },
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
-      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
       { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' }
     ],
     'BMW': [
-      { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' }
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' },
+      { model: 'X7', trim: 'xDrive40i / xDrive50i / M60i', key: 'bmw-x7-2019' }
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
@@ -12392,7 +12762,8 @@ const VEHICLE_MENU = {
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
     ],
     'GMC': [
-      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
@@ -12426,11 +12797,13 @@ const VEHICLE_MENU = {
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
-      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' }
+      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' },
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk (WL)', key: 'jeep-grand-cherokee-2021' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
@@ -12444,7 +12817,8 @@ const VEHICLE_MENU = {
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' }
     ],
     'BMW': [
-      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' }
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' },
+      { model: 'X7', trim: 'xDrive40i / xDrive50i / M50i', key: 'bmw-x7-2019' }
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
@@ -12460,7 +12834,8 @@ const VEHICLE_MENU = {
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
     ],
     'GMC': [
-      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
@@ -12479,6 +12854,12 @@ const VEHICLE_MENU = {
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
+    ],
+    'Genesis': [
+      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' }
+    ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' }
     ]
   },
   2020: {
@@ -12494,7 +12875,8 @@ const VEHICLE_MENU = {
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
-      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
     ],
     'Ford': [
       { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' }
@@ -12515,7 +12897,8 @@ const VEHICLE_MENU = {
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -12537,7 +12920,8 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'BMW': [
-      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' }
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' },
+      { model: 'X7', trim: 'xDrive40i / xDrive50i / M50i', key: 'bmw-x7-2019' }
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
@@ -12624,7 +13008,8 @@ const VEHICLE_MENU = {
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -12638,7 +13023,8 @@ const VEHICLE_MENU = {
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ],
     'BMW': [
-      { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
+      { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' },
+      { model: 'X7', trim: 'xDrive40i / xDrive50i / M50i', key: 'bmw-x7-2019' }
     ]
   },
   2018: {
@@ -12959,6 +13345,13 @@ const VEHICLE_MENU = {
       { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
       { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
       { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
+    ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: '300', trim: '300 / 300S / 300C', key: 'chrysler-300-2016' },
+      { model: '300', trim: '300 / 300S', key: 'chrysler-300-2016' },
+      { model: '300', trim: '300 / 300S', key: 'chrysler-300-2016' }
     ]
   },
   2014: {
@@ -13153,13 +13546,24 @@ const VEHICLE_MENU = {
   },
   2024: {
     'Honda': [
-      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
+      { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
     ],
     'Audi': [
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+    ],
+    'Genesis': [
+      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' },
+      { model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced', key: 'genesis-g70-2019' }
+    ],
+    'Mazda': [
+      { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' }
+    ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' }
     ]
   },
     'Ford': [
@@ -13168,11 +13572,13 @@ const VEHICLE_MENU = {
     ],
     'Kia': [
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
-      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' }
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
+      { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Pro / Hybrid / PHEV', key: 'kia-sportage-2023' }
     ],
     'Hyundai': [
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
-      { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' }
+      { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' }
     ],
     'Toyota': [
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
@@ -13194,6 +13600,16 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
+    'Hyundai': [
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' }
+    ],
+    'Kia': [
+      { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Line / Hybrid / PHEV', key: 'kia-sportage-2023' }
+    ],
+    'Jeep': [
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' }
+    ],
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
@@ -13209,13 +13625,17 @@ const VEHICLE_MENU = {
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
     ],
     'GMC': [
-      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali Ultimate', key: 'gmc-sierra-2022' }
     ],
     'Mazda': [
-      { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+      { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
+      { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' }
     ],
     'Honda': [
-      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
+      { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / TrailSport / Black Edition', key: 'honda-ridgeline-2021' }
     ]
   ,},
 };

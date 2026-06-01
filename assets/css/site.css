@@ -57,15 +57,15 @@ button { font-family: inherit; cursor: pointer; }
 }
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
+  align-items: center;
+  gap: 10px;
   color: var(--white);
   font-weight: 800;
   font-size: 22px;
   letter-spacing: -0.02em;
 }
+.brand-mark { height: 34px; width: auto; flex-shrink: 0; display: block; }
 .brand:hover { text-decoration: none; color: var(--white); }
-.brand .vet { color: var(--electric); }
 .brand .tm {
   font-size: 0.4em;
   vertical-align: super;
