@@ -10974,20 +10974,606 @@ const CHECKLISTS = {
     ],
     vinNote: 'The 2020+ Toyota Corolla (E210) is the first generation to offer two meaningfully different gasoline powertrains in North America \u2014 and the choice matters for inspection priorities. L and LE trims use the 1.8L 2ZR-FAE Valvematic inline-4 (139\u00a0hp); SE, XSE, and XLE trims use the 2.0L M20A-FKS Dynamic Force inline-4 (169\u00a0hp). The fastest decode is the trim badge \u2014 LE always means 1.8L; SE/XSE/XLE always means 2.0L. The Hybrid uses the 2ZR-FXE and requires a separate inspection profile. Run the full VIN at <a href="/decode/">autovetting.com/decode</a> to confirm powertrain via NHTSA vPIC. Model-year digit is position\u00a010: L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022, P\u202f=\u202f2023. If buying a 2020 L or LE: the valve spring recall (20V-501) is the single most important check \u2014 confirm it is closed on the specific VIN before purchase.',
     blogUrl: '/blog/2021-toyota-corolla-buyers-guide',
-  }
+  },
+  'chevy-cruze-2017': {
+    year: 2017, make: 'Chevrolet', model: 'Cruze', trim: 'LS / RS / LT / Premier (2nd gen, 2016–2019)',
+    engine: '1.4L turbocharged I4 (153 hp) or 1.6L turbodiesel I4 (137 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen Cruze (2016–2019) is a competent compact sedan let down by a chronic 1.4T timing chain issue and documented oil consumption. With a clean maintenance record and no signs of chain rattle it’s a decent buy at a low price point — but skip any car with deferred oil changes. The 1.6T diesel variant is smoother but emissions-equipment dependent; only buy one with full DEF/EGR service history.",
+    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 520, topComplaintArea: 'Engine / Powertrain' },
+    sections: [
+      { title: 'Timing Chain (1.4T)', items: [
+        { title: '1.4T timing chain stretch — cold-start rattle', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The 1.4L LUJ/LUV engine is prone to timing chain elongation, especially with infrequent oil changes. Symptoms: metallic rattle on cold start lasting more than a few seconds. Repair is $800–$1,400 and effectively mandatory once rattle begins.',
+          check: '<strong>Cold-start the engine with hood open. Any metallic chain rattle lasting >3 seconds = walk away or negotiate hard.</strong> Ask for all oil change records.',
+          cost: '$800–$1,400 timing chain kit + labor',
+          source: 'GM TSB #PIP5555 / widespread 1.4T owner reports' }
+      ]},
+      { title: 'Engine Oil Consumption', items: [
+        { title: 'Excessive oil consumption (1.4T)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Many 1.4T Cruzes consume 1 qt per 2,000–3,000 miles from piston ring wear. GM issued TSBs but no recall. Check the dipstick at viewing.',
+          check: '<strong>Check dipstick level. If significantly below full, ask owner how often they add oil.</strong> Low oil accelerates chain wear.',
+          cost: '$0 (monitor) to $2,500+ (piston rings)',
+          source: 'GM TSB #PIP5122 / NHTSA complaint database' },
+        { title: 'Coolant loss — intake manifold gasket', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some 1.4T units develop slow coolant loss from the plastic intake manifold area. Check overflow tank level.',
+          check: '<strong>Inspect coolant reservoir level and color. White residue at cap = concern.</strong>',
+          cost: '$300–$600',
+          source: 'Owner pattern reports' }
+      ]},
+      { title: 'Recalls', items: [
+        { title: 'Takata airbag inflator — verify closed', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Some 2016–2018 Cruze models are within the Takata airbag recall scope. Inflator rupture can cause metal fragmentation injury.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA Takata recall program' },
+        { title: 'Brake booster vacuum pump leak', risk: 'high', riskLabel: 'High Risk',
+          desc: 'NHTSA 17V-226: vacuum pump can develop internal leak, reducing brake assist. Symptom: harder-than-normal pedal.',
+          check: '<strong>Test brake pedal firmness at low speed. Hard pedal = verify recall is closed.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA recall 17V-226' }
+      ]},
+      { title: 'Transmission & Electrical', items: [
+        { title: '6-speed automatic or 6-speed manual', risk: 'low', riskLabel: 'Low Risk',
+          desc: '6AT (Hydra-Matic 6T30) is generally reliable. Manual is more engaging. Test all gears; look for hesitation or flare.',
+          check: '<strong>Test from cold. Ensure smooth shifts 1–6. Manual: check clutch engagement point.</strong>',
+          cost: '$150–$250 fluid service',
+          source: 'GM drivetrain standard' },
+        { title: 'Infotainment / MyLink', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MyLink system can freeze or lose Bluetooth pairing. Software updates resolve most issues.',
+          check: '<strong>Test CarPlay/Android Auto, Bluetooth, and radio before purchase.</strong>',
+          cost: '$0 software update',
+          source: 'GM TSBs' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change history — most important document', risk: 'high', riskLabel: 'High Risk',
+          desc: 'On this engine, oil change frequency is the single best predictor of timing chain and ring condition. 5,000-mile intervals or less = good; 7,500+ = caution; unknown = red flag.',
+          check: '<strong>Request all receipts or dealer service printout. No records = price accordingly.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '17V-226', description: 'Brake booster vacuum pump internal leak — reduced brake assist', severity: 'High', remedy: 'Dealer replaces vacuum pump at no cost' },
+      { campaign: 'Takata', description: 'Driver/passenger airbag inflator rupture risk', severity: 'Critical', remedy: 'Free dealer inflator replacement; check VIN at nhtsa.gov' }
+    ]
+  },
+  'kia-optima-2016': {
+    year: 2016, make: 'Kia', model: 'Optima', trim: 'LX / EX / SX / SXL (4th gen, 2016–2020)',
+    engine: '2.4L GDI I4 (185 hp) or 2.0T GDI I4 (245 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 4th-gen Optima is a well-styled mid-sizer let down by the Theta II engine recall. Both the 2.4L and 2.0T are subject to NHTSA recall 20V-239 (engine seizure due to debris from manufacturing). Always confirm the recall is closed before purchase. Post-recall cars with clean oil history are reliable; skipped oil changes still cause problems despite the recall fix.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 680, topComplaintArea: 'Engine' },
+    sections: [
+      { title: 'Engine Recall — Check First', items: [
+        { title: 'Theta II engine seizure recall — NHTSA 20V-239', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'Kia/Hyundai Theta II engines (2.4L and 2.0T) were subject to a catastrophic engine seizure recall due to metal debris from manufacturing contaminating the crankshaft bearings. Engines can seize without warning. NHTSA 20V-239 covers 2016–2020 Optima.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. If the recall shows open, do NOT purchase until dealer completes the repair.</strong> Ask for the recall completion paperwork.',
+          cost: 'Free dealer repair (engine replacement if seized)',
+          source: 'NHTSA recall 20V-239 / Kia Theta II investigation' },
+        { title: 'Knock sensor monitoring system (KSDS)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Kia installed a Knock Sensor Detection System on post-recall cars to monitor for bearing noise. If the KSDS warning light illuminates, the engine needs immediate inspection.',
+          check: '<strong>Check for any MIL or KSDS warning on the instrument cluster.</strong>',
+          cost: '$0 if caught early; engine replacement if ignored',
+          source: 'NHTSA / Kia KSDS software' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '6-speed automatic (A6MF2)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 6AT on the Optima is generally reliable. Test for smooth shifts and no hunting between gears.',
+          check: '<strong>Test all gear ranges from cold start. No hesitation or flare should be present.</strong>',
+          cost: '$150–$200 fluid service',
+          source: 'Standard drivetrain check' },
+        { title: '7-speed DCT (2.0T models)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The dual-clutch transmission on SX Turbo models can shudder at low speed. Software updates address many cases.',
+          check: '<strong>Test slow creep in traffic. Any shudder or jerkiness at low speed = check TSBs for update.</strong>',
+          cost: '$0 software update; $2,000+ clutch pack if worn',
+          source: 'Kia DCT TSBs' }
+      ]},
+      { title: 'Electrical & Comfort', items: [
+        { title: 'UVO infotainment / Android Auto', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'UVO system is generally solid on 4th-gen. Test CarPlay/Android Auto and all buttons.',
+          check: '<strong>Test all infotainment and heated seat functions.</strong>',
+          cost: '$0',
+          source: 'Standard check' },
+        { title: 'Sunroof drain clogs', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Panoramic sunroof drains can clog, leading to water intrusion at the A-pillar.',
+          check: '<strong>Check headliner for water stains near A-pillar if sunroof-equipped.</strong>',
+          cost: '$50–$150 flush',
+          source: 'Common sunroof pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + recall paperwork', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Post-recall Optimas still suffer engine issues if oil changes were skipped. Both the recall completion paperwork and oil records are essential on this car.',
+          check: '<strong>Request all service records. No records on a Theta II car = significant risk.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '20V-239', description: 'Theta II engine metal debris — catastrophic engine seizure risk', severity: 'Critical', remedy: 'Free dealer engine inspection and replacement if necessary; KSDS software installed' }
+    ]
+  },
+  'toyota-sequoia-2016': {
+    year: 2016, make: 'Toyota', model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum (2nd gen XK60, 2008–2022)',
+    engine: '5.7L 3UR-FE V8 (381 hp) with 6-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The XK60 Sequoia is one of the most durable full-size SUVs ever made. The 5.7L 3UR-FE is bulletproof with regular maintenance. The main buyer concerns are frame rust (critical in rust-belt states), Takata airbag recall status, and timing chain service history. Southern-state cars are far better buys than northern ones. Expect 200k–300k miles from a well-maintained example.",
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 340, topComplaintArea: 'Suspension / Frame (rust belt)' },
+    sections: [
+      { title: 'Frame & Underbody', items: [
+        { title: 'Frame rust — critical in rust-belt states', risk: 'high', riskLabel: 'High Risk (rust belt)',
+          desc: 'Toyota truck frames from this era are prone to severe frame rust in states that use road salt (Northeast, Midwest). In severe cases the frame can perforate, making the vehicle unsafe and unrestorable. Southern-state cars rarely have this issue.',
+          check: '<strong>Jack the vehicle and inspect frame rails from front to rear with a flashlight. Surface rust = monitor; perforation or bubbling = walk away.</strong>',
+          cost: '$0–5,000 (coating) or totaling the vehicle if perforated',
+          source: 'Toyota truck frame rust pattern / Toyota settlement program (earlier gen overlap)' },
+        { title: 'Exhaust manifold cracks (V8)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 3UR-FE exhaust manifolds are cast iron and can develop hairline cracks over time, causing a ticking sound at cold start.',
+          check: '<strong>Listen for ticking at cold start that disappears when warm. Inspect manifold for soot trails.</strong>',
+          cost: '$400–$800 per manifold',
+          source: 'Toyota V8 common pattern' }
+      ]},
+      { title: 'Safety Recall', items: [
+        { title: 'Takata airbag inflator — verify closed', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Second-gen Sequoias are within the Takata airbag recall scope. Inflator rupture is a known fatality risk.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase. Recall must be closed.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA Takata recall' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '5.7L 3UR-FE engine health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'One of Toyota’s most reliable engines. Timing chain is robust but should be inspected on high-mileage units (120k+). Check for any oil leaks at valve covers.',
+          check: '<strong>Standard oil/coolant check. Timing chain rattle on cold start = service needed. Leaks at valve covers are common on high-mileage units.</strong>',
+          cost: '$300–$800 valve cover gaskets; timing chain varies',
+          source: 'Toyota V8 reliability history' },
+        { title: '6-speed automatic A750F', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The A750F transmission is extremely durable. Service with Toyota WS fluid every 60k miles.',
+          check: '<strong>Test all gears. Smooth shifts expected at all temperatures.</strong>',
+          cost: '$150–$200 fluid service',
+          source: 'Toyota drivetrain standard' },
+        { title: 'HVAC blower motor (rear zone)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rear blower motors can fail on high-mileage examples. Test rear climate separately.',
+          check: '<strong>Test all climate zones including rear.</strong>',
+          cost: '$200–$400 blower motor',
+          source: 'Toyota Sequoia owner pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + origin state check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'For this vehicle, where it lived matters more than anything else. Request Carfax for registration history. No oil records on a 150k-mile Sequoia is a concern, though the engine tolerates some neglect.',
+          check: '<strong>Run a Carfax/AutoCheck for state history. Southern state with clean frame = strong buy.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: 'Takata', description: 'Airbag inflator metal fragmentation risk', severity: 'Critical', remedy: 'Free dealer replacement; check VIN at nhtsa.gov' }
+    ]
+  },
+  'hyundai-palisade-2020': {
+    year: 2020, make: 'Hyundai', model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy (1st gen, 2020–2022)',
+    engine: '3.8L Lambda II V6 GDI (291 hp) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Palisade is Hyundai’s most well-rounded 3-row SUV — spacious, premium-feeling, and powered by a proven 3.8L V6. First-year (2020) models had some HVAC complaints and a minor engine stall recall, both addressed by dealer. No chronic powertrain failures. An excellent used family SUV at a significant discount to the new price.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 220, topComplaintArea: 'Electrical / HVAC' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.8L Lambda II V6 — solid engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 3.8L GDI V6 does not share the Theta II engine recall issues of the 4-cylinder siblings. No widespread powertrain failures reported.',
+          check: '<strong>Standard cold-start check. Listen for any knock or rattle. Check oil level and condition.</strong>',
+          cost: 'Routine maintenance',
+          source: 'Hyundai 3.8L reliability history' },
+        { title: '8-speed automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AISIN-sourced 8AT is smooth and reliable on the Palisade. Test all driving modes.',
+          check: '<strong>Test smooth shifts through all gears in Sport and Normal modes.</strong>',
+          cost: '$150–$250 fluid service',
+          source: 'Hyundai drivetrain standard' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Engine stall / fuel system recall (2020 models)', risk: 'high', riskLabel: 'High Risk — Check 2020 VIN',
+          desc: 'Some 2020 Palisade models were recalled for a fuel system issue that could cause an unexpected engine stall. NHTSA 21V-056.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm recall is closed.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA recall 21V-056' }
+      ]},
+      { title: 'HVAC & Electrical', items: [
+        { title: 'Tri-zone climate control — first-year complaints', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early 2020 Palisades had HVAC complaints (inconsistent temperature zones). Software updates and blower motor replacements resolved most cases. Test all zones.',
+          check: '<strong>Test all three climate zones. Verify heated/ventilated seats work.</strong>',
+          cost: '$0–$400',
+          source: 'NHTSA complaint database / TSBs' },
+        { title: 'BlueLink connectivity', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'BlueLink subscription may have lapsed. Test wireless CarPlay/Android Auto on equipped trims.',
+          check: '<strong>Test CarPlay/Android Auto pairing and display.</strong>',
+          cost: '$0',
+          source: 'Standard check' }
+      ]},
+      { title: 'Structure & Safety', items: [
+        { title: 'Third-row access and latching', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test second-row tumble-forward mechanism and third-row seat latch engagement.',
+          check: '<strong>Verify second-row folds and slides correctly, third-row seats latch securely.</strong>',
+          cost: '$0–$200',
+          source: 'Standard 3-row check' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall completion', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Palisade is young enough that most have dealer service history. Confirm 2020 model recall was completed.',
+          check: '<strong>Request Carfax and recall paperwork for 2020 models.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '21V-056', description: 'Fuel system issue causing unexpected engine stall (2020 models)', severity: 'High', remedy: 'Dealer software update and component replacement at no cost' }
+    ]
+  },
+  'toyota-rav4-2019': {
+    year: 2019, make: 'Toyota', model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited (5th gen, 2019–2024)',
+    engine: '2.5L A25A-FKS Dynamic Force I4 (203 hp) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 5th-gen RAV4 on Toyota’s TNGA-K platform is one of the bestselling vehicles in the US for a reason — it’s practical, efficient, and highly reliable. No chronic powertrain failures. The 2019 first-year model had minor software and infotainment complaints addressed by updates. The 2.5L Dynamic Force engine is excellent. Takata airbag recall status should be checked on all 2019 VINs.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 450, topComplaintArea: 'Electrical / Infotainment (minor)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.5L A25A-FKS — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota’s new Dynamic Force four-cylinder. No widespread failure modes. Uses 0W-16 oil — confirm correct viscosity in maintenance history.',
+          check: '<strong>Cold-start: listen for any knock or rattle. Check dipstick — 0W-16 (or 0W-20) should be present. Any burnt smell = concern.</strong>',
+          cost: 'Routine maintenance',
+          source: 'Toyota A25A-FKS reliability data' },
+        { title: '8-speed automatic Direct-Shift transmission', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The new 8AT is smooth. Some early owners reported minor hesitation at low throttle which Toyota addressed with software.',
+          check: '<strong>Test throttle response from stop. Any hesitation can be fixed with dealer software update.</strong>',
+          cost: '$0 software update',
+          source: 'Toyota TSB' }
+      ]},
+      { title: 'AWD System', items: [
+        { title: 'Dynamic Torque Vectoring AWD (Adventure / TRD Off-Road / Limited)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The DTV-AWD system on higher trims uses a rear coupling. Test tight turns for vibration indicating fluid degradation.',
+          check: '<strong>Perform slow tight-radius turn to test rear coupling engagement. No grinding or vibration expected.</strong>',
+          cost: '$150 coupling fluid service',
+          source: 'Toyota AWD service schedule' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Some 2019 RAV4 VINs fall under the extended Takata inflator recall. Verify at nhtsa.gov.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before finalizing purchase.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA Takata recall' }
+      ]},
+      { title: 'Electrical & Interior', items: [
+        { title: 'Toyota Safety Sense 2.0 (TSS-2.0)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'TSS-2.0 is standard on all 5th-gen RAV4s. Test the pre-collision warning on a quiet road.',
+          check: '<strong>Verify TSS-2.0 indicator lights on dash are clear. No calibration warnings.</strong>',
+          cost: '$0',
+          source: 'Toyota standard' },
+        { title: 'Entune 3.0 infotainment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Entune 3.0 supports Apple CarPlay (2019 base trim does not; XLE+ does). Test connectivity.',
+          check: '<strong>Test CarPlay / Android Auto where applicable.</strong>',
+          cost: '$0',
+          source: 'Toyota standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young enough to have dealer history. One oil change interval missed is not the end of the world on this engine.',
+          check: '<strong>Request Carfax and service printout for maintenance verification.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: 'Takata', description: 'Airbag inflator fragmentation risk on select VINs', severity: 'High', remedy: 'Free dealer repair; verify at nhtsa.gov/recalls' }
+    ]
+  },
+  'subaru-wrx-2018': {
+    year: 2018, make: 'Subaru', model: 'WRX', trim: 'Base / Premium / Limited (4th gen VA, 2015–2021)',
+    engine: '2.0L FA20DIT turbocharged I4 (268 hp) with 6-speed manual or CVT',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The WRX is a highly capable performance compact — when stock and maintained. The critical risk on used examples is modification history: staged tunes, intake/exhaust without a tune, or high-boost maps significantly increase ringland failure risk on the FA20DIT. A stock WRX with regular Subaru-specified oil changes is reliable. A tuned or modified example is a significant gamble. Walk away from any WRX with an aftermarket intake, ECU tune, or missing service records.",
+    stats: { itemsToCheck: 15, recalls: 2, ownerComplaints: 290, topComplaintArea: 'Engine (modified units)' },
+    sections: [
+      { title: 'Modification Check — Most Important', items: [
+        { title: 'Aftermarket intake or exhaust', risk: 'critical', riskLabel: 'Critical — Walk Away',
+          desc: 'An aftermarket cold-air intake without a matching ECU tune runs the engine lean under boost. This is a leading cause of FA20DIT ringland failure. Even a returned-to-stock car may have already suffered damage.',
+          check: '<strong>Inspect intake box: if aftermarket (cone filter, no airbox) = walk away unless full stock restoration AND compression test is clean.</strong>',
+          cost: '$3,000–$6,000 engine rebuild on ringland failure',
+          source: 'Subaru FA20DIT modification risk / WRX community knowledge' },
+        { title: 'ECU tune or Access Port', risk: 'critical', riskLabel: 'Critical — Walk Away',
+          desc: 'An Access Port in the OBD port or dealer datalog showing flash events = the car has been tuned. Stage 2+ maps significantly increase stress on pistons.',
+          check: '<strong>Check OBD-II port for dongles. Ask seller directly. Request datalog if possible.</strong>',
+          cost: '$3,000–$6,000 if engine failure follows',
+          source: 'Subaru WRX enthusiast community / Cobb Accessport records' }
+      ]},
+      { title: 'Engine Health', items: [
+        { title: 'FA20DIT compression + leakdown test', risk: 'high', riskLabel: 'High Risk — Test Before Buying',
+          desc: 'On any used WRX, a compression and leakdown test is the best way to assess ringland health before purchase. Low compression (below 160 psi) or high leakdown (>15%) indicates internal wear.',
+          check: '<strong>Request or arrange a compression/leakdown test. Any cylinder below 150 psi or >15% leakdown = negotiate hard or walk.</strong>',
+          cost: '$100–$150 test at a shop',
+          source: 'Subaru WRX buyer standard' },
+        { title: 'Oil consumption check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The FA20DIT can consume oil, especially on high-revving examples. Check dipstick at viewing.',
+          check: '<strong>Check dipstick. Any consumption over 1 qt per 2,000 miles = investigate further.</strong>',
+          cost: '$0–$2,000',
+          source: 'Subaru FA20DIT pattern' },
+        { title: 'Piston ringland condition — listen for knock', risk: 'high', riskLabel: 'High Risk',
+          desc: 'A failing ringland sounds like a rod knock — rhythmic metallic knock at idle that gets louder under load.',
+          check: '<strong>Listen at idle and under light load. Any knock = do not purchase.</strong>',
+          cost: '$3,000–$6,000 engine work',
+          source: 'Subaru FA20DIT ringland failure pattern' }
+      ]},
+      { title: 'Drivetrain', items: [
+        { title: '6-speed manual vs CVT', risk: 'low', riskLabel: 'Low Risk (manual) / Monitor (CVT)',
+          desc: 'The 6MT is the preferred choice for longevity. The Lineartronic CVT on the base model can fail at high mileage; replacement is $3,500+. Manual: check clutch engagement height.',
+          check: '<strong>Manual: test clutch at all speeds. CVT: check for any shudder or whining under acceleration.</strong>',
+          cost: 'CVT replacement $3,500–$5,000',
+          source: 'Subaru CVT replacement history' },
+        { title: 'Rear differential fluid (AWD)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD differential and transfer case fluids should be changed every 25k miles.',
+          check: '<strong>Confirm differential service in records. Request service if unknown.</strong>',
+          cost: '$200–$300 full drivetrain service',
+          source: 'Subaru AWD service interval' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change frequency — every 3,750 miles', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Subaru specifies 6,000-mile oil changes but WRX owners widely use 3,750 miles for turbocharged applications. Any WRX with 7,500-mile oil change intervals has elevated ring/bearing risk.',
+          check: '<strong>Request all oil change records. No documentation on a WRX = high risk premium.</strong>',
+          cost: 'n/a',
+          source: 'Subaru turbo maintenance community standard' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '17V-718', description: 'Fuel pump coupling failure risk — engine stall on certain 2015-2019 WRX', severity: 'High', remedy: 'Dealer fuel pump replacement at no cost; check VIN at nhtsa.gov' }
+    ]
+  },
+  'ford-bronco-2021': {
+    year: 2021, make: 'Ford', model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Outer Banks / Wildtrak / First Edition (6th gen, 2021+)',
+    engine: '2.3L EcoBoost I4 (300 hp) or 2.7L EcoBoost V6 (330 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 6th-gen Bronco is an enthusiast-grade off-road SUV with a first-year production run that had significant quality issues. 2021 models particularly had soft-top defects, 7-speed manual transmission recalls, HVAC duct failures, and paint quality complaints. 2022+ models are considerably better. If buying a 2021, verify all known recalls are closed. The 2.3L EcoBoost is well-proven; the 2.7L is more capable but at higher maintenance cost.",
+    stats: { itemsToCheck: 14, recalls: 6, ownerComplaints: 920, topComplaintArea: 'Body / Soft Top / Electrical' },
+    sections: [
+      { title: 'Recalls — Check First (2021 especially)', items: [
+        { title: '7-speed manual transmission — clutch/gearshift issue', risk: 'high', riskLabel: 'High Risk — Check 7MT VINs',
+          desc: 'Ford recalled some 2021 Bronco 7-speed manual transmissions for a clutch damper spring that could cause transmission lockout. Affected VINs need the clutch assembly replaced.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. If 7-speed manual, confirm clutch recall is closed.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA Ford Bronco 7MT recall 21V-625' },
+        { title: 'HVAC duct improper installation', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early production 2021 Broncos had HVAC duct routing issues that could cause reduced airflow or noise.',
+          check: '<strong>Test all climate settings including defrost. Any weak zones indicate duct issue.</strong>',
+          cost: '$0–$400',
+          source: 'Ford TSB 21-2241' }
+      ]},
+      { title: 'Soft Top / Hard Top', items: [
+        { title: '2021 soft top leaks — known defect', risk: 'high', riskLabel: 'High Risk on 2021 Soft-Top',
+          desc: 'The Bronco MIC (molded-in-color) hardtop and soft tops on 2021 models had widespread water intrusion, panel cracking (hardtop), and sealing failures. Ford replaced defective tops under warranty.',
+          check: '<strong>Inspect headliner and cargo floor for water stains or mold. Test top seals all around with a water spray test before purchase.</strong>',
+          cost: 'Free warranty replacement (if in warranty); $2,000–$5,000 post-warranty',
+          source: 'Ford Bronco MIC hardtop recall / TSBs' },
+        { title: 'Removable door and roof panel fit', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Removable doors and roof panels on all Broncos can develop wind noise if latches or seals are worn.',
+          check: '<strong>Test all door latch engagements. Check for wind noise at highway speeds.</strong>',
+          cost: '$50–$200 per door seal',
+          source: 'Bronco owner community' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '2.3L EcoBoost I4', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Gen 3 2.3L EcoBoost is proven in Explorer, Mustang, and Ranger. Turbo seals are the main long-term watch item.',
+          check: '<strong>Check for blue smoke at startup or under boost. Test all driving modes.</strong>',
+          cost: 'Routine maintenance',
+          source: 'Ford 2.3L EcoBoost reliability history' },
+        { title: '2.7L EcoBoost V6', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'More capable for off-road and towing but more complex. Oil changes every 5,000 miles critical for both turbo longevity.',
+          check: '<strong>Check oil level and condition. Both turbos should spool cleanly.</strong>',
+          cost: 'Higher maintenance cost',
+          source: 'Ford 2.7L EcoBoost service data' }
+      ]},
+      { title: 'Off-Road & Electrical', items: [
+        { title: 'Trail control / GOAT modes', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test all GOAT (Go Over Any Type of Terrain) modes on the center dial. Any missing mode indicator = investigate.',
+          check: '<strong>Cycle through all GOAT modes with vehicle stationary to verify each mode engages.</strong>',
+          cost: '$0',
+          source: 'Ford Bronco GOAT system' },
+        { title: 'Underbody inspection for off-road damage', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Broncos are frequently taken off-road. Inspect skid plates, frame rails, and differential housings for impact damage.',
+          check: '<strong>Inspect skid plates, CV boots, and underbody with a flashlight for rock strikes or impact damage.</strong>',
+          cost: 'Varies',
+          source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Carfax + recall verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '2021 Broncos had multiple recalls. Request the VIN report and a recall printout before purchase.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Multiple open recalls on a 2021 = seller is pricing wrong.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '21V-625', description: '7-speed manual transmission clutch damper spring failure — gearbox lockout risk', severity: 'High', remedy: 'Dealer clutch assembly replacement at no cost' },
+      { campaign: 'MIC Hardtop', description: '2021 molded hardtop cracking and water intrusion', severity: 'High', remedy: 'Ford replacement hardtop program (check dealer for status)' }
+    ]
+  },
+  'bmw-x1-2018': {
+    year: 2018, make: 'BMW', model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d (2nd gen F48, 2016–2022)',
+    engine: '2.0L TwinPower Turbo I4 (228 hp) or 2.0L diesel (xDrive28d)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The F48 X1 is a well-packaged entry luxury crossover with strong performance from the B46 engine, but BMW maintenance costs are unforgiving if deferred. The main watch items are oil leaks (valve cover, oil filter housing), cooling system components (water pump, thermostat), and carbon buildup on the intake valves from GDI. Buy a well-documented example — skipped BMW service intervals accelerate every failure mode here.",
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Engine / Oil System / Cooling' },
+    sections: [
+      { title: 'Engine Oil System', items: [
+        { title: 'Valve cover oil leak', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Plastic valve covers on the B46/B48 engine crack or lose their seals over time. Active leak often drips onto the exhaust. Check visually and by smell when the engine is warm.',
+          check: '<strong>Warm the engine, then inspect valve cover gasket area and beneath engine for oil drips. Burnt oil smell under hood = active leak.</strong>',
+          cost: '$400–$700 valve cover + gasket replacement',
+          source: 'BMW B46/B48 common repair' },
+        { title: 'Oil filter housing gasket leak', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The oil filter housing gasket is a known failure point on these engines. Seeps oil to the lower block; can drip onto exhaust.',
+          check: '<strong>Inspect the lower left side of the engine block near the oil filter housing for seepage.</strong>',
+          cost: '$300–$500',
+          source: 'BMW F48 repair pattern' }
+      ]},
+      { title: 'Cooling System', items: [
+        { title: 'Water pump — electric (failure prone)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'BMW uses an electric water pump that can fail without warning, leading to overheating. Typically fails 70k–100k miles. The thermostat often fails alongside it.',
+          check: '<strong>Test heat output at idle and highway speed. Any temperature fluctuation or overtemp warning = pump service needed.</strong>',
+          cost: '$500–$900 water pump + thermostat bundle',
+          source: 'BMW electric water pump replacement pattern' },
+        { title: 'Expansion tank / coolant hoses', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Plastic expansion tank can crack with age; coolant hoses can become brittle. Inspect the expansion tank for cloudiness or cracks.',
+          check: '<strong>Inspect expansion tank for cracks or cloudiness. Check coolant level; any discoloration = flush needed.</strong>',
+          cost: '$200–$400',
+          source: 'BMW cooling system pattern' }
+      ]},
+      { title: 'GDI Carbon Buildup', items: [
+        { title: 'Intake valve carbon deposits', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Direct-injection engines don’t wash intake valves with fuel, leading to carbon buildup over 60k–80k miles. Symptoms: rough idle, hesitation at low throttle.',
+          check: '<strong>Test cold-idle smoothness. Any rough idle or hesitation at light throttle on 70k+ example = carbon walnut blast likely needed.</strong>',
+          cost: '$400–$700 walnut blast service',
+          source: 'BMW GDI carbon pattern' }
+      ]},
+      { title: 'Transmission & AWD', items: [
+        { title: 'ZF 8-speed automatic (xDrive28i)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'ZF 8HP is one of the best automatics ever made. Service with ZF fluid at 50k–60k intervals (not "lifetime").',
+          check: '<strong>Smooth shifts through all gears. Any jerk or slip = fluid service needed first.</strong>',
+          cost: '$200–$350 fluid service',
+          source: 'ZF 8HP reliability standard' },
+        { title: 'xDrive transfer case', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The xDrive system is robust. Test AWD engagement in a tight parking lot turn.',
+          check: '<strong>Tight parking lot turn: no binding or vibration expected.</strong>',
+          cost: '$150 fluid service',
+          source: 'BMW AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'BMW service records — non-negotiable', risk: 'high', riskLabel: 'High Risk',
+          desc: 'A BMW X1 without documented service history is a very different car than one with it. Missing records at 60k–80k miles means assume water pump, valve cover, and carbon all need service immediately.',
+          check: '<strong>Request all BMW dealer or independent shop records. Price the repair backlog into your offer.</strong>',
+          cost: '$1,500–$3,000 deferred maintenance backlog',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '20V-286', description: 'Fuel pump failure risk on select F48 X1 models', severity: 'High', remedy: 'Free dealer fuel pump replacement; check VIN at nhtsa.gov' }
+    ]
+  },
+  'hyundai-kona-2019': {
+    year: 2019, make: 'Hyundai', model: 'Kona', trim: 'SE / SEL / Limited / Ultimate (1st gen, 2018–2022)',
+    engine: '2.0L MPI I4 (147 hp) or 1.6L Turbo GDI I4 (175 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 1st-gen Kona (non-EV) is a practical and reliable subcompact SUV. The 1.6T is significantly more enjoyable than the base 2.0L. No chronic powertrain failures on either engine. The 7-speed DCT on the 1.6T can shudder at low speed — a known issue addressed by Hyundai with software updates. Avoid the Kona Electric (separate product with battery fire recall history).",
+    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 195, topComplaintArea: 'Transmission (DCT shudder)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.6T GDI — solid engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Gamma II 1.6T does not share the Theta II recall issues. Reliable with proper maintenance. Change oil every 7,500 miles or OLM recommendation.',
+          check: '<strong>Cold-start: no knock, smooth idle. Check oil level and color.</strong>',
+          cost: 'Routine maintenance',
+          source: 'Hyundai Gamma II reliability' },
+        { title: '7-speed DCT shudder (1.6T)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 7-speed dual-clutch transmission on 1.6T Konas can shudder at 15–25 mph during light throttle engagement. Hyundai issued software updates that resolve most cases.',
+          check: '<strong>Test slow crawl in traffic at 15–25 mph. Any shudder = request dealer DCT software update (free).</strong>',
+          cost: '$0 software update; $2,000+ clutch pack if worn',
+          source: 'Hyundai DCT TSB' },
+        { title: '6-speed IVT / CVT (2.0L)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0L pairs with a 6-speed IVT (intelligent variable transmission). Less fun but highly reliable.',
+          check: '<strong>Test smooth acceleration through all speed ranges.</strong>',
+          cost: '$150 fluid service',
+          source: 'Hyundai IVT standard' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment — 7" or 8" touchscreen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CarPlay and Android Auto on SEL and above. Test pairing and display responsiveness.',
+          check: '<strong>Test all infotainment features and connectivity.</strong>',
+          cost: '$0',
+          source: 'Standard check' }
+      ]},
+      { title: 'Safety', items: [
+        { title: 'Forward collision — SmartSense standard', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Hyundai SmartSense (FCA, lane-keep, driver attention) is standard on all Kona trims. Verify no ADAS warning lights.',
+          check: '<strong>Confirm no ADAS or ABS warning lights on dash.</strong>',
+          cost: '$0',
+          source: 'Hyundai standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Straightforward car — oil changes and cabin air filter are the main items. Young enough for dealer records to be available.',
+          check: '<strong>Request oil change records. Straightforward check on this platform.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'vw-atlas-2018': {
+    year: 2018, make: 'Volkswagen', model: 'Atlas', trim: 'S / SE / SE with Technology / SEL / SEL Premium (1st gen, 2018–2023)',
+    engine: '2.0T TSI I4 (235 hp) or 3.6L VR6 (276 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The Atlas is a genuinely spacious 3-row SUV at a mainstream price point, but first-gen quality control was inconsistent. The 2.0T has documented oil consumption and timing chain concerns; the VR6 is smoother and more reliable but burns premium fuel. HVAC and infotainment glitches were common on early builds. 2020+ models show improved build quality. Only buy with documented service history and verify Takata recall is closed.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 750, topComplaintArea: 'Engine / Electrical / HVAC' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: '2.0T TSI oil consumption', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The 2.0T EA888 Gen 3 in the Atlas has documented oil consumption complaints — some owners report consuming 1 qt per 2,000–3,000 miles from piston ring wear. VW did not issue a recall.',
+          check: '<strong>Check dipstick immediately at viewing. If below min line = active consumption. Ask how often owner adds oil.</strong>',
+          cost: '$0 (monitor) to $2,500+ engine work',
+          source: 'NHTSA complaint database / VW TSBs' },
+        { title: '2.0T timing chain stretch', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The EA888 timing chain can stretch prematurely, especially with infrequent oil changes. Listen for rattle on cold start.',
+          check: '<strong>Cold-start with hood open. Any chain rattle lasting >3 seconds = walk away or get an inspection quote first.</strong>',
+          cost: '$800–$1,500 timing chain service',
+          source: 'VW EA888 Gen 3 pattern' },
+        { title: '3.6L VR6 — more reliable choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The VR6 is significantly smoother and more reliable than the 2.0T in this application. Uses premium fuel. No widespread failure patterns.',
+          check: '<strong>Standard oil and coolant check. Test smooth power delivery through all gears.</strong>',
+          cost: 'Premium fuel + routine maintenance',
+          source: 'VW VR6 reliability history' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Takata airbag inflator', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'Some Atlas VINs are within the Takata airbag recall scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
+          cost: 'Free dealer repair',
+          source: 'NHTSA Takata recall' }
+      ]},
+      { title: 'HVAC & Infotainment', items: [
+        { title: 'MIB2 infotainment freezing / reboot loops', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early Atlas MIB2 units could freeze or enter reboot loops. Software updates resolve most issues.',
+          check: '<strong>Test full infotainment restart cycle. Any hanging screen = request software update.</strong>',
+          cost: '$0 software update',
+          source: 'VW TSBs' },
+        { title: 'Rear HVAC zone reliability', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear climate zone actuators and vents on early builds had complaints. Test all three zones.',
+          check: '<strong>Test all three climate zones with a full heat-to-cool cycle.</strong>',
+          cost: '$200–$500',
+          source: 'Atlas HVAC pattern' }
+      ]},
+      { title: 'Third Row & Cargo', items: [
+        { title: 'Third-row seat fold/tumble mechanism', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test second-row fold-flat and third-row fold operation. Latches should click firmly.',
+          check: '<strong>Operate both second-row tumble-forward and third-row fold. All latches must click securely.</strong>',
+          cost: '$0–$200',
+          source: 'Standard 3-row check' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + oil change frequency', risk: 'high', riskLabel: 'High Risk',
+          desc: 'For the 2.0T engine specifically, oil change frequency matters enormously for timing chain and ring health. Prefer 5,000-mile intervals.',
+          check: '<strong>Request all records. 2.0T without records = price in $1,000–$2,000 risk premium.</strong>',
+          cost: 'n/a',
+          source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: 'Takata', description: 'Airbag inflator metal fragmentation risk', severity: 'Critical', remedy: 'Free dealer repair; check VIN at nhtsa.gov' }
+    ]
+  },
 
 };
 
-// ---------- AVAILABLE YMMT MENU (drives dropdowns) ----------
-// Includes vehicles we have full content for + Used Garage vehicles
-// that are "coming soon" — gives users a sense of breadth.
+
 const VEHICLE_MENU = {
   // [year]: { [make]: [ {model, trim, key} ] }
   // key matches CHECKLISTS keys for available content; absent = coming soon
   2022: {
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
-      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
+      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -10995,12 +11581,27 @@ const VEHICLE_MENU = {
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
+    ],
+    'Ford': [
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' }
+    ],
+    'Volkswagen': [
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ]
   },
   2021: {
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
-      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
+      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -11008,6 +11609,22 @@ const VEHICLE_MENU = {
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+    ],
+    'Hyundai': [
+      { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
+    ],
+    'Subaru': [
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
+    ],
+    'Ford': [
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' }
+    ],
+    'Volkswagen': [
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ]
   },
   2020: {
@@ -11027,12 +11644,16 @@ const VEHICLE_MENU = {
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
-      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
     ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
-      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
+      { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -11047,6 +11668,18 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
+    ],
+    'Kia': [
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
+    ],
+    'Subaru': [
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' }
+    ],
+    'Volkswagen': [
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ]
   },
   2019: {
@@ -11059,16 +11692,21 @@ const VEHICLE_MENU = {
     'Kia': [
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
-      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
     ],
     'Volkswagen': [
-      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 gen)', key: 'vw-jetta-2018' }
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 gen)', key: 'vw-jetta-2018' },
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ],
     'Toyota': [
-      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
     ],
     'Subaru': [
-      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' }
+      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
@@ -11082,14 +11720,16 @@ const VEHICLE_MENU = {
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
-      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
+      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
-      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
     ],
     'Ford': [
       { model: 'Edge', trim: 'SE / SEL / Titanium / ST (2nd gen)', key: 'ford-edge-2017' }
@@ -11112,6 +11752,9 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
     ]
   },
   2018: {
@@ -11124,13 +11767,16 @@ const VEHICLE_MENU = {
     'Kia': [
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
-      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
     ],
     'Volkswagen': [
-      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 first year)', key: 'vw-jetta-2018' }
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI (A7 first year)', key: 'vw-jetta-2018' },
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ],
     'Subaru': [
-      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' }
+      { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
@@ -11139,19 +11785,22 @@ const VEHICLE_MENU = {
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
     ],
     'Toyota': [
-      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
-      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
+      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
-      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' }
+      { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
     ],
     'Ford': [
       { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' }
@@ -11187,6 +11836,9 @@ const VEHICLE_MENU = {
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
     ]
   },
   2017: {
@@ -11199,13 +11851,15 @@ const VEHICLE_MENU = {
     'Kia': [
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
-      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
     ],
     'Volkswagen': [
       { model: 'Jetta', trim: 'S / SE / SEL / GLI', key: 'vw-jetta-2018' }
     ],
     'Subaru': [
-      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen ending)', key: null }
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen ending)', key: null },
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
@@ -11214,12 +11868,14 @@ const VEHICLE_MENU = {
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
     ],
     'Toyota': [
-      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'LS / LT / Premier (2nd gen ending)', key: null },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
-      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
+      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
@@ -11258,19 +11914,24 @@ const VEHICLE_MENU = {
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
     ]
   },
   2016: {
     'Kia': [
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
-      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' }
+      { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
     ],
     'Volkswagen': [
       { model: 'Jetta', trim: '1.4T S / SE / SE Sport / SEL', key: null }
     ],
     'Subaru': [
-      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen)', key: null }
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen)', key: null },
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
@@ -11279,11 +11940,13 @@ const VEHICLE_MENU = {
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
     ],
     'Toyota': [
-      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+      { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
     ],
     'Chevrolet': [
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
-      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' }
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
+      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
@@ -11331,14 +11994,19 @@ const VEHICLE_MENU = {
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'BMW': [
+      { model: 'X1', trim: 'xDrive28i', key: 'bmw-x1-2018' }
     ]
   },
   2015: {
     'Toyota': [
-      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' }
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
     ],
     'Subaru': [
-      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen XV)', key: null }
+      { model: 'Crosstrek', trim: '2.0i / Premium (1st gen XV)', key: null },
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' }
@@ -11571,7 +12239,12 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'CR-V', trim: '', key: null }
     ]
-  }
+  },
+  2023: {
+    'Volkswagen': [
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+    ]
+  },
 };
 
 // ---------- DOM ----------
