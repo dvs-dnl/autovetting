@@ -12708,6 +12708,364 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
+  },
+  'nissan-rogue-2021': {
+    year: 2021, make: 'Nissan', model: 'Rogue', trim: 'S / SV / SL / Platinum (3rd gen D14, 2021–present)',
+    engine: '1.5T VC-Turbo I3 (201 hp) or 2.5L QR25DE I4 (181 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 3rd-gen Rogue is a complete redesign and improvement over the 2nd gen. The base 2.5L QR25 is proven and reliable. The new 1.5T VC-Turbo variable-compression engine is innovative but too new for long-term reliability data — early reports show some oil consumption. The XTRONIC CVT has a better reputation than older Nissan CVTs. Main checks: VC-Turbo oil consumption on newer builds, CVT fluid service, and ProPilot Assist ADAS calibration.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine (VC-Turbo) / CVT' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: '1.5T VC-Turbo — innovative but watch for oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Nissan variable-compression engine adjusts compression ratio dynamically. Some early units reported oil consumption. Too new for established long-term failure rate.',
+          check: '<strong>Check dipstick level and color. Ask owner if they add oil between changes.</strong>',
+          cost: '$0–$2,000', source: 'Nissan VC-Turbo early reports' },
+        { title: '2.5L QR25 (base) — proven choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The naturally aspirated 2.5L is proven across many Nissan/Infiniti platforms.',
+          check: '<strong>Standard cold-start and oil check. No known failure modes.</strong>',
+          cost: 'Routine maintenance', source: 'Nissan QR25 reliability data' }
+      ]},
+      { title: 'CVT', items: [
+        { title: 'XTRONIC CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: '3rd-gen Rogue CVT is better than the 2nd gen but still requires fluid service at 30k miles.',
+          check: '<strong>Test smooth acceleration with no shudder. Request CVT fluid records.</strong>',
+          cost: '$200–$300 CVT fluid service', source: 'Nissan CVT service standard' }
+      ]},
+      { title: 'ProPilot Assist', items: [
+        { title: 'ProPilot Assist ADAS calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'ProPilot Assist (optional Level 2 driver assistance) uses front camera. Recalibration required after windshield replacement.',
+          check: '<strong>No ADAS warning lights. Confirm windshield has not been replaced without calibration.</strong>',
+          cost: '$0–$300 recalibration', source: 'Nissan ProPilot standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + CVT fluid history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT fluid is the single most important service item on this platform.',
+          check: '<strong>Request CVT fluid service records specifically.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'ford-explorer-2017': {
+    year: 2017, make: 'Ford', model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport (5th gen, 2011–2019)',
+    engine: '3.5L Ti-VCT V6 (290 hp), 2.3T EcoBoost I4 (280 hp), or 3.5L EcoBoost V6 Sport (365 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 5th-gen Explorer was a long-running and popular platform but had notable issues. The main problem is documented exhaust fume intrusion into the cabin on 2011–2017 models, which Ford addressed with a TSB but never issued a recall on. The 3.5L EcoBoost has Phase 1 and Phase 2 timing chain issues on early builds. The 2.3T EcoBoost is the more reliable choice for daily use. 2018–2019 refinements improved quality. Verify the exhaust/HVAC recall status carefully.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 1240, topComplaintArea: 'Engine / Exhaust intrusion / Cooling' },
+    sections: [
+      { title: 'Exhaust Fume Intrusion — Safety Issue', items: [
+        { title: 'Carbon monoxide / exhaust in cabin (2011–2017)', risk: 'critical', riskLabel: 'Critical — Verify Remedied',
+          desc: 'NHTSA investigated Ford Explorer for exhaust fumes entering the cabin through HVAC. Ford issued TSB 17-0064 addressing drainage and HVAC but no mandatory recall. This is a serious CO exposure risk.',
+          check: '<strong>Test HVAC on recirculate. Any exhaust smell with windows closed = do not purchase until dealer verifies TSB 17-0064 has been completed.</strong>',
+          cost: 'Free dealer TSB repair if completed; $0–$1,000 if not', source: 'NHTSA Explorer exhaust investigation / TSB 17-0064' }
+      ]},
+      { title: 'Engine — Timing Chain (3.5L EcoBoost)', items: [
+        { title: '3.5L EcoBoost timing chain (early builds)', risk: 'high', riskLabel: 'High Risk on pre-2016',
+          desc: '3.5L EcoBoost Explorers have documented timing chain stretch on Phase 1 engine builds (pre-2016 approximate). Cold-start rattle = chain worn.',
+          check: '<strong>Cold-start with hood open. Any chain rattle = budget $2,000–$3,500 for repair or walk away.</strong>',
+          cost: '$2,000–$3,500 timing chain service', source: 'Ford 3.5L EcoBoost chain pattern' },
+        { title: '2.3T EcoBoost — better choice for reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.3T is the more reliable engine option for daily drivers with fewer chain and cooling concerns.',
+          check: '<strong>Standard oil and cold-start check.</strong>',
+          cost: 'Routine maintenance', source: 'Ford 2.3T EcoBoost reliability' }
+      ]},
+      { title: 'Cooling System', items: [
+        { title: 'Coolant leak (3.5L EcoBoost and V6)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Water pump and radiator hoses are common failure points at 80k+ miles.',
+          check: '<strong>Inspect coolant reservoir level and hoses for seeping. Test cabin heat output at idle.</strong>',
+          cost: '$400–$900', source: 'Ford Explorer cooling pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'TSB 17-0064 completion + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'For 2011–2017 models, confirming the exhaust TSB was completed is as important as oil change records.',
+          check: '<strong>Request dealer TSB completion record and full service history.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'TSB 17-0064', description: 'Exhaust fume intrusion via HVAC — CO exposure risk', severity: 'Critical', remedy: 'Dealer TSB repair (not mandatory recall — verify completion)' }]
+  },
+  'cadillac-escalade-2021': {
+    year: 2021, make: 'Cadillac', model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV (5th gen T1XX, 2021–present)',
+    engine: '6.2L L87 V8 (420 hp) or 3.0L Duramax Diesel (277 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 5th-gen Escalade is a massive improvement over the 4th gen — OLED instrument cluster, air ride suspension, independent rear suspension, and a more refined interior. The 6.2L L87 V8 has DFM (Dynamic Fuel Management) which replaces AFM — more cylinders affected, potentially higher lifter risk. Diesel option is smooth and fuel-efficient. Air suspension compressor failure is the most common repair on used examples. Only buy with Cadillac CPO or extended warranty.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Air Suspension / Engine (DFM) / Electrical' },
+    sections: [
+      { title: 'Air Suspension', items: [
+        { title: 'MagneRide / air compressor failure', risk: 'high', riskLabel: 'High Risk at 50k+',
+          desc: 'The air ride suspension compressor is prone to failure, especially in cold climates. Symptoms: one corner sagging overnight, compressor running constantly.',
+          check: '<strong>Park overnight on level ground, check if vehicle sits level in the morning. Any corner low = compressor failing.</strong>',
+          cost: '$1,200–$2,500 air compressor replacement', source: 'Escalade air suspension pattern' }
+      ]},
+      { title: 'Engine', items: [
+        { title: '6.2L L87 DFM lifter risk', risk: 'high', riskLabel: 'High Risk at 80k+',
+          desc: 'DFM (10-cylinder deactivation pattern) creates even more lifter stress than AFM. The same tick-at-warm-idle failure pattern applies.',
+          check: '<strong>Warm engine fully, listen at idle for any persistent tick.</strong>',
+          cost: '$3,000–$6,000 lifter service', source: 'GM DFM pattern' },
+        { title: '3.0L Duramax Diesel — smooth but needs DEF', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Diesel is more efficient and smoother. Requires DEF fluid top-up every ~5k miles. No widespread failures.',
+          check: '<strong>Check DEF level. No smoke or emissions warning lights.</strong>',
+          cost: 'Diesel routine maintenance + DEF', source: 'GM Duramax 3.0 reliability' }
+      ]},
+      { title: 'OLED/Tech', items: [
+        { title: 'AKG audio / OLED screen system', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 38-inch OLED instrument cluster has been generally reliable but software issues affected early builds.',
+          check: '<strong>Test all display zones and confirm software is current.</strong>',
+          cost: '$0 OTA update', source: 'Cadillac OLED TSBs' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO / warranty status — essential on this vehicle', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Escalade repair bills are enormous out-of-warranty. CPO or a third-party warranty is almost mandatory for ownership cost management.',
+          check: '<strong>Verify CPO status or obtain extended warranty quote before purchase.</strong>',
+          cost: '$2,000–$4,000 extended warranty', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'vw-id4-2021': {
+    year: 2021, make: 'Volkswagen', model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S (1st gen, 2021–present)',
+    engine: 'Rear-wheel drive 201 hp (62 kWh) / 295 hp (82 kWh) or AWD 295 hp (82 kWh)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The ID.4 is VW Group's first mass-market electric SUV — built on the MEB platform, practical interior, and solid range. Early 2021–2022 US-built ID.4s had multiple software recalls and infotainment issues. VW has been aggressive with OTA updates. Main buyer checks: confirm all software recalls are closed, test infotainment, check 12V battery health (a common ID.4 weak point), and verify HV battery SoH.",
+    stats: { itemsToCheck: 9, recalls: 3, ownerComplaints: 380, topComplaintArea: 'Electrical / Software / 12V Battery' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'Multiple software / electrical recalls (2021–2022)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'ID.4 had multiple NHTSA recalls including defective rear defroster causing fire risk, software-related loss of regen braking, and infotainment defects.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Multiple open recalls on a 2021–2022 = seller has not maintained the vehicle properly.</strong>',
+          cost: 'Free dealer OTA/software repairs', source: 'NHTSA ID.4 recalls' }
+      ]},
+      { title: '12V Battery', items: [
+        { title: '12V auxiliary battery failure', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The ID.4 (like many modern EVs) uses a small 12V battery for low-voltage systems. VW sizes it undersized and these fail frequently, stranding the vehicle. This is the most common ID.4 repair.',
+          check: '<strong>Test 12V battery health at purchase (any battery tester works). Ask if it has been replaced.</strong>',
+          cost: '$250–$400 12V AGM battery replacement', source: 'ID.4 owner community / VW TSB' }
+      ]},
+      { title: 'HV Battery & Charging', items: [
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MEB platform batteries degrade slowly. Check displayed range vs EPA rating.',
+          check: '<strong>Check range at 100% charge vs EPA rated range. On 82 kWh models, rated range is 275-280 miles.</strong>',
+          cost: 'Free dealer SoH check', source: 'VW MEB battery standard' }
+      ]},
+      { title: 'Software & Infotainment', items: [
+        { title: 'Infotainment version — confirm latest', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early ID.4 software was buggy. OTA updates significantly improved UI and charging performance.',
+          check: '<strong>Test all infotainment functions. Check software version in settings.</strong>',
+          cost: '$0 OTA', source: 'VW ID.4 OTA history' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Multiple 2021-22', description: 'Rear defroster fire risk, regen braking loss, infotainment defects', severity: 'High', remedy: 'Free dealer OTA/hardware updates; verify at nhtsa.gov' }]
+  },
+  'ford-escape-2020': {
+    year: 2020, make: 'Ford', model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / Plug-in Hybrid (4th gen, 2020–present)',
+    engine: '1.5T EcoBoost I3 (181 hp), 2.0T EcoBoost I4 (250 hp), or 2.5L PHEV (209 hp combined)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 4th-gen Escape is a substantial redesign with available hybrid and PHEV options. The 1.5T 3-cylinder has documented oil leak issues at cylinder head/block junction on early builds — this was a significant warranty repair for Ford. The 2.0T is more reliable. PHEV buyers should verify all-electric range and battery health. 2022+ models have addressed most first-year concerns.",
+    stats: { itemsToCheck: 11, recalls: 3, ownerComplaints: 480, topComplaintArea: 'Engine (1.5T oil leak) / Electrical' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: '1.5T EcoBoost 3-cylinder — oil leak risk', risk: 'high', riskLabel: 'High Risk on 2020-2021',
+          desc: 'Ford acknowledged a cylinder head crack/oil leak issue on 2020–2021 1.5T EcoBoost 3-cylinder engines. Some required engine replacement under warranty. Check for oil seeps at block-to-head junction.',
+          check: '<strong>Inspect block/head junction area for oil seeps or staining. Ask for any engine-related warranty work history.</strong>',
+          cost: 'Free dealer repair if in warranty; $3,000–$6,000 out-of-warranty', source: 'Ford 1.5T EcoBoost cylinder head issue / NHTSA investigation' },
+        { title: '2.0T EcoBoost — better choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0T (SE Sport, Titanium) is the more reliable engine choice on this platform.',
+          check: '<strong>Standard oil and cold-start check. No widespread issues.</strong>',
+          cost: 'Routine maintenance', source: 'Ford 2.0T EcoBoost reliability' }
+      ]},
+      { title: 'PHEV (if equipped)', items: [
+        { title: 'PHEV battery SoH and charging', risk: 'low', riskLabel: 'Low Risk',
+          desc: '14.4 kWh PHEV battery provides ~37 miles all-electric. Verify charges and depletes normally.',
+          check: '<strong>Confirm PHEV charges on Level 1/2. Test EV mode engagement.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Ford PHEV standard' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Fuel system / engine recall check', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Multiple recalls on the 4th-gen Escape. Run VIN before purchase.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm all closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + warranty work history', risk: 'high', riskLabel: 'High Risk on 1.5T without',
+          desc: '1.5T engine history is the critical document. Any engine replacement under warranty = new engine, but also tells you the car had the problem.',
+          check: '<strong>Request Carfax and dealer service printout. Check for any engine-related repairs.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: '1.5T head crack', description: 'Cylinder head crack / oil leak on 2020-2021 1.5T EcoBoost', severity: 'High', remedy: 'Engine replacement under extended warranty on affected units' }]
+  },
+  'nissan-armada-2017': {
+    year: 2017, make: 'Nissan', model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve (2nd gen Y62, 2017–present)',
+    engine: '5.6L VK56 V8 (390 hp) with 7-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Armada is based on the Nissan Patrol Y62 — a substantial, body-on-frame full-size SUV. The 5.6L VK56 V8 is extremely reliable and proven across Titan trucks and QX80. Main buyer checks are HYDRAULIC MULTI-MODE 4WD service, transmission fluid, and Takata airbag recall status. No AFM/MDS cylinder deactivation — just a straightforward V8. Great value versus Sequoia or Expedition at comparable mileage.",
+    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 150, topComplaintArea: 'Minor electrical / Recall' },
+    sections: [
+      { title: 'Recall', items: [
+        { title: 'Takata airbag inflator — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: '2nd-gen Armada falls within Takata scope on certain VINs.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '5.6L VK56 V8 — very reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same engine as Titan truck and Infiniti QX80. Proven long-term reliability with no AFM/cylinder deactivation. Change oil every 5,000 miles.',
+          check: '<strong>Cold-start idle check. Smooth and quiet expected. No exhaust smoke.</strong>',
+          cost: 'Routine maintenance', source: 'Nissan VK56 reliability data' },
+        { title: '7-speed automatic — fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Reliable transmission. Change fluid every 30k miles especially with towing.',
+          check: '<strong>Test smooth shifts all gears and tow/haul mode.</strong>',
+          cost: '$150–$200 fluid service', source: 'Nissan drivetrain standard' }
+      ]},
+      { title: 'Towing & 4WD', items: [
+        { title: '4WD transfer case fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Transfer case fluid every 30k miles. Confirm service in records.',
+          check: '<strong>Engage 4-High on a safe road. Smooth engagement expected.</strong>',
+          cost: '$150–$250 transfer case service', source: 'Nissan 4WD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + towing history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Armadas are frequently used for towing. Request transmission fluid records and hitch wear.',
+          check: '<strong>Request oil change and transmission fluid records. Inspect hitch receiver for wear.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'acura-tlx-2021': {
+    year: 2021, make: 'Acura', model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD (3rd gen UB5, 2021–present)',
+    engine: '2.0T K20C4 VTEC Turbo I4 (272 hp) or 3.0T J30A Turbo V6 (355 hp, Type S)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen TLX is Acura's strongest sedan yet — purpose-built driver focus, Brembo brakes on A-Spec and above, and SH-AWD available. The 2.0T is a new engine and reliable; the Type S 3.0T is performance-oriented. Very young platform with no established failure modes. Main buyer checks: confirm all warranty work, SH-AWD fluid service, and infotainment (Google-based system that required early software updates).",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 80, topComplaintArea: 'Infotainment (early software) / Minor' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0T K20C4 — reliable new engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'New K20C4 turbocharged 2.0L is clean and reliable. No oil dilution concerns like 10th-gen Civic 1.5T.',
+          check: '<strong>Cold-start smooth idle. Check oil color and level.</strong>',
+          cost: 'Routine maintenance', source: 'Acura TLX reliability data' },
+        { title: '3.0T V6 Type S — excellent but complex', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Twin-turbo V6 is smooth and powerful. Higher maintenance cost expected at dealer.',
+          check: '<strong>Test boost delivery across all gears. No hesitation or smoke.</strong>',
+          cost: 'Higher maintenance cost at Acura dealer', source: 'Acura Type S data' }
+      ]},
+      { title: 'SH-AWD', items: [
+        { title: 'SH-AWD rear coupling fluid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SH-AWD rear diff fluid every 15–30k miles. Confirm in service records.',
+          check: '<strong>Tight parking lot turn — no vibration or binding expected.</strong>',
+          cost: '$150–$300 fluid service', source: 'Acura SH-AWD service standard' }
+      ]},
+      { title: 'Infotainment', items: [
+        { title: 'Google Android-based infotainment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early TLX infotainment had slow response and required OTA updates. Test responsiveness at viewing.',
+          check: '<strong>Test all screen zones and CarPlay/Android Auto pairing. Any persistent lag = update needed.</strong>',
+          cost: '$0 OTA update', source: 'Acura TLX infotainment TSBs' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + warranty status', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Warranty status and basic service records are the main checks.',
+          check: '<strong>Verify remaining Acura warranty coverage at dealer.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'chevy-trailblazer-2021': {
+    year: 2021, make: 'Chevrolet', model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier (1st gen, 2021–present)',
+    engine: '1.2T I3 (137 hp) or 1.3T I3 (155 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Trailblazer is Chevrolet's subcompact crossover built on GM VSS-S platform shared with Buick Encore GX. The small turbocharged 3-cylinder engines are new and require careful oil change adherence. The 1.3T is the better choice with more power and torque. No widespread failure modes established. Main buyer checks: oil change frequency on the turbo engines, CVT or 9-speed fluid service, and confirming any open NHTSA recalls.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.3T — preferred engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 1.3T produces adequate power for daily driving. No widespread issues. Change oil every 5,000 miles.',
+          check: '<strong>Standard cold-start check. Smooth idle, no turbo smoke.</strong>',
+          cost: 'Routine maintenance', source: 'GM 1.3T Trailblazer data' },
+        { title: '1.2T — adequate but sluggish', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 1.2T base engine is underpowered for highway use but mechanically reliable.',
+          check: '<strong>Test highway merging — 1.2T is noticeably slow under heavy load.</strong>',
+          cost: 'Routine maintenance', source: 'GM 1.2T data' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: 'CVT or 9-speed fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Fluid service every 30k miles regardless of transmission type.',
+          check: '<strong>Test smooth acceleration. No shudder or hunting.</strong>',
+          cost: '$150–$200 fluid service', source: 'GM transmission service standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Turbocharged small engines are sensitive to oil change intervals. Confirm frequency.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'kia-seltos-2021': {
+    year: 2021, make: 'Kia', model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo (1st gen SP2n, 2021–present)',
+    engine: '2.0L MPI I4 (146 hp) or 1.6T GDI I4 (175 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Seltos is Kia's subcompact crossover — more premium feeling than Venue, available 1.6T turbo, and excellent safety ratings. No Theta II concerns on either engine. The 1.6T with DCT can experience shudder at low speeds — same pattern as Kona. The 2.0L with IVT is simpler and more reliable for everyday use. Very clean platform with minimal failure history.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 65, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L IVT — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally aspirated 2.0L with Kia IVT (CVT-style). No known failure modes. Great for everyday drivers.',
+          check: '<strong>Standard cold-start and smooth acceleration test.</strong>',
+          cost: 'Routine maintenance', source: 'Kia 2.0L IVT reliability' },
+        { title: '1.6T DCT shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Gamma II 1.6T paired with 7-speed DCT can shudder at 15–25 mph. Same as Kona 1.6T — software updates resolve most cases.',
+          check: '<strong>Test slow traffic behavior. Any shudder = request DCT software update from dealer.</strong>',
+          cost: '$0 software; $2,000+ if clutch worn', source: 'Kia DCT TSB pattern' }
+      ]},
+      { title: 'Safety', items: [
+        { title: 'Kia Drive Wise ADAS', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Drive Wise (FCA, LKA, SCC) standard on S trim and above. Verify no warning lights.',
+          check: '<strong>Confirm no ADAS warning lights on dash.</strong>',
+          cost: '$0', source: 'Kia standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Basic service history check.',
+          check: '<strong>Request oil change records and recall check at nhtsa.gov.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-corolla-cross-2022': {
+    year: 2022, make: 'Toyota', model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD (1st gen, 2022–present)',
+    engine: '2.0L M20A-FKS Dynamic Force I4 (169 hp) with CVT',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Corolla Cross is Toyota's entry into the subcompact crossover segment — Corolla drivetrain in a slightly taller body. The 2.0L M20A-FKS is the same reliable engine found in the Corolla sedan. Toyota Safety Sense 2.0 standard on all trims. Very few complaints for a first-year model. Main checks are CVT fluid service and ADAS calibration. Excellent first used SUV choice at an approachable price.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 40, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0L M20A-FKS — proven reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same engine as 11th-gen Corolla. No established failure modes.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Toyota M20A reliability data' },
+        { title: 'CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Toyota CVT with fluid service every 30k miles.',
+          check: '<strong>Smooth acceleration throughout speed range. No belt noise.</strong>',
+          cost: '$150–$200 CVT service', source: 'Toyota CVT standard' }
+      ]},
+      { title: 'Toyota Safety Sense 2.0', items: [
+        { title: 'TSS-2.0 camera calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'TSS-2.0 standard all trims. Check for calibration warnings after any windshield work.',
+          check: '<strong>Confirm no ADAS warning lights on dash.</strong>',
+          cost: '$0–$300 calibration', source: 'Toyota TSS-2.0 standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle with simple drivetrain. Minimal concerns.',
+          check: '<strong>Request oil and CVT fluid records. Run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
   }
 
 };
@@ -12722,7 +13080,8 @@ const VEHICLE_MENU = {
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
-      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' }
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -12742,24 +13101,28 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
-      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' }
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV / ST-Line', key: 'ford-escape-2020' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' },
       { model: 'X7', trim: 'xDrive40i / xDrive50i / M60i', key: 'bmw-x7-2019' }
     ],
     'Volkswagen': [
-      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
+      { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S', key: 'vw-id4-2021' }
     ],
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
-      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
     ],
     'Cadillac': [
-      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' }
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
@@ -12769,7 +13132,8 @@ const VEHICLE_MENU = {
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
     ],
     'Kia': [
-      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' }
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -12785,6 +13149,10 @@ const VEHICLE_MENU = {
     ],
     'Subaru': [
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
+    ],
+    'Nissan': [
+      { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ]
   },
   2021: {
@@ -12814,24 +13182,28 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'Ford': [
-      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' }
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' },
       { model: 'X7', trim: 'xDrive40i / xDrive50i / M50i', key: 'bmw-x7-2019' }
     ],
     'Volkswagen': [
-      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
+      { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro', key: 'vw-id4-2021' }
     ],
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
-      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
     ],
     'Cadillac': [
-      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' }
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
@@ -12841,7 +13213,9 @@ const VEHICLE_MENU = {
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
     ],
     'Nissan': [
-      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
+      { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -12879,7 +13253,8 @@ const VEHICLE_MENU = {
       { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
     ],
     'Ford': [
-      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' }
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
@@ -12903,7 +13278,8 @@ const VEHICLE_MENU = {
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
-      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -12913,7 +13289,8 @@ const VEHICLE_MENU = {
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ],
     'Kia': [
-      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
+      { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' },
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
     ],
     'Subaru': [
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
@@ -12946,7 +13323,8 @@ const VEHICLE_MENU = {
   2019: {
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
-      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -12973,7 +13351,8 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'Ford': [
-      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13030,7 +13409,8 @@ const VEHICLE_MENU = {
   2018: {
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
-      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -13050,7 +13430,8 @@ const VEHICLE_MENU = {
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
-      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13120,7 +13501,8 @@ const VEHICLE_MENU = {
   2017: {
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
-      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -13139,7 +13521,8 @@ const VEHICLE_MENU = {
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
-      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+      { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13212,7 +13595,8 @@ const VEHICLE_MENU = {
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
-      { model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
+      { model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' },
@@ -13289,7 +13673,8 @@ const VEHICLE_MENU = {
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Ford': [
-      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' }
+      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' }
     ],
     'Nissan': [
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -13362,7 +13747,9 @@ const VEHICLE_MENU = {
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' }
     ],
     'Acura': [
-      { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' }
+      { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -13564,6 +13951,12 @@ const VEHICLE_MENU = {
     ],
     'Chrysler': [
       { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' }
+    ],
+    'Cadillac': [
+      { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' }
+    ],
+    'Volkswagen': [
+      { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S', key: 'vw-id4-2021' }
     ]
   },
     'Ford': [
@@ -13573,7 +13966,8 @@ const VEHICLE_MENU = {
     'Kia': [
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
-      { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Pro / Hybrid / PHEV', key: 'kia-sportage-2023' }
+      { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Pro / Hybrid / PHEV', key: 'kia-sportage-2023' },
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
     ],
     'Hyundai': [
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
@@ -13582,7 +13976,8 @@ const VEHICLE_MENU = {
     ],
     'Toyota': [
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
-      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' }
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -13610,19 +14005,40 @@ const VEHICLE_MENU = {
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' }
     ],
+    'Nissan': [
+      { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
+      { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' }
+    ],
+    'Ford': [
+      { model: 'Escape', trim: 'Active / ST-Line / ST-Line Select / Platinum / PHEV', key: 'ford-escape-2020' }
+    ],
+    'Acura': [
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
+    ],
+    'Kia': [
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
+    ],
+    'Toyota': [
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' }
+    ],
   2023: {
     'Volkswagen': [
-      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+      { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
+      { model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S', key: 'vw-id4-2021' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
-      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / ZR2 / High Country', key: 'chevy-silverado-2022' }
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / ZR2 / High Country', key: 'chevy-silverado-2022' },
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
-      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' }
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
