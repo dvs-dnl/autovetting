@@ -11968,6 +11968,381 @@ const CHECKLISTS = {
     ],
     recalls: [{ campaign: '19V-243', description: 'Fuel tank vent — fuel leak risk in crash on select 2018-2019 JL', severity: 'High', remedy: 'Free dealer repair' }]
   },
+  'ford-maverick-2022': {
+    year: 2022, make: 'Ford', model: 'Maverick', trim: 'XL / XLT / Lariat (1st gen, 2022–present)',
+    engine: '2.5L Atkinson-cycle Hybrid I4 (191 hp combined, standard) or 2.0T EcoBoost I4 (250 hp, optional)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Maverick is a genuinely clever compact truck — standard hybrid on XL/XLT delivers 42 mpg city, making it the most fuel-efficient truck ever sold. The standard hybrid drivetrain has no reliability concerns (Toyota-licensed design). The optional 2.0T EcoBoost trades fuel economy for towing capacity and is solid. First-year 2022 models had some minor quality complaints; 2023+ are better. Very high demand makes these hold value well — inspect carefully before paying asking price.",
+    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 220, topComplaintArea: 'Body / Minor quality (2022)' },
+    sections: [
+      { title: 'Hybrid Drivetrain', items: [
+        { title: 'Standard 2.5L FHEV — no known issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Ford licensed the hybrid system concept from Toyota-tech for this application. CVT-style eCVT. No chronic failure modes reported. Battery health is low-concern on these young vehicles.',
+          check: '<strong>Confirm EV mode engages at low speeds. No HV battery warnings on dash.</strong>',
+          cost: 'Routine maintenance', source: 'Ford Maverick hybrid reliability data' },
+        { title: '2.0T EcoBoost (optional) — solid but thirstier', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0T trades the hybrid economy for more towing (4,000 lb vs 2,000 lb). No widespread issues. Change oil every 5,000 miles.',
+          check: '<strong>Standard turbo check. No blue smoke at startup or under load.</strong>',
+          cost: 'Routine maintenance', source: 'Ford 2.0T EcoBoost reliability' }
+      ]},
+      { title: 'Body & Bed Quality', items: [
+        { title: '2022 first-year build quality', risk: 'monitor', riskLabel: 'Monitor on 2022',
+          desc: 'Early 2022 Mavericks had complaints about panel gaps, tailgate alignment, and minor interior fit issues. 2023+ substantially improved.',
+          check: '<strong>Check all panel gaps including tailgate fit and frunk (front trunk) lid alignment.</strong>',
+          cost: '$0–$300 dealer adjustment', source: 'Ford Maverick owner community' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Rear axle bolt recall (select 2022–2023)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'NHTSA recall 22V-899: some 2022–2023 Mavericks had improperly torqued rear axle bolts that could loosen and cause loss of control.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 22V-899' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicles with simple hybrid system — low concern overall.',
+          check: '<strong>Request oil change records. Hybrid system needs no special service beyond oil changes.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: '22V-899', description: 'Rear axle bolts insufficiently torqued — vehicle control risk', severity: 'High', remedy: 'Free dealer torque check and correction' }]
+  },
+  'kia-ev6-2022': {
+    year: 2022, make: 'Kia', model: 'EV6', trim: 'Light / Standard / Standard Plus / Wind / GT-Line / GT (1st gen, 2022–present)',
+    engine: 'Rear-wheel-drive 168 hp (Standard) / 225 hp (Long Range) or AWD 320 hp — 58 kWh or 77.4 kWh battery',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The EV6 is one of the best EVs in the segment — 800V architecture enables ultra-fast 350 kW charging (10–80% in under 18 minutes), exceptional driving dynamics, and a spacious interior on the E-GMP platform shared with the Hyundai Ioniq 5. No widespread battery or drivetrain failures on used examples. Main buyer checks: software version (OTA updates are frequent), confirm 400V vs 800V charging compatibility, and battery state of health.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Software / Infotainment (minor)' },
+    sections: [
+      { title: 'Battery & Charging', items: [
+        { title: 'HV battery state of health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Request a battery health check at a Kia dealer — the 77.4 kWh Long Range battery should show >90% SoH on low-mileage examples. Degradation is typically slow on E-GMP.',
+          check: '<strong>Check displayed range at 100% charge vs rated range. Any >15% deficit on a sub-50k example = investigate.</strong>',
+          cost: 'Free dealer SoH test', source: 'E-GMP battery health standard' },
+        { title: '800V ultra-fast charging — verify hardware', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'EV6 supports 800V charging natively. The included ICCU also allows 400V charging via voltage conversion. Both work without issue.',
+          check: '<strong>Test CCS Combo charging port condition — no corrosion or damaged pins.</strong>',
+          cost: 'n/a', source: 'Kia EV6 charging standard' }
+      ]},
+      { title: 'Software & Infotainment', items: [
+        { title: 'OTA updates — confirm current', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'EV6 receives frequent OTA updates that fix range estimates, charging curves, and infotainment bugs. Confirm vehicle is on latest software.',
+          check: '<strong>Check Software Version in Settings. Ask if all OTA updates have been accepted.</strong>',
+          cost: '$0 OTA', source: 'Kia EV6 OTA history' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Charging relay recall (select 2022)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Some 2022 EV6 models were recalled for a high-voltage battery charging relay that could overheat.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA EV6 recall' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Charging history — DC fast charge frequency', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Heavy reliance on DC fast charging (daily) can accelerate battery degradation slightly. Ask about typical charging behavior.',
+          check: '<strong>Ask if owner primarily used Level 2 home charging or frequent DCFC. Heavy DCFC use = check SoH more carefully.</strong>',
+          cost: 'n/a', source: 'EV battery management standard' }
+      ]}
+    ],
+    recalls: []
+  },
+  'hyundai-ioniq6-2023': {
+    year: 2023, make: 'Hyundai', model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD (1st gen, 2023–present)',
+    engine: 'RWD 149 hp (53 kWh) / 225 hp (77.4 kWh) or AWD 320 hp — 800V architecture',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The IONIQ 6 is the aerodynamic sedan sibling of the IONIQ 5, sharing E-GMP's 800V architecture. It holds the segment record for highway efficiency (140 MPGe on some trims). Very young product with no widespread issues. Main buyer checks are battery SoH, confirming OTA software updates, and ADAS system calibration (windshield-mounted camera must be dealer-recalibrated if windshield was replaced).",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 40, topComplaintArea: 'Minimal — very new vehicle' },
+    sections: [
+      { title: 'Battery & Range', items: [
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'E-GMP battery degradation is excellent on young examples. Verify full-charge range vs EPA rating.',
+          check: '<strong>Check displayed range at 100% against EPA rated range for the specific RWD/AWD variant. Any deficit >15% on <30k miles = inspect.</strong>',
+          cost: 'Free dealer SoH check', source: 'E-GMP battery standard' }
+      ]},
+      { title: 'ADAS & Safety', items: [
+        { title: 'Highway Driving Assist 2 camera calibration', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Windshield camera calibration is required after any windshield replacement. Verify no ADAS warning lights.',
+          check: '<strong>Confirm no ADAS lights on dash. Ask if windshield has ever been replaced.</strong>',
+          cost: '$200–$400 recalibration if needed', source: 'Hyundai ADAS standard' }
+      ]},
+      { title: 'Charging', items: [
+        { title: 'CCS port and ICCU health', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Inspect CCS port for corrosion or damage. ICCU (onboard charger) converts 400V to 800V seamlessly.',
+          check: '<strong>Inspect CCS port. Test Level 2 charging if possible before purchase.</strong>',
+          cost: 'n/a', source: 'Standard EV check' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'OTA software version + service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Very new car. Confirm OTA updates current and basic maintenance (cabin filter, washer fluid) done.',
+          check: '<strong>Check software version in Settings and confirm no pending updates.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-tundra-2022': {
+    year: 2022, make: 'Toyota', model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / 1794 / TRD Pro / Capstone (3rd gen, 2022–present)',
+    engine: '3.5L Twin-Turbo V6 iForce MAX (348 hp, or 437 hp Hybrid)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 3rd-gen Tundra is a complete redesign — new twin-turbo V6 replaces the legendary 5.7L V8, TNGA-F platform, and available iForce MAX hybrid. Early 2022 production had a significant fuel injector recall (22V-715) and some turbo seal reports. The iForce MAX hybrid system is Toyota-developed and expected to be durable long-term but is very new. Strong buy IF the injector recall is confirmed closed and the turbo system shows no seals. 2023+ models have improved quality.",
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 310, topComplaintArea: 'Engine / Fuel System (recall-related)' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'Fuel injector recall (22V-715) — engine stall risk', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Toyota recalled certain 2022 Tundras for fuel injectors that could leak internally, causing rough running, misfires, and potential engine stall. One of the largest Tundra recalls.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. 22V-715 must be confirmed closed before purchase.</strong>',
+          cost: 'Free dealer repair (injector replacement)', source: 'NHTSA recall 22V-715' },
+        { title: 'Transmission fluid over-fill recall (22V-867)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Some 2022 Tundras had transmission fluid over-filled at the factory, risking seal damage and fluid leaks.',
+          check: '<strong>Confirm 22V-867 is closed at nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 22V-867' }
+      ]},
+      { title: 'Twin-Turbo V6 Health', items: [
+        { title: 'Turbo seals and boost — early units', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some early 2022 Tundra owners reported oil consumption and turbo-related issues. 2023+ builds largely resolved these.',
+          check: '<strong>Check dipstick level and condition. Blue smoke at startup or under load = turbo seal concern.</strong>',
+          cost: '$1,500–$4,000 turbo service if needed', source: 'Toyota Tundra 3rd gen pattern' },
+        { title: 'Cold-start behavior', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Twin-turbo V6 idles smoothly when healthy. Any rough idle or hesitation at startup = investigate.',
+          check: '<strong>Cold-start from true cold. Smooth idle within 15 seconds expected.</strong>',
+          cost: 'n/a', source: 'Toyota standard' }
+      ]},
+      { title: 'iForce MAX Hybrid (if equipped)', items: [
+        { title: 'HV battery — very new, no established failure pattern', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'iForce MAX uses a 1.87 kWh NiMH battery. No established failure modes on this young platform.',
+          check: '<strong>Confirm no HV warning lights. Test electric motor assist at low-speed acceleration.</strong>',
+          cost: 'n/a', source: 'Toyota iForce MAX reliability (new platform)' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Both recall completions + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Multiple recalls on 2022 make documentation essential for this model year.',
+          check: '<strong>Request recall completion paperwork and oil change records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '22V-715', description: 'Fuel injector internal leak — rough running and engine stall risk', severity: 'Critical', remedy: 'Free dealer injector replacement' },
+      { campaign: '22V-867', description: 'Transmission fluid over-filled — seal damage risk', severity: 'High', remedy: 'Free dealer fluid level correction' }
+    ]
+  },
+  'volvo-xc40-2019': {
+    year: 2019, make: 'Volvo', model: 'XC40', trim: 'Momentum / R-Design / Inscription (1st gen, 2019–present)',
+    engine: '2.0T Drive-E T4 I4 (187 hp) or T5 I4 (248 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The XC40 is Volvo's entry luxury compact SUV — excellent safety ratings, well-designed interior, and modern Drive-E four-cylinder powertrains. Main buyer risks are the DCT/transmission shudder on T4 models, oil consumption on some early T5 units, and — critically — Volvo's expensive dealership maintenance requirements. Deferred maintenance on a Volvo compounds fast. Only buy with verified Volvo service history.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 250, topComplaintArea: 'Transmission / Electrical' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'T5 2.0T oil consumption (early units)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Some early T5-powered XC40s had oil consumption complaints. Volvo updated piston rings. Check dipstick.',
+          check: '<strong>Check dipstick color and level. Any >1 qt per 3,000 miles = concern.</strong>',
+          cost: '$0–$2,000', source: 'Volvo T5 pattern / TSBs' },
+        { title: '8-speed Aisin automatic (T5)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Aisin 8AT is reliable. Change fluid every 40k miles.',
+          check: '<strong>Test smooth shifts all gears including kickdown.</strong>',
+          cost: '$200–$300 fluid service', source: 'Aisin 8AT standard' },
+        { title: 'DCT on T4 — shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'T4 models use a 7-speed DCT that can shudder at low speed. Software updates and clutch fluid service address most cases.',
+          check: '<strong>Test 15–25 mph light throttle engagement for shudder.</strong>',
+          cost: '$0 fluid/software; $2,000+ if clutch worn', source: 'Volvo XC40 T4 DCT pattern' }
+      ]},
+      { title: 'Maintenance Cost Warning', items: [
+        { title: 'Volvo dealer service requirement', risk: 'high', riskLabel: 'High Risk without records',
+          desc: 'Volvo maintenance at a dealer averages $700–$1,200 per service interval. Buyers who used non-Volvo shops can void warranties and miss platform-specific TSBs.',
+          check: '<strong>Request all Volvo dealer service printouts. Gap in records = factor $1,000–$2,000 into offer for catch-up maintenance.</strong>',
+          cost: '$700–$1,200 per service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Electrical & Tech', items: [
+        { title: 'Sensus Connect infotainment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sensus can be slow and freeze on older software. OTA updates via Volvo Cars app. Test responsiveness.',
+          check: '<strong>Test all touchscreen functions. Any persistent lag = request software update.</strong>',
+          cost: '$0 OTA update', source: 'Volvo Sensus TSBs' }
+      ]}
+    ],
+    recalls: []
+  },
+  'audi-q3-2019': {
+    year: 2019, make: 'Audi', model: 'Q3', trim: 'Premium / Premium Plus / Prestige (2nd gen 8U/F3, 2019–present)',
+    engine: '2.0T TFSI EA888 I4 (184 hp) with 8-speed automatic',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen Q3 is a well-sized entry luxury crossover — better proportioned than its predecessor, with a much-improved interior. The EA888 2.0T is a proven engine across VW Group. Main risks: timing chain rattle from oil neglect, oil consumption (same EA888 pattern as Q5/Atlas), and Audi maintenance costs. Only buy with documented Audi/VAG-certified shop history.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine / Oil (maintenance-related)' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: 'EA888 2.0T timing chain', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same Gen 3 EA888 as Atlas and Q5. Timing chain stretches with infrequent oil changes. Cold-start rattle = problem.',
+          check: '<strong>Cold-start hood open. Any chain rattle lasting >3 seconds = negotiate or walk.</strong>',
+          cost: '$800–$1,500', source: 'VW EA888 Gen 3 pattern' },
+        { title: 'Oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EA888 can consume 1 qt per 2,000–3,000 miles on neglected units. Check dipstick.',
+          check: '<strong>Check dipstick level immediately at viewing.</strong>',
+          cost: '$0–$2,500', source: 'VW EA888 consumption pattern' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '8-speed Aisin automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Reliable transmission. Change fluid every 40k miles. Smooth shifts expected.',
+          check: '<strong>Test all driving scenarios including kickdown.</strong>',
+          cost: '$200–$300 fluid service', source: 'Aisin 8AT standard' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'Audi service records — essential', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Audi services run $600–$1,200 per interval. An unserviced Q3 needs significant catch-up. EA888 is especially maintenance-sensitive.',
+          check: '<strong>Request all VAG-authorized shop records. No records = price in $1,500–$2,500 deferred maintenance.</strong>',
+          cost: '$600–$1,200 per service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'MMI infotainment / virtual cockpit', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MIB2 or MIB3 MMI system. Test responsiveness and CarPlay.',
+          check: '<strong>Test full infotainment cycle and pairing.</strong>',
+          cost: '$0 software update', source: 'Standard check' }
+      ]}
+    ],
+    recalls: []
+  },
+  'mercedes-gla-2020': {
+    year: 2020, make: 'Mercedes-Benz', model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC (2nd gen H247, 2020–present)',
+    engine: '2.0T M260 I4 (221 hp) with 8-speed DCT (8G-DCT)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen GLA (H247) is a significant improvement over the first gen — proper subcompact crossover proportions, MBUX infotainment, and the M260 2.0T engine. Main buyer risks: the 8G-DCT dual-clutch transmission can shudder at low speeds (known issue); oil leaks from the M260 valve cover at high mileage; and Mercedes maintenance costs. Only buy with complete Mercedes-Benz Certified service records.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 190, topComplaintArea: 'Transmission / Electrical' },
+    sections: [
+      { title: 'Transmission', items: [
+        { title: '8G-DCT shudder at low speed', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The Mercedes 8G-DCT dual-clutch transmission in GLA 250 is known for shudder and jerkiness at 15–25 mph during light throttle engagement. Software and mechatronic unit updates address some cases; severe cases need TCU replacement.',
+          check: '<strong>Test slow city driving at 15–25 mph. Any shudder or jerk = factor into offer. Request TCU software update history.</strong>',
+          cost: '$0 software; $2,000–$5,000 mechatronic unit', source: 'Mercedes 8G-DCT pattern' }
+      ]},
+      { title: 'Engine', items: [
+        { title: 'M260 2.0T valve cover leak', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Plastic valve covers on M260 can develop oil leaks at 60k+ miles.',
+          check: '<strong>Inspect valve cover area for oil seeps with warm engine.</strong>',
+          cost: '$400–$700', source: 'Mercedes M260 pattern' },
+        { title: 'Oil change frequency', risk: 'high', riskLabel: 'High Risk without records',
+          desc: 'Mercedes specifies 10,000-mile oil changes but the turbo benefits from shorter 5,000–7,500-mile intervals.',
+          check: '<strong>Request all MB service records.</strong>',
+          cost: '$800–$1,500 per MB service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'MBUX & Technology', items: [
+        { title: 'MBUX infotainment — generally reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'MBUX is one of the better luxury infotainment systems. Test "Hey Mercedes" and all touch/physical controls.',
+          check: '<strong>Test full infotainment and CarPlay/Android Auto pairing.</strong>',
+          cost: '$0', source: 'Standard check' }
+      ]}
+    ],
+    recalls: []
+  },
+  'lincoln-corsair-2020': {
+    year: 2020, make: 'Lincoln', model: 'Corsair', trim: 'Standard / Reserve / Grand Touring (1st gen, 2020–present)',
+    engine: '2.0T EcoBoost I4 (250 hp), 2.3T EcoBoost I4 (295 hp), or 2.5L PHEV (261 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Corsair (formerly MKC) is Lincoln's entry luxury crossover on the Ford Escape platform. Good value vs European rivals. The 2.0T EcoBoost is the standard proven choice; the Grand Touring PHEV adds EV range for commuters. Main risks: 2.0T fuel injector issues on some early builds, and SYNC4 infotainment bugs resolved via updates. Well-maintained Corsairs are smooth, comfortable daily drivers at a fair price.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Electrical / Infotainment (minor)' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0T EcoBoost — well-proven', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The Gen 3 2.0T EcoBoost in the Corsair is mature and reliable. Change oil every 5,000 miles for turbo longevity.',
+          check: '<strong>Cold-start: smooth idle, no smoke. Check oil color and level.</strong>',
+          cost: 'Routine maintenance', source: 'Ford 2.0T EcoBoost reliability' },
+        { title: 'Grand Touring PHEV battery (if equipped)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The PHEV uses a 14.4 kWh battery for up to 28 miles of EV range. Verify battery charges and depletes normally.',
+          check: '<strong>Confirm PHEV charges on Level 1/2. Test EV-only mode engagement.</strong>',
+          cost: 'Free dealer battery check', source: 'Lincoln GT PHEV standard' }
+      ]},
+      { title: 'Infotainment', items: [
+        { title: 'SYNC4 with Lincoln Phone as Key', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'SYNC4 is generally reliable. Test Phone as Key and OTA update status.',
+          check: '<strong>Test all infotainment features and wireless connectivity.</strong>',
+          cost: '$0 OTA update', source: 'Lincoln SYNC4 standard' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Fuel injector recall (select 2020–2021)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Some 2020–2021 Corsairs were recalled for fuel injectors prone to fracture, which can cause engine fire.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Ford/Lincoln fuel injector recall' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Well-maintained Corsairs are straightforward. Records verify recall completion and oil change frequency.',
+          check: '<strong>Request all service records and recall completion paperwork.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Fuel injector', description: 'Fuel injector fracture — engine fire risk on select 2020-2021', severity: 'High', remedy: 'Free dealer injector replacement' }]
+  },
+  'chevy-silverado-2022': {
+    year: 2022, make: 'Chevrolet', model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country (T1XX, 2019–present)',
+    engine: '2.7T I4 (310 hp), 5.3L V8 EcoTec3 (355 hp), 6.2L V8 EcoTec3 (420 hp), or 3.0L Duramax diesel (277 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The T1XX-platform Silverado (2019+) is a significant upgrade from the K2XX. The 2.7T is surprisingly capable for daily use; the 5.3L V8 is the workhorse choice. AFM (Active Fuel Management) on the V8s can cause lifter failures on extended highway use — same pattern as Colorado and Suburban. The L87 6.2L is the standout but commands a price premium. Well-maintained T1XX Silverados are strong used truck buys.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 380, topComplaintArea: 'Engine (AFM lifters) / Electrical' },
+    sections: [
+      { title: 'AFM Lifter Failure (V8 models)', items: [
+        { title: '5.3L / 6.2L AFM lifter failure', risk: 'high', riskLabel: 'High Risk on high-mileage V8',
+          desc: 'Active Fuel Management (cylinder deactivation) causes accelerated lifter wear on sustained highway driving at 55–75 mph. Symptoms: AFM tick or knock after warm-up. Very common failure at 80k–120k miles.',
+          check: '<strong>Warm engine fully, then listen at idle for a ticking/knocking sound. Any persistent tick = AFM lifter damage possible. Ask if AFM has been disabled.</strong>',
+          cost: '$2,500–$5,000 lifter replacement + DOD delete', source: 'GM AFM/DOD lifter failure pattern' },
+        { title: 'AFM disable tune or Range AFM device', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Many informed owners disable AFM with a Range AFM Disabler ($60) or tuner. A car with AFM disabled and documented = significantly lower lifter risk.',
+          check: '<strong>Ask if seller has disabled AFM. OBD port dongle or tune = good sign for lifter longevity.</strong>',
+          cost: '$60 Range AFM Disabler (preventive)', source: 'GM V8 owner best-practice' }
+      ]},
+      { title: '2.7T I4 Turbo', items: [
+        { title: '2.7T (L3B) — capable choice for lighter use', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The turbocharged 2.7T is smooth and torquey. No AFM issues. Best for buyers not doing heavy towing.',
+          check: '<strong>Standard oil and cold-start check. No turbo smoke expected.</strong>',
+          cost: 'Routine maintenance', source: 'GM L3B reliability data' }
+      ]},
+      { title: 'Recall & Electrical', items: [
+        { title: 'Recall check (seat belt / electrical)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'T1XX Silverados have had various recalls. Run VIN to confirm all are closed.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + AFM history', risk: 'high', riskLabel: 'High Risk on V8 without',
+          desc: 'On V8 models, oil change frequency and AFM usage are the key predictors of lifter health.',
+          check: '<strong>Request all oil change records. Ask explicitly about AFM disable history.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'subaru-forester-2019': {
+    year: 2019, make: 'Subaru', model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring (5th gen SK, 2019–2024)',
+    engine: '2.5L FB25D DOHC I4 (182 hp) Naturally Aspirated',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 5th-gen Forester (SK) is the cleanest Forester yet — naturally aspirated only (no XT turbo), CVT standard on all trims, and excellent EyeSight driver assistance standard. The 2.5L FB25D eliminated the head gasket issue of the older EJ-series engines. Main checks: CVT fluid service history, any oil consumption on high-mileage examples, and EyeSight camera calibration after windshield work. Very strong family SUV buy.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FB25D 2.5L — no head gasket issues (unlike older EJ)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The FB25D replaced the problematic EJ253 and does not share the head gasket failure pattern. Clean engine with no widespread failure modes.',
+          check: '<strong>Check coolant level and color. White exhaust on startup = concern. Smooth cold-start idle expected.</strong>',
+          cost: 'Routine maintenance', source: 'Subaru FB25D reliability data' },
+        { title: 'Lineartronic CVT — fluid service critical', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Subaru\'s CVT is reliable when fluid is changed every 30k miles. At 60k+ with no fluid change, whining and eventual failure risk increases.',
+          check: '<strong>Test CVT: no whining or shudder under acceleration. Ask for CVT fluid change records.</strong>',
+          cost: '$200–$300 CVT fluid service; $3,000–$5,000 replacement', source: 'Subaru CVT service standard' }
+      ]},
+      { title: 'EyeSight ADAS', items: [
+        { title: 'EyeSight stereo camera calibration', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'EyeSight uses stereo cameras mounted at the windshield. Any windshield replacement requires Subaru dealer camera recalibration.',
+          check: '<strong>Confirm no EyeSight warning lights. Ask if windshield has been replaced.</strong>',
+          cost: '$200–$400 recalibration if needed', source: 'Subaru EyeSight standard' }
+      ]},
+      { title: 'AWD', items: [
+        { title: 'Symmetrical AWD — fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Subaru AWD is reliable. Rear differential and transfer case fluid every 25k miles.',
+          check: '<strong>Confirm diff/transfer case fluid in service records.</strong>',
+          cost: '$150–$250 service', source: 'Subaru AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CVT fluid + EyeSight history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT fluid history is the most important document on this platform.',
+          check: '<strong>Request CVT fluid change records specifically — this is the failure mode to prevent.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  }
 
 };
 
@@ -11980,7 +12355,8 @@ const VEHICLE_MENU = {
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
-      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -11996,7 +12372,8 @@ const VEHICLE_MENU = {
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
     ],
     'Ford': [
-      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' }
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' }
@@ -12008,7 +12385,8 @@ const VEHICLE_MENU = {
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ],
     'Chevrolet': [
-      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
@@ -12018,6 +12396,24 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+    ],
+    'Kia': [
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' }
+    ],
+    'Volvo': [
+      { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
+    ],
+    'Audi': [
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+    ],
+    'Lincoln': [
+      { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
+    ],
+    'Subaru': [
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ]
   },
   2021: {
@@ -12041,7 +12437,8 @@ const VEHICLE_MENU = {
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' }
     ],
     'Subaru': [
-      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' }
@@ -12056,7 +12453,8 @@ const VEHICLE_MENU = {
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ],
     'Chevrolet': [
-      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
@@ -12069,6 +12467,18 @@ const VEHICLE_MENU = {
     ],
     'Nissan': [
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
+    ],
+    'Volvo': [
+      { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
+    ],
+    'Audi': [
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+    ],
+    'Lincoln': [
+      { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
     ]
   },
   2020: {
@@ -12079,7 +12489,8 @@ const VEHICLE_MENU = {
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' },
-      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
@@ -12122,7 +12533,8 @@ const VEHICLE_MENU = {
       { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' }
     ],
     'Subaru': [
-      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' }
@@ -12133,6 +12545,18 @@ const VEHICLE_MENU = {
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
       { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
+    ],
+    'Volvo': [
+      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
+    ],
+    'Audi': [
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-gla-2020' }
+    ],
+    'Lincoln': [
+      { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
     ]
   },
   2019: {
@@ -12161,7 +12585,8 @@ const VEHICLE_MENU = {
     ],
     'Subaru': [
       { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
-      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
+      { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
     ],
     'Ford': [
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
@@ -12177,7 +12602,8 @@ const VEHICLE_MENU = {
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
       { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' },
-      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' }
     ],
     'GMC': [
       { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
@@ -12728,14 +13154,53 @@ const VEHICLE_MENU = {
   2024: {
     'Honda': [
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
+    ],
+    'Volvo': [
+      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
+    ],
+    'Audi': [
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
     ]
   },
+    'Ford': [
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' }
+    ],
+    'Kia': [
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' }
+    ],
+    'Hyundai': [
+      { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
+      { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' }
+    ],
+    'Toyota': [
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' }
+    ],
+    'Volvo': [
+      { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
+    ],
+    'Audi': [
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+    ],
+    'Lincoln': [
+      { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
+    ],
+    'Subaru': [
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' }
+    ],
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ],
     'Chevrolet': [
-      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / ZR2 / High Country', key: 'chevy-silverado-2022' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
