@@ -10824,6 +10824,156 @@ const CHECKLISTS = {
       { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'May not activate — OTA fix.' },
       { number: '22V-592', title: 'Camera Software', desc: 'Camera display update.' }
     ]
+  },
+  'toyota-corolla-2021': {
+    year: 2021,
+    make: 'Toyota',
+    model: 'Corolla',
+    trim: 'L / LE / SE / XSE / XLE (E210, 12th gen, 2020\u20132023)',
+    engine: '1.8L 2ZR-FAE I4 (139\u00a0hp) or 2.0L M20A-FKS I4 (169\u00a0hp)',
+    overallRisk: 'low',
+    overallRiskLabel: 'Low Risk',
+    summary: "The 12th-gen Corolla (E210) is one of the cleanest, most reliable compact cars available used. TNGA platform, genuine multi-link rear suspension, and Toyota Safety Sense 2.0 standard on all trims. The only critical buyer check is the 2020 model year valve spring recall (20V-501) on 1.8L L/LE engines \u2014 confirm repair is closed before purchase. Beyond that recall, the E210 is a low-drama buy with excellent long-term reliability prospects.",
+    stats: {
+      itemsToCheck: 16,
+      recalls: 3,
+      ownerComplaints: 382,
+      topComplaintArea: 'Fuel/Propulsion / Electrical'
+    },
+    sections: [
+      {
+        title: 'Safety Recall \u2014 Check First',
+        items: [
+          {
+            title: 'Valve spring fracture \u2014 engine stall risk (2020 L/LE only)',
+            risk: 'critical', riskLabel: 'Critical \u2014 Verify on 2020 L/LE trims',
+            desc: 'Toyota recalled certain 2019\u20132020 Corolla models with the 1.8L 2ZR-FAE Valvematic engine for a valve spring that could fracture, causing sudden engine stall without warning including at highway speed. NHTSA recall 20V-501. The 2.0L M20A-FKS (SE/XSE/XLE trims) and Hybrid are not affected. 2021+ model years do not carry this recall.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before visiting the car.</strong> If the vehicle is a 2020 L or LE trim and the recall shows open, the free dealer repair must be completed before purchase. SE/XSE/XLE buyers and 2021+ buyers can proceed past this step.',
+            cost: 'Free dealer repair \u2014 non-negotiable on affected VINs',
+            source: 'NHTSA recall 20V-501 (Toyota valve spring fracture)'
+          }
+        ]
+      },
+      {
+        title: 'Engine & Oil',
+        items: [
+          {
+            title: 'Oil consumption \u2014 1.8L 2ZR-FAE (L/LE, high mileage)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: "The 2ZR-FAE Valvematic can develop oil consumption above 80,000 miles, particularly on cars with stretched oil-change intervals. Toyota's recommended interval with synthetic is 10,000 miles. The newer 2.0L M20A-FKS (SE/XSE/XLE) has a better oil consumption record in owner reports to date.",
+            check: '<strong>Check the oil level cold on the dipstick before the test drive.</strong> If the level is below midpoint on a mid-interval 1.8L car, the engine is consuming. Ask for oil-change records and confirm intervals were not stretched beyond 10,000 miles.',
+            cost: '$0 if managed / $1,500\u2013$3,000 piston ring service if chronic',
+            source: 'Toyota 2ZR-FAE service documentation + E210 owner reports'
+          },
+          {
+            title: 'Cold-start timing chain rattle \u2014 M20A-FKS',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 2.0L M20A-FKS uses a timing chain. A brief 1\u20133 second rattle immediately on a cold start is normal cold-oil behavior before pressure builds. A sustained rattle past 5 seconds, or one that reappears at operating temperature, is not normal.',
+            check: '<strong>Cold-start the engine and listen for the first 10 seconds.</strong> A brief immediate tick that stops as oil pressure builds is normal. If the rattle persists beyond 5 seconds, the timing chain or tensioner warrants inspection.',
+            cost: '$0 normal / $800\u2013$2,000 chain + tensioner if abnormal',
+            source: 'Toyota M20A-FKS technical documentation'
+          },
+          {
+            title: 'Coolant condition and water pump inspection',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'E210 models are recent enough that water pump failures are uncommon. However, coolant that has never been serviced on a 4+ year old car accelerates seal and pump wear. Toyota Super Long Life coolant is rated for 10 years/100,000 miles but condition varies.',
+            check: '<strong>Open the coolant reservoir \u2014 should be clean pink/orange with no rust flakes or brown tint.</strong> A car with 4+ years and no coolant service record should budget for a $100\u2013$150 flush.',
+            cost: '$100\u2013$150 coolant flush / $400\u2013$700 water pump + coolant if pump seeps',
+            source: 'Toyota E210 maintenance schedule'
+          }
+        ]
+      },
+      {
+        title: 'Transmission',
+        items: [
+          {
+            title: 'CVT shudder and fluid condition (automatic trims)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The E210 CVT uses Toyota-spec WS fluid with a recommended 60,000-mile change interval. Low-speed shudder at 20\u201340 mph on light throttle is the early warning of degraded fluid. The E210 CVT has a stronger reliability record than Nissan or Honda equivalents, but fluid maintenance remains essential.',
+            check: '<strong>Drive at 25\u201340 mph on light throttle, then gently release and re-apply.</strong> Any vibration or judder through that transition indicates CVT fluid degradation. Ask for service history; if unknown, budget $150\u2013$200 for an immediate change.',
+            cost: '$150\u2013$200 fluid service / $2,500\u2013$4,000 CVT replacement (uncommon below 100k)',
+            source: 'Toyota CVT WS fluid specification + E210 owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Toyota Safety Sense 2.0 & Electronics',
+        items: [
+          {
+            title: 'TSS 2.0 windshield replacement cost',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'Toyota Safety Sense 2.0 is standard on all E210 Corolla trims. The forward-facing camera is bonded to the windshield. Any windshield replacement \u2014 rock chip, crack, or hail \u2014 requires a dealer ADAS recalibration adding $200\u2013$400 to the job. This is not a defect; it is a cost every buyer should know before purchase.',
+            check: "<strong>Inspect the windshield for existing cracks or chip repairs.</strong> A chip repair is fine; a crack in the driver's field of vision or longer than 6 inches typically means replacement. Budget for recalibration on any car with windshield damage.",
+            cost: '$200\u2013$400 recalibration surcharge on top of windshield cost',
+            source: 'Toyota TSS 2.0 ADAS calibration documentation'
+          },
+          {
+            title: 'Multimedia system \u2014 CarPlay, Android Auto, touchscreen response',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The 8-inch touchscreen (LE and above) includes Apple CarPlay and Android Auto. Early 2020 software versions had occasional Bluetooth instability and slow touch response; most were resolved via dealer update. SE/XSE/XLE add a larger display and optional JBL audio.',
+            check: '<strong>Test all multimedia: CarPlay or Android Auto pairing, FM/AM, Bluetooth audio, and backup camera.</strong> A unit taking more than 2 seconds to respond to touch needs a software update. Backup camera should appear immediately in Reverse.',
+            cost: '$0 software update / $400\u2013$900 head-unit replacement (rare)',
+            source: 'Toyota E210 multimedia owner reports'
+          }
+        ]
+      },
+      {
+        title: 'Exterior & Body',
+        items: [
+          {
+            title: 'Hood and front bumper rock chips',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Toyota factory clear coat on the E210 chips quickly on the hood leading edge and front bumper from highway miles. By 4\u20135 years old most cars have some chips. This is cosmetic unless chips have oxidized \u2014 rust haloing needs touch-up before the damage spreads.',
+            check: '<strong>Inspect the hood leading edge and front bumper in direct light.</strong> Light chips are cosmetic. Chips with an orange rust halo need touch-up immediately. A repaint history on the front end is not inherently negative but warrants asking what caused it.',
+            cost: '$50\u2013$200 touch-up / $600\u2013$1,200 front-end respray if extensive',
+            source: 'Toyota E210 owner reports'
+          },
+          {
+            title: 'A-pillar and door seal wind noise',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'A subset of E210 owners report wind noise from the driver A-pillar or door mirror area at highway speed. Most cases are dealer-correctable with weatherstrip adjustment or mirror seal service under warranty; higher-mileage cars may need post-warranty attention.',
+            check: '<strong>At 65 mph with all vents closed, listen from the driver A-pillar and door mirror.</strong> A sustained whistle or hiss warrants a weatherstrip inspection before closing on the car.',
+            cost: '$0\u2013$150 weatherstrip adjustment or replacement',
+            source: 'Toyota E210 owner feedback'
+          }
+        ]
+      },
+      {
+        title: 'Brakes & Suspension',
+        items: [
+          {
+            title: 'Front brake wear',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The E210 multi-link rear suspension improves weight distribution versus the E170, but front brakes still carry the bulk of deceleration load. City-driven cars can exhaust front pads by 45,000\u201355,000 miles. No unusual brake system issues widely reported on E210.',
+            check: '<strong>Listen for pad squeal or grinding on gentle stops and ask when pads were last replaced.</strong> If no records and mileage exceeds 50,000 since last service, budget for front pad inspection and rotor measurement.',
+            cost: '$150\u2013$300 front pads / $300\u2013$500 pads + rotors',
+            source: 'Toyota brake service intervals'
+          },
+          {
+            title: 'Rear multi-link suspension \u2014 bushing and shock condition',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'The E210 replaced the E170 torsion beam with a proper multi-link rear. Well-engineered and durable, but control arm bushings and rear shocks should be checked on cars above 80,000 miles or those showing uneven rear tire wear.',
+            check: '<strong>Press firmly on each rear corner \u2014 should rebound once and stop.</strong> More than one rebound = worn shocks. Check rear tires for edge wear indicating camber issues from worn bushings. Crouch and inspect rear control arm rubber mounts.',
+            cost: '$200\u2013$400 per side rear shocks / $300\u2013$600 rear bushing replacement',
+            source: 'Toyota TNGA-C suspension design notes'
+          },
+          {
+            title: 'Front strut bearing click on slow turns',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: 'Front strut top bearings can develop a click or groan on low-speed turns on higher-mileage E210s. Not a safety issue but worth checking and factoring into negotiation.',
+            check: '<strong>At a complete stop, turn the steering wheel slowly lock-to-lock.</strong> Any clicking or grinding felt through the steering column = strut bearing wear. Also drive over a speed bump slowly and listen for front knocking.',
+            cost: '$200\u2013$450 per side strut + bearing assembly',
+            source: 'Toyota E210 suspension owner reports'
+          }
+        ]
+      }
+    ],
+    recalls: [
+      { number: '20V-501', title: 'Valve Spring Fracture \u2014 Engine Stall (2020 L/LE)', desc: 'Fractured 2ZR-FAE valve spring can cause sudden engine stall without warning including at highway speed. Critical safety recall; free dealer repair. Affects 2019\u20132020 L and LE trims.' },
+      { number: 'Verify VIN', title: 'Additional campaigns \u2014 check nhtsa.gov/recalls', desc: 'NHTSA data unavailable from build sandbox. Run full VIN at nhtsa.gov/recalls before purchase to see all open campaigns for this specific vehicle.' }
+    ],
+    vinNote: 'The 2020+ Toyota Corolla (E210) is the first generation to offer two meaningfully different gasoline powertrains in North America \u2014 and the choice matters for inspection priorities. L and LE trims use the 1.8L 2ZR-FAE Valvematic inline-4 (139\u00a0hp); SE, XSE, and XLE trims use the 2.0L M20A-FKS Dynamic Force inline-4 (169\u00a0hp). The fastest decode is the trim badge \u2014 LE always means 1.8L; SE/XSE/XLE always means 2.0L. The Hybrid uses the 2ZR-FXE and requires a separate inspection profile. Run the full VIN at <a href="/decode/">autovetting.com/decode</a> to confirm powertrain via NHTSA vPIC. Model-year digit is position\u00a010: L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022, P\u202f=\u202f2023. If buying a 2020 L or LE: the valve spring recall (20V-501) is the single most important check \u2014 confirm it is closed on the specific VIN before purchase.',
+    blogUrl: '/blog/2021-toyota-corolla-buyers-guide',
   }
 
 };
@@ -10836,7 +10986,7 @@ const VEHICLE_MENU = {
   // key matches CHECKLISTS keys for available content; absent = coming soon
   2022: {
     'Toyota': [
-      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null },
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
     'Honda': [
@@ -10849,7 +10999,7 @@ const VEHICLE_MENU = {
   },
   2021: {
     'Toyota': [
-      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null },
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
     'Honda': [
@@ -10881,7 +11031,7 @@ const VEHICLE_MENU = {
     ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
-      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: null },
+      { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' }
     ],
     'Honda': [
