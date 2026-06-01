@@ -13428,6 +13428,366 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
+  },
+  'toyota-gr86-2022': {
+    year: 2022, make: 'Toyota', model: 'GR86', trim: 'Base / Premium (2nd gen ZN8, 2022–present)',
+    engine: '2.4L FA24 naturally aspirated I4 (228 hp) with 6-speed manual or 6-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen GR86 shares the FA24 with the Subaru BRZ — 228 hp, no head gasket concerns from the outgoing FA20, balanced rear-drive chassis. One of the most rewarding driver cars available used. Main risks mirror BRZ: clutch wear on manual, coilover/modification history from track or autocross use. Lightly-modified or stock examples are clean buys. Toyota Gazoo Racing badge signals intentional driving focus.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 40, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'FA24 — no FA20 head gasket issue', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Clean engine. No widespread failure modes on 2nd gen.',
+          check: '<strong>Cold-start idle smooth. Coolant level check. No white exhaust.</strong>',
+          cost: 'Routine maintenance', source: 'Toyota FA24 reliability data' },
+        { title: 'Manual clutch wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sports car clutches wear faster with spirited use. Check engagement height.',
+          check: '<strong>Clutch should engage in middle third of pedal travel.</strong>',
+          cost: '$800–$1,400 clutch replacement', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Modification Check', items: [
+        { title: 'Lowering / track use evidence', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GR86 is popular for track days. Inspect for aggressive tire wear patterns and very low ride height.',
+          check: '<strong>Check ride height (stock ~5.1" clearance). Inspect tires for aggressive wear or heat cycling (marble surface).</strong>',
+          cost: '$500–$2,000 restoration', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service + modification records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Ask about track participation and any modifications.',
+          check: '<strong>Request all records. Ask directly about track use.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'porsche-macan-2017': {
+    year: 2017, make: 'Porsche', model: 'Macan', trim: 'Base / S / GTS / Turbo / Turbo S (1st gen 95B, 2015–2022)',
+    engine: '2.0T I4 (252 hp, base), 3.0T V6 (340 hp, S) or 3.6TT V6 (400+ hp, GTS/Turbo)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The Macan is Porsche most affordable SUV and the best-driving compact luxury crossover. However, Porsche ownership costs are significant and deferred maintenance on these vehicles is very expensive. The base 2.0T is the value choice; the S 3.0T is the sweet spot for performance. Common issues: PDK dual-clutch hesitation, transfer case failure (known on early units), Porsche air oil separator leaks, and water pump failure on V6 models. Only buy with Porsche CPO or full dealer service records.",
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Engine / Transfer Case / Electrical' },
+    sections: [
+      { title: 'Transfer Case', items: [
+        { title: 'PTM transfer case failure (known issue)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Early Macan transfer cases (PTMS) had documented failure rates. Symptoms: grinding in AWD engagement, warning light. Extended warranty covered many units.',
+          check: '<strong>Test AWD by performing tight-radius turns at slow speed. Any grinding = inspect PTM immediately.</strong>',
+          cost: '$3,000–$6,000 transfer case repair', source: 'Porsche Macan PTM pattern' }
+      ]},
+      { title: 'Engine', items: [
+        { title: 'Air oil separator (AOS) leak — all engines', risk: 'high', riskLabel: 'High Risk at 60k+',
+          desc: 'The crankcase ventilation air-oil separator fails on all Macan engines at 60k+ miles, causing oil consumption and sometimes misfires.',
+          check: '<strong>Inspect AOS area (left side of engine) for oil residue. Any oil mist or consumption > 1qt/3k miles = AOS service needed.</strong>',
+          cost: '$400–$800 AOS replacement', source: 'Porsche Macan AOS pattern' },
+        { title: 'Water pump failure (V6 engines)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Electric water pump fails on 3.0T/3.6T models, typically 60k–80k miles.',
+          check: '<strong>Test cabin heat output. Temperature gauge stability. Any fluctuation = pump service due.</strong>',
+          cost: '$600–$1,200 water pump + thermostat', source: 'Porsche Macan V6 cooling pattern' }
+      ]},
+      { title: 'PDK Transmission', items: [
+        { title: 'PDK dual-clutch hesitation at low speed', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'PDK can feel jerky in low-speed traffic. Normal behavior to some extent but excessive hesitation indicates clutch wear or fluid service needed.',
+          check: '<strong>Test city driving at 10–20 mph. Minor hesitation is normal; excessive jerkiness = clutch fluid service or inspection.</strong>',
+          cost: '$300–$500 PDK fluid service; $3,000+ if clutch worn', source: 'Porsche PDK service standard' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'Porsche service records mandatory', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Porsche services run $1,500–$3,000 per interval. Without records on a Macan, assume $5,000–$10,000 deferred maintenance.',
+          check: '<strong>Request ALL Porsche dealer records. No records = walk or aggressive discount.</strong>',
+          cost: '$1,500–$3,000 per service interval', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO + recall check', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Porsche CPO is essentially mandatory for used Macan buyers.',
+          check: '<strong>Verify CPO at Porsche dealer. Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'rivian-r1t-2022': {
+    year: 2022, make: 'Rivian', model: 'R1T', trim: 'Launch Edition / Adventure / Explore (1st gen, 2022–present)',
+    engine: 'Quad-motor (835 hp) or Dual-motor (665 hp); 135 kWh or 149 kWh battery',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The R1T is the first electric adventure truck — innovative storage system, excellent off-road capability, and strong range. Very new vehicle with limited long-term reliability data. Early 2022 production had multiple software and hardware recalls. The quad-motor variant is extremely capable but complex. HV battery SoH, software update status, and confirming all NHTSA recalls are closed are the core buyer checks. Rivian service network is limited — confirm nearest service location.",
+    stats: { itemsToCheck: 9, recalls: 4, ownerComplaints: 180, topComplaintArea: 'Software / Electrical / Body' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'Multiple 2022 production recalls', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Early R1T had recalls including seat belt, thermal management, brake controller, and steering issues.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. All must be confirmed closed.</strong>',
+          cost: 'Free Rivian mobile service', source: 'NHTSA Rivian recalls' }
+      ]},
+      { title: 'Battery & Range', items: [
+        { title: 'HV battery SoH', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Too new for established degradation patterns. Check displayed range vs. EPA for the specific pack size.',
+          check: '<strong>At 100% charge, compare displayed range to EPA estimate. Request Rivian dealer battery check.</strong>',
+          cost: 'Free Rivian service check', source: 'Rivian battery standard' }
+      ]},
+      { title: 'Software & OTA', items: [
+        { title: 'Software version — confirm current', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rivian updates frequently via OTA. Confirm no pending critical updates.',
+          check: '<strong>Check software version in Settings menu. Ask when last OTA update was accepted.</strong>',
+          cost: '$0 OTA update', source: 'Rivian OTA history' }
+      ]},
+      { title: 'Service Network', items: [
+        { title: 'Rivian service center proximity', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rivian service centers are limited. Mobile service available for some repairs but complex issues require a service center.',
+          check: '<strong>Confirm nearest Rivian service center location before purchase.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall history + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Multiple early-production recalls mean paperwork verification is essential.',
+          check: '<strong>Request Rivian service app history and recall completion confirmation.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Multiple 2022', description: 'Seat belt, thermal, brake controller, steering issues on early R1T', severity: 'High', remedy: 'Rivian mobile service or service center; verify at nhtsa.gov' }]
+  },
+  'tesla-model-y-2022': {
+    year: 2022, make: 'Tesla', model: 'Model Y', trim: 'Standard Range / Long Range / Performance (2022–present)',
+    engine: 'Rear-wheel drive (283 hp) or AWD Long Range / Performance (383–456 hp); 60–82 kWh battery',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2022+ Model Y features the heat pump standard (all variants), structural battery pack option, and improved build quality over 2021 and earlier. Among the most reliable EVs available. Main buyer checks: HV battery SoH, autopilot camera calibration if windshield was replaced, 12V battery health (common EV weak point), and build quality inspection for panel gaps which Tesla improved but still vary. Verify all NHTSA recalls are closed.",
+    stats: { itemsToCheck: 8, recalls: 2, ownerComplaints: 360, topComplaintArea: 'Body / Panel Gaps / Electrical (minor)' },
+    sections: [
+      { title: 'Battery', items: [
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Tesla batteries degrade slowly. Expect <5% degradation on well-maintained sub-50k examples.',
+          check: '<strong>Check displayed range at 100% vs EPA rated range. Any >10% deficit on <50k = investigate.</strong>',
+          cost: 'Free Tesla service check', source: 'Tesla battery health standard' },
+        { title: '12V battery failure', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The small 12V battery can fail, stranding the vehicle. Check its health at purchase.',
+          check: '<strong>Ask if 12V battery has been replaced. Test voltage at visible terminal if accessible.</strong>',
+          cost: '$200–$400 Tesla 12V replacement', source: 'Tesla 12V pattern' }
+      ]},
+      { title: 'Autopilot / FSD', items: [
+        { title: 'Autopilot camera calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Autopilot cameras need recalibration after windshield replacement. Verify no camera fault messages.',
+          check: '<strong>Check for any Autopilot or camera calibration warnings on the display.</strong>',
+          cost: '$0 Tesla recalibration', source: 'Tesla Autopilot standard' }
+      ]},
+      { title: 'Build Quality', items: [
+        { title: 'Panel gaps and weather sealing', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Tesla build quality varies by production week. Inspect all panel gaps and door seals.',
+          check: '<strong>Check hood, trunk, and door panel gaps for consistency. Any uneven gaps > 4mm = request dealer adjustment.</strong>',
+          cost: '$0 Tesla adjustment', source: 'Tesla quality pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Recall check + service records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Tesla issues frequent OTA-based recalls. Verify all are closed.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Check service history in Tesla app if accessible.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'chevrolet-tahoe-2021': {
+    year: 2021, make: 'Chevrolet', model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country (5th gen T1XX, 2021–present)',
+    engine: '5.3L EcoTec3 V8 (355 hp) or 6.2L EcoTec3 V8 (420 hp) or 3.0L Duramax Diesel',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 5th-gen Tahoe is a complete redesign — independent rear suspension on a full-size SUV for the first time, significantly more interior space, and multiple powertrain options. DFM (Dynamic Fuel Management) on the 5.3L creates the same lifter failure risk as Silverado/Suburban. Air ride suspension (standard on Premier/High Country) adds compressor failure risk. The 3.0L diesel is smooth and efficient. Prefer the 6.2L or diesel if avoiding DFM lifter concerns.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 350, topComplaintArea: 'Engine (DFM) / Air Suspension / Electrical' },
+    sections: [
+      { title: 'DFM Lifter Risk (5.3L)', items: [
+        { title: '5.3L EcoTec3 DFM lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ on 5.3L',
+          desc: 'Dynamic Fuel Management deactivates up to 7 cylinders. Same lifter failure tick pattern as Silverado.',
+          check: '<strong>Warm engine completely. Persistent tick at idle = lifter damage possible. Ask about DFM disable.</strong>',
+          cost: '$3,000–$6,000 lifter service', source: 'GM DFM lifter pattern' }
+      ]},
+      { title: 'Air Suspension (Premier/High Country)', items: [
+        { title: 'Air ride compressor failure', risk: 'high', riskLabel: 'High Risk if air-equipped',
+          desc: 'Tahoe air ride compressors fail at 50k–80k miles. Overnight level test is essential on equipped units.',
+          check: '<strong>Level test overnight. Any corner sag = compressor failing.</strong>',
+          cost: '$1,200–$2,500 compressor', source: 'GM Tahoe air suspension pattern' }
+      ]},
+      { title: 'Interior Quality', items: [
+        { title: 'Infotainment (large 10.2" screen)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test full infotainment. Wireless CarPlay on most trims. Early units had minor software bugs resolved.',
+          check: '<strong>Test all infotainment zones and wireless connectivity.</strong>',
+          cost: '$0 update', source: 'GM infotainment TSBs' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + DFM history', risk: 'high', riskLabel: 'High Risk on 5.3L without',
+          desc: 'Oil interval frequency predicts DFM lifter health.',
+          check: '<strong>Request all records. Ask about DFM disable status.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'honda-accord-2023': {
+    year: 2023, make: 'Honda', model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid (11th gen CV3, 2023–present)',
+    engine: '1.5T L15CA I4 (192 hp), 2.0T K20C1 I4 (252 hp), or 2.0L Hybrid (204 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 11th-gen Accord is Honda's best Accord ever — significantly redesigned with available Google-built infotainment, standard Honda Sensing 2.0, and the Hybrid now standard on Touring trim. The 1.5T oil dilution issue from the 10th gen is substantially reduced. The 2.0T is reserved for Sport and above. Very young platform with no established failure modes. Outstanding mid-size sedan buy.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 70, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T L15CA — reduced oil dilution vs 10th gen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda redesigned the 1.5T. US-market cars with current software have low dilution risk.',
+          check: '<strong>Check oil color and level. Golden = good. Ask about any cold-weather driving patterns.</strong>',
+          cost: 'Routine maintenance', source: 'Honda L15CA 11th gen update' },
+        { title: '2.0T K20C1 (Sport+) — proven', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Higher-output 2.0T available on Sport, Sport-L, and Touring. Reliable and engaging.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Honda K20C1 reliability' },
+        { title: 'Honda Hybrid System — reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda two-motor hybrid on Touring and Hybrid trims. Same proven system as Accord Hybrid predecessor.',
+          check: '<strong>Test EV mode engagement. No HV warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Honda hybrid reliability' }
+      ]},
+      { title: 'Honda Sensing 2.0', items: [
+        { title: 'Sensing 2.0 ADAS camera calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda Sensing 2.0 standard all trims. Camera recalibration if windshield replaced.',
+          check: '<strong>No Sensing warning lights on dash.</strong>',
+          cost: '$0–$300 calibration', source: 'Honda Sensing 2.0 standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Very young vehicle. Standard oil change records expected.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-camry-2024': {
+    year: 2024, make: 'Toyota', model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (9th gen XV80, 2024–present)',
+    engine: '2.5L A25A-FXS I4 Hybrid (225 hp combined, standard on all trims)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 9th-gen Camry is now hybrid-only — Toyota made the bold decision to drop the gas-only variant entirely. The 2.5L A25A-FXS hybrid system is the same well-proven Toyota Hybrid System (THS-II) found in the RAV4 Hybrid. No established failure modes on this very new vehicle. AWD available on LE and SE for the first time. Excellent long-term reliability expected based on platform and powertrain heritage.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 20, topComplaintArea: 'Minimal — very new' },
+    sections: [
+      { title: 'Hybrid Drivetrain', items: [
+        { title: 'THS-II hybrid — proven platform', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota Hybrid System II is among the most reliable hybrid platforms globally. No chronic failure modes.',
+          check: '<strong>Confirm EV mode engages. No HV warning lights. Test all drive modes.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Toyota THS-II reliability data' },
+        { title: 'HV battery SoH', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Very young vehicle. Battery degradation is negligible at this age.',
+          check: '<strong>No HV battery alerts. Standard range expected.</strong>',
+          cost: 'n/a', source: 'Toyota hybrid standard' }
+      ]},
+      { title: 'Toyota Safety Sense 3.0', items: [
+        { title: 'TSS-3.0 ADAS calibration', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Latest Toyota Safety Sense system standard all trims.',
+          check: '<strong>No ADAS warning lights on dash.</strong>',
+          cost: '$0–$300 calibration', source: 'Toyota TSS-3.0 standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Extremely new vehicle. Run recall check and request basic records.',
+          check: '<strong>Run nhtsa.gov/recalls. Request service records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'dodge-challenger-2023': {
+    year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SXT / GT / R/T / R/T Scat Pack / SRT 392 / SRT Hellcat / Last Call editions (3rd gen LC, 2008–2023)',
+    engine: '3.6L Pentastar V6 (305 hp), 5.7L HEMI V8 (375 hp), 6.4L HEMI V8 (485 hp), or 6.2L supercharged (717–807 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The last-generation Challenger ran from 2008 to 2023 — one of the longest production runs in modern automotive history. The HEMI V8 models all carry MDS cylinder deactivation lifter risk at 80k+ miles. The Hellcat supercharged variants are extremely capable but expensive to maintain and insurance-costly. Buy a well-maintained SXT or R/T for value; a Scat Pack for real performance. Verify Takata recall status and HEMI lifter condition on any V8 example.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 480, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
+    sections: [
+      { title: 'HEMI V8 Lifter Risk', items: [
+        { title: '5.7L / 6.4L HEMI MDS lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ V8',
+          desc: 'MDS activates at highway cruise. Lifter failure produces tick at warm idle.',
+          check: '<strong>Warm engine fully. Listen at idle for persistent tick post-warm. Ask about MDS disable.</strong>',
+          cost: '$2,500–$5,000 lifter service', source: 'Stellantis HEMI MDS pattern' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN (certain years)', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Some Challenger model years are in Takata scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '3.6L Pentastar V6 — reliable base engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The V6 SXT/GT is the most reliable and practical choice for daily use.',
+          check: '<strong>Cold-start check. Minor startup tick is normal and clears quickly.</strong>',
+          cost: 'Routine maintenance', source: 'Stellantis Pentastar reliability' },
+        { title: 'Hellcat supercharger inspection', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Hellcat supercharger belt and bearing should be inspected every 60k miles. Any whine beyond normal = service.',
+          check: '<strong>Listen for excessive supercharger whine or bearing noise at idle and boost.</strong>',
+          cost: '$600–$1,200 supercharger service', source: 'Dodge Hellcat maintenance standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service + use history (track, drag strip)', risk: 'high', riskLabel: 'High Risk on high-HP models',
+          desc: 'High-output Challengers are frequently drag-raced. Ask about track use and request all records.',
+          check: '<strong>Request all records. Ask about any drag racing participation on Scat Pack / SRT / Hellcat.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator on select model years', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'kia-telluride-2023': {
+    year: 2023, make: 'Kia', model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro (1st gen ON, 2020–present)',
+    engine: '3.8L Lambda II V6 GDI (291 hp) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Telluride is widely considered the best 3-row midsize SUV value — premium interior, spacious third row, and proven 3.8L V6 that does not share the Theta II engine concerns. The 8-speed automatic is smooth. This updated 2023 model features cosmetic and feature refreshes. No chronic failure modes. Main checks: CVT on FWD variants (though most are AWD), infotainment update, and standard service records.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.8L Lambda II V6 — no Theta II concerns', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 3.8L is a completely separate engine from the Theta II recall. No documented failure modes.',
+          check: '<strong>Cold-start idle smooth. Oil level check.</strong>',
+          cost: 'Routine maintenance', source: 'Kia 3.8L reliability data' },
+        { title: '8-speed automatic — smooth', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AISIN-sourced 8AT is reliable and smooth across all driving conditions.',
+          check: '<strong>Test all gears in multiple drive modes.</strong>',
+          cost: '$200 fluid service', source: 'Kia drivetrain standard' }
+      ]},
+      { title: 'AWD System', items: [
+        { title: 'AWD coupling fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD rear coupling every 30k miles. Confirm in service records.',
+          check: '<strong>Tight parking turn — no binding expected.</strong>',
+          cost: '$150–$200 service', source: 'Kia AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + recall check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Telluride owners maintain their vehicles well.',
+          check: '<strong>Request service records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'mercedes-c300-2022': {
+    year: 2022, make: 'Mercedes-Benz', model: 'C-Class', trim: 'C300 / C300 4MATIC (W206, 2022–present)',
+    engine: '2.0T M254 PHEV mild hybrid I4 (255 hp) with 48V EQ Boost',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The W206 C-Class is a complete redesign — stunning interior with massive vertical touchscreen, MBUX system, and a 48V mild hybrid system (EQ Boost) on the M254 engine. Very young platform. Known concerns: 48V EQ Boost starter-generator units had early replacement rates; MBUX rear-seat screen (optional) had software issues; sunroof drain clogs. Only buy with Mercedes service records. The W206 is too new for long-term failure data to exist.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Electrical / 48V System / Minor' },
+    sections: [
+      { title: '48V EQ Boost System', items: [
+        { title: 'EQ Boost ISG (starter-generator) health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 48V integrated starter-generator unit had early warranty replacements. Check for any EQ Boost warning lights.',
+          check: '<strong>Confirm no 48V or EQ Boost system warning lights on MBUX display.</strong>',
+          cost: '$1,500–$3,000 ISG replacement', source: 'Mercedes W206 48V pattern' }
+      ]},
+      { title: 'MBUX System', items: [
+        { title: 'MBUX infotainment responsiveness', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'W206 MBUX is generally reliable but complex. Test all functions.',
+          check: '<strong>Test full MBUX including ambient lighting, wireless CarPlay, and all settings zones.</strong>',
+          cost: '$0 OTA update', source: 'Mercedes MBUX standard' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'MB service records — mandatory', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'W206 is a very expensive platform to maintain without records.',
+          check: '<strong>Request ALL Mercedes dealer records. No records = walk.</strong>',
+          cost: '$1,000–$2,000 per service interval', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'CPO + recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'MB CPO recommended on any W206.',
+          check: '<strong>Verify CPO status and run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
   }
 
 };
@@ -13443,7 +13803,8 @@ const VEHICLE_MENU = {
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
-      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' }
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
+      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -13484,7 +13845,8 @@ const VEHICLE_MENU = {
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
-      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -13510,7 +13872,8 @@ const VEHICLE_MENU = {
     ],
     'Mercedes-Benz': [
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
-      { model: 'GLE', trim: 'GLE 350 / GLE 450 / AMG GLE 53 / AMG GLE 63 S', key: 'mercedes-gle-2020' }
+      { model: 'GLE', trim: 'GLE 350 / GLE 450 / AMG GLE 53 / AMG GLE 63 S', key: 'mercedes-gle-2020' },
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC (W206)', key: 'mercedes-c300-2022' }
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
@@ -13573,7 +13936,8 @@ const VEHICLE_MENU = {
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevy-silverado-2022' },
-      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -14329,7 +14693,8 @@ const VEHICLE_MENU = {
   2024: {
     'Honda': [
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
-      { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' }
+      { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
+      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
@@ -14361,6 +14726,23 @@ const VEHICLE_MENU = {
       { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
       { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
       { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' }
+    ],
+    'Porsche': [
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo / Turbo S', key: 'porsche-macan-2017' },
+      { model: 'Macan', trim: 'Base / S / GTS / Turbo / Turbo S', key: 'porsche-macan-2017' }
+    ],
+    'Rivian': [
+      { model: 'R1T', trim: 'Launch Edition / Adventure / Explore', key: 'rivian-r1t-2022' },
+      { model: 'R1T', trim: 'Adventure / Perform / Tri-Motor', key: 'rivian-r1t-2022' }
+    ],
+    'Tesla': [
+      { model: 'Model Y', trim: 'Standard Range / Long Range / Performance', key: 'tesla-model-y-2022' },
+      { model: 'Model Y', trim: 'RWD / Long Range / Performance', key: 'tesla-model-y-2022' }
     ]
   },
     'Ford': [
@@ -14371,7 +14753,8 @@ const VEHICLE_MENU = {
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
       { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Pro / Hybrid / PHEV', key: 'kia-sportage-2023' },
-      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' }
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' },
+      { model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro', key: 'kia-telluride-2023' }
     ],
     'Hyundai': [
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
@@ -14381,7 +14764,9 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
-      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' }
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' },
+      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
+      { model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (Hybrid)', key: 'toyota-camry-2024' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -14390,7 +14775,8 @@ const VEHICLE_MENU = {
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' }
     ],
     'Mercedes-Benz': [
-      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' }
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-gla-2020' },
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / AMG C43 (W206)', key: 'mercedes-c300-2022' }
     ],
     'Lincoln': [
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' }
@@ -14446,6 +14832,24 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
     ],
+    'Toyota': [
+      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' }
+    ],
+    'Rivian': [
+      { model: 'R1T', trim: 'Adventure / Explore / Standard Pack', key: 'rivian-r1t-2022' }
+    ],
+    'Tesla': [
+      { model: 'Model Y', trim: 'RWD / Long Range / Performance', key: 'tesla-model-y-2022' }
+    ],
+    'Dodge': [
+      { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / SRT 392 / SRT Hellcat', key: 'dodge-challenger-2023' }
+    ],
+    'Kia': [
+      { model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro', key: 'kia-telluride-2023' }
+    ],
+    'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / AMG C43 (W206)', key: 'mercedes-c300-2022' }
+    ],
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
@@ -14455,7 +14859,9 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / ZR2 / High Country', key: 'chevy-silverado-2022' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
-      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' }
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -14475,7 +14881,8 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
-      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / TrailSport / Black Edition', key: 'honda-ridgeline-2021' }
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / TrailSport / Black Edition', key: 'honda-ridgeline-2021' },
+      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' }
     ]
   ,},
 };
