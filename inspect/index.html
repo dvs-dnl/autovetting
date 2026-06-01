@@ -13788,6 +13788,357 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
+  },
+  'honda-crv-2023': {
+    year: 2023, make: 'Honda', model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid (6th gen RW, 2023–present)',
+    engine: '1.5T VTEC Turbo I4 (190 hp) or 2.0L Two-Motor Hybrid (204 hp combined)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 6th-gen CR-V is a complete redesign — more interior space, available hybrid on all trims, and Honda Sensing 2.0 standard. The 1.5T oil dilution issue is substantially reduced over the 5th gen. The Hybrid is the strongest powertrain choice. No established failure modes on this very young platform. Best-in-class cargo space and practicality.",
+    stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 70, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T — improved oil dilution vs 5th gen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda updated the 1.5T for the 6th gen. US-market cars with current PCM software have low dilution risk.',
+          check: '<strong>Check oil color and level. Standard cold-start check.</strong>',
+          cost: 'Routine maintenance', source: 'Honda 6th gen CR-V reliability' },
+        { title: 'Two-Motor Hybrid — preferred', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda two-motor system is the same proven architecture as Accord Hybrid. Excellent fuel economy and no chronic issues.',
+          check: '<strong>Confirm EV mode engages at low speed. No HV warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Honda hybrid reliability' }
+      ]},
+      { title: 'CVT (non-Hybrid)', items: [
+        { title: 'CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Honda CVT needs fluid service every 30k miles.',
+          check: '<strong>Smooth acceleration with no belt noise or shudder.</strong>',
+          cost: '$150–$200 CVT service', source: 'Honda CVT service standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Low concern on this clean platform.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'gmc-yukon-2021': {
+    year: 2021, make: 'GMC', model: 'Yukon', trim: 'SLE / SLT / AT4 / Denali (5th gen T1XX, 2021–present)',
+    engine: '5.3L EcoTec3 V8 (355 hp), 6.2L EcoTec3 V8 (420 hp), or 3.0L Duramax Diesel',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 5th-gen Yukon shares the T1XX platform with the Tahoe — independent rear suspension, more interior space, and a magnetic ride control option. Same powertrain considerations as Tahoe: 5.3L DFM lifter failure at 80k+, air suspension compressor failure on Denali/AT4 Premium, and diesel as the smooth option. The Yukon XL adds extra length for maximum passenger and cargo space.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 290, topComplaintArea: 'Engine (DFM) / Air Suspension' },
+    sections: [
+      { title: 'DFM Lifter Risk', items: [
+        { title: '5.3L EcoTec3 DFM lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ on 5.3L',
+          desc: 'Same as Tahoe/Silverado — DFM lifter tick at warm idle.',
+          check: '<strong>Warm engine fully. Listen for persistent tick at idle.</strong>',
+          cost: '$3,000–$6,000', source: 'GM DFM pattern' }
+      ]},
+      { title: 'Air Suspension', items: [
+        { title: 'Air ride compressor (Denali, AT4 Premium)', risk: 'high', riskLabel: 'High Risk if air-equipped',
+          desc: 'Same compressor failure as Tahoe. Overnight level test on any air-equipped unit.',
+          check: '<strong>Park level overnight and check all corners next morning.</strong>',
+          cost: '$1,200–$2,500', source: 'GM air ride pattern' }
+      ]},
+      { title: 'Infotainment & Space', items: [
+        { title: 'GMC infotainment / wireless charging', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Test all infotainment and power running boards on Denali.',
+          check: '<strong>Test all infotainment zones and power steps (if equipped).</strong>',
+          cost: '$0 update', source: 'GM standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records + DFM status', risk: 'high', riskLabel: 'High Risk on 5.3L without',
+          desc: 'As with Tahoe, V8 records and DFM disable history are critical.',
+          check: '<strong>Request records. Ask about DFM disable device.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'ford-mustang-mach-e-2021': {
+    year: 2021, make: 'Ford', model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT (1st gen, 2021–present)',
+    engine: 'RWD 266 hp / AWD 346 hp (75.7 kWh) or GT AWD 480 hp (98.8 kWh)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The Mach-E is Ford's flagship EV — crossover styling, spacious interior, and multiple range/performance variants. Early production had a high-voltage battery contactor recall that must be confirmed closed. The frunk (front trunk) door latch had a recall on some units. Ford's OTA update cadence is active. 12V battery is a common failure point. Overall a capable and improving EV platform.",
+    stats: { itemsToCheck: 9, recalls: 4, ownerComplaints: 410, topComplaintArea: 'Electrical / Battery / Software' },
+    sections: [
+      { title: 'Recalls — Check First', items: [
+        { title: 'HV battery contactor recall (21V-803)', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'Ford recalled early Mach-E units for a high-voltage battery contactor that could overheat and cause a fire.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. 21V-803 must be confirmed closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 21V-803' },
+        { title: 'Frunk latch recall (21V-711)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'Front trunk (frunk) latch can open unexpectedly while driving on some units.',
+          check: '<strong>Run VIN at nhtsa.gov. Test frunk latch engagement manually.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 21V-711' }
+      ]},
+      { title: 'Battery', items: [
+        { title: 'HV battery SoH', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Check displayed range at 100% vs EPA for the specific variant.',
+          check: '<strong>Compare displayed range to EPA estimate. Any >15% deficit on sub-50k = investigate.</strong>',
+          cost: 'Free Ford dealer SoH check', source: 'Ford Mach-E battery standard' },
+        { title: '12V battery failure', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Mach-E 12V battery fails and strands the vehicle — same pattern as other EVs.',
+          check: '<strong>Ask if 12V has been replaced. Check for any low-voltage warning history.</strong>',
+          cost: '$200–$400 12V replacement', source: 'Mach-E 12V pattern' }
+      ]},
+      { title: 'Software', items: [
+        { title: 'SYNC 4A software version', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Ford OTA updates frequently. Confirm software is current.',
+          check: '<strong>Check software version. Test wireless CarPlay and all infotainment functions.</strong>',
+          cost: '$0 OTA', source: 'Ford Mach-E OTA standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'All recalls + service records', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Multiple early-production recalls require verification.',
+          check: '<strong>Run full VIN check at nhtsa.gov and request Ford dealer records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [
+      { campaign: '21V-803', description: 'HV battery contactor overheat and potential fire', severity: 'Critical', remedy: 'Free dealer battery contactor replacement' },
+      { campaign: '21V-711', description: 'Frunk latch opens unexpectedly while driving', severity: 'High', remedy: 'Free dealer latch replacement' }
+    ]
+  },
+  'nissan-leaf-2019': {
+    year: 2019, make: 'Nissan', model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus / SL Plus (2nd gen ZE1, 2018–present)',
+    engine: '40 kWh (150 hp) or 62 kWh Plus (214 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen LEAF is a practical and affordable EV for city and suburban use. The main buyer concern is battery degradation: the LEAF uses passive thermal management (no active liquid cooling) which accelerates capacity loss in hot climates or with frequent DC fast charging. CHAdeMO rapid charging is available but the standard is being phased out. Check battery health carefully — a used LEAF in Phoenix is very different from one in Seattle.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 160, topComplaintArea: 'Battery Degradation / Range' },
+    sections: [
+      { title: 'Battery Health — Critical Check', items: [
+        { title: 'Battery capacity bars — check all 12', risk: 'high', riskLabel: 'High Risk if lost bars',
+          desc: 'LEAF shows capacity via 12 battery bars in the instrument cluster. Each lost bar = about 6.25% capacity lost. A 2019 LEAF that has lost 2+ bars has significant degradation.',
+          check: '<strong>Check instrument cluster — all 12 bars should be present on a well-maintained sub-50k example. Count them explicitly.</strong>',
+          cost: '$5,000–$8,000 battery pack replacement if severely degraded', source: 'Nissan LEAF battery bar system' },
+        { title: 'Climate and charging history', risk: 'high', riskLabel: 'High Risk in hot climates',
+          desc: 'LEAF batteries degrade faster in hot climates (Arizona, Texas, Florida, California) and with frequent DC fast charging.',
+          check: '<strong>Request Carfax for registration state history. Southern-state or high-DCFC-use cars may show 3–4 lost bars by 60k miles.</strong>',
+          cost: 'n/a', source: 'LEAF passive cooling degradation pattern' }
+      ]},
+      { title: 'Charging', items: [
+        { title: 'CHAdeMO port condition', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'CHAdeMO DC fast charging is increasingly rare. Inspect port for corrosion.',
+          check: '<strong>Inspect CHAdeMO and J1772 ports for corrosion or damage.</strong>',
+          cost: 'n/a', source: 'Standard EV check' }
+      ]},
+      { title: 'Drivetrain', items: [
+        { title: 'Single or dual motor operation', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Motor and inverter are very reliable. No widespread failure modes.',
+          check: '<strong>Test smooth acceleration and regenerative braking. No unusual sounds.</strong>',
+          cost: 'n/a', source: 'Nissan EV drivetrain reliability' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Charging records + climate history', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'For the LEAF specifically, where it lived and how it was charged matters more than mileage.',
+          check: '<strong>Request Carfax state history and ask about DCFC charging frequency.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'chevy-colorado-2023': {
+    year: 2023, make: 'Chevrolet', model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2 (4th gen ZH2, 2023–present)',
+    engine: '2.7T Turboplus I4 (237 hp or 310 hp ZR2) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen Colorado is a complete redesign from the 3rd gen — new 2.7T engine, significantly improved interior, and the Bison/ZR2 off-road variants. The 2.7T is a capable engine with no established failure modes. No AFM/cylinder deactivation concerns. Young enough that no widespread issues have emerged. ZR2 is particularly capable off-road.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.7T Turboplus — new engine, clean record', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'New-generation 2.7T with no AFM. No established failure patterns. Change oil every 5,000 miles.',
+          check: '<strong>Cold-start check. Smooth idle and no turbo smoke.</strong>',
+          cost: 'Routine maintenance', source: 'GM 2.7T reliability data' },
+        { title: '8-speed automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'GM 8L45 is proven and smooth.',
+          check: '<strong>Test smooth shifts in all gears and tow mode.</strong>',
+          cost: '$200 fluid service', source: 'GM 8AT standard' }
+      ]},
+      { title: 'Off-Road (ZR2/Z71/Trail Boss)', items: [
+        { title: 'Off-road use history on ZR2', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'ZR2 is built for real off-road use. Inspect for skid plate damage.',
+          check: '<strong>Inspect skid plates and underbody for rock strikes on ZR2 models.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle. Standard oil change records.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'hyundai-venue-2020': {
+    year: 2020, make: 'Hyundai', model: 'Venue', trim: 'SE / SEL / DENIM (1st gen QX, 2020–present)',
+    engine: '1.6L Gamma MPI I4 (121 hp) with IVT (CVT)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Venue is Hyundai's entry-level subcompact crossover — simple, reliable, and very affordable. Front-wheel-drive only with a naturally-aspirated 1.6L. No Theta II concerns. The IVT (intelligent variable transmission) is reliable. Main checks are CVT fluid service and confirming Honda Sensing equivalent SmartSense ADAS is calibrated. Excellent first car or urban SUV choice.",
+    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 60, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.6L Gamma MPI — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally-aspirated 1.6L with no turbo complexity. Reliable across many Hyundai applications.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Hyundai 1.6L Gamma reliability' },
+        { title: 'IVT (CVT) fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'CVT-style IVT needs fluid at 30k miles.',
+          check: '<strong>Smooth acceleration with no shudder.</strong>',
+          cost: '$150–$200 fluid service', source: 'Hyundai IVT service standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young, simple vehicle. Low concern.',
+          check: '<strong>Request records and run nhtsa.gov/recalls.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'lexus-ux-2019': {
+    year: 2019, make: 'Lexus', model: 'UX', trim: 'UX200 / UX250h Hybrid (1st gen, 2019–present)',
+    engine: '2.0L M20A-FKS I4 (169 hp, UX200) or 2.0L A25A-FXS Hybrid (181 hp combined, UX250h)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The UX is Lexus smallest and most affordable SUV — front-wheel or all-wheel drive, premium interior materials, and the UX250h hybrid delivers 41 mpg combined. The platform is shared with the Toyota Corolla (TNGA-C). No widespread failure modes. The hybrid drivetrain is the clear choice for fuel economy. Main checks are AWD coupling fluid (UX250h) and confirming no open recalls.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 80, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'UX200 2.0L — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'TNGA-C M20A-FKS is clean and reliable. No established failure modes.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Lexus UX200 reliability' },
+        { title: 'UX250h Hybrid — excellent choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota THS-II in the UX250h is extremely reliable. 41 mpg combined.',
+          check: '<strong>Confirm EV mode engagement. No HV battery warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Toyota THS-II standard' }
+      ]},
+      { title: 'AWD & Recall', items: [
+        { title: 'AWD coupling fluid (UX250h AWD)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD coupling fluid every 30k miles. Confirm in records.',
+          check: '<strong>Tight parking turn test. No binding expected.</strong>',
+          cost: '$150–$200 service', source: 'Lexus AWD standard' },
+        { title: 'Recall check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Run VIN at nhtsa.gov before purchase.',
+          check: '<strong>Run nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Lexus buyers maintain their cars. Records typically available.',
+          check: '<strong>Request dealer records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'land-rover-defender-2020': {
+    year: 2020, make: 'Land Rover', model: 'Defender', trim: 'Defender 90 / 110 / 130 — S / SE / HSE / X / First Edition (L663, 2020–present)',
+    engine: '2.0T P300 I4 (296 hp), 3.0T P400 I6 MHEV (395 hp), or 5.0 V8 (518 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The L663 Defender is a landmark redesign of the iconic off-roader — proper off-road capability on a modern platform with PIVI Pro infotainment. Early production had software and electrical reliability concerns that Land Rover addressed via OTA updates. The 6-cylinder P400 is the preferred powertrain. Air suspension compressor failure is the main mechanical concern. Land Rover dealer support is essential. Only buy with LR CPO or full dealer history.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 340, topComplaintArea: 'Electrical / Software / Air Suspension' },
+    sections: [
+      { title: 'Air Suspension', items: [
+        { title: 'Air suspension compressor failure', risk: 'high', riskLabel: 'High Risk at 50k+',
+          desc: 'Land Rover air suspension compressors fail at higher rates than average. Overnight level test is essential.',
+          check: '<strong>Park level overnight. Any corner sag = compressor failing.</strong>',
+          cost: '$1,500–$3,000 compressor', source: 'Land Rover L663 air suspension pattern' }
+      ]},
+      { title: 'Electrical & Software', items: [
+        { title: 'PIVI Pro infotainment — early software issues', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early L663 PIVI Pro had freezing and connectivity issues. OTA updates significantly improved reliability.',
+          check: '<strong>Test all PIVI Pro functions and confirm software is current.</strong>',
+          cost: '$0 OTA update', source: 'Land Rover L663 infotainment TSBs' },
+        { title: 'Electrical gremlins — early production', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early 2020 L663s had various electrical fault codes and warning light issues. Well-sorted by 2022+.',
+          check: '<strong>Scan OBD for any stored fault codes before purchase.</strong>',
+          cost: '$0–$1,000 depending on fault', source: 'Land Rover L663 owner reports' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: 'P400 3.0T I6 MHEV — preferred', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The inline-six is smoother and more reliable than the 2.0T in this heavy vehicle.',
+          check: '<strong>Test all driving modes including off-road terrain modes.</strong>',
+          cost: 'Higher maintenance cost', source: 'Land Rover P400 reliability data' }
+      ]},
+      { title: 'Maintenance Cost', items: [
+        { title: 'Land Rover service records mandatory', risk: 'high', riskLabel: 'High Risk without',
+          desc: 'Land Rover services run $1,200–$2,500 per interval. Without records = $5,000–$10,000 deferred work.',
+          check: '<strong>Request ALL Land Rover dealer records. No records = walk.</strong>',
+          cost: '$1,200–$2,500 per service', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-rav4-prime-2021': {
+    year: 2021, make: 'Toyota', model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology (1st gen, 2021–present)',
+    engine: '2.5L A25A-FXS Hybrid + 18.1 kWh battery (302 hp combined system, AWD)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The RAV4 Prime combines plug-in hybrid efficiency with strong AWD performance — 302 hp system output, 42 miles all-electric range, and Toyota's proven THS-II hybrid architecture. One of the best PHEV SUVs available. No widespread failure modes. Main buyer checks: confirm PHEV charges and depletes normally, HV battery SoH, and verify any NHTSA recalls are closed. Outstanding value compared to pure EVs with comparable range.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Minimal / Charging related' },
+    sections: [
+      { title: 'PHEV System', items: [
+        { title: 'HV battery charging check', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'PHEV battery provides ~42 miles all-electric. Confirm it charges to 100% and depletes smoothly.',
+          check: '<strong>Test Level 2 charging if possible. Verify EV Range display makes sense.</strong>',
+          cost: 'Routine PHEV maintenance', source: 'Toyota RAV4 Prime PHEV standard' },
+        { title: 'THS-II hybrid system — proven', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota Hybrid System II is extremely reliable. Combined with PHEV battery for extra EV range.',
+          check: '<strong>Test EV mode, hybrid mode, and all-wheel drive engagement.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Toyota THS-II reliability' }
+      ]},
+      { title: 'AWD System', items: [
+        { title: 'Electric rear motor AWD', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Rear axle driven by electric motor — no mechanical AWD coupling. Test by activating AWD-Lock in snowy conditions or on low-grip surfaces.',
+          check: '<strong>Confirm no AWD warning lights. Test low-grip surface performance if available.</strong>',
+          cost: 'n/a', source: 'Toyota Prime AWD standard' }
+      ]},
+      { title: 'Recall & Documentation', items: [
+        { title: 'Recall check + service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Young vehicle with clean platform.',
+          check: '<strong>Run nhtsa.gov/recalls. Request oil change and charging records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'infiniti-qx80-2018': {
+    year: 2018, make: 'INFINITI', model: 'QX80', trim: 'Base / Luxe / ProACTIV / Sensory / Autograph (2nd gen Z62, 2011–2023)',
+    engine: '5.6L VK56 V8 (400 hp) with 7-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The QX80 is a Nissan Patrol-based full-size luxury SUV — the same 5.6L VK56 V8 as the Titan and Armada but in a more premium package. Excellent reliability and extremely durable drivetrain. Main checks: Takata airbag recall status, transmission fluid service, and air suspension compressor (if equipped). Great value vs. Lexus LX or Mercedes GLS at similar mileage.",
+    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 130, topComplaintArea: 'Air Suspension / Recall' },
+    sections: [
+      { title: 'Recall', items: [
+        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'QX80 models are in the Takata recall scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '5.6L VK56 V8 — highly reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Same engine as Titan. One of the most reliable V8 trucks. No AFM/MDS concerns.',
+          check: '<strong>Cold-start check. Smooth idle. Oil level and color.</strong>',
+          cost: 'Routine maintenance', source: 'Nissan VK56 reliability data' },
+        { title: '7-speed automatic — solid', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Durable transmission. Change fluid every 30k miles.',
+          check: '<strong>Test all gears and tow mode. No hesitation.</strong>',
+          cost: '$150–$200 fluid service', source: 'Nissan drivetrain standard' }
+      ]},
+      { title: 'Air Suspension (if equipped)', items: [
+        { title: 'Air ride compressor health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Optional air suspension compressors can fail. Overnight level test.',
+          check: '<strong>Check all corners are level next morning.</strong>',
+          cost: '$1,200–$2,500 compressor', source: 'INFINITI air suspension pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + Takata recall paperwork', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Records confirm maintenance and recall completion.',
+          check: '<strong>Request all service records and Takata recall completion paperwork.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
   }
 
 };
@@ -13804,7 +14155,8 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
-      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' }
+      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -13822,13 +14174,15 @@ const VEHICLE_MENU = {
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
       { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
       { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV / ST-Line', key: 'ford-escape-2020' },
-      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' }
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' },
+      { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT', key: 'ford-mustang-mach-e-2021' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / M35i', key: 'bmw-x1-2018' },
@@ -13840,7 +14194,8 @@ const VEHICLE_MENU = {
     ],
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
-      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' }
+      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
@@ -13854,7 +14209,8 @@ const VEHICLE_MENU = {
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' },
+      { model: 'Yukon', trim: 'SLE / SLT / AT4 / Denali / XL', key: 'gmc-yukon-2021' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
@@ -13884,7 +14240,8 @@ const VEHICLE_MENU = {
     ],
     'Nissan': [
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
-      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' }
     ]
   },
   2021: {
@@ -13894,7 +14251,8 @@ const VEHICLE_MENU = {
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
-      { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' }
+      { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' },
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -13910,7 +14268,8 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Subaru': [
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' },
@@ -13919,7 +14278,8 @@ const VEHICLE_MENU = {
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
       { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
-      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' }
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' },
+      { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT', key: 'ford-mustang-mach-e-2021' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i / xDrive28d', key: 'bmw-x1-2018' },
@@ -13931,7 +14291,8 @@ const VEHICLE_MENU = {
     ],
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
-      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' }
+      { model: 'RX350', trim: 'Base / F SPORT / Executive / Black Line', key: 'lexus-rx350-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
     ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' },
@@ -13945,7 +14306,8 @@ const VEHICLE_MENU = {
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali', key: 'gmc-sierra-2022' },
+      { model: 'Yukon', trim: 'SLE / SLT / AT4 / Denali / XL', key: 'gmc-yukon-2021' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
@@ -13953,7 +14315,8 @@ const VEHICLE_MENU = {
     'Nissan': [
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
-      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -14002,7 +14365,8 @@ const VEHICLE_MENU = {
       { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' }
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Toyota': [
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
@@ -14023,7 +14387,8 @@ const VEHICLE_MENU = {
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
-      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' }
     ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -14050,7 +14415,8 @@ const VEHICLE_MENU = {
     'Lexus': [
       { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
       { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
-      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
@@ -14071,7 +14437,8 @@ const VEHICLE_MENU = {
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
-      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' }
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -14487,7 +14854,8 @@ const VEHICLE_MENU = {
       { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
       { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
       { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
-      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
     ],
     'Chrysler': [
       { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
@@ -14694,7 +15062,8 @@ const VEHICLE_MENU = {
     'Honda': [
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
-      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' }
+      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' },
+      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
@@ -14743,11 +15112,26 @@ const VEHICLE_MENU = {
     'Tesla': [
       { model: 'Model Y', trim: 'Standard Range / Long Range / Performance', key: 'tesla-model-y-2022' },
       { model: 'Model Y', trim: 'RWD / Long Range / Performance', key: 'tesla-model-y-2022' }
+    ],
+    'Land Rover': [
+      { model: 'Defender', trim: '90 S / 90 SE / 110 S / 110 SE / 110 HSE / 110 X', key: 'land-rover-defender-2020' },
+      { model: 'Defender', trim: '90 S / 110 S / 110 SE / 110 HSE / 110 X', key: 'land-rover-defender-2020' },
+      { model: 'Defender', trim: '90 S / 110 SE / 110 HSE / 110 X / 130', key: 'land-rover-defender-2020' },
+      { model: 'Defender', trim: '90 S / 110 SE / 110 HSE / 110 X / 130', key: 'land-rover-defender-2020' }
+    ],
+    'INFINITI': [
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' },
+      { model: 'QX80', trim: 'Base / Limited', key: 'infiniti-qx80-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph / ProACTIV', key: 'infiniti-qx80-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph / ProACTIV', key: 'infiniti-qx80-2018' }
     ]
   },
     'Ford': [
       { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
-      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' }
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
+      { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT / Rally', key: 'ford-mustang-mach-e-2021' }
     ],
     'Kia': [
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
@@ -14759,14 +15143,16 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
-      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' }
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' },
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Toyota': [
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-tundra-2022' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
-      { model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (Hybrid)', key: 'toyota-camry-2024' }
+      { model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (Hybrid)', key: 'toyota-camry-2024' },
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
     ],
     'Volvo': [
       { model: 'XC40', trim: 'Core / Plus / Ultimate / Recharge', key: 'volvo-xc40-2019' }
@@ -14850,6 +15236,27 @@ const VEHICLE_MENU = {
     'Mercedes-Benz': [
       { model: 'C-Class', trim: 'C300 / C300 4MATIC / AMG C43 (W206)', key: 'mercedes-c300-2022' }
     ],
+    'Ford': [
+      { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT / Rally', key: 'ford-mustang-mach-e-2021' }
+    ],
+    'Nissan': [
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' }
+    ],
+    'Hyundai': [
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
+    ],
+    'Lexus': [
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
+    ],
+    'Land Rover': [
+      { model: 'Defender', trim: '90 S / 110 SE / 110 HSE / 110 X / 130', key: 'land-rover-defender-2020' }
+    ],
+    'Toyota': [
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' }
+    ],
+    'INFINITI': [
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph / ProACTIV', key: 'infiniti-qx80-2018' }
+    ],
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' },
@@ -14861,7 +15268,9 @@ const VEHICLE_MENU = {
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevy-trailblazer-2021' },
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
-      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' }
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
+      { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2', key: 'chevy-colorado-2023' },
+      { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2 / Bison', key: 'chevy-colorado-2023' }
     ],
     'Cadillac': [
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
@@ -14872,7 +15281,9 @@ const VEHICLE_MENU = {
     ],
     'GMC': [
       { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' },
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali Ultimate', key: 'gmc-sierra-2022' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Elevation / AT4 / Denali Ultimate', key: 'gmc-sierra-2022' },
+      { model: 'Yukon', trim: 'SLE / SLT / AT4 / Denali / XL', key: 'gmc-yukon-2021' },
+      { model: 'Yukon', trim: 'SLE / SLT / AT4 / Denali / XL', key: 'gmc-yukon-2021' }
     ],
     'Mazda': [
       { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
@@ -14882,7 +15293,8 @@ const VEHICLE_MENU = {
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
       { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / TrailSport / Black Edition', key: 'honda-ridgeline-2021' },
-      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' }
+      { model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid', key: 'honda-accord-2023' },
+      { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' }
     ]
   ,},
 };
