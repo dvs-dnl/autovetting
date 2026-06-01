@@ -58,22 +58,9 @@ button { font-family: inherit; cursor: pointer; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: var(--white);
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.02em;
 }
-.brand-mark { height: 34px; width: auto; flex-shrink: 0; display: block; }
-.brand:hover { text-decoration: none; color: var(--white); }
-.brand .tm {
-  font-size: 0.4em;
-  vertical-align: super;
-  line-height: 0;
-  margin-left: 2px;
-  color: var(--slate-300);
-  font-weight: 500;
-}
+.brand-logo { height: 38px; width: auto; display: block; }
+.brand:hover { text-decoration: none; opacity: 0.9; }
 .nav-links {
   display: flex;
   gap: 8px;

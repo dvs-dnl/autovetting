@@ -14,7 +14,7 @@
 <title>More to come &mdash; AutoVetting (preview)</title>
 <meta name="description" content="Private preview of the AutoVetting inspection product, including the upcoming mechanic-network features. Not for public distribution.">
 <link rel="canonical" href="https://autovetting.com/next/">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="stylesheet" href="/assets/css/site.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,35 +78,13 @@
     gap: 24px;
     flex-wrap: wrap;
   }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--white);
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-  }
-  .brand:hover { text-decoration: none; }
+  .brand { display: inline-flex; align-items: center; }
+  .brand:hover { text-decoration: none; opacity: 0.9; }
+  .brand-logo { height: 38px; width: auto; display: block; }
   .brand-mark { height: 34px; width: auto; flex-shrink: 0; display: block; }
-  .brand .tm {
-    font-size: 0.4em;
-    vertical-align: super;
-    line-height: 0;
-    margin-left: 2px;
-    color: var(--slate-300);
-    font-weight: 500;
-  }
 
-  .brand .by {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--slate-400);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .brand .by a { color: var(--slate-300); }
-  .brand .by a:hover { color: var(--white); text-decoration: underline; }
+
+
   .nav-links {
     display: flex;
     gap: 24px;
@@ -1657,7 +1635,7 @@
 
 <header class="site-header">
   <nav class="nav">
-    <a href="/" class="brand"><img src="/assets/img/logo-mark.svg" class="brand-mark" height="34" width="34" alt="" aria-hidden="true">AutoVetting<sup class="tm" aria-hidden="true">&trade;</sup></a>
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
     <div class="nav-links">
       <a href="/pinpoint/">Pinpoint</a>
       <a href="/search/">Search</a>
