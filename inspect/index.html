@@ -11562,6 +11562,412 @@ const CHECKLISTS = {
       { campaign: 'Takata', description: 'Airbag inflator metal fragmentation risk', severity: 'Critical', remedy: 'Free dealer repair; check VIN at nhtsa.gov' }
     ]
   },
+  'lexus-gx460-2015': {
+    year: 2015, make: 'Lexus', model: 'GX460', trim: 'Base / Premium / Luxury (2nd gen J150, 2010–2022)',
+    engine: '4.6L 1UR-FE V8 (301 hp) with 6-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The GX460 is one of the most reliable luxury SUVs ever made — a Lexus-badged Land Cruiser 150 platform with a proven 4.6L V8 and full-time 4WD. Owners routinely reach 250k–350k miles with basic maintenance. The main buyer checks are rear differential fluid, Takata airbag recall status, and frame/underbody rust on northern-state vehicles. A well-maintained GX460 is among the safest used luxury SUV purchases available.",
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 180, topComplaintArea: 'Infotainment (minor)' },
+    sections: [
+      { title: 'Recall — Check First', items: [
+        { title: 'Takata airbag inflator recall', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'GX460 models through 2019 may be within the Takata airbag recall. Inflator rupture is a fatality-class risk.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase. Must be closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '4.6L 1UR-FE V8 — bulletproof', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Toyota\'s 1UR-FE is one of the most reliable V8 engines built. Timing chain is robust; no chronic failure modes. Check for valve cover seeps on high-mileage units.',
+          check: '<strong>Check oil color and level. Look under hood for valve cover seeps. Cold-start idle should be smooth and quiet.</strong>',
+          cost: 'Routine maintenance', source: 'Toyota/Lexus 1UR-FE reliability data' },
+        { title: '6-speed automatic A760 — very reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The A760F/H is extremely durable. Change Toyota WS fluid every 60k miles.',
+          check: '<strong>Smooth shifts in all gears including tow mode. No hesitation or slip.</strong>',
+          cost: '$150–$200 fluid service', source: 'Toyota standard' },
+        { title: 'Rear differential — fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Rear diff and transfer case fluid should be changed every 30k miles. Neglected fluid leads to bearing noise and eventual failure.',
+          check: '<strong>Ask for differential service records. Request service if unknown.</strong>',
+          cost: '$200–$350 full drivetrain fluid service', source: 'Lexus GX460 service schedule' }
+      ]},
+      { title: 'Underbody & Suspension', items: [
+        { title: 'Frame and underbody rust', risk: 'high', riskLabel: 'High Risk (rust belt)',
+          desc: 'GX460 frames rust in northern salt states. Less severe than Tacoma/4Runner but still worth inspecting.',
+          check: '<strong>Inspect frame rails and skid plates from below with a flashlight. Surface oxidation is normal; perforation is not.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' },
+        { title: 'Kinetic Dynamic Suspension System (KDSS) — if equipped', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'KDSS hydraulic stabilizer bars can develop leaks at high mileage ($1,500–$3,500 to service). Check for any fluid on the stabilizer bar actuators.',
+          check: '<strong>Inspect KDSS hydraulic actuators at each axle for oil seepage.</strong>',
+          cost: '$1,500–$3,500', source: 'Lexus GX owner pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service history', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'GX460s with no records are still usually solid — the engine is that robust. Records are nice but the inspection matters more here.',
+          check: '<strong>Request records if available. Prioritize underbody inspection on northern-state cars.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair; verify at nhtsa.gov' }]
+  },
+  'chevy-blazer-2019': {
+    year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / LT / RS / Premier (2nd gen, 2019–2023)',
+    engine: '2.5L I4 (193 hp), 2.0T I4 (228 hp), or 3.6L V6 (308 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The reborn Blazer is a sharp-looking mid-size crossover but first-generation quality was inconsistent. The 2.0T engine had oil consumption complaints; the 3.6L V6 is more reliable. 2021+ models show improved build quality. The main concerns are the 9-speed automatic rough shifts (common on 2.0T), 2.0T oil consumption, and infotainment glitches. Prefer 2021+ with the V6 if buying used.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 440, topComplaintArea: 'Engine / Transmission' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '2.0T oil consumption (LTG engine)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The 2.0T LTG engine in the Blazer had documented oil consumption complaints — some owners report 1 qt per 2,000–3,000 miles. GM did not issue a recall.',
+          check: '<strong>Check dipstick immediately. Ask owner how often they add oil.</strong>',
+          cost: '$0–$2,500', source: 'NHTSA complaints / GM TSBs' },
+        { title: '9-speed automatic rough shifts', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The GM 9T65 9-speed automatic is prone to harsh shifts, shuddering, and hunting between gears. Software updates help but don\'t fully resolve all cases.',
+          check: '<strong>Test all city and highway throttle scenarios. Any shudder or harsh kick = request TSB update history.</strong>',
+          cost: '$0 software update; $3,000+ if transmission hardware needed', source: 'GM 9-speed pattern' },
+        { title: '3.6L V6 (LGX) — more reliable choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 3.6L LGX V6 in the Premier trim is significantly more reliable than the 2.0T. No widespread failure modes.',
+          check: '<strong>Standard oil check and cold-start idle. Smooth delivery expected.</strong>',
+          cost: 'Routine maintenance', source: 'GM LGX reliability history' }
+      ]},
+      { title: 'Electrical', items: [
+        { title: 'Infotainment glitches', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Early Blazers had Chevrolet Infotainment 3 freezing and CarPlay connectivity issues. Software updates resolve most.',
+          check: '<strong>Test full CarPlay/Android Auto pairing. Reboot infotainment and verify quick restart.</strong>',
+          cost: '$0 update', source: 'GM infotainment TSBs' }
+      ]},
+      { title: 'Recall', items: [
+        { title: 'Front brake hose recall (select 2019–2020)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Some 2019–2020 Blazers were recalled for front brake hoses that could chafe and develop fluid leaks.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + oil change frequency', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'On the 2.0T engine, oil change frequency is the key predictor of oil consumption severity.',
+          check: '<strong>Request all records. 2.0T with no records = risk premium.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Brake hose', description: 'Front brake hose chafing — fluid leak risk on select 2019-2020', severity: 'High', remedy: 'Free dealer brake hose replacement' }]
+  },
+  'cadillac-xt5-2017': {
+    year: 2017, make: 'Cadillac', model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum (1st gen, 2017–2023)',
+    engine: '3.6L LGX V6 (310 hp) with 8-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The XT5 is Cadillac's mid-size luxury crossover replacement for the SRX. The 3.6L LGX V6 is proven and reliable. The main buyer concerns are the timing chain on the LGX (which is robust but fails if oil is neglected at high mileage), oil cooler seal leaks, and infotainment (CUE system on early models is slow and the touchpad wears out). 2019+ CUE updates improved the interface significantly.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 230, topComplaintArea: 'Electrical / CUE Infotainment' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '3.6L LGX V6 — reliable with maintenance', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The LGX is a well-proven engine found in many GM vehicles. Timing chain is robust with regular oil changes. Watch for valve cover gasket seeps on higher-mileage units.',
+          check: '<strong>Check valve cover area for oil seeps. Cold-start idle should be smooth and quiet.</strong>',
+          cost: 'Routine maintenance', source: 'GM LGX reliability history' },
+        { title: 'Oil cooler seal — potential seep', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The LGX oil cooler seal can weep coolant into oil on higher-mileage examples. Check for milky dipstick residue.',
+          check: '<strong>Wipe dipstick and check for milky or foamy residue indicating coolant contamination.</strong>',
+          cost: '$400–$700', source: 'GM LGX pattern' },
+        { title: '8-speed automatic', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'GM\'s 8L45/8L90 is generally smooth and reliable. Change fluid every 45k miles.',
+          check: '<strong>Test smooth shifts through all gears in all throttle scenarios.</strong>',
+          cost: '$200–$300 fluid service', source: 'GM 8-speed standard' }
+      ]},
+      { title: 'CUE Infotainment', items: [
+        { title: 'CUE touchscreen delamination / unresponsive', risk: 'high', riskLabel: 'High Risk on 2017–2018',
+          desc: 'The Cadillac User Experience (CUE) system on 2017–2018 models uses a capacitive touchscreen that can delaminate or become unresponsive. This is a known defect Cadillac addressed under extended warranty on some VINs.',
+          check: '<strong>Test all touchscreen areas including corners. Any dead zones or sticky feel = replacement needed.</strong>',
+          cost: '$900–$1,500 touchscreen replacement', source: 'Cadillac CUE TSB / owner pattern' }
+      ]},
+      { title: 'AWD & Suspension', items: [
+        { title: 'Twin-clutch AWD system', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Active AWD with twin-clutch rear coupling. Perform tight-turn test in a parking lot.',
+          check: '<strong>Slow tight-radius parking lot turn — no vibration or binding expected.</strong>',
+          cost: '$150–$200 fluid service', source: 'GM AWD standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'LGX responds well to care. Records matter for timing chain confidence on 80k+ examples.',
+          check: '<strong>Request oil change records for mileage-appropriate confidence.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'toyota-avalon-2018': {
+    year: 2018, make: 'Toyota', model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Touring / Limited (5th gen, 2019–2022, or 4th gen XLE/Limited 2013–2018)',
+    engine: '3.5L 2GR-FKS V6 (301 hp, 5th gen) or 2.5L A25A-FXS Hybrid',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The Avalon is Toyota's flagship full-size sedan — extremely refined, spacious, and reliable. Both the 3.5L V6 and the hybrid drivetrain are Toyota's best. No chronic failure modes. The main checks are a timing cover oil seep on the 2GR at high mileage, and confirming the Takata airbag recall is closed on 4th-gen models. Outstanding highway cruiser and one of the most undervalued used car segments.",
+    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 140, topComplaintArea: 'Minimal — very low complaint volume' },
+    sections: [
+      { title: 'Recall (4th gen — 2013–2018)', items: [
+        { title: 'Takata airbag recall — verify closed', risk: 'critical', riskLabel: 'Critical on 2013–2018',
+          desc: '4th-gen Avalons are in the Takata recall scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Closed = proceed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '3.5L 2GR-FKS V6 — excellent reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Direct-injection version of Toyota\'s proven 2GR family. No widespread failure modes. GDI carbon buildup possible at 70k+; test idle smoothness.',
+          check: '<strong>Cold-start idle check. Any roughness at 70k+ may indicate intake carbon.</strong>',
+          cost: '$400–$700 carbon clean if needed', source: 'Toyota 2GR reliability history' },
+        { title: 'Hybrid drivetrain (if Hybrid)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Avalon Hybrid uses Toyota\'s proven THS-II system. Request HV battery health test at a Toyota dealer.',
+          check: '<strong>Test all EV-only modes. Confirm no HV battery warning lights.</strong>',
+          cost: 'Routine hybrid maintenance', source: 'Toyota THS-II reliability' }
+      ]},
+      { title: 'Comfort & Electrical', items: [
+        { title: 'Entune / Toyota multimedia', risk: 'low', riskLabel: 'Low Risk',
+          desc: '5th-gen Avalon has Entune 3.0 with CarPlay. 4th-gen Entune is older but functional.',
+          check: '<strong>Test all infotainment features and connectivity.</strong>',
+          cost: '$0', source: 'Standard check' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Avalon buyers tend to maintain their cars well. Dealer service records are common.',
+          check: '<strong>Request service history. Very low concern on this platform.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator on 4th-gen models', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'gmc-terrain-2018': {
+    year: 2018, make: 'GMC', model: 'Terrain', trim: 'SL / SLE / SLT / Denali (2nd gen, 2018–2023)',
+    engine: '1.5T I4 (170 hp), 2.0T I4 (252 hp), or 1.6L diesel I4 (137 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The 2nd-gen Terrain is a capable compact crossover with two turbocharged four-cylinder options. The 1.5T has oil consumption complaints and timing chain concerns with infrequent oil changes — this is the main risk. The 2.0T is smoother and more powerful with fewer consumption reports. The diesel is rare and expensive to maintain. 9-speed transmission rough shifts affect both 1.5T and 2.0T — software updates help.",
+    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 390, topComplaintArea: 'Engine / Transmission' },
+    sections: [
+      { title: 'Engine', items: [
+        { title: '1.5T oil consumption (LYX engine)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The 1.5T LYX turbocharged four-cylinder has documented oil consumption complaints. GM issued TSB but no recall. Risk compounds with extended oil changes.',
+          check: '<strong>Check dipstick level immediately. Ask how often oil is added between changes.</strong>',
+          cost: '$0–$2,500+', source: 'NHTSA complaints / GM TSBs' },
+        { title: '1.5T timing chain stretch', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Same pattern as Cruze/Equinox 1.5T — chain can stretch with neglected oil. Cold-start rattle = problem.',
+          check: '<strong>Cold-start with hood open. Any chain rattle = walk away or get a compression test first.</strong>',
+          cost: '$800–$1,500', source: 'GM 1.5T pattern' },
+        { title: '2.0T (LSY) — better choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.0T LSY is the better engine choice. More power, less oil consumption, overall more reliable.',
+          check: '<strong>Standard cold-start and oil level check.</strong>',
+          cost: 'Routine maintenance', source: 'GM LSY reliability' }
+      ]},
+      { title: 'Transmission', items: [
+        { title: '9-speed automatic shudder', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'GM\'s 9T45/9T65 9-speed shudders at low speed on some units. Software TSBs address most cases.',
+          check: '<strong>Test slow 15–25 mph throttle engagement for shudder.</strong>',
+          cost: '$0 software; $2,000+ hardware if worn', source: 'GM 9-speed pattern' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Oil change records — critical for 1.5T', risk: 'high', riskLabel: 'High Risk',
+          desc: 'On the 1.5T specifically, oil interval is the single most important document.',
+          check: '<strong>Request all records. No records on a 1.5T = price in significant risk.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'mazda3-2019': {
+    year: 2019, make: 'Mazda', model: 'Mazda3', trim: 'Base / Select / Preferred / Premium (4th gen BP, 2019–2023)',
+    engine: '2.0L SKYACTIV-G I4 (155 hp) or 2.5L SKYACTIV-G I4 (186 hp) or 2.5T Turbo (227 hp)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 4th-gen Mazda3 (BP) is one of the best-built compact cars in its segment — premium interior quality that rivals luxury brands, refined SKYACTIV powertrain, and exceptional reliability record. No chronic failure modes on any powertrain variant. The 2.5T Turbo (Hatchback and select Sedan) is the standout choice. ADAS radar sensor alignment can be affected by accidents; check for any prior front-end work.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: 'SKYACTIV-G 2.0L / 2.5L — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda\'s naturally-aspirated SKYACTIV engines are among the most reliable in the segment. No widespread failure modes. High-compression design requires 87 octane minimum; 91 recommended for 2.5T.',
+          check: '<strong>Standard cold-start check. Smooth idle and no oil consumption expected.</strong>',
+          cost: 'Routine maintenance', source: 'Mazda SKYACTIV reliability data' },
+        { title: '2.5T Turbo (if equipped) — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda\'s 2.5T is well-sorted with no significant issues. Change oil every 5,000 miles on turbo models.',
+          check: '<strong>Test boost delivery across all gears. No hesitation under full throttle.</strong>',
+          cost: 'Routine maintenance', source: 'Mazda 2.5T reliability data' }
+      ]},
+      { title: 'ADAS & Safety', items: [
+        { title: 'i-ACTIVSENSE radar alignment', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Front radar sensor for automatic emergency braking sits behind the grille. Any front-end impact (even minor) can misalign it, causing false alerts or system failure.',
+          check: '<strong>Confirm no ADAS warning lights. Ask if front bumper has been removed or repaired.</strong>',
+          cost: '$200–$500 radar alignment', source: 'Mazda ADAS service standard' }
+      ]},
+      { title: 'AWD (if equipped)', items: [
+        { title: 'i-ACTIV AWD fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'AWD rear coupling fluid should be changed every 30k miles.',
+          check: '<strong>Confirm AWD coupling service if applicable.</strong>',
+          cost: '$150–$200', source: 'Mazda service schedule' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Mazda3 buyers tend to maintain their cars. Reasonably low concern on this platform.',
+          check: '<strong>Request oil change records. Minor concern on SKYACTIV engines.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'lexus-is-2018': {
+    year: 2018, make: 'Lexus', model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD (3rd gen XE30, 2014–2020)',
+    engine: '2.0L 8AR-FTS Turbo I4 (241 hp), 3.5L 2GR-FSE V6 (260 hp), or 3.5L 2GR-FKS V6 (311 hp, 2017+)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 3rd-gen IS is a sharp-driving, highly reliable sport sedan. The IS350 with the 3.5L V6 is the standout — naturally aspirated, smooth, and proven. The IS200t/IS300 2.0T is also reliable but less satisfying. Main buyer risks are the same as any sport sedan: modified suspension, aggressive driving history, and GDI carbon on the direct-injection V6. Verify Takata recall status; well-maintained examples hit 200k miles without drama.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Recall', items: [
+        { title: 'Takata airbag inflator — check VIN', risk: 'critical', riskLabel: 'Critical — Check VIN',
+          desc: 'IS models through 2019 may be in Takata scope.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      ]},
+      { title: 'Powertrain', items: [
+        { title: '3.5L 2GR V6 (IS350) — excellent', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The V6 IS350 is the preferred powertrain — smooth, powerful, and highly reliable. Direct injection means some carbon at 80k+; test idle.',
+          check: '<strong>Cold-start idle smoothness. Any rough idle on 80k+ unit = carbon service possible.</strong>',
+          cost: 'Routine maintenance', source: 'Lexus 3.5L reliability history' },
+        { title: '2.0T IS200t / IS300 turbo', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 8AR-FTS is reliable but less engaging. Change oil every 5,000 miles for turbo longevity.',
+          check: '<strong>Standard oil and turbo check. No significant failure modes.</strong>',
+          cost: 'Routine maintenance', source: 'Lexus 2.0T reliability history' }
+      ]},
+      { title: 'Sport Sedan Checks', items: [
+        { title: 'Suspension / lowering springs', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'IS is popular for modification. Check for coilovers, lowering springs, or wear indicative of aggressive driving.',
+          check: '<strong>Inspect wheel wells for coilover tops or abnormally low ride height. Test for clunks over bumps.</strong>',
+          cost: '$500–$2,000 suspension restoration', source: 'AutoVetting editorial' },
+        { title: 'Brake pad/rotor wear', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Sport sedans often get hard use. Check rotor surfaces for deep grooves or heat bluing.',
+          check: '<strong>Inspect rotor surface through wheel spokes. Look through caliper for pad thickness.</strong>',
+          cost: '$300–$700 full brake service', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records + modification history', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'For a sport sedan, both maintenance history and what\'s been modified matter equally.',
+          check: '<strong>Request all records. Ask explicitly about any modifications ever made.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation risk', severity: 'Critical', remedy: 'Free dealer repair' }]
+  },
+  'honda-civic-2022': {
+    year: 2022, make: 'Honda', model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring (11th gen FE/FL, 2022–2025)',
+    engine: '2.0L i-VTEC I4 (158 hp, LX/Sport) or 1.5L VTEC Turbo I4 (192 hp, EX+)',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 11th-gen Civic is a significant improvement over the 10th gen — larger, quieter, better interior quality, and the 1.5T oil dilution issue is substantially reduced (though not fully eliminated on Canadian-spec vehicles). No widespread powertrain failures. The 11th gen is a strong buy at any mileage. Oil dilution on the 1.5T remains a watch item in cold climates; check PCM software version.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Minimal' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '1.5T L15CA — oil dilution reduced vs 10th gen', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda redesigned the 1.5T for the 11th gen with improved oil dilution management. US-market cars with current PCM software have low risk. Canadian/cold-climate cars may still see minor dilution.',
+          check: '<strong>Check oil dipstick color. Golden = good. Dark brown = normal aging. Grey/watery = concern (rare on US 11th gen).</strong>',
+          cost: 'Routine maintenance', source: 'Honda L15CA design update' },
+        { title: '2.0L K20C2 (LX/Sport) — simple and reliable', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Naturally-aspirated 2.0L is straightforward. Less power but zero drama.',
+          check: '<strong>Standard cold-start and oil check.</strong>',
+          cost: 'Routine maintenance', source: 'Honda K20C2 reliability' }
+      ]},
+      { title: 'CVT (LX/EX) / 6MT Reliability', items: [
+        { title: 'CVT — standard on most trims', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda\'s CVT has been reliable in this generation. Test for any noise or shudder during acceleration.',
+          check: '<strong>Test full acceleration from stop and highway passing. No belt noise or shudder expected.</strong>',
+          cost: '$150–$200 fluid service', source: 'Honda CVT standard' }
+      ]},
+      { title: 'Honda Sensing ADAS', items: [
+        { title: 'Honda Sensing standard — verify camera alignment', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Honda Sensing (CMBS, LKAS, ACC) is standard on all 11th-gen trims. Check for any calibration warning lights.',
+          check: '<strong>Confirm no ADAS warning lights. Verify windshield has not been replaced without camera recalibration.</strong>',
+          cost: '$0–$300 if recalibration needed', source: 'Honda Sensing standard' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: '11th-gen Civic is young. Any well-maintained example is a strong buy.',
+          check: '<strong>Request service records. Low concern on this platform.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'nissan-titan-2017': {
+    year: 2017, make: 'Nissan', model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve (2nd gen A60, 2016–2021)',
+    engine: '5.6L ENDURANCE V8 (400 hp) with 7-speed automatic',
+    overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    summary: "The 2nd-gen Titan with the 5.6L Endurance V8 is a reliable full-size truck that competes well against F-150 and Silverado on durability. No chronic powertrain failures. Main buyer checks are the transmission fluid service history, suspension wear on PRO-4X off-road models, and verifying the optional towing package if heavy towing is planned. Lower resale than domestic competitors makes it a value buy for work-truck buyers.",
+    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 180, topComplaintArea: 'Electrical / Minor' },
+    sections: [
+      { title: 'Powertrain', items: [
+        { title: '5.6L Endurance V8 — solid truck engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Nissan\'s 5.6L V8 is proven and reliable. No widespread failure modes. Change oil every 5,000 miles.',
+          check: '<strong>Cold-start idle: smooth and quiet. Check oil level and color. No exhaust smoke.</strong>',
+          cost: 'Routine maintenance', source: 'Nissan 5.6L reliability data' },
+        { title: '7-speed automatic — fluid service', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 7AT is generally reliable. Service transmission fluid every 30k miles for towing applications.',
+          check: '<strong>Smooth shifts through all gears. Test tow/haul mode if available.</strong>',
+          cost: '$150–$200 fluid service', source: 'Nissan drivetrain standard' }
+      ]},
+      { title: 'Suspension & Towing', items: [
+        { title: 'PRO-4X off-road use check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'PRO-4X models are purchased by off-road users. Inspect skid plates and underside for rock strikes.',
+          check: '<strong>Inspect all skid plates and underbody for impact damage. Check CV boots.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' },
+        { title: 'Towing history check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Trucks used for heavy towing wear transmission and rear axle faster. Ask about towing frequency and request trailer hitch photos.',
+          check: '<strong>Check hitch receiver and trailer wiring connector for heavy-use wear. Request transmission service records.</strong>',
+          cost: '$200–$500 service if towing history unknown', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Titan buyers tend to maintain their trucks. Records are typically available.',
+          check: '<strong>Request oil change and transmission fluid records.</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: []
+  },
+  'jeep-wrangler-2018': {
+    year: 2018, make: 'Jeep', model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL, 2018–present)',
+    engine: '2.0L eTorque Turbo I4 (270 hp), 3.6L Pentastar V6 (285 hp), or 3.0L EcoDiesel V6 (260 hp)',
+    overallRisk: 'monitor', overallRiskLabel: 'Monitor',
+    summary: "The JL Wrangler is Jeep's best Wrangler yet — improved highway manners, better fuel economy, and all the off-road capability. The 3.6L Pentastar is the proven choice; the 2.0T has oil dilution concerns in cold climates; the diesel adds complexity. The main risks are modification history (JLs are heavily modified), death wobble on lifted examples, and potential overheating on the 2.0T under sustained low-speed crawling. Factory-stock Wranglers with documented maintenance are strong buys.",
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 680, topComplaintArea: 'Engine / Death Wobble / Electrical' },
+    sections: [
+      { title: 'Recall — Check First', items: [
+        { title: 'Fuel tank skid plate / fuel leak recall', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'NHTSA 19V-243 covers certain 2018–2019 JL Wranglers for a fuel tank vent that could allow fuel to leak in the event of a crash.',
+          check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
+          cost: 'Free dealer repair', source: 'NHTSA recall 19V-243' }
+      ]},
+      { title: 'Death Wobble (Lifted / Modified)', items: [
+        { title: 'Death wobble on lifted examples', risk: 'high', riskLabel: 'High Risk if lifted',
+          desc: 'Death wobble is a violent front-end shimmy triggered above 45 mph, common on lifted/modified JLs with worn track bar or steering components. Can occur on stock vehicles too but is rarer.',
+          check: '<strong>Inspect front suspension: check track bar bolts (should be tight), look for aftermarket lift components. Test at highway speed — any shimmy = investigate all steering/suspension components.</strong>',
+          cost: '$200–$1,500 depending on cause', source: 'Jeep JL death wobble pattern' }
+      ]},
+      { title: 'Engine', items: [
+        { title: '3.6L Pentastar V6 — proven choice', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 3.6L Pentastar has been refined over many years. Minor valve train tick at startup is normal and disappears warm. Rock-solid reliability when stock.',
+          check: '<strong>Cold-start: minor valve tick is normal and goes away. Any persistent knock = inspect.</strong>',
+          cost: 'Routine maintenance', source: 'Chrysler Pentastar reliability data' },
+        { title: '2.0T eTorque oil dilution', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2.0T Hurricane-based engine in the JL had oil dilution reports in cold climates due to extended warm-up cycles. Check oil on a cold-climate vehicle.',
+          check: '<strong>Check oil level and smell. Oil level above MAX = gasoline dilution. Cold-climate cars warrant extra scrutiny.</strong>',
+          cost: '$0 (warm climate); PCM update available', source: 'Jeep 2.0T TSB' }
+      ]},
+      { title: 'Modification History', items: [
+        { title: 'Lift kit / aftermarket suspension', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Lifted JLs require proportionally upgraded steering and brake components. Check for professional installation with appropriate parts for the lift height.',
+          check: '<strong>Note lift height (stock = 9.1" ground clearance). Any lift >2" should have upgraded track bar. Ask for installer info.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' },
+        { title: 'Off-road damage check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Inspect skid plates, differential housings, and rocker panels for rock strike damage.',
+          check: '<strong>Look under the vehicle: bent skid plates, cracked diff housings, or rocker damage = negotiate.</strong>',
+          cost: 'Varies', source: 'AutoVetting editorial' }
+      ]},
+      { title: 'Documentation', items: [
+        { title: 'Maintenance + modification records', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'For a Wrangler, what\'s been done to it off-road matters as much as oil change history.',
+          check: '<strong>Request both maintenance records and any modification documentation (lift kit brand/installer, previous off-road use).</strong>',
+          cost: 'n/a', source: 'AutoVetting editorial' }
+      ]}
+    ],
+    recalls: [{ campaign: '19V-243', description: 'Fuel tank vent — fuel leak risk in crash on select 2018-2019 JL', severity: 'High', remedy: 'Free dealer repair' }]
+  },
 
 };
 
@@ -11573,14 +11979,17 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
-      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
     ],
     'Jeep': [
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
@@ -11594,6 +12003,21 @@ const VEHICLE_MENU = {
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
+    ],
+    'Chevrolet': [
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+    ],
+    'Cadillac': [
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
+    'GMC': [
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+    ],
+    'Mazda': [
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
     ]
   },
   2021: {
@@ -11601,14 +12025,16 @@ const VEHICLE_MENU = {
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
     ],
     'Jeep': [
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon / 4xe / Unlimited (JL)', key: 'jeep-wrangler-2018' }
     ],
     'Hyundai': [
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
@@ -11625,6 +12051,24 @@ const VEHICLE_MENU = {
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
+    ],
+    'Chevrolet': [
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+    ],
+    'Cadillac': [
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
+    'GMC': [
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+    ],
+    'Mazda': [
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+    ],
+    'Nissan': [
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ]
   },
   2020: {
@@ -11634,10 +12078,12 @@ const VEHICLE_MENU = {
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
-      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
+      { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' },
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
     ],
     'GMC': [
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
     ],
     'Ford': [
       { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' }
@@ -11653,7 +12099,8 @@ const VEHICLE_MENU = {
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
     ],
     'Honda': [
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
@@ -11661,10 +12108,12 @@ const VEHICLE_MENU = {
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
-      { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' }
+      { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Jeep': [
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon / 4xe (JL)', key: 'jeep-wrangler-2018' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
@@ -11680,11 +12129,16 @@ const VEHICLE_MENU = {
     ],
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
     ]
   },
   2019: {
     'Nissan': [
-      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -11702,7 +12156,8 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
-      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' }
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' }
     ],
     'Subaru': [
       { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
@@ -11721,10 +12176,12 @@ const VEHICLE_MENU = {
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevy-silverado-2014' },
-      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
+      { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' },
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
     ],
     'GMC': [
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
@@ -11748,7 +12205,8 @@ const VEHICLE_MENU = {
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' }
     ],
     'Jeep': [
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL)', key: 'jeep-wrangler-2018' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
@@ -11759,7 +12217,8 @@ const VEHICLE_MENU = {
   },
   2018: {
     'Nissan': [
-      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -11786,7 +12245,8 @@ const VEHICLE_MENU = {
     ],
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
-      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevy-equinox-2018' },
@@ -11795,7 +12255,8 @@ const VEHICLE_MENU = {
       { model: 'Cruze', trim: 'LS / RS / LT / Premier', key: 'chevy-cruze-2017' }
     ],
     'GMC': [
-      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' }
+      { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' },
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
     ],
     'Hyundai': [
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
@@ -11826,7 +12287,9 @@ const VEHICLE_MENU = {
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' }
     ],
     'Mazda': [
-      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' }
+      { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' },
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium', key: 'mazda3-2019' },
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium', key: 'mazda3-2019' }
     ],
     'Ford': [
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
@@ -11835,7 +12298,8 @@ const VEHICLE_MENU = {
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
     ],
     'Jeep': [
-      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' }
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL)', key: 'jeep-wrangler-2018' }
     ],
     'BMW': [
       { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
@@ -11843,7 +12307,8 @@ const VEHICLE_MENU = {
   },
   2017: {
     'Nissan': [
-      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' }
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Dodge': [
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' }
@@ -11869,7 +12334,8 @@ const VEHICLE_MENU = {
     ],
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
-      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' }
     ],
     'Chevrolet': [
       { model: 'Equinox', trim: 'LS / LT / Premier (2nd gen ending)', key: null },
@@ -11937,11 +12403,13 @@ const VEHICLE_MENU = {
       { model: 'Fusion', trim: 'S / SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' }
     ],
     'Nissan': [
-      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' },
+      { model: 'Titan', trim: 'S / SV / SL / PRO-4X', key: 'nissan-titan-2017' }
     ],
     'Toyota': [
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
-      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' }
+      { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
+      { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' }
     ],
     'Chevrolet': [
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevy-malibu-2016' },
@@ -12054,6 +12522,17 @@ const VEHICLE_MENU = {
     ],
     'Chevrolet': [
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevy-silverado-2014' }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'IS', trim: 'IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' }
     ]
   },
   2014: {
@@ -12099,6 +12578,9 @@ const VEHICLE_MENU = {
     'Volkswagen': [
       { model: 'Jetta GLI', trim: '', key: null },
       { model: 'GTI Mk6', trim: '', key: null }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ]
   },
   2013: {
@@ -12148,6 +12630,9 @@ const VEHICLE_MENU = {
     ],
     'Volkswagen': [
       { model: 'GTI Mk6', trim: '', key: null }
+    ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' }
     ]
   },
   2012: {
@@ -12240,11 +12725,34 @@ const VEHICLE_MENU = {
       { model: 'CR-V', trim: '', key: null }
     ]
   },
+  2024: {
+    'Honda': [
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
+    ]
+  },
   2023: {
     'Volkswagen': [
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
+    ],
+    'Chevrolet': [
+      { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevy-blazer-2019' }
+    ],
+    'Cadillac': [
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
+    'GMC': [
+      { model: 'Terrain', trim: 'SL / SLE / SLT / Denali', key: 'gmc-terrain-2018' }
+    ],
+    'Mazda': [
+      { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+    ],
+    'Honda': [
+      { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' }
     ]
-  },
+  ,},
 };
 
 // ---------- DOM ----------
