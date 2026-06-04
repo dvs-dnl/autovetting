@@ -730,6 +730,7 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+  .vs-filter-sub { font-weight: 400; color: var(--slate-400); font-size: 11px; margin-left: 4px; }
   .vs-filter-label {
     font-size: 11px;
     font-weight: 700;
@@ -1045,15 +1046,26 @@
     <!-- Filter chips -->
     <div class="vs-filters">
       <div class="vs-filter-group">
-        <span class="vs-filter-label">Type</span>
-        <div class="vchip-row" role="group" aria-label="Filter by body type">
-          <button class="vchip active" data-filter="type" data-value="">Any</button>
-          <button class="vchip" data-filter="type" data-value="sedan">Sedan</button>
-          <button class="vchip" data-filter="type" data-value="suv">SUV</button>
-          <button class="vchip" data-filter="type" data-value="truck">Truck</button>
-          <button class="vchip" data-filter="type" data-value="wagon">Wagon</button>
-          <button class="vchip" data-filter="type" data-value="hatch">Hatchback</button>
-          <button class="vchip" data-filter="type" data-value="hybrid-ev">Hybrid&nbsp;/&nbsp;EV</button>
+        <span class="vs-filter-label">Use case</span>
+        <div class="vchip-row" role="group" aria-label="Filter by use case">
+          <button class="vchip active" data-filter="use_case" data-value="">Any</button>
+          <button class="vchip" data-filter="use_case" data-value="commute">Daily commute</button>
+          <button class="vchip" data-filter="use_case" data-value="family-hauler">Family hauler</button>
+          <button class="vchip" data-filter="use_case" data-value="road-trip">Road trip</button>
+          <button class="vchip" data-filter="use_case" data-value="work-hauling">Work / hauling</button>
+          <button class="vchip" data-filter="use_case" data-value="weekend-fun">Weekend fun</button>
+          <button class="vchip" data-filter="use_case" data-value="outdoor">Outdoor / off-road</button>
+          <button class="vchip" data-filter="use_case" data-value="starter">First car</button>
+        </div>
+      </div>
+      <div class="vs-filter-group">
+        <span class="vs-filter-label">Comfortably seats</span>
+        <div class="vchip-row" role="group" aria-label="Filter by seats">
+          <button class="vchip active" data-filter="seats" data-value="">Any</button>
+          <button class="vchip" data-filter="seats" data-value="2">2</button>
+          <button class="vchip" data-filter="seats" data-value="4-5">4&ndash;5</button>
+          <button class="vchip" data-filter="seats" data-value="6">6</button>
+          <button class="vchip" data-filter="seats" data-value="7+">7+</button>
         </div>
       </div>
       <div class="vs-filter-group">
@@ -1063,18 +1075,20 @@
           <button class="vchip" data-filter="budget" data-value="under-10k">Under $10k</button>
           <button class="vchip" data-filter="budget" data-value="10-15k">$10k &ndash; $15k</button>
           <button class="vchip" data-filter="budget" data-value="15-20k">$15k &ndash; $20k</button>
-          <button class="vchip" data-filter="budget" data-value="20-30k">$20k+</button>
+          <button class="vchip" data-filter="budget" data-value="20-30k">$20k &ndash; $30k</button>
+          <button class="vchip" data-filter="budget" data-value="30k+">$30k+</button>
         </div>
       </div>
       <div class="vs-filter-group">
-        <span class="vs-filter-label">Priority</span>
-        <div class="vchip-row" role="group" aria-label="Filter by priority">
-          <button class="vchip active" data-filter="purpose" data-value="">Any</button>
-          <button class="vchip" data-filter="purpose" data-value="reliability">Reliability</button>
-          <button class="vchip" data-filter="purpose" data-value="fuel-economy">Fuel economy</button>
-          <button class="vchip" data-filter="purpose" data-value="cargo">Cargo / family</button>
-          <button class="vchip" data-filter="purpose" data-value="off-road">Off-road</button>
-          <button class="vchip" data-filter="purpose" data-value="fun-to-drive">Fun to drive</button>
+        <span class="vs-filter-label">Must have <span class="vs-filter-sub">(multi-select)</span></span>
+        <div class="vchip-row" role="group" aria-label="Must-have features">
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="awd-4wd">AWD / 4WD</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="hybrid-ev">Hybrid / EV</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="manual">Manual transmission</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="tow-5000">Tow 5,000+ lbs</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="carplay">Apple CarPlay / Android Auto</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="3-row">3-row seating</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="luxury">Luxury trim / feel</button>
         </div>
       </div>
     </div>
@@ -1275,1486 +1289,1892 @@
     var VEHICLES = [
       {
         name: 'Acura TSX', make: 'Acura', years: '2011–2014',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
         price: '$7,500', tier: 'Top',
         tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.',
         inspectUrl: '/inspect/?year=2014&make=Acura&model=TSX'
       },
       {
         name: 'Honda Ridgeline RTL', make: 'Honda', years: '2010–2012',
-        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,200', tier: 'Top',
-        tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.',
-        inspectUrl: ''
+        tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.'
       },
       {
         name: 'Subaru Outback 2.5i', make: 'Subaru', years: '2010–2014',
-        type: 'wagon', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd'],
         price: '$7,500', tier: 'Strong',
-        tagline: 'The "I want an AWD wagon" answer. Watch the FB25 oil consumption.',
-        inspectUrl: ''
+        tagline: 'The "I want an AWD wagon" answer. Watch the FB25 oil consumption.'
       },
       {
         name: 'Toyota Tacoma SR5', make: 'Toyota', years: '2010–2014',
-        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd', 'tow-5000'],
         price: '$8,500', tier: 'Top',
-        tagline: 'King of long-haul reliability. Verify clean frame (no salt-state rust).',
-        inspectUrl: ''
-      },
-      {
-        name: "Toyota Tacoma SR5 / TRD Sport / TRD Off-Road / TRD Pro (3rd gen)", make: 'Toyota', years: '2016–2022',
-        type: 'truck', budget: '20-30k', purpose: 'reliability',
-        price: '$24,500', tier: 'Strong',
-        tagline: "The dominant mid-size truck in America. The 3.5L V6 has a TSB for 6AT hunting (T-SB-0245-19) and GDI carbon at 80k+. The I4 SR is the simpler buy. Verify cat converter theft and clean frame on salt-state trucks.",
-        inspectUrl: '/inspect/?year=2019&make=Toyota&model=Tacoma'
+        tagline: 'King of long-haul reliability. Verify clean frame (no salt-state rust).'
       },
       {
         name: 'Honda CR-V EX-L', make: 'Honda', years: '2008–2011',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,000', tier: 'Top',
-        tagline: 'RepairPal #2 compact SUV. $407 annual repair. AC compressor on 2007–2009.',
-        inspectUrl: ''
+        tagline: 'RepairPal #2 compact SUV. $407 annual repair. AC compressor on 2007–2009.'
       },
       {
         name: 'Toyota Prius', make: 'Toyota', years: '2010–2015',
-        type: 'hybrid-ev', budget: 'under-10k', purpose: 'fuel-economy',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev'],
         price: '$6,500', tier: 'Top',
-        tagline: 'Most reliable hybrid ever built. Hybrid battery is the only real risk.',
-        inspectUrl: ''
+        tagline: 'Most reliable hybrid ever built. Hybrid battery is the only real risk.'
       },
       {
         name: 'Mazda3 SKYACTIV', make: 'Mazda', years: '2014–2015',
-        type: 'hatch', budget: 'under-10k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,200', tier: 'Top',
-        tagline: 'Most fun-per-dollar in the budget. Tight rear seat for families.',
-        inspectUrl: ''
+        tagline: 'Most fun-per-dollar in the budget. Tight rear seat for families.'
       },
       {
         name: 'Toyota Highlander V6', make: 'Toyota', years: '2008–2011',
-        type: 'suv', budget: 'under-10k', purpose: 'cargo',
+        use_case: 'family-hauler', seats: '6', budget: 'under-10k',
+        must_have: ['3-row', 'awd-4wd', 'tow-5000'],
         price: '$7,500', tier: 'Strong',
-        tagline: 'Smoother family hauler than Pilot or 4Runner. Optional 3rd row.',
-        inspectUrl: ''
+        tagline: 'Smoother family hauler than Pilot or 4Runner. Optional 3rd row.'
       },
       {
         name: 'Chevy Bolt EV', make: 'Chevrolet', years: '2017–2019',
-        type: 'hybrid-ev', budget: '10-15k', purpose: 'fuel-economy',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['hybrid-ev'],
         price: '$13,000', tier: 'Top',
-        tagline: 'Best used EV value in America — only if VIN-verified battery replacement.',
-        inspectUrl: ''
+        tagline: 'Best used EV value in America — only if VIN-verified battery replacement.'
       },
       {
         name: 'Subaru Forester 2.5i', make: 'Subaru', years: '2012–2016',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['awd-4wd'],
         price: '$11,000', tier: 'Top',
-        tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.',
-        inspectUrl: ''
+        tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.'
       },
       {
         name: 'Honda Accord EX-L', make: 'Honda', years: '2013–2016',
-        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$10,500', tier: 'Top',
         tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.',
         inspectUrl: '/inspect/?year=2014&make=Honda&model=Accord'
       },
       {
         name: 'Honda Accord LX / EX-L / Sport / Touring (10th gen)', make: 'Honda', years: '2018–2022',
-        type: 'sedan', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'luxury'],
         price: '$18,500', tier: 'Strong',
-        tagline: "Sharp-driving, roomy 10th-gen Accord. The 2.0T Sport/Touring (K20C1) is the connoisseur's pick; on any 1.5T (L15B7) dipstick-check for cold-climate oil dilution and confirm the PCM update. Verify 10-speed/CVT fluid service.",
+        tagline: 'Sharp-driving, roomy 10th-gen Accord. The 2.0T Sport/Touring (K20C1) is the connoisseur\'s pick; on any 1.5T (L15B7) dipstick-check for cold-climate oil dilution and confirm the PCM update. Verify 10-speed/CVT fluid service.',
         inspectUrl: '/inspect/?year=2018&make=Honda&model=Accord'
       },
       {
         name: 'Toyota Camry LE / SE / XSE / XLE', make: 'Toyota', years: '2018',
-        type: 'sedan', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$17,500', tier: 'Top',
-        tagline: "The 8th-gen XV70 is Toyota's sharpest Camry yet. 2.5L A25A or 3.5L V6. Verify fuel pump recall 20V-391 on I4 cars. Near-zero annual repair costs.",
+        tagline: 'The 8th-gen XV70 is Toyota\'s sharpest Camry yet. 2.5L A25A or 3.5L V6. Verify fuel pump recall 20V-391 on I4 cars. Near-zero annual repair costs.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=Camry'
       },
       {
         name: 'Nissan Rogue SV / SL', make: 'Nissan', years: '2017',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$14,500', tier: 'Caution',
         tagline: '#5 most popular used vehicle in America. One catch: the JF017E CVT. Verify NS-3 fluid history before any offer.',
         inspectUrl: '/inspect/?year=2017&make=Nissan&model=Rogue'
       },
       {
         name: 'Toyota 4Runner SR5', make: 'Toyota', years: '2010–2016',
-        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'tow-5000'],
         price: '$16,000', tier: 'Top',
-        tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.',
-        inspectUrl: ''
+        tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.'
       },
       {
         name: 'Jeep Wrangler Sport', make: 'Jeep', years: '2013–2017',
-        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'manual', 'tow-5000'],
         price: '$17,500', tier: 'Strong',
-        tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.',
-        inspectUrl: ''
+        tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.'
       },
       {
         name: 'Lexus RX 350', make: 'Lexus', years: '2010–2015',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury'],
         price: '$15,000', tier: 'Top',
         tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.',
         inspectUrl: '/inspect/?year=2012&make=Lexus&model=RX%20350'
       },
       {
         name: 'Ford F-150 XLT / Lariat', make: 'Ford', years: '2018',
-        type: 'truck', budget: '20-30k', purpose: 'cargo',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'tow-5000'],
         price: '$24,000', tier: 'Caution',
-        tagline: "America's best-seller with an aluminum body that doesn't rust. Must-verify: cam phasers (cold-start listen), 10R80 shudder test, brake recall 25V236 closed.",
+        tagline: 'America\'s best-seller with an aluminum body that doesn\'t rust. Must-verify: cam phasers (cold-start listen), 10R80 shudder test, brake recall 25V236 closed.',
         inspectUrl: '/inspect/?year=2018&make=Ford&model=F-150'
       },
       {
         name: 'Chevrolet Silverado 1500 WT / LT / LTZ', make: 'Chevrolet', years: '2014',
-        type: 'truck', budget: '15-20k', purpose: 'cargo',
+        use_case: 'work-hauling', seats: '4-5', budget: '15-20k',
+        must_have: ['hybrid-ev', 'manual', 'tow-5000'],
         price: '$18,500', tier: 'Caution',
-        tagline: "The F-150\'s main rival. Capable K2XX platform, strong 5.3L V8 — but AFM lifter failures ($3k–$6k) on V8 models are the buyer\'s headline risk. Decode VIN position 8: V6 (no AFM) vs. V8 (AFM) before any offer.",
+        tagline: 'The F-150\\'s main rival. Capable K2XX platform, strong 5.3L V8 — but AFM lifter failures ($3k–$6k) on V8 models are the buyer\\'s headline risk. Decode VIN position 8: V6 (no AFM) vs. V8 (AFM) before any offer.',
         inspectUrl: '/inspect/?year=2014&make=Chevrolet&model=Silverado%201500'
       },
       {
         name: 'Toyota Corolla L / LE / S', make: 'Toyota', years: '2014–2019',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$9,500', tier: 'Strong',
         tagline: 'Toyota\'s benchmark commuter. 1.8L 2ZR-FE hits 200k+ with basic upkeep. Verify Takata airbag recall VIN-by-VIN before purchase — it\'s mandatory. Strong buy when recall is confirmed clear.',
         inspectUrl: '/inspect/?year=2014&make=Toyota&model=Corolla'
       },
       {
         name: 'Honda Civic LX / EX / Sport / Si', make: 'Honda', years: '2016–2021',
-        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['manual'],
         price: '$14,000', tier: 'Caution',
         tagline: '10th-gen Civic is a sharp, well-built compact — but the 1.5T turbo (EX and above) has a documented cold-weather oil-dilution problem. LX and Sport trims use the 2.0L K20C2 (no dilution) and are the safer used buy. Any EX or higher: verify the PCM update is on the service record and check the dipstick.',
         inspectUrl: '/inspect/?year=2017&make=Honda&model=Civic'
       },
       {
         name: 'Jeep Wrangler Sport / Sahara / Rubicon (JK)', make: 'Jeep', years: '2007–2018',
-        type: 'suv', budget: '10-15k', purpose: 'fun-to-drive',
+        use_case: 'outdoor', seats: '4-5', budget: '10-15k',
+        must_have: ['awd-4wd', 'manual', 'tow-5000'],
         price: '$13,500', tier: 'Caution',
         tagline: 'JK Wrangler has near-unlimited aftermarket support and is genuinely trail-capable — but the buyer risk list is real: Death Wobble (worn track bar/drag link), 3.6L cam seals (oil leak at 100k+), and Takata airbag recall on 2012–2013 build dates. A clean JK with documented service and a stock lift is a solid buy; heavily modified ones require a specialist PPI.',
         inspectUrl: '/inspect/?year=2012&make=Jeep&model=Wrangler'
       },
       {
         name: 'Subaru Forester 2.5i / 2.5XT', make: 'Subaru', years: '2009–2013',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd'],
         price: '$9,500', tier: 'Caution',
         tagline: 'SH-gen Forester is practical and capable, but the EJ253 engine has a well-documented head-gasket failure pattern at 100k–150k miles ($900–$1,800 to repair). Always confirm head gaskets have been replaced or budget for it. The 2.5XT turbo adds performance but intercooler hoses are wear items. Confirmed head gaskets = strong buy.',
         inspectUrl: '/inspect/?year=2011&make=Subaru&model=Forester'
       },
       {
         name: 'Toyota RAV4 LE / XLE / Limited', make: 'Toyota', years: '2013–2018',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury'],
         price: '$17,500', tier: 'Strong',
         tagline: 'XA40 RAV4 is the no-drama compact SUV benchmark. The 2.5L 2AR-FE I4 is bulletproof past 200k with basic upkeep. 2019+ 8AT shift quality TSBs do not affect this generation — XA40 uses a 6AT that is generally reliable. AWD models: verify rear differential service. Outstanding reliability per mile.',
         inspectUrl: '/inspect/?year=2016&make=Toyota&model=RAV4'
       },
       {
         name: 'Honda CR-V LX / SE / EX / EX-L', make: 'Honda', years: '2015–2016',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$13,500', tier: 'Strong',
         tagline: 'RM-gen CR-V (2012–2016) with the 2.4L i-VTEC is one of the most reliable compact SUVs on the used market. No 1.5T oil-dilution risk — that issue belongs to 2017+. Verify AWD rear differential fluid history (often skipped). CVT fluid is serviceable. Excellent value in the compact SUV segment.',
         inspectUrl: '/inspect/?year=2015&make=Honda&model=CR-V'
       },
       {
         name: 'Nissan Altima 2.5 S / SV / SL', make: 'Nissan', years: '2013–2015',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$9,000', tier: 'Caution',
-        tagline: "Altima's JF017E CVT is the headline buyer risk — failure at 100k–150k miles if fluid was not changed every 30k miles costs $3,500–$4,500. The 2.5L QR25DE engine itself is reliable. Pull the service records, confirm CVT fluid history with Nissan NS-2 fluid, and test the transmission across all speeds before committing.",
+        tagline: 'Altima\'s JF017E CVT is the headline buyer risk — failure at 100k–150k miles if fluid was not changed every 30k miles costs $3,500–$4,500. The 2.5L QR25DE engine itself is reliable. Pull the service records, confirm CVT fluid history with Nissan NS-2 fluid, and test the transmission across all speeds before committing.',
         inspectUrl: '/inspect/?year=2013&make=Nissan&model=Altima'
       },
       {
         name: 'Honda Pilot LX / EX / EX-L / Touring / Elite', make: 'Honda', years: '2016–2022',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'luxury', 'tow-5000'],
         price: '$19,000', tier: 'Caution',
-        tagline: "3rd-gen Pilot is Honda's best 3-row SUV — but 2016 first-year 9-speed ZF automatic has documented shift quality and hunting issues. 2017+ improved significantly. All years: test the transmission across all speed ranges before purchase and verify Honda updated the PCM calibration. The 3.5L J35Y V6 is proven and reliable past 200k.",
+        tagline: '3rd-gen Pilot is Honda\'s best 3-row SUV — but 2016 first-year 9-speed ZF automatic has documented shift quality and hunting issues. 2017+ improved significantly. All years: test the transmission across all speed ranges before purchase and verify Honda updated the PCM calibration. The 3.5L J35Y V6 is proven and reliable past 200k.',
         inspectUrl: '/inspect/?year=2016&make=Honda&model=Pilot'
       },
       {
         name: 'Toyota Highlander LE / XLE / Limited / Platinum', make: 'Toyota', years: '2014–2019',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'awd-4wd', 'luxury', 'tow-5000'],
         price: '$17,000', tier: 'Strong',
-        tagline: "XU50 Highlander is Toyota's most-proven 3-row SUV. The 3.5L 2GR-FKS V6 runs 250k+ with synthetic oil changes. Check for oil leaks at valve covers on 2014–2016 cars (TSB). GDI carbon buildup on 2018+ 2GR-FKS is manageable with walnut-blast cleaning at 80k intervals. Outstanding family SUV value on the used market.",
+        tagline: 'XU50 Highlander is Toyota\'s most-proven 3-row SUV. The 3.5L 2GR-FKS V6 runs 250k+ with synthetic oil changes. Check for oil leaks at valve covers on 2014–2016 cars (TSB). GDI carbon buildup on 2018+ 2GR-FKS is manageable with walnut-blast cleaning at 80k intervals. Outstanding family SUV value on the used market.',
         inspectUrl: '/inspect/?year=2014&make=Toyota&model=Highlander'
       },
       {
         name: 'Honda Odyssey LX / EX / EX-L / Touring / Elite', make: 'Honda', years: '2018–2021',
-        type: 'wagon', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '15-20k',
+        must_have: ['3-row', 'carplay', 'luxury'],
         price: '$19,500', tier: 'Caution',
         tagline: '5th-gen Odyssey is the most feature-rich minivan on the used market, but the 2018 model year has a documented oil dilution issue on the 3.5L V6 (TSB 19-087) and a 9-speed automatic with early shift quality problems. The 2019+ model years received significant powertrain revisions. Confirm TSB service history; 2019+ is the safer choice.',
         inspectUrl: '/inspect/?year=2018&make=Honda&model=Odyssey'
       },
       {
         name: 'Jeep Grand Cherokee Laredo / Limited / Overland', make: 'Jeep', years: '2011–2021',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury', 'tow-5000'],
         price: '$15,500', tier: 'Caution',
         tagline: 'WK2 Grand Cherokee is capable and well-appointed — but budget for potential TIPM electrical failures (the headline WK2 defect, up to $1,500), air suspension airbag replacement ($600–$1,200 each), and Takata airbag recall verification. The 5.7L Hemi is the better long-term powertrain. Plan for a specialist PPI.',
         inspectUrl: '/inspect/?year=2014&make=Jeep&model=Grand%20Cherokee'
       },
       {
         name: 'Mazda CX-5 Sport / Touring / Grand Touring', make: 'Mazda', years: '2013–2016',
-        type: 'suv', budget: 'under-10k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
         price: '$9,500', tier: 'Strong',
         tagline: 'First-gen CX-5 (KE) is one of the cleanest compact SUV buys available — Skyactiv engines have genuinely low failure rates and the chassis is engaging to drive. Direct injection does not carbon-foul at the same rate as competitors. Rust is the only structural risk on salt-belt cars. Outstanding value in its class.',
         inspectUrl: '/inspect/?year=2013&make=Mazda&model=CX-5'
       },
       {
         name: 'Ford Escape S / SE / SEL / Titanium', make: 'Ford', years: '2013–2016',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['tow-5000'],
         price: '$9,000', tier: 'Caution',
         tagline: '2013–2016 Escape has the 1.6T EcoBoost coolant intrusion recall (engine hydrolocks if not repaired) and PowerShift DCT shudder on 1.6T/2.0T cars. Verify recall completion before any test drive. The 2.5L iVCT base engine avoids these issues entirely and is the lower-risk choice.',
         inspectUrl: '/inspect/?year=2013&make=Ford&model=Escape'
       },
       {
         name: 'Ford F-150 XL / XLT / Lariat (2015)', make: 'Ford', years: '2015–2017',
-        type: 'truck', budget: '15-20k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: '15-20k',
+        must_have: ['tow-5000'],
         price: '$16,500', tier: 'Caution',
         tagline: '13th-gen F-150 introduced the aluminum body — lighter and rust-resistant but more expensive to repair after impact. EcoBoost cam phasers are the primary mechanical concern. The 5.0L Coyote V8 is lower-risk. Verify recall 15V-048 (trailer brake concern) and structural inspection after any collision history.',
         inspectUrl: '/inspect/?year=2015&make=Ford&model=F-150'
       },
       {
         name: 'Ram 1500 Tradesman / Big Horn / Rebel / Laramie', make: 'Ram', years: '2019–2023',
-        type: 'truck', budget: '20-30k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'tow-5000'],
         price: '$24,000', tier: 'Caution',
         tagline: 'DT Ram 1500 is the most refined half-ton on the market with coil-spring rear suspension and a supremely quiet cabin. But the 5.7L Hemi MDS cylinder deactivation lifters fail at 60k–120k miles on neglected oil. Verify service intervals; 4.3L V6 avoids the issue. eTorque models need recall 20V-032 verified complete.',
         inspectUrl: '/inspect/?year=2019&make=Ram&model=1500'
       },
       {
         name: 'Chevrolet Equinox LS / LT / Premier', make: 'Chevrolet', years: '2018–2023',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'road-trip', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$16,500', tier: 'Caution',
         tagline: '3rd-gen Equinox is sharp and well-packaged, but the 1.5T LFV engine has documented oil consumption and timing chain stretch issues at 80k+ miles on neglected service. The 2.0T LSY is the better powertrain. Require oil change history; cold-start timing chain rattle check is mandatory on 1.5T cars.',
         inspectUrl: '/inspect/?year=2018&make=Chevrolet&model=Equinox'
       },
       {
         name: 'Ford Explorer XLT / Limited / ST / Platinum', make: 'Ford', years: '2020–2023',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'luxury'],
         price: '$26,000', tier: 'Caution',
         tagline: '6th-gen Explorer has two critical safety recalls that are deal-breakers if unresolved: 22V-486 (rear axle bolt can fracture and cause axle separation) and 20V-373 (carbon monoxide intrusion into rear cabin). Run the VIN at nhtsa.gov/recalls BEFORE any test drive — walk away if either is open.',
         inspectUrl: '/inspect/?year=2020&make=Ford&model=Explorer'
       },
       {
         name: 'Chevrolet Malibu LS / LT / Premier', make: 'Chevrolet', years: '2016–2022',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'road-trip', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev'],
         price: '$9,500', tier: 'Caution',
-        tagline: "Malibu's 1.5T LFV engine shares the Equinox's oil consumption and timing chain stretch risk. Used market is flooded with former fleet/rental cars — fleet history + extended oil intervals is exactly what accelerates LFV timing chain failure. Service records are non-negotiable on this car.",
+        tagline: 'Malibu\'s 1.5T LFV engine shares the Equinox\'s oil consumption and timing chain stretch risk. Used market is flooded with former fleet/rental cars — fleet history + extended oil intervals is exactly what accelerates LFV timing chain failure. Service records are non-negotiable on this car.',
         inspectUrl: '/inspect/?year=2016&make=Chevrolet&model=Malibu'
       },
       {
         name: 'GMC Sierra 1500 SLE / SLT / Denali', make: 'GMC', years: '2014–2018',
-        type: 'truck', budget: '15-20k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury', 'manual', 'tow-5000'],
         price: '$17,000', tier: 'Caution',
-        tagline: "K2XX Sierra is mechanically identical to the Silverado 1500 — same engines, same AFM lifter risk on 5.3L and 6.2L V8s. VIN position 8 tells you the engine: U = 4.3L V6 (no AFM), Z = 5.3L V8 (AFM), B = 6.2L V8 (AFM). Denali premium is real but verify it doesn't come with an AFM V8 that's been neglected.",
+        tagline: 'K2XX Sierra is mechanically identical to the Silverado 1500 — same engines, same AFM lifter risk on 5.3L and 6.2L V8s. VIN position 8 tells you the engine: U = 4.3L V6 (no AFM), Z = 5.3L V8 (AFM), B = 6.2L V8 (AFM). Denali premium is real but verify it doesn\'t come with an AFM V8 that\'s been neglected.',
         inspectUrl: '/inspect/?year=2014&make=GMC&model=Sierra%201500'
       },
       {
         name: 'Hyundai Tucson SE / Sport / Limited', make: 'Hyundai', years: '2016–2021',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
         price: '$13,500', tier: 'Caution',
-        tagline: "TL Tucson is competent and well-priced, but the 2.0L Nu engine carries Hyundai's broad KSDS engine bearing recall exposure. Multiple campaigns apply — verify ALL are complete before purchase. The 1.6T is more engaging but requires strict synthetic oil intervals. Any unresolved engine recall campaign = walk away.",
+        tagline: 'TL Tucson is competent and well-priced, but the 2.0L Nu engine carries Hyundai\'s broad KSDS engine bearing recall exposure. Multiple campaigns apply — verify ALL are complete before purchase. The 1.6T is more engaging but requires strict synthetic oil intervals. Any unresolved engine recall campaign = walk away.',
         inspectUrl: '/inspect/?year=2017&make=Hyundai&model=Tucson'
       },
       {
         name: 'Ford Edge SE / SEL / Titanium / ST', make: 'Ford', years: '2015–2023',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['tow-5000'],
         price: '$13,000', tier: 'Caution',
         tagline: 'Edge 2nd gen is refined and practical — the 2.7L EcoBoost V6 is the standout engine. 2.0L EcoBoost: verify internal water pump health (coolant + oil contamination check). AWD: require proof of PTU fluid service every 30k miles — almost universally skipped and causes premature failure.',
         inspectUrl: '/inspect/?year=2017&make=Ford&model=Edge'
       },
       {
         name: 'Hyundai Elantra SE / Sport / Limited', make: 'Hyundai', years: '2017–2020',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
         price: '$9,500', tier: 'Caution',
         tagline: 'AD Elantra is strong value in the used compact segment — well-built, comfortable, and priced low. The 2.0L Nu engine is subject to the Hyundai KSDS engine bearing recall campaigns. Verify all campaigns complete on the VIN. DCT models (Eco, Sport): test low-speed shudder before buying.',
         inspectUrl: '/inspect/?year=2017&make=Hyundai&model=Elantra'
       },
       {
         name: 'Kia Sportage LX / EX / SX Turbo', make: 'Kia', years: '2017–2022',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$13,000', tier: 'Caution',
         tagline: 'QL Sportage is well-built and competitive — but the 2.4L Nu engine has KSDS recall exposure for bearing wear. Verify all campaigns are complete before purchase. The 2.0T SX is more powerful but needs strict oil intervals. Strong value when recall history is clean.',
         inspectUrl: '/inspect/?year=2017&make=Kia&model=Sportage'
       },
       {
         name: 'Kia Soul Base / + / Turbo / Exclaim', make: 'Kia', years: '2014–2019',
-        type: 'hatch', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$9,500', tier: 'Caution',
         tagline: 'The 2nd-gen Soul is one of the best-value urban hatchbacks available — distinctive, practical, and well-priced. The 2.0L Nu engine has KSDS bearing recall exposure; 1.6L Gamma base trims are lower risk. Screen delamination is the main interior concern on high-mileage examples.',
         inspectUrl: '/inspect/?year=2017&make=Kia&model=Soul'
       },
       {
         name: 'Kia Sorento LX / EX / SX', make: 'Kia', years: '2016–2020',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$14,500', tier: 'Caution',
         tagline: 'UM Sorento is a comfortable, well-packaged 3-row capable SUV. The 3.3L Lambda V6 is the safest powertrain choice (no KSDS exposure). AWD coupling fluid is the most commonly missed service — require proof. Nu/2.0T buyers must verify all engine recall campaigns are complete.',
         inspectUrl: '/inspect/?year=2016&make=Kia&model=Sorento'
       },
       {
         name: 'Volkswagen Jetta S / SE / GLI', make: 'Volkswagen', years: '2019–2024',
-        type: 'sedan', budget: '10-15k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '10-15k',
+        must_have: ['carplay'],
         price: '$14,000', tier: 'Caution',
-        tagline: "A7 Jetta is VW's best-value sedan in years — refined, quiet, and European in feel. The DSG dry-clutch 7-speed shudders if mechatronic fluid was skipped. Always ask for DSG service history. 1.4 TSI EA211 is more durable than its predecessors. Takata recall on pre-2019 VINs must be verified.",
+        tagline: 'A7 Jetta is VW\'s best-value sedan in years — refined, quiet, and European in feel. The DSG dry-clutch 7-speed shudders if mechatronic fluid was skipped. Always ask for DSG service history. 1.4 TSI EA211 is more durable than its predecessors. Takata recall on pre-2019 VINs must be verified.',
         inspectUrl: '/inspect/?year=2018&make=Volkswagen&model=Jetta'
       },
       {
         name: 'Toyota Sienna LE / XLE / Limited', make: 'Toyota', years: '2011–2020',
-        type: 'wagon', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '15-20k',
+        must_have: ['3-row', 'luxury', 'manual'],
         price: '$16,500', tier: 'Strong',
         tagline: '3rd-gen Sienna is the reliability benchmark for family minivans — the 2GR-FE V6 runs 250k+ and the platform is rock-solid. Power sliding door motor wear is the most common repair at 100k+ miles. Outstanding family value when doors operate correctly and oil seeps are addressed.',
         inspectUrl: '/inspect/?year=2015&make=Toyota&model=Sienna'
       },
       {
         name: 'Subaru Crosstrek 2.0i / Premium / Limited', make: 'Subaru', years: '2018–2023',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$17,000', tier: 'Strong',
         tagline: '2nd-gen Crosstrek (GT platform) is the best Subaru has built in this segment — improved FB20 engine over EJ-series predecessors, better ride, standard EyeSight on most trims. Check oil consumption above 80k miles. EyeSight windshield replacement is expensive — inspect carefully.',
         inspectUrl: '/inspect/?year=2018&make=Subaru&model=Crosstrek'
       },
       {
         name: 'Ford Fusion SE / Titanium / Sport / Hybrid', make: 'Ford', years: '2015–2020',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev', 'manual', 'tow-5000'],
         price: '$9,500', tier: 'Caution',
         tagline: 'Fusion is a well-built midsize with abundant supply on the used market (production ended 2020). The 1.5T EcoBoost has a documented coolant loss issue — the 2.0T is the preferred engine. Hybrid is reliable. Discontinued model = depreciating fast = good value if you buy the right powertrain.',
         inspectUrl: '/inspect/?year=2017&make=Ford&model=Fusion'
       },
       {
         name: 'Nissan Sentra S / SV / SR / SL', make: 'Nissan', years: '2013–2019',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,500', tier: 'Caution',
         tagline: 'B17 Sentra is among the most affordable used compact sedans — but the Xtronic CVT needs NS-3 fluid every 30k miles and fails without it. Service history is everything. With documented CVT maintenance, the 1.8L engine itself is reasonably reliable. Without it: budget for a $3,500–$4,500 CVT.',
         inspectUrl: '/inspect/?year=2017&make=Nissan&model=Sentra'
       },
       {
         name: 'Nissan Murano S / SV / SL / Platinum', make: 'Nissan', years: '2015–2023',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
         price: '$14,500', tier: 'Caution',
-        tagline: "Z52 Murano has one of the nicest interiors in its class and a proven 3.5L V6. The CVT is the risk: NS-3 fluid every 30k miles or you're looking at a $3,500–$5,500 replacement. Require service receipts. With documented CVT maintenance this is a comfortable, premium-feeling buy at a mid-market price.",
+        tagline: 'Z52 Murano has one of the nicest interiors in its class and a proven 3.5L V6. The CVT is the risk: NS-3 fluid every 30k miles or you\'re looking at a $3,500–$5,500 replacement. Require service receipts. With documented CVT maintenance this is a comfortable, premium-feeling buy at a mid-market price.',
         inspectUrl: '/inspect/?year=2018&make=Nissan&model=Murano'
       },
       {
         name: 'Dodge Charger SXT / R/T / Scat Pack / 392', make: 'Dodge', years: '2015–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: [],
         price: '$18,000', tier: 'Caution',
         tagline: 'The Charger is the last large rear-drive American sedan — genuine V8 performance at used-car prices. The 5.7L Hemi MDS lifters fail at 60k–120k on neglected oil. The 3.6L Pentastar V6 avoids MDS entirely and is the low-risk budget choice. Verify Takata airbag recall completion before any test drive.',
         inspectUrl: '/inspect/?year=2018&make=Dodge&model=Charger'
       },
       {
         name: 'Dodge Challenger SXT / R/T / Scat Pack / Hellcat', make: 'Dodge', years: '2015–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: [],
         price: '$19,000', tier: 'Caution',
         tagline: 'The Challenger is the most affordable performance car on the used market — rear-drive, V8 available, and the proven LC platform. 5.7L Hemi MDS lifters fail on neglected oil. Hellcat and Scat Pack buyers need an abuse-history assessment. Takata airbag recall must be verified complete.',
         inspectUrl: '/inspect/?year=2018&make=Dodge&model=Challenger'
       },
       {
         name: 'Jeep Cherokee Sport / Latitude / Trailhawk', make: 'Jeep', years: '2018–2023',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'outdoor', seats: '4-5', budget: '10-15k',
+        must_have: ['carplay'],
         price: '$14,500', tier: 'Caution',
         tagline: 'KL Cherokee is comfortable and capable — but test the 9-speed ZF transmission thoroughly before committing. 2018+ is much improved over early KL years but shudder is still possible. The 2.4L Tigershark has oil consumption issues; the 3.2L V6 is the most reliable powertrain.',
         inspectUrl: '/inspect/?year=2018&make=Jeep&model=Cherokee'
       },
       {
         name: 'Nissan Pathfinder S / SV / SL / Platinum', make: 'Nissan', years: '2013–2020',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '10-15k',
+        must_have: ['3-row', 'awd-4wd', 'luxury', 'tow-5000'],
         price: '$14,000', tier: 'Caution',
-        tagline: "R52 Pathfinder has a critical pre-purchase check: inspect CVT fluid color before any test drive. Pink or milky fluid = radiator coolant contaminated the CVT — walk away. With clean fluid and documented service it's a comfortable 3-row family SUV. Without it, it's a $5,000 transmission waiting to fail.",
+        tagline: 'R52 Pathfinder has a critical pre-purchase check: inspect CVT fluid color before any test drive. Pink or milky fluid = radiator coolant contaminated the CVT — walk away. With clean fluid and documented service it\'s a comfortable 3-row family SUV. Without it, it\'s a $5,000 transmission waiting to fail.',
         inspectUrl: '/inspect/?year=2017&make=Nissan&model=Pathfinder'
       },
       {
         name: 'Nissan Frontier S / SV / Pro-4X', make: 'Nissan', years: '2012–2021',
-        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: ['tow-5000'],
         price: '$18,000', tier: 'Caution',
         tagline: 'D40 Frontier is a proven, simple mid-size truck with cheap parts and a strong V6. The 4.0L automatic has the same radiator/transmission cross-contamination failure mode as the Pathfinder — check fluid before driving. Great value when undercarriage is rust-free and transmission fluid is clean.',
         inspectUrl: '/inspect/?year=2018&make=Nissan&model=Frontier'
       },
       {
         name: 'BMW 3 Series 320i / 328i / 330i / 340i', make: 'BMW', years: '2012–2019',
-        type: 'sedan', budget: '10-15k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
         price: '$15,000', tier: 'Caution',
         tagline: 'F30 3 Series is one of the best driving experiences available used — but budget $1,500–$3,000/year for maintenance and a specialist PPI before purchase. N20-engine 2012–2015 cars have a timing chain guide failure pattern; 2016+ B48 is significantly better. Electric water pump failure is a known cost on all years. BMW specialist PPI is non-negotiable.',
         inspectUrl: '/inspect/?year=2018&make=BMW&model=3%20Series'
       },
       {
         name: 'Chevrolet Tahoe LS / LT / Premier', make: 'Chevrolet', years: '2015–2020',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'hybrid-ev', 'tow-5000'],
         price: '$24,000', tier: 'Caution',
         tagline: 'K2XX Tahoe is a proper full-size 3-row BOF SUV with real towing capacity. Every K2XX Tahoe has AFM — budget the lifter repair ($3,500–$7,000) as a known cost or find one with AFM already deleted. Oil change history is the single most important document.',
         inspectUrl: '/inspect/?year=2018&make=Chevrolet&model=Tahoe'
       },
       {
         name: 'Ford Ranger XL / XLT / Lariat', make: 'Ford', years: '2019–2023',
-        type: 'truck', budget: '20-30k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'tow-5000'],
         price: '$25,000', tier: 'Caution',
         tagline: 'T6 Ranger returned to North America with a strong 2.3L EcoBoost and aluminium body. The 10-speed transmission received multiple TSBs for shudder — test thoroughly. Cam phaser noise on cold start is reported above 60k miles. First-year (2019) quality is below 2020+; prefer later builds.',
         inspectUrl: '/inspect/?year=2019&make=Ford&model=Ranger'
       },
       {
         name: 'Chevrolet Suburban LS / LT / Premier', make: 'Chevrolet', years: '2015–2020',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'hybrid-ev', 'tow-5000'],
         price: '$26,000', tier: 'Caution',
         tagline: 'The Suburban is the Tahoe stretched 21 inches — same AFM V8 engines, same lifter failure risk, more interior space. Every K2XX Suburban is subject to the AFM problem. Best play: find one with AFM already deleted or with complete service history proving short oil intervals. Outstanding family-hauler value when AFM is documented.',
         inspectUrl: '/inspect/?year=2018&make=Chevrolet&model=Suburban'
       },
       {
         name: 'GMC Yukon SLE / SLT / Denali', make: 'GMC', years: '2015–2020',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'luxury', 'tow-5000'],
         price: '$25,000', tier: 'Caution',
         tagline: 'Mechanically identical to the Tahoe — same AFM V8 lifter risk, same maintenance calculus. Denali trim adds genuine luxury at a premium. All Yukon V8s have AFM: document the history or budget the repair.',
         inspectUrl: '/inspect/?year=2018&make=GMC&model=Yukon'
       },
       {
         name: 'Buick Enclave Preferred / Essence / Avenir', make: 'Buick', years: '2018–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'carplay', 'luxury'],
         price: '$22,000', tier: 'Caution',
         tagline: '2nd-gen Enclave is a genuinely premium 3-row crossover — quiet, comfortable, and well-finished. The 3.6L LGX V6 is strong; the 9-speed auto had early hesitation issues mostly resolved by 2019+. GDI carbon buildup is a long-term service item. Strong value for buyers who want luxury near without the German maintenance costs.',
         inspectUrl: '/inspect/?year=2018&make=Buick&model=Enclave'
       },
       {
         name: 'Audi A4 Premium / Prestige / S4', make: 'Audi', years: '2017–2022',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$19,000', tier: 'Caution',
         tagline: 'B9 Audi A4 is an outstanding executive sedan — but German luxury maintenance costs are real. EA888 timing chain tensioner, coolant flange failure, GDI carbon buildup, and DSG fluid service are all known line items. Audi specialist PPI with VCDS scan is non-negotiable. Budget $2,000–$4,000/year for maintenance honestly.',
         inspectUrl: '/inspect/?year=2018&make=Audi&model=A4'
       },
       {
         name: 'BMW X3 sDrive30i / xDrive30i / M40i', make: 'BMW', years: '2018–2023',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$24,000', tier: 'Caution',
-        tagline: "G01 X3 is BMW's most polished compact SAV — the B48 engine is significantly more reliable than the N20 it replaced. Electric water pump failure and control arm bushing wear are the known costs. BMW specialist PPI with ISTA diagnostic scan before purchase is mandatory.",
+        tagline: 'G01 X3 is BMW\'s most polished compact SAV — the B48 engine is significantly more reliable than the N20 it replaced. Electric water pump failure and control arm bushing wear are the known costs. BMW specialist PPI with ISTA diagnostic scan before purchase is mandatory.',
         inspectUrl: '/inspect/?year=2018&make=BMW&model=X3'
       },
       {
         name: 'Mercedes-Benz C300 / C300 4MATIC / C43 AMG', make: 'Mercedes-Benz', years: '2015–2021',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$20,000', tier: 'Caution',
         tagline: 'W205 C-Class is among the best driving sedans at this price point — genuinely premium quality and a refined ride. 7G-Tronic transmission service, sunroof drain clogs (a well-known W205 issue), and control arm wear are the budget items. Specialist PPI with XENTRY scan before committing.',
         inspectUrl: '/inspect/?year=2018&make=Mercedes-Benz&model=C300'
       },
       {
         name: 'Volkswagen Tiguan S / SE / SEL', make: 'Volkswagen', years: '2018–2024',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$16,500', tier: 'Caution',
         tagline: '2nd-gen Tiguan on the MQB platform is a genuine step up — more space, better ride, and the EA888 2.0T engine is solid. DSG fluid service and Haldex AWD fluid are the commonly-skipped maintenance items. Panoramic roof drain clog is a known interior water risk. Good value with documented service.',
         inspectUrl: '/inspect/?year=2018&make=Volkswagen&model=Tiguan'
       },
       {
         name: 'Jeep Compass Sport / Latitude / Trailhawk', make: 'Jeep', years: '2017–2023',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'outdoor', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$13,500', tier: 'Caution',
-        tagline: "MP Compass is Jeep's most improved product in years — better quality than any prior Compass. The 2.4L Tigershark has oil consumption history; check dipstick before the test drive. 9-speed transmission needs thorough testing. Trailhawk offers genuine off-road capability at a low entry price.",
+        tagline: 'MP Compass is Jeep\'s most improved product in years — better quality than any prior Compass. The 2.4L Tigershark has oil consumption history; check dipstick before the test drive. 9-speed transmission needs thorough testing. Trailhawk offers genuine off-road capability at a low entry price.',
         inspectUrl: '/inspect/?year=2018&make=Jeep&model=Compass'
       },
       {
         name: 'Jeep Renegade Sport / Latitude / Trailhawk', make: 'Jeep', years: '2017–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'fun-to-drive',
+        use_case: 'outdoor', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$9,500', tier: 'Caution',
-        tagline: "Renegade is Jeep's most affordable entry — distinctive styling and real Trailhawk off-road capability. The 1.4T MultiAir has a rubber timing belt that must be replaced at 100k miles; require the service record. 2.4L Tigershark: check dipstick. Both engines are manageable with documentation.",
+        tagline: 'Renegade is Jeep\'s most affordable entry — distinctive styling and real Trailhawk off-road capability. The 1.4T MultiAir has a rubber timing belt that must be replaced at 100k miles; require the service record. 2.4L Tigershark: check dipstick. Both engines are manageable with documentation.',
         inspectUrl: '/inspect/?year=2018&make=Jeep&model=Renegade'
       },
       {
         name: 'Buick Encore Preferred / Essence / Sport Touring', make: 'Buick', years: '2014–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
         price: '$9,500', tier: 'Caution',
         tagline: 'Encore packs genuine Buick interior quality into a fuel-efficient subcompact footprint. The 1.4T Ecotec needs synthetic oil every 5k miles — timing chain rattles and oil consumption are the consequences of neglect. Turbo wastegate rattle at idle is common and inexpensive to fix. Solid value when oil change history is documented.',
         inspectUrl: '/inspect/?year=2018&make=Buick&model=Encore'
       },
       {
         name: 'Cadillac Escalade Luxury / Premium / Platinum', make: 'Cadillac', years: '2015–2020',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'luxury'],
         price: '$28,000', tier: 'Caution',
         tagline: 'K2XX Escalade is the premium expression of the Tahoe/Suburban platform — all use the 6.2L AFM V8. Budget $5,000–$8,000 for lifter repair as a near-certain cost. CUE infotainment delamination is a known defect on 2015–2018. MRC dampers add cost when they fail. Outstanding buy only when all three are documented as addressed.',
         inspectUrl: '/inspect/?year=2018&make=Cadillac&model=Escalade'
       },
       {
         name: 'Chevrolet Traverse LS / LT / RS / Premier', make: 'Chevrolet', years: '2018–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'carplay', 'hybrid-ev'],
         price: '$22,000', tier: 'Caution',
         tagline: '2nd-gen Traverse is one of the best-value 3-row family crossovers — genuinely large interior, strong 3.6L V6, and reasonable reliability. 2018 first-year 9-speed is the weakest; 2019+ improved substantially. GDI carbon buildup is a long-term maintenance item. Strong value when the transmission has been updated.',
         inspectUrl: '/inspect/?year=2018&make=Chevrolet&model=Traverse'
       },
       {
         name: 'GMC Acadia SLE / SLT / Denali', make: 'GMC', years: '2017–2023',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'luxury'],
         price: '$18,000', tier: 'Caution',
-        tagline: "2nd-gen Acadia downsized into a more manageable crossover — 3-row capable but with less cargo room than Traverse/Enclave. The 3.6L LGX V6 is the preferred engine (2.5L I4 is underpowered). 6-speed auto is more proven than the 9-speed found in siblings. Good value for buyers who don't need maximum space.",
+        tagline: '2nd-gen Acadia downsized into a more manageable crossover — 3-row capable but with less cargo room than Traverse/Enclave. The 3.6L LGX V6 is the preferred engine (2.5L I4 is underpowered). 6-speed auto is more proven than the 9-speed found in siblings. Good value for buyers who don\'t need maximum space.',
         inspectUrl: '/inspect/?year=2017&make=GMC&model=Acadia'
       },
       {
         name: 'Hyundai Santa Fe SE / SEL / Limited', make: 'Hyundai', years: '2019–2023',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'luxury'],
         price: '$16,500', tier: 'Caution',
         tagline: 'TM Santa Fe has multiple critical KSDS engine recall campaigns — verify ALL are complete before purchase. The Nu and Theta II engines are both in the recall family. HTRAC AWD coupling fluid is commonly skipped. Strong family SUV when both items are documented; walk away if either is unresolved.',
         inspectUrl: '/inspect/?year=2019&make=Hyundai&model=Santa%20Fe'
       },
       {
         name: 'Tesla Model 3 Standard Range / Long Range / Performance', make: 'Tesla', years: '2019–2023',
-        type: 'sedan', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$24,000', tier: 'Strong',
         tagline: 'The Model 3 is the best-selling EV in history for good reason — excellent range, over-the-air updates, and minimal powertrain maintenance. Check battery health before purchase (charge to 90%, compare to EPA rating). Pre-2020 LR AWD had rear motor bearing whine. Panel gaps on early builds are cosmetic but real.',
         inspectUrl: '/inspect/?year=2019&make=Tesla&model=Model%203'
       },
       {
         name: 'Tesla Model Y Long Range / Performance', make: 'Tesla', years: '2021–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$28,000', tier: 'Strong',
-        tagline: "World's best-selling vehicle in 2023. 2021+ Giga Texas production improved panel quality and added the heat pump as standard. Battery degradation is minimal under 50k miles. Water intrusion at roof corners is the main early-production quality issue. Best EV value at this price point.",
+        tagline: 'World\'s best-selling vehicle in 2023. 2021+ Giga Texas production improved panel quality and added the heat pump as standard. Battery degradation is minimal under 50k miles. Water intrusion at roof corners is the main early-production quality issue. Best EV value at this price point.',
         inspectUrl: '/inspect/?year=2021&make=Tesla&model=Model%20Y'
       },
       {
         name: 'Ford Mustang EcoBoost / GT / GT350', make: 'Ford', years: '2015–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: [],
         price: '$19,500', tier: 'Caution',
         tagline: 'S550 Mustang delivers one of the best performance-per-dollar ratios on the used market. GT 5.0L Coyote is the sweet spot — proven and durable. EcoBoost 2.3T has cam phaser reports above 60k miles. GT350 and GT Performance Pack: require abuse-history assessment. MT82 manual is notchy when cold — a characteristic, not always a defect.',
         inspectUrl: '/inspect/?year=2018&make=Ford&model=Mustang'
       },
       {
         name: 'Mitsubishi Outlander ES / SE / SEL / PHEV', make: 'Mitsubishi', years: '2014–2021',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev'],
         price: '$9,500', tier: 'Strong',
         tagline: 'Most affordable 3-row SUV on the used market and genuinely reliable when the Jatco CVT is serviced with CVTF-J4 fluid every 30k miles. Below-average interior quality is the honest tradeoff. PHEV version is a capable plug-in at a bargain price — check EV range vs. spec.',
         inspectUrl: '/inspect/?year=2017&make=Mitsubishi&model=Outlander'
       },
       {
         name: 'INFINITI QX60 Pure / Luxe / Sensory', make: 'INFINITI', years: '2016–2021',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'luxury'],
         price: '$18,000', tier: 'Caution',
         tagline: '1st-gen QX60 has outstanding interior space and a proven 3.5L V6 — but the CVT has the same radiator cross-contamination failure mode as the Pathfinder. Pull the CVT dipstick before any test drive: pink or milky fluid = walk away immediately. Clean fluid + service history = excellent value.',
         inspectUrl: '/inspect/?year=2018&make=INFINITI&model=QX60'
       },
       {
         name: 'Volvo XC90 T5 / T6 / T8 PHEV', make: 'Volvo', years: '2016–2022',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$24,000', tier: 'Caution',
         tagline: '2nd-gen XC90 on the SPA platform is gorgeous and technologically advanced. Sensus infotainment reliability is the most common complaint. Drive-E timing belt service at 100k miles. Air suspension and Haldex AWD fluid are significant maintenance items. Volvo specialist PPI with VIDA scan is mandatory — budget $3,000–$5,000/year honestly.',
         inspectUrl: '/inspect/?year=2017&make=Volvo&model=XC90'
       },
       {
         name: 'Volvo XC60 T5 / T6 / T8 PHEV', make: 'Volvo', years: '2018–2023',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$24,000', tier: 'Caution',
         tagline: 'SPA XC60 shares platform and issues with the XC90 — Sensus infotainment is the most-complained feature, Drive-E timing belt at 100k miles, and air suspension wear at 80k+. A genuinely beautiful and capable SUV when issues are managed. Volvo VIDA specialist PPI before purchase.',
         inspectUrl: '/inspect/?year=2018&make=Volvo&model=XC60'
       },
       {
         name: 'Acura MDX Technology / Advance / Sport Hybrid', make: 'Acura', years: '2017–2021',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'hybrid-ev', 'luxury'],
         price: '$26,000', tier: 'Strong',
         tagline: '3rd-gen MDX is one of the most recommended used luxury 3-row SUVs — proven 3.5L J35Y V6, well-sorted SH-AWD, and Honda reliability. VCM motor mount vibration is the main real-world complaint. Sport Hybrid is fuel-efficient and adds proven Honda hybrid hardware. Outstanding long-term value.',
         inspectUrl: '/inspect/?year=2018&make=Acura&model=MDX'
       },
       {
         name: 'Acura RDX Technology / A-Spec / Advance', make: 'Acura', years: '2019–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$27,000', tier: 'Strong',
-        tagline: "3rd-gen RDX is Acura's best product in a decade — turbocharged 2.0L VTEC, genuinely engaging SH-AWD, and excellent build quality. Require SH-AWD rear differential service receipts. Cold-climate buyers: verify oil dilution on 2.0T. One of the best handling luxury compact SUVs available.",
+        tagline: '3rd-gen RDX is Acura\'s best product in a decade — turbocharged 2.0L VTEC, genuinely engaging SH-AWD, and excellent build quality. Require SH-AWD rear differential service receipts. Cold-climate buyers: verify oil dilution on 2.0T. One of the best handling luxury compact SUVs available.',
         inspectUrl: '/inspect/?year=2019&make=Acura&model=RDX'
       },
       {
         name: 'Lexus ES 350 / ES 300h Hybrid', make: 'Lexus', years: '2019–2024',
-        type: 'sedan', budget: '20-30k', purpose: 'reliability',
+        use_case: 'road-trip', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$28,000', tier: 'Strong',
-        tagline: "7th-gen ES is one of the most refined front-wheel-drive luxury sedans ever built. 2GR-FKS V6 and 2.5L hybrid system are Toyota's most proven platforms. GDI carbon buildup on V6 at 80k+ is manageable. ES 300h is among the most fuel-efficient luxury sedans available. Outstanding reliability record.",
+        tagline: '7th-gen ES is one of the most refined front-wheel-drive luxury sedans ever built. 2GR-FKS V6 and 2.5L hybrid system are Toyota\'s most proven platforms. GDI carbon buildup on V6 at 80k+ is manageable. ES 300h is among the most fuel-efficient luxury sedans available. Outstanding reliability record.',
         inspectUrl: '/inspect/?year=2019&make=Lexus&model=ES'
       },
       {
         name: 'Lexus NX 200t / NX 300 / NX 300h Hybrid', make: 'Lexus', years: '2015–2021',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'road-trip', seats: '4-5', budget: '15-20k',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$20,000', tier: 'Caution',
         tagline: 'AZ10 NX brought Lexus into the compact luxury SUV segment. The 2.0T 8AR-FTS has oil consumption reports above 80k miles — check the dipstick before driving. NX 300h hybrid avoids this issue and is the more reliable choice. Remote Touch interface is polarizing but functional.',
         inspectUrl: '/inspect/?year=2018&make=Lexus&model=NX'
       },
       {
         name: 'BMW 5 Series 530i / 540i / M550i', make: 'BMW', years: '2017–2023',
-        type: 'sedan', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury'],
         price: '$26,000', tier: 'Caution',
-        tagline: "G30 5 Series is BMW's refined executive sedan — the B58 530i/540i is the sweet spot. N63 V8 on 550i/M550i has documented rod bearing concerns — avoid without full service history. Electric water pump and control arm bushings are real costs on all years. Specialist PPI with ISTA is mandatory.",
+        tagline: 'G30 5 Series is BMW\'s refined executive sedan — the B58 530i/540i is the sweet spot. N63 V8 on 550i/M550i has documented rod bearing concerns — avoid without full service history. Electric water pump and control arm bushings are real costs on all years. Specialist PPI with ISTA is mandatory.',
         inspectUrl: '/inspect/?year=2018&make=BMW&model=5%20Series'
       },
       {
         name: 'BMW X5 xDrive40i / xDrive50i / M50i', make: 'BMW', years: '2019–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$38,000', tier: 'Caution',
-        tagline: "G05 X5 is BMW's most capable and popular SAV — the B58 xDrive40i is the safest choice. N63 V8 on 50i/M50i has bearing history. Air suspension wear at 80k+ miles. Budget $3,000–$5,000/year honestly. Mandatory specialist PPI with ISTA before any purchase.",
+        tagline: 'G05 X5 is BMW\'s most capable and popular SAV — the B58 xDrive40i is the safest choice. N63 V8 on 50i/M50i has bearing history. Air suspension wear at 80k+ miles. Budget $3,000–$5,000/year honestly. Mandatory specialist PPI with ISTA before any purchase.',
         inspectUrl: '/inspect/?year=2019&make=BMW&model=X5'
       },
       {
         name: 'Audi Q5 Premium / Prestige / SQ5', make: 'Audi', years: '2018–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$26,000', tier: 'Caution',
         tagline: 'FY Q5 is one of the best-built luxury compact SUVs available — excellent fit, finish, and driving dynamics. EA888 timing chain and coolant flange failure are the known issues. DSG fluid is commonly skipped. Mandatory Audi VCDS specialist PPI. Budget $2,000–$4,000/year honestly.',
         inspectUrl: '/inspect/?year=2018&make=Audi&model=Q5'
       },
       {
         name: 'Mercedes-Benz GLC 300 / GLC 300 4MATIC', make: 'Mercedes-Benz', years: '2016–2022',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+        use_case: 'road-trip', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$26,000', tier: 'Caution',
         tagline: 'X253 GLC is among the best-finished luxury compact SUVs — interior quality is genuine. Sunroof drain clogs are the #1 real-world complaint (water in A-pillar). 9G-Tronic fluid service and M274 timing are the mechanical items. Mandatory Mercedes XENTRY specialist PPI.',
         inspectUrl: '/inspect/?year=2018&make=Mercedes-Benz&model=GLC%20300'
       },
       {
         name: 'Dodge Durango SXT / GT / R/T / SRT', make: 'Dodge', years: '2015–2023',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'tow-5000'],
         price: '$18,000', tier: 'Caution',
         tagline: 'WD Durango delivers V8 power and genuine 3-row capability with up to 8,700 lb tow rating. 5.7L Hemi MDS lifter failure is the dominant used-market risk — document oil change history before committing. 3.6L Pentastar V6 avoids MDS entirely and is the lower-risk choice. Takata recall must be verified.',
         inspectUrl: '/inspect/?year=2018&make=Dodge&model=Durango'
       },
-      { name: 'Ford Expedition XLT / Limited / Platinum / MAX', make: 'Ford', years: '2018–2023',
-        type: 'suv', budget: '20-30k', purpose: 'reliability', price: '$28,000', tier: 'Caution',
+      {
+        name: 'Ford Expedition XLT / Limited / Platinum / MAX', make: 'Ford', years: '2018–2023',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'carplay', 'luxury', 'tow-5000'],
+        price: '$28,000', tier: 'Caution',
         tagline: '4th-gen Expedition brings EcoBoost efficiency to full-size SUV territory. 3.5T cam phasers and 10-speed shudder are the buyer checks. MAX wheelbase offers genuine 3-row space. Aluminium body = rust resistance but expensive collision repair.',
         inspectUrl: '/inspect/?year=2018&make=Ford&model=Expedition'
       },
-      { name: 'Toyota Tundra SR5 / Limited / TRD Pro / 1794', make: 'Toyota', years: '2014–2021',
-        type: 'truck', budget: '20-30k', purpose: 'reliability', price: '$25,000', tier: 'Strong',
+      {
+        name: 'Toyota Tundra SR5 / Limited / TRD Pro / 1794', make: 'Toyota', years: '2014–2021',
+        use_case: 'outdoor', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'luxury', 'tow-5000'],
+        price: '$25,000', tier: 'Strong',
         tagline: 'XK50 Tundra is the most reliable full-size truck available — the 5.7L 3UR-FE V8 runs to 300k+ miles with no AFM. No cylinder deactivation, no turbochargers. Frame rust and cat theft are the only real concerns. Fuel economy is poor but reliability is outstanding.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=Tundra'
       },
-      { name: 'Chevrolet Colorado WT / LT / Z71 / ZR2', make: 'Chevrolet', years: '2015–2022',
-        type: 'truck', budget: '15-20k', purpose: 'reliability', price: '$17,500', tier: 'Caution',
+      {
+        name: 'Chevrolet Colorado WT / LT / Z71 / ZR2', make: 'Chevrolet', years: '2015–2022',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['hybrid-ev', 'tow-5000'],
+        price: '$17,500', tier: 'Caution',
         tagline: 'Best GM mid-size truck in years — no AFM on the Colorado is a significant advantage. 3.6L LFX V6 is the preferred engine. 2.8L Duramax diesel is fuel-efficient but needs DEF system attention. Frame rust check on salt-belt trucks is mandatory.',
         inspectUrl: '/inspect/?year=2018&make=Chevrolet&model=Colorado'
       },
-      { name: 'Mazda CX-9 Sport / Touring / Grand Touring / Signature', make: 'Mazda', years: '2016–2023',
-        type: 'suv', budget: '20-30k', purpose: 'reliability', price: '$23,000', tier: 'Strong',
+      {
+        name: 'Mazda CX-9 Sport / Touring / Grand Touring / Signature', make: 'Mazda', years: '2016–2023',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury', 'manual'],
+        price: '$23,000', tier: 'Strong',
         tagline: 'The TC CX-9 is the best 3-row crossover Mazda has built — interior quality punches well above price, the 2.5T SkyActiv engine is responsive, and reliability is outstanding. One of the most recommended used 3-row family vehicles in any price range.',
         inspectUrl: '/inspect/?year=2018&make=Mazda&model=CX-9'
       },
-      { name: 'Honda HR-V LX / Sport / EX / EX-L', make: 'Honda', years: '2016–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability', price: '$13,000', tier: 'Strong',
+      {
+        name: 'Honda HR-V LX / Sport / EX / EX-L', make: 'Honda', years: '2016–2022',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
+        price: '$13,000', tier: 'Strong',
         tagline: 'RU HR-V is Honda\'s most practical subcompact — Magic Seat rear configuration is genuinely useful. 1.8L i-VTEC is one of Honda\'s most proven small engines. CVT fluid history is the critical document; Takata recall must be verified on eligible VINs.',
         inspectUrl: '/inspect/?year=2018&make=Honda&model=HR-V'
       },
-      { name: 'Subaru Impreza 2.0i / Premium / Sport / Limited', make: 'Subaru', years: '2017–2023',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$13,000', tier: 'Strong',
+      {
+        name: 'Subaru Impreza 2.0i / Premium / Sport / Limited', make: 'Subaru', years: '2017–2023',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd', 'luxury'],
+        price: '$13,000', tier: 'Strong',
         tagline: 'SGP-platform Impreza is Subaru\'s most refined compact — standard AWD on all trims, updated FB20 engine without the EJ head gasket history. Oil consumption check at 80k+ is standard practice. EyeSight adds safety at a windshield replacement cost premium. Excellent all-weather commuter value.',
         inspectUrl: '/inspect/?year=2018&make=Subaru&model=Impreza'
       },
-      { name: 'Hyundai Sonata SE / Sport / Limited', make: 'Hyundai', years: '2015–2019',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$8,500', tier: 'Caution',
+      {
+        name: 'Hyundai Sonata SE / Sport / Limited', make: 'Hyundai', years: '2015–2019',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,500', tier: 'Caution',
         tagline: 'LF Sonata has strong value but the Nu and Theta II engines both carry KSDS recall exposure. Multiple campaigns may apply — run the VIN at nhtsa.gov/recalls and verify all campaigns are complete. Walk away from any open engine campaign. With confirmed completion it\'s a spacious, comfortable midsize at a great price.',
         inspectUrl: '/inspect/?year=2018&make=Hyundai&model=Sonata'
       },
-      { name: 'Kia Telluride LX / S / EX / SX', make: 'Kia', years: '2020–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability', price: '$30,000', tier: 'Strong',
+      {
+        name: 'Kia Telluride LX / S / EX / SX', make: 'Kia', years: '2020–2024',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'tow-5000'],
+        price: '$30,000', tier: 'Strong',
         tagline: '2020 NACOTY winner and one of the most acclaimed 3-row SUVs launched in the past decade. The 3.8L Lambda V6 is exempt from KSDS recall concerns. Interior quality and space are exceptional. Used Tellurides hold value aggressively. HTRAC AWD coupling service is the critical maintenance document.',
         inspectUrl: '/inspect/?year=2020&make=Kia&model=Telluride'
       },
-      { name: 'Toyota 4Runner SR5 / TRD Off-Road / TRD Pro', make: 'Toyota', years: '2014–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fun-to-drive', price: '$32,000', tier: 'Strong',
+      {
+        name: 'Toyota 4Runner SR5 / TRD Off-Road / TRD Pro', make: 'Toyota', years: '2014–2024',
+        use_case: 'outdoor', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'tow-5000'],
+        price: '$32,000', tier: 'Strong',
         tagline: 'N280 4Runner is the most proven off-road SUV you can buy used — the 4.0L 1GR-FE V6 is documented past 300k miles, and the platform has near-unlimited aftermarket support. Poor fuel economy is the honest tradeoff. Frame rust on salt-belt trucks is the primary risk. Values hold extremely well.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=4Runner'
       },
-      { name: 'Volkswagen Passat S / SE / SEL', make: 'Volkswagen', years: '2016–2022',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$10,500', tier: 'Caution',
+      {
+        name: 'Volkswagen Passat S / SE / SEL', make: 'Volkswagen', years: '2016–2022',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
+        price: '$10,500', tier: 'Caution',
         tagline: 'NMS Passat is larger and simpler than the European Passat — good value against Camry/Accord. EA888 timing chain tensioner and DSG fluid service are the maintenance items. Takata recall on earlier VINs must be verified. Well-maintained Passat is a comfortable, spacious buy at a discount to Japanese rivals.',
         inspectUrl: '/inspect/?year=2018&make=Volkswagen&model=Passat'
       },
-      { name: 'Nissan Kicks S / SV / SR', make: 'Nissan', years: '2018–2024',
-        type: 'suv', budget: 'under-10k', purpose: 'fuel-economy', price: '$14,000', tier: 'Caution',
+      {
+        name: 'Nissan Kicks S / SV / SR', make: 'Nissan', years: '2018–2024',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['carplay'],
+        price: '$14,000', tier: 'Caution',
         tagline: 'P15 Kicks is Nissan\'s most fuel-efficient non-hybrid crossover — 36 mpg combined, distinctive styling, competitive tech. FWD only (no AWD). Xtronic CVT fluid history is the critical document; without it, plan for a $3,000–$4,500 replacement.',
         inspectUrl: '/inspect/?year=2019&make=Nissan&model=Kicks'
       },
-      { name: 'Honda Passport Sport / EX-L / Touring / Elite', make: 'Honda', years: '2019–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability', price: '$27,000', tier: 'Strong',
+      {
+        name: 'Honda Passport Sport / EX-L / Touring / Elite', make: 'Honda', years: '2019–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
+        price: '$27,000', tier: 'Strong',
         tagline: 'The Passport is a 2-row Pilot — same proven J35Y V6, same SH-AWD, but shorter and more manageable. SH-AWD rear differential service is the most important maintenance document. The 9-speed ZF auto needs thorough testing on any 2019.',
         inspectUrl: '/inspect/?year=2019&make=Honda&model=Passport'
       },
-      { name: 'Mazda CX-30 Base / Select / Preferred / Turbo', make: 'Mazda', years: '2020–2024',
-        type: 'suv', budget: '15-20k', purpose: 'fun-to-drive', price: '$19,000', tier: 'Strong',
+      {
+        name: 'Mazda CX-30 Base / Select / Preferred / Turbo', make: 'Mazda', years: '2020–2024',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
+        price: '$19,000', tier: 'Strong',
         tagline: 'CX-30 is Mazda\'s premium subcompact crossover — outstanding interior quality, engaging chassis, and no significant known failure modes. The 2.5T Turbo is a meaningful performance upgrade. One of the best-built small SUVs available used.',
         inspectUrl: '/inspect/?year=2020&make=Mazda&model=CX-30'
       },
-      { name: 'Hyundai IONIQ 5 Standard / Long Range / AWD', make: 'Hyundai', years: '2022–2024',
-        type: 'hybrid-ev', budget: '20-30k', purpose: 'fuel-economy', price: '$32,000', tier: 'Strong',
+      {
+        name: 'Hyundai IONIQ 5 Standard / Long Range / AWD', make: 'Hyundai', years: '2022–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'hybrid-ev'],
+        price: '$32,000', tier: 'Strong',
         tagline: 'One of the best EVs launched since the Model 3 — 800V architecture for ultra-fast charging, flat floor, outstanding range. Battery degradation is minimal under 40k miles. Verify heat pump is installed for cold climates. Outstanding EV value.',
         inspectUrl: '/inspect/?year=2022&make=Hyundai&model=IONIQ%205'
       },
-      { name: 'Kia Stinger Premium / GT / GT-Line / GT2', make: 'Kia', years: '2018–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'fun-to-drive', price: '$20,000', tier: 'Caution',
+      {
+        name: 'Kia Stinger Premium / GT / GT-Line / GT2', make: 'Kia', years: '2018–2023',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
+        price: '$20,000', tier: 'Caution',
         tagline: 'The Stinger is one of the most surprising performance values on the used market — rear-drive or AWD, 3.3T biturbo V6 that genuinely competes with European rivals. ZF 8-speed needs fluid service at 60k. GT/GT2 buyers need a track-use abuse assessment.',
         inspectUrl: '/inspect/?year=2018&make=Kia&model=Stinger'
       },
-      { name: 'Kia Carnival LX / EX / SX / SX Prestige', make: 'Kia', years: '2022–2024',
-        type: 'wagon', budget: '20-30k', purpose: 'reliability', price: '$30,000', tier: 'Strong',
+      {
+        name: 'Kia Carnival LX / EX / SX / SX Prestige', make: 'Kia', years: '2022–2024',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'carplay', 'luxury'],
+        price: '$30,000', tier: 'Strong',
         tagline: 'KA4 Carnival is the most modern and feature-rich family minivan available — Lambda V6 is KSDS-exempt and proven. Minimal known failure modes on this new-enough platform. Outstanding family value for buyers who can set aside the "minivan" stigma.',
         inspectUrl: '/inspect/?year=2022&make=Kia&model=Carnival'
       },
-      { name: 'Jeep Gladiator Sport / Overland / Rubicon / Mojave', make: 'Jeep', years: '2020–2024',
-        type: 'truck', budget: '20-30k', purpose: 'fun-to-drive', price: '$32,000', tier: 'Caution',
+      {
+        name: 'Jeep Gladiator Sport / Overland / Rubicon / Mojave', make: 'Jeep', years: '2020–2024',
+        use_case: 'outdoor', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'tow-5000'],
+        price: '$32,000', tier: 'Caution',
         tagline: 'Only mid-size convertible pickup truck on the market — Wrangler off-road capability with a 5-foot bed. Death Wobble from worn front-end components is a real risk; test at 55–75 mph. Throttle position sensor recall (20V-191) must be verified complete. Outstanding for buyers who need both off-road and a bed.',
         inspectUrl: '/inspect/?year=2020&make=Jeep&model=Gladiator'
       },
-      { name: 'Ford Bronco Sport Base / Big Bend / Badlands', make: 'Ford', years: '2021–2024',
-        type: 'suv', budget: '15-20k', purpose: 'fun-to-drive', price: '$22,000', tier: 'Caution',
+      {
+        name: 'Ford Bronco Sport Base / Big Bend / Badlands', make: 'Ford', years: '2021–2024',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'tow-5000'],
+        price: '$22,000', tier: 'Caution',
         tagline: 'Escape-based off-road crossover that fills the gap between a standard crossover and a Wrangler. 2.0L Badlands is the capable choice; 1.5L I3 has oil consumption reports. 8-speed shudder warrants testing. SYNC 4 is well-received.',
         inspectUrl: '/inspect/?year=2021&make=Ford&model=Bronco%20Sport'
       },
-      { name: 'GMC Canyon SLE / SLT / Denali / All Terrain', make: 'GMC', years: '2015–2022',
-        type: 'truck', budget: '15-20k', purpose: 'reliability', price: '$18,000', tier: 'Caution',
+      {
+        name: 'GMC Canyon SLE / SLT / Denali / All Terrain', make: 'GMC', years: '2015–2022',
+        use_case: 'work-hauling', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury', 'tow-5000'],
+        price: '$18,000', tier: 'Caution',
         tagline: 'Mechanically identical to the Colorado — same engines, same reliability profile. No AFM on the 3.6L V6 is a significant advantage over full-size GM trucks. Frame rust check on salt-belt trucks is mandatory. Denali adds real interior refinement.',
         inspectUrl: '/inspect/?year=2018&make=GMC&model=Canyon'
       },
-      { name: 'Lincoln Navigator Standard / Reserve / Black Label', make: 'Lincoln', years: '2018–2023',
-        type: 'suv', budget: '20-30k', purpose: 'reliability', price: '$42,000', tier: 'Caution',
+      {
+        name: 'Lincoln Navigator Standard / Reserve / Black Label', make: 'Lincoln', years: '2018–2023',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'luxury'],
+        price: '$42,000', tier: 'Caution',
         tagline: 'Premium expression of the Expedition — same EcoBoost cam phaser and 10-speed shudder concerns, plus air suspension and aluminium body repair costs. Outstanding luxury interior at a fraction of European alternatives. Test extensively before buying.',
         inspectUrl: '/inspect/?year=2018&make=Lincoln&model=Navigator'
       },
-      { name: 'Toyota Venza LE / XLE / Limited (Hybrid)', make: 'Toyota', years: '2021–2024',
-        type: 'suv', budget: '20-30k', purpose: 'fuel-economy', price: '$30,000', tier: 'Strong',
+      {
+        name: 'Toyota Venza LE / XLE / Limited (Hybrid)', make: 'Toyota', years: '2021–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
+        price: '$30,000', tier: 'Strong',
         tagline: 'Hybrid-only Venza on TNGA-K is a RAV4 Hybrid with a more premium interior — same proven 2.5L hybrid system, same e-AWD, same outstanding reliability. One of the most efficient midsize SUVs available. Minimal known failure modes.',
         inspectUrl: '/inspect/?year=2021&make=Toyota&model=Venza'
       },
-      { name: 'Subaru Legacy 2.5i / 2.5i Sport / 3.6R', make: 'Subaru', years: '2015–2019',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$13,000', tier: 'Caution',
+      {
+        name: 'Subaru Legacy 2.5i / 2.5i Sport / 3.6R', make: 'Subaru', years: '2015–2019',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd'],
+        price: '$13,000', tier: 'Caution',
         tagline: 'BN Legacy is a comfortable, AWD midsize sedan with Subaru reliability. FB25 oil consumption check at 80k+ is standard practice. CVT fluid service every 30k miles is the critical maintenance item. EyeSight windshield replacement doubles the cost — inspect carefully.',
         inspectUrl: '/inspect/?year=2018&make=Subaru&model=Legacy'
       },
-      { name: 'Nissan Maxima SV / SL / SR / Platinum', make: 'Nissan', years: '2016–2023',
-        type: 'sedan', budget: '10-15k', purpose: 'fun-to-drive', price: '$18,000', tier: 'Caution',
+      {
+        name: 'Nissan Maxima SV / SL / SR / Platinum', make: 'Nissan', years: '2016–2023',
+        use_case: 'weekend-fun', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$18,000', tier: 'Caution',
         tagline: 'A36 Maxima is genuinely powerful and distinctive — the 3.5L VQ35 under 300hp in a CVT creates real pace. CVT under V6 load wears faster than in smaller cars; NS-3 fluid every 30k miles is non-negotiable. Outstanding value when service history is documented.',
         inspectUrl: '/inspect/?year=2018&make=Nissan&model=Maxima'
       },
-      { name: 'Honda Fit LX / Sport / EX / EX-L', make: 'Honda', years: '2015–2020',
-        type: 'hatch', budget: 'under-10k', purpose: 'reliability', price: '$12,000', tier: 'Strong',
+      {
+        name: 'Honda Fit LX / Sport / EX / EX-L', make: 'Honda', years: '2015–2020',
+        use_case: 'starter', seats: '4-5', budget: 'under-10k',
+        must_have: [],
+        price: '$12,000', tier: 'Strong',
         tagline: 'GK Fit is the most practical subcompact car available — Magic Seat creates more usable configurations than any competitor. Discontinued after 2020, making supply finite and values stable. CVT fluid history and Takata airbag recall verification are the two critical checks.',
         inspectUrl: '/inspect/?year=2018&make=Honda&model=Fit'
       },
-      { name: 'Mazda Mazda6 Sport / Grand Touring / Signature', make: 'Mazda', years: '2014–2023',
-        type: 'sedan', budget: 'under-10k', purpose: 'fun-to-drive', price: '$14,000', tier: 'Strong',
+      {
+        name: 'Mazda Mazda6 Sport / Grand Touring / Signature', make: 'Mazda', years: '2014–2023',
+        use_case: 'weekend-fun', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury', 'manual'],
+        price: '$14,000', tier: 'Strong',
         tagline: 'GJ Mazda6 is one of the best midsize sedans ever built — premium interior quality, engaging chassis, and no significant failure modes. The 2.5T Turbo Signature is genuinely luxurious. Discontinued in NA after 2023 = depreciating fast. Outstanding value against Accord and Camry.',
         inspectUrl: '/inspect/?year=2018&make=Mazda&model=Mazda6'
       },
-      { name: 'Toyota C-HR LE / XLE / XLE Premium', make: 'Toyota', years: '2018–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability', price: '$17,000', tier: 'Strong',
+      {
+        name: 'Toyota C-HR LE / XLE / XLE Premium', make: 'Toyota', years: '2018–2022',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['carplay'],
+        price: '$17,000', tier: 'Strong',
         tagline: 'AX10 C-HR has Toyota reliability with dramatic styling. FWD-only and 144hp are the tradeoffs. No significant known failure modes. Outstanding for urban buyers who don\'t need AWD and want low ownership costs.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=C-HR'
       },
-      { name: 'Hyundai Elantra SE / N Line / Limited (2021+)', make: 'Hyundai', years: '2021–2024',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$16,000', tier: 'Caution',
+      {
+        name: 'Hyundai Elantra SE / N Line / Limited (2021+)', make: 'Hyundai', years: '2021–2024',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['carplay', 'luxury'],
+        price: '$16,000', tier: 'Caution',
         tagline: 'CN7 Elantra is Hyundai\'s most significant compact redesign — improved Nu2 engine, dramatically better styling, and a standout Hybrid at 50 mpg combined. Still verify KSDS recall campaigns on the VIN. N Line 1.6T is genuinely fun.',
         inspectUrl: '/inspect/?year=2021&make=Hyundai&model=Elantra'
       },
-      { name: 'Kia Forte FE / LXS / GT-Line / GT', make: 'Kia', years: '2019–2024',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability', price: '$13,500', tier: 'Caution',
+      {
+        name: 'Kia Forte FE / LXS / GT-Line / GT', make: 'Kia', years: '2019–2024',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['carplay'],
+        price: '$13,500', tier: 'Caution',
         tagline: 'BD Forte is Kia\'s best compact sedan — well-styled, feature-rich, and aggressive pricing. Nu engine KSDS recall exposure must be verified complete. IVT fluid service is the critical maintenance document. GT 1.6T is sporty and more than adequate.',
         inspectUrl: '/inspect/?year=2019&make=Kia&model=Forte'
       },
-      { name: 'Toyota Prius Prime Plus / Premium / Advanced', make: 'Toyota', years: '2017–2022',
-        type: 'hybrid-ev', budget: '15-20k', purpose: 'fuel-economy', price: '$19,000', tier: 'Strong',
+      {
+        name: 'Toyota Prius Prime Plus / Premium / Advanced', make: 'Toyota', years: '2017–2022',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['hybrid-ev'],
+        price: '$19,000', tier: 'Strong',
         tagline: 'Prius Prime adds 25 miles of electric range to Toyota\'s legendary hybrid — covers most daily commutes on electricity alone. 1.8L Toyota hybrid system is among the most proven in the industry. Battery health check is the primary purchase step.',
         inspectUrl: '/inspect/?year=2017&make=Toyota&model=Prius%20Prime'
       },
-      { name: 'Chevrolet Bolt EV LT / Premier', make: 'Chevrolet', years: '2017–2023',
-        type: 'hybrid-ev', budget: '15-20k', purpose: 'fuel-economy', price: '$18,000', tier: 'Caution',
+      {
+        name: 'Chevrolet Bolt EV LT / Premier', make: 'Chevrolet', years: '2017–2023',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['hybrid-ev'],
+        price: '$18,000', tier: 'Caution',
         tagline: 'Bolt EV is excellent value for an affordable long-range EV — but ONLY with confirmed recall 22V-076 (battery fire risk) complete. Run the VIN at nhtsa.gov/recalls before even viewing the car. With confirmed battery module replacement, it\'s a reliable and practical daily EV.',
         inspectUrl: '/inspect/?year=2020&make=Chevrolet&model=Bolt%20EV'
       },
-      { name: 'Honda CR-V LX / EX / EX-L / Touring (2017+)', make: 'Honda', years: '2017–2022',
-        type: 'suv', budget: '15-20k', purpose: 'reliability', price: '$20,000', tier: 'Caution',
+      {
+        name: 'Honda CR-V LX / EX / EX-L / Touring (2017+)', make: 'Honda', years: '2017–2022',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury'],
+        price: '$20,000', tier: 'Caution',
         tagline: '5th-gen CR-V is one of the best compact SUVs — but the 1.5T L15B7 has the same cold-weather oil dilution issue as the 10th-gen Civic. LX FWD uses 2.4L K24W (safe); any other trim uses 1.5T — check dipstick and PCM update record before committing.',
         inspectUrl: '/inspect/?year=2017&make=Honda&model=CR-V'
       },
-      { name: 'Nissan Rogue Sport S / SV / SL', make: 'Nissan', years: '2017–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability', price: '$14,000', tier: 'Caution',
+      {
+        name: 'Nissan Rogue Sport S / SV / SL', make: 'Nissan', years: '2017–2022',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
+        price: '$14,000', tier: 'Caution',
         tagline: 'Rogue Sport (Qashqai) is the smaller, more affordable Rogue sibling. CVT fluid service with NS-3 every 30k miles is the identical critical maintenance item. More fuel-efficient than the Rogue but less cargo space.',
         inspectUrl: '/inspect/?year=2018&make=Nissan&model=Rogue%20Sport'
       },
-      { name: 'Subaru Outback 2.5i / XT Turbo (2020+)', make: 'Subaru', years: '2020–2024',
-        type: 'wagon', budget: '20-30k', purpose: 'reliability', price: '$24,000', tier: 'Caution',
+      {
+        name: 'Subaru Outback 2.5i / XT Turbo (2020+)', make: 'Subaru', years: '2020–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay'],
+        price: '$24,000', tier: 'Caution',
         tagline: 'BT Outback is bigger, quieter, and more capable than its predecessor. Standard EyeSight doubles windshield replacement cost. CVT fluid every 30k miles is critical. 2.4T XT is genuinely quick. FB-series oil consumption check at 80k+ is standard practice.',
         inspectUrl: '/inspect/?year=2020&make=Subaru&model=Outback'
       },
-      { name: 'Volkswagen Golf S / SE / GTI / R (Mk7.5)', make: 'Volkswagen', years: '2018–2021',
-        type: 'hatch', budget: '10-15k', purpose: 'fun-to-drive', price: '$19,000', tier: 'Caution',
+      {
+        name: 'Volkswagen Golf S / SE / GTI / R (Mk7.5)', make: 'Volkswagen', years: '2018–2021',
+        use_case: 'weekend-fun', seats: '4-5', budget: '10-15k',
+        must_have: ['carplay'],
+        price: '$19,000', tier: 'Caution',
         tagline: 'Mk7.5 Golf GTI is the benchmark hot hatch — engaging, practical, and well-built. DSG fluid service and EA888 timing chain are the maintenance items. GTI and R buyers need a track-use abuse assessment. Base Golf is practical and refined at a lower price point.',
         inspectUrl: '/inspect/?year=2018&make=Volkswagen&model=Golf'
       },
-      { name: 'Mazda CX-5 Sport / Grand Touring / Signature (KF)', make: 'Mazda', years: '2017–2024',
-        type: 'suv', budget: '15-20k', purpose: 'reliability', price: '$21,000', tier: 'Strong',
+      {
+        name: 'Mazda CX-5 Sport / Grand Touring / Signature (KF)', make: 'Mazda', years: '2017–2024',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury', 'manual'],
+        price: '$21,000', tier: 'Strong',
         tagline: 'KF CX-5 is the benchmark mainstream compact SUV — best-in-class interior quality, engaging chassis, and exceptional reliability. No significant failure modes. 2.5T Turbo Signature is available. Outstanding value against RAV4 and CR-V.',
         inspectUrl: '/inspect/?year=2017&make=Mazda&model=CX-5'
       },
-      { name: 'Toyota Highlander Hybrid LE / XLE / Limited', make: 'Toyota', years: '2017–2020',
-        type: 'suv', budget: '20-30k', purpose: 'fuel-economy', price: '$28,000', tier: 'Strong',
+      {
+        name: 'Toyota Highlander Hybrid LE / XLE / Limited', make: 'Toyota', years: '2017–2020',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'hybrid-ev', 'luxury', 'tow-5000'],
+        price: '$28,000', tier: 'Strong',
         tagline: 'XU50 Highlander Hybrid is one of the most practical family hybrid SUVs — 28 mpg combined, 3-row capable, proven Toyota hybrid reliability. HV battery health test is the key purchase step. Outstanding long-term value for families.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=Highlander%20Hybrid'
       },
-      { name: 'Ford EcoSport S / SE / Titanium', make: 'Ford', years: '2018–2022',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability', price: '$12,500', tier: 'Caution',
+      {
+        name: 'Ford EcoSport S / SE / Titanium', make: 'Ford', years: '2018–2022',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['carplay', 'tow-5000'],
+        price: '$12,500', tier: 'Caution',
         tagline: 'Entry-level Ford subcompact SUV with a quirky side-hinged rear door. 1.0T 3-cylinder has oil consumption reports; 2.0L I4 is the safer engine. Limited cargo space. Good value for urban buyers who need something small and affordable.',
         inspectUrl: '/inspect/?year=2018&make=Ford&model=EcoSport'
       },
-      { name: 'Toyota Corolla L / LE / SE / XSE / XLE (E210)', make: 'Toyota', years: '2020–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'reliability', price: '$17,000', tier: 'Strong',
-        tagline: "TNGA-C platform Corolla — multi-link rear suspension, Toyota Safety Sense 2.0 standard on every trim, no chronic issues on the 2.0L M20A-FKS models. One critical check: 2020 L/LE trims with the 1.8L 2ZR-FAE have valve spring recall 20V-501 that must be confirmed closed before purchase. SE/XSE/XLE trims and all 2021+ cars are clean.",
+      {
+        name: 'Toyota Corolla L / LE / SE / XSE / XLE (E210)', make: 'Toyota', years: '2020–2023',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
+        price: '$17,000', tier: 'Strong',
+        tagline: 'TNGA-C platform Corolla — multi-link rear suspension, Toyota Safety Sense 2.0 standard on every trim, no chronic issues on the 2.0L M20A-FKS models. One critical check: 2020 L/LE trims with the 1.8L 2ZR-FAE have valve spring recall 20V-501 that must be confirmed closed before purchase. SE/XSE/XLE trims and all 2021+ cars are clean.',
         inspectUrl: '/inspect/?year=2021&make=Toyota&model=Corolla'
       },
-      { name: 'Chevrolet Cruze LS / LT / Premier', make: 'Chevrolet', years: '2016–2019',
-        type: 'sedan', budget: 'under-10k', purpose: 'value',
+      {
+        name: 'Chevrolet Cruze LS / LT / Premier', make: 'Chevrolet', years: '2016–2019',
+        use_case: 'road-trip', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev'],
         price: '$8,500', tier: 'Caution',
         tagline: 'Budget compact sedan with a known timing chain issue on the 1.4T — only buy one with documented oil changes every 5,000 miles. Cold-start rattle = walk away.',
         inspectUrl: '/inspect/?year=2017&make=Chevrolet&model=Cruze'
       },
-      { name: 'Kia Optima LX / EX / SX', make: 'Kia', years: '2016–2020',
-        type: 'sedan', budget: '10-15k', purpose: 'value',
+      {
+        name: 'Kia Optima LX / EX / SX', make: 'Kia', years: '2016–2020',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$14,000', tier: 'Caution',
         tagline: 'Handsome mid-size sedan with a known Theta II engine recall (NHTSA 20V-239). Confirm recall is closed before buying — post-recall cars with oil records are solid value.',
         inspectUrl: '/inspect/?year=2016&make=Kia&model=Optima'
       },
-      { name: 'Toyota Sequoia SR5 / Limited / TRD Pro', make: 'Toyota', years: '2008–2022',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Toyota Sequoia SR5 / Limited / TRD Pro', make: 'Toyota', years: '2008–2022',
+        use_case: 'outdoor', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'luxury', 'tow-5000'],
         price: '$28,000', tier: 'Strong',
         tagline: 'The XK60 Sequoia is one of the most durable full-size SUVs ever built. 5.7L V8 regularly hits 300k miles. Buy a southern-state car and skip any with frame rust — check underbody carefully.',
         inspectUrl: '/inspect/?year=2016&make=Toyota&model=Sequoia'
       },
-      { name: 'Hyundai Palisade SE / SEL / Limited', make: 'Hyundai', years: '2020–2022',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Hyundai Palisade SE / SEL / Limited', make: 'Hyundai', years: '2020–2022',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'carplay', 'luxury'],
         price: '$32,000', tier: 'Strong',
         tagline: 'Best-value 3-row family SUV in its class — spacious, premium interior, proven 3.8L V6. 2020 first-year HVAC and engine stall recall is addressed; confirmed closed on any used purchase.',
         inspectUrl: '/inspect/?year=2020&make=Hyundai&model=Palisade'
       },
-      { name: 'Toyota RAV4 LE / XLE / TRD Off-Road (5th gen)', make: 'Toyota', years: '2019–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Toyota RAV4 LE / XLE / TRD Off-Road (5th gen)', make: 'Toyota', years: '2019–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$26,000', tier: 'Strong',
         tagline: 'America’s bestselling SUV on the TNGA-K platform — 2.5L Dynamic Force engine, no chronic failures, excellent reliability. Straight buy with Takata recall verification and standard inspection.',
         inspectUrl: '/inspect/?year=2019&make=Toyota&model=RAV4'
       },
-      { name: 'Subaru WRX Base / Premium / Limited', make: 'Subaru', years: '2015–2021',
-        type: 'sedan', budget: '15-20k', purpose: 'performance',
+      {
+        name: 'Subaru WRX Base / Premium / Limited', make: 'Subaru', years: '2015–2021',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'luxury', 'manual'],
         price: '$22,000', tier: 'Caution',
         tagline: 'Capable AWD performance sedan — but modification history is everything. Any aftermarket intake or ECU tune multiplies engine failure risk. Only buy stock examples with full oil records.',
         inspectUrl: '/inspect/?year=2018&make=Subaru&model=WRX'
       },
-      { name: 'Ford Bronco Base / Badlands / Wildtrak', make: 'Ford', years: '2021–2024',
-        type: 'suv', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Ford Bronco Base / Badlands / Wildtrak', make: 'Ford', years: '2021–2024',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'tow-5000'],
         price: '$38,000', tier: 'Caution',
         tagline: '6th-gen Bronco is a legitimate off-road icon — but 2021 first-year models had soft-top, hardtop, and recall issues. Prefer 2022+; verify all recalls are closed on any 2021.',
         inspectUrl: '/inspect/?year=2021&make=Ford&model=Bronco'
       },
-      { name: 'BMW X1 sDrive28i / xDrive28i', make: 'BMW', years: '2016–2022',
-        type: 'suv', budget: '15-20k', purpose: 'performance',
+      {
+        name: 'BMW X1 sDrive28i / xDrive28i', make: 'BMW', years: '2016–2022',
+        use_case: 'weekend-fun', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$19,000', tier: 'Caution',
         tagline: 'Well-packaged entry BMW SUV — but deferred maintenance compounds fast. Only buy with complete BMW service records. Budget $1,500–$3,000 for deferred work on any example without paperwork.',
         inspectUrl: '/inspect/?year=2018&make=BMW&model=X1'
       },
-      { name: 'Hyundai Kona SE / SEL / Limited', make: 'Hyundai', years: '2018–2022',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+      {
+        name: 'Hyundai Kona SE / SEL / Limited', make: 'Hyundai', years: '2018–2022',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'luxury'],
         price: '$18,000', tier: 'Strong',
         tagline: 'Capable subcompact SUV at a fair price — get the 1.6T over the 2.0L for a much more enjoyable drive. DCT software shudder is fixable for free; avoid the Kona Electric (separate fire recall history).',
         inspectUrl: '/inspect/?year=2019&make=Hyundai&model=Kona'
       },
-      { name: 'Volkswagen Atlas S / SE / SEL', make: 'Volkswagen', years: '2018–2023',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Volkswagen Atlas S / SE / SEL', make: 'Volkswagen', years: '2018–2023',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'carplay'],
         price: '$28,000', tier: 'Caution',
         tagline: 'Genuinely spacious 3-row SUV at a mainstream price — but 2.0T has oil consumption concerns. Prefer the VR6 or a 2020+ build with documented service history.',
         inspectUrl: '/inspect/?year=2018&make=Volkswagen&model=Atlas'
       },
-      { name: 'Lexus GX460 Base / Premium / Luxury', make: 'Lexus', years: '2010–2022',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Lexus GX460 Base / Premium / Luxury', make: 'Lexus', years: '2010–2022',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Land Cruiser 150 platform in a Lexus suit — 4.6L V8 runs to 300k miles. One of the safest used luxury SUV buys. Verify Takata recall closed; skip northern-state cars with underbody rust.',
         inspectUrl: '/inspect/?year=2015&make=Lexus&model=GX460'
       },
-      { name: 'Chevrolet Blazer LT / RS / Premier', make: 'Chevrolet', years: '2019–2023',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Chevrolet Blazer LT / RS / Premier', make: 'Chevrolet', years: '2019–2023',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$26,000', tier: 'Caution',
         tagline: 'Sharp-looking mid-size crossover — but avoid the 2.0T (oil consumption) and 9-speed shudder. Prefer 2021+ with the 3.6L V6 for a significantly better ownership experience.',
         inspectUrl: '/inspect/?year=2019&make=Chevrolet&model=Blazer'
       },
-      { name: 'Cadillac XT5 Luxury / Premium Luxury', make: 'Cadillac', years: '2017–2023',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Cadillac XT5 Luxury / Premium Luxury', make: 'Cadillac', years: '2017–2023',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury'],
         price: '$28,000', tier: 'Strong',
         tagline: 'Upscale mid-size crossover with a proven 3.6L V6. Watch for CUE touchscreen delamination on 2017–2018 — check all screen zones before buying. 2019+ models are the better pick.',
         inspectUrl: '/inspect/?year=2017&make=Cadillac&model=XT5'
       },
-      { name: 'Toyota Avalon XLE / XSE / Limited', make: 'Toyota', years: '2016–2022',
-        type: 'sedan', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Toyota Avalon XLE / XSE / Limited', make: 'Toyota', years: '2016–2022',
+        use_case: 'road-trip', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury'],
         price: '$26,000', tier: 'Strong',
         tagline: 'Toyota\'s most undervalued sedan — full-size, refined, V6 or Hybrid, near-bulletproof reliability. 4th-gen Takata recall must be verified closed. Outstanding highway cruiser.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=Avalon'
       },
-      { name: 'GMC Terrain SLE / SLT / Denali', make: 'GMC', years: '2018–2023',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'GMC Terrain SLE / SLT / Denali', make: 'GMC', years: '2018–2023',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'luxury'],
         price: '$20,000', tier: 'Caution',
         tagline: 'Solid compact crossover — but the 1.5T has oil consumption issues. Prefer the 2.0T trim if possible. Check oil level at viewing and request all service records.',
         inspectUrl: '/inspect/?year=2018&make=GMC&model=Terrain'
       },
-      { name: 'Mazda3 Select / Preferred / Premium (BP)', make: 'Mazda', years: '2019–2023',
-        type: 'sedan', budget: '15-20k', purpose: 'reliability',
+      {
+        name: 'Mazda3 Select / Preferred / Premium (BP)', make: 'Mazda', years: '2019–2023',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$20,000', tier: 'Strong',
         tagline: 'Best interior quality in the compact segment — rivals luxury brands at a fraction of the price. SKYACTIV engines are bulletproof. Get the 2.5T Turbo hatchback if the budget allows.',
         inspectUrl: '/inspect/?year=2019&make=Mazda&model=Mazda3'
       },
-      { name: 'Lexus IS300 / IS350 (3rd gen)', make: 'Lexus', years: '2014–2020',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Lexus IS300 / IS350 (3rd gen)', make: 'Lexus', years: '2014–2020',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury'],
         price: '$28,000', tier: 'Strong',
         tagline: 'Sharp sport sedan with Lexus reliability — the IS350 V6 is the pick. Check for suspension mods and aggressive brake wear common on enthusiast-owned examples.',
         inspectUrl: '/inspect/?year=2018&make=Lexus&model=IS'
       },
-      { name: 'Honda Civic LX / EX / Sport Touring (11th gen)', make: 'Honda', years: '2022–2025',
-        type: 'sedan', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda Civic LX / EX / Sport Touring (11th gen)', make: 'Honda', years: '2022–2025',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$23,000', tier: 'Strong',
         tagline: 'Best-in-class compact — 11th gen is significantly better than 10th in every way. 1.5T oil dilution issue is largely resolved. Honda Sensing standard. One of the safest compact car buys.',
         inspectUrl: '/inspect/?year=2022&make=Honda&model=Civic'
       },
-      { name: 'Nissan Titan SV / PRO-4X / Platinum Reserve', make: 'Nissan', years: '2016–2021',
-        type: 'truck', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Nissan Titan SV / PRO-4X / Platinum Reserve', make: 'Nissan', years: '2016–2021',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['luxury', 'tow-5000'],
         price: '$28,000', tier: 'Strong',
         tagline: 'Reliable 5.6L V8 full-size truck at a significant discount to F-150 and Silverado resale. Good value work truck — lower resale is your gain as a buyer.',
         inspectUrl: '/inspect/?year=2017&make=Nissan&model=Titan'
       },
-      { name: 'Jeep Wrangler Sport / Sahara / Rubicon (JL)', make: 'Jeep', years: '2018–present',
-        type: 'suv', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Jeep Wrangler Sport / Sahara / Rubicon (JL)', make: 'Jeep', years: '2018–present',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'manual', 'tow-5000'],
         price: '$40,000', tier: 'Caution',
         tagline: 'Best Wrangler ever made — but heavily modified examples carry real risk. Death wobble on lifted JLs is addressable but costly. Factory-stock with documented maintenance is a strong buy.',
         inspectUrl: '/inspect/?year=2018&make=Jeep&model=Wrangler'
       },
-      { name: 'Ford Maverick XL / XLT / Lariat', make: 'Ford', years: '2022–present',
-        type: 'truck', budget: '20-30k', purpose: 'fuel-economy',
+      {
+        name: 'Ford Maverick XL / XLT / Lariat', make: 'Ford', years: '2022–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$28,000', tier: 'Strong',
         tagline: '42 mpg city compact truck — the hybrid is standard and bulletproof. Great value for light hauling and daily driving. Check rear axle bolt recall; 2023+ over 2022 for build quality.',
         inspectUrl: '/inspect/?year=2022&make=Ford&model=Maverick'
       },
-      { name: 'Kia EV6 Standard / Wind / GT-Line / GT', make: 'Kia', years: '2022–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Kia EV6 Standard / Wind / GT-Line / GT', make: 'Kia', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$36,000', tier: 'Strong',
         tagline: 'Best EV value in the segment — 800V charging, outstanding range, sporty dynamics. Check battery SoH and confirm all OTA updates accepted. E-GMP platform is proven.',
         inspectUrl: '/inspect/?year=2022&make=Kia&model=EV6'
       },
-      { name: 'Hyundai IONIQ 6 SE / SEL / Limited', make: 'Hyundai', years: '2023–present',
-        type: 'sedan', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Hyundai IONIQ 6 SE / SEL / Limited', make: 'Hyundai', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Aerodynamic EV sedan with record-setting 140 MPGe efficiency — 800V ultra-fast charging, spacious interior. Extremely reliable E-GMP platform. Battery SoH check is the primary inspection task.',
         inspectUrl: '/inspect/?year=2023&make=Hyundai&model=IONIQ 6'
       },
-      { name: 'Toyota Tundra SR5 / Limited / TRD Pro (3rd gen)', make: 'Toyota', years: '2022–present',
-        type: 'truck', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Toyota Tundra SR5 / Limited / TRD Pro (3rd gen)', make: 'Toyota', years: '2022–present',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'luxury', 'tow-5000'],
         price: '$44,000', tier: 'Caution',
         tagline: 'New twin-turbo V6 Tundra — complete redesign over the legendary 5.7L V8. Multiple 2022 recalls must be confirmed closed. Prefer 2023+ for improved build quality and fewer issues.',
         inspectUrl: '/inspect/?year=2022&make=Toyota&model=Tundra'
       },
-      { name: 'Volvo XC40 T4 / T5 / Recharge', make: 'Volvo', years: '2019–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Volvo XC40 T4 / T5 / Recharge', make: 'Volvo', years: '2019–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$28,000', tier: 'Caution',
         tagline: 'Stylish entry Volvo SUV — excellent safety and interior quality. Only buy with complete Volvo dealer service records; deferred Volvo maintenance is expensive to catch up on.',
         inspectUrl: '/inspect/?year=2019&make=Volvo&model=XC40'
       },
-      { name: 'Audi Q3 Premium / Premium Plus', make: 'Audi', years: '2019–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Audi Q3 Premium / Premium Plus', make: 'Audi', years: '2019–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$28,000', tier: 'Caution',
         tagline: 'Well-sized entry Audi SUV with a premium feel — EA888 timing chain is the main risk. Only buy with complete service records; deferred Audi maintenance compounds quickly.',
         inspectUrl: '/inspect/?year=2019&make=Audi&model=Q3'
       },
-      { name: 'Mercedes-Benz GLA 250 / GLA 250 4MATIC', make: 'Mercedes-Benz', years: '2020–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Mercedes-Benz GLA 250 / GLA 250 4MATIC', make: 'Mercedes-Benz', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$30,000', tier: 'Caution',
         tagline: 'Stylish entry Mercedes SUV with MBUX — but the 8G-DCT shudder at low speed is a documented issue. Only buy with complete MB service records; test city driving before committing.',
         inspectUrl: '/inspect/?year=2020&make=Mercedes-Benz&model=GLA'
       },
-      { name: 'Lincoln Corsair Standard / Reserve / Grand Touring', make: 'Lincoln', years: '2020–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Lincoln Corsair Standard / Reserve / Grand Touring', make: 'Lincoln', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$32,000', tier: 'Strong',
         tagline: 'Best-value entry luxury crossover — more content per dollar than German rivals, smooth 2.0T EcoBoost, and PHEV option for commuters. Check fuel injector recall; straightforward buy with records.',
         inspectUrl: '/inspect/?year=2020&make=Lincoln&model=Corsair'
       },
-      { name: 'Chevrolet Silverado 1500 (T1XX, 2019+)', make: 'Chevrolet', years: '2019–present',
-        type: 'truck', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Chevrolet Silverado 1500 (T1XX, 2019+)', make: 'Chevrolet', years: '2019–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'manual', 'tow-5000'],
         price: '$32,000', tier: 'Caution',
         tagline: 'Solid T1XX-platform truck — but AFM lifter failure on V8 models is common at 80k+ miles. Ask about AFM disable; prefer 2.7T or 6.2L over the 5.3L if lifter risk concerns you.',
         inspectUrl: '/inspect/?year=2022&make=Chevrolet&model=Silverado 1500'
       },
-      { name: 'Subaru Forester Base / Premium / Sport (SK)', make: 'Subaru', years: '2019–2024',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Subaru Forester Base / Premium / Sport (SK)', make: 'Subaru', years: '2019–2024',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay'],
         price: '$24,000', tier: 'Strong',
         tagline: '5th-gen Forester fixed the head gasket issue — FB25D is clean. EyeSight standard, spacious cargo. CVT fluid change history is the one key document to verify.',
         inspectUrl: '/inspect/?year=2019&make=Subaru&model=Forester'
       },
-      { name: 'Honda HR-V LX / Sport / EX (3rd gen)', make: 'Honda', years: '2023–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda HR-V LX / Sport / EX (3rd gen)', make: 'Honda', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$24,000', tier: 'Strong',
         tagline: 'Completely redesigned 3rd-gen HR-V on the Civic platform — larger, premium interior, Honda reliability. Simple 2.0L with no turbo complexity. Strong first buy.',
         inspectUrl: '/inspect/?year=2023&make=Honda&model=HR-V'
       },
-      { name: 'GMC Sierra 1500 SLE / SLT / AT4 / Denali (T1XX)', make: 'GMC', years: '2019–present',
-        type: 'truck', budget: '20-30k', purpose: 'value',
+      {
+        name: 'GMC Sierra 1500 SLE / SLT / AT4 / Denali (T1XX)', make: 'GMC', years: '2019–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury', 'manual', 'tow-5000'],
         price: '$35,000', tier: 'Caution',
         tagline: 'Premium Silverado sibling with MultiPro tailgate — same AFM lifter risk on the 5.3L V8 at 80k+ miles. Prefer 6.2L Denali or 2.7T, or verify AFM has been disabled.',
         inspectUrl: '/inspect/?year=2022&make=GMC&model=Sierra 1500'
       },
-      { name: 'Genesis G70 2.0T / 3.3T Sport', make: 'Genesis', years: '2019–2021',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Genesis G70 2.0T / 3.3T Sport', make: 'Genesis', years: '2019–2021',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury', 'manual'],
         price: '$28,000', tier: 'Strong',
         tagline: 'RWD sport sedan that punches above its price point — 3.3T twin-turbo V6 is excellent. Genesis CPO with extended warranty is the preferred buy path given limited independent shop coverage.',
         inspectUrl: '/inspect/?year=2019&make=Genesis&model=G70'
       },
-      { name: 'Honda Ridgeline Sport / RTL / RTL-E (2nd gen)', make: 'Honda', years: '2017–2023',
-        type: 'truck', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda Ridgeline Sport / RTL / RTL-E (2nd gen)', make: 'Honda', years: '2017–2023',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: [],
         price: '$30,000', tier: 'Strong',
         tagline: 'Best daily-driver truck on the market — Honda V6 reliability in a unibody body. i-VTM4 diff fluid service is the one critical item; VCM motor mounts watch item. Outstanding commuter truck.',
         inspectUrl: '/inspect/?year=2021&make=Honda&model=Ridgeline'
       },
-      { name: 'Hyundai Tucson SE / SEL / Hybrid (4th gen)', make: 'Hyundai', years: '2022–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Hyundai Tucson SE / SEL / Hybrid (4th gen)', make: 'Hyundai', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$26,000', tier: 'Strong',
         tagline: 'Completely redesigned 4th-gen Tucson — no Theta II engine concerns, available hybrid, great interior. CVT-7 shudder is software-fixable. Strong compact crossover buy.',
         inspectUrl: '/inspect/?year=2022&make=Hyundai&model=Tucson'
       },
-      { name: 'Kia Sportage LX / EX / Hybrid (5th gen)', make: 'Kia', years: '2023–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Kia Sportage LX / EX / Hybrid (5th gen)', make: 'Kia', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$27,000', tier: 'Strong',
         tagline: 'Best-in-class 5th-gen Sportage — roomier interior, no Theta II engine concerns, hybrid available. Straightforward buy; check recalls and CVT smoothness.',
         inspectUrl: '/inspect/?year=2023&make=Kia&model=Sportage'
       },
-      { name: 'Jeep Grand Cherokee (WL, 2021+)', make: 'Jeep', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Jeep Grand Cherokee (WL, 2021+)', make: 'Jeep', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'tow-5000'],
         price: '$38,000', tier: 'Caution',
         tagline: 'Completely redesigned WL Grand Cherokee — much improved over WK2 but early builds had recalls and Uconnect issues. Prefer 2023+; verify all recalls closed; skip HEMI without AFM disable confirmation.',
         inspectUrl: '/inspect/?year=2021&make=Jeep&model=Grand Cherokee'
       },
-      { name: 'Mazda CX-50 2.5 / 2.5 Turbo', make: 'Mazda', years: '2023–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Mazda CX-50 2.5 / 2.5 Turbo', make: 'Mazda', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$30,000', tier: 'Strong',
         tagline: 'Adventure-oriented CX-50 above the CX-5 — wider, better ground clearance, 2.5T available. Mazda SKYACTIV reliability with no known issues. Straightforward buy.',
         inspectUrl: '/inspect/?year=2023&make=Mazda&model=CX-50'
       },
-      { name: 'Chrysler 300 / 300S / 300C', make: 'Chrysler', years: '2011–2022',
-        type: 'sedan', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Chrysler 300 / 300S / 300C', make: 'Chrysler', years: '2011–2022',
+        use_case: 'road-trip', seats: '4-5', budget: '15-20k',
+        must_have: [],
         price: '$22,000', tier: 'Strong',
         tagline: 'Best-value large luxury sedan on the market — ZF 8-speed, available HEMI V8, premium presence. V6 Pentastar is reliable; HEMI with MDS lifter history is the main risk. Excellent highway car.',
         inspectUrl: '/inspect/?year=2016&make=Chrysler&model=300'
       },
-      { name: 'BMW X7 xDrive40i / xDrive50i / M50i', make: 'BMW', years: '2019–2022',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'BMW X7 xDrive40i / xDrive50i / M50i', make: 'BMW', years: '2019–2022',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$55,000', tier: 'Caution',
         tagline: 'BMW flagship 3-row SUV — get the B58 I6 (xDrive40i) and avoid the N63 V8. Complete BMW service records are non-negotiable. N63 without records is a $5,000–$10,000 risk.',
         inspectUrl: '/inspect/?year=2019&make=BMW&model=X7'
       },
-      { name: 'Nissan Rogue S / SV / SL (3rd gen D14)', make: 'Nissan', years: '2021–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Nissan Rogue S / SV / SL (3rd gen D14)', make: 'Nissan', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$26,000', tier: 'Strong',
         tagline: 'Much-improved 3rd-gen Rogue — prefer the 2.5L QR25 over the VC-Turbo until longer-term data accumulates. CVT fluid service at 30k is the key maintenance item.',
         inspectUrl: '/inspect/?year=2021&make=Nissan&model=Rogue'
       },
-      { name: 'Ford Explorer XLT / Limited / Sport (5th gen)', make: 'Ford', years: '2011–2019',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Ford Explorer XLT / Limited / Sport (5th gen)', make: 'Ford', years: '2011–2019',
+        use_case: 'family-hauler', seats: '6', budget: '15-20k',
+        must_have: ['3-row', 'awd-4wd', 'luxury'],
         price: '$18,000', tier: 'Caution',
         tagline: 'Popular 3-row SUV but with a documented exhaust-fume-in-cabin issue on 2011–2017 models. Verify TSB 17-0064 is completed and choose the 2.3T EcoBoost over 3.5T for reliability.',
         inspectUrl: '/inspect/?year=2017&make=Ford&model=Explorer'
       },
-      { name: 'Cadillac Escalade Luxury / Sport / ESV (5th gen)', make: 'Cadillac', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Cadillac Escalade Luxury / Sport / ESV (5th gen)', make: 'Cadillac', years: '2021–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'luxury'],
         price: '$65,000', tier: 'Caution',
         tagline: 'Stunning 5th-gen Escalade — OLED interior, IRS, air ride. Air compressor and DFM lifters are the main risks. CPO with extended warranty is essential at this price point.',
         inspectUrl: '/inspect/?year=2021&make=Cadillac&model=Escalade'
       },
-      { name: 'Volkswagen ID.4 Pro / AWD Pro / Pro S', make: 'Volkswagen', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Volkswagen ID.4 Pro / AWD Pro / Pro S', make: 'Volkswagen', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'hybrid-ev'],
         price: '$34,000', tier: 'Caution',
         tagline: 'VW MEB platform EV with good range and practical interior — but early 2021-22 builds had multiple recalls. Check all recalls closed, test the 12V auxiliary battery (most common failure point).',
         inspectUrl: '/inspect/?year=2021&make=Volkswagen&model=ID.4'
       },
-      { name: 'Ford Escape SE / SEL / Titanium / PHEV (4th gen)', make: 'Ford', years: '2020–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Ford Escape SE / SEL / Titanium / PHEV (4th gen)', make: 'Ford', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'tow-5000'],
         price: '$24,000', tier: 'Caution',
         tagline: 'Redesigned Escape with PHEV option — but 2020-2021 1.5T 3-cylinder had a documented cylinder head oil leak issue. Prefer the 2.0T or post-2022 build; check all recalls are closed.',
         inspectUrl: '/inspect/?year=2020&make=Ford&model=Escape'
       },
-      { name: 'Nissan Armada SV / SL / Platinum (2nd gen)', make: 'Nissan', years: '2017–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Nissan Armada SV / SL / Platinum (2nd gen)', make: 'Nissan', years: '2017–present',
+        use_case: 'family-hauler', seats: '7+', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'luxury', 'tow-5000'],
         price: '$32,000', tier: 'Strong',
         tagline: 'Patrol-based full-size SUV with a bulletproof 5.6L V8 — no AFM/cylinder deactivation. Strong alternative to Sequoia. Verify Takata recall closed; excellent value vs German 3-row rivals.',
         inspectUrl: '/inspect/?year=2017&make=Nissan&model=Armada'
       },
-      { name: 'Acura TLX Standard / A-Spec / Type S', make: 'Acura', years: '2021–present',
-        type: 'sedan', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Acura TLX Standard / A-Spec / Type S', make: 'Acura', years: '2021–present',
+        use_case: 'weekend-fun', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Best Acura sedan in a generation — Brembo brakes, SH-AWD, reliable 2.0T. Type S V6 is the driver pick. Very clean platform with no established failure modes.',
         inspectUrl: '/inspect/?year=2021&make=Acura&model=TLX'
       },
-      { name: 'Chevrolet Trailblazer LT / ACTIV / RS', make: 'Chevrolet', years: '2021–present',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Chevrolet Trailblazer LT / ACTIV / RS', make: 'Chevrolet', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$22,000', tier: 'Strong',
         tagline: 'Fun subcompact crossover at an entry price — get the 1.3T over the 1.2T base. Turbo engine needs attentive oil changes. Clean platform with no established failure modes.',
         inspectUrl: '/inspect/?year=2021&make=Chevrolet&model=Trailblazer'
       },
-      { name: 'Kia Seltos LX / EX / SX Turbo', make: 'Kia', years: '2021–present',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Kia Seltos LX / EX / SX Turbo', make: 'Kia', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$23,000', tier: 'Strong',
         tagline: 'Premium subcompact crossover — better interior quality than the class average. 1.6T DCT shudder is software-fixable. No Theta II concerns. Clean platform.',
         inspectUrl: '/inspect/?year=2021&make=Kia&model=Seltos'
       },
-      { name: 'Toyota Corolla Cross L / LE / XLE', make: 'Toyota', years: '2022–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Toyota Corolla Cross L / LE / XLE', make: 'Toyota', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$24,000', tier: 'Strong',
         tagline: 'Toyota Corolla drivetrain in a small crossover body — TSS-2.0 standard, no failure modes established. Excellent entry-level Toyota SUV choice.',
         inspectUrl: '/inspect/?year=2022&make=Toyota&model=Corolla Cross'
       },
-      { name: 'Mercedes-Benz GLE 350 / GLE 450 (W167)', make: 'Mercedes-Benz', years: '2020–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Mercedes-Benz GLE 350 / GLE 450 (W167)', make: 'Mercedes-Benz', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'luxury'],
         price: '$50,000', tier: 'Caution',
         tagline: 'Premium 5-seat luxury SUV — get the GLE 450 inline-six over the 350 four-cylinder. Airmatic compressor failure is the main risk; MB CPO or service records are mandatory.',
         inspectUrl: '/inspect/?year=2020&make=Mercedes-Benz&model=GLE'
       },
-      { name: 'Audi Q7 Premium / Prestige (2nd gen)', make: 'Audi', years: '2017–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Audi Q7 Premium / Prestige (2nd gen)', make: 'Audi', years: '2017–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'luxury'],
         price: '$45,000', tier: 'Caution',
         tagline: 'Refined 3-row Audi SUV — get the 3.0T V6 over the 2.0T. Air suspension compressor and Audi service records are the two non-negotiables. Audi CPO strongly recommended.',
         inspectUrl: '/inspect/?year=2018&make=Audi&model=Q7'
       },
-      { name: 'Toyota Land Cruiser (J200)', make: 'Toyota', years: '2008–2021',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Toyota Land Cruiser (J200)', make: 'Toyota', years: '2008–2021',
+        use_case: 'outdoor', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'tow-5000'],
         price: '$60,000', tier: 'Strong',
         tagline: 'Legend-class off-road SUV — 5.7L V8 runs to 400k miles. One of the safest used vehicle purchases. Verify Takata recall; skip northern-state frames with rust. High price reflects high residual value.',
         inspectUrl: '/inspect/?year=2018&make=Toyota&model=Land Cruiser'
       },
-      { name: 'Ford F-250 Super Duty XLT / Lariat / King Ranch', make: 'Ford', years: '2017–present',
-        type: 'truck', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Ford F-250 Super Duty XLT / Lariat / King Ranch', make: 'Ford', years: '2017–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '30k+',
+        must_have: ['tow-5000'],
         price: '$42,000', tier: 'Caution',
         tagline: 'Workhorse heavy-duty truck — 6.7L diesel is the towing king but injectors are expensive at 150k+. Gasoline V8 is simpler. Request commercial use history and diesel service records.',
         inspectUrl: '/inspect/?year=2019&make=Ford&model=F-250 Super Duty'
       },
-      { name: 'Honda Insight LX / EX / Touring', make: 'Honda', years: '2019–2022',
-        type: 'sedan', budget: '15-20k', purpose: 'fuel-economy',
+      {
+        name: 'Honda Insight LX / EX / Touring', make: 'Honda', years: '2019–2022',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury', 'manual'],
         price: '$20,000', tier: 'Strong',
         tagline: '55 mpg city hybrid sedan on the Civic platform — Honda two-motor hybrid is proven reliable. Extremely low operating cost. One of the best used hybrid values in the segment.',
         inspectUrl: '/inspect/?year=2019&make=Honda&model=Insight'
       },
-      { name: 'Lexus RX 350 Base / F SPORT (AL20, 2016+)', make: 'Lexus', years: '2016–2022',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Lexus RX 350 Base / F SPORT (AL20, 2016+)', make: 'Lexus', years: '2016–2022',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['luxury'],
         price: '$40,000', tier: 'Strong',
         tagline: 'Gold standard of midsize luxury crossovers — 3.5L V6 is exceptionally reliable. GDI carbon at 80k+ is the one watch item. Takata recall must be verified. Outstanding long-term ownership.',
         inspectUrl: '/inspect/?year=2019&make=Lexus&model=RX350'
       },
-      { name: 'Subaru BRZ Premium / Limited (2nd gen)', make: 'Subaru', years: '2022–present',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Subaru BRZ Premium / Limited (2nd gen)', make: 'Subaru', years: '2022–present',
+        use_case: 'weekend-fun', seats: '2', budget: '20-30k',
+        must_have: ['awd-4wd', 'carplay', 'luxury', 'manual'],
         price: '$28,000', tier: 'Strong',
         tagline: '228hp sports car with no head gasket concerns — 2nd gen FA24 is clean. Best driver car per dollar in the segment. Check clutch wear and suspension mods on enthusiast-owned examples.',
         inspectUrl: '/inspect/?year=2022&make=Subaru&model=BRZ'
       },
-      { name: 'Buick Encore GX Preferred / Essence', make: 'Buick', years: '2020–present',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Buick Encore GX Preferred / Essence', make: 'Buick', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'carplay'],
         price: '$24,000', tier: 'Strong',
         tagline: 'Refined small crossover with Buick comfort features — get the 1.3T over the 1.2T base. Same reliable platform as Chevy Trailblazer at a slightly premium price point.',
         inspectUrl: '/inspect/?year=2020&make=Buick&model=Encore GX'
       },
-      { name: 'Acura MDX Technology / A-Spec / Type S (4th gen)', make: 'Acura', years: '2022–present',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Acura MDX Technology / A-Spec / Type S (4th gen)', make: 'Acura', years: '2022–present',
+        use_case: 'family-hauler', seats: '6', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'luxury'],
         price: '$48,000', tier: 'Strong',
         tagline: 'Best MDX ever — no VCM motor mount issues, gorgeous interior, SH-AWD standard. Type S twin-turbo is a legitimate performance 3-row. Clean platform with strong Acura reliability.',
         inspectUrl: '/inspect/?year=2022&make=Acura&model=MDX'
       },
-      { name: 'Hyundai Sonata SE / SEL / N Line (8th gen)', make: 'Hyundai', years: '2020–present',
-        type: 'sedan', budget: '15-20k', purpose: 'reliability',
+      {
+        name: 'Hyundai Sonata SE / SEL / N Line (8th gen)', make: 'Hyundai', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$22,000', tier: 'Strong',
         tagline: 'Stunning 8th-gen Sonata — no Theta II concerns, distinctive styling, strong value. 2.5L base is reliable; N Line 2.5T is the performance choice. Check DCT smoothness on turbo variants.',
         inspectUrl: '/inspect/?year=2020&make=Hyundai&model=Sonata'
       },
-      { name: 'Toyota GR86 Base / Premium (2nd gen)', make: 'Toyota', years: '2022–present',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Toyota GR86 Base / Premium (2nd gen)', make: 'Toyota', years: '2022–present',
+        use_case: 'weekend-fun', seats: '2', budget: '20-30k',
+        must_have: ['carplay', 'manual'],
         price: '$28,000', tier: 'Strong',
         tagline: 'Toyota Gazoo Racing sports car sibling to BRZ — FA24 engine is clean, balanced chassis, exceptional driver engagement. Check clutch wear and track use history.',
         inspectUrl: '/inspect/?year=2022&make=Toyota&model=GR86'
       },
-      { name: 'Porsche Macan Base / S / GTS / Turbo', make: 'Porsche', years: '2015–2022',
-        type: 'suv', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Porsche Macan Base / S / GTS / Turbo', make: 'Porsche', years: '2015–2022',
+        use_case: 'weekend-fun', seats: '4-5', budget: '30k+',
+        must_have: ['luxury'],
         price: '$38,000', tier: 'Caution',
         tagline: 'Best-driving compact luxury SUV — but transfer case failure and AOS leaks are real at 60k+. Porsche CPO with service records is mandatory. S 3.0T is the performance sweet spot.',
         inspectUrl: '/inspect/?year=2017&make=Porsche&model=Macan'
       },
-      { name: 'Rivian R1T Adventure / Explore', make: 'Rivian', years: '2022–present',
-        type: 'truck', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Rivian R1T Adventure / Explore', make: 'Rivian', years: '2022–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$52,000', tier: 'Caution',
         tagline: 'Innovative electric adventure truck with excellent off-road capability — but early 2022 builds had multiple recalls. Verify all closed, check HV battery, and confirm Rivian service access before buying.',
         inspectUrl: '/inspect/?year=2022&make=Rivian&model=R1T'
       },
-      { name: 'Tesla Model Y Long Range / Performance (2022+)', make: 'Tesla', years: '2022–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Tesla Model Y Long Range / Performance (2022+)', make: 'Tesla', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$42,000', tier: 'Strong',
         tagline: 'Best-selling EV in the world — improved build quality over 2021, heat pump standard. 12V battery is the most common failure point. Check panel gaps and confirm all OTA recalls are closed.',
         inspectUrl: '/inspect/?year=2022&make=Tesla&model=Model Y'
       },
-      { name: 'Chevrolet Tahoe LT / Z71 / Premier (5th gen)', make: 'Chevrolet', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Chevrolet Tahoe LT / Z71 / Premier (5th gen)', make: 'Chevrolet', years: '2021–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'hybrid-ev', 'tow-5000'],
         price: '$48,000', tier: 'Caution',
         tagline: 'New IRS Tahoe with dramatically more space — but 5.3L DFM lifter and air ride compressor are the main risks. Prefer 6.2L or diesel; verify DFM disable; overnight level test for air ride.',
         inspectUrl: '/inspect/?year=2021&make=Chevrolet&model=Tahoe'
       },
-      { name: 'Honda Accord LX / Sport / Touring (11th gen)', make: 'Honda', years: '2023–present',
-        type: 'sedan', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda Accord LX / Sport / Touring (11th gen)', make: 'Honda', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$28,000', tier: 'Strong',
         tagline: 'Best Accord ever — Google infotainment, Sensing 2.0 standard, reduced 1.5T oil dilution. Hybrid standard on Touring. No established failure modes. Outstanding mid-size sedan.',
         inspectUrl: '/inspect/?year=2023&make=Honda&model=Accord'
       },
-      { name: 'Toyota Camry Hybrid (9th gen, 2024+)', make: 'Toyota', years: '2024–present',
-        type: 'sedan', budget: '20-30k', purpose: 'fuel-economy',
+      {
+        name: 'Toyota Camry Hybrid (9th gen, 2024+)', make: 'Toyota', years: '2024–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$30,000', tier: 'Strong',
         tagline: 'Camry is now hybrid-only — 2.5L THS-II is the most reliable powertrain Toyota offers. AWD available for the first time. Exceptional long-term reliability expected.',
         inspectUrl: '/inspect/?year=2024&make=Toyota&model=Camry'
       },
-      { name: 'Dodge Challenger R/T / Scat Pack / SRT (Last Gen)', make: 'Dodge', years: '2015–2023',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Dodge Challenger R/T / Scat Pack / SRT (Last Gen)', make: 'Dodge', years: '2015–2023',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: [],
         price: '$32,000', tier: 'Caution',
         tagline: 'American muscle icon — HEMI MDS lifter tick is the main risk on V8 models at 80k+. R/T is the value pick; Scat Pack is the performance sweet spot. Verify Takata recall and check for drag use.',
         inspectUrl: '/inspect/?year=2023&make=Dodge&model=Challenger'
       },
-      { name: 'Kia Telluride LX / EX / SX (2023+ refresh)', make: 'Kia', years: '2023–present',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Kia Telluride LX / EX / SX (2023+ refresh)', make: 'Kia', years: '2023–present',
+        use_case: 'family-hauler', seats: '6', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'tow-5000'],
         price: '$40,000', tier: 'Strong',
         tagline: 'Best 3-row SUV value in the segment — refreshed Telluride with no engine concerns, premium interior, excellent reliability. Straightforward buy with service records.',
         inspectUrl: '/inspect/?year=2023&make=Kia&model=Telluride'
       },
-      { name: 'Mercedes-Benz C300 / C300 4MATIC (W206)', make: 'Mercedes-Benz', years: '2022–present',
-        type: 'sedan', budget: '30k+', purpose: 'value',
+      {
+        name: 'Mercedes-Benz C300 / C300 4MATIC (W206)', make: 'Mercedes-Benz', years: '2022–present',
+        use_case: 'road-trip', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$40,000', tier: 'Caution',
         tagline: 'Stunning redesigned C-Class with massive MBUX screen and 48V mild hybrid — but too new for established failure data. Check 48V EQ Boost warning lights and insist on MB CPO coverage.',
         inspectUrl: '/inspect/?year=2022&make=Mercedes-Benz&model=C-Class'
       },
-      { name: 'Honda CR-V LX / Sport / Hybrid (6th gen)', make: 'Honda', years: '2023–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda CR-V LX / Sport / Hybrid (6th gen)', make: 'Honda', years: '2023–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$31,000', tier: 'Strong',
         tagline: 'Best-in-class practical compact SUV — redesigned 6th gen with hybrid available all trims. No established failure modes. Get the Hybrid for the best ownership experience.',
         inspectUrl: '/inspect/?year=2023&make=Honda&model=CR-V'
       },
-      { name: 'GMC Yukon SLT / AT4 / Denali (5th gen)', make: 'GMC', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'GMC Yukon SLT / AT4 / Denali (5th gen)', make: 'GMC', years: '2021–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'carplay', 'luxury', 'tow-5000'],
         price: '$52,000', tier: 'Caution',
         tagline: 'Premium full-size SUV with IRS and more space — same 5.3L DFM lifter and air ride risks as Tahoe. 6.2L or Duramax diesel are the smarter engine picks.',
         inspectUrl: '/inspect/?year=2021&make=GMC&model=Yukon'
       },
-      { name: 'Ford Mustang Mach-E Select / Premium / GT', make: 'Ford', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Ford Mustang Mach-E Select / Premium / GT', make: 'Ford', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev', 'tow-5000'],
         price: '$36,000', tier: 'Caution',
         tagline: 'Ford flagship EV crossover — multiple critical recalls on early builds must be confirmed closed. Check 12V battery (most common failure point) and HV battery SoH.',
         inspectUrl: '/inspect/?year=2021&make=Ford&model=Mustang Mach-E'
       },
-      { name: 'Nissan LEAF S / SV / SL (2nd gen)', make: 'Nissan', years: '2018–present',
-        type: 'sedan', budget: '15-20k', purpose: 'fuel-economy',
+      {
+        name: 'Nissan LEAF S / SV / SL (2nd gen)', make: 'Nissan', years: '2018–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$16,000', tier: 'Caution',
         tagline: 'Affordable EV for city/suburban use — but battery degradation without active cooling is the main risk. Check all 12 capacity bars and avoid southern-state high-DCFC cars.',
         inspectUrl: '/inspect/?year=2019&make=Nissan&model=LEAF'
       },
-      { name: 'Chevrolet Colorado LT / Z71 / ZR2 (4th gen)', make: 'Chevrolet', years: '2023–present',
-        type: 'truck', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Chevrolet Colorado LT / Z71 / ZR2 (4th gen)', make: 'Chevrolet', years: '2023–present',
+        use_case: 'outdoor', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'tow-5000'],
         price: '$34,000', tier: 'Strong',
         tagline: 'Completely redesigned 4th-gen Colorado — no AFM concerns, new 2.7T engine, excellent ZR2 off-road capability. Clean platform with no established failure modes.',
         inspectUrl: '/inspect/?year=2023&make=Chevrolet&model=Colorado'
       },
-      { name: 'Hyundai Venue SE / SEL / DENIM', make: 'Hyundai', years: '2020–present',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Hyundai Venue SE / SEL / DENIM', make: 'Hyundai', years: '2020–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$19,000', tier: 'Strong',
         tagline: 'Entry-level Hyundai crossover — simple, reliable 1.6L, no Theta II concerns. FWD only. Best used entry-SUV value under $20k.',
         inspectUrl: '/inspect/?year=2020&make=Hyundai&model=Venue'
       },
-      { name: 'Lexus UX200 / UX250h Hybrid', make: 'Lexus', years: '2019–present',
-        type: 'suv', budget: '20-30k', purpose: 'fuel-economy',
+      {
+        name: 'Lexus UX200 / UX250h Hybrid', make: 'Lexus', years: '2019–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$30,000', tier: 'Strong',
         tagline: 'Entry luxury SUV with Lexus fit and finish — UX250h delivers 41 mpg combined. TNGA-C platform is proven. Best-in-class interior quality at this price point.',
         inspectUrl: '/inspect/?year=2019&make=Lexus&model=UX'
       },
-      { name: 'Land Rover Defender 90 / 110 / 130 (L663)', make: 'Land Rover', years: '2020–present',
-        type: 'suv', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Land Rover Defender 90 / 110 / 130 (L663)', make: 'Land Rover', years: '2020–present',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'luxury'],
         price: '$55,000', tier: 'Caution',
         tagline: 'Iconic off-roader reimagined — outstanding capability, but early builds had software and electrical issues. Air compressor failure is the main risk. LR CPO and full dealer records are mandatory.',
         inspectUrl: '/inspect/?year=2020&make=Land Rover&model=Defender'
       },
-      { name: 'Toyota RAV4 Prime SE / XSE (PHEV)', make: 'Toyota', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Toyota RAV4 Prime SE / XSE (PHEV)', make: 'Toyota', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$42,000', tier: 'Strong',
         tagline: '302hp PHEV SUV with 42mi EV range and proven THS-II reliability. Best PHEV SUV value available. Check PHEV charging works normally — outstanding long-term buy.',
         inspectUrl: '/inspect/?year=2021&make=Toyota&model=RAV4 Prime'
       },
-      { name: 'INFINITI QX80 Luxe / Sensory / Autograph', make: 'INFINITI', years: '2011–2023',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'INFINITI QX80 Luxe / Sensory / Autograph', make: 'INFINITI', years: '2011–2023',
+        use_case: 'commute', seats: '7+', budget: '30k+',
+        must_have: ['luxury'],
         price: '$48,000', tier: 'Strong',
         tagline: 'Patrol-based luxury 3-row SUV with VK56 V8 reliability — great value vs. Lexus LX. Verify Takata recall closed; air ride compressor is the main mechanical watch item.',
         inspectUrl: '/inspect/?year=2018&make=INFINITI&model=QX80'
       },
-      { name: 'Chevrolet Suburban LT / Premier (5th gen)', make: 'Chevrolet', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Chevrolet Suburban LT / Premier (5th gen)', make: 'Chevrolet', years: '2021–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'hybrid-ev', 'tow-5000'],
         price: '$54,000', tier: 'Caution',
         tagline: 'Maximum interior volume full-size SUV with IRS — same 5.3L DFM and air ride risks as Tahoe. 3.0L diesel is the best long-distance ownership choice.',
         inspectUrl: '/inspect/?year=2021&make=Chevrolet&model=Suburban'
       },
-      { name: 'Audi e-tron Standard / Prestige / S', make: 'Audi', years: '2019–2022',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Audi e-tron Standard / Prestige / S', make: 'Audi', years: '2019–2022',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'hybrid-ev', 'luxury'],
         price: '$42,000', tier: 'Caution',
         tagline: 'Premium Audi EV SUV — water ingress battery recall on early builds must be confirmed closed. Air suspension compressor failure is the main mechanical risk. Audi CPO strongly recommended.',
         inspectUrl: '/inspect/?year=2019&make=Audi&model=e-tron'
       },
-      { name: 'Genesis GV70 Standard / Advanced / Sport', make: 'Genesis', years: '2022–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Genesis GV70 Standard / Advanced / Sport', make: 'Genesis', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'luxury', 'manual'],
         price: '$45,000', tier: 'Strong',
         tagline: 'Best-value luxury compact SUV — rivals BMW X3 and GLC at a significant discount. 3.5T twin-turbo is outstanding. Genesis CPO for warranty coverage is the preferred buy path.',
         inspectUrl: '/inspect/?year=2022&make=Genesis&model=GV70'
       },
-      { name: 'Tesla Model 3 Long Range / Performance (2022+)', make: 'Tesla', years: '2022–present',
-        type: 'sedan', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Tesla Model 3 Long Range / Performance (2022+)', make: 'Tesla', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['hybrid-ev', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Best-value performance EV sedan — improved build quality over earlier years. 12V battery is the most common failure point. Check panel gaps and all OTA recalls are closed.',
         inspectUrl: '/inspect/?year=2022&make=Tesla&model=Model 3'
       },
-      { name: 'Jeep Wrangler 4xe Sahara / Rubicon (PHEV)', make: 'Jeep', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Jeep Wrangler 4xe Sahara / Rubicon (PHEV)', make: 'Jeep', years: '2021–present',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'hybrid-ev', 'manual', 'tow-5000'],
         price: '$48,000', tier: 'Caution',
         tagline: 'Off-road capable PHEV Wrangler — 22mi EV range meets genuine trail capability. Multiple early recalls must ALL be confirmed closed. Higher cost than standard JL but strong commute+adventure combo.',
         inspectUrl: '/inspect/?year=2021&make=Jeep&model=Wrangler'
       },
-      { name: 'Ram 1500 TRX (702hp Supercharged)', make: 'Ram', years: '2021–2024',
-        type: 'truck', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Ram 1500 TRX (702hp Supercharged)', make: 'Ram', years: '2021–2024',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'tow-5000'],
         price: '$65,000', tier: 'Caution',
         tagline: 'Most powerful factory truck ever — 702hp supercharged HEMI. Supercharger belt at 60k is mandatory service. Spark plug ejection and drag use are the main risks. Complete records are non-negotiable.',
         inspectUrl: '/inspect/?year=2021&make=Ram&model=1500 TRX'
       },
-      { name: 'Honda Passport Sport / TrailSport / Elite (2022+)', make: 'Honda', years: '2022–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Honda Passport Sport / TrailSport / Elite (2022+)', make: 'Honda', years: '2022–present',
+        use_case: 'road-trip', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Updated Passport with no VCM motor mount issues — reliable 3.5L V6, TrailSport off-road option. i-VTM4 diff fluid service is the key maintenance item to verify.',
         inspectUrl: '/inspect/?year=2023&make=Honda&model=Passport'
       },
-      { name: 'Hyundai Elantra SEL / N Line / N (7th gen)', make: 'Hyundai', years: '2021–present',
-        type: 'sedan', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Hyundai Elantra SEL / N Line / N (7th gen)', make: 'Hyundai', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay'],
         price: '$22,000', tier: 'Strong',
         tagline: 'Dramatic-looking compact sedan with N performance options — no Theta II concerns, clean platform. N Line is an excellent spirited daily driver; Elantra N is a legitimate hot sedan.',
         inspectUrl: '/inspect/?year=2022&make=Hyundai&model=Elantra'
       },
-      { name: 'Toyota Sienna Hybrid LE / XLE / Limited (5th gen)', make: 'Toyota', years: '2021–present',
-        type: 'minivan', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Toyota Sienna Hybrid LE / XLE / Limited (5th gen)', make: 'Toyota', years: '2021–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'carplay', 'hybrid-ev', 'luxury', 'manual'],
         price: '$40,000', tier: 'Strong',
         tagline: 'Hybrid-only minivan delivering 36 mpg — best minivan for fuel economy and long-term reliability. THS-II drivetrain is proven. Outstanding family choice with available AWD.',
         inspectUrl: '/inspect/?year=2021&make=Toyota&model=Sienna'
       },
-      { name: 'Kia Stinger GT-Line / GT1 / GT2 (Final Edition)', make: 'Kia', years: '2022–2023',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Kia Stinger GT-Line / GT1 / GT2 (Final Edition)', make: 'Kia', years: '2022–2023',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$38,000', tier: 'Strong',
         tagline: 'Best sport sedan value ever made — 3.3T twin-turbo V6, RWD/AWD, genuine driver focus. Now discontinued (2023 final year) making used examples excellent value. Check brake wear.',
         inspectUrl: '/inspect/?year=2022&make=Kia&model=Stinger'
       },
-      { name: 'Toyota Tacoma TRD Sport / TRD Off-Road / TRD Pro (4th gen)', make: 'Toyota', years: '2024–present',
-        type: 'truck', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Toyota Tacoma TRD Sport / TRD Off-Road / TRD Pro (4th gen)', make: 'Toyota', years: '2024–present',
+        use_case: 'outdoor', seats: '4-5', budget: '30k+',
+        must_have: ['awd-4wd', 'carplay', 'tow-5000'],
         price: '$38,000', tier: 'Caution',
         tagline: 'Completely new 4th-gen Tacoma with turbocharged 2.4T — too early for long-term reliability data. Verify all recalls on early builds. Outstanding off-road capability on TRD Pro and Trailhunter.',
         inspectUrl: '/inspect/?year=2024&make=Toyota&model=Tacoma'
       },
-      { name: 'Volkswagen Taos S / SE / SEL', make: 'Volkswagen', years: '2022–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Volkswagen Taos S / SE / SEL', make: 'Volkswagen', years: '2022–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay'],
         price: '$24,000', tier: 'Strong',
         tagline: 'VW entry crossover with clean 1.5T EA211 engine — no EA888 timing chain concerns. DSG AWD shudder is the main check. Competitive pricing vs. Kona and Seltos.',
         inspectUrl: '/inspect/?year=2022&make=Volkswagen&model=Taos'
       },
-      { name: 'Nissan Pathfinder SV / SL / Platinum (5th gen)', make: 'Nissan', years: '2022–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Nissan Pathfinder SV / SL / Platinum (5th gen)', make: 'Nissan', years: '2022–present',
+        use_case: 'family-hauler', seats: '6', budget: '20-30k',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'luxury', 'tow-5000'],
         price: '$34,000', tier: 'Strong',
         tagline: 'Best Pathfinder generation ever — CVT is gone, 9AT is reliable. 3.5L V6 is proven. Major improvement over 4th-gen. Strong family 3-row SUV choice.',
         inspectUrl: '/inspect/?year=2022&make=Nissan&model=Pathfinder'
       },
-      { name: 'Cadillac CT5 Luxury / Sport / V Blackwing', make: 'Cadillac', years: '2020–present',
-        type: 'sedan', budget: '20-30k', purpose: 'performance',
+      {
+        name: 'Cadillac CT5 Luxury / Sport / V Blackwing', make: 'Cadillac', years: '2020–present',
+        use_case: 'weekend-fun', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$38,000', tier: 'Strong',
         tagline: 'RWD luxury sedan with V Blackwing at the top — 3.0T V6 is the sweet spot. 2.0T has oil consumption concerns. MRC shocks and supercharger belt (Blackwing) are the main service items.',
         inspectUrl: '/inspect/?year=2020&make=Cadillac&model=CT5'
       },
-      { name: 'Chevrolet Trax LT / RS / ACTIV (2nd gen)', make: 'Chevrolet', years: '2024–present',
-        type: 'suv', budget: '15-20k', purpose: 'value',
+      {
+        name: 'Chevrolet Trax LT / RS / ACTIV (2nd gen)', make: 'Chevrolet', years: '2024–present',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$21,000', tier: 'Strong',
         tagline: 'Best value subcompact SUV — dramatically redesigned, well-equipped, and the cheapest new SUV from a major brand. Clean platform with no established failure modes.',
         inspectUrl: '/inspect/?year=2024&make=Chevrolet&model=Trax'
       },
-      { name: 'Nissan Frontier SV / Pro-4X (3rd gen)', make: 'Nissan', years: '2022–present',
-        type: 'truck', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Nissan Frontier SV / Pro-4X (3rd gen)', make: 'Nissan', years: '2022–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'tow-5000'],
         price: '$30,000', tier: 'Strong',
         tagline: 'Completely redesigned 3rd-gen Frontier — new V6, 9AT, solid truck capability at a lower price than Tacoma. Pro-4X is the off-road pick. Strong value buy.',
         inspectUrl: '/inspect/?year=2022&make=Nissan&model=Frontier'
       },
-      { name: 'Ford F-150 Lightning Pro / XLT / Lariat', make: 'Ford', years: '2022–present',
-        type: 'truck', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Ford F-150 Lightning Pro / XLT / Lariat', make: 'Ford', years: '2022–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev', 'tow-5000'],
         price: '$48,000', tier: 'Caution',
         tagline: 'Electric F-150 with bidirectional home backup power — but early builds had multiple critical recalls. Run a full VIN check and verify ALL recalls closed. Strong buy once paperwork is confirmed.',
         inspectUrl: '/inspect/?year=2022&make=Ford&model=F-150 Lightning'
       },
-      { name: 'Genesis GV80 2.5T / 3.5T (flagship SUV)', make: 'Genesis', years: '2021–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Genesis GV80 2.5T / 3.5T (flagship SUV)', make: 'Genesis', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'luxury', 'manual'],
         price: '$55,000', tier: 'Strong',
         tagline: 'Flagship Genesis SUV that rivals BMW X5 and GLE at a significantly lower price — exceptional interior quality. Get the 3.5T V6. Genesis CPO for warranty coverage is strongly recommended.',
         inspectUrl: '/inspect/?year=2021&make=Genesis&model=GV80'
       },
-      { name: 'Lincoln Aviator Reserve / Black Label / Grand Touring', make: 'Lincoln', years: '2020–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Lincoln Aviator Reserve / Black Label / Grand Touring', make: 'Lincoln', years: '2020–present',
+        use_case: 'family-hauler', seats: '6', budget: '30k+',
+        must_have: ['3-row', 'carplay', 'luxury'],
         price: '$52,000', tier: 'Caution',
         tagline: 'Premium 3-row Lincoln SUV with powerful 3.0T V6 — air suspension recall must be confirmed closed. Lincoln CPO with service records is the safe buying path.',
         inspectUrl: '/inspect/?year=2020&make=Lincoln&model=Aviator'
       },
-      { name: 'Buick Envision Preferred / Essence / Avenir', make: 'Buick', years: '2021–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Buick Envision Preferred / Essence / Avenir', make: 'Buick', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury', 'manual'],
         price: '$30,000', tier: 'Caution',
         tagline: 'Refined compact luxury crossover — but 2.0T LTG has oil consumption concerns. Check dipstick at viewing and request all service records. Better value than European rivals at this price.',
         inspectUrl: '/inspect/?year=2021&make=Buick&model=Envision'
       },
-      { name: 'Toyota Highlander LE / XLE / Hybrid (4th gen XU70)', make: 'Toyota', years: '2020–2024',
-        type: 'suv', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Toyota Highlander LE / XLE / Hybrid (4th gen XU70)', make: 'Toyota', years: '2020–2024',
+        use_case: 'family-hauler', seats: '6', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'hybrid-ev', 'tow-5000'],
         price: '$36,000', tier: 'Strong',
         tagline: 'Redesigned XU70 Highlander on TNGA-K — 2.4T or Hybrid (36 mpg), TSS 2.0 standard. No chronic issues. Hybrid is the recommended choice for long-term value.',
         inspectUrl: '/inspect/?year=2020&make=Toyota&model=Highlander'
       },
-      { name: 'Kia Sorento LX / EX / Hybrid / PHEV (4th gen)', make: 'Kia', years: '2021–present',
-        type: 'suv', budget: '20-30k', purpose: 'reliability',
+      {
+        name: 'Kia Sorento LX / EX / Hybrid / PHEV (4th gen)', make: 'Kia', years: '2021–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$30,000', tier: 'Strong',
         tagline: 'Completely redesigned 4th-gen Sorento — 3-row available, hybrid and PHEV options, no Theta II concerns. One of the best midsize family SUV values in the segment.',
         inspectUrl: '/inspect/?year=2021&make=Kia&model=Sorento'
       },
-      { name: 'Mercedes-Benz GLS 450 / GLS 580 (X167)', make: 'Mercedes-Benz', years: '2020–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Mercedes-Benz GLS 450 / GLS 580 (X167)', make: 'Mercedes-Benz', years: '2020–present',
+        use_case: 'road-trip', seats: '7+', budget: '30k+',
+        must_have: ['carplay', 'luxury'],
         price: '$70,000', tier: 'Caution',
         tagline: 'S-Class on stilts — flagship 3-row Mercedes SUV. Air compressor and MB service costs are the main ownership challenges. Full MB CPO and dealer records are non-negotiable.',
         inspectUrl: '/inspect/?year=2020&make=Mercedes-Benz&model=GLS'
       },
-      { name: 'Toyota Sequoia Hybrid (3rd gen XK70)', make: 'Toyota', years: '2022–present',
-        type: 'suv', budget: '30k+', purpose: 'fuel-economy',
+      {
+        name: 'Toyota Sequoia Hybrid (3rd gen XK70)', make: 'Toyota', years: '2022–present',
+        use_case: 'family-hauler', seats: '7+', budget: '30k+',
+        must_have: ['3-row', 'awd-4wd', 'carplay', 'hybrid-ev', 'tow-5000'],
         price: '$55,000', tier: 'Caution',
         tagline: 'Redesigned full-size SUV — twin-turbo V6 hybrid standard on all trims. Too new for long-term data. Prefer 2023+ build for improved quality. Check recalls on any 2022.',
         inspectUrl: '/inspect/?year=2022&make=Toyota&model=Sequoia'
       },
-      { name: 'Ram 2500 Cummins / HEMI Heavy Duty', make: 'Ram', years: '2019–present',
-        type: 'truck', budget: '30k+', purpose: 'reliability',
+      {
+        name: 'Ram 2500 Cummins / HEMI Heavy Duty', make: 'Ram', years: '2019–present',
+        use_case: 'work-hauling', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'tow-5000'],
         price: '$42,000', tier: 'Strong',
         tagline: '6.7L Cummins is one of the most durable diesel engines ever made — 300k+ miles with routine service. HEMI 6.4L has MDS lifter risk. Check fleet use history on all HD trucks.',
         inspectUrl: '/inspect/?year=2019&make=Ram&model=2500'
       },
-      { name: 'Porsche Cayenne Base / S / GTS / Turbo (3rd gen)', make: 'Porsche', years: '2019–present',
-        type: 'suv', budget: '30k+', purpose: 'performance',
+      {
+        name: 'Porsche Cayenne Base / S / GTS / Turbo (3rd gen)', make: 'Porsche', years: '2019–present',
+        use_case: 'weekend-fun', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'luxury'],
         price: '$55,000', tier: 'Caution',
         tagline: 'Best-driving luxury SUV in the segment — Porsche handling with genuine utility. Air compressor and service costs are the ownership realities. Porsche CPO with records is mandatory.',
         inspectUrl: '/inspect/?year=2019&make=Porsche&model=Cayenne'
       },
-      { name: 'Cadillac XT4 Luxury / Premium Luxury / Sport', make: 'Cadillac', years: '2019–present',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Cadillac XT4 Luxury / Premium Luxury / Sport', make: 'Cadillac', years: '2019–present',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$25,000', tier: 'Caution',
         tagline: 'Entry Cadillac crossover at a competitive price — 2.0T LTG has oil consumption concerns. Check dipstick and request service records. Better equipped than European rivals per dollar.',
         inspectUrl: '/inspect/?year=2019&make=Cadillac&model=XT4'
       },
-      { name: 'Mazda CX-90 Preferred / Premium / PHEV', make: 'Mazda', years: '2024–present',
-        type: 'suv', budget: '30k+', purpose: 'value',
+      {
+        name: 'Mazda CX-90 Preferred / Premium / PHEV', make: 'Mazda', years: '2024–present',
+        use_case: 'commute', seats: '4-5', budget: '30k+',
+        must_have: ['carplay', 'hybrid-ev'],
         price: '$40,000', tier: 'Strong',
         tagline: 'Mazda flagship 3-row SUV with buttery inline-6 — exceptional interior quality rivaling German brands at a lower price. PHEV available. Brand-new platform with no established failure modes.',
         inspectUrl: '/inspect/?year=2024&make=Mazda&model=CX-90'
       },
-      { name: 'Volvo S60 T5 / T6 / T8 Recharge PHEV', make: 'Volvo', years: '2019–present',
-        type: 'sedan', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Volvo S60 T5 / T6 / T8 Recharge PHEV', make: 'Volvo', years: '2019–present',
+        use_case: 'road-trip', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'hybrid-ev', 'luxury'],
         price: '$34,000', tier: 'Caution',
         tagline: 'Premium sport sedan with T8 PHEV option — but timing belt at 60k miles is a non-negotiable service item. Full Volvo dealer records required. Timing belt history is the key document.',
         inspectUrl: '/inspect/?year=2019&make=Volvo&model=S60'
       },
-      { name: 'Lincoln Nautilus Standard / Reserve (formerly MKX)', make: 'Lincoln', years: '2019–2022',
-        type: 'suv', budget: '20-30k', purpose: 'value',
+      {
+        name: 'Lincoln Nautilus Standard / Reserve (formerly MKX)', make: 'Lincoln', years: '2019–2022',
+        use_case: 'commute', seats: '4-5', budget: '20-30k',
+        must_have: ['carplay', 'luxury'],
         price: '$32,000', tier: 'Strong',
         tagline: 'Premium midsize Lincoln crossover — get the 2.7T V6 over the 2.0T for this vehicle. Competitive with European rivals at a lower price. Check oil level immediately on any 2.0T.',
         inspectUrl: '/inspect/?year=2019&make=Lincoln&model=Nautilus'
-      },
+      }
     ];
 
-    var TYPE_LABELS = {
-      sedan: 'Sedan', suv: 'SUV', truck: 'Truck',
-      wagon: 'Wagon', hatch: 'Hatchback', 'hybrid-ev': 'Hybrid / EV'
+    var USE_CASE_LABELS = {
+      'commute': 'Daily commute', 'family-hauler': 'Family hauler',
+      'road-trip': 'Road trip', 'work-hauling': 'Work / hauling',
+      'weekend-fun': 'Weekend fun', 'outdoor': 'Outdoor / off-road',
+      'starter': 'First car'
     };
 
     // --- State ----------------------------------------------
-    var state = { type: '', budget: '', purpose: '', q: '' };
+    var state = { use_case: '', seats: '', budget: '', must_have: [], q: '' };
 
     // --- DOM refs -------------------------------------------
     var grid     = document.getElementById('vs-grid');
@@ -2769,9 +3189,12 @@
       var q = state.q.toLowerCase();
       return VEHICLES.filter(function (v) {
         if (q && v.name.toLowerCase().indexOf(q) === -1 && v.make.toLowerCase().indexOf(q) === -1) return false;
-        if (state.type   && v.type    !== state.type)    return false;
-        if (state.budget && v.budget  !== state.budget)  return false;
-        if (state.purpose && v.purpose !== state.purpose) return false;
+        if (state.use_case && v.use_case !== state.use_case) return false;
+        if (state.seats    && v.seats    !== state.seats)    return false;
+        if (state.budget   && v.budget   !== state.budget)   return false;
+        for (var i = 0; i < state.must_have.length; i++) {
+          if (!v.must_have || v.must_have.indexOf(state.must_have[i]) === -1) return false;
+        }
         return true;
       });
     }
@@ -2849,7 +3272,7 @@
                 '</div>' +
                 '<div class="stat-block">' +
                   '<span class="stat-label">Body type</span>' +
-                  '<span class="stat-val">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
+                  '<span class="stat-val">' + (USE_CASE_LABELS[v.use_case] || v.use_case) + '</span>' +
                 '</div>' +
                 '<div class="stat-block">' +
                   '<span class="stat-label">Budget band</span>' +
@@ -2871,7 +3294,7 @@
 
     // --- Reset ----------------------------------------------
     function resetFilters() {
-      state = { type: '', budget: '', purpose: '', q: '' };
+      state = { use_case: '', seats: '', budget: '', must_have: [], q: '' };
       if (searchEl) searchEl.value = '';
       document.querySelectorAll('.vchip').forEach(function (btn) {
         btn.classList.toggle('active', btn.getAttribute('data-value') === '');
@@ -2885,11 +3308,21 @@
         var filter = btn.getAttribute('data-filter');
         var val    = btn.getAttribute('data-value');
         if (!filter) return;
-        state[filter] = val;
-        // Toggle active within this filter group only
-        document.querySelectorAll('.vchip[data-filter="' + filter + '"]').forEach(function (b) {
-          b.classList.toggle('active', b === btn);
-        });
+        if (filter === 'must_have') {
+          var idx = state.must_have.indexOf(val);
+          if (idx === -1) {
+            state.must_have.push(val);
+            btn.classList.add('active');
+          } else {
+            state.must_have.splice(idx, 1);
+            btn.classList.remove('active');
+          }
+        } else {
+          state[filter] = val;
+          document.querySelectorAll('.vchip[data-filter="' + filter + '"]').forEach(function (b) {
+            b.classList.toggle('active', b === btn);
+          });
+        }
         render();
       });
     });
