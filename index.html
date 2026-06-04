@@ -454,6 +454,7 @@
   }
   .vs-header h2 { color: var(--white); }
   .vs-header p { color: var(--slate-400); }
+  .vs-filter-sub { font-weight: 400; color: var(--slate-400); font-size: 11px; margin-left: 4px; }
   .vs-filter-label { color: var(--slate-400); }
   .vs-search-input {
     background: rgba(255,255,255,0.06);
@@ -1102,15 +1103,26 @@
     <!-- Filter chips -->
     <div class="vs-filters">
       <div class="vs-filter-group">
-        <span class="vs-filter-label">Type</span>
-        <div class="vchip-row" role="group" aria-label="Filter by body type">
-          <button class="vchip active" data-filter="type" data-value="">Any</button>
-          <button class="vchip" data-filter="type" data-value="sedan">Sedan</button>
-          <button class="vchip" data-filter="type" data-value="suv">SUV</button>
-          <button class="vchip" data-filter="type" data-value="truck">Truck</button>
-          <button class="vchip" data-filter="type" data-value="wagon">Wagon</button>
-          <button class="vchip" data-filter="type" data-value="hatch">Hatchback</button>
-          <button class="vchip" data-filter="type" data-value="hybrid-ev">Hybrid&nbsp;/&nbsp;EV</button>
+        <span class="vs-filter-label">Use case</span>
+        <div class="vchip-row" role="group" aria-label="Filter by use case">
+          <button class="vchip active" data-filter="use_case" data-value="">Any</button>
+          <button class="vchip" data-filter="use_case" data-value="commute">Daily commute</button>
+          <button class="vchip" data-filter="use_case" data-value="family-hauler">Family hauler</button>
+          <button class="vchip" data-filter="use_case" data-value="road-trip">Road trip</button>
+          <button class="vchip" data-filter="use_case" data-value="work-hauling">Work / hauling</button>
+          <button class="vchip" data-filter="use_case" data-value="weekend-fun">Weekend fun</button>
+          <button class="vchip" data-filter="use_case" data-value="outdoor">Outdoor / off-road</button>
+          <button class="vchip" data-filter="use_case" data-value="starter">First car</button>
+        </div>
+      </div>
+      <div class="vs-filter-group">
+        <span class="vs-filter-label">Comfortably seats</span>
+        <div class="vchip-row" role="group" aria-label="Filter by seats">
+          <button class="vchip active" data-filter="seats" data-value="">Any</button>
+          <button class="vchip" data-filter="seats" data-value="2">2</button>
+          <button class="vchip" data-filter="seats" data-value="4-5">4&ndash;5</button>
+          <button class="vchip" data-filter="seats" data-value="6">6</button>
+          <button class="vchip" data-filter="seats" data-value="7+">7+</button>
         </div>
       </div>
       <div class="vs-filter-group">
@@ -1120,18 +1132,20 @@
           <button class="vchip" data-filter="budget" data-value="under-10k">Under $10k</button>
           <button class="vchip" data-filter="budget" data-value="10-15k">$10k &ndash; $15k</button>
           <button class="vchip" data-filter="budget" data-value="15-20k">$15k &ndash; $20k</button>
-          <button class="vchip" data-filter="budget" data-value="20-30k">$20k+</button>
+          <button class="vchip" data-filter="budget" data-value="20-30k">$20k &ndash; $30k</button>
+          <button class="vchip" data-filter="budget" data-value="30k+">$30k+</button>
         </div>
       </div>
       <div class="vs-filter-group">
-        <span class="vs-filter-label">Priority</span>
-        <div class="vchip-row" role="group" aria-label="Filter by priority">
-          <button class="vchip active" data-filter="purpose" data-value="">Any</button>
-          <button class="vchip" data-filter="purpose" data-value="reliability">Reliability</button>
-          <button class="vchip" data-filter="purpose" data-value="fuel-economy">Fuel economy</button>
-          <button class="vchip" data-filter="purpose" data-value="cargo">Cargo / family</button>
-          <button class="vchip" data-filter="purpose" data-value="off-road">Off-road</button>
-          <button class="vchip" data-filter="purpose" data-value="fun-to-drive">Fun to drive</button>
+        <span class="vs-filter-label">Must have <span class="vs-filter-sub">(multi-select)</span></span>
+        <div class="vchip-row" role="group" aria-label="Must-have features">
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="awd-4wd">AWD / 4WD</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="hybrid-ev">Hybrid / EV</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="manual">Manual transmission</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="tow-5000">Tow 5,000+ lbs</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="carplay">Apple CarPlay / Android Auto</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="3-row">3-row seating</button>
+          <button class="vchip vchip-mh" data-filter="must_have" data-value="luxury">Luxury trim / feel</button>
         </div>
       </div>
     </div>
@@ -1564,103 +1578,120 @@
     var VEHICLES = [
       {
         name: 'Acura TSX', make: 'Acura', years: '2011–2014',
-        type: 'sedan', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
         price: '$7,500', tier: 'Top',
         tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.'
       },
       {
         name: 'Honda Ridgeline RTL', make: 'Honda', years: '2010–2012',
-        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,200', tier: 'Top',
         tagline: 'Most honest used truck under $8k. AWD crew cab, in-bed trunk, unibody ride quality.'
       },
       {
         name: 'Subaru Outback 2.5i', make: 'Subaru', years: '2010–2014',
-        type: 'wagon', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd'],
         price: '$7,500', tier: 'Strong',
         tagline: 'The AWD wagon answer. Practical, capable, and proven. Watch for FB25 oil consumption.'
       },
       {
         name: 'Toyota Tacoma SR5', make: 'Toyota', years: '2010–2014',
-        type: 'truck', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: ['awd-4wd', 'tow-5000'],
         price: '$8,500', tier: 'Top',
         tagline: 'King of long-haul reliability. Body-on-frame proven past 300k. Verify clean frame.'
       },
       {
         name: 'Honda CR-V EX-L', make: 'Honda', years: '2008–2011',
-        type: 'suv', budget: 'under-10k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,000', tier: 'Top',
-        tagline: 'RepairPal\'s #2 compact SUV. $407 average annual repair cost. K24 I4 under the hood.'
+        tagline: "RepairPal's #2 compact SUV. $407 average annual repair cost. K24 I4 under the hood."
       },
       {
         name: 'Toyota Prius', make: 'Toyota', years: '2010–2015',
-        type: 'hybrid-ev', budget: 'under-10k', purpose: 'fuel-economy',
+        use_case: 'commute', seats: '4-5', budget: 'under-10k',
+        must_have: ['hybrid-ev'],
         price: '$6,500', tier: 'Top',
         tagline: 'Most reliable hybrid ever built. 50+ MPG, liquid-cooled NiMH battery is the only real risk.'
       },
       {
         name: 'Mazda3 SKYACTIV', make: 'Mazda', years: '2014–2015',
-        type: 'hatch', budget: 'under-10k', purpose: 'fun-to-drive',
+        use_case: 'weekend-fun', seats: '4-5', budget: 'under-10k',
+        must_have: [],
         price: '$7,200', tier: 'Top',
         tagline: 'Most fun-per-dollar in the budget. SKYACTIV engine is bulletproof. Tight rear seat for families.'
       },
       {
         name: 'Toyota Highlander V6', make: 'Toyota', years: '2008–2011',
-        type: 'suv', budget: 'under-10k', purpose: 'cargo',
+        use_case: 'family-hauler', seats: '6', budget: 'under-10k',
+        must_have: ['3-row', 'awd-4wd', 'tow-5000'],
         price: '$7,500', tier: 'Strong',
         tagline: 'Smoother family hauler than Pilot or 4Runner. 3.5L V6, optional 3rd row, FWD or AWD.'
       },
       {
         name: 'Chevy Bolt EV', make: 'Chevrolet', years: '2017–2019',
-        type: 'hybrid-ev', budget: '10-15k', purpose: 'fuel-economy',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['hybrid-ev'],
         price: '$13,000', tier: 'Top',
         tagline: 'Best used EV value in America — but only if the battery replacement recall is VIN-verified.'
       },
       {
         name: 'Subaru Forester 2.5i', make: 'Subaru', years: '2012–2016',
-        type: 'suv', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['awd-4wd'],
         price: '$11,000', tier: 'Top',
         tagline: 'Best sight lines of any compact SUV. Practical AWD, generous cargo, and a generous service history.'
       },
       {
         name: 'Honda Accord EX-L', make: 'Honda', years: '2013–2016',
-        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$10,500', tier: 'Top',
         tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.'
       },
       {
         name: 'Toyota Camry XSE V6', make: 'Toyota', years: '2015–2017',
-        type: 'sedan', budget: '10-15k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: [],
         price: '$11,500', tier: 'Top',
         tagline: 'Bulletproof 2.5L four or 3.5L V6. 35+ MPG highway on the I4. Essentially nothing to fix.'
       },
       {
         name: 'Toyota 4Runner SR5', make: 'Toyota', years: '2010–2016',
-        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'tow-5000'],
         price: '$16,000', tier: 'Top',
         tagline: 'The only SUV that outlasts the loan. Body-on-frame Toyota dependability with real off-road capability.'
       },
       {
         name: 'Jeep Wrangler Sport', make: 'Jeep', years: '2013–2017',
-        type: 'suv', budget: '15-20k', purpose: 'off-road',
+        use_case: 'outdoor', seats: '4-5', budget: '15-20k',
+        must_have: ['awd-4wd', 'manual', 'tow-5000'],
         price: '$17,500', tier: 'Strong',
         tagline: 'Iconic off-roader with a strong resale floor. Verify no lift or mod history that voids drivetrain.'
       },
       {
         name: 'Lexus RX 350', make: 'Lexus', years: '2010–2015',
-        type: 'suv', budget: '15-20k', purpose: 'reliability',
+        use_case: 'commute', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury'],
         price: '$15,000', tier: 'Top',
         tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.'
       }
     ];
 
-    var TYPE_LABELS = {
-      sedan: 'Sedan', suv: 'SUV', truck: 'Truck',
-      wagon: 'Wagon', hatch: 'Hatchback', 'hybrid-ev': 'Hybrid / EV'
+    var USE_CASE_LABELS = {
+      'commute': 'Daily commute', 'family-hauler': 'Family hauler',
+      'road-trip': 'Road trip', 'work-hauling': 'Work / hauling',
+      'weekend-fun': 'Weekend fun', 'outdoor': 'Outdoor / off-road',
+      'starter': 'First car'
     };
 
     // --- State ----------------------------------------------
-    var state = { type: '', budget: '', purpose: '', q: '' };
+    var state = { use_case: '', seats: '', budget: '', must_have: [], q: '' };
 
     // --- DOM refs -------------------------------------------
     var grid     = document.getElementById('vs-grid');
@@ -1675,9 +1706,12 @@
       var q = state.q.toLowerCase();
       return VEHICLES.filter(function (v) {
         if (q && v.name.toLowerCase().indexOf(q) === -1 && v.make.toLowerCase().indexOf(q) === -1) return false;
-        if (state.type   && v.type    !== state.type)    return false;
-        if (state.budget && v.budget  !== state.budget)  return false;
-        if (state.purpose && v.purpose !== state.purpose) return false;
+        if (state.use_case && v.use_case !== state.use_case) return false;
+        if (state.seats    && v.seats    !== state.seats)    return false;
+        if (state.budget   && v.budget   !== state.budget)   return false;
+        for (var i = 0; i < state.must_have.length; i++) {
+          if (!v.must_have || v.must_have.indexOf(state.must_have[i]) === -1) return false;
+        }
         return true;
       });
     }
@@ -1707,7 +1741,7 @@
         var tierClass = v.tier.toLowerCase() === 'top' ? 'vc-tier-top' : 'vc-tier-strong';
         return '<div class="vc">' +
           '<div class="vc-head">' +
-            '<span class="vc-type">' + (TYPE_LABELS[v.type] || v.type) + '</span>' +
+            '<span class="vc-type">' + (USE_CASE_LABELS[v.use_case] || v.use_case) + '</span>' +
             '<span class="vc-tier ' + tierClass + '">' + v.tier + '</span>' +
           '</div>' +
           '<h3 class="vc-name">' + v.name + '</h3>' +
@@ -1725,7 +1759,7 @@
 
     // --- Reset ----------------------------------------------
     function resetFilters() {
-      state = { type: '', budget: '', purpose: '', q: '' };
+      state = { use_case: '', seats: '', budget: '', must_have: [], q: '' };
       if (searchEl) searchEl.value = '';
       document.querySelectorAll('.vchip').forEach(function (btn) {
         btn.classList.toggle('active', btn.getAttribute('data-value') === '');
@@ -1739,11 +1773,21 @@
         var filter = btn.getAttribute('data-filter');
         var val    = btn.getAttribute('data-value');
         if (!filter) return;
-        state[filter] = val;
-        // Toggle active within this filter group only
-        document.querySelectorAll('.vchip[data-filter="' + filter + '"]').forEach(function (b) {
-          b.classList.toggle('active', b === btn);
-        });
+        if (filter === 'must_have') {
+          var idx = state.must_have.indexOf(val);
+          if (idx === -1) {
+            state.must_have.push(val);
+            btn.classList.add('active');
+          } else {
+            state.must_have.splice(idx, 1);
+            btn.classList.remove('active');
+          }
+        } else {
+          state[filter] = val;
+          document.querySelectorAll('.vchip[data-filter="' + filter + '"]').forEach(function (b) {
+            b.classList.toggle('active', b === btn);
+          });
+        }
         render();
       });
     });
