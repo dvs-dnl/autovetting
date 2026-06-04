@@ -107,42 +107,108 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
+  }
+  /* Vertical dotted timeline connecting the four step badges */
+  .teasers::before {
+    content: "";
+    position: absolute;
+    left: calc(24px + 56px);    /* container padding-left + badge half-width offset */
+    top: 88px;
+    bottom: 88px;
+    width: 0;
+    border-left: 2px dashed var(--slate-200);
+    z-index: 0;
+    pointer-events: none;
   }
   .teaser {
+    position: relative;
+    z-index: 1;
     background: var(--white);
     border: 1px solid var(--slate-200);
+    border-top: 4px solid var(--teaser-accent, var(--electric));
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     overflow: hidden;
     scroll-margin-top: 24px;
+    transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s;
   }
+  .teaser:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 52px rgba(15,23,42,0.14);
+  }
+  /* Per-step signature accent — blue → cyan → indigo → emerald */
+  #pinpoint-teaser { --teaser-accent: #3B82F6; --teaser-accent-soft: rgba(59,130,246,0.10); }
+  #search-teaser   { --teaser-accent: #0EA5E9; --teaser-accent-soft: rgba(14,165,233,0.10); }
+  #decode-teaser   { --teaser-accent: #6366F1; --teaser-accent-soft: rgba(99,102,241,0.10); }
+  #inspect-teaser  { --teaser-accent: #10B981; --teaser-accent-soft: rgba(16,185,129,0.10); }
+
+  /* Big translucent display number in the corner */
+  .teaser-display-num {
+    position: absolute;
+    top: 14px;
+    right: 26px;
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--teaser-accent);
+    opacity: 0.12;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+    user-select: none;
+  }
+
   .teaser-hd {
+    position: relative;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 24px 28px 8px;
+    padding: 28px 28px 8px;
     flex-wrap: wrap;
   }
   .teaser-title {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
   }
-  .teaser-title .num {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--electric);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
+  /* Step badge — bold circle, rides the dotted timeline */
+  .teaser-step-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--teaser-accent);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+    box-shadow: 0 6px 16px var(--teaser-accent-soft), 0 0 0 4px var(--white);
+    letter-spacing: 0.02em;
   }
+  .teaser-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--teaser-accent-soft);
+    color: var(--teaser-accent);
+    flex-shrink: 0;
+  }
+  .teaser-icon-wrap svg { width: 20px; height: 20px; }
   .teaser-title h2 {
     font-size: 26px;
     font-weight: 800;
     color: var(--navy);
     letter-spacing: -0.02em;
+    line-height: 1.2;
   }
   .teaser-open {
     font-size: 13px;
@@ -302,10 +368,16 @@
     .hero h1 { font-size: 34px; }
     .hero p.lede { font-size: 15px; }
     .teasers { margin-top: -24px; padding: 0 16px 60px; gap: 20px; }
-    .teaser-hd { padding: 20px 18px 6px; }
+    .teasers::before { left: calc(16px + 44px); top: 72px; bottom: 72px; }
+    .teaser-hd { padding: 22px 18px 6px; }
     .teaser-sub { padding: 0 18px 14px; }
     .teaser-body { padding: 4px 18px 22px; }
-    .teaser-title h2 { font-size: 22px; }
+    .teaser-title { gap: 10px; }
+    .teaser-title h2 { font-size: 21px; }
+    .teaser-step-badge { width: 44px; height: 44px; font-size: 16px; box-shadow: 0 4px 10px var(--teaser-accent-soft), 0 0 0 3px var(--white); }
+    .teaser-icon-wrap { width: 32px; height: 32px; }
+    .teaser-icon-wrap svg { width: 18px; height: 18px; }
+    .teaser-display-num { font-size: 48px; top: 10px; right: 18px; }
     .why-section { padding: 56px 20px; }
     .why-inner h2 { font-size: 26px; }
     .step-ribbon a { padding: 7px 11px; font-size: 12px; }
@@ -756,9 +828,11 @@
 <section class="teasers">
 
   <article class="teaser pinpoint-block" id="pinpoint-teaser">
+    <span class="teaser-display-num" aria-hidden="true">01</span>
     <div class="teaser-hd">
       <div class="teaser-title">
-        <span class="num">Step 01</span>
+        <span class="teaser-step-badge" aria-hidden="true">01</span>
+        <span class="teaser-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
         <h2>Pinpoint your shortlist</h2>
       </div>
       <a class="teaser-open" href="/pinpoint/">Open Pinpoint &rarr;</a>
@@ -812,9 +886,11 @@
   </article>
 
   <article class="teaser" id="search-teaser">
+    <span class="teaser-display-num" aria-hidden="true">02</span>
     <div class="teaser-hd">
       <div class="teaser-title">
-        <span class="num">Step 02</span>
+        <span class="teaser-step-badge" aria-hidden="true">02</span>
+        <span class="teaser-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
         <h2>Track listings you're watching</h2>
       </div>
       <a class="teaser-open" href="/search/">Open Search &rarr;</a>
@@ -836,9 +912,11 @@
   </article>
 
   <article class="teaser" id="decode-teaser">
+    <span class="teaser-display-num" aria-hidden="true">03</span>
     <div class="teaser-hd">
       <div class="teaser-title">
-        <span class="num">Step 03</span>
+        <span class="teaser-step-badge" aria-hidden="true">03</span>
+        <span class="teaser-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg></span>
         <h2>Decode a VIN</h2>
       </div>
       <a class="teaser-open" href="/decode/">Open Decode &rarr;</a>
@@ -860,9 +938,11 @@
   </article>
 
   <article class="teaser" id="inspect-teaser">
+    <span class="teaser-display-num" aria-hidden="true">04</span>
     <div class="teaser-hd">
       <div class="teaser-title">
-        <span class="num">Step 04</span>
+        <span class="teaser-step-badge" aria-hidden="true">04</span>
+        <span class="teaser-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
         <h2>Get the inspection checklist</h2>
       </div>
       <a class="teaser-open" href="/inspect/">Open Inspect &rarr;</a>
