@@ -20,6 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
+  /* ===== NAVY THROUGHOUT (whole page shares the header navy) ===== */
+  html, body { background: var(--navy); }
+  body { color: var(--slate-300); }
+
   /* ===== HERO (compact, immediately gives way to teasers) ===== */
   .hero {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -101,42 +105,62 @@
 
   /* ===== TEASER SECTION (stacked cards) ===== */
   .teasers {
-    max-width: 980px;
+    max-width: 1080px;
     margin: -36px auto 0;
-    padding: 0 24px 80px;
+    padding: 60px 24px 100px;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 48px;
   }
-  /* Vertical dotted timeline connecting the four step badges */
-  .teasers::before {
-    content: "";
+  /* Snake SVG (rendered by JS to thread through card edges) */
+  .teaser-snake {
     position: absolute;
-    left: calc(24px + 56px);    /* container padding-left + badge half-width offset */
-    top: 88px;
-    bottom: 88px;
-    width: 0;
-    border-left: 2px dashed var(--slate-200);
+    inset: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     pointer-events: none;
+    overflow: visible;
+  }
+  .teaser-snake path {
+    fill: none;
+    stroke: rgba(59, 130, 246, 0.35);
+    stroke-width: 2;
+    stroke-dasharray: 6 8;
+    stroke-linecap: round;
   }
   .teaser {
     position: relative;
     z-index: 1;
     background: var(--white);
-    border: 1px solid var(--slate-200);
+    border: 1px solid rgba(255,255,255,0.06);
     border-top: 4px solid var(--teaser-accent, var(--electric));
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.35),
+      0 6px 18px rgba(0, 0, 0, 0.25);
+    overflow: visible;     /* let badge spill outside on inner edge */
     scroll-margin-top: 24px;
-    transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s;
+    max-width: 62%;
+    transition:
+      transform .35s cubic-bezier(.2,.7,.2,1),
+      box-shadow .35s,
+      box-shadow .25s;
+    will-change: transform;
   }
+  .teaser > * { position: relative; z-index: 1; }
+  .teaser:nth-child(odd)  { align-self: flex-start; }
+  .teaser:nth-child(even) { align-self: flex-end; }
   .teaser:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 22px 52px rgba(15,23,42,0.14);
+    transform: translateY(-4px);
+    box-shadow:
+      0 32px 72px rgba(0, 0, 0, 0.42),
+      0 10px 22px rgba(0, 0, 0, 0.30);
   }
+  /* Scroll-driven float: tiny translateY differential per card; set by JS */
+  .teaser { --float-y: 0px; transform: translateY(var(--float-y)); }
+  .teaser:hover { transform: translateY(calc(var(--float-y) - 4px)); }
   /* Per-step signature accent — blue → cyan → indigo → emerald */
   #pinpoint-teaser { --teaser-accent: #3B82F6; --teaser-accent-soft: rgba(59,130,246,0.10); }
   #search-teaser   { --teaser-accent: #0EA5E9; --teaser-accent-soft: rgba(14,165,233,0.10); }
@@ -176,6 +200,8 @@
   }
   /* Step badge — bold circle, rides the dotted timeline */
   .teaser-step-badge {
+    position: absolute;
+    top: 18px;
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -188,8 +214,20 @@
     font-size: 18px;
     font-variant-numeric: tabular-nums;
     flex-shrink: 0;
-    box-shadow: 0 6px 16px var(--teaser-accent-soft), 0 0 0 4px var(--white);
+    box-shadow:
+      0 8px 20px var(--teaser-accent-soft),
+      0 0 0 4px var(--navy);                     /* navy halo against navy bg */
     letter-spacing: 0.02em;
+    z-index: 2;
+  }
+  /* odd cards (left side) → badge sticks out the RIGHT edge; even cards → LEFT edge */
+  .teaser:nth-child(odd)  .teaser-step-badge { right: -28px; }
+  .teaser:nth-child(even) .teaser-step-badge { left: -28px; }
+  .teaser-title .teaser-step-badge { /* hide if it lingers inside title */
+    position: static; width: auto; height: auto; box-shadow: none;
+    background: transparent; color: var(--teaser-accent);
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    display: none;
   }
   .teaser-icon-wrap {
     display: inline-flex;
@@ -328,10 +366,19 @@
   }
 
   .why-section {
-    background: var(--white);
+    background: transparent;
     padding: 72px 24px;
-    border-top: 1px solid var(--slate-200);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: var(--slate-300);
   }
+  .why-inner h2 { color: var(--white); }
+  .why-inner > p.lead { color: var(--slate-400); }
+  .why-card {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+  }
+  .why-card h3 { color: var(--white) !important; }
+  .why-card p { color: var(--slate-400) !important; }
   .why-inner { max-width: 880px; margin: 0 auto; }
   .why-inner h2 {
     font-size: 32px;
@@ -367,8 +414,20 @@
     .hero { padding: 48px 20px 56px; }
     .hero h1 { font-size: 34px; }
     .hero p.lede { font-size: 15px; }
-    .teasers { margin-top: -24px; padding: 0 16px 60px; gap: 20px; }
-    .teasers::before { left: calc(16px + 44px); top: 72px; bottom: 72px; }
+    .teasers { margin-top: -24px; padding: 0 16px 60px; gap: 28px; }
+    .teaser-snake { display: none; }
+    .teaser { max-width: 100%; align-self: stretch !important; box-shadow: 0 18px 40px rgba(0,0,0,0.35); }
+    .teaser-step-badge {
+      position: static !important;
+      width: 44px; height: 44px; font-size: 16px;
+      box-shadow: 0 4px 10px var(--teaser-accent-soft), 0 0 0 3px var(--white);
+    }
+    .teaser:nth-child(odd)  .teaser-step-badge { right: auto; }
+    .teaser:nth-child(even) .teaser-step-badge { left: auto; }
+    .teaser-title .teaser-step-badge { display: inline-flex !important; }
+    .teaser-title > .teaser-step-badge { display: inline-flex; }
+    /* keep the absolute one hidden on mobile (it duplicates the title one) */
+    .teaser > .teaser-step-badge { display: none; }
     .teaser-hd { padding: 22px 18px 6px; }
     .teaser-sub { padding: 0 18px 14px; }
     .teaser-body { padding: 4px 18px 22px; }
@@ -388,10 +447,34 @@
      Vehicle Search Section
      ============================================================ */
   .vehicle-search-section {
-    background: var(--slate-white);
-    border-top: 3px solid var(--electric);
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.08);
     padding: 72px 24px 80px;
+    color: var(--slate-300);
   }
+  .vs-header h2 { color: var(--white); }
+  .vs-header p { color: var(--slate-400); }
+  .vs-filter-label { color: var(--slate-400); }
+  .vs-search-input {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.14);
+    color: var(--white);
+  }
+  .vs-search-input::placeholder { color: rgba(255,255,255,0.45); }
+  .vchip {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.14);
+    color: var(--slate-300);
+  }
+  .vchip:hover { border-color: var(--electric); color: var(--white); }
+  .vchip.active {
+    background: var(--electric);
+    border-color: var(--electric);
+    color: var(--white);
+  }
+  .vs-count-text { color: var(--slate-400); }
+  .vs-reset-btn { color: var(--slate-300); }
+  .vs-reset-btn:hover { color: var(--white); }
   .vs-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -826,9 +909,11 @@
      2+3. THE FOUR STEPS — individual section per step
      ============================================================ -->
 <section class="teasers">
+  <svg class="teaser-snake" aria-hidden="true" preserveAspectRatio="none"><path d=""/></svg>
 
   <article class="teaser pinpoint-block" id="pinpoint-teaser">
     <span class="teaser-display-num" aria-hidden="true">01</span>
+    <span class="teaser-step-badge" aria-hidden="true">01</span>
     <div class="teaser-hd">
       <div class="teaser-title">
         <span class="teaser-step-badge" aria-hidden="true">01</span>
@@ -887,6 +972,7 @@
 
   <article class="teaser" id="search-teaser">
     <span class="teaser-display-num" aria-hidden="true">02</span>
+    <span class="teaser-step-badge" aria-hidden="true">02</span>
     <div class="teaser-hd">
       <div class="teaser-title">
         <span class="teaser-step-badge" aria-hidden="true">02</span>
@@ -913,6 +999,7 @@
 
   <article class="teaser" id="decode-teaser">
     <span class="teaser-display-num" aria-hidden="true">03</span>
+    <span class="teaser-step-badge" aria-hidden="true">03</span>
     <div class="teaser-hd">
       <div class="teaser-title">
         <span class="teaser-step-badge" aria-hidden="true">03</span>
@@ -939,6 +1026,7 @@
 
   <article class="teaser" id="inspect-teaser">
     <span class="teaser-display-num" aria-hidden="true">04</span>
+    <span class="teaser-step-badge" aria-hidden="true">04</span>
     <div class="teaser-hd">
       <div class="teaser-title">
         <span class="teaser-step-badge" aria-hidden="true">04</span>
@@ -1676,6 +1764,85 @@
     // --- Initial render -------------------------------------
     render();
 
+  }());
+
+  // ============================================================
+  // SNAKE PATH between alternating step cards + scroll-driven float
+  // ============================================================
+  (function () {
+    var section = document.querySelector('.teasers');
+    if (!section) return;
+    var svg = section.querySelector('.teaser-snake');
+    var path = svg && svg.querySelector('path');
+    var cards = Array.prototype.slice.call(section.querySelectorAll('.teaser'));
+    if (!path || cards.length < 2) return;
+
+    function buildPath() {
+      var rect = section.getBoundingClientRect();
+      var w = rect.width, h = rect.height;
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      // Anchor points = the step badge center on each card's "inside" edge
+      var pts = cards.map(function (c) {
+        var cr = c.getBoundingClientRect();
+        var badge = c.querySelector(':scope > .teaser-step-badge');
+        var by = badge ? (badge.getBoundingClientRect().top + 28 - rect.top) : (cr.top - rect.top + 46);
+        var leftAligned = (c === cards[0]) || (cards.indexOf(c) % 2 === 0);
+        var bx = leftAligned ? (cr.right - rect.left + 28) : (cr.left - rect.left - 28);
+        return { x: bx, y: by };
+      });
+      // Build smooth cubic curves between successive points
+      var d = 'M ' + pts[0].x.toFixed(1) + ' ' + pts[0].y.toFixed(1);
+      for (var i = 1; i < pts.length; i++) {
+        var p0 = pts[i-1], p1 = pts[i];
+        var midY = (p0.y + p1.y) / 2;
+        d += ' C ' + p0.x.toFixed(1) + ' ' + midY.toFixed(1) +
+             ', '   + p1.x.toFixed(1) + ' ' + midY.toFixed(1) +
+             ', '   + p1.x.toFixed(1) + ' ' + p1.y.toFixed(1);
+      }
+      path.setAttribute('d', d);
+    }
+
+    var prefersReduced = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function applyFloat() {
+      if (prefersReduced) return;
+      var vh = window.innerHeight || 800;
+      cards.forEach(function (c, i) {
+        var cr = c.getBoundingClientRect();
+        var centerInView = (cr.top + cr.height / 2) / vh;   // 0..1
+        // Map to -8 .. +8 px translation, with per-card phase offset so they don't all float in lockstep
+        var phase = i * 0.5;
+        var y = Math.sin((centerInView * Math.PI * 2) + phase) * 6;
+        c.style.setProperty('--float-y', y.toFixed(2) + 'px');
+      });
+    }
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { applyFloat(); ticking = false; });
+    }
+
+    var rebuildTicking = false;
+    function onResize() {
+      if (rebuildTicking) return;
+      rebuildTicking = true;
+      requestAnimationFrame(function () { buildPath(); applyFloat(); rebuildTicking = false; });
+    }
+
+    if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) {
+      // Mobile: skip — snake hidden, cards full-width
+      return;
+    }
+    buildPath();
+    applyFloat();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    // Re-layout once forms/fonts have settled
+    setTimeout(function () { buildPath(); applyFloat(); }, 300);
+    setTimeout(function () { buildPath(); applyFloat(); }, 1200);
   }());
 
 })();
