@@ -10418,6 +10418,100 @@ const CHECKLISTS = {
     ]
   },
 
+  'chrysler-pacifica-2017': {
+    year: 2017, make: 'Chrysler', model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen, 2017–2022)',
+    vinNote: "On the Pacifica the single most important decode is gas vs. plug-in hybrid, because they are mechanically different vans. The conventional models use the 3.6L Pentastar V6 (287 hp) paired with the 948TE 9-speed automatic — the 8th VIN digit is 'G' for this Pentastar. The Pacifica Hybrid (a plug-in, badged 'Hybrid') uses an Atkinson-cycle 3.6L with a dual-motor eFlite EVT and a 16 kWh battery — a different 8th-digit code, and it is the variant tied to the high-voltage battery fire recalls (22V-077, then the 24V-536 / 24V-538 expansions). A Hybrid has no second-row Stow 'n Go (the battery lives in that floor well), so if the second-row seats fold into the floor you are looking at a gas van. Never trust the badge alone — decode the full VIN at <a href='/decode/'>autovetting.com/decode</a> (NHTSA vPIC) to confirm engine family and whether a fire recall applies. The 10th VIN digit gives the model year: H=2017, J=2018, K=2019, L=2020, M=2021, N=2022.",
+    blogUrl: '/blog/2017-chrysler-pacifica-buyers-guide',
+    engine: '3.6L Pentastar V6 (287hp) + 948TE 9-speed auto / 3.6L Atkinson V6 Plug-in Hybrid (260hp combined, eFlite EVT, ~32 mi electric)',
+    overallRisk: 'high', overallRiskLabel: 'High Attention',
+    summary: "The first-generation Pacifica is the most car-like minivan to drive and the only one offering a plug-in hybrid, but it carries real used-buyer risk that rewards a careful inspection. The 948TE 9-speed automatic can shift roughly and is the subject of an NHTSA stall investigation; the 3.6L Pentastar's water pump and oil-cooler are known early failures that can escalate to a head gasket on an all-aluminum engine; and the Pacifica Hybrid is tied to a high-voltage battery fire recall that has been re-issued twice. A well-documented gas Touring L with a clean transmission and verified recalls is a genuinely good family van; a neglected one — or any Hybrid without the fire-recall remedy confirmed — is a walk-away.",
+    stats: { itemsToCheck: 18, recalls: 4, ownerComplaints: 1140, topComplaintArea: 'Electrical / PHEV battery (fire recall) + 9-speed shifting' },
+    sections: [
+      { title: 'Powertrain — 3.6L Pentastar V6 & 9-Speed', items: [
+        { title: '948TE 9-speed automatic — shift quality + stall investigation', risk: 'high', riskLabel: 'High Attention',
+          desc: "The ZF-derived 948TE 9-speed can exhibit harsh or hesitant shifts, gear hunting, and a lag from Park to a drive gear. NHTSA has investigated an internal transmission wiring-connector short that can cause an unexpected engine/transmission shutdown. Early 2017 builds saw the most complaints; multiple software updates were issued.",
+          check: "<strong>Test drive through the full range: gentle 5–35 mph tip-in, a highway on-ramp, and several Park-to-Drive/Reverse engagements.</strong> Feel for clunks, flares, or a multi-second delay engaging a gear. Scan for transmission codes and confirm the latest TCM software is installed at a dealer (free VIN check).",
+          cost: '$0 software / $350–$550 fluid service / $3,000–$5,000 valve body or unit if mechanical', source: 'NHTSA stall investigation + FCA transmission software campaigns' },
+        { title: '3.6L Pentastar water pump + integrated oil cooler', risk: 'high', riskLabel: 'High Attention',
+          desc: "The Pentastar's water pump and the integrated oil-cooler/filter housing are documented early failures. Because the engine is all-aluminum, even a minor overheat from a failed pump can warp the head and trigger a head-gasket failure — far costlier than the pump itself.",
+          check: "<strong>Check coolant level and look for crusty residue or weeping at the front of the engine and around the oil-filter housing.</strong> Confirm the temperature gauge holds at the midpoint on the test drive. Ask whether the water pump has been replaced (common by 60k–90k miles).",
+          cost: '$700–$1,100 water pump / $400–$900 oil-cooler housing / $2,500–$4,000 if a head gasket follows an overheat', source: 'Pentastar V6 documented failure pattern (RepairPal + owner forums)' },
+        { title: 'Pentastar rocker-arm / lifter tick + oil maintenance', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Pentastar V6s can develop a rocker-arm/lifter tick and are sensitive to oil neglect (sludge in the cooler and VVT solenoids). A cold-start tick that fades is usually benign; a persistent tick with a misfire code is not.",
+          check: "<strong>Cold-start the engine and listen for a tick that persists past 30 seconds.</strong> Scan for misfire codes (P0300–P0306). Demand oil-change records — intervals beyond 8,000 miles raise the risk.",
+          cost: '$0 if maintained / $600–$1,500 rocker/lifter work', source: 'Pentastar service pattern' }
+      ]},
+      { title: 'Pacifica Hybrid / PHEV (if equipped)', items: [
+        { title: 'High-voltage battery FIRE recall — 22V-077 / 24V-536 / 24V-538', risk: 'critical', riskLabel: 'Critical',
+          desc: "Pacifica Hybrid (plug-in) models are tied to a high-voltage battery fire risk that can occur while parked and off. Chrysler's 2022 recall (22V-077) did not fully resolve it; NHTSA reopened the issue and Stellantis issued expanded/replacement recalls in 2024 — 24V-536 for 2017–2018 PHEVs and 24V-538 for 2019–2021 PHEVs — citing a folded/torn anode tab that can short the pack. Interim guidance told owners not to charge and to park away from structures until repaired.",
+          check: "<strong>On any Hybrid, run the VIN at nhtsa.gov/recalls and confirm the latest battery recall remedy (24V-536 or 24V-538) is COMPLETE — not just the superseded 22V-077.</strong> Walk away from any Hybrid that has not received the final battery inspection/replacement remedy.",
+          cost: '$0 dealer remedy / walk away if unrepaired', source: 'NHTSA 22V-077, 24V-536, 24V-538' },
+        { title: 'Plug-in charging + electric range health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "A healthy Pacifica Hybrid should deliver roughly 25–32 miles of electric range; significant degradation or charging faults point to battery or onboard-charger problems.",
+          check: "<strong>Charge the van and confirm it reaches a near-full electric-range estimate, then drive it in EV mode.</strong> Verify the charge cord and port work and that no hybrid-system warning lights are present.",
+          cost: '$0 if healthy / $400–$2,000+ charger or module faults', source: 'Pacifica Hybrid owner data' },
+        { title: '12V auxiliary battery + hybrid wake-up', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Hybrids rely on a 12V system to boot the high-voltage controllers; a weak 12V battery causes intermittent no-starts and spurious electrical faults that mimic bigger problems.",
+          check: "<strong>Load-test the 12V battery and confirm the van wakes and powers up without warning lights.</strong>",
+          cost: '$150–$300 12V battery', source: 'Hybrid 12V pattern' }
+      ]},
+      { title: 'Electrical & Infotainment', items: [
+        { title: 'Uconnect freeze / reboot / ghost-touch', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Uconnect 4/4C systems on the Pacifica are a top complaint area: random reboots, frozen screens, backup-camera dropouts, and phantom touch inputs. Most are addressed by software but some need a head-unit replacement.",
+          check: "<strong>Cycle every infotainment function — radio, Apple CarPlay/Android Auto, backup camera, climate, rear-seat screens if equipped.</strong> Confirm the backup camera appears within two seconds of reverse and the screen does not freeze.",
+          cost: '$0 software update / $1,200–$2,500 head unit if hardware', source: 'NHTSA electrical complaints + FCA software campaigns' },
+        { title: 'Power sliding door motors, cables + tracks', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The dual power sliding doors are high-use mechanisms; motor/cable wear and track debris cause slow operation, mid-travel reversal, and failure to latch — a frequent and visible Pacifica complaint.",
+          check: "<strong>Cycle each sliding door fully five times from the handle, the B-pillar button, the dash switch, and the key fob.</strong> Watch for hesitation, grinding, or failure to latch on the first attempt.",
+          cost: '$400–$800 per door motor / $100 track cleaning', source: 'Pacifica sliding-door complaint pattern' },
+        { title: 'Power liftgate struts + motor', risk: 'low', riskLabel: 'Low Risk',
+          desc: "By 5–7 years the power liftgate can lose strut pressure or develop a balky motor, causing slow travel or a door that drifts.",
+          check: "<strong>Open and close the power liftgate from all controls; open it halfway and confirm it holds position.</strong>",
+          cost: '$80–$160 struts / $300–$600 motor', source: 'Standard wear item' }
+      ]},
+      { title: "Stow 'n Go & Interior (gas models)", items: [
+        { title: "Stow 'n Go bin water intrusion", risk: 'monitor', riskLabel: 'Monitor',
+          desc: "A recurring Pacifica complaint: water collects in the second-row Stow 'n Go floor bins after rain or a car wash, leading to damp carpet, mildew smell, and corrosion. Sources include door/seal leaks and clogged drains. (Hybrids have no Stow 'n Go to check.)",
+          check: "<strong>Lift the Stow 'n Go bin lids and feel for standing water, dampness, or a musty smell.</strong> Check the carpet edges and under the front-door sills for staining.",
+          cost: '$150–$400 seal/drain repair / more if carpet or modules were soaked', source: 'Pacifica forum + NHTSA complaint pattern' },
+        { title: 'HVAC blend-door actuator click', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "A clicking or knocking from behind the dash with inconsistent temperature usually points to a failing blend-door actuator — common across FCA products.",
+          check: "<strong>Run the climate control through hot, cold, and each vent mode; listen for a repetitive click behind the dash.</strong>",
+          cost: '$250–$500 actuator (labor-driven)', source: 'FCA HVAC actuator pattern' },
+        { title: 'Second/third-row seats & latches', risk: 'low', riskLabel: 'Low Risk',
+          desc: "Exercise the folding/Stow 'n Go (gas) or removable seat hardware and all latches and seatbelts.",
+          check: "<strong>Fold and raise every available row, and tug-test all seatbelts and child-seat anchors.</strong>",
+          cost: '$50–$300 latch/cable repair', source: 'Standard wear item' }
+      ]},
+      { title: 'Suspension, Brakes & Body', items: [
+        { title: 'Front suspension clunk / sway-bar links', risk: 'low', riskLabel: 'Low Risk',
+          desc: "Sway-bar end links and front strut mounts wear on a heavy van and produce a clunk over bumps.",
+          check: "<strong>Drive over rough pavement and listen for a front-end clunk; have the links and mounts checked on a lift.</strong>",
+          cost: '$150–$350 links / $300–$600 strut mounts', source: 'Common wear pattern' },
+        { title: 'Brake wear (heavy van; hybrid regen differs)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The Pacifica is heavy; gas models can wear front brakes faster than expected, while Hybrids use regenerative braking that can leave rear pads under-worn but rotors rusty from light use.",
+          check: "<strong>Inspect pad thickness and rotor condition front and rear; on a Hybrid, check the rear rotors for heavy rust from regen-dominant braking.</strong>",
+          cost: '$300–$600 per axle brake job', source: 'Vehicle-weight + hybrid regen pattern' }
+      ]},
+      { title: 'Documentation & Recalls', items: [
+        { title: 'Manual park-release / rollaway recall 18V-395', risk: 'high', riskLabel: 'High Attention',
+          desc: "2017–2018 Pacificas were recalled (NHTSA 18V-395, FCA U50) because the manual park-release cover could be removed by hand, allowing the van to be shifted out of Park and roll away. Roughly 240,000 vans were affected.",
+          check: "<strong>Confirm 18V-395 is complete via the VIN at nhtsa.gov/recalls on any 2017–2018 van.</strong>",
+          cost: 'Free dealer remedy', source: 'NHTSA 18V-395' },
+        { title: 'Full recall verification + service history', risk: 'critical', riskLabel: 'Critical',
+          desc: "Between the PHEV fire campaigns, the rollaway recall, and the Pentastar's sensitivity to oil neglect, an unverified Pacifica carries stacked risk. Service history is the single best predictor of which Pacifica is a good buy.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls and require every open campaign to show 'remedy complete.'</strong> Demand oil-change and any transmission-service records; a Hybrid with no fire-recall remedy, or a gas van with no oil history, is a walk-away.",
+          cost: 'Walk away from unrepaired safety recalls', source: 'NHTSA recall database' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-395', title: 'Manual Park Release — Rollaway', desc: '2017–2018: park-release cover removable by hand can let the van roll away — verify complete (~240k vans).' },
+      { number: '22V-077', title: 'PHEV High-Voltage Battery Fire (original)', desc: 'Pacifica Hybrid only: HV battery can catch fire while parked — superseded by 24V-536; verify the FINAL remedy.' },
+      { number: '24V-536', title: 'PHEV Battery Fire — 2017–2018 (replaces 22V-077)', desc: 'Pacifica Hybrid 2017–2018: anode-tab defect fire risk — inspect/replace battery pack; confirm complete.' },
+      { number: '24V-538', title: 'PHEV Battery Fire — 2019–2021', desc: 'Pacifica Hybrid 2019–2021: same fire risk — BPCM software + pack inspection/replacement; confirm complete.' }
+    ]
+  },
+
   'ram-1500-classic-2019': {
     year: 2019, make: 'Ram', model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)',
     vinNote: "On the Ram 1500 Classic (DS platform) the engine choice is the whole inspection story, and the 8th VIN digit names it: G = 3.6L Pentastar V6 (305 hp — the lower-risk, lower-cost choice with no cylinder deactivation); T = 5.7L Hemi V8 (395 hp — the one to scrutinize, because its MDS cylinder-deactivation lifters can fail at 60k–120k miles on neglected oil, a $3,000–$6,500 repair). The Classic is the prior-generation body sold new alongside the redesigned DT through 2019–2021, so it does NOT get the DT's eTorque mild-hybrid system — a Classic Hemi is the simpler, non-eTorque 5.7. Don't trust the tailgate badge alone; decode the full VIN at <a href='/decode/'>autovetting.com/decode</a> (NHTSA's vPIC database returns the engine family) before you negotiate. The 10th VIN digit gives the model year: K=2019, L=2020, M=2021.",
@@ -15159,6 +15253,9 @@ const VEHICLE_MENU = {
   // [year]: { [make]: [ {model, trim, key} ] }
   // key matches CHECKLISTS keys for available content; absent = coming soon
   2022: {
+    'Chrysler': [
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Toyota': [
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
@@ -15385,13 +15482,17 @@ const VEHICLE_MENU = {
       { model: 'GV80', trim: '2.5T / 3.5T / 3.5T Sport Prestige', key: 'genesis-gv80-2021' }
     ],
     'Chrysler': [
-      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' }
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
     ],
     'Ram': [
       { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' }
     ]
   },
   2020: {
+    'Chrysler': [
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Ram': [
       { model: 'Ram 1500', trim: 'DT platform — eTorque / Hemi / Rebel / Laramie', key: 'ram-1500-2019' },
       { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' },
@@ -15497,6 +15598,9 @@ const VEHICLE_MENU = {
     ]
   },
   2019: {
+    'Chrysler': [
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
@@ -15581,6 +15685,9 @@ const VEHICLE_MENU = {
     ]
   },
   2018: {
+    'Chrysler': [
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
@@ -15658,6 +15765,9 @@ const VEHICLE_MENU = {
     ]
   },
   2017: {
+    'Chrysler': [
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Nissan': [
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' },
