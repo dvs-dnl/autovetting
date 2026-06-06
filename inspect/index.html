@@ -4986,6 +4986,121 @@ const CHECKLISTS = {
     ]
   },
 
+  'toyota-prius-2016': {
+    year: 2016,
+    make: 'Toyota',
+    model: 'Prius',
+    trim: 'Two / Two Eco / Three / Three Touring / Four / Four Touring / LE / XLE / Limited / AWD-e (ZVW50, 4th gen 2016–2022)',
+    engine: '1.8L 2ZR-FXE Atkinson-cycle I4 + hybrid (121 hp combined system); FWD or, from 2019, AWD-e with a rear electric motor',
+    overallRisk: 'monitor',
+    overallRiskLabel: 'Monitor',
+    summary: "The 4th-gen Prius (ZVW50) is one of the most reliable cars on the road — 50+ mpg, a bulletproof reputation, and 250,000-mile examples are common. But two Gen-4-specific problems separate a great buy from an expensive one: (1) the EGR system carbons up and, on neglected 2016–2018 cars, can starve the engine of coolant and crack the head gasket; and (2) catalytic-converter theft is epidemic on every Prius. Verify both before anything else. A well-serviced example with EGR cleaning records and an intact cat is an outstanding long-term commuter.",
+    stats: { itemsToCheck: 16, recalls: 3, ownerComplaints: 190, topComplaintArea: 'EGR carbon / head-gasket coolant loss (2016–2018) & catalytic-converter theft' },
+    sections: [
+      { title: 'Engine & Hybrid Powertrain', items: [
+        { title: 'EGR system carbon clogging (Gen-4 signature issue)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'The 2ZR-FXE EGR (exhaust gas recirculation) cooler and pipe accumulate carbon, especially on 2016–2018 cars driven mostly short trips. A clogged EGR runs the engine lean and hot, which is the precursor to head-gasket failure. Symptoms: rough cold idle, occasional misfire codes (P0301–P0304), and slowly dropping coolant with no visible leak. Toyota addressed it under warranty enhancement / TSB guidance, but most used cars are now out of coverage.',
+          check: '<strong>Ask for EGR cleaning records and check the coolant level and color in the reservoir.</strong> Brown/oily coolant or a level below MIN with no external leak is a red flag for combustion-gas intrusion. A stored misfire code on a Prius is an EGR/head-gasket investigation, not a spark-plug swap.',
+          cost: '$300–$600 EGR clean as preventive maintenance; $2,000–$4,000 if it has progressed to a head gasket',
+          source: 'Toyota TSB guidance; Prius Chat Gen-4 EGR/head-gasket threads; owner complaint patterns' },
+        { title: 'Head gasket failure (downstream of EGR neglect)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'On 2016–2018 ZVW50 cars, a clogged EGR plus the Atkinson engine’s naturally high combustion temperatures can breach the head gasket. Signs are coolant loss, white exhaust on a warm start, sweet smell, and a heater that blows lukewarm. Caught early (EGR service) it is cheap; caught late it is the single most expensive repair on the car.',
+          check: '<strong>Do a cold start and watch the tailpipe for white smoke, then squeeze the upper radiator hose for combustion pressure pulses.</strong> A block test (chemical combustion-gas test on the coolant) at a PPI is cheap insurance on any 2016–2018 example.',
+          cost: '$2,000–$4,000 head gasket (incl. machine work); far less if pre-empted with EGR service',
+          source: 'NHTSA complaint database; Prius community (priuschat.com)' },
+        { title: 'Engine wire harness — Recall 18V-579 (Toyota J0T)', risk: 'critical', riskLabel: 'Critical',
+          desc: 'A portion of the engine wire harness at the connector to the hybrid Power Control Unit (PCU) can rub against the connector cover, wear through, and short — a fire risk. Affects certain 2016–2018 Prius. The remedy is a free harness inspection/replacement plus a protective sleeve.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls or toyota.com/recall and confirm 18V-579 (J0T) shows COMPLETED.</strong> If it is open, it is free to fix — but it must be done.',
+          cost: '$0 — recall repair is free at any Toyota dealer',
+          source: 'NHTSA Recall 18V-579; Toyota Safety Recall J0T' },
+        { title: 'Inverter coolant pump', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The Prius uses a dedicated electric pump to cool the inverter/PCU. If it stops circulating, the hybrid system can throw a coolant-temperature fault and enter failsafe. The pump is a known wear item across the Toyota hybrid line.',
+          check: '<strong>With the car in Ready mode, open the hood and confirm flow/bubbles in the inverter coolant reservoir.</strong> No movement after warm-up suggests a failing pump.',
+          cost: '$300–$600 pump replacement',
+          source: 'Toyota maintenance documentation; Prius Chat community' }
+      ]},
+      { title: 'Catalytic Converter', items: [
+        { title: 'Catalytic-converter theft verification', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Prius catalytic converters carry unusually high concentrations of platinum, palladium and rhodium, so they are among the most-stolen cats in the country — a stolen Prius cat fetched $700–$1,500 on the scrap market at peak. A car with a missing or aftermarket cat may have a current owner hiding the loss behind a check-engine light or a cheap replacement.',
+          check: '<strong>Look under the car for fresh cut marks on the exhaust, an aftermarket weld, or a shield/cage, and confirm there are no P0420/P0421 catalyst-efficiency codes.</strong> A non-OEM cat can also fail emissions and trigger repeat CELs.',
+          cost: '$1,500–$3,000+ for an OEM replacement; $150–$300 for an aftermarket shield as prevention',
+          source: 'NICB theft data; Prius owner community; NHTSA complaints' }
+      ]},
+      { title: 'Hybrid Battery & 12V', items: [
+        { title: 'HV traction battery health', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The Gen-4 hybrid battery (NiMH on most trims, Li-ion on Eco and AWD-e) is durable, but capacity fades with age and heat — a real concern on Phoenix-climate cars. A weak pack shows up as the engine running more than expected and erratic state-of-charge bar behavior.',
+          check: '<strong>On a test drive, watch the energy monitor: the charge bars should move smoothly and the engine should shut off at stops once warm.</strong> Frequent engine cycling or a battery-fan warning points to pack degradation. A Dr. Prius / OBD battery-block scan is the definitive test.',
+          cost: '$1,500–$3,500 (refurbished vs. new pack)',
+          source: 'Toyota HV battery data; Prius Chat long-term ownership threads' },
+        { title: 'Auxiliary 12V battery', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'A small 12V AGM battery (in the right rear cargo area) boots the hybrid system and powers accessories. It typically lasts 4–5 years; a weak one causes random warning lights and intermittent no-start — often misread as a big-battery problem.',
+          check: '<strong>Note the battery date code and watch for a cluster full of warning lights on startup that clear after a minute.</strong>',
+          cost: '$200–$350 for an OEM-spec AGM 12V',
+          source: 'Toyota documentation; Prius Chat community' }
+      ]},
+      { title: 'Brakes & Recalls', items: [
+        { title: 'Brake booster pump — Recall 19V-544', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Certain 2019–2020 Prius (and Prius Prime) were recalled because the brake booster pump can fail, deactivating Vehicle Stability Control and reducing braking assist — you keep brakes but they get much harder to press.',
+          check: '<strong>Confirm 19V-544 shows COMPLETED on the VIN, and on the drive note any brake warning lights or a sudden change in pedal effort.</strong>',
+          cost: '$0 — recall repair is free at a Toyota dealer',
+          source: 'NHTSA Recall 19V-544' },
+        { title: 'Regenerative-brake feel & actuator', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Prius blends regenerative and friction braking; a slightly grabby or inconsistent pedal at low speed is usually normal blending, not a fault. True actuator issues are rare on Gen 4.',
+          check: '<strong>Brake gently from low speed and feel for a smooth hand-off; a hard pulse or warning light warrants a scan.</strong>',
+          cost: '$0–$200 diagnostic if a code is present',
+          source: 'Toyota service documentation' }
+      ]},
+      { title: 'Electrical & ADAS', items: [
+        { title: 'Combination meter — Recall 19V-876 (19TA21)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'On certain 2019 Prius an electrical short in the combination meter could blank the speedometer, odometer and fuel gauge. The remedy inspects/replaces the meter circuit board free of charge.',
+          check: '<strong>Verify 19V-876 status on the VIN and confirm the central display reads correctly at all times during the test drive.</strong>',
+          cost: '$0 — recall repair is free',
+          source: 'NHTSA Recall 19V-876; Toyota 19TA21' },
+        { title: 'Toyota Safety Sense (TSS-P) camera & calibration', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Gen-4 Prius came with TSS-P (pre-collision, lane-departure, dynamic cruise) using a windshield-mounted camera. If the windshield was ever replaced, the camera must be recalibrated or the safety systems read incorrectly.',
+          check: '<strong>Ask whether the windshield is original; if replaced, confirm a documented camera recalibration. Test that radar cruise and lane-keep arm without fault.</strong>',
+          cost: '$150–$400 recalibration after a windshield swap',
+          source: 'Toyota TSS documentation' },
+        { title: 'Entune / multimedia head unit', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The early Entune system is dated and lacked Apple CarPlay until the 2020 refresh; occasional reboots or Bluetooth dropouts are typical and not a deal-breaker.',
+          check: '<strong>Pair a phone, test every speaker and the backup camera image for clarity.</strong>',
+          cost: '$0 software / preference',
+          source: 'Toyota campaigns; owner reports' }
+      ]},
+      { title: 'Drivetrain & Suspension', items: [
+        { title: 'AWD-e rear motor function (2019+)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'From 2019 the AWD-e trim adds a small independent rear electric motor that engages from a stop up to ~43 mph. It is reliable, but a buyer paying the AWD-e premium should confirm it actually works.',
+          check: '<strong>Confirm the platform is AWD-e via vPIC decode, and on a loose/gravel launch feel for rear assist; the energy monitor should show rear-motor activity.</strong>',
+          cost: 'N/A — verification only',
+          source: 'Toyota AWD-e documentation; vPIC decode' },
+        { title: 'Front suspension & low-rolling-resistance tires', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Standard strut and bushing wear at 80k+ miles; the factory low-rolling-resistance tires are pricier than average and worn ones quietly cost you mpg.',
+          check: '<strong>Bounce-test each corner and check tire brand/tread — budget non-LRR tires hurt fuel economy.</strong>',
+          cost: '$400–$700 per strut; $600–$900 for a set of LRR tires',
+          source: 'Common wear patterns' }
+      ]},
+      { title: 'Body & Documentation', items: [
+        { title: 'Headlight lens UV hazing (sunbelt)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Prius headlamp lenses oxidize and haze in high-UV states like Arizona, cutting night visibility. Cosmetic and cheap to address, but a tell for a sun-baked car.',
+          check: '<strong>Inspect the lenses for yellowing/clouding and test low/high beam clarity.</strong>',
+          cost: '$20–$60 restoration kit; $200–$500 per lamp if replaced',
+          source: 'Owner reports; sunbelt climate pattern' },
+        { title: 'EGR-service records + full recall verification', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The single most valuable document on a Gen-4 Prius is proof of EGR cleaning and coolant service. Also confirm the open recalls above are closed, and note that certain 2022 cars had an ECU-software recall that could shut down the hybrid system — verify by VIN.',
+          check: '<strong>Demand service records showing EGR cleaning and coolant changes, and run the full VIN at nhtsa.gov/recalls to confirm 18V-579, 19V-544 and 19V-876 (plus any 2022 ECU-software campaign) are completed.</strong>',
+          cost: 'Standard — verification step',
+          source: 'NHTSA recalls portal; Toyota Owners VIN lookup' }
+      ]}
+    ],
+    recalls: [
+      { number: '18V-579', title: 'Engine Wire Harness (J0T)', desc: 'Harness near the PCU may short and cause a fire — 2016–2018; verify completed.' },
+      { number: '19V-544', title: 'Brake Booster Pump', desc: 'Pump may fail, reducing braking assist and disabling VSC — 2019–2020; verify completed.' },
+      { number: '19V-876', title: 'Combination Meter (19TA21)', desc: 'Short may blank the speedometer/odometer/fuel gauge — 2019; verify completed.' }
+    ],
+    vinNote: "Unlike a truck, the Gen-4 Prius offers only one engine — the 1.8L 2ZR-FXE Atkinson hybrid — so the 8th VIN digit confirms the restraint/series, not an engine fork. The decode that actually matters is the platform and year. Standard FWD liftbacks are ZVW50; the AWD-e (2019+) is ZVW55 with an added rear electric motor; and the plug-in Prius Prime is a separate ZVW52 with its own checklist (do not apply this one to a Prime). The 10th VIN digit gives the model year: G = 2016, H = 2017, J = 2018, K = 2019, L = 2020, M = 2021, N = 2022 — useful because the EGR/head-gasket risk concentrates on the early G/H/J (2016–2018) cars. Always confirm FWD vs. AWD-e and model year with a full VIN decode at <a href=\"/decode/\">autovetting.com/decode</a> (NHTSA vPIC) before applying this checklist.",
+    blogUrl: '/blog/2016-toyota-prius-buyers-guide',
+  },
+
   'toyota-prius-2012': {
     year: 2012,
     make: 'Toyota',
@@ -15257,6 +15372,7 @@ const VEHICLE_MENU = {
       { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
@@ -15376,6 +15492,7 @@ const VEHICLE_MENU = {
   },
   2021: {
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
@@ -15527,6 +15644,7 @@ const VEHICLE_MENU = {
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (3rd gen)', key: 'toyota-highlander-2014' },
@@ -15624,6 +15742,7 @@ const VEHICLE_MENU = {
       { model: 'Atlas', trim: 'S / SE / SEL / SEL Premium', key: 'vw-atlas-2018' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
@@ -15721,6 +15840,7 @@ const VEHICLE_MENU = {
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' },
@@ -15800,6 +15920,7 @@ const VEHICLE_MENU = {
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Limited', key: 'toyota-avalon-2018' },
@@ -15864,6 +15985,7 @@ const VEHICLE_MENU = {
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' }
     ],
     'Toyota': [
+       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' },
