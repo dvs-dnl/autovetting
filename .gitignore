@@ -26,3 +26,6 @@ secrets.*
 *.swp
 .COMMIT_EDITMSG
 *.bak
+
+# Hub docs — strategy, build logs, planning (never deploy to GitHub Pages)
+_hub/

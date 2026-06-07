@@ -38,3 +38,6 @@ AutoVetting was incubated inside [TrailManual](https://trailmanual.com)'s "Used 
 ## License
 
 All rights reserved. Content not yet open-sourced; contact dvs.dnl@gmail.com for licensing inquiries.
+
+## Project hub docs
+Business plan, strategy, build logs, and all non-deployable project documentation live in `_hub/`. That folder is gitignored and never deployed to GitHub Pages.
