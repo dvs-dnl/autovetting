@@ -923,31 +923,57 @@
       </div>
       <a class="teaser-open" href="/pinpoint/">Open Pinpoint &rarr;</a>
     </div>
-    <p class="teaser-sub">Three quick questions narrow a vetted catalog of reliable used picks down to the handful worth shortlisting. Tuned to long-lived used choices &mdash; not what's hot on the dealer lot.</p>
+    <p class="teaser-sub">A few quick picks narrow a vetted catalog of reliable used picks down to the handful worth shortlisting. Tuned to long-lived used choices &mdash; not what's hot on the dealer lot.</p>
     <div class="teaser-body">
       <form id="pinpoint-form" novalidate>
         <div class="field">
-          <label for="pp-budget">Budget (used)</label>
-          <select id="pp-budget" name="budget">
-            <option value="">No preference</option>
-            <option value="under-10k">Under $10k</option>
-            <option value="10-15k">$10k &ndash; $15k</option>
-            <option value="15-20k">$15k &ndash; $20k</option>
-            <option value="20-30k">$20k &ndash; $30k</option>
-            <option value="30k-plus">$30k+</option>
+          <label for="pp-usecase">Use case</label>
+          <select id="pp-usecase" name="use_case">
+            <option value="">What will you mostly use it for?</option>
+            <option value="commute">Daily commute</option>
+            <option value="family-hauler">Family hauler</option>
+            <option value="road-trip">Road trip</option>
+            <option value="work-hauling">Work / hauling</option>
+            <option value="weekend-fun">Weekend fun</option>
+            <option value="outdoor">Outdoor / off-road</option>
+            <option value="starter">First car</option>
           </select>
         </div>
         <div class="field" style="margin-top:14px;">
-          <label>Top priority</label>
-          <div class="pill-row" id="pp-priority-pills" role="radiogroup" aria-label="Top priority">
-            <button type="button" class="pill" data-value="reliability" role="radio" aria-checked="false">Reliability</button>
-            <button type="button" class="pill" data-value="fuel-economy" role="radio" aria-checked="false">Fuel economy</button>
-            <button type="button" class="pill" data-value="cargo" role="radio" aria-checked="false">Cargo / space</button>
-            <button type="button" class="pill" data-value="off-road" role="radio" aria-checked="false">Off-road capable</button>
-            <button type="button" class="pill" data-value="cheap-to-fix" role="radio" aria-checked="false">Cheap to fix</button>
-            <button type="button" class="pill" data-value="fun-to-drive" role="radio" aria-checked="false">Fun to drive</button>
+          <label>Must-haves <span class="note" style="font-weight:400;">&mdash; pick up to 2</span></label>
+          <div class="pill-row" id="pp-musthave-pills" role="group" aria-label="Must-haves, pick up to 2">
+            <button type="button" class="pill" data-value="awd-4wd" aria-pressed="false">AWD / 4WD</button>
+            <button type="button" class="pill" data-value="hybrid-ev" aria-pressed="false">Hybrid / EV</button>
+            <button type="button" class="pill" data-value="manual" aria-pressed="false">Manual</button>
+            <button type="button" class="pill" data-value="tow-5000" aria-pressed="false">Tow 5,000+ lbs</button>
+            <button type="button" class="pill" data-value="carplay" aria-pressed="false">CarPlay / Android Auto</button>
+            <button type="button" class="pill" data-value="3-row" aria-pressed="false">3-row seating</button>
+            <button type="button" class="pill" data-value="luxury" aria-pressed="false">Luxury feel</button>
           </div>
-          <input type="hidden" id="pp-priority" name="priority" value="">
+          <input type="hidden" id="pp-musthave" name="must_have" value="">
+        </div>
+        <div class="field-row" style="margin-top:14px;">
+          <div class="field">
+            <label for="pp-seats">Seats</label>
+            <select id="pp-seats" name="seats">
+              <option value="">Any</option>
+              <option value="2">2</option>
+              <option value="4-5">4&ndash;5</option>
+              <option value="6">6</option>
+              <option value="7+">7+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pp-budget">Budget</label>
+            <select id="pp-budget" name="budget">
+              <option value="">No preference</option>
+              <option value="under-10k">Under $10k</option>
+              <option value="10-15k">$10k &ndash; $15k</option>
+              <option value="15-20k">$15k &ndash; $20k</option>
+              <option value="20-30k">$20k &ndash; $30k</option>
+              <option value="30k+">$30k+</option>
+            </select>
+          </div>
         </div>
         <div class="submit-row">
           <span class="note">Answers pass through as filters &mdash; you can change them on the next page.</span>
@@ -1210,36 +1236,47 @@
   'use strict';
 
   // ============================================================
-  // PINPOINT teaser -> /pinpoint/?budget=&type=&priority=
+  // PINPOINT teaser -> /pinpoint/?use_case=&must_have=&seats=&budget=
   // ============================================================
   var ppForm = document.getElementById('pinpoint-form');
-  var ppPills = document.getElementById('pp-priority-pills');
-  var ppPriority = document.getElementById('pp-priority');
+  var ppMhPills = document.getElementById('pp-musthave-pills');
+  var ppMh = document.getElementById('pp-musthave');
+  var ppMhSelected = [];
 
-  ppPills.addEventListener('click', function (e) {
+  ppMhPills.addEventListener('click', function (e) {
     var btn = e.target.closest('.pill');
     if (!btn) return;
-    var alreadySelected = btn.classList.contains('selected');
-    [].forEach.call(ppPills.querySelectorAll('.pill'), function (p) {
-      p.classList.remove('selected');
-      p.setAttribute('aria-checked', 'false');
-    });
-    if (!alreadySelected) {
-      btn.classList.add('selected');
-      btn.setAttribute('aria-checked', 'true');
-      ppPriority.value = btn.getAttribute('data-value') || '';
+    var val = btn.getAttribute('data-value') || '';
+    var idx = ppMhSelected.indexOf(val);
+    if (idx >= 0) {
+      ppMhSelected.splice(idx, 1);
+      btn.classList.remove('selected');
+      btn.setAttribute('aria-pressed', 'false');
     } else {
-      ppPriority.value = '';
+      if (ppMhSelected.length >= 2) return;
+      ppMhSelected.push(val);
+      btn.classList.add('selected');
+      btn.setAttribute('aria-pressed', 'true');
     }
+    ppMh.value = ppMhSelected.join(',');
+    var capped = ppMhSelected.length >= 2;
+    [].forEach.call(ppMhPills.querySelectorAll('.pill'), function (p) {
+      if (!p.classList.contains('selected')) {
+        p.style.opacity = capped ? '0.4' : '';
+      }
+    });
   });
 
   ppForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var params = new URLSearchParams();
+    var useCase = document.getElementById('pp-usecase').value;
+    var seats = document.getElementById('pp-seats').value;
     var budget = document.getElementById('pp-budget').value;
-    var priority = ppPriority.value;
+    if (useCase) params.set('use_case', useCase);
+    ppMhSelected.forEach(function (v) { params.append('must_have', v); });
+    if (seats) params.set('seats', seats);
     if (budget) params.set('budget', budget);
-    if (priority) params.set('priority', priority);
     var qs = params.toString();
     window.location.href = '/pinpoint/' + (qs ? '?' + qs : '');
   });
