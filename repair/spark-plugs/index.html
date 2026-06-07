@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spark Plug Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace spark plugs — gap, torque, firing order. 1–2 hours, $30–$120. Step-by-step guide for iridium and copper plugs.">
+<link rel="canonical" href="https://autovetting.com/repair/spark-plugs/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Spark Plug Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete spark plug replacement guide: gap, torque specs, firing order. 1–2 hours, $30–$120. Iridium vs copper, common mistakes.">
+  <meta property="og:url" content="https://autovetting.com/repair/spark-plugs/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "spark-plugs",
+  "title": "Spark Plug Replacement",
+  "summary": "Worn spark plugs cause misfires, poor fuel economy, and hard starts. Most vehicles need new plugs every 30,000–100,000 miles depending on plug type (copper vs. iridium/platinum).",
+  "category": "ignition",
+  "safety_critical": false,
+  "difficulty": 2,
+  "time_hours": { "low": 1, "high": 2 },
+  "cost_usd": { "low": 30, "high": 120 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Spark plug replacement takes 1–2 hours and costs $30–$120 depending on plug type and cylinder count. Iridium and platinum plugs last 60,000–100,000 miles; copper plugs need replacement every 30,000. Always torque to spec — overtightening strips threads; undertightening causes blowout.",
+  "symptoms": [
+    "Check engine light (misfire codes P0300–P0308)",
+    "Rough idle or hesitation under acceleration",
+    "Poor fuel economy",
+    "Hard starting, especially when cold",
+    "Engine misfires under load",
+    "Approaching manufacturer service interval (30k miles for copper, 60k–100k for iridium/platinum)"
+  ],
+  "tools_required": [
+    { "name": "Spark plug socket (typically 5/8\" or 16mm)", "required": true, "note": "Must have rubber insert to grip plug without cracking the ceramic insulator" },
+    { "name": "Torque wrench", "required": true, "note": "Essential — overtightening strips aluminum head threads" },
+    { "name": "Extension bar + ratchet", "required": true, "note": "Deep-reach extension often needed for recessed plug wells" },
+    { "name": "Gap gauge (feeler gauge)", "required": true, "note": "Verify gap matches owner manual spec before install" },
+    { "name": "Compressed air or bulb blower", "required": false, "note": "Clear debris from plug wells before removal" },
+    { "name": "Dielectric grease", "required": false, "note": "Apply to boot interior, not plug tip, to prevent boot from fusing to coil" },
+    { "name": "Anti-seize compound", "required": false, "note": "Only if manufacturer specifies for aluminum heads — do NOT use on iridium/platinum tips" }
+  ],
+  "parts": [
+    { "name": "Spark plugs (OEM spec — iridium recommended for longevity)", "tier": "required", "note": "Match heat range exactly. One plug per cylinder. Iridium/platinum last 60k–100k miles; copper 30k.", "price_estimate_usd": 60 },
+    { "name": "Spark plug wire set (distributor-based systems only)", "tier": "optional", "note": "Replace wires if cracked, carbon-tracked, or vehicle has high mileage. Not needed for coil-on-plug systems.", "price_estimate_usd": 40 }
+  ],
+  "torque_specs": [
+    { "key": "spark_plug_14mm", "fastener": "Spark plug (14mm thread)", "ft_lb": 16, "nm": 22, "notes": "Typical range 13–20 ft-lb for 14mm plugs. Verify in owner manual — aluminum heads require lower torque than cast iron." },
+    { "key": "spark_plug_18mm", "fastener": "Spark plug (18mm thread)", "ft_lb": 28, "nm": 38, "notes": "Older engines with 18mm plugs use higher torque. Always verify against factory spec." }
+  ],
+  "steps": [
+    { "headline": "Let the engine cool completely — at least 30 minutes.", "body": "Hot aluminum threads are more prone to stripping. Burns from an hot exhaust manifold are also a serious risk. Do not skip this." },
+    { "headline": "Label ignition wires or coil-on-plug boots with tape before removal.", "body": "On distributor-based systems, mixing up the wires changes the firing order and the engine will run very badly or not at all. One label per wire, one cylinder at a time." },
+    { "headline": "Remove coil pack or wire from the first cylinder only — work one at a time.", "body": "Completing one cylinder before moving to the next eliminates any risk of mixing up the firing order. Do not pull all wires at once." },
+    { "headline": "Use compressed air to clear debris from the plug well.", "body": "Any grit in the well will fall into the combustion chamber when the plug comes out. Even a small amount of debris can damage cylinder walls or valves." },
+    { "headline": "Remove the spark plug with the spark plug socket.", "body": "Turn counterclockwise. If the plug is seized, apply penetrating oil and wait 10 minutes. Do not force a seized plug in a hot engine — let it cool and try again." },
+    { "headline": "Read the old plug condition.", "body": "Light tan or gray deposit = healthy combustion. Black sooty = rich mixture or oil fouling. White or blistered = lean mixture or overheating. Oily = oil is getting past rings or valve seals. Abnormal readings indicate an engine condition that plugs alone won't fix." },
+    { "headline": "Check the gap on the new plug with a feeler gauge.", "body": "The gap must match the owner manual spec, typically 0.028″–0.060″. Do not assume pre-gapped plugs are correct — always verify. Bend the ground electrode carefully if adjustment is needed; never tap the electrode against a surface." },
+    { "headline": "Apply anti-seize to threads only if the manufacturer specifies it for aluminum heads.", "torque": "spark_plug_14mm", "warn": "Never apply anti-seize to iridium or platinum electrode tips. Anti-seize on tips causes misfires and electrode damage.", "body": "A thin coat on the first few threads is sufficient. Anti-seize changes the torque-to-clamp-load ratio — if you use it, reduce torque by 10% from spec." },
+    { "headline": "Thread the new plug in by hand first to avoid cross-threading.", "body": "Aluminum heads cross-thread easily. If you feel resistance before the plug is fully seated, back it out and start again. A cross-threaded plug requires a helicoil insert to fix — a costly mistake." },
+    { "headline": "Torque the plug to specification.", "torque": "spark_plug_14mm", "body": "Overtightening strips threads in aluminum heads. Undertightening allows the plug to loosen and blow out — a spectacular and expensive failure." },
+    { "headline": "Reconnect the coil or wire with a firm click, then move to the next cylinder.", "body": "A half-seated coil boot causes intermittent misfires that are maddening to diagnose. Press firmly until you hear or feel the retention clip engage." },
+    { "headline": "Repeat for all cylinders, then start the engine.", "body": "The engine should idle smoothly with no misfires. If a misfire code returns for a specific cylinder, re-check the plug installation and coil connection on that cylinder." }
+  ],
+  "verify": [
+    "Engine starts and idles smoothly with no misfires",
+    "No check engine light, or previously stored misfire codes cleared",
+    "Fuel economy returns to normal after a few drive cycles",
+    "No rough idle or hesitation under acceleration"
+  ],
+  "common_mistakes": [
+    "Mixing up the firing order on distributor-based engines — always work one cylinder at a time.",
+    "Overtightening the plug — aluminum head threads strip easily and a helicoil repair is expensive.",
+    "Cross-threading — always thread in by hand for the first several turns before using the socket.",
+    "Incorrect gap — always verify with a feeler gauge; pre-gapped plugs are often slightly off.",
+    "Using the wrong heat range — OEM spec exists for a reason; a hotter or colder plug causes misfires or pre-ignition.",
+    "Not labeling wires before removal on distributor systems — a wrong firing order is a frustrating diagnosis."
+  ],
+  "related_guides": [
+    { "slug": "oil-change", "label": "Oil Change — check if oil fouling caused plug failure" },
+    { "slug": "air-filter", "label": "Engine Air Filter — replace together for full tune-up" },
+    { "slug": "fuel-filter", "label": "Fuel Filter — if hesitation persists after new plugs" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

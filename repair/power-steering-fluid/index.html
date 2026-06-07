@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Steering Fluid Change — AutoVetting Repair Guides</title>
+<meta name="description" content="How to change power steering fluid using the turkey baster method. 30–60 minutes, $10–$25. Step-by-step guide.">
+<link rel="canonical" href="https://autovetting.com/repair/power-steering-fluid/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Power Steering Fluid Change — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete power steering fluid change guide: turkey baster method. 30–60 min, $10–$25. PSF vs ATF, whining noise fix.">
+  <meta property="og:url" content="https://autovetting.com/repair/power-steering-fluid/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "power-steering-fluid",
+  "title": "Power Steering Fluid Change",
+  "summary": "Power steering fluid carries hydraulic pressure and lubricates the pump and rack. Over time it darkens, absorbs moisture, and loses its anti-wear additives. Most systems need a fluid swap every 50,000–75,000 miles.",
+  "category": "steering",
+  "safety_critical": false,
+  "difficulty": 1,
+  "time_hours": { "low": 0.5, "high": 1 },
+  "cost_usd": { "low": 10, "high": 25 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Power steering fluid change takes 30–60 minutes and costs $10–$25. Use only the manufacturer-specified fluid — some systems require ATF, others require specific PSF. The turkey-baster method lets you swap most of the fluid without a full system bleed.",
+  "symptoms": [
+    "Whining or groaning noise when turning the steering wheel",
+    "Stiff or jerky steering feel",
+    "Dark brown or black fluid in the reservoir (healthy PSF is amber or pink)",
+    "Fluid level dropping (indicates a leak in hoses, pump, or rack seals)",
+    "Foamy or milky fluid (air in system or water contamination)",
+    "Approaching 50,000–75,000 miles without a fluid change"
+  ],
+  "tools_required": [
+    { "name": "Turkey baster or fluid transfer syringe", "required": true, "note": "The primary tool for this job — extracts old fluid from the reservoir without disconnecting hoses" },
+    { "name": "Drain pan", "required": true },
+    { "name": "Funnel", "required": true },
+    { "name": "Nitrile gloves", "required": false }
+  ],
+  "parts": [
+    { "name": "Manufacturer-specified power steering fluid", "tier": "required", "note": "Check the reservoir cap — it will specify PSF or ATF. Do not substitute. Some vehicles require Honda PSF, BMW PSF, GM PSF, or specific ATF types.", "price_estimate_usd": 15 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Let the engine cool to warm — not scalding hot, not stone cold.", "body": "Warm fluid is thinner and easier to extract with the baster. Full operating temperature makes the fluid too hot to handle safely." },
+    { "headline": "Locate the power steering reservoir and check the fluid level and condition.", "body": "The reservoir is usually near the firewall on the passenger side, or near the power steering pump. The cap has a MIN/MAX indicator. Note the color — dark brown to black means it is well overdue." },
+    { "headline": "Use the turkey baster to remove as much old fluid from the reservoir as possible.", "body": "Squeeze and release the baster to draw up old fluid, then expel it into the drain pan. Repeat until you cannot draw more from the reservoir. You will replace approximately 60–70% of the fluid this way." },
+    { "headline": "Refill the reservoir with fresh fluid to the MAX line.", "body": "Use only the specified fluid. Overfilling will cause it to overflow when hot — fill only to MAX." },
+    { "headline": "Start the engine and turn the steering wheel lock-to-lock 5 times slowly.", "body": "This circulates the new fluid through the rack and pump, mixing it with remaining old fluid. You will see the level drop in the reservoir as fluid fills the system." },
+    { "headline": "Shut the engine off and check the level. Top off to MAX.", "body": "The level will have dropped. Top off with fresh fluid." },
+    { "headline": "Repeat the draw-and-fill cycle 2–3 more times for better fluid replacement.", "body": "Each cycle replaces approximately half of the remaining old fluid. Three cycles replaces roughly 90% of the total fluid volume — comparable to a flush." },
+    { "headline": "Check all hose connections for leaks.", "body": "Inspect hose fittings at the pump, reservoir, and rack for drips or seeping. A dropping fluid level after the change indicates a leak that needs to be addressed." }
+  ],
+  "verify": [
+    "No whining or groaning at idle or during turns",
+    "Steering feels smooth throughout the full lock-to-lock range",
+    "Fluid level stable at MAX on the dipstick after a drive cycle",
+    "No fluid drips at hose connections or at the pump",
+    "Foam or bubbles dissipate within a few minutes of shutdown"
+  ],
+  "common_mistakes": [
+    "Using the wrong fluid type — PSF and ATF are not interchangeable across all vehicles. Check the cap.",
+    "Running the pump dry during the exchange process — always maintain some fluid in the reservoir before starting the engine.",
+    "Ignoring a dropping fluid level — if level drops again after a change, there is a leak in the hoses, pump seal, or rack end seals that needs to be fixed.",
+    "Overfilling — power steering fluid expands when hot and will overflow if filled above MAX when cold."
+  ],
+  "related_guides": [
+    { "slug": "transmission-fluid", "label": "Transmission Fluid — some systems share ATF type" },
+    { "slug": "wheel-bearing", "label": "Wheel Bearing — if steering pull accompanies the noise" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

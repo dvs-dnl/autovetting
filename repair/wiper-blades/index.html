@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiper Blade Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace wiper blades — 15 minutes, $20–$50. Hook, pinch-tab, and pin attachment styles. Step-by-step guide.">
+<link rel="canonical" href="https://autovetting.com/repair/wiper-blades/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Wiper Blade Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete wiper blade replacement guide: hook, pinch-tab, pin styles. 15 minutes, $20–$50. Beam vs framed blades.">
+  <meta property="og:url" content="https://autovetting.com/repair/wiper-blades/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "wiper-blades",
+  "title": "Wiper Blade Replacement",
+  "summary": "Wiper blades degrade from UV exposure and heat, leaving streaks and chattering that reduce visibility. Replace them every 6–12 months or at first sign of streaking.",
+  "category": "visibility",
+  "safety_critical": false,
+  "difficulty": 1,
+  "time_hours": { "low": 0.25, "high": 0.25 },
+  "cost_usd": { "low": 20, "high": 50 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Wiper blade replacement takes 15 minutes and costs $20–$50 for a set of two. Measure your existing blades or check your vehicle owner's manual for sizes — driver and passenger blades are usually different lengths. Beam blades (no frame) perform better in ice and snow than traditional framed blades.",
+  "symptoms": [
+    "Streaking or smearing across the windshield during use",
+    "Chattering or skipping during the wipe cycle",
+    "Squeaking on both wet and dry glass",
+    "Rubber visibly split, torn, or pulling away from the frame",
+    "Blades leaving standing water on the windshield rather than clearing it",
+    "More than 12 months since last replacement (UV degrades rubber even without use)"
+  ],
+  "tools_required": [
+    { "name": "No tools required — most blades snap on by hand", "required": true, "note": "Some vehicles with pin or bayonet attachment may include an adapter; no tools needed even then" }
+  ],
+  "parts": [
+    { "name": "Replacement wiper blades in correct sizes (driver and passenger)", "tier": "required", "note": "Driver and passenger blades are usually different lengths. Check your owner's manual, existing blade markings, or measure. Beam blades cost more but outlast framed blades.", "price_estimate_usd": 35 },
+    { "name": "Rear wiper blade (if equipped)", "tier": "optional", "note": "Rear blades use a different attachment; verify the correct size for your specific vehicle.", "price_estimate_usd": 12 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Lift the wiper arm away from the windshield — it locks in the upright position.", "warn": "If the arm snaps back uncontrolled against the bare windshield, it can crack the glass. Always control the arm when releasing it.", "body": "The arm locks at approximately 90 degrees. On most vehicles, you must gently flex it slightly past the lock point to hold position." },
+    { "headline": "Identify the blade attachment style.", "body": "Hook (J-hook) is by far the most common — a curved metal hook that the blade clamps onto. Pinch-tab and pin/bayonet styles are less common but follow the same basic principle. Your new blade package includes an adapter guide." },
+    { "headline": "Press the release tab and slide the old blade off the hook.", "body": "The release tab is typically at the point where the blade meets the arm. Press it in while rotating the blade perpendicular to the arm, then slide it off. If it does not release, check for a secondary lock." },
+    { "headline": "Align the new blade with the hook and slide until it clicks firmly.", "body": "You should hear and feel a positive click when the blade is properly seated. A blade that is not fully locked will detach at highway speed." },
+    { "headline": "Gently lower the arm back onto the windshield — do not let it snap down.", "body": "Control the arm as you lower it. The wiper spring stores significant energy and will crack the windshield if the arm drops onto bare glass." },
+    { "headline": "Repeat for the passenger side and rear wiper if equipped.", "body": "The passenger side blade is shorter on most vehicles. Install the correct blade for each side — they are not interchangeable." },
+    { "headline": "Test by running washer fluid through a full cycle.", "body": "The blades should clear the windshield in a single pass with no streaking, chattering, or lifting." }
+  ],
+  "verify": [
+    "Blades clear windshield in a single pass with no streaks",
+    "No chattering or skipping during the wipe cycle",
+    "No lifting or separation from glass at highway speed",
+    "Both blades positively locked — no movement at the hook connection"
+  ],
+  "common_mistakes": [
+    "Getting the wrong blade size — driver and passenger are usually different lengths. Always verify before buying.",
+    "Not pressing the release tab fully before trying to remove the old blade — forcing it can break the arm.",
+    "Letting the arm snap onto bare glass — the spring tension is enough to crack the windshield.",
+    "Installing a directional blade backwards — some beam blades have a specific forward direction marked on the packaging.",
+    "Forgetting the rear wiper — rear blades degrade just as fast as fronts and are usually overlooked."
+  ],
+  "related_guides": [
+    { "slug": "air-filter", "label": "Cabin Air Filter — replace together as a visibility maintenance set" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

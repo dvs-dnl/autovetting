@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timing Belt Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace a timing belt — the single most critical interval repair. 4–8 hours, $400–$1000. Step-by-step guide with interference engine warning.">
+<link rel="canonical" href="https://autovetting.com/repair/timing-belt/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Timing Belt Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete timing belt replacement guide: interference engine warning, water pump, tensioner. 4–8 hours, $400–$1,000.">
+  <meta property="og:url" content="https://autovetting.com/repair/timing-belt/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "timing-belt",
+  "title": "Timing Belt Replacement",
+  "summary": "The timing belt synchronizes the crankshaft and camshaft. If it breaks, the engine stops instantly — and in interference engines, causes catastrophic valve damage. Most require replacement every 60,000–100,000 miles. This is the single most important interval-based repair on applicable vehicles.",
+  "category": "engine",
+  "safety_critical": true,
+  "difficulty": 5,
+  "time_hours": { "low": 4, "high": 8 },
+  "cost_usd": { "low": 400, "high": 1000 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Timing belt replacement takes 4–8 hours and costs $400–$1,000 including tensioner, idler, and water pump (always replace together — labor is already half the cost). On interference engines, a broken timing belt destroys the engine. Check your owner manual: if your vehicle has a timing belt (not chain) and is approaching 60,000–100,000 miles, this is non-negotiable.",
+  "symptoms": [
+    "Approaching manufacturer interval (60,000–100,000 miles) without documented replacement",
+    "High-pitched squealing from the front of the engine (tensioner or idler bearing failing)",
+    "Visible cracking, fraying, or missing teeth on the belt (visible if timing cover has an inspection window)",
+    "Engine misfires or runs rough with no other cause (timing slightly off from belt skip)",
+    "Engine stopped suddenly without warning and will not restart (belt broke)"
+  ],
+  "tools_required": [
+    { "name": "Factory service manual or verified Chilton/Haynes for your specific vehicle", "required": true, "note": "This is not optional. Timing procedures are highly engine-specific. Do not attempt without a vehicle-specific resource." },
+    { "name": "Torque wrench (full range)", "required": true },
+    { "name": "Harmonic balancer puller", "required": true, "note": "Needed to remove the crankshaft pulley on most engines" },
+    { "name": "Camshaft and crankshaft locking tools (engine-specific)", "required": true, "note": "These pin or lock the cam and crank at TDC. The exact tools vary by engine — buy the kit specific to your engine family." },
+    { "name": "Breaker bar and complete socket set", "required": true },
+    { "name": "Drain pan and fresh coolant", "required": true, "note": "Water pump replacement requires draining the cooling system" }
+  ],
+  "parts": [
+    { "name": "Complete timing belt kit (Gates, Dayco, or OEM)", "tier": "required", "note": "Buy the kit — it includes the belt, tensioner, and idler pulley(s). Replacing only the belt and leaving an old tensioner is a false economy.", "price_estimate_usd": 150 },
+    { "name": "Water pump", "tier": "required", "note": "The water pump is driven by the timing belt on most applicable engines. It is behind the timing cover. Replace it now — the part is cheap and labor is already done. Not doing so is the most common expensive regret on this job.", "price_estimate_usd": 60 },
+    { "name": "Fresh coolant", "tier": "required", "note": "Draining the system for water pump access. Refill with the correct type.", "price_estimate_usd": 25 },
+    { "name": "Drive belts (serpentine, PS, AC)", "tier": "optional", "note": "All drive belts are accessible with the front of the engine disassembled. Replace any that are worn while labor is already open.", "price_estimate_usd": 40 }
+  ],
+  "torque_specs": [
+    { "key": "crank_pulley", "fastener": "Crankshaft pulley bolt", "ft_lb": 130, "nm": 176, "notes": "Highly variable — 80 to 200+ ft-lb depending on engine. Verify in factory service manual for your specific engine. This is a critical fastener." },
+    { "key": "tensioner", "fastener": "Timing belt tensioner bolt", "ft_lb": 20, "nm": 27, "notes": "Typical range 15–25 ft-lb. Do not overtorque — the tensioner must be able to pivot to set belt tension." }
+  ],
+  "steps": [
+    { "headline": "Purchase or download the factory service manual for your specific engine before starting.", "warn": "This job has zero margin for guesswork. Timing marks, locking tool specifications, and tensioner procedures are engine-specific. A generic procedure WILL result in incorrect timing if the details differ.", "body": "A factory service manual (often available as a PDF) is the authoritative source. Chilton and Haynes are acceptable alternatives. A YouTube video for a different engine year is not." },
+    { "headline": "Disconnect the battery and drain the coolant.", "body": "Water pump replacement requires draining enough coolant to work on the pump. Disconnect the negative battery cable before starting disassembly." },
+    { "headline": "Remove all accessories blocking timing cover access.", "body": "This varies by engine but typically includes the serpentine belt, crankshaft pulley, power steering pump bracket, alternator, and possibly the AC compressor bracket. Photograph each assembly before disassembly." },
+    { "headline": "Remove the timing cover(s).", "body": "Most engines have upper and lower timing covers. Remove in order — typically upper first. Set all fasteners in labeled containers; some covers use different-length bolts." },
+    { "headline": "Rotate the engine by hand to TDC (Top Dead Center) on cylinder 1.", "body": "Use a socket on the crankshaft bolt to rotate the engine clockwise until the timing marks align — typically a notch on the crankshaft pulley aligning with a mark on the block, and camshaft sprocket marks aligning with the valve cover rail or timing cover marks." },
+    { "headline": "Install camshaft and crankshaft locking tools to hold TDC.", "warn": "If the engine rotates out of TDC while the belt is off, you must re-verify TDC before installing the new belt. On interference engines, accidental rotation with the belt off can cause valve contact.", "body": "The locking tools pin the cam and crank in the exact TDC position. They prevent rotation while the belt is off and while you are installing the new belt." },
+    { "headline": "Release and remove the tensioner, then the idler pulley(s), then the belt.", "body": "Loosen the tensioner bolt to release belt tension. Slide the belt off the pulleys. Note the routing — photograph it. Remove the tensioner and idler completely; they are being replaced." },
+    { "headline": "Replace the water pump while the timing cover is open.", "warn": "If you skip the water pump and it fails 6 months later, you will pay the full labor cost of this entire job again to replace a $60 part. Replace it now.", "body": "Remove the old water pump. Clean the mating surface. Install the new pump with a new gasket or O-ring. Torque bolts evenly." },
+    { "headline": "Install the new idler, route the new belt, install the new tensioner.", "body": "Follow the routing diagram in the service manual exactly. Install the idler first, then the belt around the crank sprocket, then the cam sprocket(s), then position over the tensioner — but do not release tension yet." },
+    { "headline": "Verify all timing marks are still correctly aligned with the new belt in place.", "body": "This is the most critical step. With the locking tools still installed, verify that every timing mark is aligned per the service manual diagram. If anything is off, remove the belt and start over." },
+    { "headline": "Release the tensioner per the manufacturer procedure to set belt tension.", "body": "Tensioner procedure varies: some use a spring-loaded automatic tensioner released by pulling a locking pin; others require setting tension with a tensioner tool. Follow the service manual exactly." },
+    { "headline": "Remove the locking tools and rotate the engine two full revolutions by hand.", "body": "Rotate slowly using the crankshaft bolt socket. The engine must rotate freely — any binding or resistance means a timing mark is off and valves may be contacting pistons. Stop immediately if you feel resistance." },
+    { "headline": "Recheck all timing marks at TDC after two revolutions.", "body": "All marks must align exactly as before. If they do not, the belt skipped a tooth — remove and reinstall. Do not start the engine if marks are off." },
+    { "headline": "Reassemble in reverse order, refill coolant, and start the engine.", "body": "Reinstall timing covers, accessories, and belts. Refill coolant and bleed the system. Start the engine and verify normal operation." }
+  ],
+  "verify": [
+    "Engine starts and idles normally with no unusual noise from the timing area",
+    "No squealing or rattling from the timing belt area",
+    "Temperature gauge stabilizes at normal range (water pump working correctly)",
+    "No coolant leaks at the water pump",
+    "Timing marks verified correct after first startup"
+  ],
+  "common_mistakes": [
+    "Not using proper engine-specific locking tools — the cam and crank will drift out of TDC and the timing will be off.",
+    "Skipping the water pump — the most common expensive regret. The water pump is accessible, cheap, and driven by the same belt. Replace it.",
+    "Not double-checking timing marks after installing the new belt — a belt that skipped a tooth by one position can destroy an interference engine.",
+    "Attempting this job without a vehicle-specific service manual — timing procedures are not generic.",
+    "Reusing the old tensioner — a tensioner that has run for 60,000+ miles has fatigued springs and worn bearings. A new tensioner is in the kit for a reason."
+  ],
+  "related_guides": [
+    { "slug": "coolant-flush", "label": "Coolant Flush — do it when refilling after water pump replacement" },
+    { "slug": "alternator", "label": "Alternator — accessible with front of engine disassembled" },
+    { "slug": "spark-plugs", "label": "Spark Plugs — replace for a complete major service" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

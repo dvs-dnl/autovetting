@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermostat Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace a thermostat — overheating and cold running fix. 1–1.5 hours, $20–$60. Step-by-step guide with cooling system bleed.">
+<link rel="canonical" href="https://autovetting.com/repair/thermostat/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Thermostat Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete thermostat replacement guide: overheating and cold-running fix. 1–1.5 hours, $20–$60. Cooling system bleed procedure.">
+  <meta property="og:url" content="https://autovetting.com/repair/thermostat/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "thermostat",
+  "title": "Thermostat Replacement",
+  "summary": "The thermostat regulates engine operating temperature by controlling coolant flow to the radiator. A stuck-open thermostat causes poor fuel economy and slow warmup; a stuck-closed thermostat causes overheating.",
+  "category": "cooling",
+  "safety_critical": false,
+  "difficulty": 2,
+  "time_hours": { "low": 1, "high": 1.5 },
+  "cost_usd": { "low": 20, "high": 60 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Thermostat replacement takes 1–1.5 hours and costs $20–$60. It is one of the first things to check on an overheating engine or one that never reaches operating temperature. Always use a quality OEM-spec thermostat — cheap units fail quickly and have inconsistent opening temperatures.",
+  "symptoms": [
+    "Engine takes unusually long to reach operating temperature (thermostat stuck open)",
+    "Engine overheating or temperature gauge spiking (thermostat stuck closed)",
+    "Heater producing weak or no heat even when hot outside (stuck open — coolant bypasses heater core)",
+    "Temperature gauge fluctuating erratically rather than stabilizing",
+    "Coolant loss with no visible external leak (possible head gasket involvement — rule out thermostat first)"
+  ],
+  "tools_required": [
+    { "name": "Socket set and ratchet", "required": true },
+    { "name": "Torque wrench", "required": true },
+    { "name": "Gasket scraper", "required": true, "note": "For removing old gasket material from mating surfaces" },
+    { "name": "Drain pan", "required": true },
+    { "name": "Pliers", "required": false, "note": "For hose clamp removal if draining via lower hose" }
+  ],
+  "parts": [
+    { "name": "Thermostat (OEM spec or Motorad/Gates quality)", "tier": "required", "note": "Buy the correct opening temperature — most gasoline engines use 190–195°F. Do not buy a 160°F 'cold' thermostat; it makes the engine run too cool and hurts efficiency.", "price_estimate_usd": 20 },
+    { "name": "Thermostat housing gasket or O-ring", "tier": "required", "note": "Many kits include the gasket. If sold separately, verify it matches your housing — paper gaskets and O-rings are not interchangeable.", "price_estimate_usd": 8 },
+    { "name": "Coolant for top-off", "tier": "required", "note": "You will lose some coolant during this job. Have at least a quart of the correct type on hand.", "price_estimate_usd": 10 }
+  ],
+  "torque_specs": [
+    { "key": "housing_bolts", "fastener": "Thermostat housing bolts", "ft_lb": 9, "nm": 12, "notes": "Typical range 7–12 ft-lb. Plastic housings crack easily — torque evenly and do not exceed spec. Metal housings tolerate a bit more." }
+  ],
+  "steps": [
+    { "headline": "Let the engine cool completely before opening the cooling system.", "warn": "The cooling system is pressurized when hot. Opening the thermostat housing on a hot engine releases scalding coolant under pressure. Wait at least 2 hours after driving.", "body": "Touch the upper radiator hose — it should feel ambient temperature before you open anything." },
+    { "headline": "Partially drain the coolant to drop the level below the thermostat housing.", "body": "Open the radiator petcock or disconnect the lower hose just enough to drain 1–2 quarts. You do not need to drain the whole system — just enough to prevent a large spill when you open the housing." },
+    { "headline": "Locate the thermostat housing where the upper radiator hose meets the engine.", "body": "On most engines the housing is on the top of the engine block near the front. It is clamped to the radiator's upper hose on one side and bolted to the engine block on the other." },
+    { "headline": "Remove the housing bolts and pull the housing away from the engine.", "body": "Set the housing aside — some coolant will spill. Note how the thermostat is oriented inside the housing before removing it." },
+    { "headline": "Remove the old thermostat and gasket. Note spring orientation.", "body": "The spring on the thermostat faces toward the engine block — this is important for correct installation. The spring is what holds the thermostat open when coolant is hot." },
+    { "headline": "Clean both mating surfaces thoroughly — no old gasket material.", "warn": "Any remaining gasket material prevents the housing from seating flat and causes coolant leaks. Use the gasket scraper carefully to avoid gouging aluminum surfaces.", "body": "Wipe the surfaces with a clean rag after scraping. Both surfaces must be clean and dry before installing the new gasket." },
+    { "headline": "Install the new thermostat with the spring pointing toward the engine block.", "body": "The jiggle pin (small hole in the thermostat flange) should point to the 12 o'clock position — it allows trapped air to escape. Verify this detail for your specific thermostat." },
+    { "headline": "Install the new gasket or O-ring without sealant unless none is included.", "body": "A paper or rubber gasket properly mated to clean surfaces does not require RTV sealant. Adding sealant to a gasket that does not need it can cause long-term leaks as the sealant deteriorates." },
+    { "headline": "Reinstall the housing and torque the bolts evenly.", "torque": "housing_bolts", "body": "Tighten bolts in a cross-pattern (not in a circle) to seat the gasket evenly. Plastic housings are common on modern engines — do not exceed torque spec." },
+    { "headline": "Refill the coolant and bleed air from the system.", "body": "Refill the radiator to the top, then fill the reservoir to the MAX line. Run the engine with the heater set to MAX heat to draw coolant through the heater core and purge air. Check the level after it cools." }
+  ],
+  "verify": [
+    "Engine reaches normal operating temperature within 5–10 minutes of cold start",
+    "Temperature gauge stabilizes at normal range and does not fluctuate",
+    "Heater produces hot air after the engine warms up",
+    "No coolant drips at the thermostat housing after 10 minutes at operating temperature"
+  ],
+  "common_mistakes": [
+    "Installing the thermostat backwards — spring must face toward the engine block. A backwards thermostat causes overheating.",
+    "Reusing the old gasket — a compressed, deformed gasket will not seal correctly and leaks immediately.",
+    "Overtightening the housing bolts — plastic housings crack easily; torque to spec and no further.",
+    "Not bleeding trapped air from the cooling system — air pockets cause inaccurate temperature gauge readings and localized overheating.",
+    "Installing a cheap replacement — budget thermostats have inconsistent opening temperatures and fail within months."
+  ],
+  "related_guides": [
+    { "slug": "coolant-flush", "label": "Coolant Flush — do it while the system is already open" },
+    { "slug": "oil-change", "label": "Oil Change — check for coolant in oil if overheating is severe" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

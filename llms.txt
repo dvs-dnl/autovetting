@@ -1,0 +1,36 @@
+# AutoVetting
+
+> A four-step used-car research tool: pinpoint a reliable model, track listings, decode a VIN, get a model-specific pre-purchase inspection checklist.
+
+AutoVetting is a free, unbiased used-car research platform built for buyers who want real mechanical due diligence before handing over money. There are no affiliate links, no sponsored listings, and no dealer partnerships. Data is sourced from the NHTSA vPIC API (vehicle identification and specs), the NHTSA recall database, Technical Service Bulletins (TSBs), aggregated owner-reported failure patterns, and a curated mechanic knowledge base developed from real-world shop experience. The platform is designed for private-party and dealer used-car buyers who want to know a vehicle's common failure points, open recalls, and what to inspect before purchase — independent of who is selling it.
+
+## Tools
+
+- [Pinpoint](https://autovetting.com/pinpoint/): Filter used vehicles by use case, must-have features, seating, and budget to find models with strong reliability track records. Strict-AND filtering ensures every result matches all selected criteria.
+- [Search](https://autovetting.com/search/): Track live used-car listings across sources. Filter by make, model, year, price, and mileage.
+- [Decode](https://autovetting.com/decode/): Enter a VIN to decode vehicle specs, check for open NHTSA recalls, and surface known TSBs for that exact vehicle configuration.
+- [Inspect](https://autovetting.com/inspect/): Get a model-specific pre-purchase inspection checklist tailored to the known failure points of a chosen make/model/year. Designed to be used at the car or sent to a mechanic.
+
+## Repair Guides
+
+- [Repair Guides Index](https://autovetting.com/repair/): Overview of all DIY repair guides with tools, parts lists, torque specs, and step-by-step walkthroughs.
+- [Oil Change](https://autovetting.com/repair/oil-change/): Drain plug removal, filter swap, and refill. 30–45 min, $40–$80 in parts. Includes torque specs and common mistakes.
+- [Brake Pads + Rotors](https://autovetting.com/repair/brake-pads-rotors/): Full front or rear brake job with caliper removal, rotor swap, and pad bedding. 1.5–3 hours, $80–$150 in parts.
+- [Battery Replacement](https://autovetting.com/repair/battery-replacement/): Safe battery swap with correct terminal order, hold-down reinstall, and reset notes. 15–30 min.
+- [Cabin Air Filter](https://autovetting.com/repair/cabin-filter/): Behind-the-glovebox filter swap. 15–30 min, no tools required on most vehicles. Improves HVAC airflow and air quality.
+- [Engine Air Filter](https://autovetting.com/repair/air-filter/): Airbox access and filter replacement. 10–20 min, no tools on most vehicles. Improves fuel economy and engine protection.
+
+## Data Sources
+
+- **NHTSA vPIC API**: Vehicle identification, make/model/year/trim data used throughout Decode and Inspect.
+- **NHTSA Recall Database**: Open and historical recall records surfaced during VIN decoding.
+- **Technical Service Bulletins (TSBs)**: Manufacturer-issued repair guidance for known issues, integrated into Inspect checklists.
+- **Owner-Reported Failure Patterns**: Aggregated community failure data used to weight Pinpoint reliability scores and Inspect checklist priorities.
+- **Mechanic Knowledge Base**: Curated shop-floor knowledge from professional mechanics informing repair guides and inspection checklists.
+
+## Optional
+
+The following pages are interactive tools or store personal user data. They are not useful for AI summarization or training and may be skipped:
+
+- [Garage](https://autovetting.com/garage/): Personal vehicle tracker. Stores user-specific saved vehicles. Dynamic, login-gated, no static content of general value.
+- [Search](https://autovetting.com/search/): Live listing aggregator. Results are dynamic and ephemeral; no static content worth indexing.

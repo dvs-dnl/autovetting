@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wheel Bearing Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace a wheel bearing hub assembly — safety-critical repair. 2–4 hours, $150–$400. Step-by-step guide with torque specs.">
+<link rel="canonical" href="https://autovetting.com/repair/wheel-bearing/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Wheel Bearing Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete wheel bearing hub replacement guide: safety-critical. 2–4 hours, $150–$400. Hub assembly vs press-in, torque specs.">
+  <meta property="og:url" content="https://autovetting.com/repair/wheel-bearing/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "wheel-bearing",
+  "title": "Wheel Bearing Replacement",
+  "summary": "A failing wheel bearing produces a distinctive humming or grinding noise that changes with vehicle speed and may change when turning. It is a safety-critical repair — a seized bearing can cause wheel separation.",
+  "category": "suspension",
+  "safety_critical": true,
+  "difficulty": 4,
+  "time_hours": { "low": 2, "high": 4 },
+  "cost_usd": { "low": 150, "high": 400 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Wheel bearing replacement takes 2–4 hours and costs $150–$400 depending on hub assembly vs. press-in bearing design. It is safety-critical — a seized bearing causes wheel lockup or separation. Modern vehicles mostly use sealed hub assemblies that bolt on; older vehicles have press-in bearings requiring a hydraulic press. Always replace in axle pairs if wear is advanced.",
+  "symptoms": [
+    "Humming or grinding noise that increases with vehicle speed",
+    "Noise changes pitch when turning left or right — turning away from the bad bearing loads it more and increases the noise",
+    "Vibration in the steering wheel or floorboard at highway speed",
+    "ABS or traction control warning light (hub assemblies integrate the wheel speed sensor on most modern vehicles)",
+    "Play or clunking when grabbing the tire at 12 and 6 o'clock and rocking it back and forth"
+  ],
+  "tools_required": [
+    { "name": "Floor jack and jack stands", "required": true },
+    { "name": "Breaker bar", "required": true, "note": "For hub nut — typically 32–36mm, torqued to 150–200 ft-lb. Impact wrench strongly recommended." },
+    { "name": "Torque wrench (0–250 ft-lb range)", "required": true },
+    { "name": "Hub socket set (32mm, 34mm, 36mm)", "required": true },
+    { "name": "Pry bar", "required": true },
+    { "name": "Penetrating oil", "required": true, "note": "Hub assemblies often seize to the knuckle from rust and corrosion" },
+    { "name": "Rubber mallet or slide hammer", "required": false, "note": "For stubborn hub assemblies that won't pull free by hand" },
+    { "name": "Hydraulic press", "required": false, "note": "Required for press-in bearing type (older vehicles). Hub assembly type does not need a press." }
+  ],
+  "parts": [
+    { "name": "Hub assembly (or wheel bearing for press-in type)", "tier": "required", "note": "Hub assembly is strongly preferred for DIY — no press required, integrated ABS sensor. Verify bolt pattern and flange diameter match OEM.", "price_estimate_usd": 120 },
+    { "name": "New hub nut with cotter pin", "tier": "required", "note": "The hub nut is a single-use fastener on most vehicles — it deforms when torqued and must not be reused.", "price_estimate_usd": 8 },
+    { "name": "Anti-seize compound", "tier": "optional", "note": "Apply to hub assembly mounting surface to prevent future corrosion seizure.", "price_estimate_usd": 6 }
+  ],
+  "torque_specs": [
+    { "key": "hub_nut", "fastener": "Axle/hub nut", "ft_lb": 175, "nm": 237, "notes": "Verify exact spec for your vehicle — ranges from 150 to 220 ft-lb depending on make/model. This is safety-critical. Do not estimate." },
+    { "key": "hub_bolts", "fastener": "Hub assembly mounting bolts", "ft_lb": 65, "nm": 88, "notes": "Typical range 55–75 ft-lb. Verify for your vehicle. Torque in a star pattern." },
+    { "key": "lug_nuts", "fastener": "Lug nuts", "ft_lb": 100, "nm": 136, "notes": "Typical 80–120 ft-lb. Verify in your owner's manual. Torque in a star pattern." }
+  ],
+  "steps": [
+    { "headline": "Loosen lug nuts and the hub nut before lifting the vehicle.", "warn": "The hub nut requires extremely high torque (150–200+ ft-lb). Crack it loose with the vehicle on the ground so the wheel can resist the turning force.", "body": "Use a breaker bar or impact wrench on the hub nut. Do not attempt to break it loose with the vehicle in the air — the wheel will spin." },
+    { "headline": "Raise the vehicle and support on jack stands. Remove the wheel.", "body": "Jack under the vehicle frame rail, never under suspension components. Set jack stands on frame rails. Remove all lug nuts and pull the wheel." },
+    { "headline": "Remove the brake caliper and hang it out of the way.", "warn": "Never let the caliper hang by the brake hose — the hose can be damaged internally without visible external signs, leading to brake failure.", "body": "Use a wire hook or zip tie to suspend the caliper from the coil spring or a nearby bracket. Remove the brake rotor." },
+    { "headline": "Disconnect the ABS sensor connector and note its routing.", "body": "The ABS sensor wire clips to the knuckle and suspension. Photograph the routing before disconnecting — it must go back exactly as it came out to avoid chafing." },
+    { "headline": "Apply penetrating oil to the hub assembly mounting bolts and let it soak 10 minutes.", "body": "Hub bolts behind the knuckle are often deeply corroded, especially in northern states. Penetrating oil dramatically reduces the risk of snapping a bolt." },
+    { "headline": "Remove the hub assembly mounting bolts from behind the steering knuckle.", "body": "These are typically 3–4 bolts accessed from behind the knuckle, pointing toward the engine. A long extension bar is usually needed. Keep track of each bolt — some assemblies use washers." },
+    { "headline": "Remove the old hub assembly — may require a rubber mallet or slide hammer.", "body": "After unbolting, the assembly may be fused to the knuckle by corrosion. Strike the face with a rubber mallet to break it loose. A slide hammer threaded into the lug holes is the proper tool for badly seized assemblies." },
+    { "headline": "Clean the mounting surface on the knuckle thoroughly.", "body": "Wire brush away all rust and corrosion from the mating surface. A clean, flat surface ensures the new hub seats correctly and prevents premature failure from uneven loading." },
+    { "headline": "Apply a thin coat of anti-seize to the mounting surface, then install the new hub assembly.", "torque": "hub_bolts", "body": "Start all bolts by hand, then torque in a star pattern to spec. The anti-seize makes future service far less destructive." },
+    { "headline": "Reconnect the ABS sensor per the routing you photographed.", "body": "Route the wire exactly as it was — away from moving suspension components and exhaust. Snap all wire clips back into their original positions." },
+    { "headline": "Reinstall rotor, caliper, and wheel.", "torque": "lug_nuts", "body": "Reinstall the brake rotor, slide the caliper over the pads, thread in caliper bolts, reinstall wheel and lug nuts." },
+    { "headline": "Install the new hub nut and torque to specification.", "torque": "hub_nut", "warn": "This is the most safety-critical torque spec in this job. Undertorquing allows the bearing to spin in the hub; overtorquing preloads the bearing and accelerates wear. Use a calibrated torque wrench.", "body": "Install a new cotter pin through the nut and axle shaft if your vehicle uses a castellated nut. Bend the pin over to lock it." }
+  ],
+  "verify": [
+    "No humming or grinding noise at any speed after the repair",
+    "No vibration in steering wheel or floorboard at highway speed",
+    "No play when grabbing tire at 12 and 6 and rocking",
+    "ABS and traction control warning lights off",
+    "Hub nut torque verified — do not skip this step"
+  ],
+  "common_mistakes": [
+    "Reusing the single-use hub nut — it is designed to deform and lock under torque. A reused nut can back off and cause wheel separation.",
+    "Undertorquing the hub nut — the bearing will spin inside the hub, destroying the new assembly within hundreds of miles.",
+    "Not photographing the ABS sensor routing — misrouted wires chafe against suspension components and cause intermittent ABS faults.",
+    "Skipping the opposite side when one bearing is this worn — if one is failing, the other has lived the same hard life.",
+    "Attempting press-in bearing replacement without a hydraulic press — improvised press methods distort the bearing race and cause immediate failure."
+  ],
+  "related_guides": [
+    { "slug": "brake-pads-rotors", "label": "Brake Pads + Rotors — you have the wheel off anyway" },
+    { "slug": "power-steering-fluid", "label": "Power Steering — if steering pull accompanies the noise" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

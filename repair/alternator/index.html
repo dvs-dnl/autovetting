@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alternator Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace an alternator — charging system test, removal, install. 1–3 hours, $150–$400. Step-by-step guide with voltage specs.">
+<link rel="canonical" href="https://autovetting.com/repair/alternator/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Alternator Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete alternator replacement guide: test charging voltage, remove, install. 1–3 hours, $150–$400. 13.5–14.5V healthy range.">
+  <meta property="og:url" content="https://autovetting.com/repair/alternator/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "alternator",
+  "title": "Alternator Replacement",
+  "summary": "The alternator charges the battery and powers all electrical systems while the engine runs. A failing alternator causes battery drain, dim lights, and eventually a no-start condition.",
+  "category": "electrical",
+  "safety_critical": false,
+  "difficulty": 3,
+  "time_hours": { "low": 1, "high": 3 },
+  "cost_usd": { "low": 150, "high": 400 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Alternator replacement takes 1–3 hours and costs $150–$400 including the unit. Before replacing, test the charging system — a bad battery can kill a new alternator, and a bad alternator looks like a dead battery. Verify output voltage: 13.5–14.5V at idle with loads off is healthy. Below 13V under load means the alternator is failing.",
+  "symptoms": [
+    "Battery warning light on the dashboard",
+    "Dim or flickering headlights, especially at idle",
+    "Battery consistently dying despite being a healthy age",
+    "Burning rubber or electrical smell from the engine bay",
+    "Electrical components behaving erratically — radio resetting, windows moving slowly",
+    "Multimeter reads less than 13V at the battery terminals with the engine running"
+  ],
+  "tools_required": [
+    { "name": "Multimeter", "required": true, "note": "Essential for diagnosing and verifying the charging system before and after the repair" },
+    { "name": "Socket set and ratchet with extensions", "required": true },
+    { "name": "Torque wrench", "required": true },
+    { "name": "Belt tensioner tool or serpentine belt tool", "required": true, "note": "Needed to release the tensioner to remove the drive belt" },
+    { "name": "Memory saver or code scanner", "required": false, "note": "Maintains radio presets and ECU memory when the battery is disconnected" }
+  ],
+  "parts": [
+    { "name": "Remanufactured or new alternator", "tier": "required", "note": "Verify the amperage rating matches OEM exactly — installing a lower-amperage unit causes chronic undercharging on vehicles with high electrical loads.", "price_estimate_usd": 200 },
+    { "name": "Serpentine belt", "tier": "optional", "note": "Replace if cracked, glazed, or near its service life — you have it off anyway and labor is already done.", "price_estimate_usd": 30 },
+    { "name": "New battery", "tier": "optional", "note": "A battery that has been severely discharged by a failing alternator may have sustained internal damage. Test with a load tester, not just a voltage check.", "price_estimate_usd": 120 }
+  ],
+  "torque_specs": [
+    { "key": "alternator_mount", "fastener": "Alternator mounting bolts", "ft_lb": 35, "nm": 47, "notes": "Typical range 30–40 ft-lb. Verify for your vehicle. Overtorquing cracks the alternator bracket." },
+    { "key": "b_plus_terminal", "fastener": "B+ output terminal nut", "ft_lb": 9, "nm": 12, "notes": "A loose B+ nut causes voltage drop, heat buildup, and fire risk. Torque to spec — do not overtighten on small terminal studs." }
+  ],
+  "steps": [
+    { "headline": "Test the current alternator output with a multimeter before disassembly.", "body": "Connect multimeter to battery terminals with engine running. Healthy: 13.5–14.5V at idle. 12.8V or less means the alternator is not charging. This step confirms the diagnosis before you buy parts." },
+    { "headline": "Disconnect the negative battery cable first.", "warn": "Working on the electrical system with the battery connected risks shorts that can destroy the ECU, cause burns, or start a fire. Negative cable must come off first.", "body": "Wrap the disconnected terminal with a rag or tape to prevent accidental contact while working." },
+    { "headline": "Photograph the serpentine belt routing before removal.", "body": "The routing diagram is often printed on a sticker near the fan shroud, but it may be missing on older vehicles. A phone photo takes two seconds and prevents a frustrating reassembly puzzle." },
+    { "headline": "Release the belt tensioner and remove the serpentine belt.", "body": "Insert the tensioner tool or socket into the tensioner pulley bolt and rotate against spring tension to release belt slack. Slide the belt off the alternator pulley first, then release tension slowly." },
+    { "headline": "Disconnect the electrical connector and B+ wire from the alternator.", "body": "The electrical connector has a retention tab — press it and pull. The B+ wire has a nut on a terminal stud — remove the nut with a socket and pull the ring terminal off. Note wire routing." },
+    { "headline": "Remove the alternator mounting bolts and extract the unit.", "body": "Alternators can be heavy (10–20 lbs). Support it as the last bolt comes out. Some installations require moving hoses or brackets slightly to extract the alternator — work carefully to avoid damaging coolant hoses." },
+    { "headline": "Compare old and new alternators side by side.", "body": "Mounting points, pulley size, connector location, and B+ terminal position must match exactly. A core return alternator that is rebuilt incorrectly can have these differences." },
+    { "headline": "Install the new alternator and torque mounting bolts.", "torque": "alternator_mount", "body": "Start all bolts by hand before torquing. Do not overtorque aluminum brackets." },
+    { "headline": "Reconnect the B+ wire and torque the terminal nut.", "torque": "b_plus_terminal", "warn": "A loose B+ nut is a common cause of post-repair charging problems and fire risk. The nut must be snug — but terminal studs are small and easy to overtorque and snap.", "body": "Reconnect the smaller electrical connector and ensure it clicks." },
+    { "headline": "Reinstall the serpentine belt per the routing diagram.", "body": "Route the belt around all pulleys except the tensioner, then use the tensioner tool to hold tension while you slip the belt over the tensioner pulley. Verify the belt is seated in all pulley grooves." },
+    { "headline": "Reconnect the negative battery cable and test output voltage.", "body": "Start the engine and measure voltage at the battery terminals. Should read 13.5–14.5V at idle with no loads, 13–14V with AC and headlights on. Drive for 20 minutes to confirm the battery is accepting charge." }
+  ],
+  "verify": [
+    "13.5–14.5V at battery terminals at idle with no loads",
+    "13–14V with AC on, headlights on, and blower on high",
+    "Battery warning light off",
+    "No burning smell from engine bay",
+    "Battery fully recharged after a 20-minute drive"
+  ],
+  "common_mistakes": [
+    "Not disconnecting the battery before starting — a short against the B+ wire can destroy the ECU and cause burns.",
+    "Loose B+ terminal nut — the most common cause of post-repair charging problems; causes voltage drop, heat, and potential fire.",
+    "Installing the wrong amperage unit — a 90A alternator on a vehicle that originally had a 160A unit will chronically undercharge.",
+    "Not testing the battery after replacement — a battery deeply discharged by a failing alternator may have sustained internal plate damage and will kill the new alternator.",
+    "Forgetting to photograph the serpentine belt routing — misrouting the belt causes immediate accessory failure."
+  ],
+  "related_guides": [
+    { "slug": "oil-change", "label": "Oil Change — check for burning smell while you have the hood open" },
+    { "slug": "spark-plugs", "label": "Spark Plugs — hard starting may be electrical, not ignition" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

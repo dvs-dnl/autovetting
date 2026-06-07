@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Filter Replacement — AutoVetting Repair Guides</title>
+<meta name="description" content="How to replace a fuel filter — depressurize, disconnect, install. 30–90 minutes, $15–$50. Step-by-step guide with safety procedures.">
+<link rel="canonical" href="https://autovetting.com/repair/fuel-filter/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Fuel Filter Replacement — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete fuel filter replacement guide: depressurize, disconnect, install. 30–90 min, $15–$50. External vs in-tank, safety procedure.">
+  <meta property="og:url" content="https://autovetting.com/repair/fuel-filter/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "fuel-filter",
+  "title": "Fuel Filter Replacement",
+  "summary": "The fuel filter prevents contaminants from reaching fuel injectors. A clogged filter causes poor fuel pressure, hesitation, and hard starts. External filters are DIY-accessible; most modern vehicles have in-tank filters that last the life of the fuel pump.",
+  "category": "fuel",
+  "safety_critical": false,
+  "difficulty": 2,
+  "time_hours": { "low": 0.5, "high": 1.5 },
+  "cost_usd": { "low": 15, "high": 50 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "Fuel filter replacement takes 30–90 minutes and costs $15–$50. Depress the fuel system pressure before disconnecting any fuel lines — wrap connections in a rag when loosening, and work away from ignition sources. Many post-2000 vehicles have an in-tank filter integrated with the pump module; check whether your vehicle has an external filter before starting.",
+  "symptoms": [
+    "Engine hesitation or stumbling under hard acceleration",
+    "Long cranking time before the engine starts",
+    "Engine dying under load at highway speed",
+    "Poor fuel economy with no other obvious cause",
+    "Rough idle that improves after the engine warms up",
+    "External filter past its service interval (every 30,000–60,000 miles on applicable vehicles)"
+  ],
+  "tools_required": [
+    { "name": "Fuel line disconnect tool set", "required": true, "note": "Spring-lock and quick-connect fittings require specific plastic disconnect tools — do not pry them with screwdrivers" },
+    { "name": "Drain pan", "required": true },
+    { "name": "Rags", "required": true, "note": "Wrap lines when disconnecting to contain residual fuel" },
+    { "name": "Safety glasses", "required": true, "note": "Fuel under pressure sprays unpredictably when lines are disconnected" },
+    { "name": "Fire extinguisher nearby", "required": true, "note": "Keep a Class B extinguisher within arm's reach when working with fuel lines" }
+  ],
+  "parts": [
+    { "name": "Replacement fuel filter (verify external vs. in-tank for your vehicle)", "tier": "required", "note": "Many post-2000 vehicles have no external filter. Confirm your vehicle has a serviceable external filter before buying. Arrow on filter must point toward engine (fuel flow direction).", "price_estimate_usd": 25 },
+    { "name": "Fuel line clips or retainer springs", "tier": "optional", "note": "Some quick-connect fittings use single-use clips. Replace them if they deform during removal.", "price_estimate_usd": 5 }
+  ],
+  "torque_specs": [],
+  "steps": [
+    { "headline": "Confirm your vehicle has an external fuel filter before purchasing parts.", "body": "Most vehicles manufactured after 2000 have an in-tank filter integrated with the fuel pump module — there is no external filter to replace. Check your owner's manual or parts lookup. If in-tank only, the filter is replaced as part of the fuel pump assembly." },
+    { "headline": "Relieve fuel system pressure — pull the fuel pump fuse and run the engine until it stalls.", "warn": "Modern fuel injection systems maintain 30–60 psi in the fuel lines even when the engine is off. Disconnecting lines without relieving pressure causes a pressurized fuel spray — a serious fire hazard.", "body": "With the engine running, pull the fuel pump fuse from the fuse box. The engine will run briefly on residual fuel and then stall. Crank it once more for 5 seconds to purge the fuel rail. The system is now depressurized." },
+    { "headline": "Disconnect the negative battery cable.", "body": "This eliminates any risk of an electrical spark near the fuel lines. Work in a well-ventilated area, away from open flames and running motors." },
+    { "headline": "Locate the external fuel filter — typically under the vehicle near the tank or in the engine bay.", "body": "Consult the owner's manual or a vehicle-specific guide for the exact location. Have the drain pan and rags positioned before you disconnect anything." },
+    { "headline": "Use fuel line disconnect tools to release both fuel line connections.", "body": "Insert the correct-size disconnect tool into the fitting and push inward while pulling the line. Never pry with a screwdriver — you will damage the fitting and create a leak. Some residual fuel will spill — rags absorb it." },
+    { "headline": "Note the fuel flow direction arrow on the old filter, then remove it from its bracket.", "body": "The arrow points toward the engine — in the direction of fuel flow. Photograph the old filter orientation before removing it from the bracket." },
+    { "headline": "Install the new filter with the arrow pointing toward the engine.", "warn": "A backwards fuel filter blocks flow completely — the engine will not start. Verify the arrow direction before tightening any connections.", "body": "Secure the new filter in the bracket in the same position as the old one." },
+    { "headline": "Reconnect both fuel lines until the retention clips snap audibly.", "body": "You should hear a distinct click when each quick-connect fitting engages. Tug the line — it should not pull free. A line that did not click is not connected and will leak under pressure." },
+    { "headline": "Reinstall the fuel pump fuse and reconnect the battery.", "body": "With everything reconnected, turn the key to the ON position (not start) and hold it for 3 seconds, then off. Repeat 3 times. This cycles the fuel pump and pressurizes the system before cranking." },
+    { "headline": "Start the engine and check for leaks at both fuel line connections.", "body": "Let the engine idle for 2 minutes. Inspect the filter connections for any fuel smell or visible drips. Even a slow seep is a fire hazard — shut the engine off and re-seat the fitting." }
+  ],
+  "verify": [
+    "Engine starts without extended cranking",
+    "No fuel smell or visible drips at either fuel line connection",
+    "Smooth acceleration with no hesitation or stumbling",
+    "No check engine light after a drive cycle"
+  ],
+  "common_mistakes": [
+    "Not depressurizing the fuel system before opening lines — pressurized fuel sprays at 40–60 psi and will ignite on a hot exhaust.",
+    "Installing the filter backwards — the flow direction arrow must point toward the engine. A backwards filter starves the engine of fuel.",
+    "Not priming the system before cranking — three key-on cycles pressurizes the rail and prevents dry cranking.",
+    "Working near heat sources or with the garage door closed — fuel vapors accumulate and can ignite from a water heater pilot light or electrical spark.",
+    "Attempting to replace an in-tank-only filter externally — on modern vehicles, the filter is part of the pump module; there is nothing to replace separately."
+  ],
+  "related_guides": [
+    { "slug": "spark-plugs", "label": "Spark Plugs — rule out ignition if hesitation persists" },
+    { "slug": "oil-change", "label": "Oil Change — schedule with routine maintenance" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>

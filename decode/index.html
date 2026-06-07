@@ -119,6 +119,66 @@
     .result-meta { grid-template-columns: 1fr; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a VIN tell you?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 17-character VIN (Vehicle Identification Number) encodes the country of manufacture, manufacturer, vehicle type, restraint systems, check digit, model year, assembly plant, and production sequence. AutoVetting decodes it using NHTSA's official vPIC API to return the exact year, make, model, trim, and engine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the VIN located on a car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The VIN appears on the driver-side dashboard (visible through the windshield), the driver-side door jamb sticker, the vehicle title, insurance documents, and the firewall under the hood. All should match."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is VIN decoding free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AutoVetting's VIN decoder is completely free. It uses NHTSA's public vPIC API and returns year, make, model, trim, and engine \u2014 then links directly to the model-specific inspection checklist for that vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is NHTSA vPIC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NHTSA vPIC (Vehicle Product Information Catalog) is the US National Highway Traffic Safety Administration's official VIN decoding API. It is the authoritative source for vehicle identification data in the United States."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "AutoVetting",
+      "item": "https://autovetting.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "VIN Decoder",
+      "item": "https://autovetting.com/decode/"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

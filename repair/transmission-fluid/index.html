@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM12JSF5D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YM12JSF5D1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transmission Fluid Change — AutoVetting Repair Guides</title>
+<meta name="description" content="How to change transmission fluid — drain, filter, refill. 1–2 hours, $40–$120. Step-by-step guide with fluid type selection.">
+<link rel="canonical" href="https://autovetting.com/repair/transmission-fluid/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/repair-guide.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Transmission Fluid Change — AutoVetting Repair Guide">
+  <meta property="og:description" content="Complete transmission fluid change guide: drain, filter, refill. 1–2 hours, $40–$120. ATF type selection, common mistakes.">
+  <meta property="og:url" content="https://autovetting.com/repair/transmission-fluid/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AutoVetting">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autovetting">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
+    <div class="nav-links">
+      <a href="/pinpoint/">Pinpoint</a>
+      <a href="/search/">Search</a>
+      <a href="/decode/">Decode</a>
+      <a href="/inspect/">Inspect</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/repair/" aria-current="page">Repair</a>
+    </div>
+  </nav>
+</header>
+
+<div class="rg-wrap">
+
+  <section class="rg-hero">
+    <div class="rg-crumbs"><a href="/repair/">Repair Guides</a> &middot; <span id="crumbCategory"></span></div>
+    <h1 class="rg-title" id="title"></h1>
+    <p class="rg-summary" id="summary"></p>
+    <div class="rg-meta-strip" id="metaStrip"></div>
+  </section>
+
+  <div class="rg-answer">
+    <div class="rg-answer-label">The honest answer</div>
+    <p id="aeoAnswer"></p>
+  </div>
+
+  <div class="rg-layout">
+
+    <aside class="rg-toc" id="toc">
+      <div class="rg-toc-label">On this page</div>
+      <ul>
+        <li><a href="#symptoms">When to change</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#parts">Parts</a></li>
+        <li><a href="#torque">Torque specs</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#related">Related guides</a></li>
+      </ul>
+      <div class="rg-progress-mini">
+        <div style="display:flex;justify-content:space-between;color:var(--slate-500)">
+          <span>Progress</span><span id="miniCount">0 / 0</span>
+        </div>
+        <div class="bar"><div class="fill" id="miniFill"></div></div>
+      </div>
+    </aside>
+
+    <main>
+
+      <section class="rg-section" id="symptoms">
+        <h2 class="rg-h2">When to change</h2>
+        <ul id="symptomsList" style="margin:0;padding-left:22px;line-height:1.9;color:var(--navy)"></ul>
+      </section>
+
+      <section class="rg-section" id="tools">
+        <h2 class="rg-h2">Tools</h2>
+        <div class="rg-tools-cols">
+          <div class="rg-tool-col"><h3>Required</h3><ul class="rg-tool-list" id="toolsRequired"></ul></div>
+          <div class="rg-tool-col"><h3>Nice to have</h3><ul class="rg-tool-list" id="toolsOptional"></ul></div>
+        </div>
+      </section>
+
+      <section class="rg-section" id="parts">
+        <h2 class="rg-h2">Parts</h2>
+        <div class="rg-parts" id="partsGrid"></div>
+      </section>
+
+      <section class="rg-section" id="torque">
+        <div class="rg-torque-head">
+          <h2 class="rg-h2" style="margin:0">Torque specs</h2>
+          <div class="rg-unit-toggle" role="tablist" aria-label="Torque unit">
+            <button id="unitFtLb" class="on" type="button">ft-lb</button>
+            <button id="unitNm" type="button">Nm</button>
+          </div>
+        </div>
+        <table class="rg-torque-table">
+          <thead><tr><th>Fastener</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody id="torqueBody"></tbody>
+        </table>
+      </section>
+
+      <section class="rg-section" id="procedure">
+        <div class="rg-walker-head">
+          <h2 class="rg-h2" style="margin:0">Procedure</h2>
+          <div class="rg-walker-actions">
+            <button id="resetBtn" class="rg-btn" type="button">Reset progress</button>
+            <button id="printBtn" class="rg-btn primary" type="button">Print mode</button>
+          </div>
+        </div>
+        <div class="rg-progress">
+          <div class="rg-progress-label">
+            <span>Step <span id="curStep">0</span> of <span id="totalStep">0</span></span>
+            <span id="pctLabel">0%</span>
+          </div>
+          <div class="rg-progress-bar"><div class="rg-progress-fill" id="progressFill"></div></div>
+        </div>
+        <ol class="rg-steps" id="steps"></ol>
+      </section>
+
+      <section class="rg-section" id="verify">
+        <h2 class="rg-h2">Verify it worked</h2>
+        <ul class="rg-verify-list" id="verifyList"></ul>
+      </section>
+
+      <section class="rg-section" id="mistakes">
+        <h2 class="rg-h2">Common mistakes</h2>
+        <ul class="rg-mistakes" id="mistakesList"></ul>
+      </section>
+
+      <section class="rg-section" id="related">
+        <h2 class="rg-h2">Related guides</h2>
+        <div class="rg-related" id="relatedGrid"></div>
+      </section>
+
+      <footer class="rg-foot">
+        Last updated: <span id="lastUpdated"></span>
+        &mdash; <a href="/repair/">Back to all guides</a>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Auto<span style="color:var(--electric)">Vetting</span><sup class="tm">&trade;</sup> &mdash; research, inspect, buy with confidence.</p>
+  <p style="margin-top:8px">
+    <a href="/">Home</a> &middot;
+    <a href="/repair/">Repair Guides</a> &middot;
+    <a href="/garage/">My Garage</a> &middot;
+    <a href="/inspect/">Inspect</a>
+  </p>
+</footer>
+
+<script id="guideData" type="application/json">
+{
+  "id": "transmission-fluid",
+  "title": "Transmission Fluid Change",
+  "summary": "Transmission fluid degrades with heat cycles, losing its viscosity and friction modifiers. Neglected fluid accelerates clutch pack wear and valve body damage. Change interval varies widely — check your manual.",
+  "category": "drivetrain",
+  "safety_critical": false,
+  "difficulty": 2,
+  "time_hours": { "low": 1, "high": 2 },
+  "cost_usd": { "low": 40, "high": 120 },
+  "last_updated": "2026-06-06",
+  "aeo_answer": "A transmission fluid change takes 1–2 hours and costs $40–$120. The most critical factor is using the exact fluid specified by the manufacturer — using the wrong type causes shift flare, hunting, or slipping that can be mistaken for a failing transmission. A drain-and-fill replaces only 30–50% of total capacity; a flush replaces more but requires a machine.",
+  "symptoms": [
+    "Delayed engagement when shifting from Park to Drive or Reverse",
+    "Rough or hesitant shifts between gears",
+    "Transmission slipping — engine revs rise without a corresponding increase in speed",
+    "Dark brown or burnt-smelling fluid on the dipstick",
+    "Fluid older than 30,000–60,000 miles (verify in your manual — some are rated 'lifetime')",
+    "Shudder during light-throttle acceleration (common in some 6-speed automatics with degraded friction modifiers)"
+  ],
+  "tools_required": [
+    { "name": "Drain pan (2-gallon minimum)", "required": true },
+    { "name": "Torque wrench", "required": true },
+    { "name": "Socket set and ratchet", "required": true },
+    { "name": "Fluid pump or long-neck funnel", "required": true, "note": "Many transmissions fill through the dipstick tube; top-fill units require a fluid pump to push fluid into the fill port" },
+    { "name": "Jack and jack stands", "required": false, "note": "Needed to access the drain plug or pan on most vehicles" }
+  ],
+  "parts": [
+    { "name": "Manufacturer-specified transmission fluid (ATF)", "tier": "required", "note": "ATF type varies by manufacturer — Mercon V, Dexron VI, SP4, WS, etc. Using the wrong fluid causes shift problems and internal damage.", "price_estimate_usd": 60 },
+    { "name": "Transmission pan gasket", "tier": "optional", "note": "Required if dropping the pan to access the filter. Reusable pan gaskets exist on some vehicles; use the correct type for yours.", "price_estimate_usd": 15 },
+    { "name": "Transmission filter", "tier": "optional", "note": "Replace when pan is dropped. Some units have a serviceable internal filter; others have a sealed lifetime filter.", "price_estimate_usd": 20 }
+  ],
+  "torque_specs": [
+    { "key": "drain_plug", "fastener": "Transmission drain plug", "ft_lb": 18, "nm": 24, "notes": "Typical range 15–25 ft-lb. Verify in your service manual — aluminum pan threads strip easily." },
+    { "key": "pan_bolts", "fastener": "Transmission pan bolts", "ft_lb": 9, "nm": 12, "notes": "Pan bolts torque evenly in a star pattern. Over-torquing distorts the pan and causes leaks." }
+  ],
+  "steps": [
+    { "headline": "Warm the transmission to operating temperature before draining.", "body": "Warm fluid flows faster and carries more suspended contaminants out with it. Drive for 10–15 minutes, then allow the vehicle to sit for 20 minutes so the fluid is warm but not scalding." },
+    { "headline": "Raise the vehicle and support it safely on jack stands.", "body": "Never work under a vehicle supported only by a floor jack. Use proper jack stands on the frame rails." },
+    { "headline": "Place the drain pan and remove the transmission drain plug or drop the pan.", "warn": "Warm ATF can cause burns. Position the pan carefully and keep skin clear of the stream.", "body": "If your transmission has a drain plug, use it. If there is no drain plug, the pan must be dropped — loosen the bolts on one corner first to let fluid drain from that side before removing the rest." },
+    { "headline": "If dropping the pan: clean the pan thoroughly and replace the filter.", "body": "Clean the pan with a lint-free rag — no solvents that could contaminate the new fluid. The filter simply pulls off or unscrews in most cases. Note orientation before removal." },
+    { "headline": "Install new filter and reinstall the pan with a new gasket.", "torque": "pan_bolts", "body": "Torque the pan bolts evenly in a star pattern — uneven torque distorts the pan and causes leaks at the corners. Never overtighten aluminum pan bolts." },
+    { "headline": "Install a new crush washer on the drain plug and torque to spec.", "torque": "drain_plug", "body": "Reusing an old crush washer on a drain plug is how most pan leaks start. A new washer costs under $2." },
+    { "headline": "Add the correct transmission fluid through the dipstick tube or fill port.", "body": "Start with the total system capacity minus what was drained. A drain-and-fill typically removes 30–50% of the total fluid — add that amount first, then check the level." },
+    { "headline": "Check the fluid level using the manufacturer's specified method.", "body": "Automatic transmission fluid is typically checked hot with the engine running in Park. Some vehicles specify Neutral. Some have no dipstick and require checking through the fill port with the fluid at a specific temperature. Verify in your owner manual." },
+    { "headline": "Road test — shift through all gears and check for smooth engagement.", "body": "Drive several miles including stops, starts, and moderate acceleration. Shifts should be smooth in all gears. If shifting is worse than before, re-check the fluid level and type." }
+  ],
+  "verify": [
+    "Fluid level correct per manufacturer's method (hot, in Park or Neutral as specified)",
+    "Smooth shifts in all gears with no delay or hesitation",
+    "No delayed engagement when selecting Drive or Reverse",
+    "No fluid drips at the drain plug or pan gasket",
+    "No warning lights on the dashboard"
+  ],
+  "common_mistakes": [
+    "Using the wrong fluid type — the most common and costly mistake. The correct ATF is non-negotiable.",
+    "Overfilling — too much fluid causes aeration and foaming, which destroys the transmission hydraulics.",
+    "Checking level cold — ATF expands significantly with temperature. A cold check reads low and causes overfilling.",
+    "Not replacing the filter when the pan is dropped — labor is the majority of the cost; the filter is cheap insurance.",
+    "Expecting a fluid change to fix an already-slipping transmission — it helps marginally at best."
+  ],
+  "related_guides": [
+    { "slug": "oil-change", "label": "Oil Change — schedule around the same service interval" },
+    { "slug": "power-steering-fluid", "label": "Power Steering Fluid — some systems share ATF" }
+  ]
+}
+</script>
+
+<script src="/assets/js/repair-renderer.js"></script>
+
+</body>
+</html>
