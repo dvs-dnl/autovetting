@@ -15359,8 +15359,122 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: []
-  }
+  },
 
+  'nissan-altima-2019': {
+    year: 2019,
+    make: 'Nissan',
+    model: 'Altima',
+    trim: '2.5 S / SV / SL / SR / Platinum — also AWD (2.5 only) (L34, 6th gen, 2019–2023)',
+    engine: '2.5L KR20DE inline-4 (182 hp, FWD or AWD) or 2.0L VC20DDT VC-Turbo (248 hp, FWD only on SR/Platinum)',
+    overallRisk: 'monitor',
+    overallRiskLabel: 'Monitor',
+    vinNote: "The L34 Altima offers two distinct engine families: the 2.5L KR20DE (standard on S/SV/SL and all AWD trims) and the 2.0L VC-Turbo VC20DDT (SR and Platinum FWD only). AWD is exclusive to 2.5L models — a VC-Turbo Altima is always FWD. Use /decode/ to confirm the engine from the 8th VIN digit before inspecting; VC-Turbo units carry a separate oil-consumption and bearing-recall risk that the 2.5L does not share.",
+    blogUrl: '/blog/2019-nissan-altima-buyers-guide',
+    summary: "The 6th-gen Altima (L34, 2019–2023) is a meaningful improvement over the notoriously fragile L33 generation. The 2.5L KR20DE is a more robust engine than the old QR25DE, and AWD is finally available. Two risks remain: (1) the 2.0L VC-Turbo (SR/Platinum FWD) burns oil and had an engine-bearing recall — verify the ECM update is done; and (2) the CVT8 is better than the old JF015E but still shudders on neglected fluid. A 2.5L AWD model with documented CVT fluid history and a completed camera recall is the safest pick.",
+    stats: {
+      itemsToCheck: 14,
+      recalls: 2,
+      ownerComplaints: 380,
+      topComplaintArea: 'CVT hesitation / shudder and VC-Turbo oil consumption (2019–2020)'
+    },
+    sections: [
+      { title: 'CVT Transmission', items: [
+        { title: 'CVT8 shudder and hesitation (gen-6 improvement, still present)',
+          risk: 'high', riskLabel: 'High Attention',
+          desc: 'The L34 uses the Jatco CVT8 (JF017E), a stronger unit than the L33 JF015E. NHTSA CVT complaints are far below L33 levels, but VC-Turbo heat and neglected fluid still cause early shudder and hesitation. Replacement is $2,800–$4,500.',
+          check: '<strong>Accelerate briskly from 20 to 60 mph then hold 45 mph at light throttle for 30 seconds.</strong> Any shudder, belt-slip, or power interruption is a red flag. Ask for documented CVT fluid service records — NS-3 fluid, every 30,000 miles under severe conditions.',
+          cost: '$2,800–$4,500 CVT replacement (remanufactured JF017E)',
+          source: 'NHTSA complaint database 2019–2023 Altima; Nissan service manual NS-3 specification'
+        },
+        { title: 'CVT fluid color and service history',
+          risk: 'high', riskLabel: 'High Attention',
+          desc: 'Nissan NS-3 fluid is red/pink when fresh. Dark brown fluid with a burnt smell has never been changed. Degraded fluid dramatically accelerates belt and pulley wear inside the CVT — this is the single most preventable failure mode.',
+          check: '<strong>Ask for the CVT fluid service date and confirm NS-3 fluid was used.</strong> If history is unknown, budget $150–$200 for immediate service before driving the car long-distance.',
+          cost: '$150–$200 CVT fluid service',
+          source: 'Nissan L34 service manual; CVT fluid degradation data'
+        }
+      ]},
+      { title: 'Engine — VC-Turbo and 2.5L KR20DE', items: [
+        { title: 'VC-Turbo oil consumption and bearing recall 25V437 (CRITICAL if equipped)',
+          risk: 'critical', riskLabel: 'Critical',
+          desc: 'The 2.0L VC20DDT variable-compression turbo is only on SR/Platinum FWD models. NHTSA 25V437 (June 2025) covers 2019–2020 VC-Turbo Altimas for engine-bearing manufacturing defects that can lead to catastrophic engine failure — fix is an ECM reprogram. Separately, VC-Turbo engines are known to consume 1 quart per 1,500–3,000 miles on some units.',
+          check: '<strong>Run the VIN at nhtsa.gov before purchasing — confirm recall 25V437 is completed on any 2019–2020 VC-Turbo car.</strong> Check the oil level cold; below MIN or milky/foamy oil signals internal damage. Ask for oil-level check records and any dealer recall documentation.',
+          cost: '$7,000–$12,000 engine replacement if bearing failure has occurred',
+          source: 'NHTSA recall 25V437 (June 2025) — 2019–2020 Nissan Altima VC-Turbo'
+        },
+        { title: 'VC-Turbo shaft and turbocharger condition (if equipped)',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The VC20DDT turbocharger relies on consistent oil pressure. Low-oil-level events accelerate turbo bearing wear. Listen for a high-pitched whine from the engine bay under light acceleration at 1,500–2,500 rpm.',
+          check: '<strong>During the test drive, listen for turbo whine or grinding from the driver-side engine bay under acceleration.</strong> A healthy turbo is nearly inaudible. Any metallic noise = further inspection.',
+          cost: '$1,800–$3,500 turbocharger replacement',
+          source: 'Nissan technician service reports; AltimaTalk owner forums'
+        },
+        { title: '2.5L KR20DE oil level and engine condition (base/SV/SL/AWD)',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The naturally aspirated 2.5L KR20DE is the safer, more durable choice. Not prone to excessive oil consumption. Verify oil is at level and clean. The timing chain is generally long-lived — a brief rattle on cold start at very high mileage (120,000+) warrants inspection but is rare.',
+          check: '<strong>Check dipstick: oil should be between MIN and MAX, amber to light brown, no grit or burnt smell.</strong> Start the engine cold and listen for the first 10 seconds; a persistent chain rattle after that warrants a timing-chain inspection.',
+          cost: '$40–$70 oil change; $800–$1,500 timing chain service if needed',
+          source: 'KR20DE field service data; L34 Altima owner reports'
+        }
+      ]},
+      { title: 'ADAS and Rear Camera', items: [
+        { title: 'Rear camera recall 23V628 / R23C3 (2019–2021 Platinum)',
+          risk: 'high', riskLabel: 'High Attention',
+          desc: 'NHTSA recall 23V628 (Nissan campaign R23C3, September 2023) affects 2019–2021 Altima Platinum models. The rear camera wiring harness can chafe and produce a blurry, distorted, or multi-colored backup image — a direct safety hazard. Fix is harness securing or camera replacement at no charge.',
+          check: '<strong>Put the car in Reverse and confirm the backup camera shows a clear, undistorted image.</strong> Run the VIN at nhtsa.gov to confirm R23C3 is completed on Platinum-trim cars.',
+          cost: 'Covered under recall (no cost to owner)',
+          source: 'NHTSA recall 23V628 / Nissan campaign R23C3 — September 11, 2023'
+        },
+        { title: 'ProPilot Assist camera calibration (SV and above)',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'ProPilot Assist (available on SV trim and above from 2019) uses a windshield-mounted forward camera for adaptive cruise and lane-keep assist. Camera misalignment after windshield replacement or minor collision repair causes repeated "ProPilot Assist unavailable" alerts or failed lane-keep.',
+          check: '<strong>Enable ProPilot Assist during a highway test drive — the system should hold lane and maintain gap without repeated dropouts.</strong> Multiple alerts = camera recalibration needed ($200–$400).',
+          cost: '$200–$400 ProPilot Assist camera recalibration',
+          source: 'Nissan ProPilot Assist service manual; owner reports'
+        }
+      ]},
+      { title: 'Brakes, Suspension, and AWD', items: [
+        { title: 'Brake rotor condition and pulsation check',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Front rotors typically last 40,000–60,000 miles. Pulsation during braking (steering wheel shimmy at 50–70 mph) = warped rotors. Single-piston front calipers are inexpensive to service.',
+          check: '<strong>Brake firmly from 50 mph — pedal should be firm and linear, no pulsation.</strong> Inspect rotor edges through wheel spokes for deep grooves.',
+          cost: '$300–$550 front brake service (pads and rotors)',
+          source: 'Standard brake inspection protocol'
+        },
+        { title: 'Sway bar links and front strut condition',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'L34 Altimas develop a clunk over bumps from worn sway bar end links at 50,000–80,000 miles. Front struts are generally long-lived but check for shimmy above 65 mph and excessive dive under braking.',
+          check: '<strong>At low speed, turn lock-to-lock and listen for clunking from the front end.</strong> At highway speed, note any vibration or wander. Bounce the front corners — one oscillation and stop is normal.',
+          cost: '$120–$280 sway bar links; $500–$900 front struts per side',
+          source: 'L34 Altima suspension service data; AltimaTalk forum'
+        },
+        { title: 'AWD coupling function (AWD models only)',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'AWD is only available on 2.5L models. The electronically controlled rear coupling should engage smoothly. Shudder under AWD load (turning tightly with the system active) indicates coupling wear or fluid degradation.',
+          check: '<strong>On a gravel or loose surface, make a tight full-lock circle — no shudder or binding should occur.</strong> If not available, ask about AWD fluid service history at the dealer.',
+          cost: '$200–$450 AWD coupling fluid service',
+          source: 'Nissan AWD coupling service specification; L34 field data'
+        }
+      ]},
+      { title: 'Body and Documentation', items: [
+        { title: 'Open recall compliance — 23V628 and 25V437',
+          risk: 'high', riskLabel: 'High Attention',
+          desc: 'Two verified L34 recalls: rear camera wiring harness (23V628/R23C3, Platinum, 2019–2021) and VC-Turbo engine bearing (25V437, 2019–2020 VC-Turbo). An uncompleted 25V437 on a VC-Turbo car represents potential engine failure.',
+          check: '<strong>Enter the VIN at nhtsa.gov/recalls before signing.</strong> Both 23V628 and 25V437 must show as completed (where applicable). Unresolved recalls = negotiate a price reduction or have the dealer complete the repair first.',
+          cost: 'Free (recall repairs at Nissan dealers)',
+          source: 'NHTSA recalls 23V628 (September 2023) and 25V437 (June 2025)'
+        },
+        { title: 'Water intrusion and sunroof drain check (if sunroof equipped)',
+          risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The L34, like the prior gen, can have clogged front sunroof drain tubes that route down the A-pillar. Blocked drains flood the footwell and can destroy the BCM and ADAS modules. Check the trunk seal as well for soft gasket leaks.',
+          check: '<strong>Press the front carpet in both footwells and the trunk floor — no moisture or musty odor.</strong> On sunroof-equipped cars, pour 200 mL of water at each front drain and confirm exit under the bumper within 5 seconds.',
+          cost: '$80–$250 drain clearing and carpet drying',
+          source: 'L34 Altima owner reports (NissanTalk, Reddit r/Nissan)'
+        }
+      ]}
+    ]
+  },
 };
 
 
@@ -15589,6 +15703,7 @@ const VEHICLE_MENU = {
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
     'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' }
     ],
@@ -15743,6 +15858,7 @@ const VEHICLE_MENU = {
       { model: 'GLS', trim: 'GLS 450 / GLS 580 / AMG GLS 63', key: 'mercedes-gls-2020' }
     ],
     'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
       { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Pro-4X / PRO-X / SL', key: 'nissan-frontier-2022' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
@@ -15928,6 +16044,7 @@ const VEHICLE_MENU = {
     ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
+      { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
       { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
@@ -16104,7 +16221,7 @@ const VEHICLE_MENU = {
     ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
-      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
+      { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
       { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
@@ -16267,7 +16384,7 @@ const VEHICLE_MENU = {
     'Mercedes-Benz': [ { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-glc-2018' } ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
-      { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
+      { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
       { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
