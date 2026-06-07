@@ -926,30 +926,16 @@
     <p class="teaser-sub">Three quick questions narrow a vetted catalog of reliable used picks down to the handful worth shortlisting. Tuned to long-lived used choices &mdash; not what's hot on the dealer lot.</p>
     <div class="teaser-body">
       <form id="pinpoint-form" novalidate>
-        <div class="field-row">
-          <div class="field">
-            <label for="pp-budget">Budget (used)</label>
-            <select id="pp-budget" name="budget">
-              <option value="">No preference</option>
-              <option value="under-10k">Under $10k</option>
-              <option value="10-15k">$10k &ndash; $15k</option>
-              <option value="15-20k">$15k &ndash; $20k</option>
-              <option value="20-30k">$20k &ndash; $30k</option>
-              <option value="30k-plus">$30k+</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="pp-type">Body type</label>
-            <select id="pp-type" name="type">
-              <option value="">No preference</option>
-              <option value="sedan">Sedan</option>
-              <option value="suv">SUV / Crossover</option>
-              <option value="truck">Pickup truck</option>
-              <option value="wagon">Wagon</option>
-              <option value="hatch">Hatchback</option>
-              <option value="hybrid-ev">Hybrid / EV</option>
-            </select>
-          </div>
+        <div class="field">
+          <label for="pp-budget">Budget (used)</label>
+          <select id="pp-budget" name="budget">
+            <option value="">No preference</option>
+            <option value="under-10k">Under $10k</option>
+            <option value="10-15k">$10k &ndash; $15k</option>
+            <option value="15-20k">$15k &ndash; $20k</option>
+            <option value="20-30k">$20k &ndash; $30k</option>
+            <option value="30k-plus">$30k+</option>
+          </select>
         </div>
         <div class="field" style="margin-top:14px;">
           <label>Top priority</label>
@@ -1251,10 +1237,8 @@
     e.preventDefault();
     var params = new URLSearchParams();
     var budget = document.getElementById('pp-budget').value;
-    var type = document.getElementById('pp-type').value;
     var priority = ppPriority.value;
     if (budget) params.set('budget', budget);
-    if (type) params.set('type', type);
     if (priority) params.set('priority', priority);
     var qs = params.toString();
     window.location.href = '/pinpoint/' + (qs ? '?' + qs : '');
