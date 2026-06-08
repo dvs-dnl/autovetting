@@ -630,6 +630,14 @@
   }
   .site-footer p { margin: 0; }
   .site-footer .vet-color { color: var(--electric); }
+  .footer-brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .footer-icon { width: 28px; height: 28px; vertical-align: middle; }
+  .footer-wordmark { color: var(--slate-300); font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+  .footer-wordmark sup { font-size: 0.6em; vertical-align: super; margin-left: 2px; }
+  .footer-tag { color: var(--slate-500); }
 
   /* ============================================================
      Responsive
@@ -1116,37 +1124,12 @@
 <!-- ============================================================
      SKIP THESE
      ============================================================ -->
-<section class="section">
+<section class="section" id="skip-these-section">
   <p class="section-eyebrow">Skip these</p>
-  <h2 class="section-head">Walk-away cars in this band.</h2>
-  <p class="section-sub">Listings you'll see at this price point that look fine on paper. They're not.</p>
+  <h2 class="section-head" id="skip-these-head">Walk-away cars in this band.</h2>
+  <p class="section-sub" id="skip-these-sub">Listings you'll see at this price point that look fine on paper. They're not.</p>
 
-  <div class="skip-grid">
-    <div class="skip-card">
-      <div class="skip-vehicle">Chevy Bolt without battery replacement</div>
-      <p class="skip-reason">Active fire-risk recall. Verify the replacement VIN at experience.gm.com before any purchase. Most cheap Bolts haven't had it done.</p>
-    </div>
-    <div class="skip-card">
-      <div class="skip-vehicle">Early Nissan Leaf (2011–2014) in hot states</div>
-      <p class="skip-reason">Air-cooled battery dies fast in Phoenix heat. May have under 40 miles of real-world range. The "Lizard" 2015 pack is the earliest survivable.</p>
-    </div>
-    <div class="skip-card">
-      <div class="skip-vehicle">BMW 3 Series / Audi A4 / Infiniti G37</div>
-      <p class="skip-reason">Cars hitting $7k are the ones nobody wants to fix. One repair eats the purchase price. Walk away unless you're a wrencher.</p>
-    </div>
-    <div class="skip-card">
-      <div class="skip-vehicle">Toyota RAV4 EV (2012–2014)</div>
-      <p class="skip-reason">Tesla powertrain in a Toyota body. Only 2,500 made. Drive-unit replacement from dealer: $17,467. Orphaned parts.</p>
-    </div>
-    <div class="skip-card">
-      <div class="skip-vehicle">Range Rover / Land Rover (any pre-2016)</div>
-      <p class="skip-reason">Air suspension, transfer case, electronics. Even the bargains become five-figure repairs. The British tax is real.</p>
-    </div>
-    <div class="skip-card">
-      <div class="skip-vehicle">2012 Acura TSX</div>
-      <p class="skip-reason">157 NHTSA complaints &mdash; power steering, engine failures. Same body as the recommended 2014, but a documented problem year.</p>
-    </div>
-  </div>
+  <div class="skip-grid" id="skip-grid" aria-live="polite"></div>
 </section>
 
 <!-- ============================================================
@@ -1197,7 +1180,11 @@
      Footer
      ============================================================ -->
 <footer class="site-footer">
-  <p>Auto<span class="vet-color">Vetting</span><sup style="font-size:0.6em;vertical-align:super;margin-left:2px;">&trade;</sup> &mdash; Know before you buy.</p>
+  <p class="footer-brand">
+    <img class="footer-icon" src="/assets/img/favicon-180.png" alt="" width="28" height="28">
+    <span class="footer-wordmark">Auto<span class="vet-color">Vetting</span><sup>&trade;</sup></span>
+    <span class="footer-tag">&mdash; Know before you buy.</span>
+  </p>
   <p style="margin-top:8px;">Prices reflect national averages as of May 2026; regional variation ±$1,000. None of this replaces a pre-purchase inspection.</p>
 </footer>
 
@@ -1290,6 +1277,78 @@
         }
       }, 400);
     }, STEP_MS);
+  }());
+
+  // ============================================================
+  // SKIP-THESE — filter walk-away cards by user's active budget filter
+  // ============================================================
+  (function () {
+    var SKIP_CARDS = [
+      { budgets: ['under-10k'], vehicle: 'BMW 3 Series / Audi A4 / Infiniti G37',
+        reason: "Cars hitting $7k are the ones nobody wants to fix. One repair eats the purchase price. Walk away unless you're a wrencher." },
+      { budgets: ['under-10k'], vehicle: '2012 Acura TSX',
+        reason: "157 NHTSA complaints \u2014 power steering, engine failures. Same body as the recommended 2014, but a documented problem year." },
+      { budgets: ['under-10k', '10-15k'], vehicle: 'Early Nissan Leaf (2011\u20132014) in hot states',
+        reason: "Air-cooled battery dies fast in Phoenix heat. May have under 40 miles of real-world range. The \u201cLizard\u201d 2015 pack is the earliest survivable." },
+      { budgets: ['10-15k'], vehicle: 'Chevy Bolt without battery replacement',
+        reason: "Active fire-risk recall. Verify the replacement VIN at experience.gm.com before any purchase. Most cheap Bolts haven\u2019t had it done." },
+      { budgets: ['10-15k', '15-20k'], vehicle: 'Toyota RAV4 EV (2012\u20132014)',
+        reason: "Tesla powertrain in a Toyota body. Only 2,500 made. Drive-unit replacement from dealer: $17,467. Orphaned parts." },
+      { budgets: ['15-20k', '20-30k'], vehicle: 'Range Rover / Land Rover (any pre-2016)',
+        reason: "Air suspension, transfer case, electronics. Even the bargains become five-figure repairs. The British tax is real." },
+      { budgets: ['15-20k', '20-30k'], vehicle: 'Used Maserati Ghibli / Quattroporte',
+        reason: "$25k Maserati = $25k of waiting on parts. Independent service network is sparse, dealer rates are punishing. Walk away unless you have a backup car." },
+      { budgets: ['20-30k'], vehicle: 'Audi A6 / S6 (pre-2019)',
+        reason: "Air suspension, oil burning, carbon buildup on the supercharged V6, electronic gremlins. The bargain price is the warning." }
+    ];
+
+    var BUDGET_LABELS = {
+      'under-10k': 'under $10k',
+      '10-15k': '$10k\u201315k',
+      '15-20k': '$15k\u201320k',
+      '20-30k': '$20k+'
+    };
+
+    var grid = document.getElementById('skip-grid');
+    var head = document.getElementById('skip-these-head');
+    var sub  = document.getElementById('skip-these-sub');
+
+    function render() {
+      if (!grid) return;
+      // Read the currently active budget chip from the catalog filter group
+      var activeBudgetEl = document.querySelector('.vchip[data-filter="budget"].active');
+      var activeBudget = activeBudgetEl ? activeBudgetEl.getAttribute('data-value') : '';
+      var visible = activeBudget
+        ? SKIP_CARDS.filter(function (c) { return c.budgets.indexOf(activeBudget) !== -1; })
+        : SKIP_CARDS;
+      if (visible.length === 0) visible = SKIP_CARDS;
+
+      grid.innerHTML = visible.map(function (c) {
+        return '<div class="skip-card">' +
+          '<div class="skip-vehicle">' + c.vehicle + '</div>' +
+          '<p class="skip-reason">' + c.reason + '</p>' +
+        '</div>';
+      }).join('');
+
+      if (head && sub) {
+        if (activeBudget && BUDGET_LABELS[activeBudget]) {
+          head.textContent = 'Walk-away cars in the ' + BUDGET_LABELS[activeBudget] + ' band.';
+          sub.textContent = 'Listings you\u2019ll see at the ' + BUDGET_LABELS[activeBudget] + ' price point that look fine on paper. They\u2019re not.';
+        } else {
+          head.textContent = 'Walk-away cars in this band.';
+          sub.textContent = "Listings you'll see at this price point that look fine on paper. They're not.";
+        }
+      }
+    }
+
+    render();
+    // Re-render whenever a budget chip is clicked
+    document.querySelectorAll('.vchip[data-filter="budget"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        // Defer so the chip-click handler runs first and updates the .active class
+        setTimeout(render, 0);
+      });
+    });
   }());
 
   // ============================================================

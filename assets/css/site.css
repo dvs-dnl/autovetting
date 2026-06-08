@@ -146,3 +146,14 @@ button { font-family: inherit; cursor: pointer; }
   .nav-divider { display: none; }
   .nav-step-num { width: 16px; height: 16px; font-size: 9px; }
 }
+
+/* ===== FOOTER BRAND (icon + wordmark) ===== */
+.footer-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  flex-wrap: wrap; justify-content: center;
+}
+.footer-icon { width: 28px; height: 28px; vertical-align: middle; }
+.footer-wordmark { color: var(--slate-300); font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+.footer-wordmark sup { font-size: 0.6em; vertical-align: super; margin-left: 2px; }
+.footer-wordmark .vet-color { color: var(--electric); }
+.footer-tag { color: var(--slate-500); }
