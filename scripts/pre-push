@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# Git pre-push hook for autovetting.
+#
+# Runs scripts/gate-check.py before any push. If any CRITICAL gate fails, the
+# push is refused. WARN gates print but don't block.
+#
+# Install once per clone with:
+#   git config core.hooksPath scripts/
+#
+# Bypass for a one-off (use sparingly, document why in commit message):
+#   git push --no-verify
+#
+
+set -e
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+echo "→ Running autovetting pre-push gates…"
+if ! python3 scripts/gate-check.py; then
+  cat >&2 <<'MSG'
+
+✗ Pre-push gate failed.
+
+Push refused because a CRITICAL gate failed. See output above for the specific
+gate(s) and AutoVet/Pre-Push-Gates.md for the rationale.
+
+To override (only when you understand the failure and have already filed it):
+  git push --no-verify
+MSG
+  exit 1
+fi
+
+echo "→ All CRITICAL gates passed. Continuing push."
+exit 0
