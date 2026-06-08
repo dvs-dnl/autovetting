@@ -41,11 +41,15 @@ def warn(name, ok, detail=""):
 
 
 def all_html_pages():
-    """Top-level + section index.html files (skip third-party + _hub)."""
+    """Top-level + section index.html files (skip third-party, _hub, and meta-refresh redirect pages)."""
     out = []
     for p in REPO.rglob("index.html"):
         s = str(p.relative_to(REPO))
         if s.startswith(".git") or s.startswith("_hub/") or "node_modules" in s:
+            continue
+        # Skip pages that are just redirects (decode/ → /inspect/)
+        head_snippet = p.read_text(encoding="utf-8", errors="replace")[:2000]
+        if 'http-equiv="refresh"' in head_snippet:
             continue
         out.append(p)
     return sorted(out)
@@ -115,6 +119,53 @@ def gate_ga_id_uniform():
         offenders = [f for f, s in per_file.items() if s != max(per_file.values(), key=len)]
         critical("GA tag consistency (single ID site-wide)", False,
                  f"found IDs {sorted(ids)}; outliers: {offenders[:5]}")
+
+
+# ============================================================
+# G14 (CRIT) — homepage + pinpoint IIFE evaluates without ReferenceError
+# Catches: identifier referenced but never defined (the INSPECT_CATALOG incident)
+# ============================================================
+def gate_runtime_idents_resolve():
+    bad = []
+    for rel in ("index.html", "pinpoint/index.html", "homepage-test/index.html"):
+        p = REPO / rel
+        if not p.exists():
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        # Pull the largest inline <script> (skip ld+json/json), wrap in a stub DOM, eval
+        script_re = re.compile(r"<script(?:\s[^>]*)?>([\s\S]*?)</script>", re.IGNORECASE)
+        biggest = ""
+        for m in script_re.finditer(h):
+            tag = h[m.start():m.start() + 100]
+            if 'type="application/' in tag or "googletagmanager" in tag:
+                continue
+            if len(m.group(1)) > len(biggest):
+                biggest = m.group(1)
+        if not biggest:
+            continue
+        # Eval with a minimal DOM stub. Any thrown ReferenceError → undefined identifier.
+        stub = """
+            var window={location:{href:'',search:'',pathname:'/'},matchMedia:()=>({matches:false}),
+                addEventListener:()=>{},setTimeout:setTimeout,clearTimeout:clearTimeout,
+                URLSearchParams:URLSearchParams,requestAnimationFrame:()=>{},getComputedStyle:()=>({})};
+            var document={getElementById:()=>null,querySelector:()=>null,querySelectorAll:()=>[],
+                createElement:()=>({appendChild:()=>{},setAttribute:()=>{},style:{},classList:{add:()=>{},remove:()=>{},toggle:()=>{}}}),
+                addEventListener:()=>{},body:{addEventListener:()=>{}}};
+            var localStorage={getItem:()=>null,setItem:()=>{},removeItem:()=>{}};
+            var navigator={userAgent:''};
+        """
+        # Pass via stdin to avoid argv-too-long on large IIFEs
+        r = subprocess.run(
+            ["node", "-e", "require('vm').runInNewContext(require('fs').readFileSync('/dev/stdin','utf8'))"],
+            input=stub + biggest, capture_output=True, text=True, timeout=15,
+        )
+        if r.returncode != 0:
+            err = r.stderr.strip().splitlines()[0] if r.stderr else "(no stderr)"
+            if "ReferenceError" in err or "is not defined" in err:
+                bad.append(f"{rel}: {err}")
+    critical("Homepage/pinpoint IIFE has no undefined identifiers", not bad, "; ".join(bad))
+
+
 
 
 # ============================================================
@@ -356,6 +407,7 @@ def main():
         gate_inline_js_syntax,
         gate_jsonld_valid,
         gate_ga_id_uniform,
+        gate_runtime_idents_resolve,
         gate_no_orphan_checklists,
         gate_jsonld_covers_vehicles,
         gate_brief_module_intact,

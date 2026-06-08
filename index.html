@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
+  html, body { overflow-x: hidden; }
   /* ===== NAVY THROUGHOUT (whole page shares the header navy) ===== */
   html, body { background: var(--navy); }
   body { color: var(--slate-300); }
@@ -475,6 +476,63 @@
   .vs-count-text { color: var(--slate-400); }
   .vs-reset-btn { color: var(--slate-300); }
   .vs-reset-btn:hover { color: var(--white); }
+  /* ===== GUIDE CARDS (replaces broken Pinpoint inline widget) ===== */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+    margin-bottom: 32px;
+  }
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 20px 22px;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .guide-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(59,130,246,0.4);
+    transform: translateY(-2px);
+  }
+  .guide-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--electric);
+    margin-bottom: 8px;
+  }
+  .guide-vehicle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .guide-desc {
+    font-size: 13px;
+    color: var(--slate-400);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  .guide-cta {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--electric);
+    margin-top: auto;
+  }
+  @media (max-width: 768px) {
+    .guides-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .guides-grid { grid-template-columns: 1fr; }
+  }
   .vs-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -1068,89 +1126,63 @@
      4. VEHICLE SEARCH & FILTER — prominent, first interactive element
         after users understand the product
      ============================================================ -->
-<section class="vehicle-search-section" id="find-your-car">
+<section class="vehicle-search-section" id="recent-guides">
   <div class="vs-inner">
 
     <div class="vs-header">
-      <span class="vs-eyebrow">Our picks &middot; Vetted catalog</span>
-      <h2>Find your next car.</h2>
-      <p>Filter our catalog of reliable used picks by body type, budget, and priority. Every vehicle here we'd actually buy.</p>
+      <span class="vs-eyebrow">From the AutoVetting editorial</span>
+      <h2>Recent buyer&rsquo;s guides.</h2>
+      <p>Honest, model-specific research &mdash; what to look for, what fails, what to pay, and when to walk away.</p>
     </div>
 
-    <!-- Big search bar -->
-    <div class="vs-search-wrap">
-      <input
-        type="search"
-        id="vs-search"
-        class="vs-search-input"
-        placeholder="Search by make or model&hellip;"
-        autocomplete="off"
-        aria-label="Search vehicles by make or model"
-      >
-      <span class="vs-search-icon" aria-hidden="true">&#128269;</span>
-    </div>
+    <div class="guides-grid">
 
-    <!-- Filter chips -->
-    <div class="vs-filters">
-      <div class="vs-filter-group">
-        <span class="vs-filter-label">Use case</span>
-        <div class="vchip-row" role="group" aria-label="Filter by use case">
-          <button class="vchip active" data-filter="use_case" data-value="">Any</button>
-          <button class="vchip" data-filter="use_case" data-value="commute">Daily commute</button>
-          <button class="vchip" data-filter="use_case" data-value="family-hauler">Family hauler</button>
-          <button class="vchip" data-filter="use_case" data-value="road-trip">Road trip</button>
-          <button class="vchip" data-filter="use_case" data-value="work-hauling">Work / hauling</button>
-          <button class="vchip" data-filter="use_case" data-value="weekend-fun">Weekend fun</button>
-          <button class="vchip" data-filter="use_case" data-value="outdoor">Outdoor / off-road</button>
-          <button class="vchip" data-filter="use_case" data-value="starter">First car</button>
-        </div>
-      </div>
-      <div class="vs-filter-group">
-        <span class="vs-filter-label">Comfortably seats</span>
-        <div class="vchip-row" role="group" aria-label="Filter by seats">
-          <button class="vchip active" data-filter="seats" data-value="">Any</button>
-          <button class="vchip" data-filter="seats" data-value="2">2</button>
-          <button class="vchip" data-filter="seats" data-value="4-5">4&ndash;5</button>
-          <button class="vchip" data-filter="seats" data-value="6">6</button>
-          <button class="vchip" data-filter="seats" data-value="7+">7+</button>
-        </div>
-      </div>
-      <div class="vs-filter-group">
-        <span class="vs-filter-label">Budget</span>
-        <div class="vchip-row" role="group" aria-label="Filter by budget">
-          <button class="vchip active" data-filter="budget" data-value="">Any</button>
-          <button class="vchip" data-filter="budget" data-value="under-10k">Under $10k</button>
-          <button class="vchip" data-filter="budget" data-value="10-15k">$10k &ndash; $15k</button>
-          <button class="vchip" data-filter="budget" data-value="15-20k">$15k &ndash; $20k</button>
-          <button class="vchip" data-filter="budget" data-value="20-30k">$20k &ndash; $30k</button>
-          <button class="vchip" data-filter="budget" data-value="30k+">$30k+</button>
-        </div>
-      </div>
-      <div class="vs-filter-group">
-        <span class="vs-filter-label">Must have <span class="vs-filter-sub">(multi-select)</span></span>
-        <div class="vchip-row" role="group" aria-label="Must-have features">
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="awd-4wd">AWD / 4WD</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="hybrid-ev">Hybrid / EV</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="manual">Manual transmission</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="tow-5000">Tow 5,000+ lbs</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="carplay">Apple CarPlay / Android Auto</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="3-row">3-row seating</button>
-          <button class="vchip vchip-mh" data-filter="must_have" data-value="luxury">Luxury trim / feel</button>
-        </div>
-      </div>
-    </div>
+      <a class="guide-card" href="/inspect/?year=2020&make=Toyota&model=Prius">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; Jun 2026</div>
+        <div class="guide-vehicle">2016&ndash;2022 Toyota Prius</div>
+        <p class="guide-desc">The benchmark hybrid under $20k. We cover gen 4 vs gen 3, catalytic converter theft prevention, and what HV battery health actually costs at 100k+ miles.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
 
-    <!-- Result count + reset -->
-    <div class="vs-meta">
-      <span class="vs-count-text" id="vs-count-text">Loading picks&hellip;</span>
-      <button class="vs-reset-btn" id="vs-reset">Clear filters</button>
-    </div>
+      <a class="guide-card" href="/inspect/?year=2017&make=Chrysler&model=Pacifica">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; Jun 2026</div>
+        <div class="guide-vehicle">2017&ndash;2022 Chrysler Pacifica</div>
+        <p class="guide-desc">Gas vs plug-in hybrid decoded from the VIN. The 9-speed stall, Pentastar cooling risk, and the PHEV fire recalls you must verify before signing.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
 
-    <!-- Vehicle cards — rendered by JS -->
-    <div class="vs-grid" id="vs-grid" aria-live="polite"></div>
+      <a class="guide-card" href="/inspect/?year=2019&make=Ram&model=1500%20Classic">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; Jun 2026</div>
+        <div class="guide-vehicle">2019&ndash;2021 Ram 1500 Classic</div>
+        <p class="guide-desc">The DS-platform Ram sold alongside the redesigned DT &mdash; simpler, no eTorque. The 5.7L Hemi MDS lifters are the buyer&rsquo;s headline risk at 60k&ndash;120k miles.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
+
+      <a class="guide-card" href="/inspect/?year=2021&make=Ford&model=F-150">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; Jun 2026</div>
+        <div class="guide-vehicle">2021&ndash;2023 Ford F-150 (14th gen)</div>
+        <p class="guide-desc">Five engines, two risk profiles. Decode the VIN before you negotiate &mdash; the 3.5L EcoBoost cam-phaser check is the first thing every buyer needs to do.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
+
+      <a class="guide-card" href="/inspect/?year=2019&make=Toyota&model=Tacoma">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; Jun 2026</div>
+        <div class="guide-vehicle">2016&ndash;2022 Toyota Tacoma</div>
+        <p class="guide-desc">The most reliable midsize truck has one real problem: the 6AT transmission hunting at highway speeds. We tell you when it matters and when it doesn&rsquo;t.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
+
+      <a class="guide-card" href="/inspect/?year=2018&make=Toyota&model=Camry">
+        <div class="guide-tag">Buyer&rsquo;s guide &middot; May 2026</div>
+        <div class="guide-vehicle">2018 Toyota Camry</div>
+        <p class="guide-desc">The benchmark used sedan. GDI carbon buildup on the 2.5L and what the 8th VIN digit tells you about inspection priorities before you put down a deposit.</p>
+        <span class="guide-cta">Get inspection checklist &rarr;</span>
+      </a>
+
+    </div>
 
     <div class="vs-footer">
-      <a href="/pinpoint/" class="btn-outline">Browse all picks on Pinpoint &rarr;</a>
+      <a href="/inspect/" class="btn-outline">Browse all inspection checklists &rarr;</a>
     </div>
 
   </div>
@@ -1322,6 +1354,336 @@
   });
 
   // ============================================================
+
+  var INSPECT_CATALOG = {
+    2024: {
+      'Acura': ['MDX', 'RDX', 'TLX'],
+      'Audi': ['e-tron', 'Q3', 'Q5', 'Q7'],
+      'BMW': ['X5'],
+      'Buick': ['Enclave', 'Encore GX', 'Envision'],
+      'Cadillac': ['CT5', 'Escalade', 'XT4'],
+      'Chevrolet': ['Traverse'],
+      'Chrysler': ['300'],
+      'Dodge': ['Challenger'],
+      'Ford': ['Bronco Sport', 'Escape', 'F-150 Lightning', 'Maverick', 'Mustang Mach-E'],
+      'Genesis': ['G70', 'GV70', 'GV80'],
+      'Honda': ['Accord', 'Civic', 'CR-V', 'HR-V', 'Passport'],
+      'Hyundai': ['Elantra', 'IONIQ 5', 'IONIQ 6', 'Sonata', 'Tucson', 'Venue'],
+      'INFINITI': ['QX80'],
+      'Jeep': ['Gladiator', 'Grand Cherokee', 'Wrangler'],
+      'Kia': ['Carnival', 'EV6', 'Forte', 'Seltos', 'Sorento', 'Sportage', 'Stinger', 'Telluride'],
+      'Land Rover': ['Defender'],
+      'Lexus': ['ES', 'UX'],
+      'Lincoln': ['Aviator', 'Corsair', 'Nautilus'],
+      'Mazda': ['CX-30', 'CX-5', 'CX-50', 'CX-90'],
+      'Mercedes-Benz': ['C-Class', 'GLA', 'GLE', 'GLS'],
+      'Nissan': ['Frontier', 'Kicks', 'LEAF', 'Pathfinder', 'Rogue'],
+      'Porsche': ['Cayenne', 'Macan'],
+      'Ram': ['1500 TRX', '2500'],
+      'Rivian': ['R1T'],
+      'Subaru': ['BRZ', 'Forester', 'Outback'],
+      'Tesla': ['Model 3', 'Model Y'],
+      'Toyota': ['4Runner', 'Camry', 'Corolla Cross', 'GR86', 'Highlander', 'RAV4 Prime', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra', 'Venza'],
+      'Volkswagen': ['ID.4', 'Taos', 'Tiguan'],
+      'Volvo': ['S60', 'XC40']
+    },
+    2023: {
+      'Acura': ['RDX'],
+      'Audi': ['Q5'],
+      'BMW': ['5 Series', 'X3', 'X5'],
+      'Buick': ['Enclave'],
+      'Cadillac': ['CT5', 'Escalade', 'XT4', 'XT5'],
+      'Chevrolet': ['Blazer', 'Bolt EV', 'Colorado', 'Silverado 1500', 'Suburban', 'Tahoe', 'Trailblazer', 'Traverse', 'Trax'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['Bronco Sport', 'Expedition', 'Mustang', 'Ranger'],
+      'GMC': ['Acadia', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Honda': ['Accord', 'Civic', 'CR-V', 'HR-V', 'Passport', 'Pilot', 'Ridgeline'],
+      'Hyundai': ['Elantra', 'IONIQ 5', 'Santa Fe'],
+      'Jeep': ['Cherokee', 'Compass', 'Gladiator'],
+      'Kia': ['Carnival', 'Forte', 'Stinger', 'Telluride'],
+      'Lexus': ['ES'],
+      'Lincoln': ['Navigator'],
+      'Mazda': ['CX-30', 'CX-5', 'CX-50', 'CX-9', 'Mazda3', 'Mazda6'],
+      'Nissan': ['Altima', 'Kicks', 'Maxima'],
+      'Subaru': ['Impreza', 'Outback'],
+      'Tesla': ['Model 3', 'Model Y'],
+      'Toyota': ['4Runner', 'Venza'],
+      'Volkswagen': ['Atlas', 'ID.4', 'Taos', 'Tiguan'],
+      'Volvo': ['XC60']
+    },
+    2022: {
+      'Acura': ['RDX'],
+      'Audi': ['A4', 'e-tron', 'Q3', 'Q5', 'Q7'],
+      'BMW': ['5 Series', 'X1', 'X3', 'X5', 'X7'],
+      'Buick': ['Enclave', 'Encore'],
+      'Cadillac': ['CT5', 'Escalade', 'XT4', 'XT5'],
+      'Chevrolet': ['Blazer', 'Bolt EV', 'Colorado', 'Silverado 1500', 'Suburban', 'Tahoe', 'Trailblazer', 'Traverse'],
+      'Chrysler': ['Pacifica'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['Bronco', 'Bronco Sport', 'EcoSport', 'Escape', 'Expedition', 'F-150', 'F-150 Lightning', 'F-250 Super Duty', 'Maverick', 'Mustang', 'Mustang Mach-E', 'Ranger'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Honda': ['Accord', 'Civic', 'CR-V', 'HR-V', 'Insight', 'Odyssey', 'Passport', 'Pilot', 'Ridgeline'],
+      'Hyundai': ['Elantra', 'IONIQ 5', 'Kona', 'Palisade', 'Santa Fe', 'Sonata', 'Tucson', 'Venue'],
+      'Jeep': ['Cherokee', 'Compass', 'Gladiator', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Carnival', 'EV6', 'Forte', 'Seltos', 'Sorento', 'Stinger', 'Telluride'],
+      'Lexus': ['ES', 'GX460', 'RX350', 'UX'],
+      'Lincoln': ['Aviator', 'Corsair', 'Nautilus', 'Navigator'],
+      'Mazda': ['CX-30', 'CX-5', 'CX-9', 'Mazda3', 'Mazda6'],
+      'Mercedes-Benz': ['C-Class', 'GLA', 'GLC', 'GLE', 'GLS'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Kicks', 'LEAF', 'Maxima', 'Pathfinder', 'Rogue', 'Rogue Sport'],
+      'Subaru': ['BRZ', 'Forester', 'Impreza', 'Outback'],
+      'Tesla': ['Model 3', 'Model Y'],
+      'Toyota': ['4Runner', 'Avalon', 'C-HR', 'Corolla', 'Corolla Cross', 'GR86', 'Highlander', 'Prius', 'Prius Prime', 'RAV4', 'RAV4 Prime', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra', 'Venza'],
+      'Volkswagen': ['Atlas', 'ID.4', 'Passat', 'Taos', 'Tiguan'],
+      'Volvo': ['S60', 'XC40', 'XC60', 'XC90']
+    },
+    2021: {
+      'Acura': ['MDX', 'RDX'],
+      'Audi': ['A4', 'e-tron', 'Q3', 'Q5', 'Q7'],
+      'BMW': ['5 Series', 'X1', 'X3', 'X5', 'X7'],
+      'Buick': ['Enclave', 'Encore'],
+      'Cadillac': ['CT5', 'Escalade', 'XT4', 'XT5'],
+      'Chevrolet': ['Blazer', 'Bolt EV', 'Colorado', 'Silverado 1500', 'Suburban', 'Tahoe', 'Trailblazer', 'Traverse'],
+      'Chrysler': ['300', 'Pacifica'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['Bronco', 'Bronco Sport', 'EcoSport', 'Escape', 'Expedition', 'F-150', 'F-250 Super Duty', 'Mustang', 'Mustang Mach-E', 'Ranger'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Genesis': ['G70', 'GV70', 'GV80'],
+      'Honda': ['Accord', 'CR-V', 'HR-V', 'Insight', 'Odyssey', 'Passport', 'Pilot', 'Ridgeline'],
+      'Hyundai': ['Elantra', 'Kona', 'Palisade', 'Santa Fe', 'Sonata', 'Venue'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Cherokee', 'Compass', 'Gladiator', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Forte', 'Stinger', 'Telluride'],
+      'Lexus': ['ES', 'GX460', 'NX', 'RX350', 'UX'],
+      'Lincoln': ['Aviator', 'Corsair', 'Nautilus', 'Navigator'],
+      'Mazda': ['CX-30', 'CX-5', 'CX-9', 'Mazda3', 'Mazda6'],
+      'Mercedes-Benz': ['GLA', 'GLC', 'GLE', 'GLS'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Kicks', 'LEAF', 'Maxima', 'Rogue', 'Rogue Sport', 'Titan'],
+      'Ram': ['1500 Classic'],
+      'Subaru': ['Forester', 'Impreza', 'Outback', 'WRX'],
+      'Tesla': ['Model 3', 'Model Y'],
+      'Toyota': ['4Runner', 'Avalon', 'C-HR', 'Corolla', 'Highlander', 'Land Cruiser', 'Prius', 'Prius Prime', 'RAV4', 'RAV4 Prime', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra', 'Venza'],
+      'Volkswagen': ['Atlas', 'Golf', 'ID.4', 'Passat', 'Tiguan'],
+      'Volvo': ['S60', 'XC40', 'XC60', 'XC90']
+    },
+    2020: {
+      'Acura': ['MDX', 'RDX'],
+      'Audi': ['A4', 'e-tron', 'Q3', 'Q5', 'Q7'],
+      'BMW': ['5 Series', 'X1', 'X3', 'X5', 'X7'],
+      'Buick': ['Enclave', 'Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Blazer', 'Bolt EV', 'Colorado', 'Equinox', 'Malibu', 'Silverado 1500', 'Suburban', 'Tahoe', 'Traverse'],
+      'Chrysler': ['Pacifica'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['EcoSport', 'Escape', 'Expedition', 'Explorer', 'F-150', 'F-250 Super Duty', 'Mustang', 'Ranger'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Honda': ['Accord', 'CR-V', 'Fit', 'HR-V', 'Insight', 'Odyssey', 'Passport', 'Pilot', 'Ridgeline'],
+      'Hyundai': ['Elantra', 'Kona', 'Palisade', 'Santa Fe', 'Sonata', 'Tucson', 'Venue'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Cherokee', 'Compass', 'Gladiator', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Forte', 'Optima', 'Seltos', 'Sorento', 'Stinger', 'Telluride'],
+      'Lexus': ['ES', 'GX460', 'IS', 'NX', 'RX350', 'UX'],
+      'Lincoln': ['Aviator', 'Corsair', 'Nautilus', 'Navigator'],
+      'Mazda': ['CX-30', 'CX-5', 'CX-9', 'Mazda6'],
+      'Mercedes-Benz': ['GLA', 'GLC', 'GLE', 'GLS'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Kicks', 'LEAF', 'Maxima', 'Pathfinder', 'Rogue', 'Rogue Sport', 'Titan'],
+      'Ram': ['1500 Classic', '1500 TRX', '2500', 'Ram 1500'],
+      'Subaru': ['Forester', 'Impreza', 'Outback', 'WRX'],
+      'Tesla': ['Model 3'],
+      'Toyota': ['4Runner', 'Avalon', 'C-HR', 'Camry', 'Corolla', 'Highlander', 'Highlander Hybrid', 'Land Cruiser', 'Prius', 'Prius Prime', 'RAV4', 'Sequoia', 'Tacoma', 'Tundra'],
+      'Volkswagen': ['Atlas', 'Golf', 'Passat', 'Tiguan'],
+      'Volvo': ['S60', 'XC40', 'XC60', 'XC90']
+    },
+    2019: {
+      'Acura': ['MDX', 'RDX'],
+      'Audi': ['A4', 'Q5'],
+      'BMW': ['3 Series', '5 Series', 'X1', 'X3', 'X5', 'X7'],
+      'Buick': ['Enclave', 'Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Blazer', 'Bolt EV', 'Colorado', 'Cruze', 'Equinox', 'Malibu', 'Silverado 1500', 'Suburban', 'Tahoe', 'Traverse', 'Trax'],
+      'Chrysler': ['Pacifica'],
+      'Dodge': ['Challenger', 'Charger', 'Durango'],
+      'Ford': ['EcoSport', 'Edge', 'Expedition', 'Explorer', 'F-150', 'F-250 Super Duty', 'Fusion', 'Mustang', 'Ranger'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Honda': ['Accord', 'CR-V', 'Fit', 'HR-V', 'Insight', 'Odyssey', 'Passport', 'Pilot', 'Ridgeline'],
+      'Hyundai': ['Elantra', 'Ioniq', 'Kona', 'Santa Fe', 'Sonata', 'Tucson'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Cherokee', 'Compass', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Forte', 'Niro', 'Optima', 'Sorento', 'Soul', 'Sportage', 'Stinger'],
+      'Lexus': ['ES', 'NX'],
+      'Lincoln': ['Navigator'],
+      'Mazda': ['CX-5', 'CX-9', 'Mazda6'],
+      'Mercedes-Benz': ['GLC'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Kicks', 'LEAF', 'Maxima', 'Murano', 'Pathfinder', 'Rogue', 'Rogue Sport', 'Sentra', 'Titan'],
+      'Ram': ['1500 Classic', '2500', 'Ram 1500'],
+      'Subaru': ['Crosstrek', 'Forester', 'Impreza', 'Legacy', 'WRX'],
+      'Tesla': ['Model 3'],
+      'Toyota': ['4Runner', 'Avalon', 'C-HR', 'Camry', 'Corolla', 'Highlander', 'Highlander Hybrid', 'Land Cruiser', 'Prius', 'Prius Prime', 'RAV4', 'RAV4 Hybrid', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra'],
+      'Volkswagen': ['Atlas', 'Golf', 'Jetta', 'Passat', 'Tiguan'],
+      'Volvo': ['XC60', 'XC90']
+    },
+    2018: {
+      'Acura': ['MDX'],
+      'Audi': ['A4', 'Q5'],
+      'BMW': ['3 Series', '5 Series', 'X1', 'X3'],
+      'Buick': ['Enclave', 'Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Bolt EV', 'Colorado', 'Cruze', 'Equinox', 'Malibu', 'Silverado 1500', 'Suburban', 'Tahoe', 'Traverse'],
+      'Chrysler': ['Pacifica'],
+      'Dodge': ['Challenger', 'Charger', 'Durango'],
+      'Ford': ['EcoSport', 'Edge', 'Expedition', 'Explorer', 'F-150', 'F-250 Super Duty', 'Fusion', 'Mustang'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Terrain', 'Yukon'],
+      'Honda': ['Accord', 'CR-V', 'Fit', 'HR-V', 'Odyssey', 'Pilot'],
+      'Hyundai': ['Elantra', 'Kona', 'Sonata', 'Tucson'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Cherokee', 'Compass', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Optima', 'Sorento', 'Soul', 'Sportage', 'Stinger'],
+      'Lexus': ['NX'],
+      'Lincoln': ['Navigator'],
+      'Mazda': ['CX-5', 'CX-9', 'Mazda3', 'Mazda6'],
+      'Mercedes-Benz': ['C-Class', 'GLC'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Kicks', 'Maxima', 'Murano', 'Pathfinder', 'Rogue', 'Rogue Sport', 'Sentra', 'Titan'],
+      'Subaru': ['Crosstrek', 'Impreza', 'Legacy', 'WRX'],
+      'Toyota': ['4Runner', 'Avalon', 'C-HR', 'Camry', 'Camry Hybrid', 'Corolla', 'Highlander', 'Highlander Hybrid', 'Land Cruiser', 'Prius', 'Prius Prime', 'RAV4', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra'],
+      'Volkswagen': ['Atlas', 'Golf', 'Jetta', 'Passat', 'Tiguan'],
+      'Volvo': ['XC60', 'XC90']
+    },
+    2017: {
+      'Acura': ['MDX'],
+      'Audi': ['A4'],
+      'BMW': ['3 Series', '5 Series', 'X1'],
+      'Buick': ['Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Bolt EV', 'Colorado', 'Cruze', 'Equinox', 'Malibu', 'Silverado 1500', 'Suburban', 'Tahoe'],
+      'Chrysler': ['Pacifica'],
+      'Dodge': ['Challenger', 'Charger', 'Durango'],
+      'Ford': ['Edge', 'Explorer', 'F-150', 'Fusion', 'Mustang'],
+      'GMC': ['Acadia', 'Canyon', 'Sierra 1500', 'Yukon'],
+      'Honda': ['Civic', 'CR-V', 'Fit', 'HR-V', 'Odyssey', 'Pilot'],
+      'Hyundai': ['Elantra', 'Sonata', 'Tucson'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Compass', 'Grand Cherokee', 'Renegade', 'Wrangler'],
+      'Kia': ['Optima', 'Sorento', 'Soul', 'Sportage'],
+      'Lexus': ['NX'],
+      'Mazda': ['CX-5', 'CX-9', 'Mazda6'],
+      'Mercedes-Benz': ['GLC'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Armada', 'Frontier', 'Maxima', 'Murano', 'Pathfinder', 'Rogue', 'Rogue Sport', 'Sentra', 'Titan'],
+      'Subaru': ['Crosstrek', 'Impreza', 'Legacy', 'Outback', 'WRX'],
+      'Toyota': ['4Runner', 'Avalon', 'Corolla', 'Highlander', 'Highlander Hybrid', 'Land Cruiser', 'Prius', 'Prius Prime', 'RAV4', 'Sequoia', 'Sienna', 'Tacoma', 'Tundra'],
+      'Volkswagen': ['Jetta', 'Passat'],
+      'Volvo': ['XC90']
+    },
+    2016: {
+      'BMW': ['3 Series', 'X1'],
+      'Buick': ['Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Colorado', 'Cruze', 'Malibu', 'Silverado 1500', 'Suburban', 'Tahoe'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['Escape', 'Explorer', 'F-150', 'Fusion', 'Mustang'],
+      'GMC': ['Canyon', 'Sierra 1500', 'Yukon'],
+      'Honda': ['Civic', 'CR-V', 'Fit', 'HR-V', 'Odyssey', 'Pilot'],
+      'Hyundai': ['Elantra', 'Sonata', 'Tucson'],
+      'INFINITI': ['QX60'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Kia': ['Optima', 'Sorento', 'Soul', 'Sportage'],
+      'Lexus': ['NX'],
+      'Mazda': ['CX-5', 'CX-9', 'Mazda3', 'Mazda6'],
+      'Mercedes-Benz': ['GLC'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Frontier', 'Maxima', 'Pathfinder', 'Rogue', 'Sentra', 'Titan'],
+      'Subaru': ['Crosstrek', 'Legacy', 'Outback', 'WRX'],
+      'Toyota': ['4Runner', 'Avalon', 'Corolla', 'Highlander', 'Land Cruiser', 'Prius', 'RAV4', 'Sequoia', 'Sienna', 'Tundra'],
+      'Volkswagen': ['Jetta', 'Passat'],
+      'Volvo': ['XC90']
+    },
+    2015: {
+      'BMW': ['3 Series'],
+      'Buick': ['Encore'],
+      'Cadillac': ['Escalade'],
+      'Chevrolet': ['Colorado', 'Silverado 1500', 'Suburban', 'Tahoe'],
+      'Chrysler': ['300'],
+      'Dodge': ['Challenger', 'Durango'],
+      'Ford': ['Escape', 'Explorer', 'F-150', 'Fusion', 'Mustang'],
+      'GMC': ['Canyon', 'Sierra 1500', 'Yukon'],
+      'Honda': ['CR-V', 'Fit', 'Odyssey'],
+      'Hyundai': ['Sonata'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Lexus': ['GX460', 'IS', 'NX', 'RX350', 'UX'],
+      'Mazda': ['CX-5', 'Mazda6'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Frontier', 'Pathfinder', 'Rogue', 'Sentra'],
+      'Subaru': ['Crosstrek', 'Legacy', 'Outback', 'WRX'],
+      'Toyota': ['4Runner', 'Corolla', 'Highlander', 'Prius', 'RAV4', 'Sequoia', 'Sienna', 'Tundra']
+    },
+    2014: {
+      'Acura': ['MDX', 'TLX', 'TSX'],
+      'BMW': ['3 Series'],
+      'Buick': ['Encore'],
+      'Chevrolet': ['Silverado 1500', 'Volt'],
+      'Ford': ['Escape'],
+      'Honda': ['Accord', 'CR-V', 'Odyssey', 'Ridgeline'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Lexus': ['GX460'],
+      'Mazda': ['CX-5', 'Mazda3', 'Mazda6'],
+      'Mitsubishi': ['Outlander'],
+      'Nissan': ['Altima', 'Frontier', 'Pathfinder', 'Rogue'],
+      'Toyota': ['4Runner', 'Corolla', 'Highlander', 'Prius', 'RAV4', 'Tacoma', 'Tundra'],
+      'Volkswagen': ['Jetta GLI']
+    },
+    2013: {
+      'BMW': ['3 Series'],
+      'Ford': ['Escape'],
+      'Honda': ['CR-V', 'Ridgeline'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Kia': ['Sportage'],
+      'Lexus': ['GX460'],
+      'Mazda': ['CX-5'],
+      'Nissan': ['Altima', 'Frontier', 'Pathfinder', 'Sentra'],
+      'Subaru': ['Forester'],
+      'Toyota': ['Prius', 'RAV4', 'Sienna', 'Tacoma'],
+      'Volkswagen': ['Jetta']
+    },
+    2012: {
+      'BMW': ['3 Series'],
+      'Honda': ['CR-V', 'Ridgeline'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Lexus': ['RX 350'],
+      'Nissan': ['Frontier'],
+      'Subaru': ['Forester'],
+      'Toyota': ['4Runner', 'Prius', 'Tacoma'],
+      'Volkswagen': ['GTI Mk6']
+    },
+    2011: {
+      'Acura': ['MDX'],
+      'Honda': ['Ridgeline'],
+      'Jeep': ['Grand Cherokee', 'Wrangler'],
+      'Lexus': ['RX 350'],
+      'Subaru': ['Forester'],
+      'Toyota': ['4Runner', 'Highlander', 'Tacoma']
+    },
+    2010: {
+      'Acura': ['MDX'],
+      'Honda': ['Ridgeline'],
+      'Jeep': ['Wrangler'],
+      'Lexus': ['RX 350'],
+      'Subaru': ['Forester'],
+      'Toyota': ['4Runner', 'Highlander', 'Tacoma']
+    },
+    2009: {
+      'Honda': ['Ridgeline'],
+      'Subaru': ['Forester'],
+      'Toyota': ['4Runner', 'Highlander']
+    },
+    2008: {
+      'Honda': ['CR-V'],
+      'Toyota': ['4Runner', 'Highlander']
+    }
+  };
 
   var inForm = document.getElementById('inspect-form');
   var inYear = document.getElementById('in-year');
