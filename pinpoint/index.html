@@ -651,8 +651,9 @@
   .vehicle-search-section {
     background: var(--slate-white);
     border-top: 3px solid var(--electric);
-    padding: 72px 24px 80px;
+    padding: 112px 24px 80px;          /* more breathing room from pp-brief above */
   }
+  .vs-header { margin-bottom: 48px; }   /* extra space between eyebrow/title and the filter UI */
   .vs-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -983,9 +984,14 @@
   <nav class="nav">
     <a href="/" class="brand"><img src="/assets/img/logo-dark.png" class="brand-logo" height="40" alt="AutoVetting"></a>
     <div class="nav-links">
-      <a href="/pinpoint/" aria-current="page">Pinpoint</a>
-      <a href="/search/">Search</a>
-      <a href="/inspect/">Inspect</a>
+      <a href="/pinpoint/" class="nav-step" aria-current="page"><span class="nav-step-num">1</span> Pinpoint</a>
+      <a href="/search/" class="nav-step"><span class="nav-step-num">2</span> Search</a>
+      <a href="/inspect/" class="nav-step"><span class="nav-step-num">3</span> Inspect</a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="/repair/">Guides</a>
+      <a href="/maintenance/">Maintenance</a>
+      <a href="/garage/">My Garage</a>
+      <a href="/about/">About</a>
     </div>
   </nav>
 </header>

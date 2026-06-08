@@ -284,6 +284,55 @@ def gate_brief_module_intact():
 
 
 # ============================================================
+# G15 (CRIT) — every standard page has the same set of <nav class="nav"> hrefs
+# Catches: nav drift (inspect/ had only 3 links while about/, repair/, garage/ had 5)
+# ============================================================
+def gate_nav_consistency():
+    # Pages intentionally outside the canonical nav (private preview, sub-tools)
+    EXCLUDE = {"next/index.html", "homepage-test/index.html"}
+    hrefs_by_page = {}
+    for p in all_html_pages():
+        rel = str(p.relative_to(REPO))
+        if rel in EXCLUDE:
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        m = re.search(r'<nav class="nav">([\s\S]+?)</nav>', h)
+        if not m:
+            continue
+        # Collect every href inside the nav block
+        hrefs = tuple(sorted(set(re.findall(r'href="([^"]+)"', m.group(1)))))
+        hrefs_by_page[str(p.relative_to(REPO))] = hrefs
+    if not hrefs_by_page:
+        critical("Nav structure consistent across pages", True)
+        return
+    # Find the most common shape — every other page must match it
+    from collections import Counter
+    canonical = Counter(hrefs_by_page.values()).most_common(1)[0][0]
+    outliers = [pg for pg, h in hrefs_by_page.items() if h != canonical]
+    critical("Nav structure consistent across pages",
+             not outliers,
+             f"canonical={list(canonical)}; outliers={outliers[:5]}")
+
+
+# ============================================================
+# G16 (WARN) — sections that follow a contrasting-bg module need breathing room
+# Catches: 'Find your next car' butting up against pp-brief above it
+# ============================================================
+def gate_section_breathing_room():
+    bad = []
+    # Right now we only check pinpoint's vehicle-search-section — extend as patterns repeat
+    p = REPO / "pinpoint/index.html"
+    if p.exists():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        m = re.search(r"\.vehicle-search-section\s*\{[^}]*?padding:\s*(\d+)px", h)
+        if m and int(m.group(1)) < 96:
+            bad.append(f"pinpoint/index.html: vehicle-search-section padding-top is {m.group(1)}px (need >=96 after pp-brief above it)")
+    warn("Section breathing-room (vehicle-search padding >= 96px)", not bad, "; ".join(bad))
+
+
+
+
+# ============================================================
 # G7 (CRIT) — banned: single-quoted JS strings with inner apostrophes
 # Catches: Toyota's / Honda's bugs that breaks entire IIFE
 # ============================================================
@@ -411,7 +460,9 @@ def main():
         gate_no_orphan_checklists,
         gate_jsonld_covers_vehicles,
         gate_brief_module_intact,
+        gate_nav_consistency,
         gate_no_unsafe_apostrophes,
+        gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,
         gate_viewport_overflow,
