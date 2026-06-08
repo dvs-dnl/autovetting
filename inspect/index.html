@@ -283,6 +283,105 @@
   }
   .vin-status.ok { color: var(--clear); }
   .vin-status.error { color: var(--critical); }
+  /* ===== VIN $2.99 PILL ===== */
+  .vin-value-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(59,130,246,0.07);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: var(--radius);
+  }
+  .vin-pill-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--electric);
+    white-space: nowrap;
+  }
+  .vin-pill-label {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.4;
+  }
+  .vin-pill-label em {
+    font-style: normal;
+    color: var(--slate-400);
+  }
+  .vin-value-sub {
+    font-size: 12px;
+    color: var(--slate-400);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+  .vin-value-sub strong { color: var(--electric); }
+  /* ===== VALUE FRAMING CARD (in checklist) ===== */
+  .value-framing-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .vfc-label-col {
+    flex: 0 0 auto;
+  }
+  .vfc-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .vfc-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .vfc-price-input {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(255,255,255,0.25);
+    width: 110px;
+    padding: 2px 0;
+    outline: none;
+  }
+  .vfc-price-input:focus { border-bottom-color: var(--electric); }
+  .vfc-pills {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  .vfc-pill {
+    flex: 1;
+    min-width: 160px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .vfc-pill.highlight {
+    background: rgba(59,130,246,0.15);
+    border-color: rgba(59,130,246,0.35);
+  }
+  .vfc-pill-name { font-size: 11px; font-weight: 600; color: var(--slate-400); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .vfc-pill-price { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+  .vfc-pill-pct { font-size: 12px; color: var(--electric); font-family: var(--font-mono); }
+  .vfc-pill-copy { font-size: 11px; color: var(--slate-400); margin-top: 4px; line-height: 1.4; }
+  @media (max-width: 600px) {
+    .value-framing-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .vfc-pills { width: 100%; }
+  }
 
   /* ===== CHECKLIST DISPLAY ===== */
   .checklist-section {
@@ -1510,16 +1609,36 @@
 
 <section class="entry-section">
   <div class="entry-card">
-    <div class="entry-tab" style="max-width: 640px; margin: 0 auto;">
-      <h2>Pick your vehicle</h2>
-      <p class="lead">Choose year, make, and model. Trim is optional. We&rsquo;ll pull the right inspection checklist. Already have a VIN? <a href="/decode/" style="color:var(--electric);font-weight:600;">Decode it first &rarr;</a></p>
-      <div class="ymmt-grid">
-        <select class="ymmt-select" id="year-select"><option value="">Year</option></select>
-        <select class="ymmt-select" id="make-select" disabled><option value="">Make</option></select>
-        <select class="ymmt-select" id="model-select" disabled><option value="">Model</option></select>
-        <select class="ymmt-select" id="trim-select" disabled><option value="">Trim (optional)</option></select>
+    <div class="entry-tabs">
+      <!-- VIN entry (left) -->
+      <div class="entry-tab">
+        <h2>Enter your VIN</h2>
+        <p class="lead">17-character VIN from your door jamb, title, or listing.</p>
+        <div class="vin-input-row">
+          <input class="vin-input" id="vin-input" type="text" maxlength="17" placeholder="e.g. 1HGBH41JXMN109186" autocomplete="off" spellcheck="false">
+          <button class="btn" id="vin-btn" disabled>Decode</button>
+        </div>
+        <div class="vin-status" id="vin-status">&nbsp;</div>
+        <div class="vin-value-pill">
+          <span class="vin-pill-price">$2.99</span>
+          <span class="vin-pill-label">VIN-specific recall status &mdash; <em>coming soon</em></span>
+        </div>
+        <p class="vin-value-sub" id="vin-pct-line">On a $15,000 car that&rsquo;s <strong>0.020%</strong> of the purchase price.</p>
       </div>
-      <button class="btn btn-block" id="lookup-btn" disabled>Get checklist</button>
+      <!-- Divider -->
+      <div class="divider"><span class="divider-label">or</span></div>
+      <!-- YMMT dropdowns (right) -->
+      <div class="entry-tab">
+        <h2>Pick your vehicle</h2>
+        <p class="lead">Choose year, make, and model for your free checklist.</p>
+        <div class="ymmt-grid">
+          <select class="ymmt-select" id="year-select"><option value="">Year</option></select>
+          <select class="ymmt-select" id="make-select" disabled><option value="">Make</option></select>
+          <select class="ymmt-select" id="model-select" disabled><option value="">Model</option></select>
+          <select class="ymmt-select" id="trim-select" disabled><option value="">Trim (optional)</option></select>
+        </div>
+        <button class="btn btn-block" id="lookup-btn" disabled>Get free checklist &rarr;</button>
+      </div>
     </div>
   </div>
 </section>
@@ -17223,6 +17342,29 @@ function renderChecklist(c, vin) {
         </div>
       </div>
     ` : ''}
+    <div class="value-framing-card" id="vfc-block">
+      <div class="vfc-label-col">
+        <div class="vfc-title">Your car&rsquo;s price</div>
+        <div class="vfc-price-row">
+          <span style="font-size:22px;font-weight:700;color:var(--white);">$</span>
+          <input class="vfc-price-input" id="vfc-price" type="number" value="15000" min="1000" max="300000" step="500">
+        </div>
+      </div>
+      <div class="vfc-pills">
+        <div class="vfc-pill">
+          <div class="vfc-pill-name">VIN recall check</div>
+          <div class="vfc-pill-price">$2.99</div>
+          <div class="vfc-pill-pct" id="vfc-vin-pct">0.020% of car value</div>
+          <div class="vfc-pill-copy">Confirms if <em>this</em> VIN&rsquo;s recalls are closed &mdash; not just the model year.</div>
+        </div>
+        <div class="vfc-pill highlight">
+          <div class="vfc-pill-name">Independent inspection</div>
+          <div class="vfc-pill-price">~$150</div>
+          <div class="vfc-pill-pct" id="vfc-insp-pct">1.00% of car value</div>
+          <div class="vfc-pill-copy">A mechanic on a lift sees what a test drive misses. Worth it every time.</div>
+        </div>
+      </div>
+    </div>
   `;
   checklistContent.innerHTML = html;
   // Emit JSON-LD HowTo for the current checklist (SEO/AEO/GEO)
@@ -17271,6 +17413,80 @@ function renderChecklist(c, vin) {
   if (textBtn) textBtn.addEventListener('click', downloadChecklistAsText);
   if (shareBtn) shareBtn.addEventListener('click', copyChecklistLink);
 }
+
+// ---------- VIN INPUT WIRING ----------
+(function() {
+  const vinInput = document.getElementById('vin-input');
+  const vinBtn   = document.getElementById('vin-btn');
+  const vinStatus = document.getElementById('vin-status');
+  const vinPctLine = document.getElementById('vin-pct-line');
+  if (!vinInput) return;
+
+  function fmtPct(price, cost) {
+    if (!price || price < 1) return '—';
+    const pct = (cost / price * 100);
+    return pct < 0.1 ? pct.toFixed(3) + '%' : pct.toFixed(2) + '%';
+  }
+  function updateVinPill() {
+    const price = parseFloat(vinInput.dataset.price) || 15000;
+    if (vinPctLine) {
+      const p = parseFloat(document.getElementById('vfc-price') ? document.getElementById('vfc-price').value : price) || price;
+      vinPctLine.innerHTML = 'On a $' + p.toLocaleString() + ' car that&rsquo;s <strong>' + fmtPct(p, 2.99) + '</strong> of the purchase price.';
+    }
+  }
+
+  vinInput.addEventListener('input', function() {
+    const v = vinInput.value.trim().toUpperCase();
+    vinInput.value = v;
+    const valid = /^[A-HJ-NPR-Z0-9]{17}$/i.test(v);
+    vinInput.classList.toggle('invalid', v.length === 17 && !valid);
+    vinBtn.disabled = !valid;
+    if (v.length === 0) { vinStatus.textContent = ' '; vinStatus.className = 'vin-status'; }
+    else if (v.length < 17) { vinStatus.textContent = (17 - v.length) + ' characters remaining'; vinStatus.className = 'vin-status'; }
+    else if (!valid) { vinStatus.textContent = 'Invalid VIN — check for letters I, O, or Q (not used in VINs)'; vinStatus.className = 'vin-status error'; }
+    else { vinStatus.textContent = 'Valid format ✔'; vinStatus.className = 'vin-status ok'; }
+  });
+
+  vinBtn.addEventListener('click', function() {
+    // Decode model year from VIN position 10 (standard)
+    const v = vinInput.value.trim().toUpperCase();
+    const yearCodes = {A:2010,B:2011,C:2012,D:2013,E:2014,F:2015,G:2016,H:2017,J:2018,K:2019,L:2020,M:2021,N:2022,P:2023,R:2024,S:1995,T:1996,V:1997,W:1998,X:1999,Y:2000,'1':2001,'2':2002,'3':2003,'4':2004,'5':2005,'6':2006,'7':2007,'8':2008,'9':2009};
+    const modelYear = yearCodes[v[9]] || null;
+    vinInput.dataset.price = 15000;
+    // Full VIN decode is the $2.99 paid feature — for now route to YMMT
+    vinStatus.innerHTML = modelYear
+      ? 'Model year <strong>' + modelYear + '</strong> decoded. Select make &amp; model &rarr; or get full VIN recall status for <strong style="color:var(--electric)">$2.99</strong> <em>(coming soon)</em>'
+      : 'VIN accepted. Full decode with recall status — <strong style="color:var(--electric)">$2.99</strong> <em>(coming soon)</em>';
+    vinStatus.className = 'vin-status ok';
+    if (modelYear && document.getElementById('year-select')) {
+      const sel = document.getElementById('year-select');
+      sel.value = String(modelYear);
+      sel.dispatchEvent(new Event('change'));
+    }
+  });
+})();
+
+// ---------- VALUE FRAMING LIVE UPDATE ----------
+document.addEventListener('input', function(e) {
+  if (e.target && e.target.id === 'vfc-price') {
+    const price = parseFloat(e.target.value) || 1;
+    const vinPct  = document.getElementById('vfc-vin-pct');
+    const inspPct = document.getElementById('vfc-insp-pct');
+    function pct(cost) {
+      const p = cost / price * 100;
+      return (p < 0.1 ? p.toFixed(3) : p.toFixed(2)) + '% of car value';
+    }
+    if (vinPct)  vinPct.textContent  = pct(2.99);
+    if (inspPct) inspPct.textContent = pct(150);
+    // also update the VIN entry pill subtitle
+    const vinPctLine = document.getElementById('vin-pct-line');
+    if (vinPctLine) {
+      const p2 = (2.99 / price * 100);
+      const pStr = p2 < 0.1 ? p2.toFixed(3) + '%' : p2.toFixed(2) + '%';
+      vinPctLine.innerHTML = 'On a $' + Math.round(price).toLocaleString() + ' car that&rsquo;s <strong>' + pStr + '</strong> of the purchase price.';
+    }
+  }
+});
 
 function downloadChecklistAsText() {
   const c = currentChecklist;
