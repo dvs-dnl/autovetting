@@ -595,6 +595,27 @@ def gate_no_chrome_overrides():
 
 
 # ============================================================
+# G26 (CRIT) — every standard page links to /assets/css/site.css
+# Catches: silent layout regressions when a page forgets the shared stylesheet
+# (pinpoint had been on its own inline copy; stripping it broke the entire nav)
+# ============================================================
+def gate_site_css_linked():
+    EXEMPT_PAGES = {"next/index.html"}  # private preview, intentional standalone CSS
+    bad = []
+    for p in all_html_pages():
+        rel = str(p.relative_to(REPO))
+        if rel in EXEMPT_PAGES:
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        if 'href="/assets/css/site.css"' not in h:
+            bad.append(rel)
+    critical("Every page links to /assets/css/site.css",
+             not bad, "; ".join(bad[:5]))
+
+
+
+
+# ============================================================
 # G8 (WARN) — logo + favicon path references resolve
 # Catches: broken image links from path typos
 # ============================================================
@@ -715,6 +736,7 @@ def main():
         gate_no_personal_handles,
         gate_lazy_load_imgs,
         gate_no_chrome_overrides,
+        gate_site_css_linked,
         gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,
