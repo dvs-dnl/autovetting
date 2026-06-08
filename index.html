@@ -1781,7 +1781,12 @@
 
     var current = 0;
     setInterval(function () {
-      current = (current + 1) % FRAMES.length;
+      // Advance through frames + the sentinel cell (duplicate of frame 0).
+      // When current reaches FRAMES.length, advance() will animate to the sentinel
+      // then silently snap to 0. Resetting to 1 (not 0) means the next visible step
+      // continues smoothly from frame 0 to frame 1 — no visible jump.
+      current = current + 1;
+      if (current > FRAMES.length) current = 1;
       setTimeout(function () { advance(reels.type, current); }, 0);
       setTimeout(function () { advance(reels.money, current); }, 130);
       setTimeout(function () { advance(reels.priority, current); }, 260);
