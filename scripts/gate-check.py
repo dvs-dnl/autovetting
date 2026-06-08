@@ -382,6 +382,179 @@ def gate_canonical_email():
 
 
 # ============================================================
+# G18 (CRIT) — footer brand line consistent across all pages
+# Catches: footer wordmark drift after the icon-led standardization
+# ============================================================
+def gate_footer_consistency():
+    EXCLUDE = {"next/index.html", "homepage-test/index.html"}
+    brand_re = re.compile(r'<p class="footer-brand">([\s\S]+?)</p>')
+    sigs = {}
+    for p in all_html_pages():
+        rel = str(p.relative_to(REPO))
+        if rel in EXCLUDE:
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        m = brand_re.search(h)
+        if not m:
+            sigs[rel] = "MISSING"
+            continue
+        # Normalize whitespace for the signature
+        sigs[rel] = re.sub(r"\s+", " ", m.group(1)).strip()
+    if not sigs:
+        critical("Footer brand line consistent across pages", True)
+        return
+    from collections import Counter
+    canonical = Counter(sigs.values()).most_common(1)[0][0]
+    outliers = [pg for pg, s in sigs.items() if s != canonical]
+    critical("Footer brand line consistent across pages",
+             not outliers,
+             f"outliers={outliers[:5]}")
+
+
+# ============================================================
+# G19 (CRIT) — favicon family files exist + every page references at least one
+# Catches: partial-replacement regressions (new icon lands but old <link> sticks)
+# ============================================================
+def gate_favicon_family():
+    REQUIRED = ["assets/img/favicon.png", "assets/img/favicon-32.png",
+                "assets/img/favicon-180.png", "favicon.ico"]
+    missing_files = [f for f in REQUIRED if not (REPO / f).exists()]
+    no_link = []
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        if not re.search(r'<link[^>]+rel="(?:icon|shortcut icon|apple-touch-icon)"', h):
+            no_link.append(str(p.relative_to(REPO)))
+    bad = []
+    if missing_files:
+        bad.append(f"missing files: {missing_files}")
+    if no_link:
+        bad.append(f"pages with no favicon <link>: {no_link[:5]}")
+    critical("Favicon family + per-page reference", not bad, "; ".join(bad))
+
+
+# ============================================================
+# G20 (CRIT) — every target="_blank" anchor must carry rel containing noopener
+# Catches: tabnabbing security regressions from copy-pasted external links
+# ============================================================
+def gate_external_link_safety():
+    bad = []
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for m in re.finditer(r'<a\s[^>]*target="_blank"[^>]*>', h):
+            tag = m.group(0)
+            rel = re.search(r'rel="([^"]*)"', tag)
+            if not rel or "noopener" not in rel.group(1):
+                bad.append(f"{p.relative_to(REPO)}: {tag[:100]}")
+                if len(bad) >= 5:
+                    break
+        if len(bad) >= 5:
+            break
+    critical("target=_blank carries rel=noopener", not bad, "; ".join(bad))
+
+
+
+
+# ============================================================
+# G21 (CRIT) — every <img> has an alt attribute
+# Catches: accessibility/SEO regressions (silent for sighted users)
+# ============================================================
+def gate_img_alt_text():
+    bad = []
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        # Match any <img ...> tag — capture full opening tag
+        for m in re.finditer(r"<img\b[^>]*>", h):
+            tag = m.group(0)
+            if "alt=" not in tag:
+                bad.append(f"{p.relative_to(REPO)}: {tag[:120]}")
+                if len(bad) >= 5:
+                    break
+        if len(bad) >= 5:
+            break
+    critical("Every <img> has alt attribute", not bad, "; ".join(bad))
+
+
+# ============================================================
+# G22 (CRIT) — no console.log / console.warn / debugger in shipped JS
+# Catches: forgotten debug instrumentation
+# ============================================================
+def gate_no_debug_cruft():
+    bad = []
+    script_re = re.compile(r"<script(?:\s[^>]*)?>([\s\S]*?)</script>", re.IGNORECASE)
+    # console.warn/error are legitimate runtime reporting; only flag pure-debug families
+    debug_re = re.compile(r"\b(console\.(?:log|debug|info|trace)|debugger\s*;|alert\s*\()")
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for m in script_re.finditer(h):
+            tag = h[m.start():m.start() + 100]
+            if 'type="application/' in tag or "googletagmanager" in tag:
+                continue
+            body = m.group(1)
+            for dm in debug_re.finditer(body):
+                # Allow console.error since it's legitimate runtime reporting
+                bad.append(f"{p.relative_to(REPO)}: {dm.group(0)}")
+                if len(bad) >= 5:
+                    break
+            if len(bad) >= 5:
+                break
+        if len(bad) >= 5:
+            break
+    critical("No debug cruft (console.log / debugger / alert)", not bad, "; ".join(bad))
+
+
+# ============================================================
+# G23 (WARN) — content <img>s should have loading="lazy"
+# Catches: perf regressions when adding new photos to cards/sections
+# ============================================================
+def gate_lazy_load_imgs():
+    bad = []
+    # Allow eager loading on logos + favicons + the first hero image of a page
+    ALLOW_EAGER = ("logo-", "favicon", "/AutoVetting-Icon.png")
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        # Find every <img ...> tag, check src + loading attrs
+        for m in re.finditer(r"<img\b[^>]*>", h):
+            tag = m.group(0)
+            src_m = re.search(r'src="([^"]+)"', tag)
+            if not src_m:
+                continue
+            src = src_m.group(1)
+            if any(s in src for s in ALLOW_EAGER):
+                continue
+            if 'loading="lazy"' not in tag:
+                bad.append(f"{p.relative_to(REPO)}: {src}")
+                if len(bad) >= 6:
+                    break
+        if len(bad) >= 6:
+            break
+    warn("Content imgs use loading=lazy", not bad, "; ".join(bad))
+
+
+# ============================================================
+# G24 (CRIT) — no personal handles (dvs.dnl, dvs-dnl, etc.) in shipped HTML
+# Catches: stale personal identifiers same shape as G17 canonical email
+# ============================================================
+def gate_no_personal_handles():
+    PATTERNS = [r"\bdvs\.dnl\b", r"\bdvs-dnl(?!/autovetting)\b",
+                r"\bdanieldavis@", r"\b@dvsdnl\b"]
+    bad = []
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for pat in PATTERNS:
+            m = re.search(pat, h)
+            if m:
+                bad.append(f"{p.relative_to(REPO)}: {m.group(0)}")
+                if len(bad) >= 5:
+                    break
+        if len(bad) >= 5:
+            break
+    # GitHub repo URL (dvs-dnl/autovetting) is fine; pattern above already excludes it.
+    critical("No personal handles (dvs.dnl, dvs-dnl, danieldavis@)", not bad, "; ".join(bad))
+
+
+
+
+# ============================================================
 # G8 (WARN) — logo + favicon path references resolve
 # Catches: broken image links from path typos
 # ============================================================
@@ -494,6 +667,13 @@ def main():
         gate_nav_consistency,
         gate_no_unsafe_apostrophes,
         gate_canonical_email,
+        gate_footer_consistency,
+        gate_favicon_family,
+        gate_external_link_safety,
+        gate_img_alt_text,
+        gate_no_debug_cruft,
+        gate_no_personal_handles,
+        gate_lazy_load_imgs,
         gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,
