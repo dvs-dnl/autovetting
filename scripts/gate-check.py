@@ -351,6 +351,37 @@ def gate_no_unsafe_apostrophes():
 
 
 # ============================================================
+# G17 (CRIT) — every email address on the site is the canonical contact
+# Catches: generator scripts reverting to a personal address, stale templates
+# ============================================================
+def gate_canonical_email():
+    CANONICAL = "autovetting@gmail.com"
+    # NHTSA / vendor emails that legitimately appear in quoted recall text, etc.
+    # Add to this set only after confirming the address is necessarily external.
+    ALLOW = {CANONICAL, "support@nhtsa.dot.gov"}
+    email_re = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
+    bad = []
+    for p in all_html_pages():
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for m in email_re.finditer(h):
+            addr = m.group(0).lower()
+            if addr in ALLOW:
+                continue
+            # Skip schema.org / data-source URLs that happen to match email pattern
+            if "schema.org" in addr or addr.endswith(".png") or addr.endswith(".webp"):
+                continue
+            bad.append(f"{p.relative_to(REPO)}: {addr}")
+            if len(bad) >= 6:
+                break
+        if len(bad) >= 6:
+            break
+    critical("Canonical contact email (only autovetting@gmail.com)", not bad,
+             "; ".join(bad))
+
+
+
+
+# ============================================================
 # G8 (WARN) — logo + favicon path references resolve
 # Catches: broken image links from path typos
 # ============================================================
@@ -462,6 +493,7 @@ def main():
         gate_brief_module_intact,
         gate_nav_consistency,
         gate_no_unsafe_apostrophes,
+        gate_canonical_email,
         gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,
