@@ -555,6 +555,46 @@ def gate_no_personal_handles():
 
 
 # ============================================================
+# G25 (CRIT) — no per-page CSS overrides of shared chrome selectors
+# Catches: chrome drift (pinpoint had nav-links gap:6px, inspect had gap:24px,
+# while site.css had gap:8px — three different navs across the site)
+# ============================================================
+def gate_no_chrome_overrides():
+    # Pages completely exempt from chrome consistency — private/test variants
+    EXEMPT_PAGES = {"next/index.html"}
+    # Per-(page, selector) extensions that augment the baseline without redefining it
+    ALLOW = {
+        ("pinpoint/index.html", ".site-header"),         # sticky/blur header
+        ("homepage-test/index.html", ".site-header"),    # road-bg test variant
+    }
+    CHROME_SELECTORS = [".site-header", ".nav", ".nav-links", ".nav-links a",
+                        ".brand-logo", ".brand"]
+    bad = []
+    for p in all_html_pages():
+        rel = str(p.relative_to(REPO))
+        if rel in EXEMPT_PAGES:
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for m in re.finditer(r"<style[^>]*>([\s\S]+?)</style>", h):
+            css = m.group(1)
+            for sel in CHROME_SELECTORS:
+                # Match the selector AT THE TOP-LEVEL ONLY (not nested in @media etc.)
+                pat = re.compile(r"^\s*" + re.escape(sel) + r"\s*\{", re.MULTILINE)
+                if not pat.search(css):
+                    continue
+                if (rel, sel) in ALLOW:
+                    continue
+                bad.append(f"{rel}: {sel}")
+                break
+            if bad and bad[-1].startswith(rel):
+                break
+    critical("No per-page chrome overrides (let site.css drive nav/header)",
+             not bad, "; ".join(bad[:5]))
+
+
+
+
+# ============================================================
 # G8 (WARN) — logo + favicon path references resolve
 # Catches: broken image links from path typos
 # ============================================================
@@ -674,6 +714,7 @@ def main():
         gate_no_debug_cruft,
         gate_no_personal_handles,
         gate_lazy_load_imgs,
+        gate_no_chrome_overrides,
         gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,

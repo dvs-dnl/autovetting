@@ -78,40 +78,14 @@
   /* ============================================================
      Header (matches site.css convention)
      ============================================================ */
+  /* Pinpoint-only chrome customization: sticky header with backdrop blur.
+     All baseline header/nav rules inherited from site.css to stay in sync site-wide. */
   .site-header {
-    background: var(--navy);
-    color: var(--white);
-    padding: 16px 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
     position: sticky;
     top: 0;
     z-index: 50;
     backdrop-filter: blur(8px);
     background: rgba(15, 23, 42, 0.96);
-  }
-  .nav {
-    max-width: var(--container);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .brand { display: inline-flex; align-items: center; }
-  .nav-links { display: flex; gap: 6px; align-items: center; font-size: 14px; flex-wrap: wrap; }
-  .nav-links a {
-    color: var(--slate-300);
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: var(--radius);
-    transition: background .15s, color .15s;
-  }
-  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); text-decoration: none; }
-  .nav-links a[aria-current="page"] {
-    color: var(--white);
-    background: rgba(59,130,246,0.18);
-    box-shadow: inset 0 -2px 0 var(--electric);
   }
 
   /* ============================================================
@@ -3885,6 +3859,25 @@
         'fun-to-drive': 'Fun to drive', 'cargo': 'Cargo / towing',
         'off-road': 'Off-road'
       };
+      var USE_CASE_LABELS = {
+        'commute': 'Daily commute', 'family-hauler': 'Family hauler',
+        'road-trip': 'Road trip', 'work-hauling': 'Work / hauling',
+        'weekend-fun': 'Weekend fun', 'outdoor': 'Outdoor / off-road',
+        'starter': 'First car'
+      };
+      var TYPE_LABEL_FALLBACK = TYPE_LABELS || {
+        sedan: 'Sedan', suv: 'SUV', truck: 'Truck',
+        wagon: 'Wagon', hatch: 'Hatchback', 'hybrid-ev': 'Hybrid / EV'
+      };
+      // Rank tier so the catalog leads with Top → Strong → Caution → unknown,
+      // and within tier preserves the curated catalog order.
+      var TIER_RANK = { 'Top': 0, 'Strong': 1, 'Caution': 2 };
+      results = results.slice().sort(function (a, b) {
+        var ra = TIER_RANK[a.tier];
+        var rb = TIER_RANK[b.tier];
+        if (ra == null) ra = 9; if (rb == null) rb = 9;
+        return ra - rb;
+      });
       var html = results.map(function (v, i) {
         var rank = i + 1;
         var tl   = v.tier.toLowerCase();
@@ -3928,7 +3921,7 @@
                 '</div>' +
                 '<div class="stat-block">' +
                   '<span class="stat-label">Body type</span>' +
-                  '<span class="stat-val">' + (USE_CASE_LABELS[v.use_case] || v.use_case) + '</span>' +
+                  '<span class="stat-val">' + (TYPE_LABEL_FALLBACK[v.type] || v.type || '—') + '</span>' +
                 '</div>' +
                 '<div class="stat-block">' +
                   '<span class="stat-label">Budget band</span>' +
@@ -3936,7 +3929,7 @@
                 '</div>' +
                 '<div class="stat-block">' +
                   '<span class="stat-label">Best for</span>' +
-                  '<span class="stat-val">' + (PURPOSE_LABELS[v.purpose] || v.purpose) + '</span>' +
+                  '<span class="stat-val">' + (USE_CASE_LABELS[v.use_case] || PURPOSE_LABELS[v.purpose] || v.use_case || v.purpose || '—') + '</span>' +
                 '</div>' +
               '</div>' +
             '</div>' +
