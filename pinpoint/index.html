@@ -542,17 +542,26 @@
   /* ============================================================
      SKIP THESE
      ============================================================ */
+  /* Skip-these wrapper gets more breathing room than the shared .section default */
+  #skip-these-section {
+    padding: 96px 40px;            /* was 80px 24px — more side air, more vertical */
+  }
   .skip-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 24px;                     /* was 16px */
   }
   .skip-card {
     background: var(--white);
     border: 1px solid var(--slate-200);
     border-left: 4px solid var(--critical);
     border-radius: var(--radius-lg);
-    padding: 20px 22px;
+    padding: 28px 28px;            /* was 20px 22px */
+  }
+  @media (max-width: 720px) {
+    #skip-these-section { padding: 64px 24px; }
+    .skip-grid { gap: 16px; }
+    .skip-card { padding: 22px 22px; }
   }
   .skip-vehicle {
     font-size: 15px;
