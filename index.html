@@ -811,17 +811,13 @@
   .pp-slot.money    { color: #3B82F6; font-variant-numeric: tabular-nums; width: 150px; padding: 0 14px; }
   .pp-slot.priority { width: 260px; }
   .pp-slot.answer {
-    background: #3B82F6;
-    border-color: #3B82F6;
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(59,130,246,0.35);
+    /* same transparent-on-navy treatment as the question pills */
     width: 440px;
-    height: 1.7em;
   }
   .pp-slot.answer.flash {
-    background: #2563EB;
-    box-shadow: 0 0 0 4px rgba(59,130,246,0.25), 0 6px 18px rgba(59,130,246,0.45);
-    transition: background .35s ease, box-shadow .35s ease;
+    /* subtle highlight flash matching the white-on-navy aesthetic */
+    background: rgba(255,255,255,0.18);
+    transition: background .35s ease;
   }
   .pp-reel {
     display: flex; flex-direction: column;
@@ -837,17 +833,22 @@
     flex-shrink: 0;
     font-weight: 700;
   }
-  .pp-slot.answer .pp-cell { height: 1.7em; line-height: 1.7em; }
   .pp-brief-answer-line {
     display: flex; align-items: center; gap: 16px;
     margin-top: 28px;
     flex-wrap: wrap;
     position: relative; z-index: 1;
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 500;
+    color: #CBD5E1;
+    line-height: 1.4;
   }
   .pp-brief-answer-cue {
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: #94A3B8;
+    font-size: inherit;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #CBD5E1;
   }
   .pp-brief-foot {
     margin-top: 40px;
