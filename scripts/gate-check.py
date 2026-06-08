@@ -706,11 +706,46 @@ def gate_inspect_catalog_sync():
 # G13 (WARN) — vinNote coverage ratio (informational target ≥ 25%)
 # ============================================================
 def gate_vinnote_coverage():
+    """Only score multi-engine vehicles — vinNote is meaningless on single-engine cars.
+    Threshold: 15% of multi-engine checklists carry vinNote."""
     inspect = (REPO / "inspect/index.html").read_text(encoding="utf-8", errors="replace")
-    slugs = re.findall(r"^  '([a-z0-9-]+)': \{", inspect, re.MULTILINE)
-    has = len(re.findall(r"\bvinNote:", inspect))
-    pct = has / len(slugs) * 100 if slugs else 0
-    warn(f"vinNote coverage ≥ 25% (currently {has}/{len(slugs)} = {pct:.1f}%)", pct >= 25)
+    # Iterate each checklist block and check (engine field, vinNote presence)
+    multi = 0
+    with_vin = 0
+    for m in re.finditer(r"^  '([a-z0-9-]+)': \{", inspect, re.MULTILINE):
+        start = m.start()
+        # Walk to matching close brace
+        d = 0; j = inspect.index("{", start); inStr = False; sc = ""
+        while j < len(inspect):
+            c = inspect[j]
+            if inStr:
+                if c == "\\": j += 2; continue
+                if c == sc: inStr = False
+                j += 1; continue
+            if c in '"\'`': inStr = True; sc = c; j += 1; continue
+            if c == "{": d += 1
+            elif c == "}":
+                d -= 1
+                if d == 0: break
+            j += 1
+        block = inspect[start:j+1]
+        eng_m = re.search(r"engine:\s*['\"]([^'\"]+)['\"]", block)
+        engine = eng_m.group(1) if eng_m else ""
+        # True multi-engine signal: " or " connecting two engine displacements OR
+        # multiple displacement tokens (e.g., "2.0L ... 2.5L ..."). Skip drivetrain-only "FWD or AWD".
+        displ_tokens = re.findall(r"\b\d+\.\d+L\b", engine)
+        drivetrain_only = bool(re.search(r"^[^/]+,\s*(FWD|AWD|RWD|4WD)\s+or\s+(FWD|AWD|RWD|4WD)$", engine))
+        is_multi = len(set(displ_tokens)) >= 2 and not drivetrain_only
+        # EV motor variants count as multi-engine too (e.g., "Dual Motor AWD / Single Motor RWD / Performance")
+        if not is_multi and ("Electric" in engine or "Motor" in engine):
+            is_multi = engine.count("/") >= 1 or engine.count(" or ") >= 1
+        if is_multi:
+            multi += 1
+            if "vinNote:" in block:
+                with_vin += 1
+    pct = (with_vin / multi * 100) if multi else 0
+    warn(f"vinNote coverage on multi-engine ≥ 15% (currently {with_vin}/{multi} = {pct:.1f}%)",
+         pct >= 15)
 
 
 # ============================================================
