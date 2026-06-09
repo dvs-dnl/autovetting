@@ -11,7 +11,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-*(none)*
+### autovetting-mazda-mx5-nd-launch-2026-06-09 — ready 2026-06-09
+
+- Status: ready
+- Started: 2026-06-09
+- Touched files: inspect/index.html, pinpoint/index.html
+- Notes: 2026-06-09 02:00: Launched Mazda MX-5 Miata ND (2016-2020). Added mazda-mx5-2016 inspection checklist (14 items / 5 sections — airbag recall 24V-695 Critical, 2016-2019 auto TCM recall 19V-072, soft-top leaks, ND1/ND2 155hp/181hp engine split, clutch slave cylinder, rear-diff whine, thin paint, Mazda Connect, i-stop) with vinNote (single 2.0L PE-VPS; ND1/ND2 via 10th VIN digit; recall VIN-check). Wired VEHICLE_MENU MX-5 across 2016-2020 (5 years). Fixed pinpoint inspectUrl model 'MX-5 Miata Club'->'MX-5 Miata' so the existing Pinpoint card link resolves to the new checklist (routing verified 2016/2017/2018/2019/2020->mazda-mx5-2016). Recalls verified fresh via NHTSA/Mazda WebSearch. Pillar blog post written to gitignored _hub (criterion 4). Commit: 303bb2c. Sibling check: no Done(last 10) block shares inspect/index.html or pinpoint/index.html (SEO/repair files only) — no Started backfill needed. Verified against: n/a. Syntax-check: PASS (inspect scripts 2+5, pinpoint). Dead-links: verified (no new static hrefs; pinpoint inspectUrl -> /inspect/ valid). Scanner: PASS (272 files). NOT YET PUSHED — this session has no github network egress (DNS/TCP unreachable); main is 2 ahead of origin (303bb2c + 4b0a52a). Push when networked.
 
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
