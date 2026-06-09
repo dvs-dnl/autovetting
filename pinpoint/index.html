@@ -1015,7 +1015,7 @@
       <span class="pp-slot answer" id="pp-brief-answer-slot"><span class="pp-reel" data-pp-reel="answer"></span></span>
     </div>
     <div class="pp-brief-foot">
-      <a class="pp-brief-cta" href="#find-your-car">See why</a>
+      <a class="pp-brief-cta" href="#find-your-car" onclick="if(typeof gtag==='function')gtag('event','cta_see_why',{page:'pinpoint'});">See why</a>
     </div>
   </div>
 </section>
@@ -1307,12 +1307,26 @@
         : SKIP_CARDS;
       if (visible.length === 0) visible = SKIP_CARDS;
 
-      grid.innerHTML = visible.map(function (c) {
-        return '<div class="skip-card">' +
+      grid.innerHTML = visible.map(function (c, idx) {
+        return '<div class="skip-card" data-skip-idx="' + idx + '">' +
           '<div class="skip-vehicle">' + c.vehicle + '</div>' +
           '<p class="skip-reason">' + c.reason + '</p>' +
         '</div>';
       }).join('');
+      // Track skip-card clicks
+      grid.querySelectorAll('.skip-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            var idx = parseInt(card.getAttribute('data-skip-idx')) || 0;
+            var c = visible[idx];
+            gtag('event', 'skip_walkaway', {
+              vehicle: c ? c.vehicle.slice(0, 60) : '',
+              budget: (document.querySelector('.vchip[data-filter="budget"].active') || {}).getAttribute ? (document.querySelector('.vchip[data-filter="budget"].active').getAttribute('data-value') || '') : '',
+              page: 'pinpoint'
+            });
+          }
+        });
+      });
 
       if (head && sub) {
         if (activeBudget && BUDGET_LABELS[activeBudget]) {
@@ -3958,6 +3972,13 @@
         var filter = btn.getAttribute('data-filter');
         var val    = btn.getAttribute('data-value');
         if (!filter) return;
+        if (typeof gtag === 'function') {
+          gtag('event', 'engage_filter', {
+            filter_type: filter,
+            filter_value: val || '(any)',
+            page: 'pinpoint'
+          });
+        }
         if (filter === 'must_have') {
           var idx = state.must_have.indexOf(val);
           if (idx === -1) {

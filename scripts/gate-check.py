@@ -616,6 +616,31 @@ def gate_site_css_linked():
 
 
 # ============================================================
+# G27 (WARN) — GA4 event tracking present on conversion paths
+# Catches: someone removes/refactors a key event call and silently breaks funnel measurement
+# ============================================================
+def gate_ga_events():
+    EXPECTED = {
+        "pinpoint/index.html": ["engage_filter", "cta_see_why", "skip_walkaway"],
+        "inspect/index.html":  ["run_inspection"],
+        "repair/index.html":   ["open_guide"],
+    }
+    missing = []
+    for rel, events in EXPECTED.items():
+        p = REPO / rel
+        if not p.exists():
+            continue
+        h = p.read_text(encoding="utf-8", errors="replace")
+        for ev in events:
+            # Accept any gtag(...event...EV...) signature regardless of inline-attribute quote style
+            if ("'" + ev + "'") not in h and ('"' + ev + '"') not in h:
+                missing.append(rel + " missing " + ev)
+    warn("GA4 event tracking on conversion paths", not missing, "; ".join(missing[:5]))
+
+
+
+
+# ============================================================
 # G8 (WARN) — logo + favicon path references resolve
 # Catches: broken image links from path typos
 # ============================================================
@@ -772,6 +797,7 @@ def main():
         gate_lazy_load_imgs,
         gate_no_chrome_overrides,
         gate_site_css_linked,
+        gate_ga_events,
         gate_section_breathing_room,
         gate_asset_paths_resolve,
         gate_single_h1,

@@ -438,6 +438,11 @@
       var a = document.createElement('a');
       a.className = 'guide-card';
       a.href = '/repair/' + g.id + '/';
+      a.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'open_guide', { guide_id: g.id, page: 'repair' });
+        }
+      });
       var photoSrc = g.photo ? '/assets/img/' + g.photo + '.webp' : '';
       var photoAlt = g.photoAlt || g.title;
       a.innerHTML =
