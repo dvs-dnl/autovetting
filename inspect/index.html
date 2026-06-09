@@ -3537,7 +3537,7 @@ const CHECKLISTS = {
     engine: '2.5L A25A-FKS I4 (203hp) or 3.5L 2GR-FKS V6 (301hp) — also Hybrid 2.5L',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 8th-gen Camry (XV70) is a major redesign — sharper to drive and better-built than its predecessor. The 4-cylinder A25A has a small oil consumption window to watch. The acoustic laminated windshield on XSE/XLE trims is expensive to replace. A fuel pump recall (20V-391) hits a subset of 2018s. Overall, one of the safest used-car buys under $25k.",
+    summary: "The 8th-gen Camry (XV70) is a major redesign — sharper to drive and better-built than its predecessor. The 4-cylinder A25A has a small oil consumption window to watch. The acoustic laminated windshield on XSE/XLE trims is expensive to replace. A fuel pump recall (20V-012) hits a subset of 2018s. Overall, one of the safest used-car buys under $25k.",
     stats: {
       itemsToCheck: 18,
       recalls: 3,
@@ -3615,12 +3615,12 @@ const CHECKLISTS = {
         title: 'Electrical & Safety',
         items: [
           {
-            title: 'Denso fuel pump recall (20V-391)',
+            title: 'Denso fuel pump recall (20V-012)',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Some 2018 Camry 4-cylinders received Denso low-pressure fuel pumps that can fail, causing stalling or no-start. NHTSA recall 20V-391 — free dealer replacement.',
-            check: '<strong>Check recall 20V-391 completion at nhtsa.gov/recalls using the VIN.</strong> If not completed, schedule dealer appointment or negotiate repair into the deal.',
+            desc: 'Some 2018 Camry 4-cylinders received Denso low-pressure fuel pumps that can fail, causing stalling or no-start. NHTSA recall 20V-012 — free dealer replacement.',
+            check: '<strong>Check recall 20V-012 completion at nhtsa.gov/recalls using the VIN.</strong> If not completed, schedule dealer appointment or negotiate repair into the deal.',
             cost: 'Free under recall',
-            source: 'NHTSA recall 20V-391'
+            source: 'NHTSA recall 20V-012'
           },
           {
             title: 'Toyota Safety Sense-P (TSS-P)',
@@ -3663,11 +3663,11 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '20V-391', title: 'Denso Low-Pressure Fuel Pump', desc: 'May fail causing stall or no-start. Free dealer replacement — verify VIN.' },
+      { number: '20V-012', title: 'Denso Low-Pressure Fuel Pump', desc: 'May fail causing stall or no-start. Free dealer replacement — verify VIN.' },
       { number: '19V-133', title: 'Pre-Collision System Calibration', desc: 'PCS may not detect certain hazards. Free software update.' },
       { number: '18V-004', title: 'Seat Recliner Mechanism', desc: 'Seat may not lock in position; injury risk. Free repair — verify VIN.' }
     ],
-    vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-391), while the 2GR-FKS V6 is one of Toyota\'s most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
+    vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-012), while the 2GR-FKS V6 is one of Toyota\'s most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
     blogUrl: '/blog/2018-toyota-camry-buyers-guide'
   },
 
@@ -11036,7 +11036,7 @@ const CHECKLISTS = {
         { title: '6AT transmission hunting (V6)', risk: 'high', riskLabel: 'High Attention',
           desc: 'The 6-speed automatic on 3rd-gen Tacoma V6 is notorious for hunting and downshifting aggressively in normal driving. Toyota issued multiple TSBs and a software update.',
           check: '<strong>Test transmission behavior in highway stop-and-go — any aggressive hunting or repeated downshifts = TSB update needed.</strong>',
-          cost: '$0 TSB software update / $4,000–$7,000 transmission if mechanical', source: 'Toyota TSB T-SB-0245-19' },
+          cost: '$0 TSB software update / $4,000–$7,000 transmission if mechanical', source: 'Toyota TSB T-SB-0092-20' },
         { title: '2GR-FKS GDI carbon buildup (V6)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Direct injection carbon deposits on intake valves at 80k+ miles.',
           check: '<strong>Test idle smoothness and cold-start response.</strong>',
@@ -11060,7 +11060,7 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: '6AT TSB update + recall check', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Confirm TSB T-SB-0245-19 is documented. Three recalls possible.',
+          desc: 'Confirm TSB T-SB-0092-20 is documented. Three recalls possible.',
           check: '<strong>Run nhtsa.gov/recalls. Ask for TSB record.</strong>',
           cost: 'Standard', source: 'NHTSA' }
       ]}
@@ -11070,7 +11070,7 @@ const CHECKLISTS = {
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
       { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
     ],
-    vinNote: "The 3rd-gen Tacoma (2016–2022) comes in two powertrains — and which one you\u2019re buying changes the inspection entirely. The 8th VIN digit is the fastest split: T\u202f=\u202f3.5L 2GR-FKS V6 (278\u00a0hp, by far the most common trim — SR5, TRD Sport, TRD Off-Road, Limited, TRD Pro); G\u202f=\u202f2.7L 2TR-FE I4 (159\u00a0hp, SR trim access cab only, older port-injection design, no GDI carbon concern). V6 buyers must verify two things the I4 doesn\u2019t need: (1) TSB T-SB-0245-19 — the 6-speed automatic hunting/downshift fix; if the dealer can\u2019t produce the software update record, budget $0–$200 for a dealer re-flash, or simply drive the truck on the highway for 10+ minutes and feel for repeated aggressive downshifts under light throttle. (2) GDI carbon buildup on the 2GR-FKS intake valves — high-mileage V6 trucks (80k+) may benefit from a $400–$800 walnut-blast cleaning. Model-year digit is position 10: G\u202f=\u202f2016, H\u202f=\u202f2017, J\u202f=\u202f2018, K\u202f=\u202f2019, L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022. Run the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine and model year before applying this checklist.",
+    vinNote: "The 3rd-gen Tacoma (2016–2022) comes in two powertrains — and which one you\u2019re buying changes the inspection entirely. The 8th VIN digit is the fastest split: T\u202f=\u202f3.5L 2GR-FKS V6 (278\u00a0hp, by far the most common trim — SR5, TRD Sport, TRD Off-Road, Limited, TRD Pro); G\u202f=\u202f2.7L 2TR-FE I4 (159\u00a0hp, SR trim access cab only, older port-injection design, no GDI carbon concern). V6 buyers must verify two things the I4 doesn\u2019t need: (1) TSB T-SB-0092-20 — the 6-speed automatic hunting/downshift fix; if the dealer can\u2019t produce the software update record, budget $0–$200 for a dealer re-flash, or simply drive the truck on the highway for 10+ minutes and feel for repeated aggressive downshifts under light throttle. (2) GDI carbon buildup on the 2GR-FKS intake valves — high-mileage V6 trucks (80k+) may benefit from a $400–$800 walnut-blast cleaning. Model-year digit is position 10: G\u202f=\u202f2016, H\u202f=\u202f2017, J\u202f=\u202f2018, K\u202f=\u202f2019, L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022. Run the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine and model year before applying this checklist.",
     blogUrl: '/blog/2016-toyota-tacoma-buyers-guide'
   },
 
@@ -15473,12 +15473,12 @@ const CHECKLISTS = {
     make: 'Nissan',
     model: 'Altima',
     trim: '2.5 S / SV / SL / SR / Platinum — also AWD (2.5 only) (L34, 6th gen, 2019–2023)',
-    engine: '2.5L KR20DE inline-4 (182 hp, FWD or AWD) or 2.0L VC20DDT VC-Turbo (248 hp, FWD only on SR/Platinum)',
+    engine: '2.5L PR25DD inline-4 (188 hp, FWD or AWD) or 2.0L KR20DDET VC-Turbo (248 hp, FWD only on SR/Platinum)',
     overallRisk: 'monitor',
     overallRiskLabel: 'Monitor',
-    vinNote: "The L34 Altima offers two distinct engine families: the 2.5L KR20DE (standard on S/SV/SL and all AWD trims) and the 2.0L VC-Turbo VC20DDT (SR and Platinum FWD only). AWD is exclusive to 2.5L models — a VC-Turbo Altima is always FWD. Use /decode/ to confirm the engine from the 8th VIN digit before inspecting; VC-Turbo units carry a separate oil-consumption and bearing-recall risk that the 2.5L does not share.",
+    vinNote: "The L34 Altima offers two distinct engine families: the 2.5L PR25DD (standard on S/SV/SL and all AWD trims) and the 2.0L VC-Turbo KR20DDET (SR and Platinum FWD only). AWD is exclusive to 2.5L models — a VC-Turbo Altima is always FWD. Use /decode/ to confirm the engine from the 8th VIN digit before inspecting; VC-Turbo units carry a separate oil-consumption and bearing-recall risk that the 2.5L does not share.",
     blogUrl: '/blog/2019-nissan-altima-buyers-guide',
-    summary: "The 6th-gen Altima (L34, 2019–2023) is a meaningful improvement over the notoriously fragile L33 generation. The 2.5L KR20DE is a more robust engine than the old QR25DE, and AWD is finally available. Two risks remain: (1) the 2.0L VC-Turbo (SR/Platinum FWD) burns oil and had an engine-bearing recall — verify the ECM update is done; and (2) the CVT8 is better than the old JF015E but still shudders on neglected fluid. A 2.5L AWD model with documented CVT fluid history and a completed camera recall is the safest pick.",
+    summary: "The 6th-gen Altima (L34, 2019–2023) is a meaningful improvement over the notoriously fragile L33 generation. The 2.5L PR25DD is a more robust engine than the old QR25DE, and AWD is finally available. Two risks remain: (1) the 2.0L VC-Turbo (SR/Platinum FWD) burns oil and had an engine-bearing recall — verify the ECM update is done; and (2) the CVT8 is better than the old JF015E but still shudders on neglected fluid. A 2.5L AWD model with documented CVT fluid history and a completed camera recall is the safest pick.",
     stats: {
       itemsToCheck: 14,
       recalls: 2,
@@ -15502,27 +15502,27 @@ const CHECKLISTS = {
           source: 'Nissan L34 service manual; CVT fluid degradation data'
         }
       ]},
-      { title: 'Engine — VC-Turbo and 2.5L KR20DE', items: [
+      { title: 'Engine — VC-Turbo and 2.5L PR25DD', items: [
         { title: 'VC-Turbo oil consumption and bearing recall 25V437 (CRITICAL if equipped)',
           risk: 'critical', riskLabel: 'Critical',
-          desc: 'The 2.0L VC20DDT variable-compression turbo is only on SR/Platinum FWD models. NHTSA 25V437 (June 2025) covers 2019–2020 VC-Turbo Altimas for engine-bearing manufacturing defects that can lead to catastrophic engine failure — fix is an ECM reprogram. Separately, VC-Turbo engines are known to consume 1 quart per 1,500–3,000 miles on some units.',
+          desc: 'The 2.0L KR20DDET variable-compression turbo is only on SR/Platinum FWD models. NHTSA 25V437 (June 2025) covers 2019–2020 VC-Turbo Altimas for engine-bearing manufacturing defects that can lead to catastrophic engine failure — fix is an ECM reprogram. Separately, VC-Turbo engines are known to consume 1 quart per 1,500–3,000 miles on some units.',
           check: '<strong>Run the VIN at nhtsa.gov before purchasing — confirm recall 25V437 is completed on any 2019–2020 VC-Turbo car.</strong> Check the oil level cold; below MIN or milky/foamy oil signals internal damage. Ask for oil-level check records and any dealer recall documentation.',
           cost: '$7,000–$12,000 engine replacement if bearing failure has occurred',
           source: 'NHTSA recall 25V437 (June 2025) — 2019–2020 Nissan Altima VC-Turbo'
         },
         { title: 'VC-Turbo shaft and turbocharger condition (if equipped)',
           risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'The VC20DDT turbocharger relies on consistent oil pressure. Low-oil-level events accelerate turbo bearing wear. Listen for a high-pitched whine from the engine bay under light acceleration at 1,500–2,500 rpm.',
+          desc: 'The KR20DDET turbocharger relies on consistent oil pressure. Low-oil-level events accelerate turbo bearing wear. Listen for a high-pitched whine from the engine bay under light acceleration at 1,500–2,500 rpm.',
           check: '<strong>During the test drive, listen for turbo whine or grinding from the driver-side engine bay under acceleration.</strong> A healthy turbo is nearly inaudible. Any metallic noise = further inspection.',
           cost: '$1,800–$3,500 turbocharger replacement',
           source: 'Nissan technician service reports; AltimaTalk owner forums'
         },
-        { title: '2.5L KR20DE oil level and engine condition (base/SV/SL/AWD)',
+        { title: '2.5L PR25DD oil level and engine condition (base/SV/SL/AWD)',
           risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'The naturally aspirated 2.5L KR20DE is the safer, more durable choice. Not prone to excessive oil consumption. Verify oil is at level and clean. The timing chain is generally long-lived — a brief rattle on cold start at very high mileage (120,000+) warrants inspection but is rare.',
+          desc: 'The naturally aspirated 2.5L PR25DD is the safer, more durable choice. Not prone to excessive oil consumption. Verify oil is at level and clean. The timing chain is generally long-lived — a brief rattle on cold start at very high mileage (120,000+) warrants inspection but is rare.',
           check: '<strong>Check dipstick: oil should be between MIN and MAX, amber to light brown, no grit or burnt smell.</strong> Start the engine cold and listen for the first 10 seconds; a persistent chain rattle after that warrants a timing-chain inspection.',
           cost: '$40–$70 oil change; $800–$1,500 timing chain service if needed',
-          source: 'KR20DE field service data; L34 Altima owner reports'
+          source: 'PR25DD field service data; L34 Altima owner reports'
         }
       ]},
       { title: 'ADAS and Rear Camera', items: [
