@@ -11,15 +11,20 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-### autovetting-recall-audit-20v014-20v501-2026-06-10 — ready 2026-06-10
-
-- Status: ready
-- Started: 2026-06-10
-- Touched files: inspect/index.html
-- Notes: 2026-06-10 02:00: Systemic recall-number audit (the 2026-06-08 Awaiting-Daniel follow-up; GTM-audit priority "fix live recall errors first"). Verified via NHTSA Part 573 reports + WebSearch that 20V-014 is a Triumph motorcycle campaign and 20V-501 is an Altec Industries campaign — both fabricated on all 21 car occurrences. Fixed: 8x Honda/Acura 20V-014 -> 23V-858 (Denso fuel pump, per-model year scopes from Part 573: Accord/Civic/CR-V/HR-V/MDX/RDX 2018-2020, Fit 2018-2019, Passport 2019-2020); Corolla 2020 "valve spring 20V-501" item fully rewritten -> Denso fuel pump 20V-682/20TA02 (no valve-spring recall exists; 5 prose+item+vinNote occurrences); Subaru Impreza/Legacy/Outback 20V-501 -> 21V-587 (WRG-21 fuel pump, 2018-2020); Crosstrek 20V-501 entry DELETED (not covered by 21V-587, no injector recall exists); Prius gen3 fake pump entries (19V-752/20V-014) -> verified 14V-053 inverter IPM (gen3 has no Denso pump recall); Mazda CX-30 20V-501 -> 20V-346 (brake caliper bolts, Mazda 4420F); Mazda6 20V-501 -> 21V-875 (fuel pump, Mazda 5321K); acura-mdx-2018 bogus "EyeSight ECU" 18V-307 entry deleted (EyeSight is Subaru-only). stats.recalls counts reconciled (prius 4->3, crosstrek 3->2, mdx 3->2, corolla 3->2). Commit: 5da009c. Sibling check: overlaps autovetting-mazda-mx5-nd-launch-2026-06-09 (done, Started 2026-06-09) — disjoint regions (recall entries vs MX-5 checklist); Verified against: autovetting-mazda-mx5-nd-launch-2026-06-09. Syntax-check: PASS (scripts 2+5; full CHECKLISTS+VEHICLE_MENU brace-extraction eval: 245 keys / 17 years; tail verified; href count 20==20). Dead-links: verified (no href changes). Scanner: PASS (277 files). ⚠️ FOLLOW-UP queued: 18V-307 appears 11x with 5 different invented defects (Honda fuel pump / Subaru EyeSight / VW roof glass / Mitsubishi injector / Mazda i-ACTIVSENSE) — needs same model-by-model audit next run; 19V-237, 21V-737, 19V-394, 16V-061, 22V-092 from same authoring pattern also unverified.
+*(none)*
 
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
+
+### autovetting-recall-audit-20v014-20v501-2026-06-10 — done 2026-06-10
+
+- Status: done
+- Started: 2026-06-10
+- Touched files: inspect/index.html
+- Notes: 2026-06-10 02:00: Systemic recall-number audit (the 2026-06-08 Awaiting-Daniel follow-up; GTM-audit priority "fix live recall errors first"). Verified via NHTSA Part 573 reports + WebSearch that 20V-014 is a Triumph motorcycle campaign and 20V-501 is an Altec Industries campaign — both fabricated on all 21 car occurrences. Fixed: 8x Honda/Acura 20V-014 -> 23V-858 (Denso fuel pump, per-model year scopes from Part 573: Accord/Civic/CR-V/HR-V/MDX/RDX 2018-2020, Fit 2018-2019, Passport 2019-2020); Corolla 2020 "valve spring 20V-501" item fully rewritten -> Denso fuel pump 20V-682/20TA02 (no valve-spring recall exists; 5 prose+item+vinNote occurrences); Subaru Impreza/Legacy/Outback 20V-501 -> 21V-587 (WRG-21 fuel pump, 2018-2020); Crosstrek 20V-501 entry DELETED (not covered by 21V-587, no injector recall exists); Prius gen3 fake pump entries (19V-752/20V-014) -> verified 14V-053 inverter IPM (gen3 has no Denso pump recall); Mazda CX-30 20V-501 -> 20V-346 (brake caliper bolts, Mazda 4420F); Mazda6 20V-501 -> 21V-875 (fuel pump, Mazda 5321K); acura-mdx-2018 bogus "EyeSight ECU" 18V-307 entry deleted (EyeSight is Subaru-only). stats.recalls counts reconciled (prius 4->3, crosstrek 3->2, mdx 3->2, corolla 3->2). Commit: 8b39a91 (5da009c amended to include this TASKS.md entry). Sibling check: overlaps autovetting-mazda-mx5-nd-launch-2026-06-09 (done, Started 2026-06-09) — disjoint regions (recall entries vs MX-5 checklist); Verified against: autovetting-mazda-mx5-nd-launch-2026-06-09. Syntax-check: PASS (scripts 2+5; full CHECKLISTS+VEHICLE_MENU brace-extraction eval: 245 keys / 17 years; tail verified; href count 20==20). Dead-links: verified (no href changes). Scanner: PASS (277 files). ⚠️ FOLLOW-UP queued: 18V-307 appears 11x with 5 different invented defects (Honda fuel pump / Subaru EyeSight / VW roof glass / Mitsubishi injector / Mazda i-ACTIVSENSE) — needs same model-by-model audit next run; 19V-237, 21V-737, 19V-394, 16V-061, 22V-092 from same authoring pattern also unverified.
+  2026-06-10 02:30: PUSHED by overnight builder via HTTPS+PAT, 970f468..8b39a91. Deploy-gate hook: all CRITICAL gates passed. Moved to Done.
+
+
 
 ### autovetting-mazda-mx5-nd-launch-2026-06-09 — done 2026-06-10
 
