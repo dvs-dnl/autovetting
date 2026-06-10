@@ -3512,7 +3512,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Low-Pressure Fuel Pump', desc: 'Pump may fail and cause stall. Free dealer replacement.' },
+      { number: '23V-858', title: 'Denso Low-Pressure Fuel Pump (2018–2020)', desc: 'Pump impeller may deform and cause stall. Covers 2018–2020 Civic — free dealer replacement, verify by VIN.' },
       { number: '19V-237', title: 'A/C Condenser Refrigerant Leak', desc: 'Extended warranty enhancement — verify replacement on file.' },
       { number: '18V-114', title: 'Driveshaft (manual transmission)', desc: 'Si and Sport 6MT — driveshaft may crack and separate. Verify completion.' },
       { number: '16V-061', title: 'Takata Airbag', desc: 'Certain build dates received affected inflators. Verify replacement.' }
@@ -5340,7 +5340,7 @@ const CHECKLISTS = {
     summary: "The 3rd-gen Prius (ZVW30) is one of the most reliable used cars in any segment — 200,000+ mile examples are common with minimal powertrain drama. The hybrid system itself is robust. Three things require non-negotiable attention at this age: (1) catalytic converter theft is epidemic on Priuses — confirm the car still has one before you do anything else; (2) the HV battery pack is 9–13 years old and deserves a capacity check; and (3) the inverter water pump uses a plastic impeller that fails silently and can destroy the inverter if neglected. The rest is straightforward used-car inspection.",
     stats: {
       itemsToCheck: 17,
-      recalls: 4,
+      recalls: 3,
       ownerComplaints: 1124,
       topComplaintArea: 'Engine / Hybrid System'
     },
@@ -5464,7 +5464,7 @@ const CHECKLISTS = {
           {
             title: 'Open recall campaigns — verify via VIN',
             risk: 'monitor', riskLabel: 'Monitor',
-            desc: 'The 2012–2015 Prius has been subject to multiple recall campaigns over its life. The most significant for the ZVW30 include fuel pump impeller (19V-752 / 20V-014, affects many Toyota models), seat belt pretensioner (select builds), and various software campaigns. All should be complete before purchase.',
+            desc: 'The 2012–2015 Prius has been subject to multiple recall campaigns over its life. The most significant for the ZVW30 include the inverter Intelligent Power Module (14V-053, 2010–2014 Prius — can cause loss of hybrid power and stall), seat belt pretensioner (select builds), and various software campaigns. All should be complete before purchase.',
             check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaigns should be completed at a Toyota dealer at no cost before you sign.',
             cost: 'Free dealer repair',
             source: 'NHTSA recall database'
@@ -5473,8 +5473,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '19V-752', title: 'Fuel Pump Impeller', desc: 'Fuel pump may crack and cause engine stall — verify remedy complete.' },
-      { number: '20V-014', title: 'Fuel Pump (supplemental)', desc: 'Supplemental fuel pump campaign — verify via VIN.' },
+      { number: '14V-053', title: 'Inverter IPM — Loss of Power', desc: 'Inverter power module transistors may fail, causing loss of hybrid power or stall — verify remedy complete.' },
       { number: '12V-471', title: 'ABS Actuator Software (2010–2012)', desc: 'Brake actuator software update — applies to 2010–2012 builds; verify if applicable.' },
       { number: 'Multiple', title: 'Seat belt / airbag campaigns', desc: 'Various safety system campaigns — verify all via VIN at nhtsa.gov/recalls.' }
     ]
@@ -6783,7 +6782,7 @@ const CHECKLISTS = {
     engine: '2.0L FB20B Boxer-4 (152hp) / 2.0L PHEV Hybrid (148hp system)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "2nd-gen Crosstrek (GT platform, 2018+) is the best Crosstrek Subaru has made. Improved ride, better reliability than SH-gen, and the FB20 engine avoids the EJ head-gasket failures. Oil consumption check at 80k+ miles is still good practice on any Subaru. EyeSight windshield replacement is expensive — inspect carefully.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 80, topComplaintArea: 'FB20 oil consumption / EyeSight windshield cost' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 80, topComplaintArea: 'FB20 oil consumption / EyeSight windshield cost' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'FB20 oil consumption (80k+ miles)', risk: 'monitor', riskLabel: 'Monitor',
@@ -6822,8 +6821,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '19V-394', title: 'EyeSight Camera Deactivation', desc: 'May deactivate in certain light — software fix.' },
-      { number: '18V-307', title: 'EyeSight ECU Update', desc: 'ECU calibration update.' },
-      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk on select VINs.' }
+      { number: '18V-307', title: 'EyeSight ECU Update', desc: 'ECU calibration update.' }
     ]
   },
 
@@ -8427,7 +8425,7 @@ const CHECKLISTS = {
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The YD3 MDX is one of the most proven luxury 3-row SUVs on the market. The 3.5L J35Y V6 is Honda's most reliable large engine — runs to 250k+ miles with synthetic oil. 9-speed ZF auto had early hesitation issues but is largely resolved in 2018. Sport Hybrid is genuinely fuel-efficient and the hybrid system is proven. One of the most recommended used luxury SUVs in its class.",
     vinNote: "The 3rd-gen MDX (YD3, 2014–2020) came with two completely different powertrains in 2018, and the inspection priorities differ significantly between them. 3.5L J35Y V6 (290hp, 9-speed automatic, FWD or SH-AWD) is the mainstream engine — fitted to Standard / Technology / Advance / A-Spec trims. Known issues: the ZF 9HP 9-speed transmission had documented shift-quality issues from 2014–2016 that improved meaningfully by 2018, and the SH-AWD rear differential needs fluid service every 30k miles (not on Acura's stock interval). Sport Hybrid (Advance trim only, ~5% of 2018 production): 3.0L J30A5 V6 paired with three electric motors and a 7-speed DCT, total system output 321hp. The hybrid has its own concerns — the lithium-ion battery pack, the electric Super-Handling AWD rear motors, and DCT clutch wear are all separate inspection priorities not relevant to the V6. Tell them apart fastest by the badge on the tailgate (\"Sport Hybrid\" is explicit). Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 105, topComplaintArea: '9-speed ZF hesitation (early) / VCM motor mount wear' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 105, topComplaintArea: '9-speed ZF hesitation (early) / VCM motor mount wear' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'V6 VCM right-rear motor mount wear', risk: 'monitor', riskLabel: 'Monitor',
@@ -8465,8 +8463,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '18V-307', title: 'EyeSight ECU Software', desc: 'Camera calibration update.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 MDX; free replacement, verify by VIN.' },
       { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
     ]
   },
@@ -8514,7 +8511,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 RDX; free replacement, verify by VIN.' },
       { number: '21V-737', title: 'Backup Camera Software', desc: 'Camera display delay — OTA fix.' },
       { number: '19V-394', title: 'Airbag Software', desc: 'Airbag control update.' }
     ]
@@ -9108,7 +9105,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' },
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 HR-V; free replacement, verify by VIN.' },
       { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser pinhole leaks.' }
     ]
   },
@@ -9158,7 +9155,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '19V-394', title: 'EyeSight Camera Deactivation', desc: 'May deactivate in certain light — software fix.' },
       { number: '18V-307', title: 'EyeSight ECU Update', desc: 'ECU calibration update.' },
-      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk on select VINs.' }
+      { number: '21V-587', title: 'Denso Fuel Pump Impeller', desc: 'Low-pressure fuel pump may fail — engine stall risk. 2018–2020 Impreza; free replacement (Subaru WRG-21).' }
     ]
   },
 
@@ -9450,7 +9447,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2019–2020 Passport; free replacement, verify by VIN.' },
       { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' },
       { number: '19V-394', title: 'Airbag Software', desc: 'Deployment calibration update.' }
     ]
@@ -9500,7 +9497,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-088', title: 'Fuel Injector Seal', desc: 'May leak on some builds.' },
-      { number: '20V-501', title: 'Airbag Software', desc: 'Calibration update.' }
+      { number: '20V-346', title: 'Front Brake Caliper Bolts', desc: 'Caliper mounting bolts may loosen — verify remedy complete (Mazda 4420F).' }
     ]
   },
 
@@ -9941,7 +9938,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '19V-394', title: 'EyeSight Camera', desc: 'May deactivate — software fix.' },
       { number: '18V-307', title: 'EyeSight ECU', desc: 'Calibration update.' },
-      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk.' }
+      { number: '21V-587', title: 'Denso Fuel Pump Impeller', desc: 'Low-pressure fuel pump may fail — engine stall risk. 2018–2020 Legacy; free replacement (Subaru WRG-21).' }
     ]
   },
 
@@ -10038,7 +10035,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' },
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2019 Fit; free replacement, verify by VIN.' },
       { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' }
     ]
   },
@@ -10087,7 +10084,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-307', title: 'i-ACTIVSENSE Software', desc: 'Camera calibration update.' },
-      { number: '20V-501', title: 'Fuel Injector O-ring (some builds)', desc: 'May leak — fire risk.' }
+      { number: '21V-875', title: 'Denso Fuel Pump', desc: 'Fuel pump may crack and fail — stall risk. 2018–2020 Mazda6; free replacement (Mazda 5321K).' }
     ]
   },
 
@@ -10376,7 +10373,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 CR-V; free replacement, verify by VIN.' },
       { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' },
       { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
       { number: '18V-114', title: 'Drive Shaft (manual-adjacent)', desc: 'Verify on eligible VINs.' }
@@ -10470,7 +10467,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-394', title: 'EyeSight Camera', desc: 'May deactivate — software fix.' },
-      { number: '20V-501', title: 'Fuel Injector O-ring', desc: 'May leak — fire risk.' },
+      { number: '21V-587', title: 'Denso Fuel Pump Impeller', desc: 'Low-pressure fuel pump may fail — engine stall risk. 2018–2020 Outback; free replacement (Subaru WRG-21).' },
       { number: '22V-092', title: 'Air Bag Module', desc: 'Software update for deployment.' }
     ]
   },
@@ -11053,7 +11050,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-014', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
+      { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 Accord; free replacement, verify by VIN.' },
       { number: '19V-237', title: 'A/C Condenser Enhancement', desc: 'Extended warranty for condenser leaks.' },
       { number: '16V-061', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
       { number: '21V-737', title: 'Backup Camera', desc: 'Display delay — software fix.' }
@@ -11261,10 +11258,10 @@ const CHECKLISTS = {
     engine: '1.8L 2ZR-FAE I4 (139\u00a0hp) or 2.0L M20A-FKS I4 (169\u00a0hp)',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 12th-gen Corolla (E210) is one of the cleanest, most reliable compact cars available used. TNGA platform, genuine multi-link rear suspension, and Toyota Safety Sense 2.0 standard on all trims. The only critical buyer check is the 2020 model year valve spring recall (20V-501) on 1.8L L/LE engines — confirm repair is closed before purchase. Beyond that recall, the E210 is a low-drama buy with excellent long-term reliability prospects.",
+    summary: "The 12th-gen Corolla (E210) is one of the cleanest, most reliable compact cars available used. TNGA platform, genuine multi-link rear suspension, and Toyota Safety Sense 2.0 standard on all trims. The only critical buyer check is the 2020 model year Denso fuel pump recall (20V-682) — confirm the repair is closed before purchase. Beyond that recall, the E210 is a low-drama buy with excellent long-term reliability prospects.",
     stats: {
       itemsToCheck: 16,
-      recalls: 3,
+      recalls: 2,
       ownerComplaints: 382,
       topComplaintArea: 'Fuel/Propulsion / Electrical'
     },
@@ -11273,12 +11270,12 @@ const CHECKLISTS = {
         title: 'Safety Recall — Check First',
         items: [
           {
-            title: 'Valve spring fracture — engine stall risk (2020 L/LE only)',
-            risk: 'critical', riskLabel: 'Critical — Verify on 2020 L/LE trims',
-            desc: 'Toyota recalled certain 2019–2020 Corolla models with the 1.8L 2ZR-FAE Valvematic engine for a valve spring that could fracture, causing sudden engine stall without warning including at highway speed. NHTSA recall 20V-501. The 2.0L M20A-FKS (SE/XSE/XLE trims) and Hybrid are not affected. 2021+ model years do not carry this recall.',
-            check: '<strong>Enter the VIN at nhtsa.gov/recalls before visiting the car.</strong> If the vehicle is a 2020 L or LE trim and the recall shows open, the free dealer repair must be completed before purchase. SE/XSE/XLE buyers and 2021+ buyers can proceed past this step.',
+            title: 'Fuel pump failure — engine stall risk (2020 only)',
+            risk: 'critical', riskLabel: 'Critical — Verify on 2020 cars',
+            desc: 'Toyota recalled the 2020 Corolla in the Denso low-pressure fuel pump campaign (NHTSA 20V-682, Toyota 20TA02): the pump impeller can deform and fail, causing sudden engine stall without restart, including at highway speed. Coverage is VIN-specific, not trim-specific. 2021+ model years are not included.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before visiting the car.</strong> If the vehicle is a 2020 and the recall shows open, the free fuel pump replacement must be completed before purchase. 2021+ buyers can proceed past this step.',
             cost: 'Free dealer repair — non-negotiable on affected VINs',
-            source: 'NHTSA recall 20V-501 (Toyota valve spring fracture)'
+            source: 'NHTSA recall 20V-682 (Toyota 20TA02 fuel pump)'
           }
         ]
       },
@@ -11397,10 +11394,10 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '20V-501', title: 'Valve Spring Fracture — Engine Stall (2020 L/LE)', desc: 'Fractured 2ZR-FAE valve spring can cause sudden engine stall without warning including at highway speed. Critical safety recall; free dealer repair. Affects 2019–2020 L and LE trims.' },
+      { number: '20V-682', title: 'Denso Fuel Pump — Engine Stall (2020)', desc: 'Low-pressure fuel pump impeller may deform and fail, causing engine stall without restart. Free pump replacement; confirm closed by VIN.' },
       { number: 'Verify VIN', title: 'Additional campaigns — check nhtsa.gov/recalls', desc: 'NHTSA data unavailable from build sandbox. Run full VIN at nhtsa.gov/recalls before purchase to see all open campaigns for this specific vehicle.' }
     ],
-    vinNote: 'The 2020+ Toyota Corolla (E210) is the first generation to offer two meaningfully different gasoline powertrains in North America — and the choice matters for inspection priorities. L and LE trims use the 1.8L 2ZR-FAE Valvematic inline-4 (139\u00a0hp); SE, XSE, and XLE trims use the 2.0L M20A-FKS Dynamic Force inline-4 (169\u00a0hp). The fastest decode is the trim badge — LE always means 1.8L; SE/XSE/XLE always means 2.0L. The Hybrid uses the 2ZR-FXE and requires a separate inspection profile. Run the full VIN at <a href="#entry-section">autovetting.com/decode</a> to confirm powertrain via NHTSA vPIC. Model-year digit is position\u00a010: L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022, P\u202f=\u202f2023. If buying a 2020 L or LE: the valve spring recall (20V-501) is the single most important check — confirm it is closed on the specific VIN before purchase.',
+    vinNote: 'The 2020+ Toyota Corolla (E210) is the first generation to offer two meaningfully different gasoline powertrains in North America — and the choice matters for inspection priorities. L and LE trims use the 1.8L 2ZR-FAE Valvematic inline-4 (139\u00a0hp); SE, XSE, and XLE trims use the 2.0L M20A-FKS Dynamic Force inline-4 (169\u00a0hp). The fastest decode is the trim badge — LE always means 1.8L; SE/XSE/XLE always means 2.0L. The Hybrid uses the 2ZR-FXE and requires a separate inspection profile. Run the full VIN at <a href="#entry-section">autovetting.com/decode</a> to confirm powertrain via NHTSA vPIC. Model-year digit is position\u00a010: L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022, P\u202f=\u202f2023. If buying a 2020: the Denso fuel pump recall (20V-682) is the single most important check — confirm it is closed on the specific VIN before purchase.',
     blogUrl: '/blog/2021-toyota-corolla-buyers-guide',
   },
   'chevy-cruze-2017': {
