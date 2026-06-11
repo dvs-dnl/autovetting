@@ -108,6 +108,30 @@
    "component": "2019-2021 Altima Platinum rear camera (R23C3)",
    "source": "verified 2026-06-08 Altima run",
    "verified": "2026-06-08"
+  },
+  "21V090": {
+   "makes": [
+    "Ford"
+   ],
+   "component": "2021 F-150 / 2020-2021 Super Duty windshield bonding (FMVSS 212, paint flow additive); Ford 21C06",
+   "source": "https://static.nhtsa.gov/odi/rcl/2021/RCLRPT-21V090-6921.PDF",
+   "verified": "2026-06-10"
+  },
+  "21V653": {
+   "makes": [
+    "Ford"
+   ],
+   "component": "2021 F-150 Super Cab front seat-belt webbing misrouted (~16,430 units); Ford 21C20",
+   "source": "https://www.nhtsa.gov/press-releases/recall-ford-f150",
+   "verified": "2026-06-10"
+  },
+  "22V142": {
+   "makes": [
+    "Ford"
+   ],
+   "component": "2021 F-150 windshield wiper motor (Trico); Ford 22S12",
+   "source": "https://static.nhtsa.gov/odi/rcl/2022/RCLRPT-22V142-7127.PDF",
+   "verified": "2026-06-10"
   }
  },
  "unverified_legacy": [

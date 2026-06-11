@@ -20,6 +20,28 @@ AutoVetting is a free, unbiased used-car research platform built for buyers who 
 - [Cabin Air Filter](https://autovetting.com/repair/cabin-filter/): Behind-the-glovebox filter swap. 15–30 min, no tools required on most vehicles. Improves HVAC airflow and air quality.
 - [Engine Air Filter](https://autovetting.com/repair/air-filter/): Airbox access and filter replacement. 10–20 min, no tools on most vehicles. Improves fuel economy and engine protection.
 
+## Blog
+
+Source-backed buyer's guides for specific used vehicles. Each guide covers known issues, NHTSA recalls to verify by VIN, best and worst configurations, market pricing, and inspection priorities.
+
+- [Buying a 2016 Mazda MX-5 Miata (ND): the honest guide](https://autovetting.com/blog/2016-mazda-mx5-miata-buyers-guide/): A used 2016-2020 Mazda MX-5 Miata (ND) buyer's guide: the airbag recall on nearly every car, ND1 vs ND2 engines, soft-top leaks, and the safest year to buy.
+- [Buying a 2019–2023 Nissan Altima: the honest guide](https://autovetting.com/blog/2019-nissan-altima-buyers-guide/): Everything you need to know before buying a used 6th-generation Nissan Altima (2019–2023, L34): why the 2.5L PR25DD is the smart pick and the 2.0L KR20DDET VC-Turbo is the one to scrutinize, the June…
+- [Buying a 2016–2022 Toyota Prius: the honest guide](https://autovetting.com/blog/2016-toyota-prius-buyers-guide/): Everything you need to know before buying a used 4th-generation Toyota Prius (2016–2022, ZVW50): the Gen-4 EGR carbon and head-gasket risk, catalytic-converter theft, the J0T engine-harness fire…
+- [Buying a 2017–2022 Chrysler Pacifica: the honest guide](https://autovetting.com/blog/2017-chrysler-pacifica-buyers-guide/): Everything you need to know before buying a used Chrysler Pacifica (2017–2022, RU generation): how the gas V6 and plug-in Hybrid differ and how to decode them, the 948TE 9-speed shift and stall…
+- [Buying a 2019 Ram 1500 Classic (DS): the honest guide](https://autovetting.com/blog/2019-ram-1500-classic-buyers-guide/): Everything you need to know before buying a 2019 Ram 1500 Classic (DS platform): how it differs from the redesigned DT, the two-engine lineup and how to decode it, the 5.7L Hemi MDS lifter risk, the…
+- [Buying a 2021–2023 Ford F-150 (14th gen): the honest guide](https://autovetting.com/blog/2021-ford-f150-buyers-guide/): Everything you need to know before buying a 14th-generation Ford F-150 (2021–2023): the five-engine lineup and how to decode it, the PowerBoost hybrid, cam-phaser and 10-speed checks, early-build…
+- [Buying a 2018–2022 Honda Accord: the honest guide](https://autovetting.com/blog/2018-honda-accord-buyers-guide/): Everything you need to know before buying a 10th-gen Honda Accord (2018–2022): the 1.5T vs 2.0T engine split, the cold-climate oil dilution issue, best years, what to pay, and inspection priorities.
+- [Buying a 2016–2022 Toyota Tacoma: the honest guide](https://autovetting.com/blog/2016-toyota-tacoma-buyers-guide/): Everything you need to know before buying a 3rd-gen Toyota Tacoma (2016–2022): known issues, best years, which engine to pick, what to pay, and inspection priorities.
+- [Buying a 2021 Toyota Corolla: the honest guide](https://autovetting.com/blog/2021-toyota-corolla-buyers-guide/): 
+- [Buying a 2018 Toyota Camry: the honest guide](https://autovetting.com/blog/2018-toyota-camry-buyers-guide/): A direct, data-backed guide to buying a 2018 Toyota Camry (XV70). Known issues, best trims, what to pay, and inspection priorities — before you make an offer.
+- [Buying a 2017 Honda Civic: the honest guide](https://autovetting.com/blog/2017-honda-civic-buyers-guide/): 
+- [Buying a 2014 Toyota Corolla: the honest guide](https://autovetting.com/blog/2014-toyota-corolla-buyers-guide/): Everything a used-car buyer needs to know about the 2014–2019 Toyota Corolla (E170): known issues, best and avoid years, what to pay, and inspection priorities.
+- [Buying a 2010–2012 Lexus RX 350: the honest guide](https://autovetting.com/blog/2010-lexus-rx350-buyers-guide/): The 2010–2012 Lexus RX 350 hides one catastrophic flaw behind its luxury badge — and most buyers never check for it. Here's the complete honest guide to buying one safely.
+- [Buying a 2014 Honda Accord: the honest guide](https://autovetting.com/blog/2014-honda-accord-buyers-guide/): 
+- [Buying a 2014 Chevrolet Silverado 1500: the honest guide](https://autovetting.com/blog/2014-chevrolet-silverado-buyers-guide/): A direct, data-backed guide to buying a 2014 Chevrolet Silverado 1500 (K2XX). AFM lifter failures, engine code splits, what to pay, and inspection priorities — before you make an offer.
+- [Buying a 2014 Acura TSX: the honest guide](https://autovetting.com/blog/2014-acura-tsx-buyers-guide/): The 2014 Acura TSX is the swan-song year of one of the most reliable used cars under $10,000. Here is what to check before you buy — K24Z3 VTC rattle, HID ballast failures, Takata recall, and…
+- [Buying a 2018 Ford F-150: the honest guide](https://autovetting.com/blog/2018-ford-f150-buyers-guide/): 
+
 ## Data Sources
 
 - **NHTSA vPIC API**: Vehicle identification, make/model/year/trim data used throughout Decode and Inspect.
