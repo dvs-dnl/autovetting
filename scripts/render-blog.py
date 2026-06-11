@@ -255,6 +255,10 @@ __JSONLD__<style>
   .blog-card h2 { font-size: 20px; font-weight: 700; color: var(--navy); margin: 5px 0 6px; line-height: 1.3; }
   .blog-card p { font-size: 15px; color: var(--slate-500); line-height: 1.6; margin: 0; }
   .blog-card .bc-more { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--electric); }
+  .post-cta { margin: 42px 0 8px; padding: 22px 24px; border: 1px solid rgba(124,108,255,.35); border-radius: 14px; background: rgba(124,108,255,.07); }
+  .post-cta h2 { margin: 0 0 8px; font-size: 20px; }
+  .post-cta p { margin: 0 0 14px; }
+  .post-cta-btn { display: inline-block; padding: 11px 18px; border-radius: 9px; background: var(--accent, #7c6cff); color: #fff !important; font-weight: 600; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -320,6 +324,26 @@ def trim_dek(desc, limit=170):
 
 
 # ---------------------------------------------------------------- main
+def cta_block(p):
+    from urllib.parse import quote
+    subj = quote(f"Inspection request: {p['title']}")
+    body = quote("Hi AutoVetting,\n\nI would like this car professionally vetted:\n\n"
+                 f"Vehicle: {p['title']}\nVIN: \nListing link: \nZIP code: \nPhone: \nTimeline: \n\n"
+                 "Please send me next steps.")
+    onclick = ("if(typeof gtag==='function')gtag('event','inspection_cta_click',"
+               "{vehicle:'" + p["slug"] + "',page:'blog'})")
+    return (
+        '    <div class="post-cta">\n'
+        '      <h2>Want this exact car professionally vetted?</h2>\n'
+        '      <p>Send us the listing &mdash; we arrange an independent pre-purchase inspection '
+        'and walk you through the findings. From $149, nothing due until we confirm a mechanic '
+        'and a time. Piloting in Phoenix; other US metros by arrangement.</p>\n'
+        f'      <a class="post-cta-btn" href="mailto:autovetting@gmail.com?subject={subj}&amp;body={body}" '
+        f'onclick="{onclick}">Request an inspection</a>\n'
+        '    </div>'
+    )
+
+
 def main():
     posts = []
     skipped = []
@@ -384,6 +408,7 @@ def main():
                 + f'    <h1>{inline(p["title"])}</h1>\n'
                 + f'    <p class="post-meta">{meta_line}</p>\n'
                 + body_html + "\n"
+                + cta_block(p) + "\n"
                 + "  </article>\n</main>\n"
                 + FOOTER)
         outdir = OUT / p["slug"]

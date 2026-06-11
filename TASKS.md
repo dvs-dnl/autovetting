@@ -11,6 +11,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-funnel-cta-ga4-2026-06-10 — ready 2026-06-10
+
+- Status: ready
+- Started: 2026-06-10 (daytime, Daniel-directed — Phase 1 of 90-day plan)
+- Touched files: inspect/index.html, scripts/render-blog.py, blog/* (17 posts re-rendered), blog/index.html
+- Notes: Conversion path v1. inspect: new "Want this exact car professionally vetted?" CTA card after the value-framing block in renderChecklist — prefilled mailto to autovetting@gmail.com (vehicle+VIN), "From $149, nothing due until we confirm a mechanic and a time", Phoenix pilot framing. New GA4 events: checklist_viewed (on render) + inspection_cta_click (on CTA click), matching existing run_inspection param style. blog: same CTA block added to post template (post-cta styles in head <style>), all 17 posts re-rendered, inspection_cta_click onclick. Gates: 28 PASS / 0 CRIT FAIL; inspect byte/line/tail verified (17,728 lines, tail intact), backup /tmp/inspect2.bak. Verified against: autovetting-recall-audit-wave2-ledger-gate-2026-06-10 + blog-deploy (both this session, sequenced; shared files inspect/index.html committed separately — this commit is on top). Detail: Build-Log/2026-06-10-phase1-funnel.md.
+
 ### autovetting-recall-audit-wave2-ledger-gate-2026-06-10 — ready 2026-06-10
 
 - Status: ready
