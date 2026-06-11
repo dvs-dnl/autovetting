@@ -1,0 +1,267 @@
+{
+ "_doc": "Recall campaign-number ledger. gate-check fails on any campaign number in deployed HTML not present here. Numbers move from unverified_legacy to verified ONLY with a primary source (NHTSA API / Part 573 PDF). Audit queue: work unverified_legacy down to zero.",
+ "verified": {
+  "23V858": {
+   "makes": [
+    "Honda",
+    "Acura"
+   ],
+   "component": "Denso low-pressure fuel pump",
+   "source": "https://static.nhtsa.gov/odi/rcl/2023/RCAK-23V858-9680.pdf",
+   "verified": "2026-06-10"
+  },
+  "21V215": {
+   "makes": [
+    "Honda"
+   ],
+   "component": "Denso fuel pump (earlier wave)",
+   "source": "NHTSA 21V-215",
+   "verified": "2026-06-10"
+  },
+  "21V587": {
+   "makes": [
+    "Subaru"
+   ],
+   "component": "Denso fuel pump (WRG-21), 2018-2020 Impreza/Legacy/Outback",
+   "source": "https://static.nhtsa.gov/odi/rcl/2021/RCRIT-21V587",
+   "verified": "2026-06-10"
+  },
+  "20V682": {
+   "makes": [
+    "Toyota",
+    "Lexus"
+   ],
+   "component": "Denso fuel pump expansion (20TA02)",
+   "source": "Toyota newsroom 20V-682 model list",
+   "verified": "2026-06-10"
+  },
+  "20V012": {
+   "makes": [
+    "Toyota",
+    "Lexus"
+   ],
+   "component": "Denso fuel pump (initial)",
+   "source": "NHTSA 20V-012",
+   "verified": "2026-06-10"
+  },
+  "14V053": {
+   "makes": [
+    "Toyota"
+   ],
+   "component": "Prius inverter IPM 2010-2014",
+   "source": "NHTSA 14V-053",
+   "verified": "2026-06-10"
+  },
+  "20V346": {
+   "makes": [
+    "Mazda"
+   ],
+   "component": "CX-30 front brake caliper bolts (4420F)",
+   "source": "https://static.nhtsa.gov/odi/rcl/2020/RCONL-20V346",
+   "verified": "2026-06-10"
+  },
+  "21V875": {
+   "makes": [
+    "Mazda"
+   ],
+   "component": "Denso fuel pump (5321K), 2018-2020 Mazda6",
+   "source": "mazda.oemdtc 5321K",
+   "verified": "2026-06-10"
+  },
+  "16V061": {
+   "makes": [
+    "Honda",
+    "Acura"
+   ],
+   "component": "Takata driver inflator: 2007-2011 CR-V, 2009-2013 Fit, 2007-2014 Ridgeline, 2007-2016 RDX, 2009-2014 TL et al",
+   "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V061000",
+   "verified": "2026-06-10"
+  },
+  "24V695": {
+   "makes": [
+    "Mazda"
+   ],
+   "component": "MX-5 ND airbag",
+   "source": "verified 2026-06-09 MX-5 launch (NHTSA/Mazda)",
+   "verified": "2026-06-09"
+  },
+  "19V072": {
+   "makes": [
+    "Mazda"
+   ],
+   "component": "MX-5 2016-2019 auto TCM",
+   "source": "verified 2026-06-09 MX-5 launch",
+   "verified": "2026-06-09"
+  },
+  "25V437": {
+   "makes": [
+    "Nissan"
+   ],
+   "component": "VC-Turbo engine bearing 2019-2020 Altima subset",
+   "source": "NHTSA 25V437 filed 2025-06-26",
+   "verified": "2026-06-08"
+  },
+  "23V628": {
+   "makes": [
+    "Nissan"
+   ],
+   "component": "2019-2021 Altima Platinum rear camera (R23C3)",
+   "source": "verified 2026-06-08 Altima run",
+   "verified": "2026-06-08"
+  }
+ },
+ "unverified_legacy": [
+  "05V449",
+  "08V528",
+  "10V017",
+  "11V260",
+  "12V395",
+  "12V491",
+  "12V499",
+  "13V252",
+  "13V261",
+  "13V561",
+  "14V028",
+  "14V090",
+  "14V117",
+  "14V153",
+  "14V168",
+  "14V290",
+  "14V292",
+  "14V293",
+  "14V312",
+  "14V327",
+  "14V344",
+  "14V346",
+  "14V350",
+  "14V355",
+  "14V373",
+  "14V394",
+  "14V400",
+  "14V595",
+  "14V657",
+  "14V668",
+  "14V787",
+  "15V025",
+  "15V117",
+  "15V128",
+  "15V258",
+  "15V303",
+  "15V313",
+  "15V340",
+  "15V394",
+  "15V441",
+  "15V461",
+  "15V554",
+  "15V579",
+  "16V028",
+  "16V065",
+  "16V170",
+  "16V244",
+  "16V381",
+  "16V391",
+  "16V433",
+  "16V449",
+  "16V561",
+  "16V586",
+  "16V617",
+  "17V148",
+  "17V178",
+  "17V224",
+  "17V225",
+  "17V226",
+  "17V243",
+  "17V376",
+  "17V525",
+  "17V663",
+  "17V718",
+  "18V004",
+  "18V013",
+  "18V027",
+  "18V044",
+  "18V079",
+  "18V114",
+  "18V117",
+  "18V139",
+  "18V182",
+  "18V226",
+  "18V228",
+  "18V239",
+  "18V395",
+  "18V411",
+  "18V575",
+  "18V579",
+  "18V585",
+  "19V006",
+  "19V075",
+  "19V082",
+  "19V133",
+  "19V154",
+  "19V243",
+  "19V258",
+  "19V268",
+  "19V291",
+  "19V415",
+  "19V485",
+  "19V544",
+  "19V777",
+  "19V876",
+  "19V888",
+  "19V965",
+  "20V003",
+  "20V032",
+  "20V048",
+  "20V051",
+  "20V066",
+  "20V077",
+  "20V092",
+  "20V127",
+  "20V191",
+  "20V239",
+  "20V242",
+  "20V286",
+  "20V332",
+  "20V373",
+  "20V418",
+  "20V579",
+  "20V583",
+  "20V696",
+  "20V697",
+  "20V744",
+  "21V009",
+  "21V020",
+  "21V037",
+  "21V056",
+  "21V065",
+  "21V088",
+  "21V247",
+  "21V259",
+  "21V394",
+  "21V448",
+  "21V485",
+  "21V625",
+  "21V641",
+  "21V650",
+  "21V711",
+  "21V803",
+  "21V827",
+  "22V076",
+  "22V077",
+  "22V150",
+  "22V159",
+  "22V486",
+  "22V592",
+  "22V714",
+  "22V715",
+  "22V867",
+  "22V875",
+  "22V899",
+  "23V093",
+  "23V123",
+  "23V127",
+  "24V536",
+  "24V538",
+  "25V010",
+  "25V236"
+ ]
+}

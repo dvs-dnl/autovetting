@@ -11,10 +11,29 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-recall-audit-wave2-ledger-gate-2026-06-10 — ready 2026-06-10
+
+- Status: ready
+- Started: 2026-06-10 (daytime, Daniel-directed — Phase 0 of 90-day plan)
+- Touched files: inspect/index.html, pinpoint/index.html, scripts/gate-check.py, scripts/recall-ledger.json, _hub/Vehicle-Launch-Spec.md, _hub/Build-Log/2026-06-10-recall-audit-wave2-ledger-gate.md
+- Notes: Recall audit wave 2 — verified 18V-307/19V-237/21V-737/19V-394/22V-092/12V-471 are fabrications (Newmar motorhome/Curbtender truck/MCI coach/Forest River trailer/Navistar truck/Starcraft RV) and 16V-061 is real Honda-Acura Takata misapplied to 14 of 15 uses. Fixed 55 entries in inspect/index.html across 41 checklists (40 deleted, 14 -> generic VIN-check, 1 Ridgeline rescoped); synced 32 stats counts; filled 3 emptied lists. NEW G28 recall-ledger gate (scripts/recall-ledger.json: 13 verified + 152 legacy ratchet) immediately caught + fixed 3 more fabrications in pinpoint cards (20V-501 Corolla valve-spring -> 20V-682, 20V-391 Camry -> 20V-012, 15V-048 F-150 -> VIN-check wording). Gates: 28 PASS / 0 CRIT FAIL; byte/line/tail verified, backups kept. Verified against: autovetting-recall-audit-20v014-20v501-2026-06-10 (continues its queue; same fix policy). Sibling check: no Ready/Done(last 10) item shares inspect/pinpoint files since 8b39a91 (pushed). Detail: Build-Log/2026-06-10-recall-audit-wave2-ledger-gate.md.
+
 *(none)*
 
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
+
+### autovet-seo-content-2019-honda-crv-2026-06-10 — done 2026-06-10
+
+- Status: done
+- Started: 2026-06-10
+- Touched files: _hub/Content/blog/2026-06-10-2019-honda-crv-buyers-guide.md, _hub/Content/_seo-research/2026-06-10-2019-honda-crv.md, _hub/Content/_seo-research/top-500-vehicles.md (Already-covered row)
+- Notes: 2026-06-10: drafted 2019 Honda CR-V pillar post (5th gen 2017–2022; Tier-1 #15).
+  Output: Content/blog/2026-06-10-2019-honda-crv-buyers-guide.md (status: draft, ~2,150 words), Content/_seo-research/2026-06-10-2019-honda-crv.md.
+  Sibling check: Verified against: autovetting-recall-audit-20v014-20v501-2026-06-10 (post recall numbers aligned with audit-verified 21V215/23V858 scope, CR-V 2018–2020), autovetting-mazda-mx5-nd-launch-2026-06-09 (different vehicle). No re-sync needed.
+  Recalls verified via WebSearch primary sources: 19V383 Part 573 PDF (RCLRPT-19V383-5322), 23V858 (RCAK-23V858-9680), 19V865 (cited in prose, no PDF surfaced — Justia record in research file), oil-dilution warranty extension (Consumer Reports), class-action 2019–2023 scope. No fabricated IDs; 12V battery-drain pattern described as complaint pattern, no invented TSB.
+  Standard validation: PASS (no /decode/, footnote-only externals ×6, pinpoint ?q=CR-V + inspect deep-link present, real repair slugs only, TL;DR + 6-question FAQ, read-next slot).
+  NOT in Ready to deploy — drafts in gitignored _hub are private until Daniel reviews and migrates (per task spec; auto-pusher does not watch Content/blog/).
 
 ### autovetting-recall-audit-20v014-20v501-2026-06-10 — done 2026-06-10
 

@@ -773,12 +773,49 @@ def gate_vinnote_coverage():
          pct >= 15)
 
 
+
+
+# ============================================================
+# G28 (CRIT) — recall-number ledger: no unledgered campaign numbers in deployed HTML
+# Catches: fabricated recall numbers (the 20V-014 / 20V-501 / 18V-307 class of error).
+# New numbers may only ship after being added to scripts/recall-ledger.json with a
+# primary source (NHTSA API or Part 573 PDF). Legacy numbers are grandfathered but
+# counted — the audit queue ratchets that count to zero.
+# ============================================================
+def gate_recall_ledger():
+    ledger_path = REPO / "scripts" / "recall-ledger.json"
+    if not ledger_path.exists():
+        critical("Recall-number ledger present", False, "scripts/recall-ledger.json missing")
+        return
+    ledger = json.loads(ledger_path.read_text())
+    known = set(ledger.get("verified", {})) | set(ledger.get("unverified_legacy", []))
+    pages = [REPO / "inspect" / "index.html", REPO / "index.html", REPO / "pinpoint" / "index.html"]
+    unknown = {}
+    legacy_in_use = set()
+    for p in pages:
+        if not p.exists():
+            continue
+        src = p.read_text(encoding="utf-8", errors="replace")
+        for n in set(re.findall(r"\d{2}V-?\d{3}", src)):
+            norm = n.replace("-", "")
+            if norm not in known:
+                unknown.setdefault(str(p.relative_to(REPO)), []).append(n)
+            elif norm in ledger.get("unverified_legacy", []):
+                legacy_in_use.add(norm)
+    critical("Recall numbers all ledgered (no unsourced campaign IDs)",
+             not unknown,
+             "; ".join(f"{f}: {sorted(v)}" for f, v in unknown.items()))
+    warn(f"Recall audit backlog (unverified_legacy in use: {len(legacy_in_use)} — ratchet to 0)",
+         len(legacy_in_use) == 0)
+
+
 # ============================================================
 # Run + report
 # ============================================================
 def main():
     gates = [
         gate_inline_js_syntax,
+        gate_recall_ledger,
         gate_jsonld_valid,
         gate_ga_id_uniform,
         gate_runtime_idents_resolve,
