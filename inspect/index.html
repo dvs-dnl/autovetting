@@ -3957,7 +3957,7 @@ const CHECKLISTS = {
     summary: "The 4th-gen RAV4 (2013–2018) is one of the safest used-SUV picks available — the 2AR-FE engine runs to 200,000+ miles with basic maintenance and Toyota reliability holds firm. The Takata airbag recall is the biggest outstanding issue: verify completion before anything else. Backup cameras fail or fog on high-mileage examples, and liftgate hinges rattle. Otherwise you're buying a well-documented, easy-to-maintain commuter with an excellent parts supply.",
     stats: {
       itemsToCheck: 18,
-      recalls: 3,
+      recalls: 2,
       ownerComplaints: 1240,
       topComplaintArea: 'Electrical System'
     },
@@ -4081,7 +4081,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: 'Takata Airbag', title: 'Takata Airbag Inflator — Critical Safety Recall', desc: 'Inflator may rupture and send metal shrapnel into cabin. Verify VIN at nhtsa.gov/recalls before purchase. Free dealer repair.' },
-      { number: '17V-226', title: 'Fuel Pump — Potential Engine Stall', desc: 'Fuel pump may fail at high temperatures, causing engine stall. Verify completion by VIN.' },
       { number: '18V-228', title: 'Pre-Collision System Software Update', desc: 'PCS may issue a false braking event. Free software update — verify completion.' }
     ]
   },
@@ -4782,7 +4781,7 @@ const CHECKLISTS = {
     summary: "The 3rd-gen Highlander (XU50, 2014–2019) is one of the most refined and reliable three-row crossovers on the used market. The 2GR-FKS V6 is the direct-injection evolution of the legendary 2GR-FE — almost identically reliable, with one new consideration: direct injection accumulates carbon deposits on intake valves over time if not addressed. The 8-speed automatic is smooth and durable. This is a very low-drama inspection — verify the GDI valve situation, confirm the Takata airbag recall has been remedied, test the panoramic roof drains, and you're largely done.",
     stats: {
       itemsToCheck: 17,
-      recalls: 5,
+      recalls: 4,
       ownerComplaints: 481,
       topComplaintArea: 'Power Train'
     },
@@ -4908,8 +4907,7 @@ const CHECKLISTS = {
       { number: 'Multiple', title: 'Takata Airbag Inflator', desc: 'Driver and/or passenger inflator may rupture — critical; verify complete via VIN check.' },
       { number: '14V-153', title: 'Power Window Switch', desc: 'Window switch lubricant can ignite — verify remedy.' },
       { number: '15V-025', title: 'Floor Mat Pedal Interference', desc: 'Same Toyota floor mat campaign — verify floor mats are factory correct.' },
-      { number: '19V-291', title: 'Fuel Pump (V6)', desc: '2014–2015 Highlander fuel pump impeller may crack — verify remedy status.' },
-      { number: '16V-381', title: 'Back-up Camera Display (Limited)', desc: 'Camera display may not show on some start cycles — verify status.' }
+      { number: '19V-291', title: 'Fuel Pump (V6)', desc: '2014–2015 Highlander fuel pump impeller may crack — verify remedy status.' }
     ]
   },
 
@@ -5940,8 +5938,8 @@ const CHECKLISTS = {
     vinNote: "8th VIN digit engine code: \u2018A\u2019 = 2.5L QR25DE I4 (all standard 2014–2020 Rogue). The Rogue Hybrid (2017–2019) uses the MR20 engine; 8th digit \u2018B\u2019 indicates the hybrid drivetrain and requires a completely different inspection protocol — hybrid battery SOH, regenerative brake system, and inverter cooling pump (not covered here). If the VIN decodes to a Hybrid, do not apply this checklist.",
     blogUrl: '/blog/2017-nissan-rogue-buyers-guide',
     stats: {
-      itemsToCheck: 18,
-      recalls: 5,
+      itemsToCheck: 17,
+      recalls: 4,
       ownerComplaints: 1847,
       topComplaintArea: 'Power Train / CVT Transmission'
     },
@@ -6073,14 +6071,7 @@ const CHECKLISTS = {
             cost: 'Free dealer repair',
             source: 'NHTSA recall 22V875000 (2017 Nissan Rogue dash harness corrosion)'
           },
-          {
-            title: 'Recall 20V744 — Denso fuel pump failure (stall risk)',
-            risk: 'critical', riskLabel: 'Critical — Stall Risk',
-            desc: 'NHTSA recall 20V744 covers a broad range of 2017–2021 Rogue and Rogue Sport. A faulty Denso fuel pump impeller can deform and cause the engine to stall without warning, including at highway speed. Free dealer replacement.',
-            check: '<strong>Confirm 20V744 status at nhtsa.gov/recalls using the VIN.</strong> Should show "Completed." Open = do not take delivery without written dealer confirmation of repair.',
-            cost: 'Free dealer repair',
-            source: 'NHTSA recall 20V744 (Denso fuel pump impeller deformation)'
-          },
+          
           {
             title: 'Recalls 23V093000, 17V663000, 16V244000 — additional active campaigns',
             risk: 'high', riskLabel: 'High Attention',
@@ -6094,7 +6085,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '22V875000', title: 'Dash Harness Corrosion — Fire Risk', desc: 'Water intrusion can corrode instrument panel wiring connector — fire risk on select 2017 Rogues. Verify complete.' },
-      { number: '20V744', title: 'Denso Fuel Pump — Engine Stall', desc: 'Fuel pump impeller deformation causes engine stall risk. Free dealer replacement — verify complete.' },
+      
       { number: '23V093000', title: 'Jackknife Ignition Key Collapse', desc: 'Folding key can collapse mid-drive and shut off engine. Dealer spacer fix — verify complete.' },
       { number: '17V663000', title: 'Rear Seat Recliner Welds', desc: 'Defective welds compromise rear-seat crash protection — verify complete.' },
       { number: '16V244000', title: 'Occupant Classification System (OCS)', desc: 'Passenger frontal airbag may be incorrectly disabled — software reflash fix; verify complete.' }
@@ -6106,7 +6097,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp) / 5.7L Hemi eTorque V8 (395hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The DT Ram 1500 is the most refined half-ton truck on the market — but buyers must identify whether they have an eTorque mild-hybrid (BSG belt-starter-generator) and whether the 5.7L Hemi has MDS active fuel management. MDS cylinder deactivation lifters are the same failure vector as the GM AFM units — at 60k–120k miles on neglected oil. The eTorque system adds battery and generator service complexity. Coil-spring rear suspension (not leaf springs) is a major comfort upgrade but limits payload vs competitors.",
-    stats: { itemsToCheck: 14, recalls: 5, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -6114,9 +6105,9 @@ const CHECKLISTS = {
           check: '<strong>Cold-start the engine and listen for a tick that persists past 30 seconds.</strong> Scan for cylinder misfire codes. Check oil change interval records — beyond 7,500 miles increases MDS risk.',
           cost: '$3,000–$6,500 lifter replacement (all 16 + cam)', source: 'NHTSA complaints + Ram service campaigns' },
         { title: 'eTorque BSG system (eTorque models)', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'The belt-starter-generator mild hybrid adds a 48V battery and BSG unit. Early 2019 software had drivability bugs; recall 20V-032 updated PCM calibration.',
-          check: '<strong>Verify recall 20V-032 is complete on eTorque VINs.</strong> Test engine auto-stop/restart — rough restart indicates BSG wear.',
-          cost: '$1,200–$3,500 BSG replacement', source: 'NHTSA recall 20V-032' },
+          desc: 'The belt-starter-generator mild hybrid adds a 48V battery and BSG unit. Early 2019 software had drivability bugs — ask for dealer software-update records.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and confirm every campaign is closed on eTorque VINs.</strong> Test engine auto-stop/restart — rough restart indicates BSG wear.',
+          cost: '$1,200–$3,500 BSG replacement', source: 'NHTSA recall database' },
         { title: '8HP75 transmission fluid and shift quality', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'The ZF 8-speed is generally excellent but shudder at 25–45 mph indicates torque converter contamination from neglected fluid.',
           check: '<strong>Test at highway on-ramp in sport mode.</strong> Shudder during light acceleration is torque converter shudder.',
@@ -6141,15 +6132,13 @@ const CHECKLISTS = {
           cost: '$150–$400 isolator replacement', source: 'Common wear pattern' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'Recall verification (5 open campaigns)', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Run VIN at nhtsa.gov/recalls before purchase. Key campaigns: 20V-032 (eTorque calibration), 19V-154 (park-release software), and any 2019 safety campaigns.',
+        { title: 'Recall verification (open campaigns)', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Run VIN at nhtsa.gov/recalls before purchase. Require every open campaign closed before purchase.',
           check: '<strong>Run the VIN at nhtsa.gov/recalls.</strong> Confirm all campaigns show "remedy available" and "owner notified" — or that dealer-completed records exist.',
           cost: 'Walk away from unrepaired critical safety recalls', source: 'NHTSA recall database' }
       ]}
     ],
     recalls: [
-      { number: '20V-032', title: 'eTorque PCM Calibration', desc: 'eTorque models: PCM update improves auto-stop/restart behavior.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage unexpectedly — software update.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Certain 2019 models: pretensioner may not deploy correctly.' },
       { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' },
       { number: '21V-037', title: 'Transmission Software', desc: 'Transmission may not downshift correctly in cold temps.' }
@@ -6374,14 +6363,14 @@ const CHECKLISTS = {
     year: 2017, make: 'Hyundai', model: 'Tucson', trim: 'SE / Eco / Sport / Limited / Ultimate (TL gen)',
     engine: '2.0L Nu MPI I4 (164hp) / 1.6L Gamma GDI Turbo I4 (175hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The TL Tucson is a competent compact SUV with good road manners — but the 2.0L Nu engine has a documented history of bearing failure and engine seizure (the Theta II successor shares some characteristics). Hyundai's broad engine recall campaign (22V-159 and related) covers select VINs. The 1.6T is the more engaging choice but requires turbo oil-feed line inspection. Confirm knock sensor monitoring (KSDS) recall coverage before purchasing any Tucson in this generation.",
-    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 290, topComplaintArea: 'Engine (bearing failure / seizure)' },
+    summary: "The TL Tucson is a competent compact SUV with good road manners — but the 2.0L Nu engine has a documented history of bearing failure and engine seizure (the Theta II successor shares some characteristics). Hyundai's broad engine recall campaigns cover select VINs. The 1.6T is the more engaging choice but requires turbo oil-feed line inspection. Confirm knock sensor monitoring (KSDS) recall coverage before purchasing any Tucson in this generation.",
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 290, topComplaintArea: 'Engine (bearing failure / seizure)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine bearing / seizure risk', risk: 'high', riskLabel: 'High Attention',
-          desc: "Hyundai's KSDS (Knock Sensor Detection System) recall campaign covers Nu and Theta II engines with bearing wear that can lead to engine seizure. Recall 22V-159 and earlier campaigns apply to specific production ranges.",
+          desc: "Hyundai's KSDS (Knock Sensor Detection System) recall campaign covers Nu and Theta II engines with bearing wear that can lead to engine seizure. Multiple engine campaigns apply to specific production ranges — verify by VIN.",
           check: '<strong>Run the VIN at nhtsa.gov/recalls to confirm all engine recall campaigns are complete.</strong> Listen for a metallic knock at idle — not to be confused with normal injector tick.',
-          cost: '$0 under recall / $5,500–$8,500 engine replacement if seizure occurs', source: 'NHTSA recall 22V-159 + Hyundai KSDS campaign' },
+          cost: '$0 under recall / $5,500–$8,500 engine replacement if seizure occurs', source: 'NHTSA recall database + Hyundai KSDS campaign' },
         { title: '1.6T turbo oil feed line inspection', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'The 1.6 Gamma turbo oil-feed banjo bolt can develop small leaks at the cylinder head junction at 80k+ miles.',
           check: '<strong>Inspect the banjo bolt fitting on the turbo oil line for seepage.</strong> Any leak = address before purchase.',
@@ -6416,11 +6405,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-159', title: 'Engine Bearing Wear — KSDS', desc: 'Knock sensor monitoring for bearing wear. Software update + inspection.' },
-      { number: '20V-051', title: '1.6T Fire Risk — Brake Fluid', desc: 'Brake fluid may contact engine components — fire risk on 1.6T.' },
-      { number: '21V-065', title: 'ABS Hydraulic Control Unit', desc: 'ABS HCU fire risk — dealer replacement.' },
-      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Airbag side curtain may not deploy — repair required.' },
-      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking performance.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6429,7 +6414,7 @@ const CHECKLISTS = {
     engine: '2.0L EcoBoost I4 (245hp) / 2.7L EcoBoost V6 (315hp) / 2.0L EcoBoost AWD Titanium',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Ford Edge is a refined midsize crossover — the 2.7L EcoBoost V6 is the standout powertrain choice, with the 2.0L EcoBoost being adequate but carrying the same internal water pump issue as its sibling engines. PTU (Power Transfer Unit) fluid service on AWD models is the most commonly missed maintenance item and leads to premature failure. The Edge is a solid used buy with documented service history.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L EcoBoost internal water pump', risk: 'high', riskLabel: 'High Attention',
@@ -6473,8 +6458,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '17V-178', title: 'Door Latch Release Mechanism', desc: 'Door may open unexpectedly while driving — replace latch.' },
       { number: '19V-006', title: 'Fuel Injector Seals', desc: '2.0T: fuel injector O-rings may leak — fire risk.' },
-      { number: '18V-117', title: 'Supplemental Restraint System', desc: 'Side airbag may not inflate correctly.' },
-      { number: '20V-127', title: 'ABS Control Module Software', desc: 'ABS software update for stability control behavior.' }
+      { number: '18V-117', title: 'Supplemental Restraint System', desc: 'Side airbag may not inflate correctly.' }
     ]
   },
 
@@ -6483,7 +6467,7 @@ const CHECKLISTS = {
     engine: '2.0L Nu MPI I4 (147hp) / 1.4L Gamma GDI Turbo I4 (128hp, Eco) / 1.6T Sport',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The AD-generation Elantra is a well-built, refined compact sedan — value-priced on the used market. The 2.0L Nu engine shares the broad Hyundai KSDS recall exposure that requires VIN verification. The 1.4T Eco is fuel-efficient but has an unusual bore stroke ratio that warrants careful inspection. The 1.6T Sport is the fun choice. At this price point, Elantra is strong value when recall campaigns are verified complete.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 195, topComplaintArea: 'Engine recall coverage (Nu engine)' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 195, topComplaintArea: 'Engine recall coverage (Nu engine)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
@@ -6525,10 +6509,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak near engine can cause fire — inspect and repair.' },
-      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain airbag may not deploy — repair required.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS hydraulic control unit fire risk.' },
-      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak near engine can cause fire — inspect and repair.' }
     ]
   },
 
@@ -6537,7 +6518,7 @@ const CHECKLISTS = {
     engine: '2.4L GDI Nu I4 (181hp) / 2.0L T-GDI Turbo I4 (240hp SX)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The QL Sportage is a solid compact SUV — good value retention and a comfortable ride. The 2.4L Nu engine is subject to Kia's KSDS recall campaign for rod bearing wear. Verified recall completion is the single most important pre-purchase step. The 2.0T SX is the performance option but requires strict oil intervals.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 165, topComplaintArea: 'Engine KSDS recall / bearing wear' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 165, topComplaintArea: 'Engine KSDS recall / bearing wear' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Nu engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
@@ -6574,8 +6555,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Rod bearing wear monitoring — software update required.' },
-      { number: '20V-051', title: 'Engine Fire Risk', desc: 'Oil can contact hot exhaust on some engines — fire risk.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit fire risk — dealer replacement.' },
       { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
     ]
   },
@@ -6585,7 +6564,7 @@ const CHECKLISTS = {
     engine: '1.6L Gamma GDI I4 (130hp) / 2.0L Nu GDI I4 (161hp) / 1.6T Turbo (201hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen Soul is one of the best-value urban cars on the used market. Practical, distinctive, and generally reliable. The 2.0L Nu engine has KSDS recall exposure; the 1.6L Gamma base engine is largely exempt. Strong value buy when recall history is confirmed.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'Nu engine recall / infotainment screen' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'Nu engine recall / infotainment screen' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine KSDS check', risk: 'high', riskLabel: 'High Attention',
@@ -6622,8 +6601,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk on Nu engine.' },
-      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Rod bearing wear monitoring update.' },
-      { number: '19V-082', title: 'Brake Booster Vacuum Hose', desc: 'May crack — reduced braking.' }
+      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Rod bearing wear monitoring update.' }
     ]
   },
 
@@ -6632,7 +6610,7 @@ const CHECKLISTS = {
     engine: '2.4L GDI Nu I4 (185hp) / 2.0T GDI Turbo I4 (240hp) / 3.3L V6 Lambda (290hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "3rd-gen Sorento is a well-rounded family SUV. The 2.4L Nu and 2.0T engines carry KSDS recall exposure. The 3.3L Lambda V6 avoids the bearing issue entirely and is the most reliable choice. AWD coupling fluid service is the most commonly missed maintenance item. Strong value when recall history and AWD service are confirmed.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 180, topComplaintArea: 'Nu/2.0T engine bearing recall / AWD coupling' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 180, topComplaintArea: 'Nu/2.0T engine bearing recall / AWD coupling' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Nu / 2.0T engine bearing recall (KSDS)', risk: 'high', riskLabel: 'High Attention',
@@ -6671,8 +6649,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Nu rod bearing monitoring update.' },
-      { number: '20V-051', title: 'Engine Fire Risk', desc: 'Oil/exhaust contact fire risk.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
       { number: '18V-013', title: 'Brake Booster Check Valve', desc: 'May fail — reduced braking assist.' }
     ]
   },
@@ -6682,7 +6658,7 @@ const CHECKLISTS = {
     engine: '1.4L TSI EA211 I4 (147hp) / 2.0L TSI Turbo I4 (228hp GLI)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The A7 Jetta is a refined, well-built compact sedan — better value than a comparable Audi or BMW entry-luxury car. The DSG dual-clutch transmission shudder is the main buyer risk; it requires strict mechatronic fluid service. 1.4L TSI EA211 is a significant improvement over EA111-era engines. Ensure Takata airbag recall is resolved on eligible VINs.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 120, topComplaintArea: 'DSG shudder / Takata airbag (pre-2019 VINs)' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 120, topComplaintArea: 'DSG shudder / Takata airbag (pre-2019 VINs)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'DSG DQ200 shudder under 15 mph', risk: 'high', riskLabel: 'High Attention',
@@ -6720,9 +6696,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag Inflator', desc: 'Passenger airbag inflator may rupture — free replacement.' },
-      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'Bosch HPFP may fail — engine stall risk.' },
-      { number: '20V-127', title: 'ABS Module Software', desc: 'Stability control software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'Bosch HPFP may fail — engine stall risk.' }
     ]
   },
 
@@ -6877,7 +6852,7 @@ const CHECKLISTS = {
     engine: '1.8L MRA8DE I4 (130hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "B17 Sentra is among the most affordable used compact sedans available. The 1.8L engine itself is reasonably reliable — the Xtronic CVT is the buyer risk. CVT failure mirrors the Altima pattern when NS-3 fluid was not changed every 30k miles. Service history is everything on any CVT Nissan.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid and reliability', risk: 'high', riskLabel: 'High Attention',
@@ -6915,7 +6890,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — engine stall risk.' },
       { number: '17V-224', title: 'Seat Belt Anchor', desc: 'May not hold correctly.' },
       { number: '14V-344', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' }
     ]
@@ -6926,7 +6900,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (260hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "Z52 Murano is Nissan's most premium crossover with a genuinely upscale interior. The 3.5L VQ35DE V6 is one of Nissan's most proven engines — the CVT remains the risk vector. CVT service at 30k miles with genuine NS-3 fluid is mandatory. Body on Frame alternative? No — this is unibody-only. Strong buy for buyers who prioritize comfort and have documented service history.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service history', risk: 'high', riskLabel: 'High Attention',
@@ -6964,7 +6938,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'Fuel pump impeller may fail — engine stall risk.' },
       { number: '18V-027', title: 'Occupant Classification System', desc: 'Passenger airbag may be incorrectly disabled.' },
       { number: '16V-244', title: 'OCS Software Update', desc: 'Passenger airbag software calibration update.' }
     ]
@@ -6975,7 +6948,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (292hp) / 5.7L Hemi V8 (370hp) / 6.4L 392 HEMI V8 (485hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The LD Charger is the last truly large American rear-drive sedan — roomier than any competitor and available with V8 power at used-car prices. The 5.7L Hemi MDS cylinder deactivation lifters are the primary mechanical risk (same as Ram 1500 and Durango). The V6 Pentastar avoids MDS entirely and is the budget-friendly reliable choice. Strong performance value when service history is documented.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 260, topComplaintArea: 'Hemi MDS lifter failure / electronics (UConnect)' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 260, topComplaintArea: 'Hemi MDS lifter failure / electronics (UConnect)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -7013,8 +6986,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag Inflator', desc: 'Driver or passenger airbag may rupture — free dealer replacement.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage unexpectedly — software fix.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner may not deploy correctly.' },
       { number: '18V-239', title: 'Tire Pressure Sensor', desc: 'TPMS may not alert correctly.' }
     ]
@@ -7025,7 +6997,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (375hp) / 6.4L 392 HEMI (485hp) / 6.2L Supercharged (717hp+ Hellcat)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The LC Challenger is the most American muscle car you can buy used — the platform is virtually unchanged since 2008, which means proven reliability and low-cost parts. The 5.7L Hemi MDS lifter failure is the same issue as the Charger and Ram 1500. Hellcat buyers: expect high-mileage brake and tire wear from track use. The 3.6L V6 is the most trouble-free option and still moves quickly.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / abuse history on performance models' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / abuse history on performance models' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -7063,8 +7035,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free dealer replacement.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
     ]
   },
@@ -7074,7 +7045,7 @@ const CHECKLISTS = {
     engine: '2.4L Tigershark I4 (180hp) / 2.0L Turbo I4 (270hp) / 3.2L Pentastar V6 (271hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The KL Cherokee is a comfortable, capable crossover with a unique 9-speed transmission that had significant early problems. The 9-speed was substantially revised through TSB updates and by 2018 is much improved, but always test the transmission carefully. The 2.4L Tigershark has documented oil consumption. The 3.2L V6 is the most reliable powertrain in this generation.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 320, topComplaintArea: '9-speed transmission / 2.4L oil consumption' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 320, topComplaintArea: '9-speed transmission / 2.4L oil consumption' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '9-speed ZF 948TE shudder and hunting', risk: 'high', riskLabel: 'High Attention',
@@ -7112,9 +7083,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag', desc: 'Passenger inflator may rupture — free replacement.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'TPMS may not alert correctly.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
     ]
   },
@@ -7124,7 +7094,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (284hp) with Xtronic CVT',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The R52 Pathfinder replaced the 4WD body-on-frame model with an FWD-based unibody crossover — a controversial move. The CVT paired with the 3.5L V6 on a heavy 3-row SUV is the headline concern: the transmission is under more load than in lighter vehicles, and failure has been documented earlier than on Altima/Rogue. Radiator coolant mixing with CVT fluid (via a cross-contamination failure) is the most catastrophic documented issue.",
-    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
+    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
     sections: [
       { title: 'Transmission — Most Critical', items: [
         { title: 'CVT radiator cross-contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7163,7 +7133,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '14V-400', title: 'CVT Cooler Cross-Contamination', desc: 'Radiator may allow coolant to mix with CVT fluid — critical failure.' },
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'Fuel pump may fail — engine stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Welds may be defective.' },
       { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be incorrectly disabled.' }
     ]
@@ -7174,7 +7143,7 @@ const CHECKLISTS = {
     engine: '2.5L QR25DE I4 (152hp) / 4.0L VQ40DE V6 (261hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The D40 Frontier ran largely unchanged from 2005–2021 — which makes parts cheap and reliability a known quantity. The 4.0L VQ40DE V6 is a proven workhorse. Main buyer concern: the 4.0L V6 radiator coolant cross-contaminating the automatic transmission (same family issue as Pathfinder). Also inspect for frame rust and catalytic converter theft on street-parked trucks.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'Radiator/trans coolant cross-contamination (V6 auto) / catalytic converter theft' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 130, topComplaintArea: 'Radiator/trans coolant cross-contamination (V6 auto) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '4.0L VQ40 auto transmission contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7210,7 +7179,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '14V-168', title: 'Fuel Tank Strap', desc: 'Strap corrosion may cause tank to drop.' },
       { number: '12V-395', title: 'Brake Booster', desc: 'Reduced braking effort on some 2012+ builds.' }
     ]
@@ -7264,7 +7232,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-044', title: 'Electric Fuel Pump', desc: 'Pump may fail — engine stall risk.' },
-      { number: '17V-376', title: 'Airbag Inflator (Takata)', desc: 'Driver airbag inflator on some builds — verify completion.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
       { number: '16V-028', title: 'Engine Compartment Cover', desc: 'Cover may contact fuel line — fire risk.' }
     ]
   },
@@ -7516,7 +7484,7 @@ const CHECKLISTS = {
     engine: '2.0L TFSI EA888 Turbo I4 (190–252hp) with 7-speed S tronic DSG',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The B9 Audi A4 is a genuinely excellent executive sedan — refined, comfortable, and well-built. But like all German luxury cars at this price point, maintenance costs are significantly above average. DSG fluid service, carbon walnut blasting on the EA888, timing chain service at 80k+ miles, and coolant flange cracks are all known line items. Audi-specialist PPI is mandatory. Budget $2,000–$4,000/year honestly.",
-    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 140, topComplaintArea: 'High maintenance costs / EA888 carbon buildup / DSG service' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 140, topComplaintArea: 'High maintenance costs / EA888 carbon buildup / DSG service' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
@@ -7559,8 +7527,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-411', title: 'High-Pressure Fuel Pump', desc: 'HPFP may fail — stall risk.' },
-      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
-      { number: '20V-127', title: 'ABS Control Software', desc: 'Stability control software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7569,7 +7536,7 @@ const CHECKLISTS = {
     engine: '2.0L B48 Turbo I4 (248hp) / 3.0L B58 Turbo I6 (355hp M40i)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The G01 X3 (2018+) is BMW's best X3 yet — the B48 engine is significantly more reliable than predecessor N20 units and the B58 6-cylinder is excellent. Main buyer concerns: electric water pump/thermostat failure (all BMW B-series engines), control arm bushing wear front and rear, and maintenance costs. BMW specialist PPI with iDrive scan is required on any used G01 purchase.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 135, topComplaintArea: 'Water pump failure / control arm wear / maintenance costs' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 135, topComplaintArea: 'Water pump failure / control arm wear / maintenance costs' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Electric water pump and thermostat failure', risk: 'high', riskLabel: 'High Attention',
@@ -7607,8 +7574,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-044', title: 'Electric Fuel Pump', desc: 'Pump may fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: '18V-044', title: 'Electric Fuel Pump', desc: 'Pump may fail — stall risk.' }
     ]
   },
 
@@ -7656,7 +7622,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-411', title: 'Seat Belt Buckle', desc: 'Buckle may not lock correctly.' },
-      { number: '17V-376', title: 'Takata Airbag (select VINs)', desc: 'Verify on eligible builds.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7665,7 +7631,7 @@ const CHECKLISTS = {
     engine: '2.0L TSI EA888 Turbo I4 (184hp) with 8-speed Tiptronic',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. DSG fluid service is required regularly. Strong compact SUV value for buyers who maintain the service schedule.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 130, topComplaintArea: 'DSG service / EA888 carbon buildup' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 130, topComplaintArea: 'DSG service / EA888 carbon buildup' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
@@ -7703,8 +7669,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software Update', desc: 'Stability control behavior update.' }
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
     ]
   },
 
@@ -7713,7 +7678,7 @@ const CHECKLISTS = {
     engine: '2.4L Tigershark I4 (180hp) / 1.4T MultiAir (177hp) / 2.0L Tigershark (158hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The MP-generation Compass (2017+) is a significant improvement over its predecessor — better quality, refined interior, and genuine trail capability on Trailhawk. The 2.4L Tigershark has the same oil consumption concern as in the Cherokee. The 9-speed ZF automatic needs careful testing. Value pricing makes it one of the more affordable new Jeep entry points on the used market.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 145, topComplaintArea: '2.4L oil consumption / 9-speed hesitation' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 145, topComplaintArea: '2.4L oil consumption / 9-speed hesitation' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.4L Tigershark oil consumption', risk: 'high', riskLabel: 'High Attention',
@@ -7751,7 +7716,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
@@ -7762,7 +7726,7 @@ const CHECKLISTS = {
     engine: '1.4L MultiAir Turbo I4 (160hp) / 2.4L Tigershark I4 (180hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The BU Renegade is Jeep's entry-level crossover — affordable, distinctive, and genuinely capable off-road on the Trailhawk. The 1.4T MultiAir has a documented timing belt failure pattern on neglected maintenance schedules. The 2.4L Tigershark has the same oil consumption history as the Cherokee and Compass. Neither powertrain is a disaster — both require documentation.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: '1.4T timing belt / 2.4L oil consumption' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 195, topComplaintArea: '1.4T timing belt / 2.4L oil consumption' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.4T MultiAir timing belt service', risk: 'critical', riskLabel: 'Critical',
@@ -7800,9 +7764,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage — software fix.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
-      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8012,7 +7975,7 @@ const CHECKLISTS = {
     engine: '2.4L GDI Nu I4 (185hp) / 2.0T GDI Theta II I4 (235hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The TM Santa Fe (2019+) refreshed the model but retained the same engine concerns as prior generations. The 2.4L Nu and 2.0T Theta II engines are both subject to KSDS recall campaigns. Any unresolved engine campaign is a walk-away. AWD coupling fluid service is the most commonly missed maintenance item. Strong family SUV value when recall history is fully documented.",
-    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 245, topComplaintArea: 'Engine KSDS recall (Nu / Theta II) — multiple campaigns' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 245, topComplaintArea: 'Engine KSDS recall (Nu / Theta II) — multiple campaigns' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Nu / Theta II engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
@@ -8050,11 +8013,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-159', title: 'KSDS Engine Bearing', desc: 'Rod bearing monitoring — software update.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Engine Fire Risk (2.0T)', desc: 'Oil contact exhaust — fire risk.' },
-      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' },
-      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain may not deploy.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8216,7 +8175,7 @@ const CHECKLISTS = {
     engine: '2.4L MIVEC I4 (166hp) / 3.0L SOHC V6 (224hp) / PHEV Hybrid (2nd gen 2.0L)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 3rd-gen Outlander is one of the most affordable used 3-row SUVs available. The powertrain is simple and reliable — the 2.4L 4-cylinder and CVT are proven Mitsubishi units. CVT fluid service is still the primary buyer check. The Outlander PHEV is one of the most capable plug-in SUVs at this price. Main weaknesses: below-average interior quality and limited powertrain power vs. competitors.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 90, topComplaintArea: 'CVT fluid service / below-average interior quality' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 90, topComplaintArea: 'CVT fluid service / below-average interior quality' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT fluid service (Jatco unit)', risk: 'high', riskLabel: 'High Attention',
@@ -8254,7 +8213,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Rear Seat Latch', desc: 'Latch may not fully engage — safety risk.' },
       { number: '17V-148', title: 'PCV Valve (some builds)', desc: 'PCV valve may fail on certain 2.4L engines.' }
     ]
   },
@@ -8264,7 +8222,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (295hp) with CVT (JF016E)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen QX60 (2022+) is a major improvement over the 1st gen. For the popular 2016–2021 1st-gen QX60 (same platform): the 3.5L VQ35 is proven but the CVT carries the same cross-contamination risk as the Pathfinder — inspect fluid before driving. Rear seat comfort is exceptional for a 3-row. The 2022+ QX60 with 9-speed auto is the stronger used buy if budget allows.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT radiator contamination check (1st gen 2016–2021)', risk: 'critical', riskLabel: 'Critical',
@@ -8302,7 +8260,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
       { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be disabled incorrectly.' },
       { number: '14V-400', title: 'CVT Cooler Contamination', desc: 'Radiator coolant may mix with CVT fluid.' }
@@ -8314,7 +8271,7 @@ const CHECKLISTS = {
     engine: '2.0L T5 Drive-E Turbo I4 (250hp) / 2.0L T6 Supercharged+Turbo I4 (316hp) / T8 PHEV (400hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The 2nd-gen XC90 on the SPA platform is one of the most beautiful and technologically advanced SUVs at this price point. But Volvo SPA ownership carries real maintenance costs. The Drive-E 4-cylinder (T5/T6) has timing belt/chain service requirements; the T8 PHEV adds HV battery complexity. Sensus infotainment has known reliability issues. Budget $3,000–$5,000/year for maintenance and require a Volvo specialist PPI.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 190, topComplaintArea: 'Sensus infotainment reliability / Drive-E timing service / high maintenance cost' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 190, topComplaintArea: 'Sensus infotainment reliability / Drive-E timing service / high maintenance cost' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Drive-E timing belt/chain service (T5/T6)', risk: 'high', riskLabel: 'High Attention',
@@ -8352,9 +8309,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
-      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
     ]
   },
 
@@ -8363,7 +8319,7 @@ const CHECKLISTS = {
     engine: '2.0L T5 Turbo I4 (250hp) / 2.0L T6 Supercharged+Turbo I4 (316hp) / T8 PHEV (400hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "2nd-gen XC60 on the SPA platform is the XC90's smaller sibling — shared platform means shared issues. Sensus infotainment reliability is the most common real-world complaint. Drive-E timing belt service required at 100k miles. Air suspension (if equipped) and T8 battery health are additional considerations. Volvo specialist PPI with VIDA scan is mandatory.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 155, topComplaintArea: 'Sensus infotainment / Drive-E timing belt / air suspension' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 155, topComplaintArea: 'Sensus infotainment / Drive-E timing belt / air suspension' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Drive-E timing belt service', risk: 'high', riskLabel: 'High Attention',
@@ -8401,8 +8357,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: '18V-411', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
     ]
   },
 
@@ -8546,7 +8501,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump (Denso)', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8555,7 +8510,7 @@ const CHECKLISTS = {
     engine: '2.0L 8AR-FTS Turbo I4 (235hp) / 2.5L 2AR-FXE Hybrid (194hp system)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 1st-gen Lexus NX (2015–2021) brought Lexus into the compact luxury SUV segment. The 2.0T 8AR-FTS is less proven than Toyota's naturally-aspirated engines and has documented oil consumption reports. The 300h hybrid system is the more reliable choice and avoids the turbo concerns. Lexus quality is still above average even on the turbo — just verify oil condition and check service records.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: '2.0T 8AR-FTS oil consumption / Remote Touch interface' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: '2.0T 8AR-FTS oil consumption / Remote Touch interface' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '8AR-FTS 2.0T oil consumption', risk: 'high', riskLabel: 'High Attention',
@@ -8593,8 +8548,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8603,7 +8557,7 @@ const CHECKLISTS = {
     engine: '2.0L B48 Turbo I4 (248hp) / 3.0L B58 Turbo I6 (335hp) / 4.4L N63 Biturbo V8 (523hp M550i)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The G30 5 Series is BMW's executive sedan flagship — refined, powerful, and technologically sophisticated. Ownership costs are the highest of any BMW outside M cars. The B58 I6 is excellent; the N63 V8 has documented rod bearing and carbon buildup concerns. Electric water pump, control arm wear, and iDrive module faults are all real line items. BMW specialist PPI with ISTA scan is non-negotiable.",
-    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 165, topComplaintArea: 'N63 V8 reliability / water pump / control arm bushings / iDrive faults' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 165, topComplaintArea: 'N63 V8 reliability / water pump / control arm bushings / iDrive faults' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'N63 V8 — rod bearing and carbon (M550i / 550i)', risk: 'critical', riskLabel: 'Critical',
@@ -8642,8 +8596,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-044', title: 'Electric Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify completion.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8652,7 +8605,7 @@ const CHECKLISTS = {
     engine: '3.0L B58 Turbo I6 (335hp) / 4.4L N63 Biturbo V8 (456hp) / 3.0L B57 Diesel I6',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "G05 X5 (2019+) is BMW's most popular SAV — the B58 I6 xDrive40i is the sweet spot powertrain. N63 V8 on xDrive50i and M50i is the risk vector — same bearing and carbon issues as 5 Series. Air suspension wear at 80k–100k miles is a significant cost item. Budget BMW ownership costs honestly: $3,000–$5,000/year on any X5.",
-    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 155, topComplaintArea: 'N63 V8 concerns / air suspension / control arm wear' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 155, topComplaintArea: 'N63 V8 concerns / air suspension / control arm wear' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'N63 V8 — avoid without full history (xDrive50i/M50i)', risk: 'critical', riskLabel: 'Critical',
@@ -8689,7 +8642,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-044', title: 'Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' },
       { number: '21V-037', title: 'Airbag Deployment', desc: 'Software calibration update.' }
     ]
   },
@@ -8699,7 +8651,7 @@ const CHECKLISTS = {
     engine: '2.0L TFSI EA888 Turbo I4 (248hp) / 3.0L TFSI V6 (354hp SQ5)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "2nd-gen Q5 (2018+) on the MLB Evo platform is well-engineered and premium — but like all Audi, maintenance costs are above-average. EA888 timing chain tensioner and coolant flange are the known failure modes. DSG fluid service is often skipped. SQ5 with 3.0T V6 adds complexity. Audi specialist PPI with VCDS scan is required.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 145, topComplaintArea: 'EA888 timing chain / coolant flange / DSG fluid service / high maintenance costs' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 145, topComplaintArea: 'EA888 timing chain / coolant flange / DSG fluid service / high maintenance costs' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
@@ -8738,8 +8690,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-411', title: 'High-Pressure Fuel Pump', desc: 'HPFP may fail — stall risk.' },
-      { number: '17V-376', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8787,7 +8738,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-411', title: 'Seat Belt Buckle', desc: 'May not lock — replacement.' },
-      { number: '17V-376', title: 'Takata Airbag (select VINs)', desc: 'Verify completion.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8796,7 +8747,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (295hp) / 5.7L Hemi V8 (360hp) / 6.4L SRT 392 (475hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The WD Durango is a body-on-frame 3-row SUV that survives on tow capacity (7,400–8,700 lbs) and V8 power. The 5.7L Hemi MDS lifters are the same failure mode as the Ram 1500 and Charger — same oil-interval dependency, same $3,000–$6,500 repair cost. The 3.6L Pentastar V6 avoids MDS. TIPM electrical module failures are less common on WD than WK2 but still possible.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 215, topComplaintArea: 'Hemi MDS lifters / ZF 8-speed shudder' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 215, topComplaintArea: 'Hemi MDS lifters / ZF 8-speed shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -8834,8 +8785,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free replacement.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
       { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
@@ -8897,7 +8847,7 @@ const CHECKLISTS = {
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The XK50 Tundra ran nearly unchanged from 2007–2021 — which makes it the most proven full-size truck drivetrain on the road. The 5.7L 3UR-FE is legendary for longevity past 300k miles. No AFM, no turbocharging complexity, no EcoBoost cam phasers. Tundra's weakness is fuel economy (13–15 city) and an older infotainment. Rust is the only real concern on salt-belt trucks. Outstanding reliability.",
     vinNote: "The 2nd-gen Tundra (2014–2021) came with two V8s and no other powertrain. 5.7L 3UR-FE V8 (381hp) is the mainstream engine, found on roughly 90% of trucks — SR5, Limited, Platinum, 1794, TRD Pro. 4.6L 1UR-FE V8 (310hp) was the base SR trim only and is uncommon. Both engines are exceptionally reliable; neither has a chronic failure pattern in this generation. The differences that matter to a buyer: the 5.7L tows ~10,200 lbs vs the 4.6L's ~6,400 lbs, fuel economy is ~1 mpg different, and finding parts for the 4.6L can be slightly slower because the volume is lower. Confirm engine displacement on the door-jamb sticker (it lists \"Engine Displacement: 5.7L\" or \"4.6L\") or by the trim badge on the tailgate. For a full VIN decode of every trim option, run the VIN at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 95, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L 3UR-FE reliability — outstanding', risk: 'low', riskLabel: 'Low Risk',
@@ -8939,7 +8889,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner Weld', desc: 'Defective welds on some builds.' },
       { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
     ]
@@ -8950,7 +8899,7 @@ const CHECKLISTS = {
     engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen Colorado is the best mid-size truck GM has made. The 3.6L LFX V6 is the preferred engine — proven and powerful. The 2.5L I4 is adequate for light duty. The 2.8L Duramax diesel is fuel-efficient and torquey but DEF system maintenance is required. No AFM on the Colorado — a significant advantage over Silverado/Sierra siblings.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 120, topComplaintArea: 'DEF system (diesel) / 8-speed shudder (V6) / frame rust' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 120, topComplaintArea: 'DEF system (diesel) / 8-speed shudder (V6) / frame rust' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.6L LFX V6 — solid choice', risk: 'low', riskLabel: 'Low Risk',
@@ -8989,7 +8938,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Park may disengage.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
   },
@@ -9140,7 +9088,7 @@ const CHECKLISTS = {
     engine: '2.4L GDI Nu I4 (185hp) / 2.0T Theta II I4 (245hp Sport) / 1.6T Eco I4 (178hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The LF Sonata is a well-designed midsize sedan at a value price — but both the 2.4L Nu and 2.0T Theta II engines are in the Hyundai KSDS recall family for rod bearing wear. Multiple campaigns apply. This is the most important pre-purchase check. The 1.6T Eco is less common and somewhat lower risk. Sonata is a strong value when all recall campaigns are verified complete.",
-    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 280, topComplaintArea: 'Nu / Theta II engine bearing recall — multiple KSDS campaigns' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 280, topComplaintArea: 'Nu / Theta II engine bearing recall — multiple KSDS campaigns' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Nu / Theta II engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
@@ -9178,11 +9126,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-159', title: 'KSDS Engine Bearing — Nu', desc: 'Rod bearing monitoring update.' },
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Theta II Fire Risk', desc: 'Oil/exhaust contact fire risk.' },
-      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' }
     ]
   },
 
@@ -9191,7 +9135,7 @@ const CHECKLISTS = {
     engine: '3.8L Lambda II V6 GDI (291hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The Telluride is one of the most acclaimed 3-row family SUVs launched in years — 2020 North American Car of the Year winner. The 3.8L Lambda II V6 is Kia/Hyundai's most proven large-displacement engine and does NOT carry the KSDS recall exposure of smaller Nu/Theta engines. Outstanding interior quality and space. Used Tellurides hold value aggressively. Strong buy when AWD coupling service is documented.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 65, topComplaintArea: 'HTRAC AWD coupling service / GDI carbon (long term)' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 65, topComplaintArea: 'HTRAC AWD coupling service / GDI carbon (long term)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.8L Lambda II V6 — strong engine choice', risk: 'low', riskLabel: 'Low Risk',
@@ -9229,9 +9173,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-159', title: 'Engine Monitoring (KSDS — Lambda exempt but verify)', desc: 'Run VIN to confirm this specific Telluride VIN is not in any campaign.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Engine Fire Risk (verify by VIN)', desc: 'Some Lambda V6 builds — verify completion.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9240,7 +9182,7 @@ const CHECKLISTS = {
     engine: '4.0L 1GR-FE V6 (270hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 5th-gen 4Runner has run nearly unchanged since 2010 — which means a proven, documented reliability record and broad aftermarket support. The 4.0L 1GR-FE V6 is virtually bulletproof past 300k miles. The off-road capability (especially TRD Pro and TRD Off-Road) is genuine. Fuel economy is poor (17 city, 19 hwy). Rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 85, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft / dated interior' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 85, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft / dated interior' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '4.0L 1GR-FE V6 — outstanding reliability', risk: 'low', riskLabel: 'Low Risk',
@@ -9278,7 +9220,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
     ]
   },
@@ -9288,7 +9229,7 @@ const CHECKLISTS = {
     engine: '1.8L TSI EA888 I4 (170hp) / 2.0T TSI EA888 I4 (174hp) / 3.6L VR6 (280hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The NMS B8 Passat is built in Tennessee for the North American market — simpler and larger than the European B8, and positioned as a value alternative to Camry/Accord. The 1.8T and 2.0T EA888 engines share the timing chain tensioner concern. DSG fluid service is required. Strong value in the used midsize sedan segment for buyers who are budget-conscious with their own PPI.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 135, topComplaintArea: 'EA888 timing chain / DSG fluid / Takata recall' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 135, topComplaintArea: 'EA888 timing chain / DSG fluid / Takata recall' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
@@ -9326,9 +9267,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag', desc: 'Inflator may rupture — free replacement.' },
-      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
     ]
   },
 
@@ -9337,7 +9277,7 @@ const CHECKLISTS = {
     engine: '1.6L MR16DDT I4 (122hp) with Xtronic CVT — FWD only',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The P15 Kicks is Nissan's most fuel-efficient non-hybrid crossover — 36 mpg combined with the 1.6L naturally-aspirated engine. FWD only (no AWD option). CVT fluid service every 30k miles with NS-3 fluid is the critical maintenance item. Exterior styling is distinctive. Outstanding commuter value for urban buyers who don't need AWD.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -9375,7 +9315,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-224', title: 'Seat Belt Anchor', desc: 'Anchor may not hold correctly.' }
     ]
   },
@@ -9530,7 +9469,7 @@ const CHECKLISTS = {
     engine: '2.0T Lambda I4 (255hp) / 3.3T Lambda V6 Twin-Turbo (365hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Stinger is one of the most surprising used performance cars available — a genuine driver's car with Porsche Panamera proportions at a fraction of the price. The 3.3T biturbo V6 is the standout choice. The 2.0T 4-cylinder is adequate. Rear-drive or AWD available. Key buyer checks: ZF 8-speed fluid service and any track-use history on GT/GT2 models. Outstanding performance-per-dollar on the used market.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 95, topComplaintArea: 'ZF 8-speed service / track use assessment on GT models' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 95, topComplaintArea: 'ZF 8-speed service / track use assessment on GT models' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.3T Lambda V6 — strong and reliable', risk: 'low', riskLabel: 'Low Risk',
@@ -9568,8 +9507,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify this VIN is not in any engine fire campaign.' },
       { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'May crack — reduced braking.' }
     ]
   },
@@ -9579,7 +9516,7 @@ const CHECKLISTS = {
     engine: '3.5L Lambda II V6 GDI (290hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The KA4 Carnival replaces the Sedona and is the most contemporary family van/crossover available. The 3.5L Lambda V6 is Kia's most proven large engine and does NOT carry KSDS recall exposure. 8-speed automatic is smooth and well-sorted. Interior quality and features are outstanding for the price. Strong family vehicle value with minimal known failure modes.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 45, topComplaintArea: 'Minimal — sliding door motor durability (early assessment)' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 45, topComplaintArea: 'Minimal — sliding door motor durability (early assessment)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5L Lambda V6 — reliable platform', risk: 'low', riskLabel: 'Low Risk',
@@ -9617,8 +9554,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-714', title: 'Brake Warning Indicator', desc: 'Indicator may activate incorrectly — software fix.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk (verify)', desc: 'Verify if this VIN is covered.' }
+      { number: '22V-714', title: 'Brake Warning Indicator', desc: 'Indicator may activate incorrectly — software fix.' }
     ]
   },
 
@@ -9627,7 +9563,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (285hp) / 3.0L EcoDiesel V6 (260hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The JT Gladiator is the only mid-size convertible pickup truck on the market — it combines Wrangler JL capability with a 5-foot bed. The 3.6L Pentastar V6 is proven. Main buyer concerns: Death Wobble risk from worn front end components (same as Wrangler), throttle position sensor failure on early builds, and eTorque BSG concerns on equipped models. Strong buy for buyers who need both off-road capability and a bed.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 190, topComplaintArea: 'Death Wobble (front end wear) / throttle position sensor / eTorque BSG (equipped models)' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 190, topComplaintArea: 'Death Wobble (front end wear) / throttle position sensor / eTorque BSG (equipped models)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Throttle position sensor (early builds)', risk: 'high', riskLabel: 'High Attention',
@@ -9635,9 +9571,9 @@ const CHECKLISTS = {
           check: '<strong>Verify recall 20V-191 is complete on this VIN.</strong>',
           cost: 'Free under recall / $300–$600 if out-of-warranty', source: 'NHTSA recall 20V-191' },
         { title: 'eTorque BSG system (if equipped)', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Same BSG concerns as Ram 1500 eTorque. Verify recall 20V-032.',
-          check: '<strong>Verify recall 20V-032 complete on eTorque VINs.</strong>',
-          cost: '$1,200–$3,500 BSG if failed', source: 'NHTSA recall 20V-032' }
+          desc: 'Same BSG concerns as Ram 1500 eTorque. Verify all open recalls by VIN.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and confirm every campaign is closed on eTorque VINs.</strong>',
+          cost: '$1,200–$3,500 BSG if failed', source: 'NHTSA recall database' }
       ]},
       { title: 'Steering & Suspension', items: [
         { title: 'Death Wobble — front end wear', risk: 'critical', riskLabel: 'Critical',
@@ -9666,9 +9602,8 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-191', title: 'Throttle Position Sensor', desc: 'Sudden power loss — free dealer replacement.' },
-      { number: '20V-032', title: 'eTorque PCM Calibration', desc: 'eTorque drivability update.' },
       { number: '21V-037', title: 'Transmission Software', desc: 'Transmission downshift update.' },
-      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9726,7 +9661,7 @@ const CHECKLISTS = {
     engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Canyon is mechanically identical to the Chevrolet Colorado — same platform, same engines, same reliability profile. GMC badge adds slightly nicer trim. The 3.6L LFX V6 is the preferred engine (no AFM). The 2.8L Duramax diesel is fuel-efficient but DEF system maintenance is required. Frame rust on salt-belt trucks is the primary structural concern.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'Frame rust / 8-speed shudder (V6) / DEF system (diesel)' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'Frame rust / 8-speed shudder (V6) / DEF system (diesel)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.6L LFX V6 — preferred engine', risk: 'low', riskLabel: 'Low Risk',
@@ -9765,7 +9700,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'May disengage.' },
       { number: '18V-239', title: 'TPMS Sensor', desc: 'May not alert correctly.' }
     ]
   },
@@ -9862,7 +9796,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9918,7 +9852,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (300hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The A36 Maxima markets itself as a 4-door sports car — the 3.5L VQ35DE is genuinely powerful. The CVT is the primary risk: under a powerful V6, the belt wears faster than in lighter vehicles. CVT fluid service with genuine NS-3 fluid every 30k miles is essential. Outstanding value for buyers who want near-luxury sport sedan performance at a mainstream price.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 110, topComplaintArea: 'CVT fluid under V6 load / NissanConnect infotainment' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'CVT fluid under V6 load / NissanConnect infotainment' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT under V6 load', risk: 'high', riskLabel: 'High Attention',
@@ -9956,7 +9890,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds on some builds.' },
       { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag software update.' }
     ]
@@ -10100,7 +10033,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10109,7 +10042,7 @@ const CHECKLISTS = {
     engine: '2.0L MPI Nu2 I4 (147hp) / 1.6T Gamma Turbo (201hp N Line) / 1.6L Smartstream Hybrid (139hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The CN7 Elantra (2021+) is Hyundai's most significant compact sedan redesign in years — dramatic styling, improved interior quality, and the 2.0L Nu2 is an updated engine that reduces some of the prior-gen bearing concerns. However, KSDS recall coverage should still be verified on the VIN. The N Line 1.6T is genuinely fun. Hybrid version achieves 50 mpg combined.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 85, topComplaintArea: 'Nu2 engine KSDS verification / DCT (N Line) shudder' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 85, topComplaintArea: 'Nu2 engine KSDS verification / DCT (N Line) shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu2 KSDS recall check (verify by VIN)', risk: 'high', riskLabel: 'High Attention',
@@ -10147,9 +10080,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-159', title: 'KSDS Engine Check (verify by VIN)', desc: 'Verify if this specific CN7 VIN is included.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify by VIN.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10158,7 +10089,7 @@ const CHECKLISTS = {
     engine: '2.0L MPI Nu I4 (147hp) / 1.6T Gamma Turbo (201hp GT)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The BD Forte is Kia's best compact sedan — well-styled, feature-rich, and priced aggressively. The 2.0L Nu engine carries KSDS recall exposure (same family as Sonata). Verify all recall campaigns before purchase. The 1.6T GT is genuinely fun. IVT/CVT fluid service is the critical maintenance document on the base 2.0L. Strong value when recalls are confirmed complete.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine KSDS recall', risk: 'critical', riskLabel: 'Critical',
@@ -10197,9 +10128,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Nu rod bearing monitoring update.' },
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' },
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' }
     ]
   },
 
@@ -10246,7 +10175,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10351,7 +10280,7 @@ const CHECKLISTS = {
     engine: '2.0L MR20DD I4 (141hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Rogue Sport (Qashqai) is the subcompact sibling to the Rogue — smaller, lower base price, same CVT platform. The 2.0L MR20 is less powerful than the Rogue's 2.5L but more fuel-efficient. CVT fluid service (NS-3 every 30k miles) is the identical critical maintenance item. Strong value for buyers who don't need Rogue cargo space.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 90, topComplaintArea: 'Xtronic CVT fluid service / limited power' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 90, topComplaintArea: 'Xtronic CVT fluid service / limited power' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -10389,7 +10318,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
       { number: '16V-244', title: 'OCS Software', desc: 'Airbag software update.' }
     ]
@@ -10442,7 +10370,7 @@ const CHECKLISTS = {
     engine: '1.4L TSI EA211 I4 (147hp) / 2.0T TSI EA888 (220hp GTI / 292hp R)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Mk7.5 Golf is one of the best all-around compact hatchbacks ever built — the GTI is a benchmark hot hatch and the base Golf is practical and well-engineered. EA211 timing chain and DSG fluid service are the maintenance items on both. GTI R buyers need abuse-history assessment. Outstanding driver's cars across the lineup when service is current.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 115, topComplaintArea: 'DSG fluid / EA888 timing chain (GTI) / abuse history (GTI/R)' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 115, topComplaintArea: 'DSG fluid / EA888 timing chain (GTI) / abuse history (GTI/R)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'DSG mechatronic fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -10480,9 +10408,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-381', title: 'Takata Airbag (some builds)', desc: 'Verify on eligible VINs.' },
-      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '20V-127', title: 'ABS Software', desc: 'Stability control update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '19V-258', title: 'High-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
     ]
   },
 
@@ -10574,7 +10501,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10632,7 +10559,7 @@ const CHECKLISTS = {
     engine: '1.6L Atkinson GDI I4 + 43.5 kW electric motor (139hp Hybrid) / PHEV (26 mi EV) / 64 kWh BEV (239hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The DE Niro is Kia's most fuel-efficient crossover — available as Hybrid (52 mpg combined), PHEV, or full EV. The hybrid drivetrain is shared with Hyundai Ioniq. Main buyer checks depend on variant: Hybrid — 6-speed DCT fluid service; PHEV — plug-in battery health; EV — HV battery health (64 kWh should provide 220+ miles). Outstanding fuel economy buy in any form.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 60, topComplaintArea: 'DCT shudder (Hybrid) / EV battery health / charging compatibility' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 60, topComplaintArea: 'DCT shudder (Hybrid) / EV battery health / charging compatibility' },
     sections: [
       { title: 'Powertrain (Hybrid/PHEV)', items: [
         { title: '6-speed DCT fluid service (Hybrid)', risk: 'high', riskLabel: 'High Attention',
@@ -10670,9 +10597,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '20V-051', title: 'Engine Fire Risk (verify)', desc: 'Verify by VIN.' },
-      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack — reduced braking.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10681,7 +10606,7 @@ const CHECKLISTS = {
     engine: '1.6L Atkinson GDI I4 + electric (Hybrid 139hp) / PHEV (29 mi EV) / Electric 118hp (28 kWh)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The AE Ioniq is the most fuel-efficient non-plugin hybrid available — 58 mpg combined on the Blue trim. The smaller 28 kWh battery on the Ioniq Electric gives only 124 miles — adequate for urban use but less than Bolt or Model 3. Hybrid DCT fluid service is the critical maintenance item. Outstanding total cost of ownership for city commuters.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 55, topComplaintArea: 'DCT shudder / Ioniq EV limited range / ADAS windshield' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 55, topComplaintArea: 'DCT shudder / Ioniq EV limited range / ADAS windshield' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '6-speed DCT fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -10719,9 +10644,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-065', title: 'ABS HCU Fire Risk', desc: 'ABS unit replacement.' },
-      { number: '19V-082', title: 'Brake Booster Hose', desc: 'May crack.' },
-      { number: '17V-226', title: 'Airbag Squib Connector', desc: 'Side curtain may not deploy.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10826,7 +10749,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp, MDS)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Ram 1500 Classic is the DS-platform prior-gen Ram, sold alongside the newer DT in 2019–2021. It's a proven, simpler platform without eTorque complexity. The 5.7L Hemi has the same MDS lifter failure risk as in older Rams. The 3.6L Pentastar V6 is the lower-risk choice. Coil-spring rear suspension and reasonable reliability make this a strong value truck at lower prices than the DT.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / 8HP45/70 transmission shudder' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / 8HP45/70 transmission shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -10865,7 +10788,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '25V-010', title: 'Side Curtain Airbag Inflator (Joyson)', desc: 'Curtain airbag inflator can rupture from internal corrosion (stress-corrosion cracking), spraying metal — free replacement. Affects some 2016 + 2018–2019 Classic builds; confirm your VIN at nhtsa.gov.' },
-      { number: '19V-154', title: 'Electronic Park Release', desc: 'Transmission may not hold in Park as indicated — verify applicability by VIN.' },
       { number: '17V-225', title: 'Fuel Tank Strap', desc: 'Strap may corrode on salt-belt trucks — verify applicability by VIN.' }
     ]
   },
@@ -10963,7 +10885,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -11058,7 +10980,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-003', title: 'Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -11116,7 +11038,7 @@ const CHECKLISTS = {
     engine: '2.7L 2TR-FE I4 (159hp) / 3.5L 2GR-FKS V6 (278hp) with 6-speed AT or 6MT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 3rd-gen Tacoma is the dominant mid-size truck — legendary reliability and near-unlimited aftermarket support. The 3.5L 2GR-FKS V6 has direct injection, which means potential carbon buildup at high mileage. The manual transmission has a well-known notchy engagement when cold. Frame rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 145, topComplaintArea: '6AT hunting/shudder / frame rust (salt-belt) / catalytic converter theft' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 145, topComplaintArea: '6AT hunting/shudder / frame rust (salt-belt) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '6AT transmission hunting (V6)', risk: 'high', riskLabel: 'High Attention',
@@ -11152,7 +11074,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-744', title: 'Denso Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
       { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
     ],
@@ -11362,7 +11283,7 @@ const CHECKLISTS = {
     engine: '1.4L turbocharged I4 (153 hp) or 1.6L turbodiesel I4 (137 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 2nd-gen Cruze (2016–2019) is a competent compact sedan let down by a chronic 1.4T timing chain issue and documented oil consumption. With a clean maintenance record and no signs of chain rattle it’s a decent buy at a low price point — but skip any car with deferred oil changes. The 1.6T diesel variant is smoother but emissions-equipment dependent; only buy one with full DEF/EGR service history.",
-    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 520, topComplaintArea: 'Engine / Powertrain' },
+    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 520, topComplaintArea: 'Engine / Powertrain' },
     sections: [
       { title: 'Timing Chain (1.4T)', items: [
         { title: '1.4T timing chain stretch — cold-start rattle', risk: 'high', riskLabel: 'High Risk',
@@ -11390,10 +11311,10 @@ const CHECKLISTS = {
           cost: 'Free dealer repair',
           source: 'NHTSA Takata recall program' },
         { title: 'Brake booster vacuum pump leak', risk: 'high', riskLabel: 'High Risk',
-          desc: 'NHTSA 17V-226: vacuum pump can develop internal leak, reducing brake assist. Symptom: harder-than-normal pedal.',
-          check: '<strong>Test brake pedal firmness at low speed. Hard pedal = verify recall is closed.</strong>',
+          desc: 'The brake booster vacuum pump can develop an internal leak, reducing brake assist. Symptom: harder-than-normal pedal.',
+          check: '<strong>Test brake pedal firmness at low speed. Hard pedal = have the booster vacuum pump inspected.</strong>',
           cost: 'Free dealer repair',
-          source: 'NHTSA recall 17V-226' }
+          source: 'AutoVetting editorial' }
       ]},
       { title: 'Transmission & Electrical', items: [
         { title: '6-speed automatic or 6-speed manual', risk: 'low', riskLabel: 'Low Risk',
@@ -11416,7 +11337,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '17V-226', description: 'Brake booster vacuum pump internal leak — reduced brake assist', severity: 'High', remedy: 'Dealer replaces vacuum pump at no cost' },
       { campaign: 'Takata', description: 'Driver/passenger airbag inflator rupture risk', severity: 'Critical', remedy: 'Free dealer inflator replacement; check VIN at nhtsa.gov' }
     ]
   },
