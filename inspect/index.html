@@ -17455,6 +17455,8 @@ function renderChecklist(c, vin) {
   const ctaVehicle = `${c.year} ${c.make} ${c.model}`;
   const ctaSubject = encodeURIComponent(`Inspection request: ${ctaVehicle}` + (vin ? ` (VIN ${vin})` : ''));
   const ctaBody = encodeURIComponent(`Hi AutoVetting,\n\nI would like this car professionally vetted:\n\nVehicle: ${ctaVehicle}\nVIN: ${vin || 'not yet known'}\nListing link: \nZIP code: \nPhone: \nTimeline: \n\nPlease send me next steps.`);
+  const repSubject = encodeURIComponent(`Vetting Report request: ${ctaVehicle}` + (vin ? ` (VIN ${vin})` : ''));
+  const repBody = encodeURIComponent(`Hi AutoVetting,\n\nPlease prepare the $49 Vetting Report for:\n\nVehicle: ${ctaVehicle}\nVIN: ${vin || ''}\nListing link: \n\nI understand you will reply with payment + delivery details (report delivered within 24 hours of payment).`);
   const ctaHtml = `
     <div class="checklist-meta-card" id="vetting-cta" style="margin-top:16px;">
       <div class="checklist-meta-header">
@@ -17466,7 +17468,9 @@ function renderChecklist(c, vin) {
       <p class="checklist-summary">Send us the listing and we reply within 1 business day. From $149 &mdash; nothing due until we confirm a mechanic and a time. Piloting in Phoenix; other US metros by arrangement.</p>
       <div class="actions-buttons">
         <a class="checklist-action-btn primary" id="vetting-cta-btn" href="mailto:autovetting@gmail.com?subject=${ctaSubject}&amp;body=${ctaBody}">Request an inspection</a>
+        <a class="checklist-action-btn" id="report-cta-btn" href="mailto:autovetting@gmail.com?subject=${repSubject}&amp;body=${repBody}">Get the full Vetting Report &mdash; $49</a>
       </div>
+      <div class="checklist-vin" style="margin-top:10px;">The Vetting Report: this VIN&rsquo;s full recall status, known-failure cost ranges, negotiation talking points, and inspection priorities &mdash; delivered within 24 hours.</div>
     </div>`;
   checklistContent.innerHTML = html + ctaHtml;
   // Emit JSON-LD HowTo for the current checklist (SEO/AEO/GEO)
@@ -17514,6 +17518,12 @@ function renderChecklist(c, vin) {
   if (printBtn) printBtn.addEventListener('click', () => window.print());
   if (textBtn) textBtn.addEventListener('click', downloadChecklistAsText);
   if (shareBtn) shareBtn.addEventListener('click', copyChecklistLink);
+  const reportBtn = document.getElementById('report-cta-btn');
+  if (reportBtn) reportBtn.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'report_cta_click', { vehicle: ctaVehicle, has_vin: vin ? 'yes' : 'no', page: 'inspect' });
+    }
+  });
   const vettingBtn = document.getElementById('vetting-cta-btn');
   if (vettingBtn) vettingBtn.addEventListener('click', () => {
     if (typeof gtag === 'function') {

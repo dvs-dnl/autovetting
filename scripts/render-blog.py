@@ -332,6 +332,12 @@ def cta_block(p):
                  "Please send me next steps.")
     onclick = ("if(typeof gtag==='function')gtag('event','inspection_cta_click',"
                "{vehicle:'" + p["slug"] + "',page:'blog'})")
+    rsubj = quote(f"Vetting Report request: {p['title']}")
+    rbody = quote("Hi AutoVetting,\n\nPlease prepare the $49 Vetting Report for:\n\n"
+                  f"Vehicle: {p['title']}\nVIN: \nListing link: \n\n"
+                  "I understand you will reply with payment + delivery details.")
+    ronclick = ("if(typeof gtag==='function')gtag('event','report_cta_click',"
+                "{vehicle:'" + p["slug"] + "',page:'blog'})")
     return (
         '    <div class="post-cta">\n'
         '      <h2>Want this exact car professionally vetted?</h2>\n'
@@ -340,6 +346,9 @@ def cta_block(p):
         'and a time. Piloting in Phoenix; other US metros by arrangement.</p>\n'
         f'      <a class="post-cta-btn" href="mailto:autovetting@gmail.com?subject={subj}&amp;body={body}" '
         f'onclick="{onclick}">Request an inspection</a>\n'
+        f'      <a class="post-cta-btn" style="background:transparent;border:1px solid rgba(124,108,255,.6);margin-left:10px;" '
+        f'href="mailto:autovetting@gmail.com?subject={rsubj}&amp;body={rbody}" '
+        f'onclick="{ronclick}">Get the full Vetting Report &mdash; $49</a>\n'
         '    </div>'
     )
 
