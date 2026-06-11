@@ -5317,7 +5317,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-579', title: 'Engine Wire Harness (J0T)', desc: 'Harness near the PCU may short and cause a fire — 2016–2018; verify completed.' },
-      { number: '19V-544', title: 'Brake Booster Pump', desc: 'Pump may fail, reducing braking assist and disabling VSC — 2019–2020; verify completed.' },
+      { number: '19V-544', title: 'Brake Booster Pump', desc: 'Pump may fail, reducing braking assist and disabling VSC — 2019 Prius (2019–2020 Prius Prime); verify completed.' },
       { number: '19V-876', title: 'Combination Meter (19TA21)', desc: 'Short may blank the speedometer/odometer/fuel gauge — 2019; verify completed.' }
     ],
     vinNote: "Unlike a truck, the Gen-4 Prius offers only one engine — the 1.8L 2ZR-FXE Atkinson hybrid — so the 8th VIN digit confirms the restraint/series, not an engine fork. The decode that actually matters is the platform and year. Standard FWD liftbacks are ZVW50; the AWD-e (2019+) is ZVW55 with an added rear electric motor; and the plug-in Prius Prime is a separate ZVW52 with its own checklist (do not apply this one to a Prime). The 10th VIN digit gives the model year: G = 2016, H = 2017, J = 2018, K = 2019, L = 2020, M = 2021, N = 2022 — useful because the EGR/head-gasket risk concentrates on the early G/H/J (2016–2018) cars. Always confirm FWD vs. AWD-e and model year with a full VIN decode at <a href=\"/decode/\">autovetting.com/decode</a> (NHTSA vPIC) before applying this checklist.",
@@ -6075,7 +6075,7 @@ const CHECKLISTS = {
           {
             title: 'Recalls 23V093000, 17V663000, 16V244000 — additional active campaigns',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Three additional campaigns affect a significant share of 2017 Rogue production: 23V093000 (folding key collapses mid-drive, engine shuts off — jackknife key spacer fix), 17V663000 (rear seat recliner welds may fail in a crash), and 16V244000 (passenger frontal airbag may be disabled due to OCS sensor error — software reflash). Any open safety campaign is free dealer work the prior owner skipped.',
+            desc: 'Three additional campaigns affect a significant share of 2017 Rogue production: 23V093000 (folding key collapses mid-drive, engine shuts off — jackknife key spacer fix), 17V663000 (2016–2017 builds: rear seat recliner welds may fail in a crash), and 16V244000 (2014–2016 builds: passenger frontal airbag may be disabled due to OCS sensor error — software reflash). Any open safety campaign is free dealer work the prior owner skipped.',
             check: '<strong>At nhtsa.gov/recalls, confirm all three campaign IDs show "Completed" on the specific VIN.</strong> Each open campaign is a negotiation line-item or a condition of purchase.',
             cost: 'Free dealer repair for all three',
             source: 'NHTSA recalls 23V093000, 17V663000, 16V244000 (2017 Nissan Rogue)'
@@ -6087,8 +6087,8 @@ const CHECKLISTS = {
       { number: '22V875000', title: 'Dash Harness Corrosion — Fire Risk', desc: 'Water intrusion can corrode instrument panel wiring connector — fire risk on select 2017 Rogues. Verify complete.' },
       
       { number: '23V093000', title: 'Jackknife Ignition Key Collapse', desc: 'Folding key can collapse mid-drive and shut off engine. Dealer spacer fix — verify complete.' },
-      { number: '17V663000', title: 'Rear Seat Recliner Welds', desc: 'Defective welds compromise rear-seat crash protection — verify complete.' },
-      { number: '16V244000', title: 'Occupant Classification System (OCS)', desc: 'Passenger frontal airbag may be incorrectly disabled — software reflash fix; verify complete.' }
+      { number: '17V663000', title: 'Rear Seat Recliner Welds (2016–2017)', desc: 'Improper rear recliner welds on 2016–2017 Rogue (FMVSS 207/210, Nissan PC592) compromise rear-seat crash protection — verify complete.' },
+      { number: '16V244000', title: 'Occupant Classification System (2014–2016)', desc: 'Passenger frontal airbag may be incorrectly disabled on 2014–2016 Rogue — software reflash; verify complete on pre-2017 builds.' }
     ]
   },
 
@@ -6706,7 +6706,7 @@ const CHECKLISTS = {
     engine: '3.5L 2GR-FE V6 (296hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "3rd-gen Sienna is the reliability benchmark for family minivans. The 3.5L 2GR-FE V6 runs 250k+ with regular maintenance. AWD models are in high demand. Key buyer check: power sliding door motor operation. Minor oil seepage at valve covers is common past 100k but manageable. Outstanding family van value.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Sliding door motors / valve cover seeps' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Sliding door motors / valve cover seeps' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2GR-FE valve cover oil seepage', risk: 'monitor', riskLabel: 'Monitor',
@@ -6742,9 +6742,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' },
-      { number: '15V-579', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly on some builds.' },
-      { number: '16V-561', title: 'Fuel Vapor Leak', desc: 'Fire risk on select VINs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Run the VIN at nhtsa.gov/recalls and verify any open campaigns show completed before purchase.' }
     ]
   },
 
@@ -6900,7 +6898,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (260hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "Z52 Murano is Nissan's most premium crossover with a genuinely upscale interior. The 3.5L VQ35DE V6 is one of Nissan's most proven engines — the CVT remains the risk vector. CVT service at 30k miles with genuine NS-3 fluid is mandatory. Body on Frame alternative? No — this is unibody-only. Strong buy for buyers who prioritize comfort and have documented service history.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service history', risk: 'high', riskLabel: 'High Attention',
@@ -6938,8 +6936,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-027', title: 'Occupant Classification System', desc: 'Passenger airbag may be incorrectly disabled.' },
-      { number: '16V-244', title: 'OCS Software Update', desc: 'Passenger airbag software calibration update.' }
+      { number: '18V-027', title: 'Occupant Classification System', desc: 'Passenger airbag may be incorrectly disabled.' }
     ]
   },
 
@@ -7094,7 +7091,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (284hp) with Xtronic CVT',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The R52 Pathfinder replaced the 4WD body-on-frame model with an FWD-based unibody crossover — a controversial move. The CVT paired with the 3.5L V6 on a heavy 3-row SUV is the headline concern: the transmission is under more load than in lighter vehicles, and failure has been documented earlier than on Altima/Rogue. Radiator coolant mixing with CVT fluid (via a cross-contamination failure) is the most catastrophic documented issue.",
-    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
     sections: [
       { title: 'Transmission — Most Critical', items: [
         { title: 'CVT radiator cross-contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7133,8 +7130,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '14V-400', title: 'CVT Cooler Cross-Contamination', desc: 'Radiator may allow coolant to mix with CVT fluid — critical failure.' },
-      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Welds may be defective.' },
-      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be incorrectly disabled.' }
+      { number: '16V-244', title: 'OCS Software (2013–2016)', desc: 'Passenger airbag may be incorrectly disabled — campaign covers 2013–2016 Pathfinder; verify on those years.' }
     ]
   },
 
@@ -8222,7 +8218,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (295hp) with CVT (JF016E)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen QX60 (2022+) is a major improvement over the 1st gen. For the popular 2016–2021 1st-gen QX60 (same platform): the 3.5L VQ35 is proven but the CVT carries the same cross-contamination risk as the Pathfinder — inspect fluid before driving. Rear seat comfort is exceptional for a 3-row. The 2022+ QX60 with 9-speed auto is the stronger used buy if budget allows.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT radiator contamination check (1st gen 2016–2021)', risk: 'critical', riskLabel: 'Critical',
@@ -8260,8 +8256,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
-      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag may be disabled incorrectly.' },
       { number: '14V-400', title: 'CVT Cooler Contamination', desc: 'Radiator coolant may mix with CVT fluid.' }
     ]
   },
@@ -8847,7 +8841,7 @@ const CHECKLISTS = {
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The XK50 Tundra ran nearly unchanged from 2007–2021 — which makes it the most proven full-size truck drivetrain on the road. The 5.7L 3UR-FE is legendary for longevity past 300k miles. No AFM, no turbocharging complexity, no EcoBoost cam phasers. Tundra's weakness is fuel economy (13–15 city) and an older infotainment. Rust is the only real concern on salt-belt trucks. Outstanding reliability.",
     vinNote: "The 2nd-gen Tundra (2014–2021) came with two V8s and no other powertrain. 5.7L 3UR-FE V8 (381hp) is the mainstream engine, found on roughly 90% of trucks — SR5, Limited, Platinum, 1794, TRD Pro. 4.6L 1UR-FE V8 (310hp) was the base SR trim only and is uncommon. Both engines are exceptionally reliable; neither has a chronic failure pattern in this generation. The differences that matter to a buyer: the 5.7L tows ~10,200 lbs vs the 4.6L's ~6,400 lbs, fuel economy is ~1 mpg different, and finding parts for the 4.6L can be slightly slower because the volume is lower. Confirm engine displacement on the door-jamb sticker (it lists \"Engine Displacement: 5.7L\" or \"4.6L\") or by the trim badge on the tailgate. For a full VIN decode of every trim option, run the VIN at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 95, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L 3UR-FE reliability — outstanding', risk: 'low', riskLabel: 'Low Risk',
@@ -8889,8 +8883,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-663', title: 'Rear Seat Recliner Weld', desc: 'Defective welds on some builds.' },
-      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Run the VIN at nhtsa.gov/recalls and verify any open campaigns show completed before purchase.' }
     ]
   },
 
@@ -9220,7 +9213,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Run the VIN at nhtsa.gov/recalls and verify any open campaigns show completed before purchase.' }
     ]
   },
 
@@ -9852,7 +9845,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (300hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The A36 Maxima markets itself as a 4-door sports car — the 3.5L VQ35DE is genuinely powerful. The CVT is the primary risk: under a powerful V6, the belt wears faster than in lighter vehicles. CVT fluid service with genuine NS-3 fluid every 30k miles is essential. Outstanding value for buyers who want near-luxury sport sedan performance at a mainstream price.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'CVT fluid under V6 load / NissanConnect infotainment' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: 'CVT fluid under V6 load / NissanConnect infotainment' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT under V6 load', risk: 'high', riskLabel: 'High Attention',
@@ -9890,8 +9883,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds on some builds.' },
-      { number: '16V-244', title: 'OCS Software', desc: 'Passenger airbag software update.' }
+      { number: '16V-244', title: 'OCS Software (2016)', desc: 'Passenger airbag OCS reflash — campaign covers the 2016 Maxima only; verify on 2016 builds.' }
     ]
   },
 
@@ -10280,7 +10272,7 @@ const CHECKLISTS = {
     engine: '2.0L MR20DD I4 (141hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Rogue Sport (Qashqai) is the subcompact sibling to the Rogue — smaller, lower base price, same CVT platform. The 2.0L MR20 is less powerful than the Rogue's 2.5L but more fuel-efficient. CVT fluid service (NS-3 every 30k miles) is the identical critical maintenance item. Strong value for buyers who don't need Rogue cargo space.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 90, topComplaintArea: 'Xtronic CVT fluid service / limited power' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 90, topComplaintArea: 'Xtronic CVT fluid service / limited power' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -10318,8 +10310,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
-      { number: '16V-244', title: 'OCS Software', desc: 'Airbag software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Run the VIN at nhtsa.gov/recalls and verify any open campaigns show completed before purchase.' }
     ]
   },
 
@@ -11038,7 +11029,7 @@ const CHECKLISTS = {
     engine: '2.7L 2TR-FE I4 (159hp) / 3.5L 2GR-FKS V6 (278hp) with 6-speed AT or 6MT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 3rd-gen Tacoma is the dominant mid-size truck — legendary reliability and near-unlimited aftermarket support. The 3.5L 2GR-FKS V6 has direct injection, which means potential carbon buildup at high mileage. The manual transmission has a well-known notchy engagement when cold. Frame rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 145, topComplaintArea: '6AT hunting/shudder / frame rust (salt-belt) / catalytic converter theft' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 145, topComplaintArea: '6AT hunting/shudder / frame rust (salt-belt) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '6AT transmission hunting (V6)', risk: 'high', riskLabel: 'High Attention',
@@ -11074,8 +11065,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-663', title: 'Rear Seat Recliner', desc: 'Defective welds.' },
-      { number: '14V-117', title: 'Floor Mat Entrapment', desc: 'Mat may interfere with accelerator.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Run the VIN at nhtsa.gov/recalls and verify any open campaigns show completed before purchase.' }
     ],
     vinNote: "The 3rd-gen Tacoma (2016–2022) comes in two powertrains — and which one you\u2019re buying changes the inspection entirely. The 8th VIN digit is the fastest split: T\u202f=\u202f3.5L 2GR-FKS V6 (278\u00a0hp, by far the most common trim — SR5, TRD Sport, TRD Off-Road, Limited, TRD Pro); G\u202f=\u202f2.7L 2TR-FE I4 (159\u00a0hp, SR trim access cab only, older port-injection design, no GDI carbon concern). V6 buyers must verify two things the I4 doesn\u2019t need: (1) TSB T-SB-0092-20 — the 6-speed automatic hunting/downshift fix; if the dealer can\u2019t produce the software update record, budget $0–$200 for a dealer re-flash, or simply drive the truck on the highway for 10+ minutes and feel for repeated aggressive downshifts under light throttle. (2) GDI carbon buildup on the 2GR-FKS intake valves — high-mileage V6 trucks (80k+) may benefit from a $400–$800 walnut-blast cleaning. Model-year digit is position 10: G\u202f=\u202f2016, H\u202f=\u202f2017, J\u202f=\u202f2018, K\u202f=\u202f2019, L\u202f=\u202f2020, M\u202f=\u202f2021, N\u202f=\u202f2022. Run the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine and model year before applying this checklist.",
     blogUrl: '/blog/2016-toyota-tacoma-buyers-guide'

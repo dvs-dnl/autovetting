@@ -5,11 +5,28 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## In flight
 
-*(none)*
+### autovet-competitor-monitor
+
+- Status: in flight
+- Task: weekly competitive intelligence rotation (one company/week)
+- Notes:
+  - 2026-06-11 (this run): profiled YourMechanic / Wrench (🟡).
+    Output: Competitors/_Monitor/2026-06-11-yourmechanic-wrench.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps (In-flight empty; Ready/Done last 10 are recall-audit/funnel-CTA/blog-deploy/SEO — orthogonal to competitor intel).
+    Key delta: YourMechanic down to ~3 employees, consumer PPI frozen; Wrench also owns Lemon Squad — flag for next Lemon Squad pass.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Bumper (Instavin).
 
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+### autovetting-recall-audit-wave4-2026-06-11 — ready 2026-06-11
+
+- Status: ready
+- Started: 2026-06-11 (02:00 overnight builder; launch-freeze reallocation queue priority 1)
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Content/blog/2026-06-06-2016-toyota-prius-buyers-guide.md, blog/2016-toyota-prius-buyers-guide/index.html, llms.txt, _hub/Build-Log/2026-06-11-recall-audit-wave4.md, TASKS.md
+- Notes:
+  2026-06-11 02:00: Recall audit WAVE 4 — verified 16 numbers (13 moved to ledger verified with Part 573 primary sources, 3 removed as unverifiable/misused). All 13 top-occurrence numbers are REAL and correctly used on their launch vehicles: 22V077/24V536/24V538 (Pacifica PHEV fire chain), 18V395 (Pacifica U50 rollaway), 18V579/19V544/19V876 (Prius J0T/K0L/19TA21), 25V236/22V150/20V332 (F-150 3.5L EB master-cylinder chain), 25V010 (Ram Classic Joyson CAB), 17V663 (Rogue recliner welds — Rogue ONLY), 16V244 (Nissan OCS 2013–2016 scope). Fabrication pattern found in batch-authored Nissan/Toyota checklists: 17V663 misapplied to pathfinder-2017/maxima-2018/qx60-2018/rogue-sport-2018/tacoma-2019/tundra-2018 (deleted ×6); 16V244 misapplied by year/model on murano-2018/qx60-2018/rogue-sport-2018 (deleted ×3) and rescoped with explicit campaign years on rogue-2017/pathfinder-2017/maxima-2018; bonus finds verified-and-removed: 14V117 is a GM Express/Savana FMVSS-201 campaign (RCRIT-14V117-0362.pdf) misused as Toyota "Floor Mat Entrapment" on tacoma-2019/tundra-2018/sienna-2015/4runner-2018 (×4 deleted), 15V579 + 16V561 unverifiable (sienna-2015, deleted). 4 emptied lists got the generic VIN-check entry; stats.recalls re-synced on 8 checklists (pathfinder 3→2, maxima 2→1, qx60 3→1, murano 2→1, rogue-sport 2→1, tacoma 2→1, tundra 2→1, sienna 3→1). Prius 19V-544 scope tightened sitewide (2019 Prius / 2019–2020 Prius Prime — not "2019–2020 Prius"): inspect desc + blog md source + re-render. Ledger: legacy 140→124, verified 16→29. Sibling check: shares inspect/index.html with the 3 Ready blocks above — all already committed, this work is sequential on top (continues wave 2/3 queue, same fix policy); Verified against: autovetting-autonomous-batch-2026-06-10, autovetting-funnel-cta-ga4-2026-06-10, autovetting-recall-audit-wave2-ledger-gate-2026-06-10. Gates: 28 PASS / 1 WARN (ratchet 124) / 0 CRIT. Syntax-check: PASS (inspect scripts 2+5, blog post; brace-eval 245 keys / 17 years; tails intact; 17,648 lines). Dead-links: verified (no new hrefs; only recall-entry text changed). Scanner: PASS (317 files). Detail: Build-Log/2026-06-11-recall-audit-wave4.md.
 
 ### autovetting-autonomous-batch-2026-06-10 — ready 2026-06-10
 
