@@ -221,7 +221,7 @@ HEAD_TMPL = """<!DOCTYPE html>
   <meta property="og:url" content="__URL__">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AutoVetting">
-  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.svg">
+  <meta property="og:image" content="https://autovetting.com/assets/img/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@autovetting">
 __JSONLD__<style>

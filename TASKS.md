@@ -11,6 +11,16 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-autonomous-batch-2026-06-10 — ready 2026-06-10
+
+- Status: ready
+- Started: 2026-06-10 (Daniel-directed: "move forward without my approval")
+- Touched files: inspect/index.html, pinpoint/index.html, blog/* (re-rendered), scripts/render-blog.py, scripts/render-vetting-report.py (new), scripts/recall-ledger.json, assets/img/og-default.png+svg (new), sitemap.xml, llms.txt, TASKS.md
+- Commits: 99f9930 (Vetting Report $49 CTA + report_cta_click event, inspect + all posts), 8b7f7ee (recall audit WAVE 3 — 12 more numbers verified via NHTSA API, ALL fabricated-in-context: 21V-065 Volvo Trucks, 20V-127 Daimler, 20V-744 Vac-Tron, 19V-154 Ditch Witch, 16V-381 nonexistent, 20V-051 KME fire truck, 20V-032 Arcimoto, 20V-003 Subaru-Takata-misused, 22V-159 Great Dane, 19V-082 Blue Bird, 17V-376 Caravan-misused, 17V-226 Hyundai-misused; ~112 entries fixed across 66 checklists + Rogue phantom fuel-pump item + pinpoint Ram card; ledger 152→140), + this commit (og-default.png/svg created + 38 files switched svg→png, scripts/render-vetting-report.py fulfillment tool with 2 samples in _hub/Booking-Infrastructure/Reports/)
+- Gates: 28 PASS / 0 CRIT FAIL after every commit; inspect byte/line/tail verified each edit (now 17,659 lines); backups /tmp/inspect3.bak, /tmp/inspect-w3.bak
+- Also (gitignored _hub, not in commits): _NEXT.md LAUNCH FREEZE directive + builder reallocation queue; Shop-Recruiting kit (18-shop Phoenix list, pitch, findings sheet); B2B one-pagers (dealers + credit unions); 2 sample Vetting Reports
+- Sibling check: continues autovetting-recall-audit-wave2-ledger-gate-2026-06-10 + autovetting-funnel-cta-ga4-2026-06-10 (this session, sequential commits, same files intentionally)
+
 ### autovetting-funnel-cta-ga4-2026-06-10 — ready 2026-06-10
 
 - Status: ready
