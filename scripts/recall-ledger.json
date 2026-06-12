@@ -238,6 +238,25 @@
       "component": "OCS passenger airbag reflash: 2013-2016 Altima/Leaf/Pathfinder/NV200/Sentra, 2014-2016 Rogue, 2015-2016 Murano, 2016 Maxima — NOT 2017+ and NOT Infiniti",
       "source": "https://static.nhtsa.gov/odi/rcl/2016/RCRIT-16V244-2308.pdf",
       "verified": "2026-06-11"
+    },
+    "22V486": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Rear axle horizontal mounting bolt fracture (driveshaft may disconnect / rollaway)",
+      "models": "Explorer 2020-2022 (incl. Aviator/Police Interceptor Utility)",
+      "source": "https://www.ford.com/support/campaign-details/22s27/",
+      "note": "NHTSA 22V-486 / Ford 22S27; ~238k Explorers. Explorer-only — was misapplied to F-150 (removed wave5).",
+      "verified": "2026-06-12"
+    },
+    "22V076": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "High-voltage battery pack fire risk (LG cell defect)",
+      "models": "Bolt EV 2017-2022 / Bolt EUV 2022",
+      "source": "https://www.nhtsa.gov/press-releases/recall-all-chevy-bolt-vehicles-fire-risk",
+      "verified": "2026-06-12"
     }
   },
   "unverified_legacy": [
@@ -265,14 +284,12 @@
     "14V350",
     "14V355",
     "14V373",
-    "14V394",
     "14V400",
     "14V595",
     "14V657",
     "14V668",
     "14V787",
     "15V025",
-    "15V117",
     "15V128",
     "15V258",
     "15V303",
@@ -332,7 +349,6 @@
     "20V239",
     "20V242",
     "20V286",
-    "20V373",
     "20V418",
     "20V579",
     "20V583",
@@ -354,8 +370,6 @@
     "21V711",
     "21V803",
     "21V827",
-    "22V076",
-    "22V486",
     "22V592",
     "22V714",
     "22V715",

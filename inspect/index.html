@@ -3228,7 +3228,7 @@ const CHECKLISTS = {
     summary: "The 2015 Outback launched the 5th generation — substantially more refined than the 4th-gen wagon it replaced. It is a strong used buy with one big asterisk: the FB25 four-cylinder is implicated in Subaru's oil-consumption class-action settlement (Yaeger v. Subaru), and a meaningful share of these cars consume oil at a rate the owner does not notice until the engine is starved. The 3.6L H6 has none of that drama. Both transmissions are the Lineartronic CVT — generally reliable, but a fluid check is non-negotiable at this age.",
     stats: {
       itemsToCheck: 13,
-      recalls: 4,
+      recalls: 3,
       ownerComplaints: 612,
       topComplaintArea: 'Engine (oil consumption)'
     },
@@ -3366,7 +3366,6 @@ const CHECKLISTS = {
     recalls: [
       { number: '14V-787', title: 'Takata Airbag (Passenger)', desc: 'Critical — verify replacement on file before purchase.' },
       { number: '20V-696', title: 'Denso Low-Pressure Fuel Pump', desc: 'Pump may fail and cause stall. Free dealer replacement.' },
-      { number: '15V-117', title: 'Brake Light Switch (Mitsuba)', desc: 'Switch may stick and prevent cruise control / push-button start.' },
       { number: '17V-148', title: 'PCV Valve (FB25, early build)', desc: 'Limited build dates only; valve could ingest oil.' }
     ]
   },
@@ -5063,7 +5062,7 @@ const CHECKLISTS = {
     summary: "The WK2 Grand Cherokee (2011–2021) is a genuinely premium mid-size SUV that commands a loyal following — interior quality at the price point is excellent, and off-road capability on Trail Rated trims is real. Its significant weak link is the TIPM (Totally Integrated Power Module), a combined fuse-and-relay box prone to intermittent and hard-to-diagnose electrical failures on earlier builds. The Pentastar V6 is strong. The 5.7L HEMI is powerful but brings MDS cylinder deactivation wear that surfaces above 80,000 miles. If the vehicle has optional Quadra-Lift air suspension, budget for potential compressor and ride-height sensor replacement.",
     stats: {
       itemsToCheck: 19,
-      recalls: 7,
+      recalls: 6,
       ownerComplaints: 2318,
       topComplaintArea: 'Electrical / Engine'
     },
@@ -5200,7 +5199,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '16V-391', title: 'Electronic Gear Selector / Park Lock', desc: 'Monostable gear selector can confuse gear position — high priority; verify complete.' },
-      { number: '14V-394', title: 'Ignition Switch', desc: 'Key can inadvertently turn to off position — verify complete.' },
       { number: '14V-028', title: 'Steering Coupler', desc: 'Steering shaft coupler may corrode and reduce control — verify complete.' },
       { number: '21V-448', title: 'Fuel Tank Straps', desc: 'Fuel tank strap may loosen over time — verify status.' },
       { number: '18V-182', title: 'Brake Fluid Sensor', desc: 'Sensor may give a false low-fluid reading — verify status.' },
@@ -6203,18 +6201,14 @@ const CHECKLISTS = {
     year: 2020, make: 'Ford', model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)',
     engine: '2.3L EcoBoost I4 (300hp) / 3.0L EcoBoost V6 (365hp) / 3.3L Ti-VCT V6 (290hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
-    summary: "The 6th-gen Explorer (2020+) is a significant redesign — but it launched with serious quality issues. The most critical: NHTSA recall 22V-486 covers rear axle bolt fracture that can cause the rear axle to separate, a catastrophic safety issue. Carbon monoxide intrusion from exhaust leaks near the rear HVAC was also recalled. Verify both recalls are complete before purchase — these are deal-breakers if unresolved.",
-    stats: { itemsToCheck: 14, recalls: 6, ownerComplaints: 890, topComplaintArea: 'Safety systems / rear axle recall' },
+    summary: "The 6th-gen Explorer (2020+) is a significant redesign — but it launched with serious quality issues. The most critical: NHTSA recall 22V-486 covers rear axle bolt fracture that can cause the rear axle to separate, a catastrophic safety issue. Verify this recall is complete before purchase — it's a deal-breaker if unresolved. (The widely reported Explorer exhaust/CO concern was investigated by NHTSA and closed in 2023 without a recall; Ford addressed it via Field Service Action 17B25.)",
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 890, topComplaintArea: 'Safety systems / rear axle recall' },
     sections: [
       { title: 'Safety Recalls — Verify First', items: [
         { title: 'Rear axle bolt fracture — 22V-486 (CRITICAL)', risk: 'critical', riskLabel: 'Critical',
           desc: 'Rear axle pinion bolt can fracture under load, allowing the rear axle to separate from the vehicle. This is a catastrophic failure mode that caused accidents. NHTSA investigation resulted in Recall 22V-486.',
           check: '<strong>Run the VIN at nhtsa.gov/recalls BEFORE any test drive.</strong> If 22V-486 shows as open/incomplete, do not drive the vehicle. Walk away or require dealer remedy before proceeding.',
           cost: 'Free dealer repair under recall — or walk away', source: 'NHTSA recall 22V-486' },
-        { title: 'Carbon monoxide intrusion — 20V-373', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Exhaust gases can enter the rear passenger cabin through gaps in the body, raising CO levels. Primarily affects rear passengers. Recall 20V-373.',
-          check: '<strong>Verify recall 20V-373 is complete on the VIN.</strong> Ask dealer for proof of body sealing repair.',
-          cost: 'Free dealer repair under recall', source: 'NHTSA recall 20V-373' }
       ]},
       { title: 'Transmission', items: [
         { title: '10R60 transmission shudder / software', risk: 'high', riskLabel: 'High Attention',
@@ -6240,14 +6234,13 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'Full recall verification', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Six open campaigns possible including the two critical safety recalls. VIN check is non-negotiable before purchase.',
+          desc: 'Five open campaigns possible including the critical rear-axle safety recall. VIN check is non-negotiable before purchase.',
           check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Any unrepaired critical safety recall = walk away until remedied.',
           cost: 'Walk away from critical unrepaired recalls', source: 'NHTSA' }
       ]}
     ],
     recalls: [
       { number: '22V-486', title: 'Rear Axle Bolt Fracture — CRITICAL', desc: 'Rear axle can separate from vehicle. Do not drive until repaired.' },
-      { number: '20V-373', title: 'Carbon Monoxide Intrusion', desc: 'Exhaust gases can enter rear cabin. Verify body seal repair complete.' },
       { number: '19V-888', title: 'Panoramic Roof Glass Breakage', desc: 'Roof glass may crack unexpectedly — dealer inspection required.' },
       { number: '21V-485', title: 'Fuel Injector Leak', desc: 'Fuel injector seals on 2.3L EcoBoost may leak — fire risk.' },
       { number: '20V-077', title: 'Rear Camera Image Delay', desc: 'Software update for backup camera delay.' },
@@ -6310,7 +6303,7 @@ const CHECKLISTS = {
     engine: '4.3L EcoTec3 V6 LV3 (285hp) / 5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The K2XX Sierra 1500 is mechanically identical to the Chevrolet Silverado 1500 — shared platform, same engines, same known issues. The AFM (Active Fuel Management) cylinder deactivation lifter failure on the 5.3L and 6.2L V8 engines is the defining buyer risk. Decode position 8 of the VIN: U = 4.3L V6 (no AFM, lower risk), Z = 5.3L V8 (AFM, lifter risk), B = 6.2L V8 (AFM). Ask for oil change records regardless of engine.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 520, topComplaintArea: 'Engine / AFM lifter failure (5.3L + 6.2L)' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 520, topComplaintArea: 'Engine / AFM lifter failure (5.3L + 6.2L)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.3L / 6.2L AFM lifter failure (critical for V8 buyers)', risk: 'high', riskLabel: 'High Attention',
@@ -6352,9 +6345,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-394', title: 'Power Steering Fluid Leak', desc: 'Hydraulic power steering hose may crack — fire risk.' },
       { number: '14V-290', title: 'Seat Belt Buckle Pretensioner', desc: 'Pretensioner may not function correctly.' },
-      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'Air bag may not deploy as designed.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Wiring chafing may cause CEL or no-start.' }
     ]
   },
@@ -7238,7 +7229,7 @@ const CHECKLISTS = {
     engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "K2XX Tahoe is a full-size body-on-frame 3-row SUV — genuine towing capacity (8,600 lbs) and large-family utility at a fraction of a new model price. But ALL K2XX Tahoes have the 5.3L or 6.2L V8 with AFM cylinder deactivation — and both are subject to the same lifter failure pattern as the Silverado. Every Tahoe buyer must verify AFM lifter status. Budget for a $3,500–$7,000 repair if not already addressed.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 380, topComplaintArea: 'AFM lifter failure (5.3L and 6.2L)' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 380, topComplaintArea: 'AFM lifter failure (5.3L and 6.2L)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'AFM lifter failure — all Tahoe V8 engines', risk: 'critical', riskLabel: 'Critical',
@@ -7276,9 +7267,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-394', title: 'Power Steering Fluid Leak', desc: 'Hydraulic hose may crack — fire risk.' },
       { number: '14V-290', title: 'Seat Belt Buckle', desc: 'Pretensioner may not function correctly.' },
-      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy as designed.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing may cause CEL or no-start.' }
     ]
   },
@@ -7332,7 +7321,7 @@ const CHECKLISTS = {
     engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The Suburban is the Tahoe with a 21-inch longer wheelbase — same platform, same engines, same AFM lifter risk. All Suburban V8s have AFM. The extended wheelbase provides genuine 3-row space and 8,300 lb tow rating. Budget the AFM lifter repair ($3,500–$7,000) as a near-certain cost on any high-mileage example. Preferred play: find one where AFM has already been deleted.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 290, topComplaintArea: 'AFM lifter failure — same as Tahoe' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 290, topComplaintArea: 'AFM lifter failure — same as Tahoe' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'AFM lifter failure — mandatory check', risk: 'critical', riskLabel: 'Critical',
@@ -7370,9 +7359,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
       { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly.' },
-      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
     ]
   },
@@ -7382,7 +7369,7 @@ const CHECKLISTS = {
     engine: '5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "Mechanically identical to the Tahoe — same K2XX platform, same engines, same AFM lifter failure risk. The Yukon/Yukon XL adds GMC premium trim over the Chevrolet badge. Denali models are well-appointed but all Yukon V8s have AFM. The calculation is identical to the Tahoe: document AFM history or budget $3,500–$7,000.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 280, topComplaintArea: 'AFM lifter failure — same as Tahoe/Suburban/Silverado' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 280, topComplaintArea: 'AFM lifter failure — same as Tahoe/Suburban/Silverado' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'AFM lifter failure — mandatory check', risk: 'critical', riskLabel: 'Critical',
@@ -7419,9 +7406,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
       { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire.' },
-      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
     ]
   },
@@ -7819,7 +7804,7 @@ const CHECKLISTS = {
     engine: '6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The K2XX Escalade uses exclusively the 6.2L V8 with AFM — the most expensive AFM failure scenario of any K2XX vehicle. Lifter failure at 60k–100k miles on neglected service costs $5,000–$8,000+. Every used Escalade buyer must verify AFM status. Magnetic Ride Control (MRC) suspension is a significant additional cost when dampers fail. Budget $6,000–$10,000 for deferred repairs on any high-mileage example.",
-    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 310, topComplaintArea: 'AFM lifter failure (6.2L) / MRC suspension / air suspension' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 310, topComplaintArea: 'AFM lifter failure (6.2L) / MRC suspension / air suspension' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '6.2L AFM lifter failure — critical', risk: 'critical', riskLabel: 'Critical',
@@ -7861,9 +7846,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-394', title: 'Power Steering Hose', desc: 'May crack — fire risk.' },
       { number: '14V-290', title: 'Seat Belt Pretensioner', desc: 'May not fire correctly.' },
-      { number: '15V-117', title: 'Side Curtain Airbag', desc: 'May not deploy.' },
       { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Chafing — CEL or no-start.' }
     ]
   },
@@ -10790,7 +10773,7 @@ const CHECKLISTS = {
     engine: '3.3L Ti-VCT V6 (290hp) / 2.7L EcoBoost V6 (325hp) / 3.5L EcoBoost V6 (400hp) / 5.0L Coyote V8 (400hp) / 3.5L PowerBoost Hybrid (430hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 14th-gen F-150 (2021+) introduced the aluminium body to a fully-redesigned interior — Pro Power Onboard generator, available MAX Recline seats, and the PowerBoost hybrid. The 3.5T EcoBoost cam phaser concern carries forward from the 13th gen. 10-speed transmission has been refined. PowerBoost hybrid is the most capable and efficient option but adds battery complexity.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 215, topComplaintArea: '3.5T cam phasers / 10-speed shudder / Pro Power Onboard reliability' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 215, topComplaintArea: '3.5T cam phasers / 10-speed shudder / Pro Power Onboard reliability' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5T EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -10828,8 +10811,6 @@ const CHECKLISTS = {
     recalls: [
       { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10-speed may leak — fire risk.' },
       { number: '21V-485', title: 'Fuel Injector Seal', desc: '3.5T: may leak — fire risk.' },
-      { number: '22V-486', title: 'Rear Axle (some 4x4)', desc: 'Verify bolt fracture recall by VIN.' },
-      { number: '20V-373', title: 'Carbon Monoxide (some builds)', desc: 'Verify by VIN.' }
     ]
   },
 
