@@ -257,6 +257,23 @@
       "models": "Bolt EV 2017-2022 / Bolt EUV 2022",
       "source": "https://www.nhtsa.gov/press-releases/recall-all-chevy-bolt-vehicles-fire-risk",
       "verified": "2026-06-12"
+    },
+    "20V575": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Rearview camera image may blank or distort (FMVSS 111, Ford 20C19); MY2019-2020 F-Series/Explorer/Ranger/Expedition/Escape/Edge/Mustang/Transit + Lincoln Corsair/Nautilus",
+      "source": "NHTSA 20V-575 / Ford recall 20C19 (carcomplaints 20v575000; Ford support 20C19)",
+      "verified": "2026-06-13"
+    },
+    "22V875": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Dash-side wiring harness connector corrosion, fire risk; 2017 Rogue (PC934), 125,215 units",
+      "source": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V875-7473.pdf",
+      "verified": "2026-06-13"
     }
   },
   "unverified_legacy": [
@@ -317,7 +334,6 @@
     "18V004",
     "18V013",
     "18V027",
-    "18V044",
     "18V079",
     "18V114",
     "18V117",
@@ -325,8 +341,6 @@
     "18V182",
     "18V226",
     "18V228",
-    "18V239",
-    "18V411",
     "18V575",
     "18V585",
     "19V006",
@@ -343,7 +357,6 @@
     "19V965",
     "20V048",
     "20V066",
-    "20V077",
     "20V092",
     "20V191",
     "20V239",
@@ -374,7 +387,6 @@
     "22V714",
     "22V715",
     "22V867",
-    "22V875",
     "22V899",
     "23V093",
     "23V123",
