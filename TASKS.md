@@ -16,11 +16,28 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Key delta: YourMechanic down to ~3 employees, consumer PPI frozen; Wrench also owns Lemon Squad — flag for next Lemon Squad pass.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Bumper (Instavin).
 
+
+### autovet-cpo-protocol-ingestion
+
+- Status: in flight
+- Task: weekly OEM CPO protocol ingestion (one manufacturer/week) into Product/CPO-Protocols/
+- Notes:
+  2026-06-14 09:34: ingested Nissan CPO protocol (167 inspection points; also 139 EV / 84 Certified Select tiers).
+    Output: Product/CPO-Protocols/nissan-certified.md, Product/CPO-Protocols/_runs/2026-06-14-nissan.md.
+    Sibling check: no true conflict. In-flight autovet-competitor-monitor touches Competitors/ only (orthogonal). Verified against / cross-referenced to: autovetting-recall-audit-wave7-2026-06-14, autovetting-recall-audit-wave6-2026-06-13, autovetting-recall-audit-wave4-2026-06-11 — those waves verified Nissan campaigns 23V-093 / 22V-875 / 17V-663 (Rogue-only) / 16V-244 (2013-2016 OCS) in inspect/index.html + scripts/recall-ledger.json; this protocol file is upstream and reuses those verified IDs (complementary, not conflicting). No Re-sync needed.
+    Weekly milestone: DONE — nissan-certified.md saved + INDEX.md updated; protocol ready for downstream consumption (overnight-builder / content-checklist authoring). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Hyundai.
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-*(none)*
+### autovetting-deprice-ctas-2026-06-14 — ready
+
+- Status: Ready to deploy
+- Task: Remove live pricing ($49 Vetting Report / from $149 inspection) from all CTAs until monetization is ready (Daniel-directed 2026-06-14).
+- Changes: inspect/index.html (report button text, inspection summary line, mailto body) + blog posts (report button + inspection line) — 18 HTML files. Lead-capture CTAs retained; only dollar figures removed. 0 occurrences of $49/$149 remain.
+- Gates: scripts/gate-check.py — 28 PASS / 0 CRITICAL FAIL (1 warn = recall backlog ratchet 108). inspect integrity verified (17589 lines; clean </script></body></html> tail; surgical 6-line diff).
+- Push: this interactive clone is SSH-only (port 22 blocked, no PAT mounted) — orchestrator to push and move to Done.
 
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
