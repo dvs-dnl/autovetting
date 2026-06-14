@@ -6095,7 +6095,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp) / 5.7L Hemi eTorque V8 (395hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The DT Ram 1500 is the most refined half-ton truck on the market — but buyers must identify whether they have an eTorque mild-hybrid (BSG belt-starter-generator) and whether the 5.7L Hemi has MDS active fuel management. MDS cylinder deactivation lifters are the same failure vector as the GM AFM units — at 60k–120k miles on neglected oil. The eTorque system adds battery and generator service complexity. Coil-spring rear suspension (not leaf springs) is a major comfort upgrade but limits payload vs competitors.",
-    stats: { itemsToCheck: 14, recalls: 3, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
+    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -6137,7 +6137,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Certain 2019 models: pretensioner may not deploy correctly.' },
       { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' },
       { number: '21V-037', title: 'Transmission Software', desc: 'Transmission may not downshift correctly in cold temps.' }
     ]
@@ -6201,7 +6200,7 @@ const CHECKLISTS = {
     engine: '2.3L EcoBoost I4 (300hp) / 3.0L EcoBoost V6 (365hp) / 3.3L Ti-VCT V6 (290hp)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The 6th-gen Explorer (2020+) is a significant redesign — but it launched with serious quality issues. The most critical: NHTSA recall 22V-486 covers rear axle bolt fracture that can cause the rear axle to separate, a catastrophic safety issue. Verify this recall is complete before purchase — it's a deal-breaker if unresolved. (The widely reported Explorer exhaust/CO concern was investigated by NHTSA and closed in 2023 without a recall; Ford addressed it via Field Service Action 17B25.)",
-    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 890, topComplaintArea: 'Safety systems / rear axle recall' },
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 890, topComplaintArea: 'Safety systems / rear axle recall' },
     sections: [
       { title: 'Safety Recalls — Verify First', items: [
         { title: 'Rear axle bolt fracture — 22V-486 (CRITICAL)', risk: 'critical', riskLabel: 'Critical',
@@ -6240,7 +6239,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '22V-486', title: 'Rear Axle Bolt Fracture — CRITICAL', desc: 'Rear axle can separate from vehicle. Do not drive until repaired.' },
-      { number: '19V-888', title: 'Panoramic Roof Glass Breakage', desc: 'Roof glass may crack unexpectedly — dealer inspection required.' },
       { number: '21V-485', title: 'Fuel Injector Leak', desc: 'Fuel injector seals on 2.3L EcoBoost may leak — fire risk.' },
       { number: '20V-575', title: 'Rearview Camera — Image May Blank or Distort', desc: 'FMVSS 111: a poor camera connection can cause the rearview image to blank or distort (Ford 20C19). Free dealer remedy — confirm closed by VIN.' },
       { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10R60 transmission may leak fluid — fire risk.' }
@@ -6544,7 +6542,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Rod bearing wear monitoring — software update required.' },
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
       { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
     ]
   },
@@ -6591,7 +6589,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk on Nu engine.' },
-      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Rod bearing wear monitoring update.' }
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' }
     ]
   },
 
@@ -6638,7 +6636,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-088', title: 'Engine Bearing KSDS', desc: 'Nu rod bearing monitoring update.' },
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
       { number: '18V-013', title: 'Brake Booster Check Valve', desc: 'May fail — reduced braking assist.' }
     ]
   },
@@ -6935,7 +6933,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (292hp) / 5.7L Hemi V8 (370hp) / 6.4L 392 HEMI V8 (485hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The LD Charger is the last truly large American rear-drive sedan — roomier than any competitor and available with V8 power at used-car prices. The 5.7L Hemi MDS cylinder deactivation lifters are the primary mechanical risk (same as Ram 1500 and Durango). The V6 Pentastar avoids MDS entirely and is the budget-friendly reliable choice. Strong performance value when service history is documented.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 260, topComplaintArea: 'Hemi MDS lifter failure / electronics (UConnect)' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 260, topComplaintArea: 'Hemi MDS lifter failure / electronics (UConnect)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -6973,8 +6971,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner may not deploy correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6983,7 +6980,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (375hp) / 6.4L 392 HEMI (485hp) / 6.2L Supercharged (717hp+ Hellcat)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The LC Challenger is the most American muscle car you can buy used — the platform is virtually unchanged since 2008, which means proven reliability and low-cost parts. The 5.7L Hemi MDS lifter failure is the same issue as the Charger and Ram 1500. Hellcat buyers: expect high-mileage brake and tire wear from track use. The 3.6L V6 is the most trouble-free option and still moves quickly.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / abuse history on performance models' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 195, topComplaintArea: 'Hemi MDS lifters / abuse history on performance models' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -7021,8 +7018,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7031,7 +7027,7 @@ const CHECKLISTS = {
     engine: '2.4L Tigershark I4 (180hp) / 2.0L Turbo I4 (270hp) / 3.2L Pentastar V6 (271hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The KL Cherokee is a comfortable, capable crossover with a unique 9-speed transmission that had significant early problems. The 9-speed was substantially revised through TSB updates and by 2018 is much improved, but always test the transmission carefully. The 2.4L Tigershark has documented oil consumption. The 3.2L V6 is the most reliable powertrain in this generation.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 320, topComplaintArea: '9-speed transmission / 2.4L oil consumption' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 320, topComplaintArea: '9-speed transmission / 2.4L oil consumption' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '9-speed ZF 948TE shudder and hunting', risk: 'high', riskLabel: 'High Attention',
@@ -7069,8 +7065,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'Pretensioner deployment concern.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7272,7 +7267,7 @@ const CHECKLISTS = {
     engine: '2.3L EcoBoost I4 (270hp) with 10-speed automatic',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The T6 Ranger returned to North America after an 8-year absence and brought the excellent 2.3L EcoBoost with it. First-year (2019) quality issues existed but were resolved in 2020+. The 10-speed automatic received TSB updates for hesitation and shudder. Cam phaser noise on cold start is reported on some early examples — the same family issue as the F-150 EcoBoost. Strong mid-size truck value when first-year issues are addressed.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 185, topComplaintArea: '10-speed transmission shudder / EcoBoost cam phasers' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 185, topComplaintArea: '10-speed transmission shudder / EcoBoost cam phasers' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.3L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -7298,13 +7293,12 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'Recall check (4 campaigns) + transmission TSB verification', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Multiple recalls including 19V-888 and transmission calibration TSBs.',
+          desc: 'Multiple open recalls and transmission calibration TSBs — verify all by VIN.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm transmission TSB updates are on record.</strong>',
           cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
       ]}
     ],
     recalls: [
-      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'Roof glass may crack — dealer inspection.' },
       { number: '19V-485', title: 'Fuel Injector Seal', desc: '2.3T: fuel injector may leak — fire risk.' },
       { number: '20V-575', title: 'Rearview Camera — Image May Blank or Distort', desc: 'FMVSS 111: a poor camera connection can cause the rearview image to blank or distort (Ford 20C19). Free dealer remedy — confirm closed by VIN.' },
       { number: '21V-641', title: 'Transmission Fluid Leak', desc: '10-speed may leak fluid — fire risk.' }
@@ -7688,7 +7682,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7697,7 +7691,7 @@ const CHECKLISTS = {
     engine: '1.4L MultiAir Turbo I4 (160hp) / 2.4L Tigershark I4 (180hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The BU Renegade is Jeep's entry-level crossover — affordable, distinctive, and genuinely capable off-road on the Trailhawk. The 1.4T MultiAir has a documented timing belt failure pattern on neglected maintenance schedules. The 2.4L Tigershark has the same oil consumption history as the Cherokee and Compass. Neither powertrain is a disaster — both require documentation.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 195, topComplaintArea: '1.4T timing belt / 2.4L oil consumption' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 195, topComplaintArea: '1.4T timing belt / 2.4L oil consumption' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.4T MultiAir timing belt service', risk: 'critical', riskLabel: 'Critical',
@@ -7735,7 +7729,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -7991,7 +7984,7 @@ const CHECKLISTS = {
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Model 3 is the best-selling EV in history and a genuinely excellent car. Battery degradation is slow on 2019+ units. Main buyer concerns: panel gap quality on early builds (mostly cosmetic), high-voltage battery health (check remaining range vs. EPA rating), and rear motor bearing noise on pre-2020 LR AWD cars. OTA updates resolve most software issues. Independent EV inspection to check battery health before purchase.",
     vinNote: "The 1st-gen Model 3 (2017+) came in three drivetrain configurations and the inspection priorities differ significantly. Standard Range Plus / Standard Range (2019 RWD, 283hp) — single rear motor. Long Range AWD (346hp) — dual motor, front-induction + rear-permanent-magnet. Performance (450hp) — dual motor with larger inverters + larger brakes. Battery chemistry changed across years: 2019 Standard Range Plus used NCA chemistry; LFP came in 2021+ for standard-range variants. Tell variants apart fastest from the badge on the trunk lid and the build sheet (accessible via the touchscreen: Service → Vehicle Information). Critical inspections that apply to all 2019 Model 3s: rear inverter coolant pump (a documented failure pattern at 40-70k miles), Boot/door rubber seal water-ingress at the trunk, and the MCU2 infotainment computer (replaced under recall on most 2018-2020 cars, but verify completion). Drivetrain-specific: Performance models often have track use history — inspect tire wear, brake wear, and check Autopilot computer revision (HW2.5 vs HW3.0; HW3.0 is the floor for Full Self-Driving). Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 280, topComplaintArea: 'Panel gaps (cosmetic) / HV battery range degradation / rear motor bearing noise' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 280, topComplaintArea: 'Panel gaps (cosmetic) / HV battery range degradation / rear motor bearing noise' },
     sections: [
       { title: 'Battery & Range', items: [
         { title: 'HV battery health and range degradation', risk: 'high', riskLabel: 'High Attention',
@@ -8030,7 +8023,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior update — software OTA.' },
-      { number: '22V-592', title: 'Backup Camera Software', desc: 'Camera may not display on reverse — OTA fix.' },
       { number: '21V-020', title: 'In-Car Camera', desc: 'Camera monitoring software update.' },
       { number: '20V-066', title: 'Touchscreen eMMC Wear', desc: 'MCU1 eMMC chip may wear out — display replacement.' }
     ]
@@ -8041,7 +8033,7 @@ const CHECKLISTS = {
     engine: 'Dual Motor AWD (384hp) / Long Range (330hp) / Performance (450hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Model Y surpassed the Model 3 to become the world's best-selling vehicle in 2023. 2021+ Giga Texas and Fremont builds have improved panel quality over early production. Battery degradation is minimal on cars under 50k miles. Heat pump (standard 2021+) reduces range anxiety in cold climates. Main buyer check: battery health and any service history from the Tesla app.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 195, topComplaintArea: 'Panel gaps (early builds) / battery health / heat pump in extreme cold' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 195, topComplaintArea: 'Panel gaps (early builds) / battery health / heat pump in extreme cold' },
     sections: [
       { title: 'Battery & Range', items: [
         { title: 'HV battery health check', risk: 'high', riskLabel: 'High Attention',
@@ -8079,7 +8071,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-592', title: 'Backup Camera Display', desc: 'Camera may not display — OTA fix.' },
       { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior — OTA fix.' },
       { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'Chime may not activate — OTA fix.' }
     ]
@@ -8707,7 +8698,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (295hp) / 5.7L Hemi V8 (360hp) / 6.4L SRT 392 (475hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The WD Durango is a body-on-frame 3-row SUV that survives on tow capacity (7,400–8,700 lbs) and V8 power. The 5.7L Hemi MDS lifters are the same failure mode as the Ram 1500 and Charger — same oil-interval dependency, same $3,000–$6,500 repair cost. The 3.6L Pentastar V6 avoids MDS. TIPM electrical module failures are less common on WD than WK2 but still possible.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 215, topComplaintArea: 'Hemi MDS lifters / ZF 8-speed shudder' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 215, topComplaintArea: 'Hemi MDS lifters / ZF 8-speed shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -8745,8 +8736,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-048', title: 'Seat Belt Pretensioner', desc: 'May not deploy correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8755,7 +8745,7 @@ const CHECKLISTS = {
     engine: '3.5L EcoBoost V6 (375hp) / 3.5L EcoBoost High Output (400hp Limited)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 4th-gen Expedition is Ford's full-size 3-row BOF SUV — aluminium body panels over a steel frame, twin-turbo EcoBoost V6. The 3.5L EcoBoost is proven in F-150 applications; the main buyer checks are cam phaser noise on cold start and 10-speed transmission shudder. MAX wheelbase adds genuine third-row legroom. Strong full-size SUV value versus GM competition.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 195, topComplaintArea: '3.5T EcoBoost cam phasers / 10-speed transmission shudder' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 195, topComplaintArea: '3.5T EcoBoost cam phasers / 10-speed transmission shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -8793,7 +8783,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'Roof glass may shatter.' },
       { number: '19V-485', title: 'Fuel Injector Seal', desc: '3.5T: injector may leak — fire risk.' },
       { number: '18V-117', title: 'Supplemental Restraint', desc: 'Side airbag deployment concern.' }
     ]
@@ -9374,7 +9363,7 @@ const CHECKLISTS = {
     engine: 'Electric — Single Motor RWD (225hp) / Dual Motor AWD (320hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The IONIQ 5 on the E-GMP platform is one of the best EVs launched since the Tesla Model 3 — 800V architecture enables ultra-fast charging (18 min to 80% at 350kW DCFC), distinctive retro styling, and a flat floor that maximizes interior space. Main buyer concerns: heat pump on cold-climate cars (standard on AWD, optional on RWD), charge port compatibility, and early production quality. Battery degradation is minimal on cars under 40k miles.",
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
     sections: [
       { title: 'Battery & Charging', items: [
         { title: 'HV battery health and range', risk: 'high', riskLabel: 'High Attention',
@@ -9414,7 +9403,6 @@ const CHECKLISTS = {
     recalls: [
       { number: '22V-714', title: 'Battery Management Software', desc: 'BMS update to prevent overcharge.' },
       { number: '23V-127', title: 'Seat Belt Warning', desc: 'Chime may not activate — OTA fix.' },
-      { number: '22V-592', title: 'Charge Port Software', desc: 'Charge port may not communicate correctly — OTA fix.' },
       { number: '21V-827', title: 'ADAS Software', desc: 'Driver assist behavior update.' }
     ]
   },
@@ -9662,7 +9650,7 @@ const CHECKLISTS = {
     engine: '3.5L EcoBoost V6 (450hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 4th-gen Navigator shares the F-150/Expedition platform with a premium Lincoln interior and air suspension standard. The 3.5T EcoBoost cam phasers and 10-speed shudder are the same concerns as the Expedition. Air suspension repair is a significant additional cost. Outstanding luxury full-size value versus European competition.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 140, topComplaintArea: '3.5T cam phasers / air suspension / 10-speed shudder' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 140, topComplaintArea: '3.5T cam phasers / air suspension / 10-speed shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5L EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -9700,7 +9688,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'May shatter.' },
       { number: '19V-485', title: 'Fuel Injector Seal', desc: 'May leak — fire risk.' }
     ]
   },
@@ -10078,7 +10065,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-088', title: 'KSDS Engine Bearing', desc: 'Nu rod bearing monitoring update.' },
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
       { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' }
     ]
   },
@@ -10460,7 +10447,7 @@ const CHECKLISTS = {
     engine: '1.0L EcoBoost I3 (123hp) / 2.0L Ti-VCT I4 (166hp) / 1.5L Ti-VCT I4 (123hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The B4A EcoSport is Ford's entry-level subcompact SUV — limited cargo space due to the side-hinged rear door is the headline quirk. The 1.0L EcoBoost 3-cylinder is the most fuel-efficient option but the smallest engine in Ford's lineup. Main buyer checks: 1.0T oil consumption reports and transmission behavior on early builds. Lower-cost alternative to the Escape or Bronco Sport.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 140, topComplaintArea: '1.0T oil consumption / side-swing tailgate limitation / transmission shudder' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 140, topComplaintArea: '1.0T oil consumption / side-swing tailgate limitation / transmission shudder' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.0L EcoBoost I3 oil consumption', risk: 'monitor', riskLabel: 'Monitor',
@@ -10498,7 +10485,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-888', title: 'Panoramic Roof Glass', desc: 'May shatter.' },
       { number: '19V-485', title: 'Fuel Injector Seal', desc: 'May leak — fire risk.' }
     ]
   },
@@ -11032,7 +11018,7 @@ const CHECKLISTS = {
     engine: '3.5L V6 DOHC i-VTEC (285hp) with 10-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 4th-gen Pilot (2023+) is a complete redesign over the 3rd-gen — new 3.5L DOHC engine without VCM (eliminating the motor mount vibration issue), improved interior, and the TrailSport adds real off-road capability. No VCM = no motor mount vibration. The 10-speed automatic is smooth. Outstanding 3-row family SUV with Honda reliability.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 35, topComplaintArea: 'Minimal — new platform with early production quality variance' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 35, topComplaintArea: 'Minimal — new platform with early production quality variance' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5L DOHC i-VTEC — no VCM', risk: 'low', riskLabel: 'Low Risk',
@@ -11070,8 +11056,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'May not activate — OTA fix.' },
-      { number: '22V-592', title: 'Camera Software', desc: 'Camera display update.' }
+      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'May not activate — OTA fix.' }
     ]
   },
   'toyota-corolla-2021': {
@@ -11290,15 +11275,15 @@ const CHECKLISTS = {
     year: 2016, make: 'Kia', model: 'Optima', trim: 'LX / EX / SX / SXL (4th gen, 2016–2020)',
     engine: '2.4L GDI I4 (185 hp) or 2.0T GDI I4 (245 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 4th-gen Optima is a well-styled mid-sizer let down by the Theta II engine recall. Both the 2.4L and 2.0T are subject to NHTSA recall 20V-239 (engine seizure due to debris from manufacturing). Always confirm the recall is closed before purchase. Post-recall cars with clean oil history are reliable; skipped oil changes still cause problems despite the recall fix.",
+    summary: "The 4th-gen Optima is a well-styled mid-sizer let down by the Theta II engine recall. Both the 2.4L and 2.0T are subject to NHTSA Theta II engine recalls (engine seizure due to debris from manufacturing). Always confirm the recall is closed before purchase. Post-recall cars with clean oil history are reliable; skipped oil changes still cause problems despite the recall fix.",
     stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 680, topComplaintArea: 'Engine' },
     sections: [
       { title: 'Engine Recall — Check First', items: [
-        { title: 'Theta II engine seizure recall — NHTSA 20V-239', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'Kia/Hyundai Theta II engines (2.4L and 2.0T) were subject to a catastrophic engine seizure recall due to metal debris from manufacturing contaminating the crankshaft bearings. Engines can seize without warning. NHTSA 20V-239 covers 2016–2020 Optima.',
+        { title: 'Theta II engine seizure recall — verify by VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'Kia/Hyundai Theta II engines (2.4L and 2.0T) were subject to a catastrophic engine seizure recall due to metal debris from manufacturing contaminating the crankshaft bearings. Engines can seize without warning. Multiple Theta II engine campaigns cover the 2016 Optima — confirm coverage by VIN.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. If the recall shows open, do NOT purchase until dealer completes the repair.</strong> Ask for the recall completion paperwork.',
           cost: 'Free dealer repair (engine replacement if seized)',
-          source: 'NHTSA recall 20V-239 / Kia Theta II investigation' },
+          source: 'NHTSA / Kia Theta II engine recall (verify by VIN)' },
         { title: 'Knock sensor monitoring system (KSDS)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Kia installed a Knock Sensor Detection System on post-recall cars to monitor for bearing noise. If the KSDS warning light illuminates, the engine needs immediate inspection.',
           check: '<strong>Check for any MIL or KSDS warning on the instrument cluster.</strong>',
@@ -11338,7 +11323,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '20V-239', description: 'Theta II engine metal debris — catastrophic engine seizure risk', severity: 'Critical', remedy: 'Free dealer engine inspection and replacement if necessary; KSDS software installed' }
+      { campaign: 'Multiple', description: 'Theta II engine metal debris — catastrophic engine seizure risk; verify all open engine recalls by VIN', severity: 'Critical', remedy: 'Free dealer engine inspection and replacement if necessary; KSDS software installed' }
     ]
   },
   'toyota-sequoia-2016': {

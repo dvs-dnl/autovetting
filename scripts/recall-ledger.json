@@ -274,7 +274,8 @@
       "component": "Dash-side wiring harness connector corrosion, fire risk; 2017 Rogue (PC934), 125,215 units",
       "source": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V875-7473.pdf",
       "verified": "2026-06-13"
-    }
+    },
+    "23V093": "Nissan 23V-093 (R22C5) — 2014-2020 Rogue + 2017-2022 Rogue Sport jackknife ignition key may collapse, can shut off engine; per NHTSA campaign 23V093000 / Justia / CarComplaints. Correctly used on nissan-rogue-2017."
   },
   "unverified_legacy": [
     "05V449",
@@ -353,13 +354,10 @@
     "19V415",
     "19V485",
     "19V777",
-    "19V888",
     "19V965",
-    "20V048",
     "20V066",
     "20V092",
     "20V191",
-    "20V239",
     "20V242",
     "20V286",
     "20V418",
@@ -371,7 +369,6 @@
     "21V020",
     "21V037",
     "21V056",
-    "21V088",
     "21V247",
     "21V259",
     "21V394",
@@ -383,12 +380,10 @@
     "21V711",
     "21V803",
     "21V827",
-    "22V592",
     "22V714",
     "22V715",
     "22V867",
     "22V899",
-    "23V093",
     "23V123",
     "23V127"
   ]
