@@ -34,6 +34,8 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ### autovetting-deprice-ctas-2026-06-14 — ready
 
 - Status: Ready to deploy
+- Started: 2026-06-14 (Daniel-directed interactive session)
+- Touched files: inspect/index.html, blog/2010-lexus-rx350-buyers-guide/index.html, blog/2014-acura-tsx-buyers-guide/index.html, blog/2014-chevrolet-silverado-buyers-guide/index.html, blog/2014-honda-accord-buyers-guide/index.html, blog/2014-toyota-corolla-buyers-guide/index.html, blog/2016-mazda-mx5-miata-buyers-guide/index.html, blog/2016-toyota-prius-buyers-guide/index.html, blog/2016-toyota-tacoma-buyers-guide/index.html, blog/2017-chrysler-pacifica-buyers-guide/index.html, blog/2017-honda-civic-buyers-guide/index.html, blog/2018-ford-f150-buyers-guide/index.html, blog/2018-honda-accord-buyers-guide/index.html, blog/2018-toyota-camry-buyers-guide/index.html, blog/2019-nissan-altima-buyers-guide/index.html, blog/2019-ram-1500-classic-buyers-guide/index.html, blog/2021-ford-f150-buyers-guide/index.html, blog/2021-toyota-corolla-buyers-guide/index.html, TASKS.md
 - Task: Remove live pricing ($49 Vetting Report / from $149 inspection) from all CTAs until monetization is ready (Daniel-directed 2026-06-14).
 - Changes: inspect/index.html (report button text, inspection summary line, mailto body) + blog posts (report button + inspection line) — 18 HTML files. Lead-capture CTAs retained; only dollar figures removed. 0 occurrences of $49/$149 remain.
 - Gates: scripts/gate-check.py — 28 PASS / 0 CRITICAL FAIL (1 warn = recall backlog ratchet 108). inspect integrity verified (17589 lines; clean </script></body></html> tail; surgical 6-line diff).
