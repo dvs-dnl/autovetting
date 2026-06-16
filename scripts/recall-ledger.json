@@ -137,7 +137,7 @@
       "makes": [
         "Chrysler"
       ],
-      "component": "Pacifica PHEV high-voltage battery fire (Z11, 2017-2018) — superseded by 24V536",
+      "component": "Pacifica PHEV high-voltage battery fire (Z11, 2017-2018) \u2014 superseded by 24V536",
       "source": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V077-7245.pdf",
       "verified": "2026-06-11"
     },
@@ -227,7 +227,7 @@
       "makes": [
         "Nissan"
       ],
-      "component": "2016-2017 Rogue rear seat recliner welds (PC592, FMVSS 207/210, 4,883 units) — Rogue ONLY",
+      "component": "2016-2017 Rogue rear seat recliner welds (PC592, FMVSS 207/210, 4,883 units) \u2014 Rogue ONLY",
       "source": "https://static.nhtsa.gov/odi/rcl/2017/RCRIT-17V663-4573.pdf",
       "verified": "2026-06-11"
     },
@@ -235,7 +235,7 @@
       "makes": [
         "Nissan"
       ],
-      "component": "OCS passenger airbag reflash: 2013-2016 Altima/Leaf/Pathfinder/NV200/Sentra, 2014-2016 Rogue, 2015-2016 Murano, 2016 Maxima — NOT 2017+ and NOT Infiniti",
+      "component": "OCS passenger airbag reflash: 2013-2016 Altima/Leaf/Pathfinder/NV200/Sentra, 2014-2016 Rogue, 2015-2016 Murano, 2016 Maxima \u2014 NOT 2017+ and NOT Infiniti",
       "source": "https://static.nhtsa.gov/odi/rcl/2016/RCRIT-16V244-2308.pdf",
       "verified": "2026-06-11"
     },
@@ -246,7 +246,7 @@
       "component": "Rear axle horizontal mounting bolt fracture (driveshaft may disconnect / rollaway)",
       "models": "Explorer 2020-2022 (incl. Aviator/Police Interceptor Utility)",
       "source": "https://www.ford.com/support/campaign-details/22s27/",
-      "note": "NHTSA 22V-486 / Ford 22S27; ~238k Explorers. Explorer-only — was misapplied to F-150 (removed wave5).",
+      "note": "NHTSA 22V-486 / Ford 22S27; ~238k Explorers. Explorer-only \u2014 was misapplied to F-150 (removed wave5).",
       "verified": "2026-06-12"
     },
     "22V076": {
@@ -275,7 +275,46 @@
       "source": "https://static.nhtsa.gov/odi/rcl/2022/RCRIT-22V875-7473.pdf",
       "verified": "2026-06-13"
     },
-    "23V093": "Nissan 23V-093 (R22C5) — 2014-2020 Rogue + 2017-2022 Rogue Sport jackknife ignition key may collapse, can shut off engine; per NHTSA campaign 23V093000 / Justia / CarComplaints. Correctly used on nissan-rogue-2017."
+    "23V093": "Nissan 23V-093 (R22C5) \u2014 2014-2020 Rogue + 2017-2022 Rogue Sport jackknife ignition key may collapse, can shut off engine; per NHTSA campaign 23V093000 / Justia / CarComplaints. Correctly used on nissan-rogue-2017.",
+    "20V191": {
+      "component": "Rearview camera image remains on display (VP4 radio software, FMVSS 111)",
+      "makes": [
+        "Jeep",
+        "Ram",
+        "Chrysler",
+        "Dodge"
+      ],
+      "source": "https://static.nhtsa.gov/odi/rcl/2020/RCLRPT-20V191-4667.PDF",
+      "verified": "2026-06-16",
+      "note": "Covers 2020 Gladiator; defect was mislabeled as throttle-position-sensor in checklist (corrected)"
+    },
+    "22V412": {
+      "component": "HV battery main contactors overheat \u2014 loss of drive power (Ford 22S41)",
+      "makes": [
+        "Ford"
+      ],
+      "source": "NHTSA 22V-412 / auto-recalls.justia.com/ford/mustang-mach-e/2021/22v412000",
+      "verified": "2026-06-16",
+      "note": "2021-2022 Mustang Mach-E; replaced fabricated 21V-803 (Tiger truck-camper window recall)"
+    },
+    "18V568": {
+      "component": "Front seat-belt pretensioner can ignite B-pillar insulation/wiring \u2014 fire (Ford 18S27)",
+      "makes": [
+        "Ford"
+      ],
+      "source": "NHTSA 18V-568 / auto-recalls.justia.com/ford/f-150/2016/18v568000",
+      "verified": "2026-06-16",
+      "note": "2015-2018 F-150 Reg Cab/SuperCrew; replaced fabricated 16V-170 (no such F-150 IP-wiring fire recall)"
+    },
+    "19V434": {
+      "component": "Moisture/water ingress into HV battery \u2014 fire risk",
+      "makes": [
+        "Audi"
+      ],
+      "source": "NHTSA 19V-434 / auto-recalls.justia.com/audi/e-tron/2019/19v434000",
+      "verified": "2026-06-16",
+      "note": "2019 e-tron; replaced fabricated 20V-092 (Bentley airbag inflator recall)"
+    }
   },
   "unverified_legacy": [
     "05V449",
@@ -319,7 +358,6 @@
     "15V554",
     "16V028",
     "16V065",
-    "16V170",
     "16V391",
     "16V433",
     "16V449",
@@ -352,12 +390,9 @@
     "19V268",
     "19V291",
     "19V415",
-    "19V485",
     "19V777",
     "19V965",
     "20V066",
-    "20V092",
-    "20V191",
     "20V242",
     "20V286",
     "20V418",
@@ -375,14 +410,10 @@
     "21V448",
     "21V485",
     "21V625",
-    "21V641",
     "21V650",
     "21V711",
-    "21V803",
     "21V827",
     "22V714",
-    "22V715",
-    "22V867",
     "22V899",
     "23V123",
     "23V127"
