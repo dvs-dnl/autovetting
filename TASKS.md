@@ -31,18 +31,30 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-### autovetting-deprice-ctas-2026-06-14 — ready
+*(empty — wave-9 pushed directly; deprice block moved to Done below)*
 
-- Status: Ready to deploy
+## Done (last 10)
+<!-- orchestrator moves Ready items here after push -->
+
+### autovetting-recall-audit-wave9-2026-06-17 — done 2026-06-17
+
+- Status: done
+- Started: 2026-06-17 (02:00 overnight builder; launch-freeze reallocation queue priority 1)
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-06-17-recall-audit-wave9.md, _hub/Awaiting-Daniel.md, TASKS.md
+- Notes:
+  2026-06-17 02:00: Recall audit WAVE 9 — resolved 4 unverified_legacy numbers (11 deployed occurrences), all caught by the cross-make/cross-defect fabrication signature; verified via WebSearch (api.nhtsa.gov still provenance-blocked for web_fetch). 21V-037 = 2021 Ram 1500 Classic SLT brake master-cylinder push-rod (683 units, RCLRPT-21V037-6364) — all 3 deployed uses fabricated: deleted from ram-1500-2019 ("Transmission Software"), bmw-x5-2019 ("Airbag Deployment" → generic VIN-check), jeep-gladiator-2020 ("Transmission Software"). 18V-114 = cross-make/cross-defect (Subaru "Valve Spring" + Honda "Driveshaft"); real Subaru valve-spring recall is 18V-772 (2012-2014, not 2011 Forester); deleted x3 (subaru-forester-2011, honda-civic-2017, honda-crv-2017). 21V-827 = fabricated "Autosteer"; real Tesla Autosteer recall is 23V-838 (Dec 2023, 2.03M units, SB-23-00-008, RCLRPT-23V838-8276) → REPLACED on tesla-model3-2019 + tesla-model-y-2021 (both in scope), deleted cross-make on hyundai-ioniq5-2022 ("ADAS Software"). 23V-127 = fabricated "Seat Belt Warning Chime" across Tesla/Hyundai/Honda; real Tesla seat-belt-reminder recall is 24V-376 (FMVSS 208, SB-24-00-008, RCLRPT-24V376-3527) → REPLACED on tesla-model-y-2021 (in scope), deleted on hyundai-ioniq5-2022 + honda-pilot-2023 (sole entry → generic VIN-check). stats.recalls re-synced on all 8 deletion slugs; tesla 1:1 swaps unchanged. Ledger: unverified_legacy 100→96, verified 38→40 (added 23V838 + 24V376 with primary sources). Left queued (same-make/same-defect = not dispositive): 19V-268/21V-259 (GM), 19V-258 (VW), 20V-242 (Hyundai/Kia), 12V-491 (Toyota), 19V-243/21V-711/22V-899 (single-use, number didn't confirm; candidate swaps need year-scope confirmation). DISCOVERED: next/index.html is a stale ungated duplicate of checklist data still carrying removed fabrications (18V-307, 18V-114) — flagged to Awaiting-Daniel (gate scans only inspect/root-index/pinpoint). Sibling check: shares inspect/index.html + scripts/recall-ledger.json with Done(last 10) recall-audit waves 4-8 (all committed+pushed, latest 6c9d0a6) and the deprice block (shares inspect/index.html, has Started date) — this work is sequential on top, same fix policy; Verified against: autovetting-recall-audit-wave8-2026-06-16. In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) are orthogonal. All inspect/ledger-sharing Done siblings carry Started dates — no backfill needed. Gates: 28 PASS / 1 WARN (ratchet 96) / 0 CRIT. Syntax-check: PASS (inspect scripts 2+5; pinpoint scripts OK; CHECKLISTS Object.keys=245 unchanged; tail intact; inspect 17,582→17,575 lines, no truncation; backup /tmp/inspect-w9.bak). Dead-links: verified (zero href changes vs backup). Scanner: PASS (347 files). Detail: Build-Log/2026-06-17-recall-audit-wave9.md.
+  [PUSH PENDING — hash recorded in follow-up commit]
+
+### autovetting-deprice-ctas-2026-06-14 — done 2026-06-17
+
+- Status: done
 - Started: 2026-06-14 (Daniel-directed interactive session)
 - Touched files: inspect/index.html, blog/2010-lexus-rx350-buyers-guide/index.html, blog/2014-acura-tsx-buyers-guide/index.html, blog/2014-chevrolet-silverado-buyers-guide/index.html, blog/2014-honda-accord-buyers-guide/index.html, blog/2014-toyota-corolla-buyers-guide/index.html, blog/2016-mazda-mx5-miata-buyers-guide/index.html, blog/2016-toyota-prius-buyers-guide/index.html, blog/2016-toyota-tacoma-buyers-guide/index.html, blog/2017-chrysler-pacifica-buyers-guide/index.html, blog/2017-honda-civic-buyers-guide/index.html, blog/2018-ford-f150-buyers-guide/index.html, blog/2018-honda-accord-buyers-guide/index.html, blog/2018-toyota-camry-buyers-guide/index.html, blog/2019-nissan-altima-buyers-guide/index.html, blog/2019-ram-1500-classic-buyers-guide/index.html, blog/2021-ford-f150-buyers-guide/index.html, blog/2021-toyota-corolla-buyers-guide/index.html, TASKS.md
 - Task: Remove live pricing ($49 Vetting Report / from $149 inspection) from all CTAs until monetization is ready (Daniel-directed 2026-06-14).
 - Changes: inspect/index.html (report button text, inspection summary line, mailto body) + blog posts (report button + inspection line) — 18 HTML files. Lead-capture CTAs retained; only dollar figures removed. 0 occurrences of $49/$149 remain.
 - Gates: scripts/gate-check.py — 28 PASS / 0 CRITICAL FAIL (1 warn = recall backlog ratchet 108). inspect integrity verified (17589 lines; clean </script></body></html> tail; surgical 6-line diff).
-- Push: this interactive clone is SSH-only (port 22 blocked, no PAT mounted) — orchestrator to push and move to Done.
+- Push: CONFIRMED on origin/main — commit 018c434 (verified via `git branch -r --contains 018c434`). Moved Ready→Done by overnight builder 2026-06-17.
 
-## Done (last 10)
-<!-- orchestrator moves Ready items here after push -->
 
 ### autovetting-recall-audit-wave8-2026-06-16 — done 2026-06-16
 

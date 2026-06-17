@@ -3004,7 +3004,7 @@ const CHECKLISTS = {
     summary: "The 2009-2013 Forester (3rd gen) is the last of the boxer-engine era before Subaru moved to the FB25 in 2014. It\'s capable, practical AWD, but has documented head gasket and oil consumption issues that buyers must verify. Verified-clean examples are excellent; neglected ones are a wallet trap.",
     stats: {
       itemsToCheck: 10,
-      recalls: 4,
+      recalls: 3,
       ownerComplaints: 478,
       topComplaintArea: 'Engine'
     },
@@ -3100,8 +3100,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '11V-260', title: 'Brake Line Corrosion (salt belt)', desc: 'Rear brake lines may corrode and leak.' },
       { number: '14V-668', title: 'Brake Pedal Bracket', desc: 'Bracket may corrode and fail.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '18V-114', title: 'Valve Spring Replacement', desc: 'Some EJ engines may have defective valve springs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -3381,7 +3380,7 @@ const CHECKLISTS = {
     summary: "The 2017 Civic is the second model year of the sharp 10th-gen platform — but it is the year that exposed the L15B7 1.5L turbocharged engine\'s oil-dilution problem at scale. In cold weather, unburned gasoline accumulates in the engine oil faster than it can evaporate, raising oil level above max and reducing viscosity. Honda extended powertrain warranty in cold-weather states and pushed software updates. The 2.0L LX/Sport variants are largely free of this and are the safer used buy if you don\'t need the torque.",
     stats: {
       itemsToCheck: 12,
-      recalls: 3,
+      recalls: 2,
       ownerComplaints: 893,
       topComplaintArea: 'Engine (1.5T oil dilution)'
     },
@@ -3510,7 +3509,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '23V-858', title: 'Denso Low-Pressure Fuel Pump (2018–2020)', desc: 'Pump impeller may deform and cause stall. Covers 2018–2020 Civic — free dealer replacement, verify by VIN.' },
-      { number: '18V-114', title: 'Driveshaft (manual transmission)', desc: 'Si and Sport 6MT — driveshaft may crack and separate. Verify completion.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ],
     vinNote: "The 10th-gen Civic (FC/FK body, 2016–2021) comes with two completely different engines that buyers must identify before applying this checklist. Trim level is the fastest decode: LX and Sport trims use the 2.0L K20C2 naturally-aspirated I4 (158 hp, 6MT or CVT) — this engine has no oil-dilution exposure and is the lower-risk choice. Every other trim (EX, EX-T, EX-L, Touring, Si, and Sport Touring) uses the 1.5L L15B7 turbocharged I4 (174–205 hp) — this is the engine with the documented cold-weather fuel-dilution problem. To confirm which engine is certified for the specific VIN you're considering, run a full decode at <a href=\"/decode/\">autovetting.com/decode</a> or directly at vpic.nhtsa.dot.gov. The VIN also encodes model year at position 10: G = 2016, H = 2017, J = 2018, K = 2019. A 2017 (H) car is the year the dilution problem was most widely reported — if the VIN decodes to 2017 + 1.5T, pull the dipstick and verify the PCM calibration update is on the service record before committing to the purchase.",
@@ -6095,7 +6093,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (305hp) / 5.7L Hemi V8 (395hp) / 5.7L Hemi eTorque V8 (395hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The DT Ram 1500 is the most refined half-ton truck on the market — but buyers must identify whether they have an eTorque mild-hybrid (BSG belt-starter-generator) and whether the 5.7L Hemi has MDS active fuel management. MDS cylinder deactivation lifters are the same failure vector as the GM AFM units — at 60k–120k miles on neglected oil. The eTorque system adds battery and generator service complexity. Coil-spring rear suspension (not leaf springs) is a major comfort upgrade but limits payload vs competitors.",
-    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
+    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 420, topComplaintArea: 'Electrical / eTorque system' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.7L Hemi MDS lifter failure', risk: 'high', riskLabel: 'High Attention',
@@ -6137,8 +6135,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' },
-      { number: '21V-037', title: 'Transmission Software', desc: 'Transmission may not downshift correctly in cold temps.' }
+      { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' }
     ]
   },
 
@@ -8019,7 +8016,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior update — software OTA.' },
+      { number: '23V-838', title: 'Autosteer Controls (Autopilot)', desc: 'Autosteer controls may be insufficient to prevent misuse — free OTA update (2023.44.30). Covers 2017–2023 Model 3; verify by VIN.' },
       { number: '21V-020', title: 'In-Car Camera', desc: 'Camera monitoring software update.' },
       { number: '20V-066', title: 'Touchscreen eMMC Wear', desc: 'MCU1 eMMC chip may wear out — display replacement.' }
     ]
@@ -8068,8 +8065,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-827', title: 'Autosteer Speed Limit', desc: 'Autopilot behavior — OTA fix.' },
-      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'Chime may not activate — OTA fix.' }
+      { number: '23V-838', title: 'Autosteer Controls (Autopilot)', desc: 'Autosteer controls may be insufficient to prevent misuse — free OTA update. Covers 2020–2023 Model Y; verify by VIN.' },
+      { number: '24V-376', title: 'Seat Belt Reminder (FMVSS 208)', desc: 'Seat belt warning light/chime may not activate for an unbelted driver — free firmware update. Covers 2020–2023 Model Y; verify by VIN.' }
     ]
   },
 
@@ -8592,7 +8589,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-037', title: 'Airbag Deployment', desc: 'Software calibration update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9359,7 +9356,7 @@ const CHECKLISTS = {
     engine: 'Electric — Single Motor RWD (225hp) / Dual Motor AWD (320hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The IONIQ 5 on the E-GMP platform is one of the best EVs launched since the Tesla Model 3 — 800V architecture enables ultra-fast charging (18 min to 80% at 350kW DCFC), distinctive retro styling, and a flat floor that maximizes interior space. Main buyer concerns: heat pump on cold-climate cars (standard on AWD, optional on RWD), charge port compatibility, and early production quality. Battery degradation is minimal on cars under 40k miles.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
     sections: [
       { title: 'Battery & Charging', items: [
         { title: 'HV battery health and range', risk: 'high', riskLabel: 'High Attention',
@@ -9397,9 +9394,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-714', title: 'Battery Management Software', desc: 'BMS update to prevent overcharge.' },
-      { number: '23V-127', title: 'Seat Belt Warning', desc: 'Chime may not activate — OTA fix.' },
-      { number: '21V-827', title: 'ADAS Software', desc: 'Driver assist behavior update.' }
+      { number: '22V-714', title: 'Battery Management Software', desc: 'BMS update to prevent overcharge.' }
     ]
   },
 
@@ -9502,7 +9497,7 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (285hp) / 3.0L EcoDiesel V6 (260hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The JT Gladiator is the only mid-size convertible pickup truck on the market — it combines Wrangler JL capability with a 5-foot bed. The 3.6L Pentastar V6 is proven. Main buyer concerns: Death Wobble risk from worn front end components (same as Wrangler), throttle position sensor failure on early builds, and eTorque BSG concerns on equipped models. Strong buy for buyers who need both off-road capability and a bed.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 190, topComplaintArea: 'Death Wobble (front end wear) / throttle position sensor / eTorque BSG (equipped models)' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 190, topComplaintArea: 'Death Wobble (front end wear) / throttle position sensor / eTorque BSG (equipped models)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Throttle position sensor (early builds)', risk: 'high', riskLabel: 'High Attention',
@@ -9541,7 +9536,6 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-191', title: 'Rearview Camera Image (VP4 Radio Software)', desc: 'FMVSS 111: rearview image can remain on display after reverse; FCA software reflash. Verify completion by VIN.' },
-      { number: '21V-037', title: 'Transmission Software', desc: 'Transmission downshift update.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -10166,7 +10160,7 @@ const CHECKLISTS = {
     engine: '2.4L K24W I4 (184hp FWD) / 1.5L L15B7 Turbo I4 (190hp AWD/higher trims) with CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 5th-gen CR-V is one of the best compact SUVs in its class — but the 1.5T L15B7 turbocharged engine has the same oil dilution problem as the 10th-gen Civic. Cold-climate buyers must check dipstick and verify PCM update. LX FWD uses the 2.4L K24W (no dilution) and is the low-risk choice. Outstanding feature content and interior space for the price.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 420, topComplaintArea: '1.5T oil dilution (cold climate) — same as 2017 Civic' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 420, topComplaintArea: '1.5T oil dilution (cold climate) — same as 2017 Civic' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5T L15B7 oil dilution (cold climates)', risk: 'high', riskLabel: 'High Attention',
@@ -10203,8 +10197,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '23V-858', title: 'Denso Fuel Pump Impeller', desc: 'Pump impeller may deform and fail — stall risk. Covers 2018–2020 CR-V; free replacement, verify by VIN.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '18V-114', title: 'Drive Shaft (manual-adjacent)', desc: 'Verify on eligible VINs.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -11050,7 +11043,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '23V-127', title: 'Seat Belt Warning Chime', desc: 'May not activate — OTA fix.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
   'toyota-corolla-2021': {
