@@ -330,6 +330,39 @@
       "component": "Seat belt warning light/chime may not activate (FMVSS 208), SB-24-00-008 — 2012-2024 S / 2015-2024 X / 2017-2023 Model 3 / 2020-2023 Model Y",
       "source": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V376-3527.PDF",
       "verified": "2026-06-17"
+    },
+    "12V491": {
+      "makes": [
+        "Toyota",
+        "Lexus",
+        "Scion"
+      ],
+      "component": "Driver power-window master switch (overheat/fire) — Safety Recall C0M",
+      "scope": "MY2007-2009 Camry/RAV4/Corolla/Matrix/Tundra/Sequoia/Yaris/Scion + MY2008 Highlander",
+      "source": "https://static.nhtsa.gov/odi/rcl/2012/RCRIT-12V491-8716.pdf",
+      "verified": "2026-06-18",
+      "note": "real number; removed misapplied out-of-scope uses on lexus-rx350-2011, toyota-tacoma-2012, toyota-4runner-2008, toyota-highlander-2010"
+    },
+    "21V247": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Rear suspension module incorrect-component labeling error (Ford 21S47)",
+      "scope": "certain MY2021 Explorer + Lincoln Aviator",
+      "source": "NHTSA 21V-247 (Part 573); Ford 21S47",
+      "verified": "2026-06-18",
+      "note": "real number but covers MY2021 module-labeling, not a 2020-Aviator air-suspension-hose chafe; removed misapplied use on lincoln-aviator-2020"
+    },
+    "21V259": {
+      "makes": [
+        "Kia"
+      ],
+      "component": "2.0L Nu MPI piston oil-ring excessive hardness — oil consumption/engine (Kia SC209)",
+      "scope": "MY2020-2021 Soul + MY2021 Seltos",
+      "source": "https://static.nhtsa.gov/odi/rcl/2021/RCLRPT-21V259-6845.PDF",
+      "verified": "2026-06-18",
+      "note": "real KIA engine recall fabricated onto 4 GM checklists (Equinox/Enclave/Traverse/Acadia) as 'cross-traffic braking' — all removed"
     }
   },
   "unverified_legacy": [
@@ -338,7 +371,6 @@
     "10V017",
     "11V260",
     "12V395",
-    "12V491",
     "12V499",
     "13V252",
     "13V261",
@@ -375,7 +407,6 @@
     "16V028",
     "16V065",
     "16V391",
-    "16V433",
     "16V449",
     "16V586",
     "16V617",
@@ -418,8 +449,6 @@
     "21V009",
     "21V020",
     "21V056",
-    "21V247",
-    "21V259",
     "21V394",
     "21V448",
     "21V485",
