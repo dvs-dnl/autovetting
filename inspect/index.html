@@ -5819,12 +5819,12 @@ const CHECKLISTS = {
         title: 'Engine & Powertrain',
         items: [
           {
-            title: '1.6L EcoBoost — coolant intrusion / engine fire risk',
+            title: '1.6L EcoBoost — engine fire risk',
             risk: 'critical', riskLabel: 'Critical',
-            desc: "The 2013 Escape's 1.6L EcoBoost is subject to NHTSA recall 13V-261 (and related campaigns): coolant can enter the combustion chamber through the cylinder head, causing loss of power, overheating, and — in multiple documented cases — under-hood fires. Ford issued software and hardware fixes. The risk on a correctly-remedied car is low, but recall completion MUST be verified by VIN before purchase. Unresolved examples should not be purchased.",
+            desc: "The 2013 Escape's 1.6L EcoBoost is subject to NHTSA recall 13V-583 (Ford 13S12) and related 1.6L EcoBoost fire campaigns: localized overheating of the cylinder head can crack it and allow oil to leak onto hot engine surfaces, risking an under-hood fire (approximately 140,000 units recalled; 13 fires reported). Ford modified the engine shielding, cooling and control systems. The risk on a correctly-remedied car is low, but recall completion MUST be verified by VIN before purchase. Unresolved examples should not be purchased.",
             check: '<strong>Run the VIN at nhtsa.gov/recalls — confirm all 1.6L EcoBoost campaigns are closed.</strong> Ask the seller for recall completion paperwork from a Ford dealer. On a test drive, check for any coolant smell, overheating gauge movement, or coolant loss between drives.',
             cost: 'Free recall repair (if open) / Engine replacement if fire damage: $6,000–$10,000+',
-            source: 'NHTSA recall 13V-261; NHTSA complaint database (4,000+ complaints); NHTSC investigation PE12-020'
+            source: 'NHTSA recall 13V-583 (Ford 13S12); NHTSA complaint database; NHTSA investigation PE12-020'
           },
           {
             title: '2.0L EcoBoost — coolant crossover pipe',
@@ -5903,13 +5903,13 @@ const CHECKLISTS = {
             desc: 'The 2013–2016 Escape has been subject to a large number of recall campaigns — among the highest for compact SUVs of its era. Beyond the 1.6L EcoBoost fire recall, campaigns include steering shaft coupler, airbag, fuel system, and HVAC-related items. Given the volume of campaigns, a VIN check is mandatory.',
             check: '<strong>Run the VIN at nhtsa.gov/recalls — count the open campaigns.</strong> More than 2 open campaigns on a used car is a red flag. Ensure all safety-critical items (engine fire, steering, airbag) are confirmed closed at a Ford dealer.',
             cost: 'Free dealer repair for open recalls',
-            source: 'NHTSA recall database (13V-261, 14V-090, 14V-350 among others)'
+            source: 'NHTSA recall database (13V-583, 14V-090, 14V-350 among others)'
           }
         ]
       }
     ],
     recalls: [
-      { number: '13V-261', title: '1.6L EcoBoost Coolant Loss / Engine Fire', desc: 'Coolant enters combustion chamber, risk of engine fire — high priority; verify complete.' },
+      { number: '13V-583', title: '1.6L EcoBoost Cylinder-Head Overheat / Engine Fire', desc: 'Cylinder head can crack and leak oil onto hot surfaces — under-hood fire risk; verify recall complete (Ford 13S12).' },
       { number: '14V-350', title: 'Steering Shaft Coupler', desc: 'Steering shaft may separate — verify complete.' },
       { number: '14V-090', title: 'MyFord Touch Software', desc: 'Software update campaign — verify via VIN.' },
       { number: '17V-243', title: 'Fuel Injector / Engine Stall', desc: 'Engine may stall without warning — verify status.' },
@@ -6393,7 +6393,7 @@ const CHECKLISTS = {
     engine: '2.0L EcoBoost I4 (245hp) / 2.7L EcoBoost V6 (315hp) / 2.0L EcoBoost AWD Titanium',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Ford Edge is a refined midsize crossover — the 2.7L EcoBoost V6 is the standout powertrain choice, with the 2.0L EcoBoost being adequate but carrying the same internal water pump issue as its sibling engines. PTU (Power Transfer Unit) fluid service on AWD models is the most commonly missed maintenance item and leads to premature failure. The Edge is a solid used buy with documented service history.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L EcoBoost internal water pump', risk: 'high', riskLabel: 'High Attention',
@@ -6429,13 +6429,12 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'PTU service record + recall check', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Key recalls: 17V-178 (door latch) and 19V-006 (fuel injector). PTU service documentation is the most important non-recall item.',
+          desc: 'Key recalls: 19V-006 (fuel injector seals) and 18V-117 (side airbag). PTU service documentation is the most important non-recall item.',
           check: '<strong>Run VIN at nhtsa.gov/recalls and ask specifically for PTU service receipt.</strong>',
           cost: 'Walk away from AWD without documented PTU service', source: 'NHTSA + Ford maintenance' }
       ]}
     ],
     recalls: [
-      { number: '17V-178', title: 'Door Latch Release Mechanism', desc: 'Door may open unexpectedly while driving — replace latch.' },
       { number: '19V-006', title: 'Fuel Injector Seals', desc: '2.0T: fuel injector O-rings may leak — fire risk.' },
       { number: '18V-117', title: 'Supplemental Restraint System', desc: 'Side airbag may not inflate correctly.' }
     ]
@@ -6488,7 +6487,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak near engine can cause fire — inspect and repair.' }
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Hyundai 2.0L Nu / Theta engines have multiple engine-failure and fire-risk campaigns that vary by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' }
     ]
   },
 
@@ -6543,7 +6542,7 @@ const CHECKLISTS = {
     engine: '1.6L Gamma GDI I4 (130hp) / 2.0L Nu GDI I4 (161hp) / 1.6T Turbo (201hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen Soul is one of the best-value urban cars on the used market. Practical, distinctive, and generally reliable. The 2.0L Nu engine has KSDS recall exposure; the 1.6L Gamma base engine is largely exempt. Strong value buy when recall history is confirmed.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'Nu engine recall / infotainment screen' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Nu engine recall / infotainment screen' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine KSDS check', risk: 'high', riskLabel: 'High Attention',
@@ -6579,7 +6578,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk on Nu engine.' },
       { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' }
     ]
   },
@@ -6775,7 +6773,7 @@ const CHECKLISTS = {
     engine: '1.5L EcoBoost I4 (181hp) / 2.0L EcoBoost I4 (245hp) / 2.7L V6 Sport / 2.0L Hybrid',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Fusion is a well-built, attractive midsize sedan. The 1.5L EcoBoost has a documented cylinder 3 coolant loss issue — the 2.0T is the preferred powertrain and avoids this. Hybrid models are reliable but HV battery should be checked above 100k miles. The Fusion was discontinued in 2020, making used supply abundant and prices attractive.",
-    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5L EcoBoost coolant loss (cylinder 3)', risk: 'high', riskLabel: 'High Attention',
@@ -6817,7 +6815,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-178', title: 'Door Latch Release', desc: 'Doors may open while driving — replace latch.' },
       { number: '19V-006', title: 'Fuel Injector O-ring (2.0T)', desc: 'Fuel leak fire risk.' },
       { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
       { number: '18V-117', title: 'Supplemental Restraint Module', desc: 'Side airbag may not inflate correctly.' }
@@ -8067,7 +8064,7 @@ const CHECKLISTS = {
     engine: '2.3L EcoBoost I4 (310hp) / 5.0L Coyote V8 (460hp) / 5.2L Voodoo V8 (526hp GT350)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The S550 Mustang is one of the most satisfying performance cars available used. The 5.0L Coyote V8 is a proven workhorse; EcoBoost 4-cylinder is the fuel-efficient daily driver. Main buyer risk: assess track use and abuse on any GT, GT Premium, or GT350. Cam phaser noise is reported on EcoBoost cars above 60k miles. MT82 manual transmission has known notchy shift quality that worsened with use.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -8109,7 +8106,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-178', title: 'Door Latch', desc: 'May open while driving.' },
       { number: '16V-028', title: 'Axle Shaft', desc: 'Rear axle shaft may fracture — wheel separation.' }
     ]
   },
@@ -9056,7 +9052,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' }
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Hyundai 2.0L Nu / Theta engines have multiple engine-failure and fire-risk campaigns that vary by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' }
     ]
   },
 
@@ -10008,7 +10004,7 @@ const CHECKLISTS = {
     engine: '2.0L MPI Nu I4 (147hp) / 1.6T Gamma Turbo (201hp GT)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The BD Forte is Kia's best compact sedan — well-styled, feature-rich, and priced aggressively. The 2.0L Nu engine carries KSDS recall exposure (same family as Sonata). Verify all recall campaigns before purchase. The 1.6T GT is genuinely fun. IVT/CVT fluid service is the critical maintenance document on the base 2.0L. Strong value when recalls are confirmed complete.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L Nu engine KSDS recall', risk: 'critical', riskLabel: 'Critical',
@@ -10046,8 +10042,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
-      { number: '20V-242', title: 'Engine Fire Risk (Nu)', desc: 'Oil leak fire risk.' }
+      { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' }
     ]
   },
 
