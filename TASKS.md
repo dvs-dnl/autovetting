@@ -49,7 +49,30 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-*(empty — wave-9 pushed directly; deprice block moved to Done below)*
+### autovetting-pinpoint-inspect-gap-closure-2026-06-19 — ready
+
+- Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
+- Started: 2026-06-19 (Daniel-directed interactive session; launch-freeze reallocation queue item #3)
+- Touched files: scripts/gate-check.py, pinpoint/index.html, _hub/Build-Log/2026-06-19-pinpoint-inspect-gap-closure.md, _hub/Awaiting-Daniel.md, TASKS.md
+- Notes:
+  Two changes. (1) **Cleared the homepage-test-bc push blocker** (Daniel approved "exclude"): added
+  "homepage-test-bc/index.html" to both G18 EXCLUDE sets in scripts/gate-check.py (~lines 292 G15 /
+  389 G18), matching homepage-test/. Gate now 27 pass / 2 warn / **0 CRIT** (was 1 CRIT). Nightly
+  rename-aside workaround no longer needed. (2) **Pinpoint↔Inspect gap closure** (already-launched
+  generations only — no new vehicles): mirrored inspect's findChecklistByYMMT resolver over all 245
+  CHECKLISTS + VEHICLE_MENU; of 297 Pinpoint inspectUrls, 196 resolved / 101 broken at baseline.
+  Repaired **17 trim-suffix inspectUrls** where the model param carried a trim (e.g. "Accord Touring
+  2.0T" → "Accord") and VEHICLE_MENU already routes the base+year to a launched checklist
+  (menu-authoritative — no cross-gen mislinks). Resolved 196→213, broken 101→84. Display names
+  untouched; only inspectUrl targets changed. Deliberately skipped Prius c (distinct model, not a
+  Prius trim), models with no launched checklist (Ram 1500, Porsche Macan, Rivian, etc. — freeze),
+  and diff-generation-only cases (2023 Highlander, 2022 Camry). Sibling check: pinpoint/index.html
+  not shared by any in-flight task (autovet-competitor-monitor=Competitors/, cpo-protocol-ingestion=
+  Product/CPO-Protocols/, seo-content=Content/blog/ — all orthogonal, all in gitignored _hub/);
+  scripts/gate-check.py only otherwise touched by nightly recall waves (gate runner, not data) — no
+  conflict. Verification: diff = exactly 17 inspectUrl lines; file 4073 lines intact (−190 bytes),
+  tail intact, 297 inspectUrls steady; backup /tmp/pinpoint-w12.bak. Gate: 27 pass / 0 CRIT.
+  Detail: _hub/Build-Log/2026-06-19-pinpoint-inspect-gap-closure.md.
 
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->

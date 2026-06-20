@@ -289,7 +289,7 @@ def gate_brief_module_intact():
 # ============================================================
 def gate_nav_consistency():
     # Pages intentionally outside the canonical nav (private preview, sub-tools)
-    EXCLUDE = {"next/index.html", "homepage-test/index.html"}
+    EXCLUDE = {"next/index.html", "homepage-test/index.html", "homepage-test-bc/index.html"}
     hrefs_by_page = {}
     for p in all_html_pages():
         rel = str(p.relative_to(REPO))
@@ -386,7 +386,7 @@ def gate_canonical_email():
 # Catches: footer wordmark drift after the icon-led standardization
 # ============================================================
 def gate_footer_consistency():
-    EXCLUDE = {"next/index.html", "homepage-test/index.html"}
+    EXCLUDE = {"next/index.html", "homepage-test/index.html", "homepage-test-bc/index.html"}
     brand_re = re.compile(r'<p class="footer-brand">([\s\S]+?)</p>')
     sigs = {}
     for p in all_html_pages():
