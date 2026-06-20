@@ -95,6 +95,30 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   JSON-LD PASS); both JS script blocks new Function-parse clean; inspectUrls steady 297/resolved 213;
   pinpoint 4073→4108 lines, tail intact, 24 blogUrl; backups /tmp/inspect-link.bak + /tmp/pinpoint-blog.bak.
   Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
+
+### autovetting-publish-3-blog-drafts-2026-06-19 — ready
+
+- Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
+- Started: 2026-06-19 (Daniel-directed: "publish the 3 drafts")
+- Touched files: blog/ (20 rendered posts + index), blog/2017-nissan-rogue-buyers-guide/, blog/2019-honda-crv-buyers-guide/, blog/2019-ram-1500-buyers-guide/, inspect/index.html, pinpoint/index.html, sitemap.xml, llms.txt, _hub/Content/blog/*.md (gitignored sources), TASKS.md
+- Notes:
+  Published 3 long-pending blog drafts (Rogue, CR-V, Ram 1500) — blog now 20 live posts (was 17).
+  **Recall-accuracy verification first (these predate the 11-wave audit):** WebSearch-verified every
+  recall number before publishing. Fixed 3 fabrications/misapplications: (1) Rogue 20V-744 "Denso fuel
+  pump" = actually a Vac-Tron excavator-trailer recall (FMVSS 224); real Nissan Rogue pump recall
+  21V-957 is 2021-only, so a 2017 Rogue has NO pump recall → bullet deleted. (2) Ram 19V-813 (V62)
+  = Jeep Grand Cherokee/Durango fuel-pump relay, not the 2019 Ram → deleted. (3) Ram 23V-059 (14A)
+  = 2021-2023 Ram, not 2019 → deleted. Confirmed-correct and KEPT: Rogue 22V-875/23V-093/17V-663/
+  16V-244 (16V-244 does cover 2014-2017 Rogue per Nissan R1606/07/09) + Hybrid-only 22V549/21V839
+  (already scoped Hybrid-only in the post); Ram 19V-812 (VB8 EPS, ~190 trucks); CR-V 21V215/23V858/
+  19V383(R4S)/19V865(R6M) all verified clean. Left the 4th draft (2019 Equinox) as draft — newest,
+  still has [unverified] claims pending editorial. Restored the Rogue checklist blogUrl (the 404 I
+  removed earlier this session) + added the Rogue Pinpoint card's buyer's-guide link (pinpoint blog
+  links 24→25). render-blog.py re-rendered all 20 (existing posts gained the now-resolving interlinks
+  + current CTA copy; conversion CTAs + report_cta_click intact). sitemap/llms auto-updated. Sibling
+  check: blog/ is downstream of autovet-seo-content (Content/blog/ sources, gitignored _hub) — this
+  publishes Daniel-approved drafts, no conflict; inspect/pinpoint changes are sequential on top of the
+  same-day gap-closure + blog-link Ready entries. Gate 27/2/0 CRIT. Detail: _hub/Build-Log/2026-06-19-publish-blog-drafts.md.
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
 
