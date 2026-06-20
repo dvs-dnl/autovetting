@@ -138,6 +138,25 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   lines, tail intact; dead-link scan 0 broken. Backup /tmp/inspect-repairlinks.bak. Sibling check:
   inspect/index.html sequential on top of same-day blog-publish + gap-closure entries (render-layer
   add, orthogonal to recall-data edits). Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
+
+### autovetting-pinpoint-luxury-budget-coverage-2026-06-19 — ready
+
+- Status: ready to deploy (committed locally; orchestrator to push)
+- Started: 2026-06-19 (Daniel-directed: build up the weakest Pinpoint cells — "family + budget + luxury")
+- Touched files: pinpoint/index.html, _hub/Build-Log/2026-06-19-pinpoint-luxury-budget-coverage.md, TASKS.md
+- Notes:
+  Built up the weakest luxury-budget Pinpoint cells (strict-AND filter returned near-nothing for
+  luxury + lower budgets because the catalog skewed modern/pricey). Added 22 editorial cards (VEHICLES
+  308->330) of older luxury vehicles that depreciate into those bands — NO new inspect checklists
+  (launch freeze respected). Results: family-hauler+luxury under-10k 1->7 / 10-15k 3->8 (the explicit
+  example); commute+luxury+10-15k 0->3; work-hauling+luxury 4->8 (now all 5 budget bands); outdoor and
+  road-trip luxury zeros filled. Accurate facts + honest reliability notes (Strong for MDX/RDX/IS/CT/
+  GX470/ES350; Caution where there's a real watch item — AFM lifters, GM 3.6 timing chain, QX60 CVT,
+  LR4 air suspension). Deduped vs existing (distinct generations). Left starter+luxury empty (near-N/A
+  niche — flagged). Verify: pinpoint JS new Function-parses clean; gate 27/2/0 CRIT (IIFE PASS);
+  cards 308->330, tail intact; backup /tmp/pinpoint-coverage.bak. Sibling check: pinpoint/index.html
+  sequential on top of same-day inspectUrl-repair + blog-link Ready entries (additive new cards,
+  orthogonal). Detail: _hub/Build-Log/2026-06-19-pinpoint-luxury-budget-coverage.md.
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
 

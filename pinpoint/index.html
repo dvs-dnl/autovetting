@@ -1367,6 +1367,160 @@
     // --- Data -----------------------------------------------
     var VEHICLES = [
       {
+        name: 'Lexus IS 250 / IS 350 (2nd gen, XE20)', make: 'Lexus', years: '2011-2013',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Strong',
+        tagline: 'Reliable rear-drive luxury sport sedan; the 3.5 (IS 350) has real pace and the V6s are famously durable. A low-drama premium commuter.'
+      },
+      {
+        name: 'Lexus CT 200h', make: 'Lexus', years: '2011-2017',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury', 'hybrid-ev'],
+        price: '$12,000', tier: 'Strong',
+        tagline: 'Prius running gear in a premium Lexus hatch — bulletproof hybrid reliability with a nicer cabin, and one of the few true luxury-hybrid bargains.'
+      },
+      {
+        name: 'Acura ILX 2.4', make: 'Acura', years: '2013-2016',
+        use_case: 'commute', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$12,500', tier: 'Strong',
+        tagline: 'Civic-based entry luxury with Acura\'s bulletproof K-series engine. Modest power, but about as dependable as a premium commuter gets.'
+      },
+      {
+        name: 'Lexus GX 470', make: 'Lexus', years: '2003-2009',
+        use_case: 'outdoor', seats: '7+', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$9,500', tier: 'Strong',
+        tagline: 'Land Cruiser Prado underneath — a genuinely indestructible luxury off-roader. Thirsty and old-school, but it will outlast almost anything on the trail.'
+      },
+      {
+        name: 'Land Rover LR4 / Discovery 4', make: 'Land Rover', years: '2010-2013',
+        use_case: 'outdoor', seats: '7+', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Caution',
+        tagline: 'Supremely capable three-row luxury off-roader; the air suspension and electronics are the gamble — buy strictly on condition and documented history.'
+      },
+      {
+        name: 'Lexus ES 350 (5th gen, XV40)', make: 'Lexus', years: '2007-2012',
+        use_case: 'road-trip', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$9,000', tier: 'Strong',
+        tagline: 'The quintessential comfortable-mile cruiser; the 2GR V6 is famously reliable. A no-drama luxury road-trip car for short money.'
+      },
+      {
+        name: 'Buick LaCrosse', make: 'Buick', years: '2010-2016',
+        use_case: 'road-trip', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,500', tier: 'Caution',
+        tagline: 'Quiet, big, limousine-smooth near-luxury cruiser; the 3.6 wants timing-chain attention but few cars ride better on the highway for the price.'
+      },
+      {
+        name: 'Acura MDX (2nd gen, YD2)', make: 'Acura', years: '2007-2012',
+        use_case: 'family-hauler', seats: '7+', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,500', tier: 'Strong',
+        tagline: 'Bulletproof 3.7L V6 and genuine three-row room. Front brakes wear and there\'s a torque-converter judder TSB; the drivetrain itself runs to 250k.'
+      },
+      {
+        name: 'Buick Enclave CXL (1st gen)', make: 'Buick', years: '2008-2012',
+        use_case: 'family-hauler', seats: '7+', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,000', tier: 'Caution',
+        tagline: 'Quiet, roomy near-luxury three-row. Budget for timing-chain and water-pump work on the 3.6 — then it\'s a lot of comfortable car for the money.'
+      },
+      {
+        name: 'Cadillac SRX Luxury / Performance', make: 'Cadillac', years: '2010-2013',
+        use_case: 'family-hauler', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,500', tier: 'Caution',
+        tagline: 'Comfortable luxury crossover; verify the 3.6 V6\'s timing-chain and water-pump history. The 2012+ (LFX) engine is the stronger pick.'
+      },
+      {
+        name: 'Lincoln MKX (2nd gen)', make: 'Lincoln', years: '2011-2014',
+        use_case: 'family-hauler', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$8,500', tier: 'Caution',
+        tagline: 'A Ford Edge in a tailored suit. The 3.7 V6 is reliable; the era\'s MyLincoln Touch screen is the weak link — confirm it actually responds.'
+      },
+      {
+        name: 'Volvo XC90 3.2 / V8 (1st gen)', make: 'Volvo', years: '2007-2014',
+        use_case: 'family-hauler', seats: '7+', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$7,000', tier: 'Caution',
+        tagline: 'Safe, characterful Swedish three-row. The 3.2 inline-six is durable; budget for aging electronics and the AWD angle gear.'
+      },
+      {
+        name: 'INFINITI FX35 / FX37', make: 'INFINITI', years: '2009-2013',
+        use_case: 'family-hauler', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$9,500', tier: 'Caution',
+        tagline: 'The sport-luxury crossover that drives like a sedan. The VQ V6 is strong on premium fuel; expect a firm ride and real fuel bills.'
+      },
+      {
+        name: 'Acura RDX (2nd gen)', make: 'Acura', years: '2013-2016',
+        use_case: 'family-hauler', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Strong',
+        tagline: 'The 2nd-gen RDX swapped the turbo four for a smooth, naturally-aspirated 3.5 V6 — one of the lowest-drama luxury crossovers on the used market.'
+      },
+      {
+        name: 'Buick Enclave Leather / Premium (facelift)', make: 'Buick', years: '2013-2017',
+        use_case: 'family-hauler', seats: '7+', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,500', tier: 'Caution',
+        tagline: 'The facelifted Lambda Enclave with the improved 3.6 (LFX). Still verify timing-chain history, but a genuinely spacious, comfortable three-row value.'
+      },
+      {
+        name: 'INFINITI JX35 / QX60 (1st gen)', make: 'INFINITI', years: '2013-2016',
+        use_case: 'family-hauler', seats: '7+', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$12,500', tier: 'Caution',
+        tagline: 'Three-row luxury value where the CVT is the whole story — demand documented fluid-change history and test for shudder under load before you buy.'
+      },
+      {
+        name: 'Volvo XC60 3.2 / T5 / T6 (1st gen)', make: 'Volvo', years: '2014-2017',
+        use_case: 'family-hauler', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Caution',
+        tagline: 'Comfortable and exceptionally safe compact luxury SUV. The inline engines are durable — watch the PCV system and aging electronics.'
+      },
+      {
+        name: 'Mercedes-Benz GLK 350', make: 'Mercedes-Benz', years: '2013-2015',
+        use_case: 'family-hauler', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Caution',
+        tagline: 'Boxy, solid, and more dependable than the three-pointed star\'s reputation suggests. The V6 is stout — verify service history and 4MATIC operation.'
+      },
+      {
+        name: 'GMC Sierra 1500 SLT / Denali (GMT900)', make: 'GMC', years: '2007-2013',
+        use_case: 'work-hauling', seats: '4-5', budget: 'under-10k',
+        must_have: ['luxury'],
+        price: '$9,500', tier: 'Caution',
+        tagline: 'Leather-lined GMT900 half-ton. The 5.3 V8 is tough, but the AFM lifters and timing chain are the known watch items. A lot of truck for the budget.'
+      },
+      {
+        name: 'Ford F-150 Lariat / King Ranch (12th gen)', make: 'Ford', years: '2009-2014',
+        use_case: 'work-hauling', seats: '4-5', budget: '10-15k',
+        must_have: ['luxury'],
+        price: '$13,000', tier: 'Caution',
+        tagline: 'Leather work truck on a budget. The 5.0 V8 is the worry-free pick; the 3.5 EcoBoost is strong but wants its cam-phaser and intercooler-condensation history.'
+      },
+      {
+        name: 'Ram 1500 Laramie / Longhorn (4th gen DS)', make: 'Ram', years: '2014-2016',
+        use_case: 'work-hauling', seats: '4-5', budget: '15-20k',
+        must_have: ['luxury'],
+        price: '$16,000', tier: 'Caution',
+        tagline: 'Western-themed luxury half-ton with a comfortable coil-spring ride. The Hemi is stout; verify the air suspension, 8-speed, and any EcoDiesel fuel-system recalls.'
+      },
+      {
+        name: 'Ford F-150 Limited / Platinum (13th gen)', make: 'Ford', years: '2018-2020',
+        use_case: 'work-hauling', seats: '4-5', budget: '30k+',
+        must_have: ['luxury', 'carplay'],
+        price: '$36,000', tier: 'Strong',
+        tagline: 'Aluminum-body F-150 in full luxury trim — massaging seats, 3.5 EcoBoost grunt, a 10-speed, and CarPlay. Confirm the cam-phaser TSB work and you\'ve got a premium hauler.'
+      },
+      {
         name: 'Acura TSX', make: 'Acura', years: '2011–2014',
         use_case: 'commute', seats: '4-5', budget: 'under-10k',
         must_have: ['luxury'],
