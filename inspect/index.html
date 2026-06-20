@@ -13865,13 +13865,18 @@ const CHECKLISTS = {
     recalls: []
   },
   'toyota-camry-2024': {
-    year: 2024, make: 'Toyota', model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (9th gen XV80, 2024–present)',
-    engine: '2.5L A25A-FXS I4 Hybrid (225 hp combined, standard on all trims)',
+    year: 2024, make: 'Toyota', model: 'Camry', trim: 'LE / SE / XLE / XSE / XLE V6 / XSE V6 / TRD (8th gen XV70, final year 2024)',
+    engine: '2.5L A25A-FKS I4 (202–206 hp) / 3.5L 2GR-FKS V6 (301 hp; XLE V6, XSE V6, TRD) / 2.5L A25A-FXS hybrid (208 hp combined)',
+    vinNote: "The 2024 Camry is the final year of the 8th-gen XV70 — not the hybrid-only XV80 redesign, which arrives for 2025. That means 2024 still offers three powertrains, and the 8th VIN digit is the decode that matters. Position 8 = A is the 2.5L A25A-FKS four-cylinder (202–206 hp); position 8 = 6 is the 3.5L 2GR-FKS V6 (301 hp, fitted only to XLE V6, XSE V6 and TRD). The 2.5L hybrid (A25A-FXS, 208 hp combined) encodes its powertrain separately — confirm the hybrid badge matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov, since a mismatch can indicate a trim-badge swap. The V6 is one of Toyota's most proven engines and the last year you can buy one in a Camry; the gas and hybrid 2.5L share the A25A block. Position 10 encodes model year: R = 2024.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 9th-gen Camry is now hybrid-only — Toyota made the bold decision to drop the gas-only variant entirely. The 2.5L A25A-FXS hybrid system is the same well-proven Toyota Hybrid System (THS-II) found in the RAV4 Hybrid. No established failure modes on this very new vehicle. AWD available on LE and SE for the first time. Excellent long-term reliability expected based on platform and powertrain heritage.",
-    stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 20, topComplaintArea: 'Minimal — very new' },
+    summary: "2024 is the final model year of the 8th-generation Camry (XV70) and the last chance to buy a V6 Camry before the 2025 redesign goes hybrid-only. Three powertrains were offered: the 2.5L A25A-FKS four-cylinder, the 3.5L 2GR-FKS V6 (XLE V6, XSE V6, TRD), and the 2.5L hybrid. All three are mature, well-proven Toyota powertrains with no chronic failure modes at this age — the V6 in particular is among Toyota's most durable engines. A late-production example of a fully sorted generation, so risk is low; verify which engine you are buying via the 8th VIN digit before applying this checklist.",
+    stats: { itemsToCheck: 5, recalls: 0, ownerComplaints: 20, topComplaintArea: 'Minimal — very new' },
     sections: [
-      { title: 'Hybrid Drivetrain', items: [
+      { title: 'Powertrain', items: [
+        { title: 'Gas & V6 engines — proven, low-risk', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'On non-hybrid trims, the 2.5L A25A-FKS I4 and 3.5L 2GR-FKS V6 are both mature Toyota engines with no chronic failure modes; the A25A has scattered oil-consumption reports worth a quick check at high mileage.',
+          check: '<strong>Cold-start, check oil level and condition, listen for a smooth idle. Confirm no check-engine light.</strong>',
+          cost: 'Routine maintenance', source: 'Toyota A25A / 2GR-FKS reliability data' },
         { title: 'THS-II hybrid — proven platform', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Toyota Hybrid System II is among the most reliable hybrid platforms globally. No chronic failure modes.',
           check: '<strong>Confirm EV mode engages. No HV warning lights. Test all drive modes.</strong>',
@@ -14835,7 +14840,8 @@ const CHECKLISTS = {
   },
   'chevy-trax-2024': {
     year: 2024, make: 'Chevrolet', model: 'Trax', trim: 'LS / LT / RS / ACTIV (2nd gen, 2024–present)',
-    engine: '1.2T Ecotec I3 (137 hp) with CVT',
+    engine: '1.2T LIH Ecotec turbo I3 (137 hp) with 6-speed automatic',
+    vinNote: "Every 2024 Trax uses the same engine — the 1.2L LIH turbocharged three-cylinder (137 hp) paired with a conventional 6-speed automatic — so there is no engine family to fork on in the VIN. (Note: the 2nd-gen Trax does not use a CVT, despite a common misconception.) The 8th VIN digit confirms the engine/restraint configuration, but since the powertrain is identical across LS, LT, RS and ACTIV, the more useful decode is position 10 for model year: R = 2024. The single most important VIN check on a vehicle this new is the recall lookup at nhtsa.gov/recalls — confirm any open campaigns are closed before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen Trax is a complete redesign and a massive improvement — larger, sleeker, better equipped, and significantly cheaper than the competition. The 1.2T 3-cylinder is the same engine from the Trailblazer. Very young vehicle with no established failure modes. Exceptional value for money in the subcompact SUV segment.",
     stats: { itemsToCheck: 6, recalls: 0, ownerComplaints: 30, topComplaintArea: 'Minimal — very new' },
@@ -14845,10 +14851,10 @@ const CHECKLISTS = {
           desc: 'Shared with Trailblazer and Encore GX. No widespread issues.',
           check: '<strong>Standard cold-start and oil check.</strong>',
           cost: 'Routine maintenance', source: 'GM 1.2T reliability' },
-        { title: 'CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'CVT fluid service every 30k.',
-          check: '<strong>Smooth acceleration. No shudder.</strong>',
-          cost: '$150–$200', source: 'GM CVT service standard' }
+        { title: '6-speed automatic — fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2nd-gen Trax uses a conventional 6-speed automatic, not a CVT. Verify fluid-service history; shifts should be smooth with no flare or harsh engagement.',
+          check: '<strong>Test-drive through all gears. No shift flare, slip, or harsh engagement.</strong>',
+          cost: '$150–$250', source: 'GM 6-speed AT service standard' }
       ]},
       { title: 'Documentation', items: [
         { title: 'Recall check + service records', risk: 'low', riskLabel: 'Low Risk',
@@ -15284,6 +15290,7 @@ const CHECKLISTS = {
   'mazda-cx90-2024': {
     year: 2024, make: 'Mazda', model: 'CX-90', trim: 'Select / Preferred / Carbon Edition / Premium / Premium Plus / PHEV (1st gen, 2024–present)',
     engine: '3.3T inline-6 (280 hp or 340 hp Carbon Edition+) or 2.5L PHEV (323 hp combined)',
+    vinNote: "The 2024 CX-90 splits across two very different powertrains, and confirming which one you are looking at is the key decode. Most cars use the 3.3L e-Skyactiv-G turbocharged inline-six (280 hp on Select/Preferred, 340 hp on Carbon Edition and above with premium fuel) backed by a 48V mild-hybrid system and an 8-speed automatic. The alternative is the e-Skyactiv PHEV, a 2.5L four-cylinder plus electric motor (323 hp combined, about 26 miles of EV range). The two share almost no inspection priorities: PHEV buyers must verify charging, the high-voltage battery, and EV-mode engagement, while inline-six buyers should confirm the 48V mild-hybrid starter/alternator behaves on restart. Mazda's VIN encodes the powertrain — run the full VIN through NHTSA vPIC at vpic.nhtsa.dot.gov to confirm inline-six vs PHEV before applying this checklist. Position 10 encodes model year: R = 2024.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The CX-90 is Mazda's new flagship — a 3-row SUV with an inline-six and available PHEV. Exceptional interior quality that rivals premium German brands at a significantly lower price. Very new vehicle with no established failure modes. The inline-six is buttery smooth. PHEV version offers 26 miles all-electric range. Main checks: PHEV battery on equipped models and standard oil change records.",
     stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 25, topComplaintArea: 'Minimal — brand new' },
