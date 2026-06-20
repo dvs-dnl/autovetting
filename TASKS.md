@@ -49,6 +49,42 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-vinnote-batch-2026-06-20 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-20 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-20.md (gitignored), TASKS.md
+- Commit: bd51c26 (work) ; this docs(tasks) record commit follows.
+- Notes:
+  Drained vinnote-queue priorities 1-3 (queue 227->224). Added `vinNote` to three
+  2024 checklists; two also had material fabrications in the existing entry, corrected
+  rather than VIN-noted over (anti-fabrication policy):
+  (1) toyota-camry-2024 — entry wrongly described it as hybrid-only 9th-gen XV80 (225 hp,
+  "2024-present"); that is the 2025 redesign. 2024 = final 8th-gen XV70 with THREE powertrains
+  (WebSearch-verified). Fixed trim/engine/summary, renamed "Hybrid Drivetrain" section ->
+  "Powertrain" + added a gas/V6 inspection item (checklist had zero non-hybrid guidance),
+  stats.itemsToCheck 7->5, added 8th-digit vinNote (A = 2.5L A25A-FKS I4, 6 = 3.5L 2GR-FKS V6;
+  hybrid encodes separately; 10th digit R = 2024) — consistent with the project's own verified
+  2018 Camry XV70 vinNote.
+  (2) chevy-trax-2024 — entry wrongly paired the 1.2T with a CVT; 2nd-gen Trax uses a 6-speed
+  automatic (WebSearch-verified). Fixed engine line, replaced the "CVT fluid service" item with a
+  "6-speed automatic" item, added single-engine vinNote that also debunks the CVT misconception.
+  (3) mazda-cx90-2024 — accurate; added inline-six (3.3T e-Skyactiv-G, 48V MHEV) vs PHEV vinNote.
+  Sibling check: inspect/index.html is shared with same-week Ready blocks (internal-linking 423c15b,
+  publish-3-blog-drafts c306e29) and the recall-audit Done waves — all already committed (HEAD was
+  b4114ca before this), so this commit is sequential on top; my edits are additive top-level vinNote
+  fields + 3 isolated checklist entries (additive gas/V6 item, in-place CVT->6AT item, top-level
+  field/summary text), no overlap with their blogUrl/render or recall-data changes. In-flight
+  autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
+  autovet-seo-content (Content/blog/) are orthogonal (gitignored _hub or different trees). All Done
+  (last 10) siblings sharing inspect/index.html carry Started dates — no backfill needed.
+  Syntax-check: PASS (node new Function over inspect scripts 2+5, exit 0; tail </html> intact;
+  17,577->17,584 lines; +3,327 bytes; vinNote 29->32; backup /tmp/inspect-vinnote.bak).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov / nhtsa.gov as
+  plain text). Scanner: PASS (scan_for_secrets.py, 380 files, exit 0).
+  Detail: _hub/Build-Log/2026-06-20.md.
+
+
 ### autovetting-pinpoint-inspect-gap-closure-2026-06-19 — ready
 
 - Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
