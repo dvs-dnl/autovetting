@@ -119,6 +119,25 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   check: blog/ is downstream of autovet-seo-content (Content/blog/ sources, gitignored _hub) — this
   publishes Daniel-approved drafts, no conflict; inspect/pinpoint changes are sequential on top of the
   same-day gap-closure + blog-link Ready entries. Gate 27/2/0 CRIT. Detail: _hub/Build-Log/2026-06-19-publish-blog-drafts.md.
+
+### autovetting-inspect-repair-links-2026-06-19 — ready
+
+- Status: ready to deploy (committed locally; orchestrator to push)
+- Started: 2026-06-19 (Daniel-directed: "both")
+- Touched files: inspect/index.html, _hub/Build-Log/2026-06-19-internal-linking.md, TASKS.md
+- Notes:
+  Closed the inspect->repair internal-linking gap (checklists previously had ~1 /repair/ link total).
+  Added an "After you buy: common DIY repair guides" block to the renderChecklist() function (renders
+  once for all 245 checklists), linking the 6 universally-applicable guides (oil change, brakes,
+  battery, transmission fluid, coolant, spark plugs) + the /repair/ hub. Reused existing
+  checklist-section-block + item-check classes (no new CSS, inherits page theme); placed after the
+  recalls section and BEFORE the value-framing-card so the conversion CTAs are untouched. Universal
+  maintenance set only (excluded timing-belt/fuel-filter/PS-fluid etc. that aren't universal across
+  the fleet) to avoid irrelevant links. Verify: all 6 guide dirs exist; 5 inspect <script> blocks
+  new Function-parse clean; gate 27/2/0 CRIT (Inline JS syntax + IIFE PASS); inspect 17,562->17,577
+  lines, tail intact; dead-link scan 0 broken. Backup /tmp/inspect-repairlinks.bak. Sibling check:
+  inspect/index.html sequential on top of same-day blog-publish + gap-closure entries (render-layer
+  add, orthogonal to recall-data edits). Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
 
