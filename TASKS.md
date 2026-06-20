@@ -74,6 +74,27 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   tail intact, 297 inspectUrls steady; backup /tmp/pinpoint-w12.bak. Gate: 27 pass / 0 CRIT.
   Detail: _hub/Build-Log/2026-06-19-pinpoint-inspect-gap-closure.md.
 
+
+### autovetting-internal-linking-2026-06-19 — ready
+
+- Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
+- Started: 2026-06-19 (Daniel-directed interactive session; launch-freeze reallocation queue item #2)
+- Touched files: inspect/index.html, pinpoint/index.html, _hub/Build-Log/2026-06-19-internal-linking.md, TASKS.md
+- Notes:
+  Internal-linking pass (queue #2, no new vehicles). (1) **Fixed the one dead checklist→blog link**:
+  nissan-rogue pointed to /blog/2017-nissan-rogue-buyers-guide which 404s (unpublished draft) —
+  removed the blogUrl from the checklist (inspect 18→17 blogUrls). Publishing the draft restores it
+  (flagged to Daniel). (2) **Added the first-ever Pinpoint→blog links**: Pinpoint cards previously
+  linked to zero blog posts despite 17 published buyer's guides. Each card now inherits the blogUrl
+  of whatever checklist its inspectUrl resolves to (generation-exact). 24 cards across 17 guides got
+  a "Read the buyer's guide" link in the verdict bar (new .verdict-link style + render branch gated
+  on v.blogUrl). Sibling check: shares inspect/index.html + pinpoint/index.html with the same-day
+  gap-closure Ready entry above (31d9461) — sequential, complementary (that fixed inspectUrls; this
+  adds blog links on top, several to the very cards that run repaired); recall waves touch inspect
+  recall data only (orthogonal to blogUrl/render). Verification: gate-check 27/2/0 CRIT (IIFE +
+  JSON-LD PASS); both JS script blocks new Function-parse clean; inspectUrls steady 297/resolved 213;
+  pinpoint 4073→4108 lines, tail intact, 24 blogUrl; backups /tmp/inspect-link.bak + /tmp/pinpoint-blog.bak.
+  Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
 ## Done (last 10)
 <!-- orchestrator moves Ready items here after push -->
 

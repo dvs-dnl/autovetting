@@ -357,6 +357,16 @@
     gap: 6px;
   }
   .verdict-btn:hover { background: var(--electric-hover); color: var(--white); text-decoration: none; }
+  .verdict-link {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.82;
+    flex-shrink: 0;
+  }
+  .verdict-link:hover { opacity: 1; color: var(--electric); text-decoration: underline; }
 
   /* ============================================================
      SHARPEN — inline precision tool
@@ -1362,7 +1372,8 @@
         must_have: ['luxury'],
         price: '$7,500', tier: 'Top',
         tagline: 'K24 engine reliability, premium interior, owners regularly hit 250k+ miles with basic upkeep.',
-        inspectUrl: '/inspect/?year=2014&make=Acura&model=TSX'
+        inspectUrl: '/inspect/?year=2014&make=Acura&model=TSX',
+        blogUrl: '/blog/2014-acura-tsx-buyers-guide'
       },
       {
         name: 'Honda Ridgeline RTL', make: 'Honda', years: '2010–2012',
@@ -1433,7 +1444,8 @@
         must_have: [],
         price: '$10,500', tier: 'Top',
         tagline: 'The benchmark mid-size sedan. Reliable 2.4L four, spacious cabin, strong resale floor.',
-        inspectUrl: '/inspect/?year=2014&make=Honda&model=Accord'
+        inspectUrl: '/inspect/?year=2014&make=Honda&model=Accord',
+        blogUrl: '/blog/2014-honda-accord-buyers-guide'
       },
       {
         name: 'Honda Accord LX / EX-L / Sport / Touring (10th gen)', make: 'Honda', years: '2018–2022',
@@ -1441,7 +1453,8 @@
         must_have: ['carplay', 'luxury'],
         price: '$18,500', tier: 'Strong',
         tagline: "Sharp-driving, roomy 10th-gen Accord. The 2.0T Sport/Touring (K20C1) is the connoisseur's pick; on any 1.5T (L15B7) dipstick-check for cold-climate oil dilution and confirm the PCM update. Verify 10-speed/CVT fluid service.",
-        inspectUrl: '/inspect/?year=2018&make=Honda&model=Accord'
+        inspectUrl: '/inspect/?year=2018&make=Honda&model=Accord',
+        blogUrl: '/blog/2018-honda-accord-buyers-guide'
       },
       {
         name: 'Toyota Camry LE / SE / XSE / XLE', make: 'Toyota', years: '2018',
@@ -1449,7 +1462,8 @@
         must_have: ['carplay'],
         price: '$17,500', tier: 'Top',
         tagline: "The 8th-gen XV70 is Toyota's sharpest Camry yet. 2.5L A25A or 3.5L V6. Verify Denso fuel-pump recall 20V-012 (expanded under 20V-682) by VIN. Near-zero annual repair costs.",
-        inspectUrl: '/inspect/?year=2018&make=Toyota&model=Camry'
+        inspectUrl: '/inspect/?year=2018&make=Toyota&model=Camry',
+        blogUrl: '/blog/2018-toyota-camry-buyers-guide'
       },
       {
         name: 'Nissan Rogue SV / SL', make: 'Nissan', years: '2017',
@@ -1479,7 +1493,8 @@
         must_have: ['luxury'],
         price: '$15,000', tier: 'Top',
         tagline: 'Luxury SUV at Toyota reliability costs. Smooth 3.5L V6, premium cabin, sub-$500 annual repair avg.',
-        inspectUrl: '/inspect/?year=2012&make=Lexus&model=RX%20350'
+        inspectUrl: '/inspect/?year=2012&make=Lexus&model=RX%20350',
+        blogUrl: '/blog/2010-lexus-rx350-buyers-guide'
       },
       {
         name: 'Ford F-150 XLT / Lariat', make: 'Ford', years: '2018',
@@ -1487,7 +1502,8 @@
         must_have: ['carplay', 'tow-5000'],
         price: '$24,000', tier: 'Caution',
         tagline: "America's best-seller with an aluminum body that doesn't rust. Must-verify: cam phasers (cold-start listen), 10R80 shudder test, brake recall 25V236 closed.",
-        inspectUrl: '/inspect/?year=2018&make=Ford&model=F-150'
+        inspectUrl: '/inspect/?year=2018&make=Ford&model=F-150',
+        blogUrl: '/blog/2018-ford-f150-buyers-guide'
       },
       {
         name: 'Ford F-150 XLT / Lariat / King Ranch (14th gen)', make: 'Ford', years: '2021–2023',
@@ -1495,7 +1511,8 @@
         must_have: ['carplay', 'tow-5000'],
         price: '$38,000', tier: 'Strong',
         tagline: "The redesigned 14th-gen F-150 — best-driving, best-tech F-150 yet, with available PowerBoost hybrid and the Pro Power Onboard generator. Decode the 8th VIN digit (F = 3.5 EcoBoost cam-phaser engine, T = 5.0 V8, D = PowerBoost hybrid) and run a full VIN recall check: early builds carry windshield-bonding, wiper-motor, and SuperCab seat-belt campaigns.",
-        inspectUrl: '/inspect/?year=2021&make=Ford&model=F-150'
+        inspectUrl: '/inspect/?year=2021&make=Ford&model=F-150',
+        blogUrl: '/blog/2021-ford-f150-buyers-guide'
       },
       {
         name: 'Chevrolet Silverado 1500 WT / LT / LTZ', make: 'Chevrolet', years: '2014',
@@ -1503,7 +1520,8 @@
         must_have: ['tow-5000'],
         price: '$18,500', tier: 'Caution',
         tagline: "The F-150\\'s main rival. Capable K2XX platform, strong 5.3L V8 — but AFM lifter failures ($3k–$6k) on V8 models are the buyer\\'s headline risk. Decode VIN position 8: V6 (no AFM) vs. V8 (AFM) before any offer.",
-        inspectUrl: '/inspect/?year=2014&make=Chevrolet&model=Silverado%201500'
+        inspectUrl: '/inspect/?year=2014&make=Chevrolet&model=Silverado%201500',
+        blogUrl: '/blog/2014-chevrolet-silverado-buyers-guide'
       },
       {
         name: 'Toyota Corolla L / LE / S', make: 'Toyota', years: '2014–2019',
@@ -1511,7 +1529,8 @@
         must_have: [],
         price: '$9,500', tier: 'Strong',
         tagline: "Toyota's benchmark commuter. 1.8L 2ZR-FE hits 200k+ with basic upkeep. Verify Takata airbag recall VIN-by-VIN before purchase — it's mandatory. Strong buy when recall is confirmed clear.",
-        inspectUrl: '/inspect/?year=2014&make=Toyota&model=Corolla'
+        inspectUrl: '/inspect/?year=2014&make=Toyota&model=Corolla',
+        blogUrl: '/blog/2014-toyota-corolla-buyers-guide'
       },
       {
         name: 'Honda Civic LX / EX / Sport / Si', make: 'Honda', years: '2016–2021',
@@ -1519,7 +1538,8 @@
         must_have: ['manual'],
         price: '$14,000', tier: 'Caution',
         tagline: '10th-gen Civic is a sharp, well-built compact — but the 1.5T turbo (EX and above) has a documented cold-weather oil-dilution problem. LX and Sport trims use the 2.0L K20C2 (no dilution) and are the safer used buy. Any EX or higher: verify the PCM update is on the service record and check the dipstick.',
-        inspectUrl: '/inspect/?year=2017&make=Honda&model=Civic'
+        inspectUrl: '/inspect/?year=2017&make=Honda&model=Civic',
+        blogUrl: '/blog/2017-honda-civic-buyers-guide'
       },
       {
         name: 'Jeep Wrangler Sport / Sahara / Rubicon (JK)', make: 'Jeep', years: '2007–2018',
@@ -1631,7 +1651,8 @@
         must_have: ['carplay', 'tow-5000'],
         price: '$22,000', tier: 'Strong',
         tagline: "The Ram 1500 Classic is the prior-generation DS body sold new alongside the redesigned DT through 2021 — a simpler, proven half-ton without the DT's eTorque mild-hybrid complexity. The 3.6L Pentastar V6 is the low-risk pick; the 5.7L Hemi adds MDS cylinder-deactivation lifter risk ($3,000–$6,500 if neglected). Strong value play for a full-size truck at less than DT money.",
-        inspectUrl: '/inspect/?year=2019&make=Ram&model=1500%20Classic'
+        inspectUrl: '/inspect/?year=2019&make=Ram&model=1500%20Classic',
+        blogUrl: '/blog/2019-ram-1500-classic-buyers-guide'
       },
       {
         name: 'Chrysler Pacifica Touring / Touring L / Limited / Pinnacle', make: 'Chrysler', years: '2017–2022',
@@ -1639,7 +1660,8 @@
         must_have: ['carplay', '3-row'],
         price: '$19,000', tier: 'Caution',
         tagline: "The most car-like minivan to drive, and the only one with a plug-in-hybrid option — but a used Pacifica needs scrutiny. The 948TE 9-speed can shift roughly (NHTSA stall investigation), the 3.6L Pentastar's water pump and oil-cooler are early failures that can cascade into a head gasket, and the Pacifica Hybrid is tied to a high-voltage battery fire recall re-issued twice (22V-077 → 24V-536/24V-538). A documented gas Touring L with verified recalls is a strong family buy; an unverified Hybrid is a walk-away.",
-        inspectUrl: '/inspect/?year=2017&make=Chrysler&model=Pacifica'
+        inspectUrl: '/inspect/?year=2017&make=Chrysler&model=Pacifica',
+        blogUrl: '/blog/2017-chrysler-pacifica-buyers-guide'
       },
       {
         name: 'Chevrolet Equinox LS / LT / Premier', make: 'Chevrolet', years: '2018–2023',
@@ -2311,7 +2333,8 @@
         must_have: ['hybrid-ev'],
         price: '$17,500', tier: 'Strong',
         tagline: "Gen-4 Prius (ZVW50) returns 50+ mpg and runs nearly forever — but the EGR system carbons up and can crack the head gasket on neglected 2016–2018 cars, and a Prius catalytic converter is a prime theft target. Verify EGR-cleaning records and an intact, OEM cat before anything else.",
-        inspectUrl: '/inspect/?year=2016&make=Toyota&model=Prius'
+        inspectUrl: '/inspect/?year=2016&make=Toyota&model=Prius',
+        blogUrl: '/blog/2016-toyota-prius-buyers-guide'
       },
       {
         name: 'Chevrolet Bolt EV LT / Premier', make: 'Chevrolet', years: '2017–2023',
@@ -2383,7 +2406,8 @@
         must_have: ['carplay'],
         price: '$17,000', tier: 'Strong',
         tagline: 'TNGA-C platform Corolla — multi-link rear suspension, Toyota Safety Sense 2.0 standard on every trim, no chronic issues on the 2.0L M20A-FKS models. One critical check: some 2020 cars fall under Denso fuel-pump recall 20V-682 (coverage is VIN-specific, not trim-specific) — confirm it is closed by VIN before purchase.',
-        inspectUrl: '/inspect/?year=2021&make=Toyota&model=Corolla'
+        inspectUrl: '/inspect/?year=2021&make=Toyota&model=Corolla',
+        blogUrl: '/blog/2021-toyota-corolla-buyers-guide'
       },
       {
         name: 'Chevrolet Cruze LS / LT / Premier', make: 'Chevrolet', years: '2016–2019',
@@ -3279,7 +3303,8 @@
         must_have: ['carplay'],
         price: '$14,500', tier: 'Top',
         tagline: 'The textbook first car. CarPlay standard, Toyota Safety Sense, and repair bills that barely register.',
-        inspectUrl: '/inspect/?year=2021&make=Toyota&model=Corolla'
+        inspectUrl: '/inspect/?year=2021&make=Toyota&model=Corolla',
+        blogUrl: '/blog/2021-toyota-corolla-buyers-guide'
       },
       {
         name: 'Honda Civic Sport', make: 'Honda', years: '2019-2021',
@@ -3351,7 +3376,8 @@
         must_have: ['carplay', 'tow-5000'],
         price: '$18,000', tier: 'Strong',
         tagline: 'Bare-bones two-seat work rig. Long bed, 5,000+ lb tow, vinyl floors you can hose out.',
-        inspectUrl: '/inspect/?year=2021&make=Ford&model=F-150'
+        inspectUrl: '/inspect/?year=2021&make=Ford&model=F-150',
+        blogUrl: '/blog/2021-ford-f150-buyers-guide'
       },
       {
         name: 'Chevrolet Silverado 1500 WT Crew', make: 'Chevrolet', years: '2016-2019',
@@ -3359,7 +3385,8 @@
         must_have: ['carplay', 'tow-5000'],
         price: '$24,000', tier: 'Strong',
         tagline: 'Front-bench crew cab seats six and tows past 7,000 lb. The fleet-spec workhorse.',
-        inspectUrl: '/inspect/?year=2019&make=Chevrolet&model=Silverado 1500'
+        inspectUrl: '/inspect/?year=2019&make=Chevrolet&model=Silverado 1500',
+        blogUrl: '/blog/2014-chevrolet-silverado-buyers-guide'
       },
       {
         name: 'Chevrolet Suburban LS', make: 'Chevrolet', years: '2007-2014',
@@ -3431,7 +3458,8 @@
         must_have: ['carplay', 'manual'],
         price: '$18,500', tier: 'Top',
         tagline: 'A first car you can learn stick in: available 6-speed, CarPlay, and Corolla running costs.',
-        inspectUrl: '/inspect/?year=2022&make=Toyota&model=Corolla'
+        inspectUrl: '/inspect/?year=2022&make=Toyota&model=Corolla',
+        blogUrl: '/blog/2021-toyota-corolla-buyers-guide'
       },
       {
         name: 'Kia Forte GT-Line', make: 'Kia', years: '2019-2022',
@@ -3455,7 +3483,8 @@
         must_have: ['hybrid-ev'],
         price: '$16,000', tier: 'Strong',
         tagline: '56 mpg hybrid first car. Boring in the best way: cheap, frugal, and nearly unkillable.',
-        inspectUrl: '/inspect/?year=2019&make=Toyota&model=Prius'
+        inspectUrl: '/inspect/?year=2019&make=Toyota&model=Prius',
+        blogUrl: '/blog/2016-toyota-prius-buyers-guide'
       },
       {
         name: 'Mazda CX-30 2.5 S', make: 'Mazda', years: '2020-2023',
@@ -3479,7 +3508,8 @@
         must_have: ['carplay', 'luxury'],
         price: '$26,000', tier: 'Top',
         tagline: '252-hp turbo, adaptive dampers, head-up display. A near-luxury road-trip sedan for Accord money.',
-        inspectUrl: '/inspect/?year=2022&make=Honda&model=Accord'
+        inspectUrl: '/inspect/?year=2022&make=Honda&model=Accord',
+        blogUrl: '/blog/2018-honda-accord-buyers-guide'
       },
       {
         name: 'Subaru Outback Onyx XT', make: 'Subaru', years: '2020-2023',
@@ -3615,7 +3645,8 @@
         must_have: ['awd-4wd', 'carplay', 'tow-5000', 'manual'],
         price: '$27,000', tier: 'Top',
         tagline: 'A real 6-speed-manual midsize truck with a locking diff and 6,400-lb tow. The enthusiast work rig.',
-        inspectUrl: '/inspect/?year=2019&make=Toyota&model=Tacoma'
+        inspectUrl: '/inspect/?year=2019&make=Toyota&model=Tacoma',
+        blogUrl: '/blog/2016-toyota-tacoma-buyers-guide'
       },
       {
         name: 'Ford Ranger XLT FX4', make: 'Ford', years: '2019-2022',
@@ -3687,7 +3718,8 @@
         must_have: ['carplay', 'manual'],
         price: '$24,000', tier: 'Top',
         tagline: 'The definitive cheap thrills roadster: 2,300 lb, perfect 6-speed, top-down on demand.',
-        inspectUrl: '/inspect/?year=2020&make=Mazda&model=MX-5 Miata'
+        inspectUrl: '/inspect/?year=2020&make=Mazda&model=MX-5 Miata',
+        blogUrl: '/blog/2016-mazda-mx5-miata-buyers-guide'
       },
       {
         name: 'Chevrolet Camaro SS 1LE', make: 'Chevrolet', years: '2016-2020',
@@ -3759,7 +3791,8 @@
         must_have: ['hybrid-ev', 'carplay', 'luxury'],
         price: '$25,000', tier: 'Top',
         tagline: '48 mpg in a roomy, refined midsize. The hybrid commuter that still feels like a premium car.',
-        inspectUrl: '/inspect/?year=2022&make=Honda&model=Accord'
+        inspectUrl: '/inspect/?year=2022&make=Honda&model=Accord',
+        blogUrl: '/blog/2018-honda-accord-buyers-guide'
       },
       {
         name: 'Toyota Sienna XLE (gas, 3rd gen)', make: 'Toyota', years: '2018-2020',
@@ -3807,7 +3840,8 @@
         must_have: ['awd-4wd', 'carplay'],
         price: '$18,000', tier: 'Strong',
         tagline: "Reformed CVT sedan with finally-available AWD. Get the 2.5L over the VC-Turbo — the 25V437 bearing recall and oil consumption on the turbo make it a risk not worth taking.",
-        inspectUrl: '/inspect/?year=2019&make=Nissan&model=Altima'
+        inspectUrl: '/inspect/?year=2019&make=Nissan&model=Altima',
+        blogUrl: '/blog/2019-nissan-altima-buyers-guide'
       }
     ];
 
@@ -3914,6 +3948,7 @@
           ? '<div class="verdict-bar">' +
               '<span class="verdict-label">The verdict</span>' +
               '<a class="verdict-btn" href="' + v.inspectUrl + '">Run the inspection <span>&rarr;</span></a>' +
+              (v.blogUrl ? '<a class="verdict-link" href="' + v.blogUrl + '">Read the buyer&rsquo;s guide</a>' : '') +
             '</div>'
           : '';
         return '<div class="pick-1-card">' +
