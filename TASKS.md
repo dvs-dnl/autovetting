@@ -49,6 +49,42 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-vinnote-batch-2026-06-21 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-21 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-21.md (gitignored), TASKS.md
+- Commit: 40bee02 (work) ; this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 4-6 (queue 224->221). Added `vinNote` to three young
+  checklists in inspect/index.html; all three entries were factually accurate as written
+  (no fabrication corrections needed this run):
+  (1) honda-hrv-2023 — single-engine generation (2.0L K20C2 NA i-VTEC, CVT only; shared with
+  11th-gen Civic). No 8th-digit fork; note steers to 10th-digit MY (P=2023/R=2024) + recall
+  lookup, and flags that no U.S. "turbo HR-V" exists (NA only, no 1.5T oil-dilution history).
+  (2) kia-sportage-2023 — three-powertrain fork (2.5L MPI G4KN gas / 1.6T G4FT hybrid / 1.6T PHEV).
+  8th-digit mapping F/G/H included per Kia's scheme but framed with explicit confirm-at-vpic
+  caveat (single-source on the letters; anti-fabrication hedge). Notes gas 2.5L is NOT Theta II
+  (no KSDS exposure) and hybrid/PHEV add HV-battery/inverter/charging checks the gas car lacks.
+  (3) mazda-cx50-2023 — two-engine fork, 8th digit CONFIRMED: M = 2.5 NA (PY-VPS, 187 hp),
+  Y = 2.5T (PY-VPTS, 256/227 hp). Note covers shared-block-but-different-internals + AWD-on-all
+  i-Activ coupling service.
+  Sibling check: inspect/index.html is shared with the prior Ready blocks (vinnote-batch-2026-06-20
+  e1c83a3/bd51c26, internal-linking, pinpoint-inspect-gap-closure) and the recall-audit Done waves —
+  all already committed (HEAD was e1c83a3 before this), so this commit is sequential on top; my edits
+  are purely additive top-level `vinNote` string fields on 3 isolated entries, no overlap with their
+  blogUrl/render, recall-data, or inspectUrl changes. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) are
+  orthogonal (gitignored _hub or different trees). All Done (last 10) siblings sharing inspect/index.html
+  carry Started dates — no backfill needed.
+  Syntax-check: PASS (node new Function over inspect scripts 2+5, exit 0; tail </html> intact;
+  17,584->17,587 lines; vinNote 32->35; backup /tmp/inspect-vinnote-w13.bak).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov / nhtsa.gov as
+  plain text; no /decode/ link per current launch-spec rule).
+  Scanner: PASS (scan_for_secrets.py, 382 files, exit 0).
+  Detail: _hub/Build-Log/2026-06-21.md.
+
+
 ### autovetting-vinnote-batch-2026-06-20 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
