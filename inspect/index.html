@@ -12556,6 +12556,7 @@ const CHECKLISTS = {
   'honda-hrv-2023': {
     year: 2023, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L (3rd gen RU4, 2023–present)',
     engine: '2.0L DOHC i-VTEC I4 (158 hp) with CVT',
+    vinNote: "The 3rd-gen (RU4) HR-V sold in the U.S. uses a single engine — the 2.0L K20C2 port-injected i-VTEC four (158 hp), shared with the 11th-gen Civic — so there is no 8th-digit engine fork to decode on this generation; every U.S. car is the same NA powertrain with a CVT. The decode that matters is the 10th VIN digit for model year (P = 2023, R = 2024) plus running the full VIN at nhtsa.gov to confirm any open recalls, since this platform is new enough that campaigns are still being issued. This 2.0L is naturally aspirated and has none of the 1.5T oil-dilution history of Honda\u2019s turbo fours \u2014 there is no U.S. \u2018turbo HR-V\u2019 trim, so do not let a seller upsell one.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 3rd-gen HR-V is a complete redesign on the Civic platform — significantly larger, with a premium interior and much-improved driving dynamics over the 2nd gen. Naturally aspirated 2.0L engine is simple and reliable. Main checks are CVT fluid history and confirming Honda Sensing camera calibration. No widespread failure modes on this very young platform.",
     stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
@@ -12744,6 +12745,7 @@ const CHECKLISTS = {
   'kia-sportage-2023': {
     year: 2023, make: 'Kia', model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Line / X-Pro / Hybrid / PHEV (5th gen NQ5, 2023–present)',
     engine: '2.5L MPI I4 (187 hp), 1.6T Hybrid (227 hp combined), or 1.6T PHEV (261 hp combined)',
+    vinNote: "The 5th-gen (NQ5) Sportage splits across three very different powertrains and the inspection changes completely depending on which you are looking at: the 2.5L MPI gas four (Smartstream G4KN, 187 hp), the 1.6T hybrid (G4FT turbo + motor, 227 hp combined), and the 1.6T plug-in hybrid (261 hp combined, ~34 mi EV). Kia encodes engine in the 8th VIN digit (F = 2.5L gas, G = 1.6T hybrid, H = 1.6T PHEV per Kia\u2019s scheme), but always confirm the exact powertrain by decoding the full VIN at vpic.nhtsa.dot.gov before buying \u2014 a hybrid or PHEV adds high-voltage battery, inverter, and (PHEV) charging-system checks that do not apply to the gas car, and the gas 2.5L is NOT a Theta II engine so it carries no KSDS rod-bearing exposure. The 10th digit gives model year (P = 2023).",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 5th-gen Sportage is a major improvement over the 4th gen — substantially larger interior, available hybrid and PHEV powertrains, and Kia Connect suite. No Theta II exposure. The base 2.5L is competent; the 1.6T Hybrid is the sweet spot for fuel economy. Main buyer check on this young platform: confirm no open NHTSA recalls and test the DCT or CVT for smooth operation.",
     stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 75, topComplaintArea: 'Minimal' },
@@ -12818,6 +12820,7 @@ const CHECKLISTS = {
   'mazda-cx50-2023': {
     year: 2023, make: 'Mazda', model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo (1st gen, 2023–present)',
     engine: '2.5L SKYACTIV-G I4 (187 hp) or 2.5T Turbo (256 hp)',
+    vinNote: "The 1st-gen CX-50 offers two 2.5L SKYACTIV-G fours and the 8th VIN digit tells them apart: M = the naturally-aspirated 2.5 (PY-VPS, 187 hp) and Y = the turbocharged 2.5T (PY-VPTS, 256 hp on 93 octane / 227 hp on 87). They share a block but differ in pistons, compression, exhaust, and the turbo\u2019s forged rods, so the turbo wants strict premium-fuel and oil-interval discipline while the NA car is the simpler ownership case. Confirm engine and AWD by decoding the full VIN at vpic.nhtsa.dot.gov (10th digit P = 2023) and verify no open recalls at nhtsa.gov \u2014 every U.S. CX-50 is AWD, so budget the i-Activ rear-coupling fluid service regardless of engine.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The CX-50 is a new model positioned above the CX-5 for outdoor-activity buyers — wider, slightly taller, better approach angle, available Meridian audio and off-road specific Meridian Green paint. Both SKYACTIV engines are highly reliable with no known failure modes. The 2.5T is the clear powertrain choice. Main buyer check is simply confirming AWD coupling fluid service on all-wheel-drive trims.",
     stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 35, topComplaintArea: 'Minimal — very new vehicle' },
