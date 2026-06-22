@@ -59,7 +59,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
 - Started: 2026-06-22 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
 - Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-22.md (gitignored), TASKS.md
-- Commit: __COMMIT__ (work); this docs(tasks) record follows in same push.
+- Commit: 715b133 (work); this docs(tasks) record follows in same push.
 - Notes:
   Drained vinnote-queue priorities 7-9 (queue 221->218). Added `vinNote` to three 2023
   checklists in inspect/index.html (vinNote 35->38). Two carried material engine
