@@ -13833,9 +13833,10 @@ const CHECKLISTS = {
   },
   'honda-accord-2023': {
     year: 2023, make: 'Honda', model: 'Accord', trim: 'LX / EX / EX-L / Sport / Sport-L / Touring / Hybrid (11th gen CV3, 2023–present)',
-    engine: '1.5T L15CA I4 (192 hp), 2.0T K20C1 I4 (252 hp), or 2.0L Hybrid (204 hp combined)',
+    engine: '1.5T L15CA I4 (192 hp; LX, EX) or 2.0L two-motor Hybrid (204 hp combined; Sport, EX-L, Sport-L, Touring)',
+    vinNote: "The 11th-gen Accord (CV series, 2023+) offers only two powertrains, and there is no 2.0T in this generation — that engine ended with the 10th gen (2018–2022). The 1.5T L15CA turbo-four (192 hp, CVT) powers LX and EX; the 2.0L two-motor hybrid (204 hp combined) powers Sport, EX-L, Sport-L and Touring. Honda does not use a single clean 8th-digit engine letter the way Toyota or Mazda do — powertrain is encoded across the VDS (positions 4–8) together with model and body, so the reliable confirmation is to run the VIN through vPIC at vpic.nhtsa.dot.gov and match the result to the trim badge and the presence of an 'e:HEV' hybrid badge. Position 10 encodes model year: P = 2023, R = 2024. A listing advertising a '2.0T Accord' for 2023 is mis-described.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 11th-gen Accord is Honda's best Accord ever — significantly redesigned with available Google-built infotainment, standard Honda Sensing 2.0, and the Hybrid now standard on Touring trim. The 1.5T oil dilution issue from the 10th gen is substantially reduced. The 2.0T is reserved for Sport and above. Very young platform with no established failure modes. Outstanding mid-size sedan buy.",
+    summary: "The 11th-gen Accord is Honda's best Accord ever — significantly redesigned with available Google-built infotainment, standard Honda Sensing 2.0, and the Hybrid now standard on Touring trim. The 1.5T oil dilution issue from the 10th gen is substantially reduced. The hybrid powers the upper trims (Sport, EX-L, Sport-L, Touring) and the 1.5T powers LX and EX; there is no 2.0T in this generation. Very young platform with no established failure modes. Outstanding mid-size sedan buy.",
     stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 70, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
@@ -13843,10 +13844,10 @@ const CHECKLISTS = {
           desc: 'Honda redesigned the 1.5T. US-market cars with current software have low dilution risk.',
           check: '<strong>Check oil color and level. Golden = good. Ask about any cold-weather driving patterns.</strong>',
           cost: 'Routine maintenance', source: 'Honda L15CA 11th gen update' },
-        { title: '2.0T K20C1 (Sport+) — proven', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'Higher-output 2.0T available on Sport, Sport-L, and Touring. Reliable and engaging.',
-          check: '<strong>Standard cold-start and oil check.</strong>',
-          cost: 'Routine maintenance', source: 'Honda K20C1 reliability' },
+        { title: '1.5T CVT — fluid service', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 1.5T (LX, EX) pairs with a CVT that wants fluid service roughly every 30k miles; the hybrid trims use a two-motor e-CVT instead. There is no 2.0T in the 11th-gen Accord.',
+          check: '<strong>Smooth acceleration with no belt drone or shudder; confirm CVT fluid history on 1.5T cars.</strong>',
+          cost: '$150–$200 CVT service', source: 'Honda 11th-gen Accord powertrain' },
         { title: 'Honda Hybrid System — reliable', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Honda two-motor hybrid on Touring and Hybrid trims. Same proven system as Accord Hybrid predecessor.',
           check: '<strong>Test EV mode engagement. No HV warning lights.</strong>',
@@ -13945,8 +13946,9 @@ const CHECKLISTS = {
   'kia-telluride-2023': {
     year: 2023, make: 'Kia', model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro (1st gen ON, 2020–present)',
     engine: '3.8L Lambda II V6 GDI (291 hp) with 8-speed automatic',
+    vinNote: "The first-gen Telluride (ON, 2020–2025) has just one engine — the 3.8L Lambda II GDI V6 (291 hp) paired with an 8-speed automatic; there is no four-cylinder, no turbo and no CVT in any Telluride, FWD or AWD. The 8th VIN digit confirms it: C = the 3.8L Lambda II V6. This V6 is unrelated to the Theta II 2.0T/2.4L engines behind Kia's KSDS bearing-wear recalls, so the Telluride carries none of that exposure. Position 10 encodes model year on Kia's scheme: P = 2023 (N = 2022, R = 2024). Confirm the decode at vpic.nhtsa.dot.gov before applying this checklist.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The Telluride is widely considered the best 3-row midsize SUV value — premium interior, spacious third row, and proven 3.8L V6 that does not share the Theta II engine concerns. The 8-speed automatic is smooth. This updated 2023 model features cosmetic and feature refreshes. No chronic failure modes. Main checks: CVT on FWD variants (though most are AWD), infotainment update, and standard service records.",
+    summary: "The Telluride is widely considered the best 3-row midsize SUV value — premium interior, spacious third row, and proven 3.8L V6 that does not share the Theta II engine concerns. The 8-speed automatic is smooth. This updated 2023 model features cosmetic and feature refreshes. No chronic failure modes. Main checks: 8-speed automatic fluid service, infotainment update, and standard service records (the Telluride has no CVT in any trim).",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
@@ -14011,6 +14013,7 @@ const CHECKLISTS = {
   'honda-crv-2023': {
     year: 2023, make: 'Honda', model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid (6th gen RW, 2023–present)',
     engine: '1.5T VTEC Turbo I4 (190 hp) or 2.0L Two-Motor Hybrid (204 hp combined)',
+    vinNote: "The 6th-gen CR-V (RS/RW, 2023+) comes in exactly two powertrains: the 1.5T VTEC Turbo four (190 hp, CVT) on LX, EX and EX-L, and the 2.0L two-motor hybrid (204 hp combined) on Sport and Sport Touring. Honda encodes powertrain across the VDS (VIN positions 4–8) rather than in a single clean 8th-digit letter like Toyota or Mazda, so confirm gas-vs-hybrid by running the VIN through vPIC at vpic.nhtsa.dot.gov and checking for the hybrid badge. The hybrid uses an e-CVT/two-motor unit and adds HV-battery and inverter checks the 1.5T does not have; the 1.5T uses a conventional CVT that wants periodic fluid service. Position 10 encodes model year: P = 2023, R = 2024.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 6th-gen CR-V is a complete redesign — more interior space, available hybrid on all trims, and Honda Sensing 2.0 standard. The 1.5T oil dilution issue is substantially reduced over the 5th gen. The Hybrid is the strongest powertrain choice. No established failure modes on this very young platform. Best-in-class cargo space and practicality.",
     stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 70, topComplaintArea: 'Minimal' },

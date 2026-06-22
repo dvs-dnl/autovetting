@@ -34,6 +34,11 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no true conflict. In-flight autovet-competitor-monitor touches Competitors/ only (orthogonal). Verified against / cross-referenced to: autovetting-recall-audit-wave7-2026-06-14, autovetting-recall-audit-wave6-2026-06-13, autovetting-recall-audit-wave4-2026-06-11 — those waves verified Nissan campaigns 23V-093 / 22V-875 / 17V-663 (Rogue-only) / 16V-244 (2013-2016 OCS) in inspect/index.html + scripts/recall-ledger.json; this protocol file is upstream and reuses those verified IDs (complementary, not conflicting). No Re-sync needed.
     Weekly milestone: DONE — nissan-certified.md saved + INDEX.md updated; protocol ready for downstream consumption (overnight-builder / content-checklist authoring). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Hyundai.
 
+  2026-06-21 09:00: ingested Hyundai CPO protocol (173 inspection points; also 179 for EV/PHEV/HEV).
+    Output: Product/CPO-Protocols/hyundai-certified.md, Product/CPO-Protocols/_runs/2026-06-21-hyundai.md.
+    Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) are orthogonal. Cross-referenced to: autovetting-recall-audit-wave11-2026-06-19 (which deleted the 20V-242 Hyundai/Kia fabrication — this protocol reuses only verified Hyundai engine campaign IDs: Theta II KSDS/15V-568/17V-226/20V-746, Nu 2.0L 21V-301, ABS-fire 23V-651/20V-061 — and explicitly flags 20V-242 not to reintroduce). Protocol is upstream of inspect/ checklists = complementary. Noted for next (Kia) run: autovetting-vinnote-batch Ready blocks touched Kia Sportage 2023 (no overlap with this Hyundai file).
+    Weekly milestone: DONE — hyundai-certified.md saved + INDEX.md updated (P0 now Toyota→Honda→Ford→Chevrolet/GM→Nissan→Hyundai ✅; next = Kia, last P0). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Kia.
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -48,6 +53,40 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+### autovetting-vinnote-batch-2026-06-22 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-22 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-22.md (gitignored), TASKS.md
+- Commit: __COMMIT__ (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 7-9 (queue 221->218). Added `vinNote` to three 2023
+  checklists in inspect/index.html (vinNote 35->38). Two carried material engine
+  fabrications/errors, corrected rather than VIN-noted over (anti-fabrication policy):
+  (1) honda-accord-2023 — entry listed a "2.0T K20C1 (252 hp)" as a 2023 powertrain;
+  WebSearch-verified the 11th-gen Accord (CV, 2023+) has NO 2.0T (ended with 10th gen
+  2018-2022). Fixed engine field + summary + replaced the bogus "2.0T K20C1 (Sport+)" item
+  with an accurate "1.5T CVT" item; added vinNote (Honda VDS positions 4-8 encode powertrain,
+  no clean 8th-digit letter; confirm via vPIC + e:HEV badge; pos10 P=2023/R=2024).
+  (2) kia-telluride-2023 — summary wrongly referenced "CVT on FWD variants"; Telluride has
+  NO CVT in any trim (single engine: 3.8L Lambda II V6 + 8AT). Fixed summary; added vinNote
+  (8th digit C = 3.8L Lambda II V6, WebSearch-verified; unrelated to Theta II/KSDS; pos10 P=2023).
+  (3) honda-crv-2023 — accurate as written; added vinNote (1.5T/CVT vs 2.0L two-motor hybrid;
+  Honda VDS framing; pos10 P=2023/R=2024).
+  Sibling check: inspect/index.html shared with prior Ready blocks (vinnote-batch 40bee02/bd51c26,
+  internal-linking, pinpoint-inspect-gap-closure) + recall-audit Done waves — all already committed,
+  so this commit is sequential on top; edits are additive top-level vinNote fields + in-place
+  Accord/Telluride engine-text corrections on 3 isolated entries, no overlap with their
+  recall-data/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/)
+  orthogonal. All Done (last 10) siblings sharing inspect/index.html carry Started dates — no backfill.
+  Syntax-check: PASS (node new Function over inspect scripts 2+5, exit 0; tail </html> intact;
+  17,587->17,591 lines; vinNote 35->38; backup /tmp/inspect-vinnote-w14.bak).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov as plain text).
+  Scanner: PASS (scan_for_secrets.py, 385 files, exit 0).
+  Detail: _hub/Build-Log/2026-06-22.md.
+
 
 ### autovetting-vinnote-batch-2026-06-21 — ready (pushed directly)
 
