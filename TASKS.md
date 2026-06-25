@@ -22,6 +22,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Key delta: BASELINE — Bumper had no prior profile and is absent from Competitor_Analysis.md. It is a vehicle-history-report + VIN-data-API play (powered by VINDATA; NMVTIS provider), NOT physical inspection. Notable: subscription dark-pattern billing reputation hardened into 2026 ($1 trial -> ~$25-30/mo auto-renew; fresh BBB complaints). AI 'Smart Insights' exists but dates to Jun 2024 (not a fresh delta). No physical-inspection move, no funding/M&A -> AutoVet's PPI white space intact.
     Implication: reinforces transparent/no-subscription pricing direction (contrast vs Bumper billing complaints); keep AI differentiation anchored to physical-condition vetting; consider adding Bumper to Competitor_Analysis.md Indirect Competitors.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Carfax (S&P Global Mobility) [watch with extra care: competitor AND most-likely acquirer per business plan §9/§13].
+  2026-06-25 02:00: profiled Carfax (S&P Global Mobility) (🔴 STRATEGIC THREAT).
+    Output: Competitors/_Monitor/2026-06-25-carfax.md; appended to Awaiting-Daniel.md (🔴 escalation, dated 2026-06-25 block).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) + autovet-seo-content (Content/blog/) orthogonal; Ready = vinnote-batches on inspect/index.html (orthogonal); Done(last 10) = recall-audit waves 9-11 + deprice-CTAs, none touch Competitors/ and none position an AutoVet feature against Carfax specifically. No Re-sync needed.
+    Key delta: TWO inspection/forward-looking moves from our most-likely acquirer, both hitting AutoVet's claimed white space. (1) Carfax "Future Reliability" (Apr 7 2026): FREE, consumer-facing, VIN-SPECIFIC forward reliability prediction, top of every report under a new "Past/Present/Future" header -> invalidates our "Carfax=what happened, AutoVet=what happens next" line. (2) Carfax x UVeye integration (Jun 23 2026): AI computer-vision condition inspection (tires/underbody/exterior) + Carfax service/recall data in one workflow, B2B/dealer service-lane only for now -> the "inspection layer + history" bundle the biz plan assumed required acquiring AutoVet; Carfax is renting it via partnership. Converges two tracked competitors (#6 Carfax + #10 UVeye).
+    Implication: re-message Carfax contrast (records/paper-trail vs. actual-car-condition + independence + booking); revisit acquirer thesis 9/13 ("Carfax lacks inspection tech" now weaker); set standing watch for any consumer-facing surfacing of Carfax x UVeye condition data. Homegrown badge (May 2026) = 🟢 supporting evidence for our "independent vs dealer-captured" angle, no action. Decisions a/b/c queued in Awaiting-Daniel.
+    Weekly milestone: DONE — intel ready for Daniel's review; 🔴 Awaiting-Daniel append complete (required before Done for 🔴 severity). Next in rotation: CarGurus (#7) [AI search rollout / inspection or trust-layer launches].
 
 
 ### autovet-cpo-protocol-ingestion
@@ -59,6 +65,42 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+### autovetting-vinnote-batch-2026-06-25 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-25 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-25.md (gitignored), TASKS.md
+- Commit: 6079c78 (work, pushed 88ce95a..6079c78); this docs(tasks) record follows.
+- Notes:
+  Drained vinnote-queue priorities 13/15/16 + retired stale pri-14. Added `vinNote` to three
+  checklists in inspect/index.html (vinNote 41->44). NOTE: pri-14 honda-civic-2022 was ALREADY
+  populated with a vinNote (added in an earlier run but never struck from the queue) — verified
+  present, no edit needed, removed the stale queue row only.
+  (1) kia-carnival-2022 — KA4 single powertrain: 3.5L Smartstream/Lambda III V6 GDI (290 hp) +
+  8AT, no I4/hybrid this MY (Carnival Hybrid debuted 2025), so 8th digit has no engine ambiguity.
+  Miata-style no-ambiguity note; key buyer point = this V6 is NOT in Kia's Theta II/KSDS engine-fire
+  population, pivot to nhtsa.gov recall VIN-check. Did not assert an unverified 8th-digit letter.
+  (2) ford-maverick-2022 — two powertrains, clean 8th-digit fork (WebSearch + Ford 2022 VIN Guide):
+  '3' = 2.5L Atkinson FHEV (FWD-only, 191 hp comb., eCVT); '9' = 2.0T EcoBoost GTDI (250 hp,
+  AWD-available, 8AT, 4,000 lb tow). Flags the "hybrid AWD" mislabel + recall 22V-899 (rear axle bolt).
+  (3) kia-ev6-2022 — E-GMP EV, 8th digit = battery+motor: 'B' = 58 kWh RWD 167 hp (Light, ~232 mi),
+  'A' = 77.4 kWh RWD 225 hp (~310 mi), 'C' = 77.4 kWh AWD 320 hp (~274 mi); SoH + ICCU/charging-relay
+  recall guidance. Added a /decode/ internal link in all three (page exists; dead-link check clean).
+  Sibling check: inspect/index.html shared with prior Ready blocks (vinnote-batch 06-24 3ca43b7 /
+  06-22 715b133 / earlier 40bee02/e1c83a3, internal-linking, pinpoint-inspect-gap-closure) + recall-audit
+  Done waves — all already on origin, so this commit is sequential on top; edits are additive top-level
+  vinNote fields on 3 isolated entries, no overlap with recall-data/blogUrl/inspectUrl/render. In-flight
+  autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
+  autovet-seo-content (Content/blog/) orthogonal (gitignored _hub/). All Done(last 10) siblings sharing
+  inspect/index.html carry Started dates — no backfill.
+  Syntax-check: PASS (node new Function over inspect scripts, exit 0; tail </html> intact;
+  17,593->17,596 lines; bytes 1,290,069; vinNote 41->44; no truncation).
+  Dead-links: verified (only internal href added = /decode/, which exists; nhtsa.gov cited as plain text).
+  Scanner: PASS (scan_for_secrets.py, 394 files, exit 0).
+  Push: gate 27 passed / 2 warned / 0 CRITICAL (homepage-test-bc now WARN-only via G18 EXCLUDE — no
+  rename-aside needed). Detail: _hub/Build-Log/2026-06-25.md.
+
 
 ### autovetting-vinnote-batch-2026-06-24 — ready (pushed directly)
 
