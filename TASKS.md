@@ -50,9 +50,51 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) are orthogonal; Ready empty; Done(last 10) recall-audit waves 4-9 + deprice-CTAs touch inspect/ + 18 existing blog posts, none a Chevrolet Equinox slug. No Re-sync needed.
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Toyota RAV4 (#11), Ford Explorer (#7), Hyundai Tucson (#17, recent recall news).
 
+  2026-06-24 10:00: drafted 2020 Ford Explorer (6th-gen U625) pillar post — Tier-1 #7, highest-ranked fully-uncovered vehicle; launch-year build-quality + 10-speed transmission + rear-axle/rollaway recall cluster story.
+    Output: Content/blog/2026-06-24-2020-ford-explorer-buyers-guide.md (~2,400 words, status: draft), Content/_seo-research/2026-06-24-2020-ford-explorer.md.
+    Recalls cited are all WebSearch-verified 2026-06-24 — 20V693/20S65 (driveshaft weld-seam, rollaway-in-Park, 2020 Explorer/Aviator AWD), 22V255/22S27 (rear-axle bolt, superseded), 23V675/23S55 (~238k MY2020-22, rear-axle bolt re-recall — the one to confirm a VIN received), 23V069 (PCM-reset park-system damage). Transmission TSB IDs left [unverified] (described condition, not fabricated number). Internal-water-pump myth explicitly corrected as a 5th-gen (2011-2019) issue, NOT 2020. Interlinks to 2017-chrysler-pacifica + 2021-ford-f150 posts.
+    Sibling check: no blocking overlap. Recall-audit wave 8 (2026-06-16, within 14d, Done) touched explorer-2020 in inspect/index.html — it DELETED a fabricated 21V-641 "Transmission Fluid Leak" recall; this post is aligned (does NOT cite 21V-641; all recalls independently verified). In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) + autovet-competitor-monitor (Competitors/) orthogonal; Ready blocks (vinnote batches on 2023 Honda/Kia/Mazda slugs) no Explorer overlap. No Re-sync needed.
+    Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Toyota RAV4 (#11), Hyundai Tucson (#17, recent recall news), Ford Escape (#18).
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+### autovetting-vinnote-batch-2026-06-24 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-24 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-24.md (gitignored), TASKS.md
+- Commit: 3ca43b7 (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 10-12 (queue 218->215). Added `vinNote` to three
+  checklists in inspect/index.html (vinNote 38->41). All three entries were factually
+  accurate as written (no fabrication corrections needed this run):
+  (1) chevy-colorado-2023 - 4th-gen (ZH2) single-displacement: all trims 2.7L turbo I4;
+  8th digit is the output-tune fork, not engine. K = L3B (237 hp Turbo / 310 hp Turbo Plus),
+  C = L2R (310 hp High-Output, ZR2/Trail Boss); both on 8-speed 8LXX. No V6/diesel this gen.
+  WebSearch-verified K=L3B and C=L2R for 2023 Colorado 2.7T. pos10 P=2023/R=2024.
+  (2) honda-passport-2023 - 2nd-gen single powertrain (3.5L SOHC i-VTEC V6 J35Y6, 280 hp + 9AT;
+  no hybrid/VCM, no engine fork). Honda VDS positions 4-8 encode powertrain (8th digit = trim,
+  not a clean engine letter) -> confirm via vPIC. Same framing as prior Accord/CR-V/HR-V runs.
+  pos10 P=2023 (N=2022/R=2024).
+  (3) hyundai-ioniq5-2022 - E-GMP EV; 8th digit encodes motor/battery config not a combustion
+  engine: B = single-motor RWD, C = dual-motor AWD (320 hp, 77.4 kWh). B/C split flagged
+  confirm-at-vpic (single-source); note steers buyer to verify motor count + heat-pump fitment
+  (standard on AWD, optional on RWD). pos10 N=2022/P=2023.
+  Sibling check: inspect/index.html shared with prior Ready blocks (vinnote-batch 715b133/40bee02/
+  e1c83a3, internal-linking, pinpoint-inspect-gap-closure) + recall-audit Done waves - all already
+  committed, so this commit is sequential on top; edits are additive top-level vinNote fields on 3
+  isolated entries, no overlap with their recall-data/blogUrl/inspectUrl/render. In-flight
+  autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
+  autovet-seo-content (Content/blog/) orthogonal. All Done (last 10) siblings sharing inspect/index.html
+  carry Started dates - no backfill.
+  Syntax-check: PASS (node new Function over inspect scripts 2+5, exit 0; tail </html> intact;
+  17,590->17,593 lines; vinNote 38->41; backup /tmp/inspect-vinnote-w15.bak).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov as plain text).
+  Scanner: PASS (scan_for_secrets.py, 389 files, exit 0).
+  Detail: _hub/Build-Log/2026-06-24.md.
+
 
 ### autovetting-vinnote-batch-2026-06-22 — ready (pushed directly)
 
