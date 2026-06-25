@@ -9342,6 +9342,7 @@ const CHECKLISTS = {
   'hyundai-ioniq5-2022': {
     year: 2022, make: 'Hyundai', model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)',
     engine: 'Electric — Single Motor RWD (225hp) / Dual Motor AWD (320hp)',
+    vinNote: "IONIQ 5 (E-GMP) is electric-only, so the 8th VIN digit encodes the motor/battery configuration rather than a combustion engine, reported as B for single-motor RWD and C for dual-motor AWD (320 hp, 77.4 kWh). Treat the B/C split as confirm-at-vpic (single-source) and verify motor count plus heat-pump fitment from the build sheet, since the heat pump is standard on AWD but optional on RWD. 10th digit N = 2022 (P = 2023).",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The IONIQ 5 on the E-GMP platform is one of the best EVs launched since the Tesla Model 3 — 800V architecture enables ultra-fast charging (18 min to 80% at 350kW DCFC), distinctive retro styling, and a flat floor that maximizes interior space. Main buyer concerns: heat pump on cold-climate cars (standard on AWD, optional on RWD), charge port compatibility, and early production quality. Battery degradation is minimal on cars under 40k miles.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
@@ -14163,6 +14164,7 @@ const CHECKLISTS = {
   'chevy-colorado-2023': {
     year: 2023, make: 'Chevrolet', model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2 (4th gen ZH2, 2023–present)',
     engine: '2.7T Turboplus I4 (237 hp or 310 hp ZR2) with 8-speed automatic',
+    vinNote: "4th-gen Colorado (2023+) is single-displacement: every trim runs the 2.7L turbo I4, so the 8th VIN digit distinguishes output tune, not a different engine. K = L3B (237 hp Turbo / 310 hp Turbo Plus), C = L2R (310 hp High-Output on ZR2/Trail Boss). Both pair with the 8-speed (8LXX) automatic; there is no V6 or diesel in this generation. 10th digit P = 2023 (R = 2024). Confirm the RPO at vpic.nhtsa.dot.gov.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 4th-gen Colorado is a complete redesign from the 3rd gen — new 2.7T engine, significantly improved interior, and the Bison/ZR2 off-road variants. The 2.7T is a capable engine with no established failure modes. No AFM/cylinder deactivation concerns. Young enough that no widespread issues have emerged. ZR2 is particularly capable off-road.",
     stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
@@ -14579,6 +14581,7 @@ const CHECKLISTS = {
   'honda-passport-2023': {
     year: 2023, make: 'Honda', model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite (2nd gen, 2022–present)',
     engine: '3.5L SOHC V6 i-VTEC (280 hp) with 9-speed automatic',
+    vinNote: "2nd-gen Passport (2022+) has a single powertrain: the 3.5L SOHC i-VTEC V6 (J35Y6, 280 hp) with the 9-speed automatic, no hybrid and no VCM cylinder deactivation, so there is no engine fork to decode. Honda encodes powertrain across VDS positions 4-8 and the 8th digit reads trim rather than a clean engine letter, so confirm the build via vPIC rather than one character. 10th digit P = 2023 (N = 2022, R = 2024).",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2022+ Passport refresh added the TrailSport trim with improved off-road capability, updated styling, and enhanced safety tech. The 3.5L V6 is the same reliable engine in Pilot and Ridgeline. No VCM on the 2nd-gen Passport — motor mount vibration from the older 3.5L is eliminated. i-VTM4 AWD fluid service is the main maintenance item. Outstanding mid-size SUV value.",
     stats: { itemsToCheck: 8, recalls: 0, ownerComplaints: 55, topComplaintArea: 'Minimal' },
