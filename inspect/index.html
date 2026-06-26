@@ -12711,6 +12711,7 @@ const CHECKLISTS = {
   'hyundai-tucson-2022': {
     year: 2022, make: 'Hyundai', model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / Plug-in Hybrid (4th gen NX4, 2022–present)',
     engine: '2.5L MPI I4 (187 hp), 1.6T Hybrid (226 hp combined), or 1.6T PHEV (261 hp combined)',
+    vinNote: "The 4th-gen Tucson (NX4) offers three powertrains, and the 8th VIN digit is the fastest way to separate the gas car from the hybrids. 8th digit 'E' = the 2.5L Smartstream G2.5 MPI four-cylinder (187 hp) paired with a conventional 8-speed automatic — NOT a CVT, and critically NOT a Theta II engine, so the rod-bearing / engine-fire recall anxiety that haunts older 2.0T and 2.4 Hyundais does not apply here. The 1.6L turbo hybrids carry a different code (reported as '1' for the full HEV — treat as confirm-at-vPIC, single-source) and use a 6-speed automatic, not an eCVT: the HEV makes 226 hp combined and the plug-in PHEV (261 hp combined, 13.8 kWh battery) is a separate build identified by its charge port. On any hybrid, verify high-voltage battery state-of-health. Whichever powertrain, run the full 17-digit VIN at nhtsa.gov/recalls to confirm open NX4 campaigns are closed; 10th digit N = 2022. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> (NHTSA vPIC) to confirm engine family and drivetrain.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 4th-gen Tucson is a completely redesigned and substantially improved crossover over the 3rd-gen. Distinctive styling, spacious interior, and an available hybrid drivetrain. The 2.5L and 1.6T hybrid do not share the Theta II recall concerns. Main checks on this young platform are hybrid battery SoH (Hybrid/PHEV), CVT-7 transmission on the base engine, and confirming no outstanding recalls.",
     stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Electrical / Minor' },
@@ -12726,10 +12727,10 @@ const CHECKLISTS = {
           cost: 'Routine hybrid maintenance', source: 'Hyundai hybrid system standard' }
       ]},
       { title: 'Transmission', items: [
-        { title: 'CVT-7 (base 2.5L) — monitor', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Some early CVT-7 units reported shudder under acceleration. Software updates address most cases.',
-          check: '<strong>Test smooth acceleration. Any shudder or hunting = request software update history.</strong>',
-          cost: '$0 software; $2,000+ if hardware needed', source: 'Hyundai NX4 CVT TSBs' }
+        { title: '8-speed automatic (base 2.5L)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2.5L pairs with a conventional 8-speed torque-converter automatic — NOT a CVT (the Tucson has no CVT). It is a proven unit; the HEV/PHEV use a 6-speed automatic instead.',
+          check: '<strong>Test smooth, decisive upshifts under light and firm throttle. Any harsh shift or hunting = request service history.</strong>',
+          cost: 'Routine fluid service', source: 'Hyundai NX4 powertrain spec' }
       ]},
       { title: 'Recall', items: [
         { title: 'Check VIN for any open recalls', risk: 'monitor', riskLabel: 'Monitor',
@@ -13521,7 +13522,8 @@ const CHECKLISTS = {
   },
   'subaru-brz-2022': {
     year: 2022, make: 'Subaru', model: 'BRZ', trim: 'Premium / Limited (2nd gen ZD8, 2022–present)',
-    engine: '2.4L FA24 naturally aspirated I4 (228 hp) with 6-speed manual or 8-speed automatic',
+    engine: '2.4L FA24 naturally aspirated I4 (228 hp) with 6-speed manual or 6-speed Aisin automatic',
+    vinNote: "Every 2nd-gen BRZ (ZD8, 2022+) uses the same engine — the 2.4L FA24 naturally-aspirated boxer four (228 hp) — so there is no engine-family ambiguity to decode, and on Subarus the 8th VIN digit encodes the restraint/airbag system rather than an engine letter anyway. The fork that actually matters on a used BRZ is the transmission: a 6-speed manual or a 6-speed Aisin automatic. The manual is the enthusiast's choice and the one most likely to have been tracked — check the clutch engagement point and look for autocross tire and brake wear; the automatic is smoother for commuting and typically less abused. The FA24 also retired the FA20's head-gasket reputation, so coolant condition is a routine check rather than a red flag. The most useful VIN steps here are confirming model year at the 10th digit (N = 2022, P = 2023) and running the full VIN at nhtsa.gov/recalls. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm transmission and build.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen BRZ is a significant improvement — 228 hp (up from 205 hp), better low-end torque, improved suspension tuning. No head gasket issues that plagued the FA20 (the FA24 is more robust). The main used buyer risks are modification history (wheel spacers, coilovers, aggressive track use) and clutch wear on manual transmission. Lightly modified or stock 2nd-gen BRZ/GR86 is one of the best sports cars available used.",
     stats: { itemsToCheck: 9, recalls: 0, ownerComplaints: 45, topComplaintArea: 'Minimal' },
@@ -13586,6 +13588,7 @@ const CHECKLISTS = {
   'acura-mdx-2022': {
     year: 2022, make: 'Acura', model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra (4th gen YD3, 2022–present)',
     engine: '3.5L SOHC V6 i-VTEC (290 hp) or 3.0T V6 Type S (355 hp)',
+    vinNote: "The 4th-gen MDX (2022+) splits into two very different engines, and the buyer-critical decode is whether you are actually looking at a Type S. The mainstream 3.5L SOHC i-VTEC V6 (J35Y6, 290 hp, 10-speed automatic) is the proven Honda/Acura V6 with no VCM cylinder deactivation on this generation — the motor-mount vibration issue from the 3rd gen is gone. The Type S uses a unique 3.0L twin-scroll turbo V6 (J30-series, 355 hp) with forged internals, the 10-speed automatic, standard SH-AWD, and markedly higher running costs. Honda/Acura encode the engine across VDS positions 4-8 rather than one clean letter, so confirm the build at vPIC — though the Type S is also unmistakable by its quad exhaust, wider fenders, larger brakes, and Type S badging, so engine ID is rarely ambiguous in person. If you are paying the Type S premium, verify the VIN truly decodes to the 3.0T and that SH-AWD is present. 10th digit N = 2022 (P = 2023). Run the full VIN at nhtsa.gov/recalls and decode at <a href=\"/decode/\">autovetting.com/decode</a> before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 4th-gen MDX is the best MDX ever made — longer, wider, lower, with a gorgeous interior and optional Type S performance variant. The naturally-aspirated 3.5L is the same proven engine in many Honda/Acura products; no VCM on this generation. SH-AWD standard on Technology and above. Very young platform with no established failure modes. Main checks: SH-AWD fluid service, infotainment update, and warranty status.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 75, topComplaintArea: 'Minimal — new platform' },
