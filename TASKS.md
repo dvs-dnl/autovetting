@@ -66,6 +66,42 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+### autovetting-vinnote-batch-2026-06-26 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-26 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-26.md (gitignored), TASKS.md
+- Commit: c43c00a (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 17/18/19 (queue top now pri 20 = toyota-gr86-2022). Added `vinNote`
+  to three checklists in inspect/index.html (vinNote 44->47) AND corrected two fabricated transmission
+  specs found during VIN research:
+  (1) hyundai-tucson-2022 (NX4) — 8th digit E = 2.5L Smartstream G2.5 MPI I4 (187 hp) on a conventional
+  8-speed automatic (NOT a CVT) and NOT a Theta II engine (no engine-fire recall population); 1.6T hybrids
+  carry a different code (reported '1' for HEV, flagged confirm-at-vPIC single-source) on a 6-speed auto
+  (not eCVT), HEV 226 / PHEV 261 hp comb. FABRICATION FIX: rewrote the existing "CVT-7 (base 2.5L)"
+  Transmission item to an accurate 8-speed-AT check (Hyundai fits no CVT in the Tucson; same Kia/Hyundai
+  CVT-mislabel pattern as the prior Telluride fix).
+  (2) subaru-brz-2022 (ZD8) — single FA24 2.4L NA boxer (228 hp), no engine ambiguity; Subaru 8th digit =
+  restraint type, not engine. Real fork = transmission. FABRICATION FIX: engine line said "8-speed
+  automatic"; the 2022 BRZ automatic is a 6-speed Aisin — corrected.
+  (3) acura-mdx-2022 (4th gen) — clean two-engine story: 3.5L J35Y6 V6 (290 hp, 10AT, no VCM) vs Type S
+  3.0L twin-scroll turbo V6 (J30-series, 355 hp, 10AT, std SH-AWD); Honda/Acura encode engine across VDS
+  4-8 so confirm at vPIC (Type S also unmistakable by badging/exhaust). No correction needed.
+  Sibling check: inspect/index.html shared with prior Ready vinnote-batches (06-25 6079c78 / 06-24 3ca43b7 /
+  w14 715b133 / earlier) + recall-audit Done waves — all already on origin, so this commit is sequential on
+  top; edits are additive top-level vinNote fields + two in-place transmission-spec corrections on the same
+  3 isolated slugs, no overlap with recall-data/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor
+  (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/)
+  orthogonal (gitignored _hub/). All Done(last ~13) siblings sharing inspect/index.html carry Started dates —
+  no backfill. No Re-sync needed.
+  Syntax-check: PASS (SKILL validator, all 5 script blocks OK, exit 0; braces 4999/4999; 17,596->17,599 lines;
+  bytes 1,293,294; tail </html> intact — no truncation).
+  Dead-links: verified (only internal href added = /decode/, which exists).
+  Scanner: PASS (scan_for_secrets.py, 396 files, exit 0).
+  Push: deploy gate 27 passed / 2 warned / 0 CRITICAL (homepage-test-bc WARN-only via G18 EXCLUDE — no
+  rename-aside). Detail: _hub/Build-Log/2026-06-26.md.
+
 ### autovetting-vinnote-batch-2026-06-25 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
