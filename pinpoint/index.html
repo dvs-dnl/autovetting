@@ -804,7 +804,34 @@
     flex-direction: column;
     gap: 28px;
   }
-  .vs-empty {
+  .vs-relax-notice {
+      grid-column: 1 / -1;
+      background: rgba(245, 158, 11, 0.10);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .vs-relax-notice strong { color: #78350f; }
+    .vs-relax-notice .vs-empty-reset-btn {
+      background: transparent;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #92400e;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .vs-relax-notice .vs-empty-reset-btn:hover { background: rgba(245, 158, 11, 0.18); }
+
+    .vs-empty {
     grid-column: 1 / -1;
     text-align: center;
     padding: 60px 20px;
@@ -4007,6 +4034,17 @@
       'starter': 'First car'
     };
 
+    var MUST_LABELS = {
+      'awd-4wd': 'AWD / 4WD', 'hybrid-ev': 'Hybrid / EV', 'manual': 'Manual transmission',
+      'tow-5000': 'Tow 5,000+ lbs', 'carplay': 'Apple CarPlay / Android Auto',
+      '3-row': '3-row seating', 'luxury': 'Luxury trim / feel'
+    };
+
+    var BUDGET_LABELS = {
+      'under-10k': 'Under $10k', '10-15k': '$10\u201315k',
+      '15-20k': '$15\u201320k', '20-30k': '$20\u201330k', '30k+': '$30k+'
+    };
+
     // --- State ----------------------------------------------
     var state = { use_case: '', seats: '', budget: '', must_have: [], q: '' };
 
@@ -4045,19 +4083,60 @@
         countEl.textContent = results.length + ' of ' + total + ' picks match';
       }
 
-      // Empty state
+      // Empty state — try progressive relaxation before giving up
       if (results.length === 0) {
-        grid.innerHTML = '<div class="vs-empty">No picks match those filters. <button class="vs-empty-reset-btn" id="vs-empty-reset">Clear filters</button></div>';
-        var emptyReset = document.getElementById('vs-empty-reset');
-        if (emptyReset) emptyReset.addEventListener('click', resetFilters);
-        return;
+        var relaxNotice = '';
+        var relaxed = null;
+
+        // Helper: re-run filter with a given relaxation applied
+        function tryRelax(omit) {
+          var q = state.q.toLowerCase();
+          return VEHICLES.filter(function (v) {
+            if (q && v.name.toLowerCase().indexOf(q) === -1 && v.make.toLowerCase().indexOf(q) === -1) return false;
+            if (omit !== 'use_case' && state.use_case && v.use_case !== state.use_case) return false;
+            if (omit !== 'seats'    && state.seats    && v.seats    !== state.seats)    return false;
+            if (omit !== 'budget'   && state.budget   && v.budget   !== state.budget)   return false;
+            for (var i = 0; i < state.must_have.length; i++) {
+              if (omit === 'must_have:' + state.must_have[i]) continue;
+              if (!v.must_have || v.must_have.indexOf(state.must_have[i]) === -1) return false;
+            }
+            return true;
+          });
+        }
+
+        // Priority: drop one must-have (last picked first), then budget, then seats, then use_case
+        var dropCandidates = [];
+        for (var k = state.must_have.length - 1; k >= 0; k--) {
+          dropCandidates.push({ key: 'must_have:' + state.must_have[k], label: MUST_LABELS[state.must_have[k]] || state.must_have[k] });
+        }
+        if (state.budget)   dropCandidates.push({ key: 'budget',   label: BUDGET_LABELS[state.budget] || state.budget });
+        if (state.seats)    dropCandidates.push({ key: 'seats',    label: state.seats + '-seat' });
+        if (state.use_case) dropCandidates.push({ key: 'use_case', label: USE_CASE_LABELS[state.use_case] || state.use_case });
+
+        for (var c = 0; c < dropCandidates.length; c++) {
+          var attempt = tryRelax(dropCandidates[c].key);
+          if (attempt.length >= 3) {
+            relaxed = attempt;
+            relaxNotice = '<div class="vs-relax-notice">No exact matches. Loosened <strong>' + dropCandidates[c].label + '</strong> to show ' + attempt.length + ' close picks. <button class="vs-empty-reset-btn" id="vs-empty-reset">Clear all filters</button></div>';
+            break;
+          }
+        }
+
+        if (!relaxed) {
+          grid.innerHTML = '<div class="vs-empty">No picks match \u2014 and relaxing one filter still didn\u2019t find any. <button class="vs-empty-reset-btn" id="vs-empty-reset">Clear filters</button></div>';
+          var emptyReset = document.getElementById('vs-empty-reset');
+          if (emptyReset) emptyReset.addEventListener('click', resetFilters);
+          return;
+        }
+
+        results = relaxed;
+        // Notice gets prepended to grid below
+        grid.setAttribute('data-relax-notice', relaxNotice);
+      } else {
+        grid.removeAttribute('data-relax-notice');
       }
 
       // Build cards — pick-1 style
-      var BUDGET_LABELS = {
-        'under-10k': 'Under $10k', '10-15k': '$10–15k',
-        '15-20k': '$15–20k', '20-30k': '$20–30k'
-      };
       var PURPOSE_LABELS = {
         'reliability': 'Reliability', 'fuel-economy': 'Fuel economy',
         'fun-to-drive': 'Fun to drive', 'cargo': 'Cargo / towing',
@@ -4069,7 +4148,7 @@
         'weekend-fun': 'Weekend fun', 'outdoor': 'Outdoor / off-road',
         'starter': 'First car'
       };
-      var TYPE_LABEL_FALLBACK = TYPE_LABELS || {
+      var TYPE_LABEL_FALLBACK = (typeof TYPE_LABELS !== 'undefined' ? TYPE_LABELS : null) || {
         sedan: 'Sedan', suv: 'SUV', truck: 'Truck',
         wagon: 'Wagon', hatch: 'Hatchback', 'hybrid-ev': 'Hybrid / EV'
       };
@@ -4094,7 +4173,7 @@
         // "Best-fit answer for …" label from active chip filters
         var fitParts = [];
         if (state.budget)  fitParts.push(BUDGET_LABELS[state.budget]   || state.budget);
-        if (state.type)    fitParts.push(TYPE_LABELS[state.type]        || state.type);
+        if (state.type && typeof TYPE_LABELS !== 'undefined') fitParts.push(TYPE_LABELS[state.type] || state.type);
         if (state.purpose) fitParts.push(PURPOSE_LABELS[state.purpose]  || state.purpose);
         var recHtml = fitParts.length
           ? '<span class="pick-1-rec">Best-fit answer for <strong>' + fitParts.join(' / ') + '</strong></span>'
@@ -4144,6 +4223,14 @@
       }).join('');
 
       grid.innerHTML = html;
+
+      // Prepend the relax notice if filter relaxation kicked in
+      var notice = grid.getAttribute('data-relax-notice');
+      if (notice) {
+        grid.insertAdjacentHTML('afterbegin', notice);
+        var emptyReset2 = document.getElementById('vs-empty-reset');
+        if (emptyReset2) emptyReset2.addEventListener('click', resetFilters);
+      }
     }
 
     // --- Reset ----------------------------------------------

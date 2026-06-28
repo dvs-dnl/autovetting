@@ -143,16 +143,60 @@ def gate_runtime_idents_resolve():
                 biggest = m.group(1)
         if not biggest:
             continue
-        # Eval with a minimal DOM stub. Any thrown ReferenceError → undefined identifier.
+        # Eval with a richer DOM stub — getElementById/querySelector return mock nodes
+        # so render() doesn't bail at guard clauses and we actually exercise the card loop.
+        # Any thrown ReferenceError surfaces undeclared identifiers anywhere in render().
         stub = """
-            var window={location:{href:'',search:'',pathname:'/'},matchMedia:()=>({matches:false}),
-                addEventListener:()=>{},setTimeout:setTimeout,clearTimeout:clearTimeout,
-                URLSearchParams:URLSearchParams,requestAnimationFrame:()=>{},getComputedStyle:()=>({})};
-            var document={getElementById:()=>null,querySelector:()=>null,querySelectorAll:()=>[],
-                createElement:()=>({appendChild:()=>{},setAttribute:()=>{},style:{},classList:{add:()=>{},remove:()=>{},toggle:()=>{}}}),
-                addEventListener:()=>{},body:{addEventListener:()=>{}}};
-            var localStorage={getItem:()=>null,setItem:()=>{},removeItem:()=>{}};
-            var navigator={userAgent:''};
+            function mkNode(){
+              var n = {
+                textContent: '', innerHTML: '', value: '', tagName: 'DIV',
+                children: [], style: {}, dataset: {},
+                classList: { add:()=>{}, remove:()=>{}, toggle:()=>{}, contains:()=>false },
+                appendChild: function(c){ this.children.push(c); return c; },
+                insertAdjacentHTML: function(){},
+                setAttribute: function(k,v){ this[k] = v; },
+                getAttribute: function(k){ return this[k] != null ? this[k] : ''; },
+                removeAttribute: function(k){ delete this[k]; },
+                addEventListener: ()=>{}, removeEventListener: ()=>{},
+                querySelector: ()=>mkNode(),
+                querySelectorAll: ()=>[],
+                scrollIntoView: ()=>{}, focus: ()=>{}, blur: ()=>{},
+                cloneNode: function(){ return mkNode(); }
+              };
+              return n;
+            }
+            var setTimeout=function(fn){try{if(typeof fn==='function')fn()}catch(e){}};
+            var clearTimeout=function(){};
+            var setInterval=function(){};
+            var clearInterval=function(){};
+            var requestAnimationFrame=function(fn){try{if(typeof fn==='function')fn(0)}catch(e){}};
+            var cancelAnimationFrame=function(){};
+            var fetch=function(){return {then:function(){return this;},catch:function(){return this;}};};
+            var URLSearchParams=function(s){this.get=function(){return null};this.getAll=function(){return []};this.has=function(){return false};};
+            var window={location:{href:'',search:'',pathname:'/',hash:''},
+                matchMedia:()=>({matches:false,addEventListener:()=>{}}),
+                addEventListener:()=>{},setTimeout:function(fn){try{fn()}catch(e){}},clearTimeout:function(){},setInterval:function(){},clearInterval:function(){},
+                URLSearchParams:function(s){this.get=()=>null;this.getAll=()=>[];return this;},requestAnimationFrame:function(fn){try{fn()}catch(e){}},
+                getComputedStyle:()=>({getPropertyValue:()=>''}),
+                IntersectionObserver:function(){return {observe:()=>{},disconnect:()=>{}};},
+                innerWidth:1280,innerHeight:800,gtag:()=>{}};
+            var document={
+              getElementById: function(){ return mkNode(); },
+              querySelector:  function(){ return mkNode(); },
+              querySelectorAll: function(){ return []; },
+              createElement: function(){ return mkNode(); },
+              addEventListener: ()=>{},
+              body: mkNode(),
+              documentElement: mkNode(),
+              head: mkNode(),
+              readyState: 'complete',
+              cookie: ''
+            };
+            var localStorage={getItem:()=>null,setItem:()=>{},removeItem:()=>{},clear:()=>{}};
+            var sessionStorage=localStorage;
+            var navigator={userAgent:'',clipboard:{writeText:()=>Promise.resolve()}};
+            var gtag = ()=>{};
+            var IntersectionObserver = function(){ return {observe:()=>{},disconnect:()=>{}}; };
         """
         # Pass via stdin to avoid argv-too-long on large IIFEs
         r = subprocess.run(
@@ -160,8 +204,15 @@ def gate_runtime_idents_resolve():
             input=stub + biggest, capture_output=True, text=True, timeout=15,
         )
         if r.returncode != 0:
-            err = r.stderr.strip().splitlines()[0] if r.stderr else "(no stderr)"
-            if "ReferenceError" in err or "is not defined" in err:
+            # Pull the actual error line (not the source-location header) — search whole stderr
+            stderr_all = r.stderr or ""
+            err = "(no stderr)"
+            for line in stderr_all.splitlines():
+                s = line.strip()
+                if "ReferenceError" in s or "is not defined" in s:
+                    err = s
+                    break
+            if err != "(no stderr)":
                 bad.append(f"{rel}: {err}")
     critical("Homepage/pinpoint IIFE has no undefined identifiers", not bad, "; ".join(bad))
 

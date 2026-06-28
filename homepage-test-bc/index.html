@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoVetting — B-layout / C-palette preview</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="/assets/img/favicon-180.png">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <style>
+    /* --- Preview-only styles for the B/C homepage variant --- */
+    :root {
+      --bc-teal: #1E4751;
+      --bc-teal-2: #2A5F6B;
+      --bc-teal-deep: #122E36;
+      --bc-cream: #F5F1E8;
+      --bc-gold: #D4A24C;
+      --bc-cream-ink: #1E4751;
+      --bc-cream-ink-muted: #4A5F66;
+    }
+
+    body.bc-preview {
+      margin: 0;
+      background: var(--bc-teal);
+      color: var(--bc-cream);
+      font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .bc-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .bc-nav__logo { font-size: 22px; font-weight: 500; color: var(--bc-cream); letter-spacing: -0.3px; }
+    .bc-nav__logo em { font-style: normal; color: var(--bc-gold); }
+    .bc-nav__links { display: flex; gap: 32px; font-size: 13px; color: rgba(245,241,232,0.85); letter-spacing: 0.4px; }
+    .bc-nav__links a { color: inherit; text-decoration: none; padding: 4px 0; }
+    .bc-nav__links a.is-active { border-bottom: 2px solid var(--bc-gold); padding-bottom: 2px; }
+    .bc-nav__cta {
+      background: var(--bc-gold); color: var(--bc-teal-deep);
+      padding: 10px 22px; border-radius: 24px;
+      font-size: 13px; font-weight: 500;
+      text-decoration: none;
+    }
+
+    .bc-hero {
+      max-width: 1280px; margin: 0 auto;
+      padding: 12px 48px 36px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    /* LEFT — cream brief card with bleed-past hero photo */
+    .bc-brief {
+      position: relative;
+      background: var(--bc-cream);
+      border-radius: 20px;
+      padding: 38px 42px 0; /* no bottom padding — photo bleeds */
+      min-height: 460px;
+      overflow: visible;
+      isolation: isolate;
+    }
+    .bc-brief__hero {
+      position: absolute;
+      left: -6%;
+      bottom: -18%;
+      width: 60%;
+      max-width: 620px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .bc-brief__hero img { width: 100%; height: auto; display: block; }
+    .bc-brief__kicker {
+      font-size: 11px; letter-spacing: 2.5px;
+      color: var(--bc-gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .bc-brief__h1 {
+      font-size: 40px; line-height: 1.08;
+      color: var(--bc-cream-ink);
+      font-weight: 500; letter-spacing: -0.6px;
+      margin: 0 0 24px;
+      max-width: 95%;
+    }
+    .bc-brief__h1 em {
+      font-family: 'Georgia', serif; font-style: italic;
+      color: var(--bc-gold); font-weight: 400;
+    }
+    .bc-brief__right {
+      position: relative; z-index: 3;
+      margin-left: 42%; /* clear the bleed photo */
+      padding-bottom: 38px;
+    }
+    .bc-brief__lede {
+      font-size: 14px;
+      color: var(--bc-cream-ink-muted);
+      line-height: 1.6;
+      margin: 0 0 24px;
+    }
+    .bc-brief__ctas {
+      display: flex; gap: 16px; align-items: center;
+    }
+    .bc-brief__cta--primary {
+      background: var(--bc-teal); color: var(--bc-cream);
+      padding: 13px 26px; border-radius: 26px;
+      font-size: 13px; text-decoration: none;
+    }
+    .bc-brief__cta--secondary {
+      color: var(--bc-cream-ink);
+      font-size: 13px; text-decoration: none;
+      border-bottom: 1px solid var(--bc-cream-ink);
+      padding-bottom: 2px;
+    }
+
+    /* RIGHT — gold featured-vehicle card */
+    .bc-feature {
+      background: var(--bc-gold);
+      border-radius: 20px;
+      padding: 30px;
+      color: var(--bc-cream-ink);
+      display: flex; flex-direction: column;
+      gap: 18px;
+      min-height: 440px;
+    }
+    .bc-feature__kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; }
+    .bc-feature__title { font-size: 26px; font-weight: 500; line-height: 1.15; letter-spacing: -0.3px; }
+    .bc-feature__sub { font-size: 13px; opacity: 0.82; }
+    .bc-feature__verdict {
+      background: rgba(30,71,81,0.12);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 12.5px; line-height: 1.5;
+    }
+    .bc-feature__verdict strong { font-weight: 500; }
+    .bc-feature__chips { display: flex; gap: 8px; flex-wrap: wrap; font-size: 11px; }
+    .bc-feature__chips span { background: rgba(30,71,81,0.16); padding: 5px 12px; border-radius: 14px; }
+    .bc-feature__cta { margin-top: auto; align-self: flex-start; color: var(--bc-cream-ink); font-size: 13px; text-decoration: none; border-bottom: 1px solid var(--bc-cream-ink); padding-bottom: 2px; }
+
+    /* THREE STEP CARDS */
+    .bc-steps {
+      max-width: 1280px; margin: 0 auto;
+      padding: 0 48px 60px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .bc-step {
+      background: var(--bc-teal-2);
+      border-radius: 18px;
+      padding: 22px 24px;
+      color: var(--bc-cream);
+      min-height: 160px;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+    .bc-step__head { display: flex; justify-content: space-between; align-items: center; }
+    .bc-step__num { font-family: 'Georgia', serif; font-size: 14px; opacity: 0.7; letter-spacing: 1.5px; }
+    .bc-step__arrow {
+      width: 34px; height: 34px;
+      border: 1px solid var(--bc-gold); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bc-gold); font-size: 14px;
+    }
+    .bc-step__name { font-size: 20px; font-weight: 500; line-height: 1.2; margin-top: 8px; }
+    .bc-step__desc { font-size: 12.5px; opacity: 0.78; line-height: 1.5; margin-top: 6px; }
+
+    /* Responsive */
+    @media (max-width: 920px) {
+      .bc-hero { grid-template-columns: 1fr; }
+      .bc-brief__content { max-width: 100%; }
+      .bc-brief__hero { position: relative; left: auto; bottom: auto; width: 100%; margin-top: 24px; }
+      .bc-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="bc-preview">
+
+  <nav class="bc-nav">
+    <div class="bc-nav__logo">Auto<em>Vetting</em></div>
+    <div class="bc-nav__links">
+      <a href="#" class="is-active">Pinpoint</a>
+      <a href="#">Search</a>
+      <a href="#">Inspect</a>
+      <a href="#">Guides</a>
+      <a href="#">About</a>
+    </div>
+    <a href="#" class="bc-nav__cta">Start vetting</a>
+  </nav>
+
+  <section class="bc-hero">
+    <article class="bc-brief">
+      <div class="bc-brief__kicker">Issue 12 &middot; The buyer&rsquo;s brief</div>
+      <h1 class="bc-brief__h1">Know what&rsquo;s likely to <em>go wrong</em> before any money changes hands.</h1>
+      <div class="bc-brief__hero">
+        <img src="/assets/img/hero-cutout.webp" alt="Used-car inspection — Volkswagen Golf headlight detail" loading="eager">
+      </div>
+      <div class="bc-brief__right">
+        <p class="bc-brief__lede">A free pre-purchase manual for the 244 used cars we&rsquo;d actually buy. From NHTSA recall data, real owner reports, and decades of independent-shop intel.</p>
+        <div class="bc-brief__ctas">
+          <a href="/pinpoint/" class="bc-brief__cta--primary">Start a vetting</a>
+          <a href="/inspect/" class="bc-brief__cta--secondary">Browse 244 picks &rarr;</a>
+        </div>
+      </div>
+    </article>
+
+    <aside class="bc-feature">
+      <div class="bc-feature__kicker">Featured this week</div>
+      <div>
+        <div class="bc-feature__title">2014 Honda Accord LX</div>
+        <div class="bc-feature__sub">2.4L K24W I4 &middot; CVT &middot; 130k mi</div>
+      </div>
+      <div class="bc-feature__verdict"><strong>Top tier &middot; </strong>K24 reliability, owners hit 250k+. Watch CVT fluid history above 90k miles.</div>
+      <div class="bc-feature__chips">
+        <span>$8,500</span><span>17 checks</span><span>VIN guide</span>
+      </div>
+      <a href="#" class="bc-feature__cta">See the checklist &rarr;</a>
+    </aside>
+  </section>
+
+  <section class="bc-steps">
+    <article class="bc-step">
+      <div class="bc-step__head"><span class="bc-step__num">01</span><span class="bc-step__arrow">&rarr;</span></div>
+      <div>
+        <div class="bc-step__name">Pinpoint</div>
+        <div class="bc-step__desc">Filter for a car that matches your use case, must-haves, and budget.</div>
+      </div>
+    </article>
+    <article class="bc-step">
+      <div class="bc-step__head"><span class="bc-step__num">02</span><span class="bc-step__arrow">&rarr;</span></div>
+      <div>
+        <div class="bc-step__name">Search</div>
+        <div class="bc-step__desc">Track listings for your chosen model across every marketplace.</div>
+      </div>
+    </article>
+    <article class="bc-step">
+      <div class="bc-step__head"><span class="bc-step__num">03</span><span class="bc-step__arrow">&rarr;</span></div>
+      <div>
+        <div class="bc-step__name">Inspect</div>
+        <div class="bc-step__desc">Model-specific checklist of every recall, TSB, and known failure point.</div>
+      </div>
+    </article>
+  </section>
+
+</body>
+</html>

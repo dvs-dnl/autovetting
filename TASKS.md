@@ -66,7 +66,61 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-### autovetting-vinnote-batch-2026-06-27 — ready (pushed directly)
+### autovetting-pinpoint-relax-on-zero — 2026-06-27 ready
+
+- Status: ready to deploy (committed locally; awaiting auto-pusher)
+- Started: 2026-06-27 (Cowork session — user-reported regression: "pinpoint page does not load any vehicles that fit the filters")
+- Touched files: pinpoint/index.html, scripts/gate-check.py
+- Notes:
+  TWO bugs caught + fixed in this session:
+
+  ## Bug 1 — pinpoint cards never render (count shows but grid stays empty)
+  Root cause: line 4151 `var TYPE_LABEL_FALLBACK = TYPE_LABELS || {...}` referenced TYPE_LABELS
+  but it was never declared. Every render() call threw ReferenceError AFTER the count update
+  but BEFORE grid.innerHTML, so the user saw "20/350" with no cards. Fix: defensive
+  `(typeof TYPE_LABELS !== 'undefined' ? TYPE_LABELS : null) || {...}` + same guard on the
+  state.type fitParts line. Two-line change.
+
+  ## Bug 2 — G14 runtime gate missed Bug 1 entirely
+  Two compounding flaws in scripts/gate-check.py G14:
+    (a) DOM stub returned null from getElementById/querySelector → render() bailed at its
+        `if (!grid || !countEl) return;` guard and the buggy code path never executed.
+    (b) Even when the bug DID throw, the gate's stderr check only inspected
+        `stderr.splitlines()[0]` — which is the source-location header line. The actual
+        "ReferenceError: TYPE_LABELS is not defined" lives further down. Check always missed.
+  Fix:
+    - Stub rewritten to return mock element objects (via mkNode()) so render() actually runs
+      its full body (Proxy-light mocking covering style, classList, dataset, appendChild,
+      setAttribute, querySelector, scrollIntoView, etc.).
+    - Top-level setTimeout/setInterval/requestAnimationFrame/URLSearchParams/fetch stubs so
+      the IIFE doesn't crash before reaching render().
+    - stderr scan now searches all lines for "ReferenceError" / "is not defined" rather than
+      only the first.
+  Verified: with Bug 1 reintroduced, gate fails with the exact ReferenceError message;
+  with fix applied, all 27 critical pass.
+
+  ## Bug 3 (separately fixed in same session) — most filter combos return zero
+  Root cause: NOT a JS bug. The filter logic + chip values + VEHICLES data were all correct (all 27
+  pre-push gates passed including G14 runtime IIFE eval). The actual issue was real coverage gaps —
+  the most common 3-way combos return zero results because tag coverage is uneven. Examples that
+  previously showed empty:
+    - commute + $10–15k + carplay        (0 of 330)
+    - commute + $10–15k + AWD            (0)
+    - family-hauler + $10–15k + hybrid   (0)
+    - outdoor + under-$10k + AWD + carplay   (0)
+  Fix: progressive filter relaxation. When getFiltered() returns 0, the page now drops one filter
+  at a time in priority order (last-picked must_have first, then budget, seats, use_case) and
+  shows the closest matches with an amber notice: "No exact matches. Loosened CarPlay to show
+  7 close picks." If relaxation can't find ≥3 matches, falls through to the original empty state.
+  Verified against 8 known-zero combos — every one now surfaces 3+ relevant picks.
+  Hoisted MUST_LABELS + BUDGET_LABELS out of render() scope so the relax helper can label them.
+  Added .vs-relax-notice CSS (amber bg, full-grid-width, embedded Clear-all-filters button).
+  Follow-up task #55 tracks the underlying coverage gap (90 vehicles ≥ 2014 missing carplay tag).
+
+## Done (last 10)
+<!-- orchestrator moves Ready items here after push -->
+
+#### autovetting-vinnote-batch-2026-06-27 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
 - Started: 2026-06-27 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
@@ -424,10 +478,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   cards 308->330, tail intact; backup /tmp/pinpoint-coverage.bak. Sibling check: pinpoint/index.html
   sequential on top of same-day inspectUrl-repair + blog-link Ready entries (additive new cards,
   orthogonal). Detail: _hub/Build-Log/2026-06-19-pinpoint-luxury-budget-coverage.md.
-## Done (last 10)
-<!-- orchestrator moves Ready items here after push -->
-
-### autovetting-recall-audit-wave11-2026-06-19 — done 2026-06-19
+## autovetting-recall-audit-wave11-2026-06-19 — done 2026-06-19
 
 - Status: done
 - Started: 2026-06-19 (02:00 overnight builder; launch-freeze reallocation queue priority 1)
