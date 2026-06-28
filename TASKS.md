@@ -66,9 +66,87 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-### autovetting-pinpoint-relax-on-zero — 2026-06-27 ready
+*(none)*
 
-- Status: ready to deploy (committed locally; awaiting auto-pusher)
+## Done (last 10)
+
+
+#### autovetting-vinnote-batch-2026-06-28 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-28 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-28.md (gitignored), TASKS.md
+- Commit: 28499c6 (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 23/24/25 (queue top now pri 26 = nissan-frontier-2022). Added vinNote
+  to three checklists in inspect/index.html (vinNote 50->53), plus one spec correction.
+  (1) kia-stinger-2022 (CK, 2018-2023) — two-engine fork: GT-Line = 2.5L Smartstream turbo I4 (300 hp);
+  GT1/GT2 = 3.3L Lambda II TT V6 (368 hp); both 8-speed torque-converter automatic. SPEC FIX: summary said
+  "DCT smoothness" but the 1st-gen Stinger has never used a dual-clutch gearbox (WebSearch-confirmed 8AT) —
+  corrected to "8-speed automatic shift quality"; vinNote also flags any "DCT" label as incorrect. 8th
+  digit encodes engine, presented confirm-at-vPIC (letters not asserted).
+  (2) vw-taos-2022 — single engine (1.5L EA211 EVO, 158 hp), no fork; decode that matters is drivetrain
+  (FWD = 8AT torque-converter / 4Motion AWD = 7-speed DSG dual-clutch, the VW-Group shudder-prone unit).
+  (3) nissan-pathfinder-2022 (R53 5th gen) — single engine (3.5L VQ35DD V6, 284 hp), no fork; Nissan VIN
+  quirk documented (engine code = 4th VIN digit 'D', not the 8th); buyer-relevant decode = 10th-digit MY
+  'N'=2022 confirms R53 9AT vs R52 4th-gen CVT.
+  Sibling check: inspect/index.html shared with prior Ready/Done vinnote-batches (06-27 7b45207 / 06-26
+  c43c00a / 06-25 6079c78 / earlier) + recall-audit Done waves — all on origin, so this commit (28499c6)
+  is sequential on top; edits are additive top-level vinNote fields + one summary string fix, no overlap
+  with recall-data/engine/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) orthogonal
+  (gitignored _hub/). All Done siblings sharing inspect/index.html carry Started dates — no backfill.
+  No Re-sync needed.
+  Syntax-check: PASS (SKILL validator, scripts 2 & 5 OK, exit 0; braces 4999/4999; 17,602->17,605 lines;
+  bytes 1,296,120->1,298,752; tail </html> intact — no truncation).
+  Dead-links: verified (only internal href added = /decode/, which exists).
+  Scanner: PASS (scan_for_secrets.py, 400 files, exit 0).
+  Push: deploy gate expected clean (homepage-test-bc in G18 EXCLUDE since 2026-06-19). Detail:
+  _hub/Build-Log/2026-06-28.md.
+
+
+
+#### autovetting-vinnote-batch-2026-06-27 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-27 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-27.md (gitignored), TASKS.md
+- Commit: 7b45207 (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 20/21/22 (queue top now pri 23 = kia-stinger-2022). Added `vinNote`
+  to three checklists in inspect/index.html (vinNote 47->50). No spec corrections needed this run — all
+  three existing engine lines were already accurate.
+  (1) toyota-gr86-2022 (ZN8) — single engine (2.4L FA24 NA boxer, 228 hp). Subaru-built, carries a
+  Subaru-style VIN where the 8th digit = restraint system, NOT engine, so there is no engine fork;
+  meaningful decode is transmission (6MT vs 6AT) + 10th-digit model year (N=2022, P=2023). Mirrors the
+  prior BRZ note.
+  (2) genesis-gv70-2022 (JK1) — two gas engines, trim fork: Std/Adv/Adv Plus = 2.5L G2.5T turbo I4
+  (300 hp); Sport/Sport Plus = 3.5L Lambda III TT V6 (375 hp); both 8-speed automatic. 8th digit encodes
+  engine ('B' 2.5T / 'C' 3.5T commonly reported) — presented confirm-at-vPIC, not asserted. Electrified
+  GV70 EV noted as a later MY (2022 = gas-only). Anchored on the GV70 key, NOT the engine string, because
+  genesis-gv80-2021 (pri 35) shares the identical engine string.
+  (3) hyundai-elantra-2022 (CN7) — four powertrains, trim fork: SE/SEL/Limited 2.0L MPI Atkinson (147 hp,
+  IVT, NOT Theta II = no engine-fire exposure); N Line 1.6T (201 hp, 7-DCT); Elantra N 2.0T (276 hp, 6MT
+  or 8-speed wet DCT); Hybrid 1.6L+motor (139 hp comb, 6-DCT). 8th digit encodes engine ('K' 2.0T N / 'J'
+  1.6 hybrid commonly reported) — confirm-at-vPIC; did not assert base 2.0L / 1.6T letters (not multi-source).
+  Sibling check: inspect/index.html shared with prior Ready vinnote-batches (06-26 c43c00a / 06-25 6079c78 /
+  earlier) + recall-audit Done waves — all on origin, so this commit is sequential on top; edits are
+  additive top-level vinNote fields only, no overlap with recall-data/engine/blogUrl/inspectUrl/render.
+  In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
+  autovet-seo-content (Content/blog/) orthogonal (gitignored _hub/). All Done(last ~13) siblings sharing
+  inspect/index.html carry Started dates — no backfill. No Re-sync needed.
+  Syntax-check: PASS (SKILL validator, scripts 2 & 5 OK, exit 0; braces 4999/4999; 17,599->17,602 lines;
+  bytes 1,293,294->1,296,118; tail </html> intact — no truncation).
+  Dead-links: verified (only internal href added = /decode/, which exists).
+  Scanner: PASS (scan_for_secrets.py, 398 files, exit 0).
+  Push: see commit hashes; deploy gate expected clean (homepage-test-bc in G18 EXCLUDE since 2026-06-19 —
+  no rename-aside needed). Detail: _hub/Build-Log/2026-06-27.md.
+
+<!-- orchestrator moves Ready items here after push -->
+
+### autovetting-pinpoint-relax-on-zero — done 2026-06-27
+
+- Status: done
 - Started: 2026-06-27 (Cowork session — user-reported regression: "pinpoint page does not load any vehicles that fit the filters")
 - Touched files: pinpoint/index.html, scripts/gate-check.py, inspect/index.html, blog/2010-lexus-rx350-buyers-guide/index.html, blog/2014-acura-tsx-buyers-guide/index.html, blog/2014-chevrolet-silverado-buyers-guide/index.html, blog/2014-honda-accord-buyers-guide/index.html, blog/2014-toyota-corolla-buyers-guide/index.html, blog/2016-mazda-mx5-miata-buyers-guide/index.html, blog/2016-toyota-prius-buyers-guide/index.html, blog/2016-toyota-tacoma-buyers-guide/index.html, blog/2017-chrysler-pacifica-buyers-guide/index.html, blog/2017-honda-civic-buyers-guide/index.html, blog/2017-nissan-rogue-buyers-guide/index.html, blog/2018-ford-f150-buyers-guide/index.html, blog/2018-honda-accord-buyers-guide/index.html, blog/2018-toyota-camry-buyers-guide/index.html, blog/2019-honda-crv-buyers-guide/index.html, blog/2019-nissan-altima-buyers-guide/index.html, blog/2019-ram-1500-buyers-guide/index.html, blog/2019-ram-1500-classic-buyers-guide/index.html, blog/2021-ford-f150-buyers-guide/index.html, blog/2021-toyota-corolla-buyers-guide/index.html, assets/img/hero-cutout.png, assets/img/hero-cutout.webp, homepage-test-bc/index.html
 - Notes:
@@ -131,45 +209,6 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Added .vs-relax-notice CSS (amber bg, full-grid-width, embedded Clear-all-filters button).
   Follow-up task #55 tracks the underlying coverage gap (90 vehicles ≥ 2014 missing carplay tag).
 
-## Done (last 10)
-<!-- orchestrator moves Ready items here after push -->
-
-#### autovetting-vinnote-batch-2026-06-27 — ready (pushed directly)
-
-- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
-- Started: 2026-06-27 (02:00 overnight builder; launch-freeze alternate work = vinNote queue drain)
-- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-27.md (gitignored), TASKS.md
-- Commit: 7b45207 (work); this docs(tasks) record follows in same push.
-- Notes:
-  Drained vinnote-queue priorities 20/21/22 (queue top now pri 23 = kia-stinger-2022). Added `vinNote`
-  to three checklists in inspect/index.html (vinNote 47->50). No spec corrections needed this run — all
-  three existing engine lines were already accurate.
-  (1) toyota-gr86-2022 (ZN8) — single engine (2.4L FA24 NA boxer, 228 hp). Subaru-built, carries a
-  Subaru-style VIN where the 8th digit = restraint system, NOT engine, so there is no engine fork;
-  meaningful decode is transmission (6MT vs 6AT) + 10th-digit model year (N=2022, P=2023). Mirrors the
-  prior BRZ note.
-  (2) genesis-gv70-2022 (JK1) — two gas engines, trim fork: Std/Adv/Adv Plus = 2.5L G2.5T turbo I4
-  (300 hp); Sport/Sport Plus = 3.5L Lambda III TT V6 (375 hp); both 8-speed automatic. 8th digit encodes
-  engine ('B' 2.5T / 'C' 3.5T commonly reported) — presented confirm-at-vPIC, not asserted. Electrified
-  GV70 EV noted as a later MY (2022 = gas-only). Anchored on the GV70 key, NOT the engine string, because
-  genesis-gv80-2021 (pri 35) shares the identical engine string.
-  (3) hyundai-elantra-2022 (CN7) — four powertrains, trim fork: SE/SEL/Limited 2.0L MPI Atkinson (147 hp,
-  IVT, NOT Theta II = no engine-fire exposure); N Line 1.6T (201 hp, 7-DCT); Elantra N 2.0T (276 hp, 6MT
-  or 8-speed wet DCT); Hybrid 1.6L+motor (139 hp comb, 6-DCT). 8th digit encodes engine ('K' 2.0T N / 'J'
-  1.6 hybrid commonly reported) — confirm-at-vPIC; did not assert base 2.0L / 1.6T letters (not multi-source).
-  Sibling check: inspect/index.html shared with prior Ready vinnote-batches (06-26 c43c00a / 06-25 6079c78 /
-  earlier) + recall-audit Done waves — all on origin, so this commit is sequential on top; edits are
-  additive top-level vinNote fields only, no overlap with recall-data/engine/blogUrl/inspectUrl/render.
-  In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
-  autovet-seo-content (Content/blog/) orthogonal (gitignored _hub/). All Done(last ~13) siblings sharing
-  inspect/index.html carry Started dates — no backfill. No Re-sync needed.
-  Syntax-check: PASS (SKILL validator, scripts 2 & 5 OK, exit 0; braces 4999/4999; 17,599->17,602 lines;
-  bytes 1,293,294->1,296,118; tail </html> intact — no truncation).
-  Dead-links: verified (only internal href added = /decode/, which exists).
-  Scanner: PASS (scan_for_secrets.py, 398 files, exit 0).
-  Push: see commit hashes; deploy gate expected clean (homepage-test-bc in G18 EXCLUDE since 2026-06-19 —
-  no rename-aside needed). Detail: _hub/Build-Log/2026-06-27.md.
-
 ### autovetting-vinnote-batch-2026-06-26 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
@@ -206,6 +245,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Push: deploy gate 27 passed / 2 warned / 0 CRITICAL (homepage-test-bc WARN-only via G18 EXCLUDE — no
   rename-aside). Detail: _hub/Build-Log/2026-06-26.md.
 
+
 ### autovetting-vinnote-batch-2026-06-25 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
@@ -240,6 +280,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Scanner: PASS (scan_for_secrets.py, 394 files, exit 0).
   Push: gate 27 passed / 2 warned / 0 CRITICAL (homepage-test-bc now WARN-only via G18 EXCLUDE — no
   rename-aside needed). Detail: _hub/Build-Log/2026-06-25.md.
+
 
 
 ### autovetting-vinnote-batch-2026-06-24 — ready (pushed directly)
@@ -278,6 +319,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Detail: _hub/Build-Log/2026-06-24.md.
 
 
+
 ### autovetting-vinnote-batch-2026-06-22 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
@@ -310,6 +352,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov as plain text).
   Scanner: PASS (scan_for_secrets.py, 385 files, exit 0).
   Detail: _hub/Build-Log/2026-06-22.md.
+
 
 
 ### autovetting-vinnote-batch-2026-06-21 — ready (pushed directly)
@@ -348,6 +391,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Detail: _hub/Build-Log/2026-06-21.md.
 
 
+
 ### autovetting-vinnote-batch-2026-06-20 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
@@ -384,6 +428,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Detail: _hub/Build-Log/2026-06-20.md.
 
 
+
 ### autovetting-pinpoint-inspect-gap-closure-2026-06-19 — ready
 
 - Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
@@ -410,6 +455,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Detail: _hub/Build-Log/2026-06-19-pinpoint-inspect-gap-closure.md.
 
 
+
 ### autovetting-internal-linking-2026-06-19 — ready
 
 - Status: ready to deploy (committed locally; interactive session has no PAT — orchestrator to push)
@@ -430,6 +476,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   JSON-LD PASS); both JS script blocks new Function-parse clean; inspectUrls steady 297/resolved 213;
   pinpoint 4073→4108 lines, tail intact, 24 blogUrl; backups /tmp/inspect-link.bak + /tmp/pinpoint-blog.bak.
   Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
+
 
 ### autovetting-publish-3-blog-drafts-2026-06-19 — ready
 
@@ -455,43 +502,6 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   publishes Daniel-approved drafts, no conflict; inspect/pinpoint changes are sequential on top of the
   same-day gap-closure + blog-link Ready entries. Gate 27/2/0 CRIT. Detail: _hub/Build-Log/2026-06-19-publish-blog-drafts.md.
 
-### autovetting-inspect-repair-links-2026-06-19 — ready
-
-- Status: ready to deploy (committed locally; orchestrator to push)
-- Started: 2026-06-19 (Daniel-directed: "both")
-- Touched files: inspect/index.html, _hub/Build-Log/2026-06-19-internal-linking.md, TASKS.md
-- Notes:
-  Closed the inspect->repair internal-linking gap (checklists previously had ~1 /repair/ link total).
-  Added an "After you buy: common DIY repair guides" block to the renderChecklist() function (renders
-  once for all 245 checklists), linking the 6 universally-applicable guides (oil change, brakes,
-  battery, transmission fluid, coolant, spark plugs) + the /repair/ hub. Reused existing
-  checklist-section-block + item-check classes (no new CSS, inherits page theme); placed after the
-  recalls section and BEFORE the value-framing-card so the conversion CTAs are untouched. Universal
-  maintenance set only (excluded timing-belt/fuel-filter/PS-fluid etc. that aren't universal across
-  the fleet) to avoid irrelevant links. Verify: all 6 guide dirs exist; 5 inspect <script> blocks
-  new Function-parse clean; gate 27/2/0 CRIT (Inline JS syntax + IIFE PASS); inspect 17,562->17,577
-  lines, tail intact; dead-link scan 0 broken. Backup /tmp/inspect-repairlinks.bak. Sibling check:
-  inspect/index.html sequential on top of same-day blog-publish + gap-closure entries (render-layer
-  add, orthogonal to recall-data edits). Detail: _hub/Build-Log/2026-06-19-internal-linking.md.
-
-### autovetting-pinpoint-luxury-budget-coverage-2026-06-19 — ready
-
-- Status: ready to deploy (committed locally; orchestrator to push)
-- Started: 2026-06-19 (Daniel-directed: build up the weakest Pinpoint cells — "family + budget + luxury")
-- Touched files: pinpoint/index.html, _hub/Build-Log/2026-06-19-pinpoint-luxury-budget-coverage.md, TASKS.md
-- Notes:
-  Built up the weakest luxury-budget Pinpoint cells (strict-AND filter returned near-nothing for
-  luxury + lower budgets because the catalog skewed modern/pricey). Added 22 editorial cards (VEHICLES
-  308->330) of older luxury vehicles that depreciate into those bands — NO new inspect checklists
-  (launch freeze respected). Results: family-hauler+luxury under-10k 1->7 / 10-15k 3->8 (the explicit
-  example); commute+luxury+10-15k 0->3; work-hauling+luxury 4->8 (now all 5 budget bands); outdoor and
-  road-trip luxury zeros filled. Accurate facts + honest reliability notes (Strong for MDX/RDX/IS/CT/
-  GX470/ES350; Caution where there's a real watch item — AFM lifters, GM 3.6 timing chain, QX60 CVT,
-  LR4 air suspension). Deduped vs existing (distinct generations). Left starter+luxury empty (near-N/A
-  niche — flagged). Verify: pinpoint JS new Function-parses clean; gate 27/2/0 CRIT (IIFE PASS);
-  cards 308->330, tail intact; backup /tmp/pinpoint-coverage.bak. Sibling check: pinpoint/index.html
-  sequential on top of same-day inspectUrl-repair + blog-link Ready entries (additive new cards,
-  orthogonal). Detail: _hub/Build-Log/2026-06-19-pinpoint-luxury-budget-coverage.md.
 ## autovetting-recall-audit-wave11-2026-06-19 — done 2026-06-19
 
 - Status: done
