@@ -29,6 +29,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: re-message Carfax contrast (records/paper-trail vs. actual-car-condition + independence + booking); revisit acquirer thesis 9/13 ("Carfax lacks inspection tech" now weaker); set standing watch for any consumer-facing surfacing of Carfax x UVeye condition data. Homegrown badge (May 2026) = 🟢 supporting evidence for our "independent vs dealer-captured" angle, no action. Decisions a/b/c queued in Awaiting-Daniel.
     Weekly milestone: DONE — intel ready for Daniel's review; 🔴 Awaiting-Daniel append complete (required before Done for 🔴 severity). Next in rotation: CarGurus (#7) [AI search rollout / inspection or trust-layer launches].
 
+  2026-06-28 06:40: profiled CarGurus (#7) (🟡).
+    Output: Competitors/_Monitor/2026-06-28-cargurus.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Kia run 06-28) + autovet-seo-content (Content/blog/) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html (06-25..06-28) + recall-audit — none touch Competitors/ and none position an AutoVet feature against CarGurus. No Re-sync needed.
+    Key delta: BASELINE — CarGurus had no dedicated profile (only marketplace-embedding white-space mentions in Competitor_Analysis.md §White Space Dim 4). Deltas: (1) completed CarOffer/Digital-Wholesale wind-down (abandoned 2025-12-31) — narrowing to AI SaaS, RETREATING from services/inspection. (2) AI conversational search shipped (mid-2025) + expanded 2026-02-11 with CarGurus Discover (AI shopping assistant) + Dealership Mode ("pros/cons" + "unbiased recommendation," dealer-lot-scoped). (3) Q1'26 healthy: rev $244M +15% YoY, adj EBITDA $80.2M/33%, $175M buyback; FY margin guided down 1.5-2.5pts. NO inspection/condition product, NO native per-VIN recall/reliability layer (still hands off to paid CARFAX links) -> AutoVet white space Dim 1-4 intact.
+    Implication: embedding thesis REINFORCED not threatened (CarGurus = better discovery front door = better embed target for condition+booking back end). Watch "unbiased recommendation" framing (nearest advisory encroachment, but dealer-captured -> strengthens AutoVet "independent" angle). Escalation trigger to 🔴 = if Discover/Dealership Mode begins surfacing native per-VIN condition/reliability/recall data. Housekeeping: add CarGurus + Cars.com/AutoTrader as named "Marketplace/channel" archetype block in Competitor_Analysis.md (same gap flagged for Bumper 06-18).
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Cars.com (#8) [AI search rollout / inspection or trust-layer launches].
+
 
 ### autovet-cpo-protocol-ingestion
 
@@ -44,6 +51,16 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Output: Product/CPO-Protocols/hyundai-certified.md, Product/CPO-Protocols/_runs/2026-06-21-hyundai.md.
     Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) are orthogonal. Cross-referenced to: autovetting-recall-audit-wave11-2026-06-19 (which deleted the 20V-242 Hyundai/Kia fabrication — this protocol reuses only verified Hyundai engine campaign IDs: Theta II KSDS/15V-568/17V-226/20V-746, Nu 2.0L 21V-301, ABS-fire 23V-651/20V-061 — and explicitly flags 20V-242 not to reintroduce). Protocol is upstream of inspect/ checklists = complementary. Noted for next (Kia) run: autovetting-vinnote-batch Ready blocks touched Kia Sportage 2023 (no overlap with this Hyundai file).
     Weekly milestone: DONE — hyundai-certified.md saved + INDEX.md updated (P0 now Toyota→Honda→Ford→Chevrolet/GM→Nissan→Hyundai ✅; next = Kia, last P0). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Kia.
+
+  2026-06-28 09:00: ingested Kia CPO protocol (165 inspection points standard / 135 points CPO Lite tier).
+    Output: Product/CPO-Protocols/kia-certified.md, Product/CPO-Protocols/_runs/2026-06-28-kia.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. Cross-referenced to: autovetting-vinnote-batch-2026-06-28 (Done; touched kia-stinger-2022 in inspect/index.html with an 8AT spec fix) — complementary, this protocol covers Optima/K5, Sorento, Soul (not Stinger), no overlap. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) orthogonal; Ready empty. Reused only WebSearch-verified Kia campaign IDs: 16V-514 + 17V-224/SC147 (Theta II KSDS 15yr-150k), 21V-259/SC209 (Soul/Seltos Nu engine fire), 23V-877 (HECU park-outside fire); explicitly flagged 20V-242 NOT to reintroduce (deleted in recall-audit wave 11). No Re-sync needed.
+    Weekly milestone: DONE — kia-certified.md saved + INDEX.md updated. P0 ROTATION COMPLETE (Toyota→Honda→Ford→Chevrolet/GM→Nissan→Hyundai→Kia ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Subaru (first P1).
+
+  2026-06-28 22:38: ingested Subaru CPO protocol (152 inspection points; single-tier program, no lite tier).
+    Output: Product/CPO-Protocols/subaru-certified.md, Product/CPO-Protocols/_runs/2026-06-28-subaru.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. No In-flight/Ready task is launching a Subaru vehicle (grep of TASKS.md for subaru/outback/forester/crosstrek/impreza/ascent/legacy/wrx found only the BRZ vinnote note + recall-audit references, no active Subaru launch). Cross-referenced to: autovetting-recall-audit-wave9-2026-06-17 (established 18V-772 as the REAL valve-spring recall, deleted fabricated 18V-114), wave5-2026-06-12 (deleted 15V-117 mis-pasted on Outback), wave3 (20V-003 Subaru-Takata-misused), and the 2026-06-10 audit (21V-587 WRG-21 fuel pump verified for Impreza/Legacy/Outback; deleted 20V-501 / 18V-307 Subaru fabrications). Protocol reuses ONLY WebSearch-verified IDs (21V-587/WRG-21, 19V-744/WUP-01, 18V-772, 16V-694/WTK-71, by-VIN Takata) and embeds an anti-fabrication guard listing the deleted IDs not to reintroduce. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) orthogonal; Ready empty. No Re-sync needed.
+    Weekly milestone: DONE — subaru-certified.md saved + INDEX.md updated (P1 now Subaru ✅; next = Mazda). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Mazda (P1).
 
 ### autovet-seo-content
 
@@ -62,6 +79,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no blocking overlap. Recall-audit wave 8 (2026-06-16, within 14d, Done) touched explorer-2020 in inspect/index.html — it DELETED a fabricated 21V-641 "Transmission Fluid Leak" recall; this post is aligned (does NOT cite 21V-641; all recalls independently verified). In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) + autovet-competitor-monitor (Competitors/) orthogonal; Ready blocks (vinnote batches on 2023 Honda/Kia/Mazda slugs) no Explorer overlap. No Re-sync needed.
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Toyota RAV4 (#11), Hyundai Tucson (#17, recent recall news), Ford Escape (#18).
 
+  2026-06-28 23:43: drafted 2019 Chevrolet Malibu (9th gen, 2016-2025) pillar post — Tier-1 #8, highest-ranked fully-uncovered vehicle; discontinued-model fleet/rental-dump value angle + the 2019-introduced GM CVT (1.5T trims) slipping / lost-forward-gear story as the make-or-break buyer issue.
+    Output: Content/blog/2026-06-28-2019-chevrolet-malibu-buyers-guide.md (1,583 words body, status: draft), Content/_seo-research/2026-06-28-2019-chevrolet-malibu.md.
+    Powertrain WebSearch-verified 2026-06-28: 1.5T (160hp, L/LS/RS/LT) = CVT new for 2019; 2.0T (250hp, Premier) = 9-speed auto; Hybrid 1.8L (182hp combined, final year 2019); all FWD. Recall cited is WebSearch-verified — 21V649000 / GM N212333380 (rear seat belt retractor fasteners, 2016-2021 Malibu + 2019-2021 Cadillac XT4). CVT slip/lost-forward-gear left as a TSB (clutch regulator valve in valve body) with the specific bulletin number marked [unverified] rather than fabricated. Explicitly excluded the 2016-only EBCM brake recall (does not apply to 2019). Interlinks to 2019-nissan-altima + 2018-toyota-camry + 2019-chevrolet-equinox posts (all confirmed present in /blog/).
+    Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Subaru run 06-28) orthogonal; Ready empty; Done(last 10) = vinnote-batch-2026-06-28 (kia-stinger/vw-taos/nissan-pathfinder in inspect/index.html) + recall-audit — none touch a Chevrolet Malibu slug or Content/blog/. No Re-sync needed.
+    Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Toyota RAV4 (#11), Hyundai Tucson (#17, recent recall news), Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion story).
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
@@ -69,6 +92,45 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 *(none)*
 
 ## Done (last 10)
+
+#### autovetting-vinnote-batch-2026-06-28b — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-28 (~22:40 MST overnight builder; second vinNote drain of the day, launch-freeze alternate work)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-28.md (gitignored), TASKS.md
+- Commit: 21402b1 (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 26/27/28 (queue top now pri 29 = honda-ridgeline-2021). Added vinNote
+  to three checklists in inspect/index.html (vinNote 53->56). No spec corrections needed (all three engine
+  lines already accurate).
+  (1) nissan-frontier-2022 (D41 3rd gen) — single engine (3.8L VQ38DD V6, 310 hp / 9AT), no fork. Nissan
+  VIN quirk documented: engine code = 4th VIN digit (E = VQ38DD), NOT the 8th. Buyer-relevant decode =
+  10th-digit model year, because the 3.8L+9AT debuted on the carryover old-body D40 for 2020-2021 and only
+  the 2022 redesign (10th digit N) is the all-new D41; 2019-and-earlier use 4.0L VQ40DE + 5AT. WebSearch-
+  verified: 4th-digit E = VQ38DD (parts listings); VQ40DE = 2015-2019 engine.
+  (2) tesla-model-y-2021 — EV; decode is the 8th VIN digit (drive unit), a REAL fork: D = single-motor RWD
+  (Standard Range), E = dual-motor AWD (Long Range), F = dual-motor AWD (Performance); 7th digit = E (fuel
+  type) on every car. RWD Standard Range sold off-menu only a few weeks in early 2021 (so 'D' is rare).
+  10th digit M = 2021 (standard heat pump; Fremont-built). Exact letters presented confirm-at-vPIC.
+  WebSearch-verified (findmyelectric / TeslaTap VIN decoders).
+  (3) toyota-venza-2021 (AX10 2nd gen) — hybrid-only single powertrain (2.5L A25A-FXS, 219 hp comb, e-AWD
+  standard LE/XLE/Limited), no engine/drivetrain fork; 8th digit encodes that single combo only. Decode
+  that matters = generation via 10th-digit MY (M = 2021), separating it from the unrelated 1st-gen Venza
+  (2009-2015, Camry-based, gas 2.7L I4 / 3.5L 2GR-FE V6, FWD/AWD). Trim only changes features (Limited
+  Star Gaze roof). WebSearch-verified (Wikipedia / CarBuzz Venza generations).
+  Sibling check: inspect/index.html shared with prior Ready/Done vinnote-batches (06-28 28499c6 / 06-27
+  7b45207 / earlier) + recall-audit Done waves — all on origin, so this commit (21402b1) is sequential on
+  top; edits are additive top-level vinNote fields only, no overlap with recall-data/engine/blogUrl/
+  inspectUrl/render. In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) orthogonal (gitignored _hub/). All Done
+  siblings sharing inspect/index.html carry Started dates - no backfill. No Re-sync needed.
+  Syntax-check: PASS (SKILL validator, scripts 2 & 5 OK, exit 0; braces 4999/4999; 17,605->17,608 lines;
+  bytes 1,298,752->1,301,052; tail </html> intact - no truncation).
+  Dead-links: verified (no new internal hrefs; only external vpic.nhtsa.dot.gov referenced in note text).
+  Scanner: PASS (scan_for_secrets.py, 408 files, exit 0).
+  Push: deploy gate expected clean (homepage-test-bc in G18 EXCLUDE since 2026-06-19). Detail:
+  _hub/Build-Log/2026-06-28.md (Run 2 section).
+
 
 
 #### autovetting-vinnote-batch-2026-06-28 — ready (pushed directly)
