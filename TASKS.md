@@ -93,6 +93,43 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-06-29 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-29 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-29.md (gitignored), TASKS.md
+- Commit: 9f92bac (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 29-31 (queue top 29->32). Added `vinNote` to three 2021
+  checklists in inspect/index.html (vinNote +3). One carried a material engine look-ahead error,
+  corrected rather than VIN-noted over (anti-fabrication policy):
+  (1) honda-ridgeline-2021 -- single engine (3.5L J35Y6 V6 + 9AT, no fork); vinNote keys on
+  AWD-became-standard-for-2021 + pos10=M model year. WebSearch-verified (Honda Info Center, AMSOIL
+  J35Y6, KBB). Entry accurate -- vinNote only.
+  (2) acura-tlx-2021 -- two-engine trim fork: 2.0L K20C turbo I4 (272 hp, all trims exc Type S) vs
+  exclusive 3.0L turbo V6 (355 hp, Type S, SH-AWD std). vinNote keys on trim+badge+vPIC decode;
+  pos10=M. WebSearch-verified (Acura press release, Wikipedia, AMSOIL). Entry accurate -- vinNote only.
+  (3) nissan-rogue-2021 -- LOOK-AHEAD ERROR FIX: entry listed a "1.5T VC-Turbo I3 (201 hp)" as a 2021
+  engine with a full VC-Turbo inspection item. WebSearch-verified (Nissan USA press release / JDPower /
+  greencarcongress): the 1.5L VC-Turbo arrived FOR 2022; the 2021 (3rd-gen T33 launch year) shipped
+  ONLY with the 2.5L QR25DE (181 hp) + Xtronic CVT. Fixed engine field + summary; collapsed Engine
+  section 2 items -> 1 accurate QR25DE item; stats itemsToCheck 9->8, topComplaintArea
+  "Engine (VC-Turbo)/CVT" -> "CVT / electronics"; vinNote flags any 2021 "1.5 turbo" listing as
+  misidentified.
+  Sibling check: only inspect/index.html + TASKS.md are git-tracked (queue + Build-Log under _hub/ are
+  gitignored). inspect/index.html shared with prior Done vinnote-batch blocks (06-28b/06-28/...) and
+  recall-audit waves -- all already committed/pushed, so this commit is sequential on top; edits are
+  additive top-level vinNote fields + an in-place Rogue engine-text correction on isolated entries,
+  no overlap with their recall-data/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor
+  (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content
+  (Content/blog/) orthogonal. Ready section empty. All Done (last 10) siblings sharing
+  inspect/index.html carry Started dates -- no backfill needed. No Re-sync needed.
+  Syntax-check: PASS (node new Function over inspect scripts 2+5, exit 0; tail </script></body></html>
+  intact; 17,591->17,607 lines; vinNote +3).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov / nhtsa.gov as plain text).
+  Scanner: PASS (scan_for_secrets.py, 410 files, exit 0).
+  Detail: _hub/Build-Log/2026-06-29.md.
+
 #### autovetting-vinnote-batch-2026-06-28b — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
