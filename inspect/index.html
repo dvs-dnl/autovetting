@@ -12676,6 +12676,7 @@ const CHECKLISTS = {
     year: 2021, make: 'Honda', model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition / RTL-E (2nd gen YK2, 2017–2023)',
     engine: '3.5L i-VTEC V6 (280 hp) with 9-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    vinNote: "Unlike most trucks in its class, the 2nd-generation Ridgeline (2017–2023) offers only one engine — the 3.5L J35Y6 i-VTEC V6 (280 hp) with a 9-speed automatic — so there is no engine family to decode. Two facts matter more for a 2021 specifically. First, i-VTM4 torque-vectoring all-wheel drive became standard on every trim for 2021 (the front-drive base configuration sold in 2020 was dropped), so a genuine 2021 should be AWD — verify the drivetrain with a full VIN decode at vpic.nhtsa.dot.gov and treat any “FWD 2021 Ridgeline” listing as a red flag for a mistitled vehicle. Second, position 10 of the VIN encodes the model year (M = 2021); confirm it matches the title, then run the full VIN at nhtsa.gov to verify the open-recall history is closed before purchase. Because all 2021 Ridgelines share the same V6, the inspection priorities are identical regardless of trim: VCM motor-mount vibration at warm idle and i-VTM4 rear-differential fluid-service history.",
     summary: "The 2nd-gen Ridgeline is a refined unibody truck — better for daily commuting and lighter hauling than ladder-frame pickups. The 3.5L V6 is highly reliable (same engine family as Odyssey/Pilot). Main checks are the i-VTM4 AWD rear differential fluid (critical service), any VCM (cylinder deactivation) motor mount wear on high-mileage units, and bed integrity. Outstanding used truck choice for buyers who do not need serious towing or off-road capability.",
     stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Minimal' },
     sections: [
@@ -12932,20 +12933,17 @@ const CHECKLISTS = {
   },
   'nissan-rogue-2021': {
     year: 2021, make: 'Nissan', model: 'Rogue', trim: 'S / SV / SL / Platinum (3rd gen D14, 2021–present)',
-    engine: '1.5T VC-Turbo I3 (201 hp) or 2.5L QR25DE I4 (181 hp)',
+    engine: '2.5L QR25DE I4 (181 hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 3rd-gen Rogue is a complete redesign and improvement over the 2nd gen. The base 2.5L QR25 is proven and reliable. The new 1.5T VC-Turbo variable-compression engine is innovative but too new for long-term reliability data — early reports show some oil consumption. The XTRONIC CVT has a better reputation than older Nissan CVTs. Main checks: VC-Turbo oil consumption on newer builds, CVT fluid service, and ProPilot Assist ADAS calibration.",
-    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine (VC-Turbo) / CVT' },
+    vinNote: "The 2021 Rogue is the launch year of the third-generation (T33) redesign, and in the U.S. it came with only one engine — the 2.5L QR25DE four-cylinder (181 hp) driving an Xtronic CVT. The 1.5L VC-Turbo three-cylinder that buyers associate with this body style did NOT arrive until the 2022 model year, so any 2021 listing advertising a “1.5 turbo” is misidentified — confirm the engine with a full VIN decode at vpic.nhtsa.dot.gov. Position 10 of the VIN encodes the model year (M = 2021); a car decoding to N (2022) or later is the VC-Turbo car and follows a different inspection path (oil-consumption checks). For a verified 2021, the priorities are the proven QR25DE (no turbo concerns) and the third-gen Xtronic CVT — request CVT fluid-service records and test for shudder-free acceleration. Run the full VIN at nhtsa.gov to confirm recall history before purchase.",
+    summary: "The 2021 Rogue is the launch year of the third-generation (T33) redesign and a clear improvement over the 2nd gen. In the U.S. it came with a single engine — the proven 2.5L QR25DE four-cylinder (181 hp) — paired with an Xtronic CVT; the 1.5L VC-Turbo did not arrive until 2022. The third-gen CVT has a better reputation than older Nissan units but still needs fluid service. Main checks: Xtronic CVT fluid history and shudder-free acceleration, and ProPilot Assist ADAS calibration after any windshield work.",
+    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 180, topComplaintArea: 'CVT / electronics' },
     sections: [
       { title: 'Engine', items: [
-        { title: '1.5T VC-Turbo — innovative but watch for oil consumption', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Nissan variable-compression engine adjusts compression ratio dynamically. Some early units reported oil consumption. Too new for established long-term failure rate.',
-          check: '<strong>Check dipstick level and color. Ask owner if they add oil between changes.</strong>',
-          cost: '$0–$2,000', source: 'Nissan VC-Turbo early reports' },
-        { title: '2.5L QR25 (base) — proven choice', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'The naturally aspirated 2.5L is proven across many Nissan/Infiniti platforms.',
-          check: '<strong>Standard cold-start and oil check. No known failure modes.</strong>',
-          cost: 'Routine maintenance', source: 'Nissan QR25 reliability data' }
+        { title: '2.5L QR25DE — the only 2021 engine, and a proven one', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'For 2021 (third-gen launch year) the Rogue came solely with the naturally aspirated 2.5L QR25DE four-cylinder (181 hp); the 1.5L VC-Turbo did not arrive until 2022. The QR25DE is proven across many Nissan/Infiniti platforms with no turbo-related oil-consumption exposure.',
+          check: '<strong>Standard cold-start and oil check. No known failure modes; any 2021 advertised as a 1.5 turbo is misidentified.</strong>',
+          cost: 'Routine maintenance', source: 'Nissan QR25DE reliability data; Nissan 2022 VC-Turbo introduction' }
       ]},
       { title: 'CVT', items: [
         { title: 'XTRONIC CVT fluid service', risk: 'monitor', riskLabel: 'Monitor',
@@ -13158,6 +13156,7 @@ const CHECKLISTS = {
     year: 2021, make: 'Acura', model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD (3rd gen UB5, 2021–present)',
     engine: '2.0T K20C4 VTEC Turbo I4 (272 hp) or 3.0T J30A Turbo V6 (355 hp, Type S)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
+    vinNote: "The 2021 TLX (third generation, type UB) splits into two very different cars by trim, and that split is the decode that matters. Every trim except Type S — Standard, Technology, and A-Spec — uses the 2.0L K20C turbocharged four-cylinder (272 hp) with a 10-speed automatic; front-wheel drive is standard and Acura’s SH-AWD is optional. The Type S uses an exclusive 3.0L turbocharged V6 (355 hp) with SH-AWD and Brembo front brakes standard. Because the engine tracks the trim, confirm the badge and then verify with a full VIN decode at vpic.nhtsa.dot.gov before applying this checklist: a Type S carries a higher maintenance and tire budget and should have its turbo V6 boost delivery tested across all gears, while a 2.0T car is the lower-cost, lower-risk choice. Position 10 of the VIN encodes the model year (M = 2021). On either engine, confirm the early Google-based infotainment received its software updates and that any SH-AWD car has rear-coupling fluid-service records. Run the full VIN at nhtsa.gov to confirm recall history before purchase.",
     summary: "The 3rd-gen TLX is Acura's strongest sedan yet — purpose-built driver focus, Brembo brakes on A-Spec and above, and SH-AWD available. The 2.0T is a new engine and reliable; the Type S 3.0T is performance-oriented. Very young platform with no established failure modes. Main buyer checks: confirm all warranty work, SH-AWD fluid service, and infotainment (Google-based system that required early software updates).",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 80, topComplaintArea: 'Infotainment (early software) / Minor' },
     sections: [
