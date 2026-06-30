@@ -93,6 +93,47 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-06-30 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-06-30 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-06-30.md (gitignored), TASKS.md
+- Commit: f1a4841 (work); this docs(tasks) record follows in same push.
+- Notes:
+  Drained vinnote-queue priorities 32/33/34 (queue top 32 -> 35 = genesis-gv80-2021). Added `vinNote`
+  to three 2021 checklists in inspect/index.html (vinNote 59 -> 62). All three engine fields were
+  already accurate -- no look-ahead correction needed this run. 8th-digit VIN encodings WebSearch-
+  verified 2026-06-30:
+  (1) chevy-trailblazer-2021 -- two turbo I3s: 8th digit '2' = 1.2L turbo (opt LIH, 137 hp), 'L' =
+  1.3L turbo (opt L3T, 155 hp). vinNote also ties drivetrain/gearbox to the code (1.2L = FWD-only CVT;
+  1.3L = CVT FWD / 9-speed auto AWD). Sources: AMSOIL LIH+L3T lookups, CarPartPlanet, eBay OEM.
+  (2) kia-seltos-2021 -- 8th digit 'A' = 2.0L MPI Nu (146 hp, IVT, NA), '2' = 1.6L turbo Gamma (175 hp,
+  7-speed DCT). vinNote routes DCT-shudder check to the turbo car, notes SX Turbo = AWD standard, flags
+  neither engine is Theta II. Sources: reman-engine.com (VIN A=2.0L MPI / VIN 2=1.6L turbo), AMSOIL,
+  eBay OEM (VIN A 2.0L).
+  (3) toyota-sienna-2021 -- hybrid-only 5th-gen XL50, single 2.5L A25A-FXS + eCVT (no engine fork).
+  vinNote keys on 10th-digit MY ('M'=2021) to separate XL50 hybrid from the unrelated 4th-gen
+  (2011-2020, 3.5L 2GR V6 gas); notes FWD vs available electric-rear AWD + early-A25A-FXS EGR caution.
+  Sources: AMSOIL A25A-FXS lookup, vPIC Sienna coding file, motorreviewer.
+  Sibling check: only inspect/index.html + TASKS.md are git-tracked (queue + Build-Log under _hub/ are
+  gitignored). inspect/index.html shared with prior Done vinnote-batches (06-29 9f92bac / 06-28b /
+  06-28 / 06-27) + recall-audit Done waves -- all on origin (verified origin/main=513efa7 == local main
+  pre-commit), so this commit is sequential on top; edits are additive top-level vinNote fields only,
+  no overlap with recall-data/engine/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor
+  (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content
+  (Content/blog/) orthogonal. Ready section empty. All Done siblings sharing inspect/index.html carry
+  Started dates -- no backfill needed. No Re-sync needed.
+  Syntax-check: PASS (SKILL node validator, scripts 2 & 5 OK, exit 0; one mid-run catch -- first insert
+  pass omitted the trailing comma after each vinNote string -> script 5 FAIL "Unexpected identifier
+  'summary'"; added all 3 commas, re-ran clean). Braces 4998/4998. 17,607 -> 17,610 lines; tail </html>
+  intact (no truncation).
+  Dead-links: verified (no internal href added; vinNotes cite vpic.nhtsa.dot.gov / nhtsa.gov as plain text).
+  Scanner: PASS (scan_for_secrets.py, 412 files, exit 0).
+  Housekeeping: at run start git showed local main "ahead 9" of origin/main -- verified false alarm
+  (ls-remote: origin/main=513efa7 == local main HEAD; prior pushes all landed). Stale remote-tracking
+  ref only (pushes go to explicit HTTPS URL, not SSH origin); refreshed the ref this run.
+  Detail: _hub/Build-Log/2026-06-30.md.
+
 #### autovetting-vinnote-batch-2026-06-29 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
