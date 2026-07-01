@@ -93,6 +93,47 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-01 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-01 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-01.md (gitignored), TASKS.md
+- Commit: 8a88a61 (work); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  Drained vinnote-queue priorities 35/36/37 (queue top 35 -> 38 = mazda-cx30-2020). Added `vinNote`
+  to three checklists in inspect/index.html (vinNote 62 -> 65). All three engine fields were already
+  accurate -- no look-ahead correction needed. 8th-digit encodings verified 2026-07-01 against REAL
+  for-sale/auction VINs (not just decoder-table summaries):
+  (1) genesis-gv80-2021 (JX1, WMI KMU) -- 8th digit 'B' = 2.5T I4 (300 hp), 'C' = 3.5T twin-turbo V6
+  (375 hp); 5th digit mirrors B/C. Confirmed: 2.5T KMUHBDSB1MU059976 / KMUHB4SB7MU042647 (...B...B)
+  vs 3.5T KMUHCESC0MU046230 / KMUHCESC3TU301063 (...C...C). Both 8AT, RWD/AWD; no engine-family fork
+  in the inspection. Sources: CarGurus/Carfax/Edmunds VIN patterns, eBay OEM (VIN C 3.5L).
+  (2) kia-sorento-2021 (MQ4) -- 8th digit 'C' = 2.5L NA (191 hp, 8AT), 'F' = 2.5T turbo (281 hp, wet
+  8-DCT), 'G' = 1.6T hybrid (227 hp). Confirmed: LX 2.5L 5XYRG4LC8MG067297 / 5XYRG4LC9MG025835 (8th=C);
+  SX 2.5T 5XYRKDLF7MG028323 / ...F7MG027592 / ...F8MG030999 (8th=F, all 281hp); Hybrid
+  KNDRH4LG0M5040717 (8th=G) + reman-engine.com VIN G=HEV. vinNote routes DCT-shudder to the F car;
+  none is Theta II. PHEV noted as separate KNDR variant (verify by full VIN). NB: generic decoder
+  summaries claimed 'A'=2.5T; real US VINs show F -> used VIN-verified letters.
+  (3) kia-telluride-2020 -- single engine, 8th digit 'C' = 3.8L Lambda II GDI V6 (291 hp, 8AT); no
+  fork. vinNote keys on FWD-vs-HTRAC-AWD (coupling-fluid variable) + launch-year recall check.
+  Sources: eBay OEM + reman-engine.com (2020-24 Telluride 3.8L = VIN C).
+  Sibling check: only inspect/index.html + TASKS.md are git-tracked (queue + Build-Log under _hub/
+  gitignored). inspect/index.html shared with prior Done vinnote-batches (06-30 f1a4841 / 06-29 / 06-28
+  ...) -- all on origin (verified origin/main == local HEAD pre-commit at 912866a); this commit is
+  sequential on top; edits are additive top-level vinNote fields only, no overlap with
+  recall-data/engine/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/)
+  orthogonal. Ready section empty. All Done siblings sharing inspect/index.html carry Started dates --
+  no backfill needed. No Re-sync needed.
+  Syntax-check: PASS (SKILL node validator, scripts 2 & 5 OK, exit 0; trailing commas inserted on
+  first pass, no re-run). Braces 4998/4998. 17,610 -> 17,613 lines; tail </html> intact (no truncation).
+  Dead-links: verified (only <a href="/decode/"> used = exists; NHTSA/vPIC cited as plain text).
+  Scanner: PASS (scan_for_secrets.py, 414 files, exit 0).
+  Push: work commit 8a88a61 to origin/main via explicit HTTPS URL + GIT_ASKPASS PAT (gate 27 pass /
+  2 warn / 0 CRITICAL). ls-remote origin/main == 8a88a61; tracking ref refreshed; leftover FUSE
+  lock/stale files cleared by rename.
+  Detail: _hub/Build-Log/2026-07-01.md.
+
 #### autovetting-vinnote-batch-2026-06-30 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
