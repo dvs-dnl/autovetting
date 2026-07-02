@@ -36,6 +36,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: embedding thesis REINFORCED not threatened (CarGurus = better discovery front door = better embed target for condition+booking back end). Watch "unbiased recommendation" framing (nearest advisory encroachment, but dealer-captured -> strengthens AutoVet "independent" angle). Escalation trigger to 🔴 = if Discover/Dealership Mode begins surfacing native per-VIN condition/reliability/recall data. Housekeeping: add CarGurus + Cars.com/AutoTrader as named "Marketplace/channel" archetype block in Competitor_Analysis.md (same gap flagged for Bumper 06-18).
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Cars.com (#8) [AI search rollout / inspection or trust-layer launches].
 
+  2026-07-02 03:00: profiled Cars.com (Cars Commerce, #8) (🟡).
+    Output: Competitors/_Monitor/2026-07-02-cars-com.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda next) + autovet-seo-content (Content/blog/) orthogonal; Ready empty; Done(last 10) = vinnote-batch-2026-07-01 (genesis-gv80/kia-sorento/kia-telluride in inspect/index.html) + prior vinnote batches + recall-audit — none touch Competitors/ and none position an AutoVet feature against Cars.com. No Re-sync needed.
+    Key delta: BASELINE — Cars.com had no dedicated profile (only marketplace white-space mentions in Competitor_Analysis.md § point-of-sale + White Space Dim 4). Deltas: (1) Carson™ consumer AI shopping engine (2025-11-06) — open-text natural-language search, Cars.com's direct analogue to CarGurus Discover; users 2x return / 3x saves / +30% SRP→VDP / 2x leads. (2) VIN-specific AI video ad solution (announced 2026-04-27) — dealer-facing demand-gen, 47% influenced-sales lift; ad-tech, not condition/trust. (3) Q1'26 stable: rev $180.2M +1% YoY, net income $5.0M, adj EBITDA $51.0M/28.3%; FY26 flat-to-+2% — growing far slower than CarGurus (+15%). NO consumer inspection/condition product, NO native per-VIN reliability/recall layer (still just NHTSA VIN lookup on cars.com/recalls). Closest adjacency = Accu-Trade VIN appraisal, but that's DEALER-side trade valuation + a 2022 asset, not buyer PPI — AutoVet white space Dim 1/2/4 intact.
+    Implication: embedding thesis REINFORCED (same conclusion as CarGurus 06-28) — marketplace = AI discovery front door (Carson) + VIN demand-gen; AutoVet = condition/recall/booking back end. VIN-granular infra across all marketplaces = good embed plumbing but the axis to watch. Escalation trigger to 🔴 = if Carson/VDP surfaces native per-VIN condition/reliability/recall beyond the NHTSA link, or Accu-Trade condition scoring goes consumer-side. Housekeeping (repeat of 06-18/06-28): add Cars.com + CarGurus + AutoTrader as a named "Marketplace/channel" archetype block in Competitor_Analysis.md — still open.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: AutoTrader (Cox Automotive) (#9) [Cox-wide acquisitions / any inspection-layer signals].
+
 
 ### autovet-cpo-protocol-ingestion
 
@@ -85,6 +92,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Subaru run 06-28) orthogonal; Ready empty; Done(last 10) = vinnote-batch-2026-06-28 (kia-stinger/vw-taos/nissan-pathfinder in inspect/index.html) + recall-audit — none touch a Chevrolet Malibu slug or Content/blog/. No Re-sync needed.
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Toyota RAV4 (#11), Hyundai Tucson (#17, recent recall news), Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion story).
 
+  2026-07-01 10:05: drafted 2019 Toyota RAV4 (5th-gen XA50) pillar post — Tier-1 #11, highest-ranked fully-uncovered vehicle; launch-year story = low-speed 8-speed transmission hesitation (software/ECM fix, NOT a CVT failure — gas RAV4 is an 8AT, only the hybrid is eCVT; correcting a widespread web factual error) + the multi-year-expanded fuel-pump recall + the fuel-tank-won't-fill quirk.
+    Output: Content/blog/2026-07-01-2019-toyota-rav4-buyers-guide.md (1,963 words body, status: draft), Content/_seo-research/2026-07-01-2019-toyota-rav4.md.
+    Recalls WebSearch-verified 2026-07-01: 20V-012 / Toyota 20TA02 (Denso low-pressure fuel pump, engine stall, 2019-2020 RAV4; expanded through ~Jan 2025 amendment — post stresses re-checking VIN against latest amendment), 19V-576 / Toyota K0N (backup camera not activating in reverse, FMVSS 111, 2019 RAV4 + Hybrid, began Sept 2019). TSB T-SB-0107-19 (low-speed hesitation ECM reprogram) cited by real bulletin ID. Fuel-tank-fill CSP/warranty-enhancement number left [unverified] (described condition, not fabricated). Toyota 160-point Gold CPO protocol referenced (Product/CPO-Protocols/toyota-certified.md, incl. its 2019+ RAV4-HV transaxle/MGR listening line). Interlinks to 2019-honda-crv + 2019-chevrolet-equinox + 2018-toyota-camry (all confirmed present in /blog/).
+    Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/, next=Cars.com) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Mazda) orthogonal; Ready empty; Done(last 10) = vinnote-batches + recall-audit on inspect/index.html + pinpoint-relax — none touch a Toyota RAV4 slug or Content/blog/. No RAV4 launch in overnight-builder/vinnote queues. No Re-sync needed.
+    Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Hyundai Tucson (#17, recent recall news), Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Jeep Grand Cherokee (#16).
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
@@ -92,6 +105,33 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 *(none)*
 
 ## Done (last 10)
+
+#### autovetting-vinnote-batch-2026-07-02 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-02 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-02.md (gitignored), TASKS.md
+- Commit: ba26757 (content); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  2026-07-02 02:00: Drained vinnote-queue priorities 38/39/40 (queue top 38 -> 41 = hyundai-sonata-2020).
+  Added vinNote to three checklists in inspect/index.html (count 65 -> 68); all 8th-digit encodings
+  WebSearch-verified 2026-07-02:
+  (1) mazda-cx30-2020 -- 8th digit 'L' = 2.5L SkyActiv-G NA (186 hp); 'M' = later cyl-deactivation build.
+      LOOK-AHEAD FIX: the 2.5 Turbo (227 hp) is a 2021+ addition, not 2020 -- corrected engine field,
+      summary, trim label (x6 incl VEHICLE_MENU), and the "2.5T Turbo oil maintenance" item.
+  (2) hyundai-palisade-2020 -- 8th digit 'E' = 3.8L Lambda II GDI V6 (291 hp); single engine, no Theta II
+      (exempt from Theta II fire recalls). Calligraphy trim is 2021+. GOTCHA: this entry's engine line has a
+      non-breaking space in "291 hp" that looks byte-identical to kia-telluride-2023 (shared 3.8L Lambda II);
+      first replacement pass mis-targeted the Telluride, caught in verification + re-targeted to the NBSP line.
+  (3) lincoln-corsair-2020 -- 8th digit '9' = 2.0T EcoBoost (250 hp); 'H' = 2.3T EcoBoost (295 hp).
+      LOOK-AHEAD FIX: the 2.5L Grand Touring PHEV is a 2021 MY vehicle, not 2020 -- corrected engine field,
+      summary, and the PHEV battery item ("2021+ Grand Touring only"). A genuine 2020 Corsair is gas-only.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda next), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html but DISJOINT slugs
+  (GV80/Sorento/Telluride 07-01, Trailblazer/Seltos/Sienna 06-30, etc.) -- additive JS data, different keys,
+  no shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No Re-sync.
+  Syntax-check: PASS (twice). Dead-links: verified (no new href). Scanner: PASS. Commit: ba26757.
 
 #### autovetting-vinnote-batch-2026-07-01 — ready (pushed directly)
 
