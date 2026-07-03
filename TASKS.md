@@ -106,6 +106,35 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-03 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-03 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-03.md (gitignored), TASKS.md
+- Commit: a3db7c2 (content); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  2026-07-03 02:00: Drained vinnote-queue priorities 41/42/43 (queue top 41 -> 44 = toyota-highlander-2020).
+  Added vinNote to three checklists in inspect/index.html (count 68 -> 71); all 8th-digit encodings + model-year
+  facts WebSearch-verified 2026-07-03:
+  (1) hyundai-sonata-2020 (DN8) -- 8th digit 'A' = 2.5L Smartstream MPI (191 hp); '2' = 1.6T GDI (180 hp);
+      'J' = 2.0L GDI Hybrid. LOOK-AHEAD FIX: the "2.5T (290 hp) N Line" + "wet DCT" content is MY2021, not 2020
+      (N Line announced Nov 2020, on sale Dec 2020 as a 2021). The 2020 1.6T uses an 8-speed torque-converter
+      auto, NOT a DCT. Corrected trim, engine, summary, powertrain item, and VEHICLE_MENU trim (x4).
+  (2) hyundai-venue-2020 (QX) -- 8th digit '3' = 1.6L Smartstream Gamma MPI (121 hp), only engine, FWD-only, IVT.
+      No look-ahead errors; vinNote added cleanly.
+  (3) cadillac-ct5-2020 -- 8th digit 'K' = 2.0T LSY (237 hp); 'W' = 3.0TT LGY V6 (335 hp / 360 hp CT5-V).
+      LOOK-AHEAD FIX: the "CT5-V Blackwing 6.2L supercharged (668 hp)" engine + "Blackwing" trim + Blackwing
+      belt item are MY2022+, not 2020 (2020 CT5-V = 3.0TT 360 hp). Also base four is LSY, not the Blazer's LTG.
+      Corrected trim, engine, summary, 2.0T item (LTG->LSY, dropped wrong Blazer oil-consumption assertion),
+      removed the inapplicable Blackwing belt item (itemsToCheck 10->9), fixed VEHICLE_MENU trim (x3).
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda next), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html but DISJOINT slugs
+  (CX-30/Palisade/Corsair 07-02, GV80/Sorento/Telluride 07-01, etc.) -- additive JS data, different keys,
+  no shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No Re-sync.
+  Syntax-check: PASS. Dead-links: verified (no new href). Scanner: PASS. Commit: a3db7c2.
+
+
 #### autovetting-vinnote-batch-2026-07-02 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
