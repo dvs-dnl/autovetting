@@ -13626,10 +13626,11 @@ const CHECKLISTS = {
     recalls: []
   },
   'hyundai-sonata-2020': {
-    year: 2020, make: 'Hyundai', model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid (8th gen DN8, 2020–present)',
-    engine: '1.6T GDI I4 (180 hp), 2.5L MPI I4 (191 hp), 2.5T (290 hp, N Line), or 2.0L Hybrid',
+    year: 2020, make: 'Hyundai', model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid (8th gen DN8, 2020–present)',
+    engine: '2.5L MPI I4 (191 hp), 1.6T GDI I4 (180 hp), or 2.0L Hybrid',
+    vinNote: "8th VIN digit = engine code: 'A' = 2.5L Smartstream MPI I4 (191 hp, the naturally-aspirated workhorse); '2' = 1.6L turbo GDI I4 (180 hp); 'J' = 2.0L Smartstream GDI Hybrid. For 2020 all three use torque-converter automatics — the 2.5L and 1.6T get an in-house 8-speed, the Hybrid a 6-speed — so there is no dual-clutch to inspect this year. The 290-hp 2.5T N Line, which pairs a wet 8-speed DCT with a sport tune, did not arrive until MY2021; a genuine 2020 will never decode to it. Confirm the engine family with a full VIN decode at <a href=\"/decode/\">autovetting.com/decode</a> and check open recalls at nhtsa.gov/recalls before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 8th-gen Sonata is a complete redesign — flush door handles, distinctive styling, and a strong powertrain lineup. No Theta II concerns on this generation. The 2.5L naturally-aspirated is the reliable workhorse; the 1.6T is fun with no significant issues; the N Line with 2.5T is the performance choice. Main buyer checks: 8-speed DCT smoothness on turbocharged variants and confirming no open recalls.",
+    summary: "The 8th-gen Sonata is a complete redesign — flush door handles, distinctive styling, and a strong powertrain lineup. No Theta II concerns on this generation. The 2.5L naturally-aspirated is the reliable workhorse; the 1.6T is fun with no significant issues. Main buyer checks: smooth 8-speed automatic shifts on the 1.6T and confirming no open recalls. The 290-hp 2.5T N Line (wet 8-speed DCT) is a 2021-and-later addition, not available for 2020.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 115, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
@@ -13637,10 +13638,10 @@ const CHECKLISTS = {
           desc: 'New 2.5L is not a Theta II. Clean engine with no recall exposure.',
           check: '<strong>Standard cold-start and oil check.</strong>',
           cost: 'Routine maintenance', source: 'Hyundai 2.5L MPI reliability data' },
-        { title: '1.6T GDI / 2.5T — DCT operation', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Turbocharged variants use an 8-speed wet DCT. Test for shudder at low speeds.',
-          check: '<strong>Test 15–25 mph light throttle engagement for shudder.</strong>',
-          cost: '$0 software update; $2,000+ if clutch worn', source: 'Hyundai DCT TSB pattern' }
+        { title: '1.6T GDI — 8-speed automatic', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2020 1.6T uses an in-house 8-speed torque-converter automatic (not a DCT). Confirm smooth, prompt low-speed shifts.',
+          check: '<strong>Test 15–25 mph light-throttle upshifts for smoothness and prompt kickdown.</strong>',
+          cost: '$0 shift-quality software update if a TSB applies', source: 'Hyundai 8-speed automatic (1.6T)' }
       ]},
       { title: 'Hybrid (if equipped)', items: [
         { title: 'Hybrid battery health', risk: 'low', riskLabel: 'Low Risk',
@@ -14211,6 +14212,7 @@ const CHECKLISTS = {
   'hyundai-venue-2020': {
     year: 2020, make: 'Hyundai', model: 'Venue', trim: 'SE / SEL / DENIM (1st gen QX, 2020–present)',
     engine: '1.6L Gamma MPI I4 (121 hp) with IVT (CVT)',
+    vinNote: "The 2020 Venue has one engine: the 1.6L Smartstream Gamma MPI I4 (121 hp), 8th VIN digit '3'. It is front-wheel drive only — there is no turbo and no AWD option — and the 1.6L is paired with Hyundai's IVT, a chain-driven continuously variable transmission. Because there is a single engine family, the 8th digit is a confirmation rather than a fork; the more useful step is running the full VIN at nhtsa.gov/recalls to verify any open campaign is closed before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The Venue is Hyundai's entry-level subcompact crossover — simple, reliable, and very affordable. Front-wheel-drive only with a naturally-aspirated 1.6L. No Theta II concerns. The IVT (intelligent variable transmission) is reliable. Main checks are CVT fluid service and confirming Honda Sensing equivalent SmartSense ADAS is calibrated. Excellent first car or urban SUV choice.",
     stats: { itemsToCheck: 7, recalls: 0, ownerComplaints: 60, topComplaintArea: 'Minimal' },
@@ -14832,25 +14834,22 @@ const CHECKLISTS = {
     recalls: []
   },
   'cadillac-ct5-2020': {
-    year: 2020, make: 'Cadillac', model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V / Blackwing (1st gen, 2020–present)',
-    engine: '2.0T LTG I4 (237 hp), 3.0T LGY V6 TT (335 hp), or CT5-V Blackwing 6.2L supercharged (668 hp)',
+    year: 2020, make: 'Cadillac', model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V (1st gen, 2020–present)',
+    engine: '2.0T LSY I4 (237 hp) or 3.0L LGY twin-turbo V6 (335 hp; 360 hp in CT5-V)',
+    vinNote: "8th VIN digit = engine code: 'K' = 2.0L LSY turbo I4 (237 hp, the base engine); 'W' = 3.0L LGY twin-turbo V6 (335 hp in Luxury/Premium Luxury/Sport, 360 hp in the CT5-V). Note the base four is GM's newer LSY, not the older LTG found in the Blazer. The supercharged 6.2L V8 CT5-V Blackwing (668 hp) is a MY2022-and-later car — a genuine 2020 will never decode to it, so treat any 2020 'Blackwing' listing as mislabeled. Confirm the engine and drivetrain (RWD vs. AWD) with a full VIN decode at <a href=\"/decode/\">autovetting.com/decode</a> before applying this checklist.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The CT5 replaces both the ATS and CTS — well-sorted rear-wheel-drive luxury sedan with available AWD. The 3.0T twin-turbo V6 is the sweet spot; the CT5-V Blackwing is a legitimate world-class performance sedan. Oil consumption watch on the 2.0T (same LTG as Blazer). Main checks: LTG consumption (2.0T), supercharger belt (Blackwing), and magnetic ride suspension.",
-    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Engine (2.0T) / Electrical' },
+    summary: "The CT5 replaces both the ATS and CTS — well-sorted rear-wheel-drive luxury sedan with available AWD. The 3.0L twin-turbo V6 is the sweet spot, and the 2020 CT5-V pairs that engine (360 hp) with a sport tune. Main checks: a 2.0T (LSY) oil-level check and magnetic ride suspension health. The supercharged 6.2L V8 CT5-V Blackwing (668 hp) is a 2022-and-later car — not available for 2020.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Engine (2.0T) / Electrical' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '2.0T LTG — oil consumption watch', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Same LTG engine as Blazer with documented oil consumption pattern.',
+        { title: '2.0T LSY — oil-level check', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The CT5's 2.0T is GM's newer LSY (not the older Blazer LTG); a routine turbo-four oil-level and consumption check between changes is still prudent.",
           check: '<strong>Check dipstick level immediately. Ask how often oil is added between changes.</strong>',
-          cost: '$0–$2,500', source: 'GM LTG pattern' },
+          cost: '$0–$2,500', source: 'GM LSY 2.0T' },
         { title: '3.0T V6 TT (preferred choice) — solid', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Twin-turbo V6 is smooth and powerful. The recommended CT5 engine.',
           check: '<strong>Test boost delivery. Both turbos smooth.</strong>',
-          cost: 'Routine maintenance', source: 'Cadillac LGY reliability' },
-        { title: 'Blackwing supercharger belt (V Blackwing)', risk: 'high', riskLabel: 'High Risk on Blackwing',
-          desc: '6.2L supercharger belt service every 60k miles.',
-          check: '<strong>Request supercharger belt service records on any Blackwing.</strong>',
-          cost: '$1,200–$2,000 belt service', source: 'Cadillac Blackwing service schedule' }
+          cost: 'Routine maintenance', source: 'Cadillac LGY reliability' }
       ]},
       { title: 'Magnetic Ride Suspension', items: [
         { title: 'MRC shock absorber health', risk: 'monitor', riskLabel: 'Monitor',
@@ -15587,7 +15586,7 @@ const VEHICLE_MENU = {
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' },
       { model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)', key: 'hyundai-ioniq5-2022' },
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
@@ -15689,7 +15688,7 @@ const VEHICLE_MENU = {
     ],
     'Buick': [ { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' } ],
     'Cadillac': [
-      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V / V Blackwing', key: 'cadillac-ct5-2020' },
+      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
       { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' },
       { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' },
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
@@ -15803,7 +15802,7 @@ const VEHICLE_MENU = {
       { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
     ],
     'Cadillac': [
-      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V / V Blackwing', key: 'cadillac-ct5-2020' },
+      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
       { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' },
       { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' },
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
@@ -15862,7 +15861,7 @@ const VEHICLE_MENU = {
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
@@ -15990,7 +15989,7 @@ const VEHICLE_MENU = {
       { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
     ],
     'Cadillac': [
-      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V / V Blackwing', key: 'cadillac-ct5-2020' },
+      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
       { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' },
       { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' },
       { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
@@ -16052,7 +16051,7 @@ const VEHICLE_MENU = {
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
@@ -16227,7 +16226,7 @@ const VEHICLE_MENU = {
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
-      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / N Line / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
