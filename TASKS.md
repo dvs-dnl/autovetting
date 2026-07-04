@@ -106,6 +106,38 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-04 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-04 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-04.md (gitignored), TASKS.md
+- Commit: 986f263 (content); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  2026-07-04 02:00: Drained the vinNote queue's first three genuinely-missing entries (pri 46/48/49).
+  Cross-checked the queue against the live file first: rows 44 (highlander-2020), 45 (model3-2019) and
+  47 (lexus-es-2019) were ALREADY populated by a prior run and stale in the queue -> pruned, not re-authored
+  (queue 184 -> 178 rows). Added vinNote to three checklists in inspect/index.html (count 71 -> 74);
+  all engine codes + model facts WebSearch-verified 2026-07-04:
+  (1) acura-rdx-2019 (3rd-gen TC1/TC2) -- single engine 2.0T K20C4 (272 hp) + 10AT, so the 8th digit is
+      uniform across all 2019 RDX; the decision-relevant VIN split is FWD vs torque-vectoring SH-AWD
+      (model portion, not 8th digit). Points to the 23V-858 Denso fuel-pump recall already in the checklist.
+  (2) honda-passport-2019 (2nd-gen) -- single engine 3.5L J35Y6 V6 (280 hp) + 9-speed ZF (9HP); 8th digit
+      uniform, real split is FWD vs i-VTM4 AWD. Notes it is mechanically a 2-row Pilot (shared 9HP -> test).
+  (3) toyota-rav4-2019 (XA50) -- here the 8th digit DOES split gas A25A-FKS (203 hp, 8AT) vs hybrid
+      A25A-FXS (219 hp comb., eCVT), both verified; vinNote stresses gas-vs-hybrid decode and flags that
+      "CVT" on a gas RAV4 = wrong listing (gas car is a conventional 8AT).
+  Anti-fabrication: for the two single-engine models (RDX, Passport) did NOT assert a specific 8th-digit
+  character -- could not confirm the exact letter from an authoritative source this run (decoder pages
+  JS-rendered/empty; NHTSA vPIC provenance-blocked for web_fetch). vinNotes anchored on verified engine
+  codes + drivetrain distinction instead, per project no-fabrication discipline.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda next), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html but DISJOINT slugs
+  (Sonata/Venue/CT5 07-03, CX-30/Palisade/Corsair 07-02, etc.) -- additive JS data, different keys, no
+  shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No Re-sync.
+  Syntax-check: PASS. Dead-links: verified (only new href is /inspect/, exists). Scanner: PASS. Commit: 986f263.
+
+
 #### autovetting-vinnote-batch-2026-07-03 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
