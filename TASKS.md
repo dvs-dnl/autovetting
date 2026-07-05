@@ -106,6 +106,41 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-05 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-05 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-05.md (gitignored), TASKS.md
+- Commit: fe09b2a
+- Notes:
+  2026-07-05 02:00: Drained the vinNote queue's next three genuinely-missing entries (pri 52/53/54).
+  Cross-checked the queue against the live file first: rows 50 (hyundai-kona-2019) and 51 (mazda3-2019)
+  were ALREADY populated by a prior run and stale in the queue -> pruned, not re-authored
+  (queue 178 -> 173 rows). Added vinNote to three checklists in inspect/index.html (count 74 -> 77);
+  all engine codes + model facts WebSearch-verified 2026-07-05:
+  (1) subaru-forester-2019 (5th-gen SK) -- single engine 2.5L FB25D NA + Lineartronic CVT on all trims
+      (no XT turbo, no manual), so the 8th digit does NOT separate engines; on these Subarus it encodes
+      only the emissions market: 'A' = federal/49-state, 'C' = California (same FB25D). vinNote reframes
+      the decision points as trim + EyeSight recalibration + CVT fluid history.
+  (2) genesis-g70-2019 (1st-gen IK) -- REAL 8th-digit split, both confirmed: 'A' = 2.0L Theta II T-GDI
+      turbo four (252 hp; eBay OEM "2.0L VIN A 8th Digit" + Bumper decoder) vs 'E' = 3.3L Lambda II
+      twin-turbo V6 (365 hp; carpartplanet/reman-engine "3.3L VIN E 8th digit"). vinNote also corrects a
+      latent prose inaccuracy: "Lambda" applies only to the 3.3T V6 -- the 2.0T is a Theta II engine
+      (different family) -- so read the 8th digit, not the trim name.
+  (3) honda-insight-2019 (3rd-gen ZE4) -- single powertrain (two-motor 1.5L i-MMD hybrid, 151 hp comb.,
+      eCVT) across LX/EX/Touring; Honda's 8th VIN char encodes grade/restraint, NOT an engine family, and
+      mechanicals are identical across trims, so nothing to decode. vinNote redirects to trim + Honda
+      Sensing recalibration + IPU battery health.
+  Anti-fabrication: only asserted specific 8th-digit characters where a source confirmed them this run
+  (G70 'A'/'E'; Forester 'A'/'C' emissions). For single-engine Insight, made the accurate structural point
+  (Honda 8th char != engine code) rather than inventing a letter. Per project no-fabrication discipline.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all
+  orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html but DISJOINT slugs
+  (RDX/Passport/RAV4 07-04, Sonata/Venue/CT5 07-03, etc.) -- additive JS data, different keys, no
+  shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No Re-sync.
+  Syntax-check: PASS. Dead-links: verified (no new href; nhtsa.gov in prose only). Scanner: PASS. Commit: fe09b2a.
+
 #### autovetting-vinnote-batch-2026-07-04 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
