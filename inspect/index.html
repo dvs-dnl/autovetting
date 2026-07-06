@@ -6725,7 +6725,8 @@ const CHECKLISTS = {
 
   'subaru-crosstrek-2018': {
     year: 2018, make: 'Subaru', model: 'Crosstrek', trim: '2.0i / Premium / Limited (2nd gen GT)',
-    engine: '2.0L FB20B Boxer-4 (152hp) / 2.0L PHEV Hybrid (148hp system)',
+    engine: '2.0L FB20D Boxer-4 (152 hp) — single engine (Crosstrek Hybrid PHEV is 2019+)',
+    vinNote: "One engine for 2018: the direct-injection FB20D boxer-4 (152 hp), so the 8th VIN digit does not fork the engine — on these FB-family Subarus it encodes the emissions market, not the powertrain. The Crosstrek Hybrid (FB20 + a Toyota-sourced plug-in system, 148 hp combined) did not arrive until the 2019 model year and was a CARB-state compliance car, so a 2018 is gas-only — ignore any 'hybrid/PHEV' claim on a 2018 VIN. The real decode is the transmission: 2.0i base and Premium came standard with a 6-speed manual (Lineartronic CVT optional); Limited was CVT-only.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "2nd-gen Crosstrek (GT platform, 2018+) is the best Crosstrek Subaru has made. Improved ride, better reliability than SH-gen, and the FB20 engine avoids the EJ head-gasket failures. Oil consumption check at 80k+ miles is still good practice on any Subaru. EyeSight windshield replacement is expensive — inspect carefully.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 80, topComplaintArea: 'FB20 oil consumption / EyeSight windshield cost' },
@@ -14244,7 +14245,8 @@ const CHECKLISTS = {
   },
   'lexus-ux-2019': {
     year: 2019, make: 'Lexus', model: 'UX', trim: 'UX200 / UX250h Hybrid (1st gen, 2019–present)',
-    engine: '2.0L M20A-FKS I4 (169 hp, UX200) or 2.0L A25A-FXS Hybrid (181 hp combined, UX250h)',
+    engine: '2.0L M20A-FKS I4 (169 hp, UX200) or 2.0L M20A-FXS Hybrid (181 hp combined, UX250h)',
+    vinNote: "The model badge is the decode: UX200 = gas 2.0L M20A-FKS (169 hp, FWD only); UX250h = 2.0L M20A-FXS hybrid (181 hp combined, FWD or E-Four AWD via a rear electric motor). Both are 2.0L M20A-family engines on the TNGA-C platform shared with the Corolla — the UX hybrid is NOT the 2.5L A25A used in the Camry/RAV4 hybrid, so any listing citing a '2.5L' on a UX is mislabeled. AWD exists only on the 250h; a UX200 is never all-wheel drive.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The UX is Lexus smallest and most affordable SUV — front-wheel or all-wheel drive, premium interior materials, and the UX250h hybrid delivers 41 mpg combined. The platform is shared with the Toyota Corolla (TNGA-C). No widespread failure modes. The hybrid drivetrain is the clear choice for fuel economy. Main checks are AWD coupling fluid (UX250h) and confirming no open recalls.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 80, topComplaintArea: 'Minimal' },
@@ -15221,6 +15223,7 @@ const CHECKLISTS = {
   'ram-2500-2019': {
     year: 2019, make: 'Ram', model: '2500', trim: 'Tradesman / Big Horn / Lone Star / Power Wagon / Laramie / Limited (5th gen DS, 2019–present)',
     engine: '6.4L HEMI V8 (410 hp) or 6.7L Cummins Turbodiesel I6 (370–400 hp)',
+    vinNote: "8th VIN digit forks the engine and it matters more than the trim badge: 'J' = 6.4L 392 HEMI V8 (410 hp gas); 'L' = 6.7L Cummins turbodiesel I6. On the 2500 for 2019 the Cummins is the Standard-Output tune (370 hp / 850 lb-ft) — the High-Output 6.7 (up to 1,000 lb-ft) was 3500-exclusive that year, so a 2500 listed with '1,000 lb-ft' is really a 3500 or a re-tune. Confirm 'J' vs 'L' before buying: the HEMI (MDS lifter risk at 80k+) and the Cummins (CP4/emissions upkeep) are completely different ownership propositions.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The Ram 2500 is one of the best heavy-duty trucks — especially with the 6.7L Cummins diesel, which is legendary for durability at high mileage. The 6.4L HEMI has MDS and the lifter failure pattern at 80k+. Cummins diesel buyers should watch for injector wear and DEF system maintenance. Commercial fleet history should be investigated via Carfax.",
     stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 280, topComplaintArea: 'Engine (HEMI) / Diesel / Transmission' },
