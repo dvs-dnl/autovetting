@@ -69,6 +69,11 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. No In-flight/Ready task is launching a Subaru vehicle (grep of TASKS.md for subaru/outback/forester/crosstrek/impreza/ascent/legacy/wrx found only the BRZ vinnote note + recall-audit references, no active Subaru launch). Cross-referenced to: autovetting-recall-audit-wave9-2026-06-17 (established 18V-772 as the REAL valve-spring recall, deleted fabricated 18V-114), wave5-2026-06-12 (deleted 15V-117 mis-pasted on Outback), wave3 (20V-003 Subaru-Takata-misused), and the 2026-06-10 audit (21V-587 WRG-21 fuel pump verified for Impreza/Legacy/Outback; deleted 20V-501 / 18V-307 Subaru fabrications). Protocol reuses ONLY WebSearch-verified IDs (21V-587/WRG-21, 19V-744/WUP-01, 18V-772, 16V-694/WTK-71, by-VIN Takata) and embeds an anti-fabrication guard listing the deleted IDs not to reintroduce. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) orthogonal; Ready empty. No Re-sync needed.
     Weekly milestone: DONE — subaru-certified.md saved + INDEX.md updated (P1 now Subaru ✅; next = Mazda). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Mazda (P1).
 
+  2026-07-05 08:30: ingested Mazda CPO protocol (160 inspection points; single-tier program, no lite tier).
+    Output: Product/CPO-Protocols/mazda-certified.md, Product/CPO-Protocols/_runs/2026-07-05-mazda.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. No In-flight/Ready task is launching a Mazda vehicle (grep of TASKS.md for mazda/cx-5/cx-9/cx-30/mazda3/mazda6/miata/mx-5 found only: vinnote-batch-2026-07-05 which PRUNED a stale mazda3-2019 row (already populated) + a mazda-cx30-2020 vinNote batch (07-02) + the older mx-5-nd launch + recall-audit references — all touch inspect/index.html, none launch a Mazda checklist that would consume this Mazda protocol). Cross-referenced to (WebSearch-verified IDs reused): recall-audit wave 6/10 + the 2026-06-10 systemic audit — 19V-272 (correct Mazda3 wiper, NOT 16V-433), 21V-875/Mazda 5321K (Denso fuel pump MY2018-2019 CX-5/Mazda3/CX-9/Mazda6/MX-5), 20V-346/Mazda 4420F (CX-30 brake caliper bolts). Protocol embeds an anti-fabrication guard listing the deleted/mis-pasted IDs NOT to reintroduce (16V-433, 21V-088, 20V-501, 18V-411/18V-307). In-flight autovet-competitor-monitor (Competitors/, next=AutoTrader) + autovet-seo-content (Content/blog/) orthogonal; Ready empty. No Re-sync needed.
+    Weekly milestone: DONE — mazda-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅; next = Lexus). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Lexus (P1).
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -105,6 +110,52 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 *(none)*
 
 ## Done (last 10)
+
+#### autovetting-vinnote-batch-2026-07-06 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-06 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-06.md (gitignored), TASKS.md
+- Commit: e1feed6
+- Notes:
+  2026-07-06 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
+  strategic-threat memo, a positioning decision, not a build one). No new-vehicle launch queued, so
+  drained the vinNote queue's next genuinely-missing entries. Cross-checked the queue against the live
+  file FIRST: rows 60/61/62 (acura-mdx-2018, toyota-tundra-2018, mazda-cx9-2018) were ALREADY populated
+  by a prior run and stale -> pruned, not re-authored. NOTE: rows 55 (lexus-rx350-2019) and 58
+  (lincoln-nautilus-2019) are genuinely MISSING and were KEPT at queue top for next run (an initial
+  coarse 80-line grep false-positived them as populated; a precise per-block check corrected this).
+  Queue 173 -> 167 rows (3 authored + 3 stale pruned). vinNote count 77 -> 80. All engine codes +
+  model-year facts WebSearch-verified 2026-07-06:
+  (1) lexus-ux-2019 (1st-gen MZAA/MZAH) -- CORRECTED an engine-code error: the UX250h hybrid was listed
+      as "2.0L A25A-FXS" but A25A is the 2.5L Camry/RAV4 hybrid engine; the UX250h uses the 2.0L
+      M20A-FXS (AMSOIL/carpartplanet/EngineDNA confirm). Fixed engine field A25A->M20A. vinNote: model
+      badge is the decode (UX200 = gas M20A-FKS, FWD-only; UX250h = M20A-FXS hybrid, 181 hp comb.,
+      FWD or E-Four AWD); a UX200 is never AWD; any "2.5L" on a UX is mislabeled.
+  (2) ram-2500-2019 (5th-gen DS) -- REAL 8th-digit fork, both source-confirmed: 'J' = 6.4L 392 HEMI V8
+      (410 hp; SP Precision crate-engine "VIN J 14-21", norcaldiesel) vs 'L' = 6.7L Cummins turbodiesel
+      I6 (Winnipeg Engine "6.7 Cummins VIN code L"). vinNote also clarifies the 2500 for 2019 gets the
+      Standard-Output 6.7 (370 hp/850 lb-ft); the High-Output (up to 1,000 lb-ft) was 3500-exclusive
+      that year, so a 2500 listed with "1,000 lb-ft" is a 3500 or re-tune.
+  (3) subaru-crosstrek-2018 (2nd-gen GT) -- CORRECTED two errors: engine code FB20B (1st-gen port-inj)
+      -> FB20D (2nd-gen direct-inj, 152 hp; Wikipedia/motorreviewer), and dropped a "2.0L PHEV Hybrid
+      (148hp system)" LOOK-AHEAD -- the Crosstrek Hybrid (FB20 + Toyota PHEV system) is a 2019 MY
+      CARB-compliance car (Subaru media / Wikipedia), so a 2018 is gas-only. Single engine -> 8th digit
+      does not fork it (FB-family Subarus encode emissions market there); real decode is transmission
+      (2.0i/Premium 6MT-or-CVT, Limited CVT-only; Subaru press kit).
+  Anti-fabrication: asserted specific 8th-digit letters only where a source confirmed them this run
+  (Ram 'J'/'L'). For single-engine UX/Crosstrek, made the accurate structural point rather than
+  inventing a letter. Two latent engine-spec errors corrected (UX A25A->M20A; Crosstrek FB20B->FB20D +
+  PHEV year), consistent with the project no-fabrication + look-ahead-correction discipline.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda note appended 07-05), autovet-seo-content
+  (Content/blog/) all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html
+  but DISJOINT slugs (Forester/G70/Insight 07-05, RDX/Passport/RAV4 07-04, etc.) -- additive JS data,
+  different keys, no shared-slug conflict; every recent inspect/index.html Done sibling carries a
+  - Started: date. No Re-sync needed.
+  Syntax-check: PASS (new Function per-script gate, exit 0, Scripts 2 & 5 OK; truncation guard: 17624
+  lines / closing </script> present / brace-eval clean). Dead-links: verified (no new href added;
+  source names in prose only). Scanner: PASS (scanned 430 files, no secrets). Commit: e1feed6.
 
 #### autovetting-vinnote-batch-2026-07-05 — ready (pushed directly)
 
