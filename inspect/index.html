@@ -8919,7 +8919,8 @@ const CHECKLISTS = {
 
   'honda-hrv-2018': {
     year: 2018, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L / Touring (RU gen)',
-    engine: '1.8L L15B i-VTEC I4 (141hp) with CVT or 6-speed manual',
+    engine: '1.8L R18Z9 SOHC i-VTEC I4 (141hp) with CVT or 6-speed manual',
+    vinNote: "One engine across every 2018 HR-V: the 1.8L SOHC i-VTEC R18Z9 four (141 hp) — not the L15B, which is Honda’s 1.5L turbo family and never went in the RU HR-V (earlier checklist text calling it ‘L15B’ was an engine-code error, corrected here). With a single engine, Honda’s 8th VIN digit does not fork the powertrain — it encodes grade/restraint, and the mechanicals are identical from LX to Touring. The real decode is the transmission: a CVT is standard (verify Honda HCF-2 fluid history — the top powertrain watch item), while a genuine 6-speed manual was offered only on lower FWD trims and is rare enough to confirm on the build. AWD adds a Real Time rear differential that needs its own fluid service. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and confirm the Takata airbag recall is closed on affected 2018 builds.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The RU HR-V is one of the most practical subcompact SUVs available — the Magic Seat rear-seat system creates genuinely useful cargo configurations. The 1.8L L15B is a naturally-aspirated Honda engine with an outstanding reliability record. CVT is the standard; the 6-speed manual is a rarer and fun option. Limited power is the main tradeoff for fuel efficiency and low ownership cost.",
     stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 80, topComplaintArea: 'CVT fluid history / limited power / Takata airbag recall' },
@@ -13499,6 +13500,7 @@ const CHECKLISTS = {
   'lexus-rx350-2019': {
     year: 2019, make: 'Lexus', model: 'RX350', trim: 'Base / F SPORT / Executive / Premium (4th gen AL20, 2016–2022)',
     engine: '3.5L 2GR-FKS V6 (295 hp) with 8-speed automatic',
+    vinNote: "For the RX350 the 8th VIN digit is ‘Z’ = the 3.5L 2GR-FKS V6 (295 hp), the only engine this badge carried across the whole AL20 generation — 5-seat RX350 or 3-row RX350L, FWD or AWD (Toyota VIN-code tables; JDM Engine Direct 2GR-FKS listing). There is no four-cylinder or turbo RX350 to confuse it with. The hybrid is a separate model, the RX450h, which uses the 2GR-FXS Atkinson V6 plus an electric drive system and carries a different VIN engine character — so ‘RX350 hybrid’ is a contradiction; make sure the badge and the 8th digit agree. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and confirm the Takata airbag recall is closed before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The AL20 RX350 is among the most reliable luxury midsize SUVs available. The 2GR-FKS direct-injection V6 is proven and Toyota/Lexus have eliminated the head gasket issues of earlier engines. The 8-speed automatic is smooth and durable. GDI carbon buildup on intake valves is the main watch item on high-mileage examples. Takata airbag recall must be confirmed closed. Outstanding 3-row (RX350L) or 5-seat choice.",
     stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 160, topComplaintArea: 'Minimal' },
@@ -15395,8 +15397,9 @@ const CHECKLISTS = {
   'lincoln-nautilus-2019': {
     year: 2019, make: 'Lincoln', model: 'Nautilus', trim: 'Standard / Reserve / Black Label (1st gen, 2019–2022)',
     engine: '2.0T EcoBoost I4 (250 hp) or 2.7T EcoBoost V6 (335 hp)',
+    vinNote: "The Nautilus has a real engine fork and the 8th VIN digit settles it. ‘9’ = the 2.0L EcoBoost turbo four (250 hp), the standard engine (confirmed on OEM used-engine listings, e.g. Turbo Auto Parts ‘2.0L VIN 9 8th digit turbo’). The up-level 2.7L EcoBoost V6 (335 hp — the twin-turbo ‘Nano’ shared with the Edge ST) carries a different engine character, so a ‘9’ in the 8th position confirms you are looking at the four, not the V6 a seller may be advertising. The two have different inspection priorities: the 2.0L EcoBoost four is worth an oil-consumption check on higher-mileage cars, while the 2.7T’s watch items are boost-system health and cam-drive/timing history. Note the 2.0T here is a Ford EcoBoost — not GM’s LTG — so cross-brand ‘LTG’ oil-consumption comparisons do not apply. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm which engine you are actually buying.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The Nautilus (formerly MKX) is Lincoln's midsize luxury crossover. The 2.7T EcoBoost V6 is the preferred powertrain — significantly more refined than the 2.0T for this vehicle's weight. No chronic failure modes. Main checks: 2.0T oil consumption (same LTG concerns), 2.7T boost system health, and SYNC4 infotainment responsiveness.",
+    summary: "The Nautilus (formerly MKX) is Lincoln's midsize luxury crossover. The 2.7T EcoBoost V6 is the preferred powertrain — significantly more refined than the 2.0T for this vehicle's weight. No chronic failure modes. Main checks: 2.0T oil consumption, 2.7T boost system health, and SYNC4 infotainment responsiveness.",
     stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Engine / Electrical / Infotainment' },
     sections: [
       { title: 'Powertrain', items: [
@@ -15404,10 +15407,10 @@ const CHECKLISTS = {
           desc: 'Gen 2 2.7T EcoBoost is a well-proven, smooth V6. Better-suited to Nautilus weight.',
           check: '<strong>Cold-start and oil check. Test both turbos under full throttle.</strong>',
           cost: 'Routine maintenance', source: 'Ford/Lincoln 2.7T reliability' },
-        { title: '2.0T LTG — oil consumption', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Same documented LTG oil consumption pattern as XT4/Blazer.',
+        { title: '2.0T EcoBoost — oil consumption', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Ford 2.0L EcoBoost four; check for oil consumption on high-mileage examples and confirm PCV/turbo-seal history.',
           check: '<strong>Check dipstick level immediately.</strong>',
-          cost: '$0–$2,500', source: 'GM LTG pattern' }
+          cost: '$0–$2,500', source: 'Ford 2.0L EcoBoost' }
       ]},
       { title: 'SYNC4 Infotainment', items: [
         { title: 'Lincoln infotainment responsiveness', risk: 'low', riskLabel: 'Low Risk',
