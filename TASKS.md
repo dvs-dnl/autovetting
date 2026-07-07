@@ -111,6 +111,55 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-07 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-07 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-07.md (gitignored), TASKS.md
+- Commit: 4efac49
+- Notes:
+  2026-07-07 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
+  strategic-threat memo, a positioning decision, not a build one). No new-vehicle launch queued, so
+  drained the next genuinely-MISSING vinNote entries — the two rows the 07-06 run explicitly kept at
+  queue top (55 lexus-rx350-2019, 58 lincoln-nautilus-2019) plus the next Strong entry (63 honda-hrv-2018).
+  Each verified missing via precise per-block check first. Queue 167 -> 164 rows. vinNote count 80 -> 83.
+  All facts WebSearch-verified 2026-07-07:
+  (1) lexus-rx350-2019 (4th-gen AL20) -- SINGLE engine. RX350 8th VIN digit = 'Z' = 3.5L 2GR-FKS V6
+      (295 hp), the only engine this badge carried (RX350 / 3-row RX350L / FWD / AWD); Toyota VIN-code
+      tables + JDM Engine Direct "VIN Z 2GRFKS" confirm. vinNote disambiguates the hybrid: RX450h is a
+      SEPARATE model (2GR-FXS Atkinson V6 + electric drive, different VIN engine char) -> "RX350 hybrid"
+      is a contradiction.
+  (2) lincoln-nautilus-2019 (1st gen) -- REAL fork. '9' = 2.0L EcoBoost turbo four (250 hp),
+      source-confirmed (Turbo Auto Parts "2.0L VIN 9 8th digit turbo"). The 2.7L EcoBoost V6 (335 hp,
+      twin-turbo Nano, shared w/ Edge ST) carries a different char; a '9' confirms the four not the V6.
+      ONLY the '9' asserted -- no commerce source for the specific 2.7T letter this run, so the fork is
+      made usable via the confirmed '9' rather than inventing the V6 letter. ALSO corrected a latent
+      fabrication: checklist labeled the 2.0T as "LTG" w/ XT4/Blazer comparison + source "GM LTG pattern"
+      -- LTG is GM's Ecotec 2.0T; the Nautilus 2.0T is a FORD EcoBoost. Fixed item title (2.0T LTG ->
+      2.0T EcoBoost), desc (dropped GM/XT4/Blazer -> Ford 2.0L EcoBoost oil-consumption + PCV/turbo-seal),
+      source (GM LTG pattern -> Ford 2.0L EcoBoost), and summary clause ("same LTG concerns" removed).
+      Scoped so the 3 legitimate "GM LTG pattern" sources on real GM checklists were left untouched.
+  (3) honda-hrv-2018 (RU gen) -- SINGLE engine + engine-code fix. Engine field read "1.8L L15B i-VTEC";
+      L15B is Honda's 1.5L TURBO family and never went in the RU HR-V. The 2018 HR-V uses the NA 1.8L
+      SOHC i-VTEC R18Z9 (141 hp; Honda Info Center / hondanews / motorreviewer). Fixed L15B -> R18Z9.
+      Single engine -> Honda 8th digit encodes grade/restraint not powertrain (identical LX-Touring);
+      real decode is transmission (CVT standard, verify HCF-2; 6-speed manual only on lower FWD trims).
+  Anti-fabrication: specific 8th-digit letters asserted only where source-confirmed this run (RX350 'Z',
+  Nautilus '9'). For the Nautilus 2.7T (no source this run) and single-engine HR-V, made the accurate
+  structural point rather than inventing a letter. Two latent engine-spec errors corrected in passing
+  (Nautilus GM-LTG mislabel -> Ford EcoBoost; HR-V L15B -> R18Z9), per no-fabrication + look-ahead-
+  correction discipline.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all
+  orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html but DISJOINT slugs
+  (UX/Ram/Crosstrek 07-06, Forester/G70/Insight 07-05, etc.) -- additive JS data on different keys, no
+  shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No
+  Re-sync needed.
+  Syntax-check: PASS (new Function per-script gate, exit 0, Scripts 2 & 5 OK; truncation guard: 17627
+  lines / 5 closing </script> present / brace-eval clean). Dead-links: verified (only new href is
+  /decode/, an existing page; source names in prose only). Scanner: PASS (scanned 431 files, no secrets).
+  Commit: 4efac49.
+
 #### autovetting-vinnote-batch-2026-07-06 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
