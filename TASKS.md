@@ -111,6 +111,46 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-08 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-08 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-08.md (gitignored), TASKS.md
+- Commit: 8260f15
+- Notes:
+  2026-07-08 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
+  strategic-threat memo, a positioning decision, not a build one). No new-vehicle launch queued, so
+  drained the next 3 Strong-tier vinNote rows (64 subaru-impreza-2018, 65 toyota-4runner-2018,
+  66 honda-fit-2018). Each verified genuinely MISSING vinNote via per-block check first. Queue 164 -> 161
+  rows. vinNote count 83 -> 86. All facts WebSearch-verified 2026-07-08:
+  (1) subaru-impreza-2018 (5th-gen GK/GT) -- SINGLE engine: direct-injection 2.0L FB20 boxer (152hp) is
+      the only powertrain. Subaru carries the engine family in VIN positions 4-5 (FB), NOT the 8th digit
+      (8th = occupant-restraint code; cars101 + Subaru VIN-codes wikibook). Real variable = transmission:
+      5-speed manual standard only on 2.0i base + 2.0i Sport, all other trims Lineartronic CVT; all AWD.
+      CORRECTED latent error: engine field said "6-speed manual" -> 2018 Impreza manual is a 5-SPEED
+      (Subaru of America 2018 press kit; U.S. News 2018 specs). Fixed 6->5-speed.
+  (2) toyota-4runner-2018 (5th-gen N280) -- SINGLE engine: 4.0L 1GR-FE V6 (270hp) + 5-speed auto only.
+      Toyota encodes the engine in the 5th VIN char (U = 1GR-FE), NOT the 8th (8th = model line; NHTSA
+      4Runner VIN coding file, AMSOIL, carpartplanet "VIN U 5th digit 1GR-FE"). Real variable = drivetrain
+      (SR5/TRD Off-Road part-time 4WD; Limited full-time 4WD w/ locking center diff; SR5/Limited also 2WD).
+  (3) honda-fit-2018 (GK gen) -- ENGINE-CODE CORRECTION (latent fabrication): checklist said L15B7 in the
+      engine field, summary, AND one item title. The US GK Fit uses the NA 1.5L L15B1 (130hp DOHC i-VTEC);
+      L15B7 is the turbocharged Civic/CR-V 1.5T and appears in a Fit only as an aftermarket swap (AMSOIL
+      2015 Fit L15B1; Honda L-engine Wikipedia; Axion "L15B7 swap kit" for GK5 = confirms not stock).
+      Corrected all 3 in-block L15B7 -> L15B1, scoped to the Fit block only (the 15 remaining global L15B7
+      mentions are legit Civic/CR-V/Accord 1.5T and were left untouched). Single engine -> Honda carries
+      model/engine in 6th VIN char, 8th digit encodes grade/body not powertrain; real variable = trans
+      (6MT lower trims vs CVT), verify HCF-2 fluid history.
+  Anti-fabrication: NO 8th-digit engine letter asserted for any slug -- all three single-engine, so the
+  honest structural point was made instead of inventing a letter. Two engine-spec errors corrected in
+  passing (Impreza 6->5-speed; Fit L15B7->L15B1), each multi-source WebSearch-verified before changing.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/, next=AutoTrader),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html -- all additive
+  per-slug data with Started dates present (checked; no missing-Started backfill needed). No Re-sync needed.
+  Syntax-check: PASS (node validator, all scripts OK). Dead-links: verified (no new links added; vinNotes
+  are plain prose). Scanner: PASS (434 files, no secrets). Gate-check: 27 pass / 2 warn / 0 CRIT.
+
 #### autovetting-vinnote-batch-2026-07-07 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
