@@ -8968,7 +8968,8 @@ const CHECKLISTS = {
 
   'subaru-impreza-2018': {
     year: 2018, make: 'Subaru', model: 'Impreza', trim: '2.0i / Premium / Sport / Limited (5th gen GK/GT)',
-    engine: '2.0L FB20 Boxer-4 (152hp) with Lineartronic CVT or 6-speed manual',
+    engine: '2.0L FB20 Boxer-4 (152hp) with Lineartronic CVT or 5-speed manual',
+    vinNote: "Single engine — every 2018 (5th-gen GK/GT) Impreza uses the direct-injection 2.0L FB20D boxer-4 (152hp), so there is no engine to disambiguate by VIN. Subaru carries the engine family in VIN positions 4–5 (FB), not the 8th digit; the 8th character is the occupant-restraint/safety-configuration code. The variable worth confirming is the transmission — the 5-speed manual was standard only on the 2.0i base and 2.0i Sport, while every other trim (and the majority of builds) is the Lineartronic CVT. All trims are symmetrical AWD.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "5th-gen Impreza on the SGP platform is the most advanced Impreza ever made. Standard AWD on all trims, updated FB20 engine, and available EyeSight. Head gasket failures that plagued EJ-series engines are minimal on the FB-series. Oil consumption check at 80k+ miles is still good practice. Strong value as an all-weather commuter.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 75, topComplaintArea: 'FB20 oil consumption / CVT fluid / EyeSight windshield' },
@@ -9111,6 +9112,7 @@ const CHECKLISTS = {
   'toyota-4runner-2018': {
     year: 2018, make: 'Toyota', model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)',
     engine: '4.0L 1GR-FE V6 (270hp)',
+    vinNote: "Single engine — the US 5th-gen (N280) 4Runner offered only the 4.0L 1GR-FE V6 (270hp) with a 5-speed automatic, so nothing on the powertrain changes by VIN. Toyota encodes the engine in the 5th VIN character (U = 1GR-FE), not the 8th; the 8th digit identifies the model line. The spec that actually varies is the drivetrain — SR5 and TRD Off-Road run part-time 4WD, the Limited runs full-time 4WD with a lockable center differential, and SR5/Limited were also sold in rear-drive 2WD. Confirm which one the specific truck is before you negotiate.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 5th-gen 4Runner has run nearly unchanged since 2010 — which means a proven, documented reliability record and broad aftermarket support. The 4.0L 1GR-FE V6 is virtually bulletproof past 300k miles. The off-road capability (especially TRD Pro and TRD Off-Road) is genuine. Fuel economy is poor (17 city, 19 hwy). Rust on salt-belt trucks and catalytic converter theft are the primary concerns.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 85, topComplaintArea: 'Frame rust (salt-belt) / catalytic converter theft / dated interior' },
@@ -9822,9 +9824,10 @@ const CHECKLISTS = {
 
   'honda-fit-2018': {
     year: 2018, make: 'Honda', model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)',
-    engine: '1.5L L15B7 I4 (130hp) with CVT or 6-speed manual',
+    engine: '1.5L L15B1 I4 (130hp) with CVT or 6-speed manual',
+    vinNote: "Engine-code correction — the US-market 2018 Fit (GK gen) uses the naturally-aspirated 1.5L L15B1 (130hp DOHC i-VTEC), not the turbocharged L15B7; the L15B7 is the Civic/CR-V 1.5T and only appears in a Fit as an aftermarket swap. With a single engine there is nothing to disambiguate by VIN — Honda carries the model/engine in the 6th VIN character and the 8th digit encodes grade/body within the line, not the powertrain. The variable worth confirming is the transmission: a 6-speed manual was offered on lower trims while EX/EX-L/Touring (and most builds) are CVT — verify the HCF-2 CVT-fluid service history.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The GK Fit is one of the most practical subcompact cars ever made — the Magic Seat system creates more usable space configurations than any car in its class. The 1.5L L15B7 naturally-aspirated engine is reliable and fuel-efficient. CVT fluid service every 30k miles. Discontinued after 2020 in North America, making used supply finite — prices hold well.",
+    summary: "The GK Fit is one of the most practical subcompact cars ever made — the Magic Seat system creates more usable space configurations than any car in its class. The 1.5L L15B1 naturally-aspirated engine is reliable and fuel-efficient. CVT fluid service every 30k miles. Discontinued after 2020 in North America, making used supply finite — prices hold well.",
     stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid service / Takata airbag (some builds)' },
     sections: [
       { title: 'Powertrain', items: [
@@ -9832,7 +9835,7 @@ const CHECKLISTS = {
           desc: 'CVT requires HCF-2 fluid every 30k miles. Neglected fluid leads to shudder and failure.',
           check: '<strong>Request CVT fluid service history.</strong>',
           cost: '$200–$400 service / $3,500–$5,000 CVT', source: 'Honda CVT service standard' },
-        { title: '1.5L L15B7 reliability', risk: 'low', riskLabel: 'Low Risk',
+        { title: '1.5L L15B1 reliability', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Naturally-aspirated and exceptionally reliable.',
           check: '<strong>Standard check.</strong>',
           cost: 'Maintenance only', source: 'Honda L15 track record' }
