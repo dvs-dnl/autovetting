@@ -9874,6 +9874,7 @@ const CHECKLISTS = {
   'mazda-mazda6-2018': {
     year: 2018, make: 'Mazda', model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)',
     engine: '2.5L SkyActiv-G I4 (187hp) / 2.5T SkyActiv-T Turbo I4 (227hp)',
+    vinNote: "Two engines share the 2018 GJ Mazda6 — confirm which you are buying. The naturally-aspirated 2.5L SkyActiv-G (PY-VPS, 187 hp) powers Sport and Touring; the turbocharged 2.5T SkyActiv-G (PY-VPTS, 227 hp on 87 octane / 250 hp on 93) powers Grand Touring, Grand Touring Reserve, and Signature. Mazda encodes the engine in the 8th VIN character, but the reliable tell is trim badge plus the physical turbo/intercooler plumbing the NA car lacks. Match trim to engine: a Signature with no turbo, or a Sport claimed as 2.5T, is a red flag.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The GJ Mazda6 is one of the best midsize sedans ever built — genuinely premium interior quality, engaging chassis, and excellent reliability. Discontinued in North America after 2023, making used supply finite. The 2.5T Turbo (Signature/Grand Touring) is a meaningful upgrade. No significant failure modes documented. Outstanding value against Accord and Camry.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 55, topComplaintArea: 'Minimal — limited cargo space / discontinued availability' },
@@ -9920,13 +9921,14 @@ const CHECKLISTS = {
 
   'toyota-chr-2018': {
     year: 2018, make: 'Toyota', model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)',
-    engine: '2.0L 3ZR-FBE I4 (144hp) with CVT — FWD only',
+    engine: '2.0L 3ZR-FAE I4 (144hp) with CVT — FWD only',
+    vinNote: "The 2018 US C-HR is single-powertrain across every trim (LE/XLE/XLE Premium): one 2.0L 3ZR-FAE Valvematic four (144 hp US-spec) with a CVT, FWD only — no AWD and no alternate engine on the US car. The 8th VIN digit therefore does not fork an engine here; decoding only confirms a genuine North-American 3ZR-FAE C-HR. Any listing claiming AWD or a turbo is a non-US import or mislabeled.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The AX10 C-HR is Toyota's most distinctive styling departure — available only in FWD with a 2.0L engine and CVT. Extremely reliable with no significant failure modes documented. Limited power (144hp) is the honest tradeoff. No AWD is a real limitation for snowy climates. Outstanding reliability for urban buyers who prioritize style and low ownership cost.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 45, topComplaintArea: 'FWD-only limitation / limited power / limited cargo access' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '2.0L 3ZR-FBE engine reliability', risk: 'low', riskLabel: 'Low Risk',
+        { title: '2.0L 3ZR-FAE engine reliability', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Toyota naturally-aspirated 4-cylinder with outstanding reliability record.',
           check: '<strong>Standard check — cold-start, oil level, smooth acceleration.</strong>',
           cost: 'Maintenance only', source: 'Toyota 3ZR reliability' },
@@ -10385,26 +10387,27 @@ const CHECKLISTS = {
 
   'toyota-highlander-hybrid-2018': {
     year: 2018, make: 'Toyota', model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)',
-    engine: '3.5L 2GR-FKS V6 + Hybrid system (306hp combined)',
+    engine: '3.5L 2GR-FXS V6 + Hybrid system (306hp combined)',
+    vinNote: "Single hybrid powertrain across all trims: the 3.5L 2GR-FXS V6 (the hybrid-specific D-4S variant — the gas Highlander uses the 2GR-FKS) with Toyota eCVT and standard AWD-e, 306 hp combined. With only one drivetrain, the 8th VIN digit does not disambiguate an engine; the decode that matters is confirming this is the hybrid (2GR-FXS), not a gas XU50 badged up — verify the HV battery pack and Hybrid model code, then test the battery via mixed-driving fuel economy.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "XU50 Highlander Hybrid is one of the most family-capable hybrid SUVs available — 28+ mpg combined in a 3-row body with proven Toyota hybrid reliability. The 2GR-FKS + NiMH battery combination is extensively proven. Battery degradation is slow. Main buyer checks are identical to the standard Highlander plus HV battery health test.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 55, topComplaintArea: 'GDI carbon (2GR-FKS) / HV battery health / valve cover seeps' },
+    summary: "XU50 Highlander Hybrid is one of the most family-capable hybrid SUVs available — 28+ mpg combined in a 3-row body with proven Toyota hybrid reliability. The 2GR-FXS + NiMH battery combination is extensively proven. Battery degradation is slow. Main buyer checks are identical to the standard Highlander plus HV battery health test.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 55, topComplaintArea: 'GDI carbon (2GR-FXS) / HV battery health / valve cover seeps' },
     sections: [
       { title: 'Hybrid System', items: [
         { title: 'HV battery health', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Toyota Ni-MH hybrid battery should achieve 27–29 mpg combined. Degradation is gradual.',
           check: '<strong>Test fuel economy in mixed city/highway driving.</strong>',
           cost: '$2,500–$4,500 HV battery (rare failure on this platform)', source: 'Toyota hybrid reliability data' },
-        { title: '2GR-FKS V6 GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+        { title: '2GR-FXS V6 GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'GDI deposits on intake valves at 80k+ miles.',
           check: '<strong>Test idle smoothness and acceleration response.</strong>',
           cost: '$400–$800 walnut blast cleaning', source: 'GDI V6 carbon pattern' }
       ]},
       { title: 'Powertrain', items: [
-        { title: 'Valve cover oil seeps (2GR-FKS)', risk: 'monitor', riskLabel: 'Monitor',
+        { title: 'Valve cover oil seeps (2GR-FXS)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Oil seepage at valve covers past 100k miles.',
           check: '<strong>Inspect valve covers with engine warm.</strong>',
-          cost: '$400–$800 gaskets', source: 'Toyota 2GR-FKS pattern' }
+          cost: '$400–$800 gaskets', source: 'Toyota 2GR-FXS pattern' }
       ]},
       { title: 'Electrical', items: [
         { title: 'Entune / Toyota Multimedia', risk: 'low', riskLabel: 'Low Risk',
