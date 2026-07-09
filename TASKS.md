@@ -43,6 +43,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: embedding thesis REINFORCED (same conclusion as CarGurus 06-28) — marketplace = AI discovery front door (Carson) + VIN demand-gen; AutoVet = condition/recall/booking back end. VIN-granular infra across all marketplaces = good embed plumbing but the axis to watch. Escalation trigger to 🔴 = if Carson/VDP surfaces native per-VIN condition/reliability/recall beyond the NHTSA link, or Accu-Trade condition scoring goes consumer-side. Housekeeping (repeat of 06-18/06-28): add Cars.com + CarGurus + AutoTrader as a named "Marketplace/channel" archetype block in Competitor_Analysis.md — still open.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: AutoTrader (Cox Automotive) (#9) [Cox-wide acquisitions / any inspection-layer signals].
 
+  2026-07-09 04:00: profiled AutoTrader (Cox Automotive, #9) (🟡).
+    Output: Competitors/_Monitor/2026-07-09-autotrader-cox.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus) + autovet-seo-content (Content/blog/) orthogonal; Ready empty; Done(last 10) = vinnote-batches 2026-07-07/07-08 on inspect/index.html (subaru-impreza/toyota-4runner/honda-fit spec fixes) + recall-audit — none touch Competitors/ and none position an AutoVet feature against AutoTrader/Cox. No Re-sync needed.
+    Key delta: BASELINE — AutoTrader/Cox had no dedicated profile (only "acquirer not competitor" note in Competitor_Analysis.md). Deltas: (1) AutoTrader "AI Mode" consumer conversational shopping (NADA 2026, live inventory + KBB insights, filter pre-fill) — the Cox analogue to CarGurus Discover (06-28) / Cars.com Carson (07-02); leans on KBB valuation, NO native per-VIN condition/reliability/recall. (2) KBB ICO AI Remote Damage Assessment + Dynamic Condition Quiz ("coming soon," NADA 2026) — AI condition-from-CONSUMER-PHOTOS, but it is the trade-in/sell-side funnel (seller getting an appraisal), NOT buyer PPI; still the closest acquirer-tier condition-AI building block yet. (3) Cox full ownership of AiM (2025-09-08) — ~700 physical wholesale-inspection staff into Manheim; Cox now OWNS physical inspection. (4) vAuto x UVeye AI service-lane inspection (2026) — UVeye now inside BOTH acquirer ecosystems (Carfax 06-25 + Cox/vAuto); B2B service-lane only. (5) Fullpath acquisition = marketing CDP, orthogonal 🟢.
+    Implication: embedding thesis REINFORCED (AI Mode = better discovery front door, no condition back end = embed target). Acquirer thesis MODESTLY WEAKENED — "Cox lacks inspection tech" now weaker (owns AiM + building KBB condition-AI + UVeye in-ecosystem); but ALL Cox condition AI points sell-side/dealer/wholesale, NOT buyer-side — AutoVet buyer-PPI white space intact. Re-anchor messaging on buyer-side + independence + booking, NOT "unique AI condition." Escalation to 🔴 = KBB/vAuto condition AI surfaced buyer-side on an AutoTrader VDP, or Cox acquires a consumer PPI company. Housekeeping (repeat 06-18/06-28/07-02): add "Marketplace/channel" archetype block (AutoTrader+CarGurus+Cars.com) to Competitor_Analysis.md — still open.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: UVeye (#10) [funding / new partnerships / any consumer-facing moves — currently B2B-only; note UVeye now appears in both Carfax and Cox ecosystems].
+
 
 ### autovet-cpo-protocol-ingestion
 
@@ -103,6 +110,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/, next=Cars.com) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Mazda) orthogonal; Ready empty; Done(last 10) = vinnote-batches + recall-audit on inspect/index.html + pinpoint-relax — none touch a Toyota RAV4 slug or Content/blog/. No RAV4 launch in overnight-builder/vinnote queues. No Re-sync needed.
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Hyundai Tucson (#17, recent recall news), Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Jeep Grand Cherokee (#16).
 
+  2026-07-08 06:04: drafted 2018 Hyundai Tucson (3rd-gen TL, 2016-2021) pillar post — Tier-1 #17, highest-ranked fully-uncovered vehicle; recent recall news. Buyer story split by drivetrain: 2.0L Nu (164hp/6AT, SE/SEL/SEL+/Sport) = reliable-but-oil-consumption; 1.6T Gamma (175hp/7-speed dry DCT "EcoShift", Value/Limited) = the make-or-break risk (low-speed shudder/hesitation, $3-5k repair).
+    Output: Content/blog/2026-07-08-2018-hyundai-tucson-buyers-guide.md (1,908 words body, status: draft), Content/_seo-research/2026-07-08-2018-hyundai-tucson.md.
+    Recalls WebSearch-verified 2026-07-08: 20V-543 / Hyundai Recall 195 (ABS/HECU engine-fire "park outside", expanded 2020-12-30 to include 2016-2018 Tucson; 652,024 units 2016-2021, 12 fires, fuse-kit+SW remedy) = the CORRECT campaign for a 2018. Explicitly flagged 22V-056 (2014-15 Tucson + 2016-18 Santa Fe) and 23V-651 (2010-15 Tucson) as NOT-applicable-to-2018 so a seller can't point at the wrong campaign. CATALOG CORRECTION embedded: US 3rd-gen Tucson has NO 2.4L Theta II and NO CVT (same Kia/Hyundai mislabel pattern as prior vinnote fixes) — top-500 seed note's "Theta II rod-bearing" line is wrong for the Tucson; risk is Nu oil consumption + DCT. Nu oil-consumption campaign/warranty-extension number left [unverified] (warranty/service-campaign, not a confirmable NHTSA safety-recall # for the 2018 2.0L); 1.6T DCT reprogram noted as 2016-2017-scoped (Campaign 149 / TSB 16-01-038) with 2018 handled via TSB-class SW, bulletin # [unverified]. Referenced Hyundai 173-pt OEM CPO protocol (Product/CPO-Protocols/hyundai-certified.md, incl. its Tucson DCT drive-cycle + oil-sludge gate). Interlinks to 2019-honda-crv + 2019-toyota-rav4 + 2019-chevrolet-equinox + 2017-nissan-rogue (all confirmed present in /blog/).
+    Sibling check: no true conflict. Only recent Tucson touch = autovetting-vinnote-batch-2026-06-27 (Done, within 14d) which corrected hyundai-tucson-2022 (NX4, 4th gen) transmission spec in inspect/index.html — DIFFERENT generation + different file tree (inspect/ not Content/blog/); this post covers the 3rd-gen TL, cleanly distinct and factually aligned (also affirms no-CVT). In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html + recall-audit — none touch a Hyundai Tucson slug in Content/blog/. No Tucson launch in overnight-builder/vinnote queues. No Re-sync needed.
+    Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Jeep Grand Cherokee (#16), Ford Edge (#19).
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
@@ -110,6 +123,45 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 *(none)*
 
 ## Done (last 10)
+
+#### autovetting-vinnote-batch-2026-07-09 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-09 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-09.md (gitignored), TASKS.md
+- Commit: 7658225
+- Notes:
+  2026-07-09 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
+  strategic-threat memo, a positioning decision, not a build one). No new-vehicle launch queued, so
+  drained the next 3 Strong-tier vinNote rows (67 mazda-mazda6-2018, 68 toyota-chr-2018,
+  69 toyota-highlander-hybrid-2018). Each verified genuinely MISSING vinNote via per-block check first.
+  Queue 161 -> 158 rows. vinNote count 86 -> 89. All facts WebSearch-verified 2026-07-09:
+  (1) mazda-mazda6-2018 (GJ) -- REAL two-engine fork. NA 2.5L SkyActiv-G (PY-VPS, 187hp) on
+      Sport/Touring; turbo 2.5T SkyActiv-G (PY-VPTS, 227hp@87 / 250hp@93) on Grand Touring / GT Reserve
+      / Signature (Mazda USA 2018 press kit; Cars.com first drive). 8th VIN char encodes engine but the
+      specific turbo-vs-NA letter was NOT source-confirmed this run -> forked the note via confirmed
+      engine-family codes + trim->engine map + physical turbo/intercooler tell; no VIN letter invented.
+  (2) toyota-chr-2018 (AX10) -- SINGLE powertrain (2.0L 3ZR-FAE Valvematic 144hp US, CVT, FWD only) ->
+      structural note. CORRECTED latent error: engine code read 3ZR-FBE (flex-fuel/LPG variant) in the
+      engine field + an item title; both fixed to 3ZR-FAE, the actual US engine (AMSOIL; motorreviewer;
+      cararac). Global 3ZR-FBE was 2 (both in-block); 0 remain.
+  (3) toyota-highlander-hybrid-2018 (XU50) -- SINGLE hybrid powertrain (3.5L 2GR-FXS D-4S V6 + eCVT +
+      AWD-e, 306hp combined) -> structural note. CORRECTED latent error: 6 in-block "2GR-FKS" (the
+      GAS-model code) -> 2GR-FXS (hybrid-specific variant): engine field, summary, stats, 2 item titles,
+      1 source (U.S. News 2017/2018 HL Hybrid specs; JDM listings "Highlander Hybrid 2GR-FXS").
+      Scoped to the hybrid block ONLY -- the 39 remaining 2GR-FKS mentions (Tacoma/Avalon/RX350/Camry
+      V6 etc.) are legit gas references, left untouched (verified via diff).
+  Anti-fabrication: NO 8th-digit engine letter asserted where unconfirmed -- all three notes made the
+  honest structural/family-code point instead. Two latent engine-spec errors corrected in passing
+  (C-HR FBE->FAE; HL-Hybrid FKS->FXS), each multi-source verified + block-scoped.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/, next=AutoTrader),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html -- all additive
+  per-slug data with Started dates present (checked; no missing-Started backfill needed). No Re-sync needed.
+  Syntax-check: PASS (node validator, all scripts OK; no truncation, 17,633 lines / tail ends at </html>).
+  Dead-links: verified (no new links; vinNotes plain prose). Scanner: PASS (439 files, no secrets).
+  Remote main == local HEAD confirmed via HTTPS ls-remote pre-push (ahead-14 is only a stale origin/main
+  tracking ref; SSH remote unfetched, runs push via explicit HTTPS URL).
 
 #### autovetting-vinnote-batch-2026-07-08 — ready (pushed directly)
 
