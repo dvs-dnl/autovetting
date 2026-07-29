@@ -10065,6 +10065,7 @@ const CHECKLISTS = {
   'toyota-prius-prime-2017': {
     year: 2017, make: 'Toyota', model: 'Prius Prime', trim: 'Plus / Premium / Advanced (ZVW52)',
     engine: '1.8L 2ZR-FXE Hybrid I4 + 8.8 kWh plug-in battery (121hp system / 25 mi EV)',
+    vinNote: "The 2017 Prius Prime (model code ZVW52) came with exactly one powertrain — the 1.8L 2ZR-FXE Atkinson-cycle hybrid four paired with the 8.8 kWh plug-in battery — so there is no engine-family choice to decode. Per NHTSA's Toyota Prius VIN coding, the 8th VIN digit identifies the 2ZR-FXE hybrid system rather than selecting between engines. The check that matters on a Prime is confirming the VDS decodes to a ZVW52 plug-in Prime and not a standard ZVW50/51 liftback — only the Prime carries the larger plug-in pack and ~25 mi of EV range, and mislabeled listings are common. Run the full VIN at nhtsa.gov before purchase to confirm any open campaigns are closed.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The Prius Prime is the PHEV version of the Gen 4 Prius — 25 miles of EV range covers most daily commutes, then seamless hybrid mode. The 1.8L Toyota hybrid system is among the most proven powertrains in the industry. Plug-in battery health check at 80k+ miles. Minimal known failure modes. Outstanding total cost of ownership for urban buyers.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 40, topComplaintArea: 'Plug-in battery health / cargo space (5 seats only in Prime)' },
@@ -10342,10 +10343,11 @@ const CHECKLISTS = {
   },
 
   'mazda-cx5-2017': {
-    year: 2017, make: 'Mazda', model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)',
-    engine: '2.5L SkyActiv-G I4 (187hp) / 2.5T SkyActiv-T Turbo I4 (227hp Signature)',
+    year: 2017, make: 'Mazda', model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)',
+    engine: '2.5L SkyActiv-G I4 (187hp) — sole engine for 2017 (2.5T turbo arrived 2019)',
+    vinNote: "For 2017 there is only one engine to decode — the 2.5L SkyActiv-G PY-VPS naturally-aspirated four (187 hp). The 2.5T SkyActiv-T turbo and the Signature trim did not arrive until the 2019 model year, so any 2017 KF CX-5 advertised as a 'turbo' or 'Signature' is mislabeled. Because the powertrain is uniform across 2017 trims, the 8th VIN digit is not an engine differentiator here; the useful VIN checks are the 10th digit (model year — code H confirms 2017, so you are not looking at a later turbo car) and a full decode at nhtsa.gov to confirm the Denso fuel-pump recall (21V-875, 2018-2019 cars only) is out of range and any AWD or other campaigns are closed.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The KF CX-5 (2017+) is the definitive mainstream compact SUV — best-in-class interior quality, engaging chassis, and exceptional reliability. The 2.5L naturally-aspirated is the proven baseline; the 2.5T Turbo is available on Signature trim. Direct injection does not carbon-foul at the same rate as German competitors due to Mazda's dual-port/direct injection approach. Outstanding used value.",
+    summary: "The KF CX-5 (2017+) is the definitive mainstream compact SUV — best-in-class interior quality, engaging chassis, and exceptional reliability. The 2.5L naturally-aspirated is the sole engine for 2017 (the 2.5T turbo and Signature trim did not arrive until 2019). Direct injection does not carbon-foul at the same rate as German competitors due to Mazda's dual-port/direct injection approach. Outstanding used value.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 60, topComplaintArea: 'Minimal — cargo space vs class average / Mazda Connect interface preference' },
     sections: [
       { title: 'Powertrain', items: [
@@ -11880,6 +11882,7 @@ const CHECKLISTS = {
   'cadillac-xt5-2017': {
     year: 2017, make: 'Cadillac', model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum (1st gen, 2017–2023)',
     engine: '3.6L LGX V6 (310 hp) with 8-speed automatic',
+    vinNote: "8th VIN digit engine code: 'S' = 3.6L LGX V6 (RPO LGX, ~310 hp, 8-speed automatic) — the only engine offered in the 2017 XT5, so the 8th digit simply confirms the LGX rather than selecting between engines. Do not confuse the XT5's LGX with the older SRX it replaced, which used the LF1/LFX 3.6L; a genuine XT5 VIN decodes to the LGX (8th digit S). The LGX runs Active Fuel Management (cylinder deactivation), so AFM lifter longevity and the timing chain both depend on clean oil — verify oil-change history. Run the full VIN at nhtsa.gov to confirm any open campaigns are closed before purchase.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The XT5 is Cadillac's mid-size luxury crossover replacement for the SRX. The 3.6L LGX V6 is proven and reliable. The main buyer concerns are the timing chain on the LGX (which is robust but fails if oil is neglected at high mileage), oil cooler seal leaks, and infotainment (CUE system on early models is slow and the touchpad wears out). 2019+ CUE updates improved the interface significantly.",
     stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 230, topComplaintArea: 'Electrical / CUE Infotainment' },
@@ -15640,7 +15643,7 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' },
       { model: 'CX-90', trim: 'Select / Preferred / Carbon Edition / Premium / PHEV', key: 'mazda-cx90-2024' }
     ],
@@ -15771,7 +15774,7 @@ const VEHICLE_MENU = {
     'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
@@ -15920,7 +15923,7 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
@@ -16106,7 +16109,7 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
@@ -16285,7 +16288,7 @@ const VEHICLE_MENU = {
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
@@ -16454,7 +16457,7 @@ const VEHICLE_MENU = {
     'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
@@ -16601,7 +16604,7 @@ const VEHICLE_MENU = {
     'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM/BN gen)', key: 'mazda3-2014' },
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium', key: 'mazda3-2019' },
@@ -16729,7 +16732,7 @@ const VEHICLE_MENU = {
     'Lexus': [ { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' } ],
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
-      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring / Signature (KF 2nd gen)', key: 'mazda-cx5-2017' },
+      { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
