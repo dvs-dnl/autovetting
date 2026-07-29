@@ -116,6 +116,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no true conflict. Only recent Tucson touch = autovetting-vinnote-batch-2026-06-27 (Done, within 14d) which corrected hyundai-tucson-2022 (NX4, 4th gen) transmission spec in inspect/index.html — DIFFERENT generation + different file tree (inspect/ not Content/blog/); this post covers the 3rd-gen TL, cleanly distinct and factually aligned (also affirms no-CVT). In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html + recall-audit — none touch a Hyundai Tucson slug in Content/blog/. No Tucson launch in overnight-builder/vinnote queues. No Re-sync needed.
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Jeep Grand Cherokee (#16), Ford Edge (#19).
 
+  2026-07-29 15:31: drafted 2015 Jeep Grand Cherokee (WK2, 2011-2021; post-2014 refresh) pillar post -- Tier-1 #16, highest-ranked fully-uncovered vehicle; FIRST Jeep post (diversifies the mesh, which skewed Toyota/Honda/Ford/Chevy). Buyer story = three-engine fork (3.6L Pentastar V6 value pick / 5.7L Hemi tow pick / 3.0L EcoDiesel high-risk emissions-settlement pick) + air-suspension + TIPM, gated by two must-confirm recalls.
+    Output: Content/blog/2026-07-29-2015-jeep-grand-cherokee-buyers-guide.md (1,832 words body, status: draft), Content/_seo-research/2026-07-29-2015-jeep-grand-cherokee.md.
+    Recalls WebSearch-verified 2026-07-29 and DISAMBIGUATED (aggregators mislabel these): 16V-240 / FCA S27 (monostable gear-selector rollaway, 2014-2015 Grand Cherokee + 2012-2014 Charger/300, the Anton-Yelchin recall) = headline; 15V-461 / FCA R40 (Uconnect radio remote-hacking, 2014-2015 GC among ~1.4M units, the Miller/Valasek "first cybersecurity recall") -- NOTE one prominent source mislabels 15V-461 as a TIPM fuel-pump recall; authoritative source confirms it is the radio-security campaign. Takata by-VIN (no single campaign #). CORRECTION embedded: alternator recall 17V-435 covers 2011-2014 GC and generally EXCLUDES MY2015 (buyer trap corrected). TIPM fuel-pump-relay stall left as a described known-issue / inspection priority with campaign # [unverified] rather than fabricated (avoided reusing 15V-461, which is NOT the TIPM number). EcoDiesel 2014-2016 emissions settlement (approved emissions modification + extended warranty + ~$3k payment) framed as both risk flag and negotiation lever. No FCA/Jeep CPO protocol file exists yet (rotation done Toyota->...->Lexus/Mazda) -- CTA notes OEM-aligned protocol forthcoming. Interlinks to 2020-ford-explorer + 2017-chrysler-pacifica (Stellantis sibling) + 2010-lexus-rx350 (all confirmed present in /blog/).
+    Sibling check: no overlaps. No Jeep/Grand Cherokee slug anywhere in TASKS.md (In-flight, Ready [empty], Done last 10). In-flight autovet-competitor-monitor (Competitors/, next=UVeye) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) orthogonal; Done(last 10) = vinnote-batches + recall-audit on inspect/index.html, none touch a Grand Cherokee slug or Content/blog/. No overnight-builder/vinnote/content-checklist task launching a Grand Cherokee. No Re-sync needed.
+    Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Ford Edge (#19, 2.0T water pump / PTU), Toyota Highlander (#20, clean-reliability palate-cleanser).
+
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
@@ -124,12 +130,50 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-vinnote-batch-2026-07-29 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-29 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-29.md (gitignored), TASKS.md
+- Commit: 639ae6e (work); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  2026-07-29 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
+  strategic-threat memo, a positioning decision, not a build one; no "lift freeze" reply present). No
+  new-vehicle launch queued, so drained the next genuinely-missing Strong-tier vinNote rows: pri 74
+  toyota-prius-prime-2017, 75 mazda-cx5-2017, 76 cadillac-xt5-2017. Each verified missing via a
+  per-block check first. Queue 156 -> 153 rows; vinNote count 92 -> 95. Facts verified 2026-07-29:
+  (1) toyota-prius-prime-2017 (ZVW52) -- SINGLE powertrain (structural note). Only the 1.8L 2ZR-FXE
+      Atkinson hybrid + 8.8 kWh plug-in. Per NHTSA vPIC W5(A)-00 Toyota Prius VIN coding the 8th digit
+      encodes the 2ZR-FXE hybrid variant, not an engine choice. NO Prime-specific 8th-digit letter
+      invented (the NHTSA table is standard ZVW51/55, not the ZVW52 Prime) -> note redirects to the VDS
+      check (confirm genuine ZVW52 plug-in Prime vs a standard ZVW50/51 liftback).
+  (2) mazda-cx5-2017 (KF) -- SINGLE 2.5L NA + look-ahead CORRECTION. 2017 had only the 2.5L SkyActiv-G
+      PY-VPS (187hp); the 2.5T turbo + Signature trim are MY2019+. Fixed catalog fields: trim (dropped
+      Signature), engine (dropped 2.5T), summary (removed the turbo sentence), + all 8 VEHICLE_MENU trim
+      labels. vinNote routes to 10th-digit year (H=2017) and scopes Denso fuel-pump recall 21V-875
+      (2018-2019 only, WebSearch-verified, matches mazda-certified protocol) out of range for 2017.
+  (3) cadillac-xt5-2017 (LGX) -- 8th digit 'S' = 3.6L LGX V6 (RPO LGX, ~310hp, 8AT), the sole 2017
+      engine; 'S' confirmed across multiple OEM parts listings ("3.6L VIN S 8th digit opt LGX"). Note
+      warns vs confusing XT5 LGX with the SRX's older LF1/LFX and ties AFM lifter/timing-chain life to
+      oil-change history.
+  Anti-fabrication: VIN letters asserted only where source-confirmed (XT5 'S'). Prius Prime + CX-5 2017
+  are single-engine -> structural notes, no letter invented; CX-5 look-ahead turbo/Signature corrected
+  rather than propagated.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/, next=UVeye),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lexus), autovet-seo-content (Content/blog/)
+  all orthogonal; Ready empty; Done(last 10) = prior vinnote-batches on inspect/index.html -- additive
+  per-slug data on DISJOINT slugs, every recent sibling carries a - Started: date (checked; no missing-
+  Started backfill needed). No Re-sync needed.
+  Syntax-check: PASS (node validator, exit 0; re-run after menu-label fix; truncation guard 17,639 lines).
+  Dead-links: verified (no new links; vinNotes plain prose, nhtsa.gov as text). Scanner: PASS (445 files,
+  no secrets, exit 0).
+
 #### autovetting-vinnote-batch-2026-07-10 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
 - Started: 2026-07-10 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
 - Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-10.md (gitignored), TASKS.md
-- Commit: __COMMIT__
+- Commit: e419bd5
 - Notes:
   2026-07-10 02:00: Launch freeze still active (most recent Awaiting-Daniel item = 2026-06-25 Carfax
   strategic-threat memo, a positioning decision, not a build one). No new-vehicle launch queued, so
@@ -461,45 +505,3 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   (GV80/Sorento/Telluride 07-01, Trailblazer/Seltos/Sienna 06-30, etc.) -- additive JS data, different keys,
   no shared-slug conflict; every recent inspect/index.html Done sibling carries a - Started: date. No Re-sync.
   Syntax-check: PASS (twice). Dead-links: verified (no new href). Scanner: PASS. Commit: ba26757.
-
-#### autovetting-vinnote-batch-2026-07-01 — ready (pushed directly)
-
-- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
-- Started: 2026-07-01 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
-- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-07-01.md (gitignored), TASKS.md
-- Commit: 8a88a61 (work); this docs(tasks) record follows in a same-cadence follow-on push.
-- Notes:
-  Drained vinnote-queue priorities 35/36/37 (queue top 35 -> 38 = mazda-cx30-2020). Added `vinNote`
-  to three checklists in inspect/index.html (vinNote 62 -> 65). All three engine fields were already
-  accurate -- no look-ahead correction needed. 8th-digit encodings verified 2026-07-01 against REAL
-  for-sale/auction VINs (not just decoder-table summaries):
-  (1) genesis-gv80-2021 (JX1, WMI KMU) -- 8th digit 'B' = 2.5T I4 (300 hp), 'C' = 3.5T twin-turbo V6
-  (375 hp); 5th digit mirrors B/C. Confirmed: 2.5T KMUHBDSB1MU059976 / KMUHB4SB7MU042647 (...B...B)
-  vs 3.5T KMUHCESC0MU046230 / KMUHCESC3TU301063 (...C...C). Both 8AT, RWD/AWD; no engine-family fork
-  in the inspection. Sources: CarGurus/Carfax/Edmunds VIN patterns, eBay OEM (VIN C 3.5L).
-  (2) kia-sorento-2021 (MQ4) -- 8th digit 'C' = 2.5L NA (191 hp, 8AT), 'F' = 2.5T turbo (281 hp, wet
-  8-DCT), 'G' = 1.6T hybrid (227 hp). Confirmed: LX 2.5L 5XYRG4LC8MG067297 / 5XYRG4LC9MG025835 (8th=C);
-  SX 2.5T 5XYRKDLF7MG028323 / ...F7MG027592 / ...F8MG030999 (8th=F, all 281hp); Hybrid
-  KNDRH4LG0M5040717 (8th=G) + reman-engine.com VIN G=HEV. vinNote routes DCT-shudder to the F car;
-  none is Theta II. PHEV noted as separate KNDR variant (verify by full VIN). NB: generic decoder
-  summaries claimed 'A'=2.5T; real US VINs show F -> used VIN-verified letters.
-  (3) kia-telluride-2020 -- single engine, 8th digit 'C' = 3.8L Lambda II GDI V6 (291 hp, 8AT); no
-  fork. vinNote keys on FWD-vs-HTRAC-AWD (coupling-fluid variable) + launch-year recall check.
-  Sources: eBay OEM + reman-engine.com (2020-24 Telluride 3.8L = VIN C).
-  Sibling check: only inspect/index.html + TASKS.md are git-tracked (queue + Build-Log under _hub/
-  gitignored). inspect/index.html shared with prior Done vinnote-batches (06-30 f1a4841 / 06-29 / 06-28
-  ...) -- all on origin (verified origin/main == local HEAD pre-commit at 912866a); this commit is
-  sequential on top; edits are additive top-level vinNote fields only, no overlap with
-  recall-data/engine/blogUrl/inspectUrl/render. In-flight autovet-competitor-monitor (Competitors/),
-  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/)
-  orthogonal. Ready section empty. All Done siblings sharing inspect/index.html carry Started dates --
-  no backfill needed. No Re-sync needed.
-  Syntax-check: PASS (SKILL node validator, scripts 2 & 5 OK, exit 0; trailing commas inserted on
-  first pass, no re-run). Braces 4998/4998. 17,610 -> 17,613 lines; tail </html> intact (no truncation).
-  Dead-links: verified (only <a href="/decode/"> used = exists; NHTSA/vPIC cited as plain text).
-  Scanner: PASS (scan_for_secrets.py, 414 files, exit 0).
-  Push: work commit 8a88a61 to origin/main via explicit HTTPS URL + GIT_ASKPASS PAT (gate 27 pass /
-  2 warn / 0 CRITICAL). ls-remote origin/main == 8a88a61; tracking ref refreshed; leftover FUSE
-  lock/stale files cleared by rename.
-  Detail: _hub/Build-Log/2026-07-01.md.
-
