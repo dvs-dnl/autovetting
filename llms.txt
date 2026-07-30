@@ -26,10 +26,17 @@ AutoVetting is a free, unbiased used-car research platform built for buyers who 
 
 
 
+
 ## Blog
 
 Source-backed buyer's guides for specific used vehicles. Each guide covers known issues, NHTSA recalls to verify by VIN, best and worst configurations, market pricing, and inspection priorities.
 
+- [2015 Jeep Grand Cherokee Pre-Purchase Inspection Checklist: What to Check Before You Buy](https://autovetting.com/blog/2015-jeep-grand-cherokee-buyers-guide/): 
+- [2018 Hyundai Tucson Pre-Purchase Inspection Checklist: What to Check Before You Buy](https://autovetting.com/blog/2018-hyundai-tucson-buyers-guide/): 
+- [2019 Toyota RAV4 Pre-Purchase Inspection Checklist: What to Check Before You Buy](https://autovetting.com/blog/2019-toyota-rav4-buyers-guide/): 
+- [2019 Chevrolet Malibu Pre-Purchase Inspection Checklist: What to Check Before You Buy](https://autovetting.com/blog/2019-chevrolet-malibu-buyers-guide/): 
+- [2020 Ford Explorer Pre-Purchase Inspection Checklist: What to Check Before You Buy](https://autovetting.com/blog/2020-ford-explorer-buyers-guide/): What to check before buying a used 2020 Ford Explorer: the 10-speed transmission story, the rear-axle-bolt and rollaway recalls (20V693, 22V255, 23V675, 23V069), the botched-launch build-quality…
+- [Buying a 2019 Chevrolet Equinox: what to check before you sign](https://autovetting.com/blog/2019-chevrolet-equinox-buyers-guide/): What to check before buying a used 2019 Chevy Equinox: the 1.5L turbo oil-consumption story, timing-chain cold-start rattle, the start-stop accumulator recall (20V668), the brake-caliper recall…
 - [Buying a 2017–2022 Honda CR-V: the honest guide](https://autovetting.com/blog/2019-honda-crv-buyers-guide/): What to check before buying a used 5th-gen Honda CR-V (2017–2022): 1.5T oil dilution years, the Denso fuel-pump recall (21V215/23V858), the 2019 steering-wheel recall (19V383), best years, and the…
 - [Buying a 2016 Mazda MX-5 Miata (ND): the honest guide](https://autovetting.com/blog/2016-mazda-mx5-miata-buyers-guide/): A used 2016-2020 Mazda MX-5 Miata (ND) buyer's guide: the airbag recall on nearly every car, ND1 vs ND2 engines, soft-top leaks, and the safest year to buy.
 - [Buying a 2019–2023 Nissan Altima: the honest guide](https://autovetting.com/blog/2019-nissan-altima-buyers-guide/): Everything you need to know before buying a used 6th-generation Nissan Altima (2019–2023, L34): why the 2.5L PR25DD is the smart pick and the 2.0L KR20DDET VC-Turbo is the one to scrutinize, the June…

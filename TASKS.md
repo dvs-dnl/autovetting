@@ -50,6 +50,20 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: embedding thesis REINFORCED (AI Mode = better discovery front door, no condition back end = embed target). Acquirer thesis MODESTLY WEAKENED — "Cox lacks inspection tech" now weaker (owns AiM + building KBB condition-AI + UVeye in-ecosystem); but ALL Cox condition AI points sell-side/dealer/wholesale, NOT buyer-side — AutoVet buyer-PPI white space intact. Re-anchor messaging on buyer-side + independence + booking, NOT "unique AI condition." Escalation to 🔴 = KBB/vAuto condition AI surfaced buyer-side on an AutoTrader VDP, or Cox acquires a consumer PPI company. Housekeeping (repeat 06-18/06-28/07-02): add "Marketplace/channel" archetype block (AutoTrader+CarGurus+Cars.com) to Competitor_Analysis.md — still open.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: UVeye (#10) [funding / new partnerships / any consumer-facing moves — currently B2B-only; note UVeye now appears in both Carfax and Cox ecosystems].
 
+  2026-07-29 16:40: profiled UVeye (#10) (🟡 — high side; first standalone profile).
+    Output: Competitors/_Monitor/2026-07-29-uveye.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Acura done 07-29, next=Infiniti) + autovet-seo-content (Content/blog/) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html (07-29 = prius-prime/cx5/xt5) — none touch Competitors/ or position AutoVet against UVeye. No Re-sync needed.
+    Key delta: Scan to Sold (launched 2026-06-02, adoption expanding through Jul) = UVeye's FIRST buyer-VISIBLE surface — drive-thru scan auto-generates retail listing assets (AI-polished photos, 360° video, interior imagery) pushed via Cox vAuto IMS to online listings shoppers browse; CEO quote: "extends the trust... to the shoppers browsing the same vehicles online." Shopper sees scan-derived IMAGERY, not the condition/defect report → 07-09 🔴 trigger brushed, NOT tripped. Also: Subaru of America OEM partnership (NADA 2026; 600+ retailers; OEM programs now GM/Toyota/BMW/Subaru); $191M Series D ext (Oct 2025, Woven Capital = Toyota's fund; ~$380.5M total; CarMax/GM also on cap table); scale 1,000+ systems / 3.5M vehicles/mo; Amazon + JLR named customers; MVT trucking deal 🟢; repositioned as "vehicle data intelligence" platform (inspection→recon quotes→BDC→merchandising).
+    Implication: buyer-side PPI white space intact (UVeye sells nothing to buyers; every scan dealer/seller-side) but narrowing at the retail surface — write the "seller-provided imagery ≠ independent inspection / paid by you, not the dealer" counter-positioning before scan-derived listing "transparency" normalizes. Acquirer thesis: "they'd need to buy AutoVet for inspection tech" now dead (UVeye = condition layer in BOTH acquirer ecosystems, Toyota-funded); live rationale = buyer-side funnel + independence + booking. Refined 🔴 triggers in profile: shopper-facing condition DATA (not imagery) on any consumer surface incl. Carfax reports (Forbes 06-23 "won't immediately" = the tell); any buyer-orderable UVeye product. Housekeeping: add UVeye to Competitor_Analysis.md as "condition-data supplier / acquirer-ecosystem layer" archetype when the marketplace-archetype block (open since 06-18) is written.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Self Inspection (#11) [funding follow-ons, product evolution].
+
+
+  2026-07-30 01:10: profiled Self Inspection (#11) (🟡 — high side; BASELINE profile, none existed — prior record = Business Plan §3 seed-round line only).
+    Output: Competitors/_Monitor/2026-07-30-self-inspection.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Infiniti) + autovet-seo-content (Content/blog/) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html (07-29 = prius-prime/cx5/xt5) — none touch Competitors/ or position AutoVet against Self Inspection. No Re-sync needed.
+    Key delta: $10M strategic round 2026-07-16 LED BY SHERYL SANDBERG (Sandberg Bernthal Venture Partners) + strategics U.S. AutoForce (tires) and Westlake Financial (doubling down from Feb-2025 $3M seed; ~$13M total). Repositioned as "System of Record for Vehicle Condition" / new "Vehicle Condition Intelligence" category — CEO quote is the explicit Carfax-analog play ("Vehicle history became standard… vehicle condition is going the same way"). Scale: 1M+ inspections; Stellantis Financial Services customer (lease-end + corp fleet); phone-only capture + AI damage/repair-cost detection + expert-review layer + OBD2; 7 B2B verticals incl Tires (explains AutoForce check) and MARKETPLACES — marketplace product delivers condition reports TO BUYERS pre-purchase (further across the buyer-visible line than UVeye Scan-to-Sold imagery, 07-29) but seller/platform-commissioned, photo-based, no physical PPI, not buyer-orderable. NA + Europe expansion funded.
+    Implication: buyer-side PPI white space intact but narrowing from a THIRD direction (UVeye=dealer hardware, Cox=sell-side KBB AI, Self Inspection=lender/marketplace software rails + Sandberg-amplified "condition = the new history report" narrative). Counter-positioning piece ("seller-provided condition report ≠ independent inspection — paid by you, not the dealer") now MORE urgent — second consecutive week this surfaced. Physical-inspection moat holds (no underbody/lift/test-drive from photos+OBD2). Lender channel (biz plan §3 note) now has an entrenched default. 🔴 triggers set in profile: buyer-orderable product; "Self Inspection Verified" on a major consumer marketplace at browse level; acquirer-ecosystem integration (Carfax/Cox); consumer-PPI marketing. Housekeeping: add to Competitor_Analysis.md as "condition-data software rail" when archetype block (open since 06-18) is written; Business Plan §3 + funding table now stale ($3M → +$10M).
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: VINsight.ai (#12) [competitive direct comparison; what they're shipping].
 
 ### autovet-cpo-protocol-ingestion
 
@@ -80,6 +94,15 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Output: Product/CPO-Protocols/mazda-certified.md, Product/CPO-Protocols/_runs/2026-07-05-mazda.md.
     Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. No In-flight/Ready task is launching a Mazda vehicle (grep of TASKS.md for mazda/cx-5/cx-9/cx-30/mazda3/mazda6/miata/mx-5 found only: vinnote-batch-2026-07-05 which PRUNED a stale mazda3-2019 row (already populated) + a mazda-cx30-2020 vinNote batch (07-02) + the older mx-5-nd launch + recall-audit references — all touch inspect/index.html, none launch a Mazda checklist that would consume this Mazda protocol). Cross-referenced to (WebSearch-verified IDs reused): recall-audit wave 6/10 + the 2026-06-10 systemic audit — 19V-272 (correct Mazda3 wiper, NOT 16V-433), 21V-875/Mazda 5321K (Denso fuel pump MY2018-2019 CX-5/Mazda3/CX-9/Mazda6/MX-5), 20V-346/Mazda 4420F (CX-30 brake caliper bolts). Protocol embeds an anti-fabrication guard listing the deleted/mis-pasted IDs NOT to reintroduce (16V-433, 21V-088, 20V-501, 18V-411/18V-307). In-flight autovet-competitor-monitor (Competitors/, next=AutoTrader) + autovet-seo-content (Content/blog/) orthogonal; Ready empty. No Re-sync needed.
     Weekly milestone: DONE — mazda-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅; next = Lexus). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Lexus (P1).
+
+  2026-07-29 (backfill note): DISCOVERED the 2026-07-12 run wrote a complete lexus-certified.md (161 points, L/Certified single tier) but terminated before ALL bookkeeping — no _runs summary, no INDEX.md entry, no TASKS.md note (siblings through 07-29 still said "next=Lexus"). File verified complete (121 lines, sources + anti-fabrication guard intact); content NOT modified. Backfilled 2026-07-29: INDEX.md entry, _runs/2026-07-12-lexus.md (marked BACKFILLED), this note. Open Lexus flags carried forward: 70k-vs-80k eligibility ceiling unresolved; Techstream dependency. Lexus milestone now DONE as of 2026-07-29.
+
+  2026-07-29 16:05: ingested Acura CPO protocol (182 inspection points Precision Certified / 167 EV / 112 Precision Used lite tier).
+    Output: Product/CPO-Protocols/acura-certified.md, Product/CPO-Protocols/_runs/2026-07-29-acura.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists. Grep of TASKS.md for acura/mdx/rdx/tlx/ilx/integra: only touches are vinnote-batch-2026-07-06 (acura-mdx-2018 row PRUNED as stale, already populated) and vinnote-batch-2026-07-04 (acura-rdx-2019 vinNote authored — single-engine K20C4, FWD-vs-SH-AWD decode) — both Done, both inspect/index.html, complementary not conflicting; this protocol cross-references the rdx-2019 block and is consistent with it (K20C4 single engine confirmed both places). In-flight autovet-competitor-monitor (Competitors/, next=UVeye) + autovet-seo-content (Content/blog/, Jeep GC 07-29) orthogonal; Ready empty; Done(last 10) = vinnote-batches on inspect/index.html (07-29 batch = prius-prime/cx5/xt5, no Acura). Verified against: autovetting-vinnote-batch-2026-07-04, autovetting-vinnote-batch-2026-07-06; cross-referenced to: acura-rdx-2019 vinNote block. No Re-sync needed.
+    Campaign IDs all WebSearch-verified 2026-07-29: 23V-751 (rod bearing, 2015-20 TLX V6 + 2016-20 MDX, Honda XG1/GG0, inspect-vs-replace outcome documentation required), 20V-314 -> 21V-215 (Denso fuel pump, 2019-20 MDX/MDX-SH/RDX/TLX + 2019 ILX; 2024 expansion = Honda KGC/KGD, NHTSA # left [unverified] — live VIN lookup mandated instead), 16V-640 (2015 TLX V6 9AT sensor-cluster failsafe-neutral). Anti-fabrication catch: initial guess 16V-599 was WRONG (disproven in verification; real = 16V-640) — guard line added to protocol file. Described-not-numbered: 9AT transmission-warmer coolant/ATF intermix warranty extension (2015-16 TLX / 2016 MDX), VCM TSBs, 8DCT judder TSBs.
+    Key buyer insight for downstream content: TIER TRAP — Acura "certified" spans 182-pt/7yr-powertrain (Precision Certified, 2021-2026 MY <80k) vs 112-pt/6-mo (Precision Used, 2016-2026 MY, NO mileage cap); every certified 2015-2020 TLX is the lite tier.
+    Weekly milestone: DONE — acura-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅ → Lexus ✅ → Acura ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Infiniti (P1).
 
 ### autovet-seo-content
 
@@ -129,6 +152,39 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 *(none)*
 
 ## Done (last 10)
+
+#### autovetting-decision-execution-2026-07-30 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-30 (02:00 MST overnight builder; DECISION-EXECUTION run — first run after the 2026-07-29 Decision Queue ratification)
+- Touched files: next/index.html, robots.txt, inspect/index.html, scripts/recall-ledger.json, index.html, blog/ (6 new post dirs + blog/index.html), sitemap.xml, llms.txt, _hub/Content/blog/ (6 drafts flipped, gitignored), _hub/Business Plan/Used_Car_Inspection_Platform_Business_Plan.md (gitignored), _hub/Go-To-Market/GTM_Strategy.md (gitignored), _hub/Competitors/Competitor_Analysis.md (gitignored), _hub/Architecture-Research-2026-05-24.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), _hub/Build-Log/2026-07-30.md (gitignored), TASKS.md
+- Commit: PENDING (filled post-commit)
+- Notes:
+  2026-07-30 02:00: executed the ratified run-order directives from _hub/DANIEL-DECISIONS-2026-07-29.md.
+  [next-page]: next/index.html -> 14-line noindex meta-refresh+canonical redirect stub to /inspect/;
+  robots.txt /next/ Disallow removed. [recall-19v268] deleted x6 (chevy-equinox-2018, buick-enclave-2018,
+  buick-encore-2018, chevrolet-traverse-2018, gmc-acadia-2017, chevrolet-trax-2019) + [recall-19v258]
+  deleted x4 (vw-jetta-2018, vw-tiguan-2018, volkswagen-passat-2018, vw-golf-2018); standard honest
+  VIN-check entry inserted where the array lacked one; recall-ledger unverified_legacy 89 -> 87.
+  [drafts]: 6 drafts flipped to published (Equinox/Explorer/Malibu/RAV4/Tucson/Grand Cherokee; Rogue/
+  Ram DT/CR-V already live), render-blog.py -> 26 posts, sitemap+llms.txt updated; blogUrl cross-links
+  added to the 6 same-generation checklists (18 -> 24); wrong-generation slugs deliberately not linked.
+  [carfax-remessaging]: ratified line adopted verbatim on homepage (new why-card) + Business Plan
+  SS3.6/4.3/9/13 (SS5 audited: no Carfax positioning, N/A) + GTM_Strategy + Competitor_Analysis (5 old-line
+  instances rewritten; repo grep clean). [arch-cleanup]: Architecture-Research SS6 marked mooted.
+  Awaiting-Daniel updated (EXECUTED block + 06-25 Carfax memo -> RESOLVED, watch stays).
+  BLOCKED: [sprint-inbox] standing instruction — Gmail connector invalidated; Daniel must reconnect.
+  Sibling check: no blocking overlap. In-flight autovet-seo-content owns Content/blog/ drafts — flip is
+  Daniel-ratified publish approval of that task's outputs (complementary; Verified against:
+  autovet-seo-content notes 06-17..07-29). In-flight autovet-competitor-monitor owns Competitors/_Monitor/;
+  Competitor_Analysis.md edits are Daniel-ratified remessaging, consistent with that task's 06-25/07-29
+  implications (Verified against: autovet-competitor-monitor). Done(last 10) = vinnote batches on
+  inspect/index.html — disjoint slugs (recall arrays on GM/VW slugs vs vinNote slugs); all carry
+  - Started: dates (checked, no backfill needed). No Re-sync needed.
+  Syntax-check: PASS (node validator: inspect/index.html, index.html, next/index.html, blog/index.html
+  + 6 new post pages, exit 0; truncation guard 17,642 lines / tail </html>). Gate-check: 27 pass / 2 warn
+  / 0 CRITICAL. Dead-links: verified (6 blogUrl targets exist as rendered dirs; /inspect/ exists).
+  Scanner: PASS (463 files, no secrets, exit 0).
 
 #### autovetting-vinnote-batch-2026-07-29 — ready (pushed directly)
 
