@@ -158,7 +158,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
 - Started: 2026-07-30 (02:00 MST overnight builder; DECISION-EXECUTION run — first run after the 2026-07-29 Decision Queue ratification)
 - Touched files: next/index.html, robots.txt, inspect/index.html, scripts/recall-ledger.json, index.html, blog/ (6 new post dirs + blog/index.html), sitemap.xml, llms.txt, _hub/Content/blog/ (6 drafts flipped, gitignored), _hub/Business Plan/Used_Car_Inspection_Platform_Business_Plan.md (gitignored), _hub/Go-To-Market/GTM_Strategy.md (gitignored), _hub/Competitors/Competitor_Analysis.md (gitignored), _hub/Architecture-Research-2026-05-24.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), _hub/Build-Log/2026-07-30.md (gitignored), TASKS.md
-- Commit: PENDING (filled post-commit)
+- Commit: 1d86463 (work); this docs(tasks) record follows in a same-cadence follow-on push.
 - Notes:
   2026-07-30 02:00: executed the ratified run-order directives from _hub/DANIEL-DECISIONS-2026-07-29.md.
   [next-page]: next/index.html -> 14-line noindex meta-refresh+canonical redirect stub to /inspect/;
