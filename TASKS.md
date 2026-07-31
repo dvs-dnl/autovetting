@@ -153,6 +153,70 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Done (last 10)
 
+#### autovetting-recall-audit-wave13-2026-07-31 — ready (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-07-31 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-07-31.md (gitignored), TASKS.md
+- Commit: f7a15cb (work); this docs(tasks) record follows in a same-cadence follow-on push.
+- Notes:
+  2026-07-31 02:00: recall-audit WAVE 13. Launch freeze still active; no new-vehicle launch queued and
+  vinNotes are fill-in-only under the ratified [freeze] priorities, so this run took priority (1),
+  the recall-audit backlog. Started from the three numbers wave 12 left queued as "not dispositive"
+  (16V-617 / 14V-595 / 18V-117); all three resolved as fabrications, and chasing them surfaced a
+  fourth and larger one. 19 fabricated entries deleted across 16 slugs; 9 verified campaigns added.
+  (1) 20V-012 [NEW FINDING] — real Toyota/Lexus Denso fuel-pump campaign (ledger-verified, correct on
+      toyota-camry-2018) was ALSO pasted onto 10 GM/Ford slugs (chevy-equinox-2018, chevy-malibu-2016,
+      buick-enclave-2018, buick-encore-2018, chevrolet-traverse-2018, chevrolet-trax-2019,
+      gmc-acadia-2017, chevy-colorado-2018, gmc-canyon-2018, ford-fusion-2017) plus toyota-4runner-2008
+      where it was labelled "Brake Booster Pump" (right make, wrong defect, and MY2008 is outside the
+      2018-2020 scope). One number / three manufacturers / two defects = dispositive; same GM cluster as
+      the ratified 19V-268 deletions. Deleted x11; kept on Camry + the pinpoint Camry card.
+  (2) 16V-617 — REAL but it is FORD: 2017 Escape power-window closing force, Ford 16C12
+      (static.nhtsa.gov/odi/rcl/2016/RCLRPT-16V617-8413.pdf). Was on our site as "Ignition Switch
+      Software" on 3 GM slugs (chevy-malibu-2016, buick-encore-2018, chevrolet-trax-2019). Deleted x3.
+  (3) 14V-595 — REAL but it is an ELKHART COACH / RICON WHEELCHAIR-LIFT recall on 2006-2014 Ford
+      E-350/E-450 (platform side plate may crack). Was on honda-accord-2014 as "Electric Parking Brake
+      Software" in BOTH the recalls array and a High-Attention checklist item. Exact wave-11 13V-261
+      pattern. Deleted both. Corroborated by pulling the COMPLETE NHTSA set for a 2014 Accord = four
+      campaigns only (23V-858, 20V-769, 17V-418, 15V-121) — no parking-brake campaign exists.
+      Replaced with the real ones: 17V-418 (battery-sensor water intrusion / fire, Honda KG0),
+      20V-769 (salt-belt drive shafts), 23V-858 (Denso fuel pump); the fabricated checklist item was
+      rewritten as a 17V-418-anchored open-campaign check.
+  (4) 15V-128 (hood latch) on honda-accord-2014 — collateral: not in the complete 2014 Accord set.
+      Deleted from the Accord. Still on acura-tsx-2014 from the same 2026-05-30 batch run — NOT deleted
+      blind (single-slug, no TSX source pulled); queued for wave 14.
+  (5) 18V-117 — NO SUCH CAMPAIGN. Absent from every recall index searched (neighbours 18V-116/098/156/390
+      all resolve) and absent from the complete 8-recall 2017 Edge set. Claimed as "side airbag" across
+      three unrelated platforms (CD4 crossover / CD4 sedan / U553 body-on-frame). Deleted x3
+      (ford-edge-2017, ford-fusion-2017, ford-expedition-2018).
+  (6) 19V-006 on ford-edge-2017 — absent from the complete 2017 Edge set. Deleted + PTU-item prose
+      rewritten. The ford-fusion-2017 instance is LEFT IN PLACE (no Fusion source pulled) — queued
+      for wave 14. Edge gained the six real campaigns instead: 17V-123 (17C02 driver airbag),
+      17V-205 (17C05 pano-roof header, FMVSS 214), 18V-390 (17S16-S2 torque converter, 2.0L),
+      20V-469 (20S42 front brake hoses), 22V-413 (22S43 shift bushing, roll-away), 25V-544 (25S87 rear
+      jounce hose — remedy parts not due until Aug 2026, i.e. live for anyone shopping an Edge now).
+  Housekeeping: stats.recalls re-synced to recalls-array length on 11 slugs; any array emptied by a
+  deletion received the standard honest "run the VIN at nhtsa.gov/recalls" entry. Ledger:
+  unverified_legacy 87 -> 84 (16V617/14V595/18V117 removed; 15V128 + 19V006 deliberately retained,
+  still in use), verified 44 -> 52 (8 new entries with per-campaign source + Ford/Honda internal numbers).
+  Method note recorded in the Build-Log: pulling a vehicle's COMPLETE NHTSA set proves absence rather
+  than failure-to-find AND supplies the real campaigns to put in place of what is deleted — adopt as the
+  default for waves 14+.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/, next=VINsight.ai),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Infiniti) and autovet-seo-content
+  (Content/blog/) are all orthogonal. Ready empty. Done(last 10) overlap on inspect/index.html +
+  scripts/recall-ledger.json = autovetting-decision-execution-2026-07-30 (which executed the ratified
+  19V-268/19V-258 deletions) — same audit workstream, disjoint campaign numbers and mostly disjoint slugs;
+  Verified against: autovetting-decision-execution-2026-07-30. Remaining Done siblings are vinnote batches
+  (additive per-slug vinNote fields, no recalls arrays touched). Every Done block checked for
+  - Started: — all present, no backfill needed. No Re-sync needed.
+  Syntax-check: PASS (node validator on inspect/index.html, exit 0; truncation guard 17,637 lines /
+  1,330,907 bytes, tail </script></body></html> intact; recall-ledger.json re-parsed OK).
+  Gate-check: 27 pass / 2 warn / 0 CRITICAL (backlog ratchet now 84; homepage-test-bc lazy-load warn).
+  Dead-links: verified (no links added or changed — recall entries are plain prose, nhtsa.gov as text).
+  Scanner: PASS (465 files, no secrets, exit 0).
+
 #### autovetting-decision-execution-2026-07-30 — ready (pushed directly)
 
 - Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
