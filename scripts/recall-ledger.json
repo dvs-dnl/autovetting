@@ -373,6 +373,74 @@
       "source": "https://static.nhtsa.gov/odi/rcl/2013/RCRIT-13V584-6845.pdf",
       "verified": "2026-06-19",
       "note": "replaced fabricated 13V-261 (a 2006-2012 Ford E-series Ricon wheelchair-lift armored-cable recall) on ford-escape-2013; 13V-583/13S12 is the canonical 1.6L EcoBoost engine-fire campaign (carcomplaints 13v583000)"
+    },
+    "17V418": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Battery sensor water intrusion (fire risk), 2013-2016 Accord; Honda KG0",
+      "source": "NHTSA 17V-418 (cars.com/NHTSA recall feed, 2014 Accord complete set)",
+      "verified": "2026-07-31"
+    },
+    "20V769": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Drive shafts, 2013-2015 Accord 4-cyl CVT, 22 salt-belt states",
+      "source": "NHTSA 20V-769 (cars.com/NHTSA recall feed, 2014 Accord complete set)",
+      "verified": "2026-07-31"
+    },
+    "17V123": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Driver frontal airbag may not fully inflate, 2016-2017 Edge/MKX + 2017 Continental; Ford 17C02",
+      "source": "NHTSA 17V-123 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
+    },
+    "17V205": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Panoramic Vista Roof windshield header weld, FMVSS 214, 2017 Edge; Ford 17C05",
+      "source": "NHTSA 17V-205 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
+    },
+    "18V390": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Torque converter weld studs, 2017-2018 Edge / 2017 MKZ 2.0L; Ford 17S16(S2), expansion of 17V-427",
+      "source": "NHTSA 18V-390 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
+    },
+    "20V469": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Front brake hoses may rupture, 2015-2018 Edge / 2016-2018 MKX; Ford 20S42",
+      "source": "NHTSA 20V-469 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
+    },
+    "22V413": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Shift cable bushing degradation (roll-away), 2015-2018 Edge + Escape/C-Max/Fusion/Transit Connect; Ford 22S43",
+      "source": "NHTSA 22V-413 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
+    },
+    "25V544": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Rear brake jounce hose rupture, 2015-2018 Edge / 2016-2018 MKX; Ford 25S87",
+      "source": "NHTSA 25V-544 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "verified": "2026-07-31"
     }
   },
   "unverified_legacy": [
@@ -399,7 +467,6 @@
     "14V355",
     "14V373",
     "14V400",
-    "14V595",
     "14V657",
     "14V668",
     "14V787",
@@ -418,7 +485,6 @@
     "16V391",
     "16V449",
     "16V586",
-    "16V617",
     "17V148",
     "17V224",
     "17V225",
@@ -429,7 +495,6 @@
     "18V013",
     "18V027",
     "18V079",
-    "18V117",
     "18V139",
     "18V182",
     "18V226",

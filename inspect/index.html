@@ -1784,7 +1784,7 @@ const CHECKLISTS = {
     summary: "The 2014 Accord is a benchmark used-car pick — well-built, durable, with documented common issues that are easy to inspect for. The CVT (4-cylinder models) and the VSA/ABS modulator are the two things most generic mechanics will miss. V6 buyers should know the VCM motor-mount story before signing.",
     stats: {
       itemsToCheck: 23,
-      recalls: 3,
+      recalls: 4,
       ownerComplaints: 967,
       topComplaintArea: 'Electrical System'
     },
@@ -1936,12 +1936,12 @@ const CHECKLISTS = {
             source: 'Drive Accord forum + Honda quiet redesign in 2016'
           },
           {
-            title: 'Parking brake recall (electric)',
+            title: 'Battery sensor recall (17V-418) + open-campaign check',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Some 2014 Accords were subject to recall 14V-595 for electric parking brake software. Verify completion via VIN.',
-            check: '<strong>Engage and release the electric parking brake several times.</strong> Verify no warning lights. Check NHTSA recall lookup at nhtsa.gov/recalls using the VIN to confirm completion.',
-            cost: 'Free if recall was performed',
-            source: 'NHTSA recall campaign 14V-595'
+            desc: 'The real safety campaign on this car is 17V-418: the battery-sensor case on 2013-2016 Accords can admit water and short, which is a fire risk. Salt-belt cars also carry the 20V-769 drive-shaft recall, and 23V-858 covers the Denso fuel pump.',
+            check: '<strong>Run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase.</strong> Ask for the dealer repair order showing 17V-418 (Honda KG0) was completed, not just the interim adhesive fix.',
+            cost: 'Free under recall',
+            source: 'NHTSA recall campaigns 17V-418 / 20V-769 / 23V-858'
           },
           {
             title: 'Front brake pads & rotors (standard wear)',
@@ -2013,9 +2013,10 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '14V-595', title: 'Electric Parking Brake Software', desc: 'EPB may not engage as commanded. Software update.' },
-      { number: '15V-128', title: 'Hood Latch Inspection', desc: 'Secondary latch may corrode in salt-belt states.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '17V-418', title: 'Battery Sensor Water Intrusion', desc: '2013-2016 Accord: battery-sensor case can admit water and short — fire risk. Honda KG0.' },
+      { number: '20V-769', title: 'Drive Shafts (salt-belt states)', desc: '2013-2015 4-cyl CVT Accords originally sold in 22 salt-belt states: drive shafts may corrode and break.' },
+      { number: '23V-858', title: 'Denso Low-Pressure Fuel Pump', desc: 'Fuel pump can fail and stall the engine. Free replacement — verify VIN.' }
     ],
     vinNote: "8th VIN digit engine code: ‘F’ = 2.4L K24W I4 (4-cylinder, CVT — most common). ‘Y’ = 3.5L J35Y V6 (6-cylinder, 6AT — no CVT). These two engines have completely different inspection priorities: 4-cyl buyers must verify CVT fluid history (Honda HCF-2, 30k intervals) and confirm TSB 16-049 software update; V6 buyers must check VCM right-rear motor mount wear at idle and have no CVT concern. Always decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine family before applying this checklist.",
     blogUrl: '/blog/2014-honda-accord-buyers-guide',
@@ -2773,7 +2774,7 @@ const CHECKLISTS = {
     summary: "The 4th-gen 4Runner (2003-2009) sits on the same legendary platform as the Lexus GX 470 and the Prado. Bulletproof drivetrains in both V6 and V8 trims. The four areas that matter: frame rust (Northeast trucks), the X-REAS suspension on Sport models (very expensive when it leaks), KDSS on Trail Editions, and the cracking dashboard.",
     stats: {
       itemsToCheck: 10,
-      recalls: 4,
+      recalls: 3,
       ownerComplaints: 312,
       topComplaintArea: 'Steering / Power Train'
     },
@@ -2869,8 +2870,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '08V-528', title: 'Floor Mat / Accelerator', desc: 'Large Toyota recall — verify floor mats not stacked, accelerator pedal not blocked.' },
       { number: '14V-312', title: 'Differential Pinion Nut', desc: 'Loose nut may cause rear differential failure.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-012', title: 'Brake Booster Pump', desc: 'Pump motor may fail under low-temperature conditions.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6142,7 +6142,7 @@ const CHECKLISTS = {
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 3rd-gen Equinox was a significant step up from the 2nd gen — but the dominant engine, the 1.5L LFV turbo, has documented oil consumption and timing chain stretch issues that buyers must investigate. The 2.0L LSY is the stronger used pick. The 1.6L diesel is uncommon and requires DEF system maintenance. Avoid the 1.5T if oil change records are incomplete.",
     blogUrl: '/blog/2019-chevrolet-equinox-buyers-guide',
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 380, topComplaintArea: 'Engine / oil consumption (1.5T)' },
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 380, topComplaintArea: 'Engine / oil consumption (1.5T)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5L LFV turbo oil consumption', risk: 'high', riskLabel: 'High Attention',
@@ -6178,13 +6178,12 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'Recall verification and oil consumption documentation', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Check VIN for open campaigns including 20V-012 (fuel pump) and service campaign 18208 (oil consumption on 1.5T). Oil consumption is the key disqualifier on this vehicle.',
+          desc: 'Check the VIN for open campaigns, and separately ask about GM service campaign 18208 (oil consumption on the 1.5T). Oil consumption is the key disqualifier on this vehicle.',
           check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> For 1.5T cars: require proof the oil consumption campaign was addressed.',
           cost: 'Walk away from 1.5T cars with undocumented high-mileage oil issues', source: 'NHTSA + GM service records' }
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'Fuel pump may fail — free dealer replacement.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -6245,7 +6244,7 @@ const CHECKLISTS = {
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "9th-gen Malibu uses the same LFV 1.5T engine as the Equinox — with the same oil consumption and timing chain concerns. The used market is flooded with fleet/rental Malibus driving prices low, but rental-fleet mileage accumulation combined with extended oil intervals is exactly the scenario that creates LFV timing chain and consumption problems. Service history is the critical variable.",
     blogUrl: '/blog/2019-chevrolet-malibu-buyers-guide',
-    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 310, topComplaintArea: 'Engine / oil consumption (1.5T)' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 310, topComplaintArea: 'Engine / oil consumption (1.5T)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5T LFV oil consumption and timing chain', risk: 'high', riskLabel: 'High Attention',
@@ -6285,8 +6284,7 @@ const CHECKLISTS = {
     recalls: [
       { number: '19V-777', title: 'Park Pawl Fracture', desc: 'Parking pawl can fracture — vehicle may roll. Free repair.' },
       { number: '18V-139', title: 'Steering Gear Seals', desc: 'Power steering seals may leak — fire risk.' },
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'Same Delphi pump as Equinox — may fail.' },
-      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update for ignition switch behavior.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6398,7 +6396,7 @@ const CHECKLISTS = {
     engine: '2.0L EcoBoost I4 (245hp) / 2.7L EcoBoost V6 (315hp) / 2.0L EcoBoost AWD Titanium',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Ford Edge is a refined midsize crossover — the 2.7L EcoBoost V6 is the standout powertrain choice, with the 2.0L EcoBoost being adequate but carrying the same internal water pump issue as its sibling engines. PTU (Power Transfer Unit) fluid service on AWD models is the most commonly missed maintenance item and leads to premature failure. The Edge is a solid used buy with documented service history.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
+    stats: { itemsToCheck: 13, recalls: 7, ownerComplaints: 220, topComplaintArea: 'AWD PTU failure / 2.0L water pump' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.0L EcoBoost internal water pump', risk: 'high', riskLabel: 'High Attention',
@@ -6434,14 +6432,19 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'PTU service record + recall check', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Key recalls: 19V-006 (fuel injector seals) and 18V-117 (side airbag). PTU service documentation is the most important non-recall item.',
+          desc: 'PTU service documentation is the most important non-recall item on an AWD Edge. On the recall side this generation carries brake-hose (20V-469, 25V-544), shift-bushing (22V-413) and — on 2.0L cars — torque-converter (18V-390) campaigns.',
           check: '<strong>Run VIN at nhtsa.gov/recalls and ask specifically for PTU service receipt.</strong>',
           cost: 'Walk away from AWD without documented PTU service', source: 'NHTSA + Ford maintenance' }
       ]}
     ],
     recalls: [
-      { number: '19V-006', title: 'Fuel Injector Seals', desc: '2.0T: fuel injector O-rings may leak — fire risk.' },
-      { number: '18V-117', title: 'Supplemental Restraint System', desc: 'Side airbag may not inflate correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
+      { number: '17V-123', title: 'Driver Frontal Airbag', desc: '2016-2017 Edge: driver airbag may not fully inflate or cushion may detach. Ford 17C02.' },
+      { number: '17V-205', title: 'Panoramic Roof Windshield Header', desc: '2017 Edge with Panoramic Vista Roof: improperly welded header fails FMVSS 214 side-impact protection. Ford 17C05.' },
+      { number: '18V-390', title: 'Torque Converter Weld Studs (2.0L)', desc: '2017-2018 Edge 2.0L/6-speed: weld studs may fail and disconnect the converter. Ford 17S16(S2).' },
+      { number: '20V-469', title: 'Front Brake Hoses', desc: '2015-2018 Edge: front brake hoses may rupture prematurely. Ford 20S42.' },
+      { number: '22V-413', title: 'Shift Cable Bushing', desc: '2015-2018 Edge: shifter-cable bushing may degrade or detach — vehicle may roll after selecting Park. Ford 22S43.' },
+      { number: '25V-544', title: 'Rear Brake Jounce Hose', desc: '2015-2018 Edge: rear brake jounce hose may rupture and leak fluid. Ford 25S87 — remedy parts expected 2026.' }
     ]
   },
 
@@ -6778,7 +6781,7 @@ const CHECKLISTS = {
     engine: '1.5L EcoBoost I4 (181hp) / 2.0L EcoBoost I4 (245hp) / 2.7L V6 Sport / 2.0L Hybrid',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Fusion is a well-built, attractive midsize sedan. The 1.5L EcoBoost has a documented cylinder 3 coolant loss issue — the 2.0T is the preferred powertrain and avoids this. Hybrid models are reliable but HV battery should be checked above 100k miles. The Fusion was discontinued in 2020, making used supply abundant and prices attractive.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5L EcoBoost coolant loss (cylinder 3)', risk: 'high', riskLabel: 'High Attention',
@@ -6821,8 +6824,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '19V-006', title: 'Fuel Injector O-ring (2.0T)', desc: 'Fuel leak fire risk.' },
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: '18V-117', title: 'Supplemental Restraint Module', desc: 'Side airbag may not inflate correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7394,7 +7396,7 @@ const CHECKLISTS = {
     engine: '3.6L LGX V6 (310hp) with 9-speed automatic',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Enclave (2018+) is a premium 3-row crossover sharing the C1 platform with the Chevrolet Traverse. The 3.6L LGX V6 is a strong engine but the 9-speed auto had early hesitation and shudder issues addressed by TSBs. Direct injection carbon buildup on intake valves is a known long-term service item. Premium interior quality is genuine — one of the better luxury-adjacent values in its class.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 145, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 145, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '9-speed Hydra-Matic hesitation / shudder', risk: 'high', riskLabel: 'High Attention',
@@ -7432,8 +7434,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7728,7 +7729,7 @@ const CHECKLISTS = {
     engine: '1.4L LUJ/LUV Ecotec Turbo I4 (138hp) / 1.4T Sport Touring (153hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Encore is Buick's entry-level crossover — the smallest and most fuel-efficient. The 1.4T Ecotec is a known commodity: reliable when maintained, but the turbo requires synthetic oil and regular changes. Oil consumption is reported on high-mileage examples. The premium Buick interior quality is the main selling point. Strong value when oil changes are documented.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 175, topComplaintArea: '1.4T oil consumption / timing chain' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 175, topComplaintArea: '1.4T oil consumption / timing chain' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.4T Ecotec oil consumption and timing', risk: 'high', riskLabel: 'High Attention',
@@ -7766,9 +7767,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7828,7 +7827,7 @@ const CHECKLISTS = {
     engine: '3.6L LGX V6 (310hp) / 2.0L LSY Turbo I4 (257hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Traverse (2018+) on the C1 platform is a substantial improvement — more space, better quality, and the 3.6L LGX is a known reliable engine. The 9-speed auto had early hesitation issues mostly resolved by 2019+. GDI carbon buildup is a long-term service item on the LGX. One of the better-value 3-row family crossovers on the used market.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 165, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 165, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '9-speed 9T65 hesitation (2018 first-year builds)', risk: 'high', riskLabel: 'High Attention',
@@ -7866,8 +7865,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7876,7 +7874,7 @@ const CHECKLISTS = {
     engine: '2.5L LCV I4 (193hp) / 3.6L LGX V6 (310hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "2nd-gen Acadia (2017+) downsized significantly from the first gen — shorter wheelbase, optional 2.5L 4-cylinder, and FWD-biased platform. The 3.6L LGX V6 is the preferred powertrain. The 2.5L 4-cylinder is underpowered for a 3-row SUV. 6-speed automatic is more proven than the 9-speed in early-production Traverse/Enclave. Strong value for buyers who don't need maximum interior space.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 125, topComplaintArea: '2.5L underpowered / GDI carbon on 3.6L' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 125, topComplaintArea: '2.5L underpowered / GDI carbon on 3.6L' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.5L I4 performance adequacy', risk: 'monitor', riskLabel: 'Monitor',
@@ -7914,7 +7912,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -8773,7 +8770,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-117', title: 'Supplemental Restraint', desc: 'Side airbag deployment concern.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8872,7 +8869,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9633,7 +9630,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10917,7 +10914,7 @@ const CHECKLISTS = {
     engine: '1.4L LUJ Ecotec Turbo I4 (138hp) with 6-speed automatic',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Gamma II Trax is GM's entry-level subcompact SUV — smallest and least expensive. The 1.4T Ecotec shares the timing chain and oil consumption concern with the Encore. Limited interior space and power are the honest tradeoffs. Strong value for urban buyers who need something small, affordable, and easy to park.",
-    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 155, topComplaintArea: '1.4T timing chain / oil consumption / limited power' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 155, topComplaintArea: '1.4T timing chain / oil consumption / limited power' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.4T Ecotec timing chain and oil consumption', risk: 'high', riskLabel: 'High Attention',
@@ -10955,9 +10952,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '20V-012', title: 'Low-Pressure Fuel Pump', desc: 'May fail — stall risk.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '16V-617', title: 'Ignition Switch Software', desc: 'Software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
