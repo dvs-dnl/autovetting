@@ -2033,7 +2033,7 @@ const CHECKLISTS = {
     summary: "The 2014 TSX is the swan-song year for one of Honda's most reliable platforms — the K24Z3 four-cylinder regularly hits 250,000+ miles with basic maintenance. This is one of the lowest-risk used cars in the segment, but the K24's VTC startup rattle, Tech trim's HID and Bose failures, and the EPS relearn quirk are things general mechanics routinely miss.",
     stats: {
       itemsToCheck: 21,
-      recalls: 2,
+      recalls: 4,
       ownerComplaints: 142,
       topComplaintArea: 'Electrical System'
     },
@@ -2248,7 +2248,9 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '15V-128', title: 'Hood Latch Inspection', desc: 'Secondary latch may corrode in salt-belt states.' },
+      { number: '18V-661', title: 'Takata Passenger Frontal Airbag Inflator', desc: 'Non-desiccated inflator may rupture and spray metal fragments. 2009-2014 TSX. Free replacement.' },
+      { number: '19V-378', title: 'Incorrectly Installed Replacement Inflator', desc: 'Inflators fitted under earlier Takata campaigns were installed wrong; the airbag may not deploy as designed. Honda campaigns M4O / P4R / T4Q / W4P.' },
+      { number: '19V-502', title: 'Replacement Takata Inflator May Also Explode', desc: 'Remedy and service-part inflators degrade the same way. Honda F5F / Q5E. A prior Takata repair does NOT close this one.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -6781,7 +6783,7 @@ const CHECKLISTS = {
     engine: '1.5L EcoBoost I4 (181hp) / 2.0L EcoBoost I4 (245hp) / 2.7L V6 Sport / 2.0L Hybrid',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Fusion is a well-built, attractive midsize sedan. The 1.5L EcoBoost has a documented cylinder 3 coolant loss issue — the 2.0T is the preferred powertrain and avoids this. Hybrid models are reliable but HV battery should be checked above 100k miles. The Fusion was discontinued in 2020, making used supply abundant and prices attractive.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
+    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 240, topComplaintArea: '1.5T coolant loss / door handle cable failure' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5L EcoBoost coolant loss (cylinder 3)', risk: 'high', riskLabel: 'High Attention',
@@ -6817,13 +6819,16 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'Engine variant check + recall verification', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Identify 1.5T vs 2.0T before purchase. Coolant check required on 1.5T. Four recalls possible.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls. Coolant check on 1.5T.</strong>',
-          cost: 'Walk away from 1.5T with unexplained coolant loss', source: 'NHTSA' }
+          desc: 'Identify 1.5T vs 2.0T before purchase, then close out the four campaigns that apply to this car. Two are the ones that matter on a used lot: 18V-167 (steering wheel retaining bolt, 2014-2018) and 23V-162 (front brake jounce hoses, 2013-2018 non-hybrid). 17V-427 is 2.0L-only. 16V-874 covers 25 cars built over two days in Sept 2016.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and require 18V-167 and 23V-162 closed in writing before purchase.</strong> Coolant check on 1.5T.',
+          cost: 'Walk away from 1.5T with unexplained coolant loss', source: 'NHTSA campaigns 16V-874 / 17V-427 / 18V-167 / 23V-162' }
       ]}
     ],
     recalls: [
-      { number: '19V-006', title: 'Fuel Injector O-ring (2.0T)', desc: 'Fuel leak fire risk.' },
+      { number: '16V-874', title: 'Left Rear Seat Back Pivot Pins', desc: 'Insufficient weld penetration on second-row left seat back; may not retain cargo in a crash. Only 25 cars, built Sept 27-28 2016 at Hermosillo. Ford 16S43.' },
+      { number: '17V-427', title: 'Torque Converter Weld Studs (2.0L)', desc: 'Inadequately welded studs can separate the converter from the flexplate and the car loses the ability to move. 2017 2.0L EcoBoost with the 6F35. Ford 17S16.' },
+      { number: '18V-167', title: 'Steering Wheel May Detach', desc: 'Steering wheel retaining bolt can lose torque and back out. 2014-2018 Fusion, 1.3 million cars. Remedy is a longer bolt. Ford 18S08.' },
+      { number: '23V-162', title: 'Front Brake Jounce Hoses May Rupture', desc: 'Hose can rupture and leak brake fluid, extending stopping distance. 2013-2018 non-hybrid Fusion, 1.28 million cars. Ford 23S12.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },

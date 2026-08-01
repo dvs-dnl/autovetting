@@ -441,6 +441,68 @@
       "component": "Rear brake jounce hose rupture, 2015-2018 Edge / 2016-2018 MKX; Ford 25S87",
       "source": "NHTSA 25V-544 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
       "verified": "2026-07-31"
+    },
+    "18V661": {
+      "makes": [
+        "Acura",
+        "Honda"
+      ],
+      "component": "Takata non-desiccated passenger frontal airbag inflator may rupture, 2009-2014 Acura TSX among ~1.36M vehicles (Sep 27 2018)",
+      "source": "NHTSA 18V-661 (NHTSA recall feed via CarComplaints, complete 2014 Acura TSX set: https://www.carcomplaints.com/Acura/TSX/2014/recalls/)",
+      "verified": "2026-08-01"
+    },
+    "19V378": {
+      "makes": [
+        "Acura",
+        "Honda"
+      ],
+      "component": "Replacement Takata passenger frontal inflator installed incorrectly under earlier campaigns; airbag may not deploy as designed. 2009-2014 TSX; Honda M4O/P4R/T4Q/W4P (May 16 2019)",
+      "source": "NHTSA 19V-378 Part 573 / RCRIT: https://static.nhtsa.gov/odi/rcl/2019/RCRIT-19V378-4386.pdf",
+      "verified": "2026-08-01"
+    },
+    "19V502": {
+      "makes": [
+        "Acura",
+        "Honda"
+      ],
+      "component": "Remedy/service-part Takata passenger frontal inflators may also explode from propellant degradation. 2009-2014 TSX; Honda F5F/Q5E (Jul 1 2019)",
+      "source": "NHTSA 19V-502 Part 573: https://static.nhtsa.gov/odi/rcl/2019/RCLRPT-19V502-1880.PDF",
+      "verified": "2026-08-01"
+    },
+    "16V874": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Second-row left rear seat back pivot pins insufficiently welded; 25 units 2017 Fusion built Sept 27-28 2016 (Hermosillo); Ford 16S43",
+      "source": "NHTSA 16V-874 Part 573: https://static.nhtsa.gov/odi/rcl/2016/RCLRPT-16V874-2516.PDF",
+      "verified": "2026-08-01"
+    },
+    "17V427": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Torque converter weld studs inadequately welded, 2017 Edge/Fusion/MKZ 2.0L with 6F35; Ford 17S16 (expanded later as 18V-390)",
+      "source": "NHTSA 17V-427 Part 573: https://static.nhtsa.gov/odi/rcl/2017/RCLRPT-17V427-6158.PDF",
+      "verified": "2026-08-01"
+    },
+    "18V167": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Steering wheel retaining bolt may lose torque and allow the wheel to detach, 2014-2018 Fusion/MKZ, 1,301,986 units; Ford 18S08",
+      "source": "NHTSA 18V-167 Part 573: https://static.nhtsa.gov/odi/rcl/2018/RCLRPT-18V167-3496.PDF",
+      "verified": "2026-08-01"
+    },
+    "23V162": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Front brake jounce hoses may rupture and leak brake fluid, 2013-2018 non-hybrid Fusion/MKZ, 1,280,726 units; Ford 23S12",
+      "source": "NHTSA 23V-162 Part 573: https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V162-3924.PDF",
+      "verified": "2026-08-01"
     }
   },
   "unverified_legacy": [
@@ -471,7 +533,6 @@
     "14V668",
     "14V787",
     "15V025",
-    "15V128",
     "15V258",
     "15V303",
     "15V313",
@@ -501,7 +562,6 @@
     "18V228",
     "18V575",
     "18V585",
-    "19V006",
     "19V075",
     "19V133",
     "19V243",
