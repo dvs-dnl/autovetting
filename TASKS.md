@@ -149,7 +149,49 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
-*(none)*
+#### autovetting-recall-audit-wave14-2026-08-01 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-01 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 14 — drain the two numbers wave 13 left queued (15V-128 on acura-tsx-2014, 19V-006 on ford-fusion-2017)
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-01.md (gitignored), TASKS.md
+- Notes:
+  2026-08-01 02:00: Both queued numbers resolved as fabrications on primary-source lookup; both vehicles
+  yielded a clean complete NHTSA set to replace them with. Net: 2 fabricated entries deleted, 7 verified
+  entries added.
+  (1) 15V-128 on acura-tsx-2014 (claimed "Hood Latch Inspection") = Forest River Wildcat 2015 fifth-wheel
+  trailer GVWR certification-label nonconformance, 94 units, recalled 2015-03-04. Wrong industry entirely.
+  Complete 2014 Acura TSX set = exactly 3 campaigns, all Takata passenger frontal inflator, no hood latch:
+  18V-661, 19V-378 (replacement inflator installed incorrectly; Honda M4O/P4R/T4Q/W4P), 19V-502
+  (remedy-part inflators also degrade; Honda F5F/Q5E). Deleted + all 3 added. The 19V-378/19V-502 pair is
+  the buyer-useful bit: a prior Takata repair does NOT close either one, and the page now says so.
+  (2) 19V-006 on ford-fusion-2017 (claimed "Fuel Injector O-ring (2.0T)") = Ferrari North America Takata
+  passenger frontal inflator campaign (2019-01-08, California/458/FF/F12/488/GTC4Lusso). Wrong
+  manufacturer. Complete 2017 Ford Fusion set = exactly 4 campaigns, none fuel-related: 16V-874 (seat-back
+  pivot pin welds, 25 units, Ford 16S43), 17V-427 (torque converter weld studs, 2.0L + 6F35, Ford 17S16),
+  18V-167 (steering wheel retaining bolt, 2014-2018, 1.30M units, Ford 18S08), 23V-162 (front brake jounce
+  hoses, 2013-2018 non-hybrid, 1.28M units, Ford 23S12). Deleted + all 4 added; the vague "Four recalls
+  possible" Documentation item rewritten to name them and flag 18V-167 + 23V-162 as the two that matter on
+  a used lot. 18V-390 (already verified, wave 13) is the 17S16-S2 expansion but covers Edge/MKZ not Fusion
+  — correctly NOT added. 22V-413 deliberately NOT added to the Fusion despite its ledger nameplate list
+  (absent from the complete 2017 set = its Fusion years are likely earlier) — queued for wave 15.
+  stats.recalls re-synced to array length on both slugs (TSX 2->4, Fusion 2->5).
+  Ledger: unverified_legacy 84 -> 82 (15V128, 19V006 removed); verified 52 -> 59.
+  Collateral (not shipped): _hub/Product/Landing-Page/index.html still holds 2 copies of the fabricated
+  15V-128 entry. That path is gitignored (.gitignore:31 _hub/) so it deploys nothing, but it is a
+  pre-audit snapshot that would reintroduce deleted numbers if reused — queued for wave 15 to mark
+  ARCHIVED or delete.
+  Sibling check: no blocking conflict. Only Done sibling sharing inspect/index.html + recall-ledger.json is
+  autovetting-recall-audit-wave13-2026-07-31 (Done, yesterday) — this run is the direct continuation of its
+  own wave-15 queue, additive and non-overlapping (different slugs: wave 13 touched Accord/Edge/GM/Ford
+  clusters, wave 14 touches acura-tsx-2014 + ford-fusion-2017 only).
+  Verified against: autovetting-recall-audit-wave13-2026-07-31. All Done (last 10) blocks carry a
+  - Started: field; none needed backfilling. In-flight autovet-competitor-monitor (Competitors/, next =
+  VINsight.ai), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next = Infiniti) and
+  autovet-seo-content (Content/blog/) are orthogonal. Ready was empty. No Re-sync needed.
+  Syntax-check: PASS. Truncation guard: 17,642 lines / 1,332,580 bytes, tail intact. Dead-links: verified
+  (no links added or changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL. Scanner: PASS.
+  Commit: 02cb107.
 
 ## Done (last 10)
 
