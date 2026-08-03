@@ -236,7 +236,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL (G28 initially CRIT-failed on the three scope-only
   prose citations; resolved by ledgering them, per the known gate quirk). Scanner: PASS (474 files,
   exit 0).
-  Commit: COMMIT_HASH.
+  Commit: b7b2114.
 
 
 ## Done (last 10)
