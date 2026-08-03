@@ -2641,7 +2641,7 @@ const CHECKLISTS = {
     summary: "The 2010-2014 Tacoma (second-gen, MY-K refresh) is one of the longest-lived used trucks money can buy. Frame rust is the single most important inspection point — Toyota's salt-belt buyback program already covered the worst trucks, but rust is still possible on neglected examples. The 4.0L V6 routinely hits 300,000 miles.",
     stats: {
       itemsToCheck: 11,
-      recalls: 6,
+      recalls: 8,
       ownerComplaints: 524,
       topComplaintArea: 'Structure / Frame'
     },
@@ -2671,12 +2671,12 @@ const CHECKLISTS = {
         title: 'Powertrain — 4.0L V6 (1GR-FE)',
         items: [
           {
-            title: 'Lower ball joints (early-recall era)',
+            title: 'Lower ball joints (wear item, not a recall on this truck)',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Early second-gen Tacomas (2005-2008) had a lower ball joint recall. By 2010+ most issues are resolved, but ball joints remain a wear item — failure can cause loss of steering.',
-            check: '<strong>Jack the front wheel and rock top-bottom (12-6).</strong> Any movement = worn. Look for the round inspection mark on the lower BJ confirming recall completion (if applicable).',
+            desc: "Toyota's lower-ball-joint recall (NHTSA 05V-225, campaign 50J) covered 2001-2004 Tacoma, 2002-2004 Tundra and Sequoia and 2001-2002 4Runner — first-gen trucks only. A 2012 Tacoma is nowhere near that campaign, so treat the ball joints purely as a wear item: they carry the front suspension load and a failed one can cause loss of steering.",
+            check: '<strong>Jack the front wheel and rock top-bottom (12-6).</strong> Any movement = worn. Also grab the wheel at 9-3 to separate ball-joint play from tie-rod play, and check the boots for splits.',
             cost: '$300-$500 per side parts + labor',
-            source: 'Toyota recall 05V-449 + standard wear'
+            source: 'Wear pattern; NHTSA 05V-225 cited for scope only'
           },
           {
             title: 'Carbon buildup (port-injected, less common)',
@@ -2756,12 +2756,14 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '05V-449', title: 'Lower Ball Joint', desc: 'Major Tacoma recall — front lower ball joints. Verify completion via VIN.' },
-      { number: '14V-053', title: 'Center Console Trim', desc: 'May come loose — minor.' },
-      { number: '14V-657', title: 'Tire Information Label', desc: 'Tire pressure label may be incorrect.' },
-      { number: '15V-394', title: 'Seat Belt Pretensioner', desc: 'Pretensioner may fail in collision.' },
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '20V-697', title: 'Air Bag Module', desc: 'Replacement program — verify completion.' }
+      { number: '14V-054', title: 'Brake Actuator / VSC-ABS Software', desc: '2012-2013 Tacoma (also 2012-2013 Lexus RX 350 and 2012 RAV4): resistance inside the brake actuator can illuminate the VSC, ABS and traction-control lights and disable those systems. Skid-control ECU software update. This is the only factory Toyota campaign on a 2012 Tacoma — dash lights on during the test drive are the tell.' },
+      { number: '17V-425', title: 'Accessory Hood Scoop (Southeast Toyota trucks)', desc: '2011-2016 Tacoma and 4Runner with a dealer-installed SET hood scoop: the adhesive can weaken and the scoop can depart the truck at speed. Remedy mechanically fastens it. SET17B — only trucks distributed through Southeast Toyota (FL/GA/AL/NC/SC/TN).' },
+      { number: '14V-475', title: 'Tire Placard — Accessory Wheels', desc: '2008-2014 Tacoma and FJ Cruiser fitted with accessory wheels/tires before first sale: the placard lists the wrong spare size and/or cold inflation pressure (FMVSS 110). Corrective overlay sticker. Check the door-jamb placard against the wheels actually on the truck.' },
+      { number: '13V-494', title: 'Spare-Wheel Lug Nuts (18-inch Maverick alloys)', desc: '2012-2013 Tacoma with SET 18-inch Maverick alloy wheels: the spare needs a different lug-nut style than the road wheels, and those nuts were never supplied. Wrong nuts can damage the wheel and let it come loose. Remedy = warning label plus a bag of correct nuts — look for the bag.' },
+      { number: '13V-123', title: 'Load-Capacity Label (Southeast Toyota)', desc: '2010-2013 Tacoma among a long Southeast Toyota list: the weight-added label is outside the 1% accuracy allowed by FMVSS 110, so the payload figure on the door is wrong. Corrected label.' },
+      { number: '13V-014', title: 'Occupant-Sensing Calibration (SET-modified trucks)', desc: '2009-2012 Tacoma modified by Southeast Toyota with leather covers, seat heaters or headrest DVD: the front passenger occupant-sensing system may never have been recalibrated, so the passenger airbag can fail to deploy or deploy wrongly. Dealers retest and recalibrate. Aftermarket-looking leather on a Tacoma of this era is the flag.' },
+      { number: '12V-158', title: 'Tire Placard (Gulf States Toyota)', desc: '2012 Tacoma distributed by Gulf States Toyota (TX/OK/AR/LA/MS): inaccurate spare tire size and cold inflation pressure on the placard (FMVSS 110). Corrected placard mailed to owners.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Five of the seven campaigns above are regional-distributor or accessory campaigns, so whether a given truck is covered depends on where it was first sold and what was bolted to it. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -2776,7 +2778,7 @@ const CHECKLISTS = {
     summary: "The 4th-gen 4Runner (2003-2009) sits on the same legendary platform as the Lexus GX 470 and the Prado. Bulletproof drivetrains in both V6 and V8 trims. The four areas that matter: frame rust (Northeast trucks), the X-REAS suspension on Sport models (very expensive when it leaks), KDSS on Trail Editions, and the cracking dashboard.",
     stats: {
       itemsToCheck: 10,
-      recalls: 3,
+      recalls: 5,
       ownerComplaints: 312,
       topComplaintArea: 'Steering / Power Train'
     },
@@ -2870,8 +2872,10 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '08V-528', title: 'Floor Mat / Accelerator', desc: 'Large Toyota recall — verify floor mats not stacked, accelerator pedal not blocked.' },
-      { number: '14V-312', title: 'Differential Pinion Nut', desc: 'Loose nut may cause rear differential failure.' },
+      { number: '11V-113', title: 'Accelerator Pedal / Floor Mat Entrapment', desc: '2003-2009 4Runner (also 2008-2011 Lexus LX 570 and 2006-2010 RAV4): the accelerator pedal can be trapped wide open by an unsecured or incompatible driver floor mat. Toyota campaign 90L — remedy reshapes or replaces the pedal and replaces any Toyota all-weather mat. This is the real floor-mat campaign on this truck; confirm it was closed and that the mat in the footwell is the correct secured one.' },
+      { number: '16V-396', title: 'Accessory Seat Heaters — Fire Risk (SET)', desc: '2005-2011 4Runner among a long Southeast Toyota list fitted with aftermarket seat heaters using a copper-strand element: compressing the cushion can damage the wiring and short it. Dealers disconnect the heaters and refund the accessory. SET16B — check whether the seats have dealer-added heat.' },
+      { number: '14V-743', title: 'Accessory Seat Heaters — Earlier Wave (SET)', desc: '2007-2011 4Runner and a long SET list: the earlier version of the same seat-heater wiring defect, same disconnect-and-refund remedy. If a truck shows one of these two campaigns open, the heated seats may simply have been switched off rather than repaired.' },
+      { number: '10V-035', title: 'Load-Capacity Labels (Gulf States Toyota)', desc: '2005-2010 Gulf States Toyota vehicles sold Sept 2005 - June 2008 without the required load-carrying-capacity modification labels (FMVSS 110). Label-and-manual fix; matters only if you plan to load the truck to its rating.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -3114,7 +3118,7 @@ const CHECKLISTS = {
     summary: "The 2008-2013 Highlander shares its bulletproof 2GR-FE V6 with the Lexus RX 350. It\'s one of the most boring used SUVs to inspect — meaning it usually checks out. Three-row family hauler with reliable AWD on optional trims. Verify water pump status (same preventive-replacement zone as the RX) and you\'re in good shape.",
     stats: {
       itemsToCheck: 9,
-      recalls: 3,
+      recalls: 2,
       ownerComplaints: 215,
       topComplaintArea: 'Power Train'
     },
@@ -3208,8 +3212,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '10V-017', title: 'Accelerator Pedal', desc: 'Pedal may stick — verify floor mat issue addressed.' },
-      { number: '14V-053', title: 'Hybrid Inverter (Hybrid models only)', desc: 'Inverter may overheat — Hybrid trims only.' },
+      { number: '10V-017', title: 'Sticking Accelerator Pedal (CTS friction lever)', desc: '2010 Highlander, part of the 2005-2010 Avalon / 2007-2010 Camry / 2009-2010 Corolla, Matrix and RAV4 / 2008-2010 Sequoia / 2007-2010 Tundra campaign: the friction lever in the pedal assembly can wear smooth and, with condensation on it, make the pedal hard to depress, slow to return or stuck partly down. Remedy installs a reinforcement bar in the pedal. This is the pedal-mechanism recall, separate from the floor-mat entrapment campaigns of the same era — confirm which one a seller is talking about.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },

@@ -48,8 +48,8 @@
       "makes": [
         "Toyota"
       ],
-      "component": "Prius inverter IPM 2010-2014",
-      "source": "NHTSA 14V-053",
+      "component": "Prius inverter IPM 2010-2014 Prius + 2012-2014 Prius v ONLY — do not apply to any non-Prius slug (mis-pasted on Tacoma/Highlander, removed wave 15)",
+      "source": "NHTSA 14V-053 (verified scope re-confirmed 2026-08-03)",
       "verified": "2026-06-10"
     },
     "20V346": {
@@ -429,8 +429,8 @@
       "makes": [
         "Ford"
       ],
-      "component": "Shift cable bushing degradation (roll-away), 2015-2018 Edge + Escape/C-Max/Fusion/Transit Connect; Ford 22S43",
-      "source": "NHTSA 22V-413 (cars.com/NHTSA recall feed, 2017 Edge complete set)",
+      "component": "Shift cable bushing degradation (roll-away), 6F35 transmission: 2013-2019 Escape, 2013-2018 C-Max, 2013-2016 FUSION (not 2017+), 2013-2021 Transit Connect, 2015-2018 Edge; Ford 22S43",
+      "source": "NHTSA Part 573 22V-413 — https://static.nhtsa.gov/odi/rcl/2022/RCLRPT-22V413-2380.PDF (year scope confirmed 2026-08-03)",
       "verified": "2026-07-31"
     },
     "25V544": {
@@ -503,12 +503,116 @@
       "component": "Front brake jounce hoses may rupture and leak brake fluid, 2013-2018 non-hybrid Fusion/MKZ, 1,280,726 units; Ford 23S12",
       "source": "NHTSA 23V-162 Part 573: https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V162-3924.PDF",
       "verified": "2026-08-01"
+    },
+    "14V054": {
+      "makes": [
+        "Toyota",
+        "Lexus"
+      ],
+      "component": "Brake actuator resistance / VSC-ABS-TRAC inoperative; 2012-2013 Tacoma + 2012-2013 Lexus RX350 + 2012 RAV4",
+      "source": "NHTSA 14V-054 (2014-02-12; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "17V425": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota accessory hood scoop adhesive, 2011-2016 Tacoma/4Runner; SET17B",
+      "source": "NHTSA 17V-425 (2017-07-02; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "14V475": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Tire placard wrong for accessory wheels/tires, 2008-2014 Tacoma/FJ Cruiser (FMVSS 110)",
+      "source": "NHTSA 14V-475 (2014-08-03; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "13V494": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota 18-inch Maverick alloys — spare-wheel lug nuts not supplied, 2012-2013 Tacoma",
+      "source": "NHTSA 13V-494 (2013-10-17; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "13V123": {
+      "makes": [
+        "Toyota",
+        "Scion"
+      ],
+      "component": "Southeast Toyota load-capacity label accuracy (FMVSS 110), incl. 2010-2013 Tacoma",
+      "source": "NHTSA 13V-123 (2013-04-09; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "13V014": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota seat modification — passenger occupant-sensing not recalibrated, incl. 2009-2012 Tacoma",
+      "source": "NHTSA 13V-014 (2013-01-16; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "12V158": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Gulf States Toyota tire placard, 2012 Tacoma (FMVSS 110)",
+      "source": "NHTSA 12V-158 (2012-04-09; cars.com/NHTSA complete-set feed for 2012 Tacoma)",
+      "verified": "2026-08-03"
+    },
+    "11V113": {
+      "makes": [
+        "Toyota",
+        "Lexus"
+      ],
+      "component": "Accelerator pedal floor-mat entrapment, 2003-2009 4Runner + 2008-2011 LX570 + 2006-2010 RAV4; Toyota 90L / Lexus 90LG",
+      "source": "NHTSA 11V-113 (2011-02-24; cars.com/NHTSA complete-set feed for 2008 4Runner)",
+      "verified": "2026-08-03"
+    },
+    "16V396": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota accessory seat heaters, copper-strand element short/fire; incl. 2005-2011 4Runner; SET16B",
+      "source": "NHTSA 16V-396 (2016-06-02; cars.com/NHTSA complete-set feed for 2008 4Runner)",
+      "verified": "2026-08-03"
+    },
+    "14V743": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota accessory seat heaters (earlier wave), incl. 2007-2011 4Runner",
+      "source": "NHTSA 14V-743 (2014-11-19; cars.com/NHTSA complete-set feed for 2008 4Runner)",
+      "verified": "2026-08-03"
+    },
+    "10V035": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Gulf States Toyota missing load-carrying-capacity modification labels, 2005-2010 (FMVSS 110)",
+      "source": "NHTSA 10V-035 (2010-01-26; cars.com/NHTSA complete-set feed for 2008 4Runner)",
+      "verified": "2026-08-03"
+    },
+    "10V017": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "CTS accelerator-pedal friction lever sticking; 2005-2010 Avalon, 2007-2010 Camry, 2009-2010 Corolla/Matrix/RAV4, 2010 Highlander, 2008-2010 Sequoia, 2007-2010 Tundra",
+      "source": "NHTSA 10V-017 (2010-01-21; RCDNN-10V017-1931.pdf / RCMN-10V017-5275.pdf)",
+      "verified": "2026-08-03"
+    },
+    "05V225": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Front suspension lower ball joints scratched during assembly; 2001-2004 Tacoma, 2002-2004 Tundra/Sequoia, 2001-2002 4Runner; Toyota SSC 50J — cited on toyota-tacoma-2012 for SCOPE ONLY (a 2012 Tacoma is not covered)",
+      "source": "https://static.nhtsa.gov/odi/rcl/2005/RCONL-05V225-5328.pdf",
+      "verified": "2026-08-03"
     }
   },
   "unverified_legacy": [
-    "05V449",
-    "08V528",
-    "10V017",
     "11V260",
     "12V395",
     "12V499",
@@ -521,7 +625,6 @@
     "14V290",
     "14V292",
     "14V293",
-    "14V312",
     "14V327",
     "14V344",
     "14V346",
@@ -529,7 +632,6 @@
     "14V355",
     "14V373",
     "14V400",
-    "14V657",
     "14V668",
     "14V787",
     "15V025",
@@ -537,7 +639,6 @@
     "15V303",
     "15V313",
     "15V340",
-    "15V394",
     "15V441",
     "15V461",
     "15V554",
@@ -575,7 +676,6 @@
     "20V579",
     "20V583",
     "20V696",
-    "20V697",
     "21V009",
     "21V020",
     "21V056",

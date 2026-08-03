@@ -149,6 +149,89 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
+#### autovetting-recall-audit-wave15-2026-08-03 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-03 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 15 — clear the wave-14 queue (22V-413 Fusion year scope; _hub archive sweep) and resume top-down through the oldest unverified_legacy numbers
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-03.md (gitignored), _hub/Product/Landing-Page/index.html + ARCHIVED-DO-NOT-REUSE.md (gitignored), TASKS.md
+- Notes:
+  2026-08-03 02:00: recall-audit WAVE 15. No run fired 2026-08-02 (no Build-Log entry, no commit) — this
+  run picks up the wave-14 queue as written. Net: 8 fabricated entries deleted across 3 slugs, 11 verified
+  entries added across 2, 1 checklist item + 2 prose descriptions rewritten, all 3 queued wave-14 items
+  closed.
+  (1) 22V-413 QUEUE ITEM RESOLVED — wave 14 was right to exclude it. Part 573 scope confirmed as 2013-2019
+  Escape, 2013-2018 C-Max, 2013-2016 FUSION, 2013-2021 Transit Connect, 2015-2018 Edge (~2.9M, 6F35). The
+  Fusion years stop at 2016, so nothing added to ford-fusion-2017. Ledger component string for 22V413
+  rewritten to name years per nameplate (it previously said "Fusion" with no years — the exact ambiguity
+  that would have caused a future re-add) and now cites the Part 573 PDF directly.
+  (2) toyota-tacoma-2012 — WORST SINGLE-SLUG RESULT SO FAR: all five numbered recalls were fabrications,
+  none present in the truck's actual 7-campaign NHTSA set. 05V-449 (no such applicable campaign; the real
+  ball-joint recall is 05V-225/campaign 50J, 2001-2004 Tacoma + 2002-2004 Tundra/Sequoia + 2001-2002
+  4Runner) DEL. 14V-053 claimed as "Center Console Trim" = the Prius inverter IPM campaign (2010-2014
+  Prius / 2012-2014 Prius v) DEL. 14V-657 claimed as "Tire Information Label" = a YAMAHA MOTORCYCLE recall
+  DEL. 15V-394 claimed as "Seat Belt Pretensioner" = NAVISTAR International Durastar/Workstar + IC Bus
+  grid-heater cable DEL. 20V-697 claimed as "Air Bag Module" = LION ELECTRIC school-bus wheelchair belt
+  anchors DEL. Three commercial-vehicle campaign numbers on one light-duty pickup = list generated without
+  ever touching NHTSA. Complete verified set added (7): 14V-054 (brake actuator, VSC/ABS/TRAC inoperative —
+  the only factory Toyota campaign on this truck), 17V-425, 14V-475, 13V-494, 13V-123, 13V-014, 12V-158
+  (six of the seven are Southeast/Gulf States distributor or accessory campaigns; region + accessory scope
+  written into each description, and the VIN-check line rewritten to say so). Also rewrote the checklist
+  item "Lower ball joints (early-recall era)" — it asserted a 2005-2008 second-gen ball-joint recall that
+  does not exist and sourced itself to 05V-449; now titled "wear item, not a recall on this truck", states
+  the correct 05V-225 scope, and the check separates ball-joint from tie-rod play.
+  (3) toyota-4runner-2008 — both numbers wrong. 08V-528 claimed as "Floor Mat / Accelerator, large Toyota
+  recall" = CHRYSLER, 712 MY2009 Sebring/Caliber/Avenger/Journey/Patriot/Compass PCM adhesive circuit-board
+  crack DEL. 14V-312 claimed as "Differential Pinion Nut" = real Toyota but the Takata passenger inflator
+  campaign for 2002-2004 Sequoia/Lexus SC + 2003-2004 Corolla/Matrix/Tundra/Vibe (844,277 units), no
+  4Runner DEL. The truck DOES have a real floor-mat campaign we were not citing: 11V-113 (Toyota 90L /
+  Lexus 90LG, 2003-2009 4Runner + 2008-2011 LX570 + 2006-2010 RAV4) — added. Complete set also added
+  16V-396 + 14V-743 (SET accessory seat heaters, copper-strand short/fire; remedy is disconnect-and-refund,
+  so an open one may just mean the heat was switched off) and 10V-035 (GST load-capacity labels). 10V-036
+  appears in the 2008 4Runner feed but scopes to 2006-2009 Sienna only — deliberately NOT added, noted in
+  the Build-Log so a later run doesn't add it.
+  (4) toyota-highlander-2010 — 14V-053 mis-paste, SECOND SIGHTING ("Hybrid Inverter, Hybrid models only").
+  Campaign covers 2010-2014 Prius + 2012-2014 Prius v only; Highlander Hybrid is not in it. DEL. 14V053
+  stays verified for toyota-prius-2012 where it is correct, but its ledger note now reads "Prius/Prius v
+  ONLY — do not apply to any non-Prius slug". 10V-017 on the same slug CHECKED OUT (CTS accelerator-pedal
+  friction lever genuinely covers the 2010 Highlander) — moved to verified, and its description rewritten
+  because it was conflating the pedal-mechanism recall with the floor-mat campaigns of the same era. The
+  Highlander complete-set pull was blocked this run (cars.com URL for that year unreachable) — queued for
+  wave 16.
+  (5) _hub ARCHIVE SWEEP (wave-14 collateral item) CLOSED — _hub/Product/Landing-Page/index.html carried
+  15V-128, 05V-449, 08V-528, 14V-312, 14V-657, 15V-394, 20V-697, 18V-114, 18V-307, 19V-237, 20V-014. It
+  now opens with an ARCHIVED / DO-NOT-REUSE banner naming all of them and pointing at inspect/index.html +
+  the ledger as source of truth; folder also gets ARCHIVED-DO-NOT-REUSE.md. Every other _hub hit for a
+  deleted number is a Build-Log, a CPO-protocol anti-fabrication guard or an Awaiting-Daniel entry
+  DOCUMENTING the deletion — correct, left alone. Path is gitignored (.gitignore:31), ships nothing.
+  stats.recalls re-synced to array length on all three slugs (Tacoma 6->8, 4Runner 3->5, Highlander 3->2).
+  Ledger: unverified_legacy 82 -> 75 (05V449, 08V528, 10V017, 14V312, 14V657, 15V394, 20V697 removed);
+  verified 59 -> 72 (10V017, 10V035, 11V113, 12V158, 13V014, 13V123, 13V494, 14V054, 14V475, 14V743,
+  16V396, 17V425 added with sources, plus 05V225 — the real Toyota ball-joint campaign, ledgered because
+  the rewritten Tacoma item cites it for scope; gate G28 correctly caught it as unledgered on first run).
+  Wave 16 queue: (a) 2010 Highlander complete set (blocked this run); (b) ford-escape-2013 is in scope for
+  22V-413 (2013-2019 Escape) and does not list it — pull the Escape's complete set and add properly;
+  (c) resume oldest-first through the remaining 75: 11V260 (subaru-forester-2011), 12V395
+  (nissan-frontier-2018 — a 2012 number on a 2018 truck, flag it), 12V499, 13V252, 13V561; (d) SYSTEMIC —
+  three of this wave's five Tacoma numbers were commercial-vehicle campaigns (motorcycle, Class-6 truck,
+  school bus), so sweep for other non-light-duty numbers sitting on car slugs.
+  Sibling check: no blocking conflict. Only Done siblings sharing inspect/index.html + recall-ledger.json
+  are autovetting-recall-audit-wave14-2026-08-01 and wave13-2026-07-31 — this run is the direct
+  continuation of wave 14's own queue, additive and non-overlapping (wave 14 touched acura-tsx-2014 +
+  ford-fusion-2017; wave 15 touches toyota-tacoma-2012, toyota-4runner-2008, toyota-highlander-2010 only).
+  Verified against: autovetting-recall-audit-wave14-2026-08-01. Coalesced the wave-14 Ready block into Done
+  (already pushed as 02cb107) so Ready holds only this run. All Done (last 10) blocks carry a - Started:
+  field; none needed backfilling. In-flight autovet-competitor-monitor (Competitors/, next = VINsight.ai),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next = Infiniti) and autovet-seo-content
+  (Content/blog/) are orthogonal. No Re-sync needed.
+  Syntax-check: PASS. Truncation guard: 17,645 lines / 1,336,451 bytes (was 17,642 / 1,332,580), tail
+  intact. Ledger: valid JSON, 72 verified / 75 unverified_legacy. Dead-links: verified (no links added or
+  changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL. Scanner: PASS (470 files, exit 0).
+  Commit: COMMIT_PLACEHOLDER.
+
+
+## Done (last 10)
+
 #### autovetting-recall-audit-wave14-2026-08-01 — ready (pushed directly)
 
 - Status: ready
@@ -193,7 +276,6 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   (no links added or changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL. Scanner: PASS.
   Commit: 02cb107.
 
-## Done (last 10)
 
 #### autovetting-recall-audit-wave13-2026-07-31 — ready (pushed directly)
 
