@@ -227,7 +227,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Syntax-check: PASS. Truncation guard: 17,645 lines / 1,336,451 bytes (was 17,642 / 1,332,580), tail
   intact. Ledger: valid JSON, 72 verified / 75 unverified_legacy. Dead-links: verified (no links added or
   changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL. Scanner: PASS (470 files, exit 0).
-  Commit: COMMIT_PLACEHOLDER.
+  Commit: bfe6463.
 
 
 ## Done (last 10)
