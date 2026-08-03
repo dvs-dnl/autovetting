@@ -104,6 +104,16 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Key buyer insight for downstream content: TIER TRAP — Acura "certified" spans 182-pt/7yr-powertrain (Precision Certified, 2021-2026 MY <80k) vs 112-pt/6-mo (Precision Used, 2016-2026 MY, NO mileage cap); every certified 2015-2020 TLX is the lite tier.
     Weekly milestone: DONE — acura-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅ → Lexus ✅ → Acura ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Infiniti (P1).
 
+  2026-08-03 15:40: ingested INFINITI CPO protocol (167 inspection points INFINITI CPO / 84 points on BOTH Select tiers).
+    Output: Product/CPO-Protocols/infiniti-certified.md, Product/CPO-Protocols/_runs/2026-08-03-infiniti.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists; auto-pusher does not watch Product/CPO-Protocols/. Ready = autovetting-recall-audit-wave15-2026-08-03 (inspect/index.html + scripts/recall-ledger.json, Toyota Tacoma/4Runner/Highlander slugs + _hub Landing-Page archive) — no INFINITI overlap, and this run deliberately wrote to NEITHER of that task's files. In-flight autovet-competitor-monitor (Competitors/, next=VINsight.ai) + autovet-seo-content (Content/blog/) orthogonal; Done(last 10) = recall-audit waves 13/14 (acura-tsx-2014, ford-fusion-2017) + vinnote batches, no INFINITI content. grep of TASKS.md for infiniti/q50/qx60/qx50/qx80/q60/g37 found only the infiniti-qx80-2018 vinNote row (line ~433, single-engine VK56VD structural note, Done) — complementary and consistent with this file. grep of inspect/index.html: ZERO INFINITI slugs exist, so no downstream checklist can conflict today. Verified against: autovetting-recall-audit-wave15-2026-08-03; cross-referenced to: infiniti-qx80-2018 vinNote block. No Re-sync needed.
+    Located the actual OEM checklist PDF (©2016 form IN-17955) rather than dealer-page summaries, so item-level detail is firmer than several earlier files in this library. Three tiers captured: INFINITI CPO (167pt, ≤5yr/60k, up to 6yr/75k or 6yr/unlimited, $0 deductible, ~1,800 components, CARFAX Buyback) / INFINITI CPO Select (84pt, ≤10MY/100k, 12mo/12k POWERTRAIN only, $100 deductible, ~600 components, NO Buyback) / Certified Pre-Owned Select for non-INFINITI trade-ins (84pt, 6mo/6k powertrain).
+    Campaign IDs all WebSearch-verified 2026-08-03 with exact scope written into an anti-fabrication guard table: 16V-430 (Direct Adaptive Steering ECU reflash, 2014-16 Q50/Q50 Hyb), 17V-476 (FPCM stall, 2016-18 Q50 + 2017 Q60, 2.0L ONLY), 17V-571 (driver airbag inflator weld, 2017 Q50/Q50 Hyb only), 16V-244 (OCS), 24V-470 (driveshaft fracture/rollaway, 2WD ONLY, 2014-18 Q50 + M56/M35 Hyb/Q70/Q70L), 14V-583 (TPS unintended accel, HYBRIDS only), 21V-234 (2021 Q50/Q60 ECM), 21V-402 (steering knuckle heat-treat, 2021 Q50/QX50/GT-R + 2020 Murano/QX60), 19V-654, 21V-599, 21V-774 (HPCM shutdown, 2014-17 QX60 HYBRID), 19V-807 (ABS actuator fire — SUPERSEDES + expands 18V-601 and re-captures cars previously inspected-and-passed under it), L51 cluster 23V-814/23V-108/22V-111/23V-268/24V-176/24V-154/25V-173, and QX80 14V-683 / 14V-129 (2014 20-inch-wheel GAWR label, label-only remedy) / 21V-373 / 24V-747 / 24V-748 / 25V-821.
+    ⚠️ LEDGER CONFLICT FOUND — QUEUED FOR RECALL-AUDIT WAVE 16: scripts/recall-ledger.json records 16V244 as makes:["Nissan"] with component string ending "— NOT 2017+ and NOT Infiniti" (verified 2026-06-11). NHTSA campaign text explicitly covers 2014-2017 INFINITI Q50, 2014-2016 Q50 Hybrid / QX60 / QX60 Hybrid, 2013 JX35 and 2014-2017 Rogue, and prescribes a DIFFERENT remedy on the INFINITI cars (OCS ECU REPLACEMENT vs. the ACU/OCS reflash used on the Nissan sedans). Both halves of the exclusion appear wrong. NO edit made to the ledger or inspect/index.html by this run (those files were mid-flight in Ready). If the exclusion string was written to block a specific past mis-paste, the fix should NARROW it, not delete it.
+    Key buyer insights for downstream content: (1) ITEM 13 BLIND SPOT — the only timing item on the whole 167-point form says "timing BELT replaced per OEM maintenance schedule"; every current INFINITI engine is chain-driven, so that item is N/A'd on every car and the inspection contains ZERO timing-chain coverage on a brand whose VQ35 / VK56VD / VR30DDTT all have documented chain wear. Cleanest example in the library of a checklist that is technically complete and practically blind. (2) POINT-COUNT INFLATION — 7 items diesel/manual-only (29,30,31,38,46,83,84) + 7 hybrid-only (47-53); real count on an automatic gasoline Q50 is ~150. (3) QX60 CVT WARRANTY EXTENSION 22I2299CVT (Nissan 22N2299CVT), 2015-2018, 72mo/70k -> 96mo/94k, from the ~$277.7M class settlement — NOT a recall, so invisible to a VIN recall lookup, and the 96-month clock has now expired for most of that population. (4) THREE-TIER TRAP sharper than Acura's — "Certified Pre-Owned Select" names TWO different products, and with a 5yr top-tier ceiling virtually every "certified" INFINITI older than a 2021 MY on a 2026 lot is a lite tier.
+    Open flags carried forward: eligibility discrepancy UNRESOLVED (2016 checklist form says 72 months / 70,000 mi; current consumer warranty page says 5 yr / 60,000 mi — same class as the Lexus 70k-vs-80k flag); ITB20-002a (VR30DDTT +0.5 qt oil capacity / new dipstick p/n) is forum-sourced, marked [unverified-primary], do NOT publish as verified; CONSULT III Plus + INFINITI-specific battery tester dependency (items 6-8, 37, hybrid block) — same factory-tool gap as Lexus Techstream; RECALL-SET COMPLETENESS CAVEAT — cars.com lists 14 total campaigns for Q50 and 19 for QX60, this run captured page 1 (10 each) plus the QX80's complete set of 8, so a future model-year-slug run must pull page 2.
+    Weekly milestone: DONE — infiniti-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅ → Lexus ✅ → Acura ✅ → Infiniti ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Volkswagen (last P1, then P2 opens with BMW).
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -148,6 +158,88 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+#### autovetting-recall-audit-wave16-2026-08-03 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-03 (15:45 MST, manually-triggered second run of the day; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 16 — drain the wave-15 queue (2010 Highlander complete set, ford-escape-2013 / 22V-413, oldest-first 11V-260) plus the 16V-244 ledger conflict raised by the Infiniti CPO run
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-03.md (gitignored), TASKS.md
+- Notes:
+  2026-08-03 15:45: recall-audit WAVE 16. Wave 15 fired at 02:00 the same day; this run is the direct
+  continuation of the queue it wrote. Net: 6 fabricated entries + 1 false Takata claim deleted across 3
+  slugs, 39 verified entries added, 1 checklist item rewritten, 1 wrong ledger entry corrected. All three
+  wave-15 queue items closed.
+  (1) toyota-highlander-2010 — the pull wave 15 was blocked on. Complete set is 8 campaigns; the slug had
+  one. Added 15V-689 (power window master switch short/melt, Toyota C0M), 14V-168 (spiral cable / FFC,
+  driver airbag deactivated), 13V-014 (SET occupant-sensing recalibration), 16V-396 + 14V-743 (SET
+  accessory seat heaters — remedy is disconnect-and-refund, so a remedied car has dead seat heaters by
+  design), 13V-123 + 10V-035 (SET / Gulf States load-capacity labels). 10V-036 deliberately NOT added
+  (2006-2009 Sienna only) and 10V-017 KEPT despite being absent from the cars.com feed — wave 15 verified
+  it against campaign text; both calls are now written into the page, not just a build log. Five of eight
+  campaigns are regional-distributor actions, so the VIN-check entry leads with delivery region.
+  (2) ford-escape-2013 — FOUR fabricated numbers plus a Takata campaign this vehicle does not have.
+  14V-350 claimed "Steering Shaft Coupler" = GM 2000-2005 Impala/Monte Carlo + 1997-2005 Malibu + Alero /
+  Intrigue / Grand Am / Grand Prix ignition-key campaign, 6,729,742 units DEL. 14V-090 claimed "MyFord
+  Touch Software" = PORSCHE 2014 911 GT3 connecting-rod / crankcase fire (AE01) DEL. 17V-243 claimed
+  "Fuel Injector / Engine Stall" = MERCEDES-BENZ 2016-2017 C300 EPS rack, 3 units DEL. 16V-449 claimed
+  "Power Liftgate / Brake Fluid" = GM 2016 Equinox / Terrain certification labels DEL. The "Multiple —
+  Takata Airbag (select builds)" entry DEL: no Takata campaign exists on the 2013 Escape. Complete
+  verified set added — 17 campaigns, the highest count on the site, four of them separate 1.6L EcoBoost
+  fire-risk actions (12V-336, 12V-431, 12V-551, 13V-583) plus 13V-584 which exists because the 12V-336
+  repair was sometimes done wrong. 22V-413 added (closing the wave-15 queue item) together with its
+  predecessor 18V-471 — a 2013 Escape is in scope for BOTH shift-cable campaigns. Also 14V-597 + 14V-237
+  (restraint module), 14V-495 + 15V-813 (MAP splice stall), 14V-239 + 16V-643 + 20V-331 (doors/latches),
+  14V-164, 13V-085, 12V-319. Rewrote the "Multiple active recall campaigns" checklist item, which sourced
+  itself to 13V-583, 14V-090, 14V-350 and described an HVAC campaign that does not exist.
+  (3) subaru-forester-2011 — both numbered recalls fabricated. 11V-260 claimed "Brake Line Corrosion
+  (salt belt)": defect real, number not — 11V-260 files as an AMERICAN HONDA campaign; the actual Forester
+  campaign is 14V-311 (WQK-47) with follow-up 14V-830 (WQQ-52) for repairs done before 2014-12-23 under
+  incomplete dealer instructions. Both added, DEL. 14V-668 claimed "Brake Pedal Bracket" = INFINITI Takata
+  driver-inflator on 2013 QX56 / 2014 QX80 (R1414) DEL. Complete set added — 16 campaigns, ten of them
+  Takata passenger-inflator actions issued per zone and tranche, three of which (20V-001/002/003)
+  re-replace inflators a prior recall already replaced. Also 22V-838, 12V-099, 16V-738 (TURBO ONLY),
+  12V-602, 19V-297 (replacement-part switches only).
+  (4) LEDGER CORRECTION — 16V-244, the conflict raised by autovet-cpo-protocol-ingestion earlier today.
+  Ledger said makes:["Nissan"] and "— NOT 2017+ and NOT Infiniti"; both halves wrong. Campaign covers
+  2014-2017 Rogue, 2016-2017 Maxima, 2014-2017 Infiniti Q50, 2014-2016 QX60/QX60 Hybrid/Q50 Hybrid and the
+  2013 JX35, and the remedy DIFFERS by model (ACU+OCS reflash vs OCS ECU replacement). Rewritten with full
+  scope and the remedy split; narrowed and corrected, not deleted. Flag closed.
+  (5) SYSTEMIC SWEEP (wave-15 item) — first hit, queued not fixed: nissan-frontier-2018 carries 14V-168 as
+  "Fuel Tank Strap", but 14V-168 is the Toyota spiral-cable campaign verified on the Highlander in this
+  same run — a cross-MAKE collision. Same slug also carries 12V-395, a 2012 number on a 2018 truck. Fixing
+  both needs the complete 2018 Frontier set = wave 17. 14V-168's ledger note now reads "TOYOTA ONLY" and
+  names the Frontier entry as a known collision.
+  stats.recalls re-synced to array length on all three slugs (Highlander 2->9, Escape 6->18,
+  Forester 3->17).
+  Ledger: unverified_legacy 75 -> 68 (11V260, 14V668, 14V350, 14V090, 17V243, 16V449, 14V168 removed);
+  verified 72 -> 108 (34 campaign entries added with sources, plus 10V036 / 15V246 / 17V210 ledgered as
+  SCOPE-ONLY PROSE CITATIONS with explicit do-not-add-as-an-entry notes, and 16V244 corrected).
+  Wave 17 queue: (a) nissan-frontier-2018 complete set — 14V-168 + 12V-395; (b) SYSTEMIC — sweep the
+  remaining 68 for cross-MAKE collisions (same number, two makes) before going oldest-first; it is the
+  highest-yield signature found so far (this wave alone: a Porsche, a Mercedes, two GM and one Infiniti
+  number sitting on Ford/Subaru slugs); (c) resume oldest-first 12V499, 13V252, 13V561; (d) three
+  campaigns found this wave (13V-584, 20V-331, 14V-830) exist ONLY because an earlier remedy was performed
+  incorrectly — "verify recall complete" is under-specified for these, consider a standing convention.
+  Sibling check: no blocking conflict. Only Done siblings sharing inspect/index.html + recall-ledger.json
+  are the wave-15/14/13 recall-audit blocks and the vinnote batches; this run is the direct continuation
+  of wave 15's own queue and touches three slugs none of them touched (toyota-highlander-2010 was READ by
+  wave 15 but its complete-set pull was blocked and left unwritten). Verified against:
+  autovetting-recall-audit-wave15-2026-08-03. Coalesced the wave-15 Ready block into Done (already pushed
+  as bfe6463) so Ready holds only this run. All Done (last 10) blocks carry a - Started: field; none
+  needed backfilling. In-flight autovet-competitor-monitor (Competitors/, next = VINsight.ai),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Infiniti completed 15:40 today, next = VW) and
+  autovet-seo-content (Content/blog/) are orthogonal — this commit also carries the Infiniti run's
+  uncommitted TASKS.md in-flight note, which touches no file this task touches. No Re-sync needed.
+  Syntax-check: PASS. Truncation guard: 17,678 lines / 1,356,319 bytes (was 17,645 / 1,336,451), tail
+  intact. Ledger: valid JSON, 108 verified / 68 unverified_legacy. Dead-links: verified (no links added or
+  changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL (G28 initially CRIT-failed on the three scope-only
+  prose citations; resolved by ledgering them, per the known gate quirk). Scanner: PASS (474 files,
+  exit 0).
+  Commit: COMMIT_HASH.
+
+
+## Done (last 10)
 
 #### autovetting-recall-audit-wave15-2026-08-03 — ready (pushed directly)
 
@@ -228,9 +320,6 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   intact. Ledger: valid JSON, 72 verified / 75 unverified_legacy. Dead-links: verified (no links added or
   changed). Gate-check: 27 pass / 2 warn / 0 CRITICAL. Scanner: PASS (470 files, exit 0).
   Commit: bfe6463.
-
-
-## Done (last 10)
 
 #### autovetting-recall-audit-wave14-2026-08-01 — ready (pushed directly)
 

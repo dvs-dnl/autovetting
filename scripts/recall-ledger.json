@@ -233,11 +233,13 @@
     },
     "16V244": {
       "makes": [
-        "Nissan"
+        "Nissan",
+        "Infiniti",
+        "Chevrolet"
       ],
-      "component": "OCS passenger airbag reflash: 2013-2016 Altima/Leaf/Pathfinder/NV200/Sentra, 2014-2016 Rogue, 2015-2016 Murano, 2016 Maxima — NOT 2017+ and NOT Infiniti",
-      "source": "https://static.nhtsa.gov/odi/rcl/2016/RCRIT-16V244-2308.pdf",
-      "verified": "2026-06-11"
+      "component": "OCS passenger-airbag campaign. FULL scope: 2016-2017 Maxima, 2013-2016 Altima/NV200/Leaf/Sentra/Pathfinder, 2014-2016 NV200 Taxi + Infiniti QX60/QX60 Hybrid/Q50 Hybrid, 2014-2017 Rogue + Infiniti Q50, 2015-2016 Murano/Murano Hybrid/Chevrolet City Express, 2014-2015 Pathfinder Hybrid, 2013 Infiniti JX35. Remedy DIFFERS: ACU+OCS ECU REFLASH on Altima/Maxima/Murano/Rogue/Sentra; OCS ECU REPLACEMENT on Leaf/NV200/NV200 Taxi/Pathfinder/Q50/JX35/QX60/City Express. Corrected 2026-08-03: the prior \"NOT 2017+ and NOT Infiniti\" exclusion was wrong on both halves.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2016/RCMN-16V244-3315.pdf",
+      "verified": "2026-08-03"
     },
     "22V486": {
       "makes": [
@@ -610,29 +612,326 @@
       "component": "Front suspension lower ball joints scratched during assembly; 2001-2004 Tacoma, 2002-2004 Tundra/Sequoia, 2001-2002 4Runner; Toyota SSC 50J — cited on toyota-tacoma-2012 for SCOPE ONLY (a 2012 Tacoma is not covered)",
       "source": "https://static.nhtsa.gov/odi/rcl/2005/RCONL-05V225-5328.pdf",
       "verified": "2026-08-03"
+    },
+    "14V168": {
+      "makes": [
+        "Toyota",
+        "Pontiac"
+      ],
+      "component": "Steering-column spiral cable / flexible flat cable damage — driver airbag may be deactivated: 2008-2010 Highlander, 2006-2008 RAV4, 2006-2010 Yaris, 2009-2010 Tacoma/Corolla/Matrix, GM Pontiac Vibe. TOYOTA ONLY — an entry under this number on nissan-frontier-2018 titled \"Fuel Tank Strap\" is a cross-make collision, queued for wave 17.",
+      "source": "https://www.cars.com/research/toyota-highlander-2010/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "15V689": {
+      "makes": [
+        "Toyota",
+        "Scion",
+        "Pontiac"
+      ],
+      "component": "Power Window Master Switch short/melt fire risk (Toyota C0M): 2008-2011 Highlander + Highlander Hybrid, 2009-2011 Tundra/Sequoia/Corolla/Corolla Matrix/Scion xB, 2007+2009 Camry + Camry Hybrid, 2006-2011 RAV4, 2006-2010 Yaris, 2009-2010 Scion xD + Pontiac Vibe",
+      "source": "https://www.cars.com/research/toyota-highlander-2010/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "13V584": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Engine-compartment fuel line misinstalled during the 12V-336 repair (Ford 13S12): 2013 Escape 1.6L built 2011-10-05 to 2012-07-11, prior-12V336-repair population only",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V336": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Engine-compartment fuel line may split / leak (1.6L): 2013 Escape built 2011-10-08 to 2012-07-11",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V431": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Cylinder-head cup plug (freeze plug) dislodges, coolant loss / fire: 2013 Escape 1.6L built 2011-10-05 to 2012-08-31",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V551": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "1.6L engine overheat / fluid leak onto hot exhaust: 2013 Escape built 2011-10-05 to 2012-11-26 + 2013 Fusion 1.6L",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "18V471": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Transmission shift-cable bushing detaches (Ford 18S20): 2013-2014 Escape + 2013-2016 Fusion, six-speed automatic. Earlier campaign than 22V-413; a 2013 Escape is in scope for BOTH.",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "20V331": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Door latch — prior 15V-246/16V-643/17V-210 repair may not have been done correctly (Ford 20S30): 2013-2015 Escape + C-Max, 2011-2014 Fiesta, 2013-2014 Fusion + MKZ, 2015 Mustang + MKC, 2012-2015 Focus, 2014-2016 Transit Connect",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "16V643": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Door latch component breakage (Ford 16S30): 2013-2015 Escape + C-MAX, 2012-2015 Focus, 2015 Mustang + MKC, 2014-2016 Transit Connect",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V597": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Restraint Control Module coating cracks — frontal/curtain airbags + pretensioners may not deploy (Ford 14S21): 2013-2014 Escape built 2011-10-05 to 2013-11-01, C-Max, Fusion, MKZ",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V237": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "RCM software error delays side-curtain rollover airbag (Ford 14S04): 2013-2014 Escape + C-MAX",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V495": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "MAP-sensor harness splice compression / stall (Ford 14S17): 2013-2014 Escape 2.0L built 2011-10-05 to 2013-04-01 + Focus ST 2.0L",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "15V813": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "MAP-sensor harness splice — expansion of 14S17 (Ford 14S17-S1): 2013 Escape built 2012-01-11 to 2013-04-01 + 2013-2014 Focus ST",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V239": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Exterior door handle / outer panel misalignment — door may open while driving (Ford 14S03): 2013-2014 Escape built 2011-10-05 to 2014-04-10",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V164": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Front seatback recliner sub-standard welds, FMVSS 207 (Ford 14C03): 2013-2014 Escape built 2012-06-05 to 2013-08-12, Fusion, MKZ, C-Max",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "13V085": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Left rear door child lock built incorrectly: 2013 Escape built 2012-11-14 to 2012-11-21 ONLY, plus narrow 2013 Focus + C-Max windows",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V319": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Mis-positioned carpet padding pushes console trim panel into pedal clearance: 2013 Escape built 2012-03-08 to 2012-06-07",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V311": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Brake line corrosion via fuel-tank-protector gap, 20 salt-belt states + DC (Subaru WQK-47): 2009-2013 Forester, 2005-2009 Legacy/Outback, 2008-2011 Impreza, 2008-2014 WRX/STI. THE Forester brake-line campaign — supersedes 13V-110 (Legacy/Outback only).",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "14V830": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Brake line corrosion re-do for inadequate 14V-311 repairs performed before 2014-12-23 (Subaru WQQ-52): 2009-2013 Forester, 2008-2011 Impreza, 2008-2014 WRX/STI",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "22V838": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Front seat belt assembly force-limiter may not operate correctly in a crash (Subaru WRJ-22): 2009-2013 Forester",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V099": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Rear center seat belt automatic locking retractor fails FMVSS 208 lockability (child restraint): 2009-2012 Forester built 2007-11-26 to 2012-03-13",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "16V738": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Secondary air injection pump relay fails closed, pump overheats / fire (Subaru WTM-73): TURBOCHARGED ONLY — 2009-2013 Forester turbo, 2007-2009 Legacy/Outback turbo, 2008-2014 Impreza turbo. NA 2.5X cars NOT in scope.",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "12V602": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Dealer-accessory puddle lights short circuit / fire: 2009-2012 Forester sold before Jan 2012, 2010-2011 Legacy/Outback, 2006-2012 Tribeca sold before Jan 2012. Accessory-fitted cars only.",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "19V297": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "REPLACEMENT-PART mechanical key ignition switch ball spring breaks, engine shutoff (Subaru WUF-91): 2009-2013 Forester, 2008-2011 Impreza, 2008-2014 WRX, 2005-2014 Legacy/Outback, 2006-2008 Tribeca. Scope depends on repair history, not build date.",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "17V014": {
+      "makes": [
+        "Subaru",
+        "Saab"
+      ],
+      "component": "Takata passenger frontal inflator, Zone A (Subaru TKA-17): 2009-2012 Forester/Legacy/Outback, 2005-2006 Baja, 2006-2011 Impreza, 2006-2012 Tribeca, 2012 WRX",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "18V012": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Takata passenger frontal inflator, Zone A (Subaru TKA-18): 2009-2013 Forester/Legacy/Tribeca/WRX/Outback, 2009-2011 Impreza",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "19V007": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Takata passenger frontal inflator, Zone A (Subaru TKA-19): 2010-2013 Forester, 2010-2014 Tribeca/WRX/Outback/Legacy, 2010-2011 Impreza",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "19V008": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Takata passenger frontal inflator, Zone B (Subaru TKB-19): 2010-2013 Forester, 2010-2014 Tribeca/WRX/Outback/Legacy, 2010-2011 Impreza",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "19V009": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Takata passenger frontal inflator, Zone C (Subaru TKC-19): 2010-2013 Forester, 2010-2014 Tribeca/WRX/Legacy/Outback, 2010-2011 Impreza",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "16V358": {
+      "makes": [
+        "Subaru",
+        "Saab"
+      ],
+      "component": "Takata passenger frontal inflator, Zone A (Subaru TKA-16): 2009-2011 Forester/Legacy/Outback, 2003-2004 Legacy/Outback, 2006-2011 Impreza/Tribeca, 2003-2006 Baja, 2006 Saab 9-2X",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "20V001": {
+      "makes": [
+        "Subaru",
+        "Saab"
+      ],
+      "component": "Takata RE-recall of already-REPLACED same-design passenger inflators, Zone A (Subaru TKA-20): 2009-2013 Forester, 2003-2006 Baja, 2004-2011 Impreza, 2004-2014 WRX/STI, 2003-2014 Legacy/Outback, 2005-2006 Saab 9-2X",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "20V002": {
+      "makes": [
+        "Subaru",
+        "Saab"
+      ],
+      "component": "Takata RE-recall of already-REPLACED same-design passenger inflators, Zone B (Subaru TKB-20): same population as 20V-001, Zone B states",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "20V003": {
+      "makes": [
+        "Subaru",
+        "Saab"
+      ],
+      "component": "Takata RE-recall of already-REPLACED same-design passenger inflators, Zone C (Subaru TKC-20): same population as 20V-001, Zone C states",
+      "source": "https://www.cars.com/research/subaru-forester-2011/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "10V036": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Southeast Toyota load-carrying-capacity labels, 2006-2009 SIENNA ONLY (FMVSS 110). Cited in prose on toyota-highlander-2010 and toyota-4runner-2008 solely to state that it does NOT apply to those vehicles — do not add it as a recall entry on any non-Sienna slug.",
+      "source": "https://www.cars.com/research/toyota-highlander-2010/recalls/ (NHTSA feed)",
+      "verified": "2026-08-03"
+    },
+    "15V246": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Ford door-latch campaign (first of the 15V-246 / 16V-643 / 17V-210 / 20V-331 chain). Cited in prose on ford-escape-2013 only as the prior-repair population named by 20V-331; no standalone Escape entry.",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed, 20V-331 text)",
+      "verified": "2026-08-03"
+    },
+    "17V210": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Ford door-latch campaign (third of the 15V-246 / 16V-643 / 17V-210 / 20V-331 chain). Cited in prose on ford-escape-2013 only as the prior-repair population named by 20V-331; no standalone Escape entry.",
+      "source": "https://www.cars.com/research/ford-escape-2013/recalls/ (NHTSA feed, 20V-331 text)",
+      "verified": "2026-08-03"
     }
   },
   "unverified_legacy": [
-    "11V260",
     "12V395",
     "12V499",
     "13V252",
     "13V561",
     "14V028",
-    "14V090",
     "14V153",
-    "14V168",
     "14V290",
     "14V292",
     "14V293",
     "14V327",
     "14V344",
     "14V346",
-    "14V350",
     "14V355",
     "14V373",
     "14V400",
-    "14V668",
     "14V787",
     "15V025",
     "15V258",
@@ -645,12 +944,10 @@
     "16V028",
     "16V065",
     "16V391",
-    "16V449",
     "16V586",
     "17V148",
     "17V224",
     "17V225",
-    "17V243",
     "17V525",
     "17V718",
     "18V004",
