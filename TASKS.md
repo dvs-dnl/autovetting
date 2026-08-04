@@ -65,6 +65,17 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: buyer-side PPI white space intact but narrowing from a THIRD direction (UVeye=dealer hardware, Cox=sell-side KBB AI, Self Inspection=lender/marketplace software rails + Sandberg-amplified "condition = the new history report" narrative). Counter-positioning piece ("seller-provided condition report ≠ independent inspection — paid by you, not the dealer") now MORE urgent — second consecutive week this surfaced. Physical-inspection moat holds (no underbody/lift/test-drive from photos+OBD2). Lender channel (biz plan §3 note) now has an entrenched default. 🔴 triggers set in profile: buyer-orderable product; "Self Inspection Verified" on a major consumer marketplace at browse level; acquirer-ecosystem integration (Carfax/Cox); consumer-PPI marketing. Housekeeping: add to Competitor_Analysis.md as "condition-data software rail" when archetype block (open since 06-18) is written; Business Plan §3 + funding table now stale ($3M → +$10M).
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: VINsight.ai (#12) [competitive direct comparison; what they're shipping].
 
+  2026-08-03 16:20: profiled VINsight.ai (#12) (🟡 — low side; BASELINE first-hand review, no prior _Monitor profile).
+    Output: Competitors/_Monitor/2026-08-03-vinsight-ai.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. Ready = autovetting-recall-audit-wave15-2026-08-03 (inspect/index.html + scripts/recall-ledger.json + gitignored _hub Build-Log/Landing-Page) — orthogonal, this run wrote only to Competitors/_Monitor/ + TASKS.md. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, INFINITI done 08-03, next=Volkswagen) + autovet-seo-content (Content/blog/) orthogonal. Done(last 10) = recall-audit waves 13/14 + decision-execution 07-30 + vinnote batches — none touch Competitors/ and none position an AutoVet feature against VINsight. No Re-sync needed.
+    Key delta: THE DELTA IS A CORRECTION TO OUR OWN RECORD, not a competitor move — nothing at VINsight changed. Competitor_Analysis.md §4 describes a company that does not exist as written. §4 calls VINsight.ai "the most directly comparable competitor," buyer-facing, synthesizing "VIN data, NHTSA recalls, and vehicle history" for "tech-forward used car buyers," threat=Medium. Actual site (verified 2026-08-03): meta-description on every page reads "AI-powered vehicle inspection and damage analysis for DEALERS AND RESELLERS"; homepage = "repair estimates for smarter dealership decisions"; the three shipped features are Damage Detection (photo scratches/dents/panel/corrosion), Instant Estimates (parts/labor/overhead repair cost), Market Insights (VIN profit margin + regional demand) = a dealer RECON-COST/MARGIN tool. NO recall layer, NO reliability layer, NO checklist, NO booking, NO buyer product, NO pricing page anywhere. Solo founder Robert Billings (About page is first-person singular). Traction signals ALL NULL: no funding (no Crunchbase/Tracxn record), no press, no reviews (G2/Capterra/SoftwareWorld hits are the NZ WINERY SaaS — name collision), no LinkedIn company page, no named customers, no job postings, footer still © 2025. Threat Medium -> LOW; not a competitor at all (different buyer, different job).
+    Incidental finds: (a) vinsight.dev "Live Vehicle Intelligence" — separate near-identical name, OBD2 score cards for "rental fleets, dealerships, and BUYERS"; relationship to vinsight.ai unconfirmed, page client-rendered and unretrievable, marked [unverified], carried forward. (b) VINspectorAI (vinspectorai.com, launched 2025-09-10, Chicago, CEO Nicolas Bogdan) — consumer-facing AI VIN-HISTORY verification w/ risk scores + "hidden accident detection," free tier; closer to AutoVet's buyer-facing positioning than VINsight.ai actually is, but records-derived (Carfax/Bumper archetype), self-published PR only, no independent coverage — queued for slot #13.
+    Implication: (1) AutoVet now has NO known direct competitor — §4 was the last name carrying a "direct overlap" label; every tracked player sits on the seller/dealer/lender/marketplace side, buyer side uncontested. (2) THIRD CONSECUTIVE WEEK the same conclusion: the moat is WHO PAYS, not AI. VINsight is the cheapest proof — one engineer shipped damage-detection-from-photos alone; AI condition analysis is not defensible and must not be the headline claim. The counter-positioning copy ("a seller-provided condition report is not an independent inspection — you paid for this one") flagged 07-29, 07-30 and now 08-03 is the highest-leverage unwritten asset in this workstream. (3) Strike the partnership/acqui-hire framing in §4. (4) DATA-QUALITY NOTE: §4 was written from inference not from the site — its own hedges ("Appears to be," "Likely targeting," "unclear / likely absent") hardened into a confident Medium rating; same failure mode the recall audit has been unwinding all summer. Spot-check CarEdge/Autocheck/RepairPal against live sites during the archetype rewrite.
+    Housekeeping queued: rewrite Competitor_Analysis.md §4 + matrix row ~line 292 (Medium -> Low, dealer-side, no checklist/booking/education — note this removes the last "Yes/Likely" row opposite AutoVet's core dimensions and strengthens the "Reading the matrix" para at line 299); the "Marketplace/channel" archetype block OPEN SINCE 06-18 (6 weeks, 5 profiles) should be upgraded to a restructure BY SIDE OF THE TRANSACTION (seller-side condition suppliers UVeye/Self Inspection/VINsight | records Carfax/Bumper/VINspectorAI | marketplaces CarGurus/Cars.com/AutoTrader | buyer-side AutoVet, alone); recommend RETIRING slot #12 and replacing it with a standing buyer-side-encroachment sweep.
+    Retrieval gaps: vinsight.ai/report?vin=... (sample report — the only page showing actual output quality) and vinsight.dev are client-rendered, returned empty bodies to web_fetch; Chrome escalation attempted and BLOCKED by site permissions in scheduled-run context. Both left [unverified] rather than guessed.
+    🔴 triggers set in profile: buyer-facing product / consumer pricing; institutional funding or a team beyond the founder; marketplace or acquirer-tier integration; addition of an NHTSA recall or reliability layer; vinsight.dev shipping a buyer-orderable OBD2 product.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: #13 New entrants (start with VINspectorAI). #13 CLOSES THE FIRST FULL ROTATION CYCLE -> that run must also generate Competitors/_Monitor/QUARTERLY-SUMMARY-2026-Q3.md.
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
@@ -158,6 +169,34 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ## Ready to deploy / publish
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
+
+#### autovetting-recall-audit-wave17-2026-08-04 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-04 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 17 — nissan-frontier-2018 rebuild (both numbers fake) + the wave-16 cross-MAKE collision sweep across all 68 unverified_legacy numbers
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-04.md (gitignored), TASKS.md
+- Notes:
+  2026-08-04 02:00: recall-audit WAVE 17. Net: 12 fabricated entries deleted across 11 slugs (7 distinct
+  fake numbers), complete verified 2018 Frontier set added (18V-551 ignition switch + 19V-654 back-up
+  camera, cars.com/NHTSA feed via WebSearch provenance), ledger unverified 68->62 / verified 108->116.
+  Sweep found 5 cross-make collisions, all fabricated: 16V-028 (Autocar refuse-truck brake pin) on
+  bmw-3series-2018 + ford-mustang-2018; 17V-148 (72-van Mercedes Metris BSM) on subaru-outback-2015 +
+  mitsubishi-outlander-2017; 17V-224 (Kia GDI engine debris) on nissan-sentra-2017 + nissan-kicks-2019;
+  14V-400 (GM 6.7M-unit ignition) on nissan-pathfinder-2017 + infiniti-qx60-2018; 22V-714 (Micro Bird
+  bus) on hyundai-ioniq5-2022 + kia-carnival-2022. 12V-395 on the Frontier = Roadtrek motorhome awning
+  rivets. Deleted entries replaced with the standard VIN-check line where arrays would empty;
+  stats.recalls re-synced on all 11 slugs. Real Pathfinder/QX60 CVT-contamination checklist items
+  untouched (TSB/class action, not a recall). Complete-set rebuilds for the 10 collision slugs = wave-18
+  queue in Build-Log/2026-08-04.md. No cross-make collisions remain in the unverified set.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/ + TASKS.md notes only) orthogonal —
+  its uncommitted 2026-08-03 16:20 VINsight Notes block is included in tonight's docs commit with
+  attribution; autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) upstream-complementary (17V-224
+  Kia scope matches its Kia protocol, now also ledgered); autovet-seo-content (Content/blog/) orthogonal.
+  Ready = wave16 (already pushed as b7b2114). Done (last 10) all carry - Started: (checked, no backfill
+  needed). No Re-sync needed. Verified against: autovetting-recall-audit-wave16-2026-08-03.
+  Syntax-check: PASS. Dead-links: verified (no links added). Scanner: PASS (480 files, exit 0).
+  Truncation guard: 17,675 lines / 1,357,640 bytes, tail intact. Commit: 6143b3f (content), pushed with this docs commit.
 
 #### autovetting-recall-audit-wave16-2026-08-03 — ready (pushed directly)
 
