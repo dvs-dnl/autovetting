@@ -3249,7 +3249,7 @@ const CHECKLISTS = {
     summary: "The 2015 Outback launched the 5th generation — substantially more refined than the 4th-gen wagon it replaced. It is a strong used buy with one big asterisk: the FB25 four-cylinder is implicated in Subaru's oil-consumption class-action settlement (Yaeger v. Subaru), and a meaningful share of these cars consume oil at a rate the owner does not notice until the engine is starved. The 3.6L H6 has none of that drama. Both transmissions are the Lineartronic CVT — generally reliable, but a fluid check is non-negotiable at this age.",
     stats: {
       itemsToCheck: 13,
-      recalls: 3,
+      recalls: 2,
       ownerComplaints: 612,
       topComplaintArea: 'Engine (oil consumption)'
     },
@@ -3386,8 +3386,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '14V-787', title: 'Takata Airbag (Passenger)', desc: 'Critical — verify replacement on file before purchase.' },
-      { number: '20V-696', title: 'Denso Low-Pressure Fuel Pump', desc: 'Pump may fail and cause stall. Free dealer replacement.' },
-      { number: '17V-148', title: 'PCV Valve (FB25, early build)', desc: 'Limited build dates only; valve could ingest oil.' }
+      { number: '20V-696', title: 'Denso Low-Pressure Fuel Pump', desc: 'Pump may fail and cause stall. Free dealer replacement.' }
     ]
   },
 
@@ -6874,7 +6873,7 @@ const CHECKLISTS = {
     engine: '1.8L MRA8DE I4 (130hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "B17 Sentra is among the most affordable used compact sedans available. The 1.8L engine itself is reasonably reliable — the Xtronic CVT is the buyer risk. CVT failure mirrors the Altima pattern when NS-3 fluid was not changed every 30k miles. Service history is everything on any CVT Nissan.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid and reliability', risk: 'high', riskLabel: 'High Attention',
@@ -6912,7 +6911,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-224', title: 'Seat Belt Anchor', desc: 'May not hold correctly.' },
       { number: '14V-344', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' }
     ]
   },
@@ -7110,7 +7108,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (284hp) with Xtronic CVT',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The R52 Pathfinder replaced the 4WD body-on-frame model with an FWD-based unibody crossover — a controversial move. The CVT paired with the 3.5L V6 on a heavy 3-row SUV is the headline concern: the transmission is under more load than in lighter vehicles, and failure has been documented earlier than on Altima/Rogue. Radiator coolant mixing with CVT fluid (via a cross-contamination failure) is the most catastrophic documented issue.",
-    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
+    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
     sections: [
       { title: 'Transmission — Most Critical', items: [
         { title: 'CVT radiator cross-contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7148,7 +7146,6 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-400', title: 'CVT Cooler Cross-Contamination', desc: 'Radiator may allow coolant to mix with CVT fluid — critical failure.' },
       { number: '16V-244', title: 'OCS Software (2013–2016)', desc: 'Passenger airbag may be incorrectly disabled — campaign covers 2013–2016 Pathfinder; verify on those years.' }
     ]
   },
@@ -7158,7 +7155,7 @@ const CHECKLISTS = {
     engine: '2.5L QR25DE I4 (152hp) / 4.0L VQ40DE V6 (261hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The D40 Frontier ran largely unchanged from 2005–2021 — which makes parts cheap and reliability a known quantity. The 4.0L VQ40DE V6 is a proven workhorse. Main buyer concern: the 4.0L V6 radiator coolant cross-contaminating the automatic transmission (same family issue as Pathfinder). Also inspect for frame rust and catalytic converter theft on street-parked trucks.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 130, topComplaintArea: 'Radiator/trans coolant cross-contamination (V6 auto) / catalytic converter theft' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 130, topComplaintArea: 'Radiator/trans coolant cross-contamination (V6 auto) / catalytic converter theft' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '4.0L VQ40 auto transmission contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7194,8 +7191,9 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-168', title: 'Fuel Tank Strap', desc: 'Strap corrosion may cause tank to drop.' },
-      { number: '12V-395', title: 'Brake Booster', desc: 'Reduced braking effort on some 2012+ builds.' }
+      { number: '18V-551', title: "Ignition Switch — engine can shut off while driving (mechanical-key trucks)", desc: "Covers 2017-2018 Frontier built with a mechanical (physical) key ignition, alongside 2017 Sentra, Versa Note/Sedan, the NV van family and the Chevrolet City Express. Weight on the key ring, rough roads or another jarring event can rotate the ignition switch out of RUN into ACC, turning the engine off in motion — loss of power assist and, in a crash, possible airbag non-deployment. Remedy inspects the switch's production information and replaces the switch if it is in the affected range (began October 2018). Push-button-start trucks are not affected. A heavy keychain on the test drive is the classic trigger — run the VIN and confirm this one is closed." },
+      { number: '19V-654', title: "Back-Up Camera Display Settings (FMVSS 111)", desc: "Part of the ~1.2M-unit September 2019 campaign across most 2018-2019 Nissan and Infiniti models: the back-up camera display can be adjusted so the rear-view image no longer appears, and the system keeps that setting the next time reverse is selected — a Federal rear-visibility compliance failure. Remedy is a free settings-software update (began November 2019). Shift into reverse during the test drive and confirm the camera image actually appears." },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7204,7 +7202,7 @@ const CHECKLISTS = {
     engine: '2.0L B48 Turbo I4 (248–258hp) / 3.0L B58 Turbo I6 (320–382hp) / 3.0L N55/S55 (M models)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The F30 3 Series is one of the most satisfying driving experiences available used — but maintenance costs are above-average and must be budgeted honestly. The B48 4-cylinder is the most cost-effective engine. The N20 in 2012–2015 cars had timing chain issues; the B48 (2016+) resolved most of them. Budget $1,500–$3,000/year for maintenance on any used BMW. Pre-purchase inspection by a BMW specialist is non-negotiable.",
-    stats: { itemsToCheck: 14, recalls: 2, ownerComplaints: 190, topComplaintArea: 'High maintenance costs / N20 timing chain on earlier builds' },
+    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 190, topComplaintArea: 'High maintenance costs / N20 timing chain on earlier builds' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'N20 timing chain (2012–2015 only)', risk: 'critical', riskLabel: 'Critical',
@@ -7246,8 +7244,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' },
-      { number: '16V-028', title: 'Engine Compartment Cover', desc: 'Cover may contact fuel line — fire risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8150,7 +8147,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-028', title: 'Axle Shaft', desc: 'Rear axle shaft may fracture — wheel separation.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8198,7 +8195,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-148', title: 'PCV Valve (some builds)', desc: 'PCV valve may fail on certain 2.4L engines.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8245,7 +8242,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-400', title: 'CVT Cooler Contamination', desc: 'Radiator coolant may mix with CVT fluid.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9290,7 +9287,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '17V-224', title: 'Seat Belt Anchor', desc: 'Anchor may not hold correctly.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9434,7 +9431,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-714', title: 'Battery Management Software', desc: 'BMS update to prevent overcharge.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9529,7 +9526,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '22V-714', title: 'Brake Warning Indicator', desc: 'Indicator may activate incorrectly — software fix.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
