@@ -196,6 +196,9 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   note: first edit attempt used stale slug indices after earlier in-file replacements shifted offsets —
   caught by old-length anomaly, restored from HEAD, redone with per-iteration lookup + sentinel asserts.
   Commit: fd4ddbf (content), pushed with this docs commit.
+  2026-08-05 02:55: G28 pre-push gate CRIT-failed on 18V-755/25V-700 cited in the 21V-907 prose but not
+  ledgered (the known scope-only-citation gate behavior) — both added to verified with superseded/expansion
+  scope notes (132->134). Fixup commit below; gates then clean.
 
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 

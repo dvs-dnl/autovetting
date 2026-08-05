@@ -1114,6 +1114,22 @@
       "component": "Number could not be resolved to any Subaru campaign via search. Was fabricated on subaru-outback-2015 as \"Denso Low-Pressure Fuel Pump\" \u2014 Subaru Denso pump campaign is 20V-218 and covers 2019 Impreza/Outback/Legacy/Ascent, not MY2015; the complete MY2015 Outback NHTSA set does not include this number. Deleted wave 18. Do not add anywhere without primary-source resolution.",
       "source": "https://static.nhtsa.gov/odi/rcl/2020/RCRIT-20V218-8906.pdf",
       "verified": "2026-08-05"
+    },
+    "18V755": {
+      "makes": [
+        "BMW"
+      ],
+      "component": "Original BMW diesel EGR-cooler campaign (2013-2018 328d variants + 535d/740Ld/X3d/X5d). SUPERSEDED: all vehicles re-covered by 21V-907 with a NEW remedy \u2014 cite 21V-907 (and 25V-700 for 2018 328d), not this number, as the open campaign. Appears in prose on bmw-3series-2018 only as the superseded predecessor.",
+      "source": "https://www.cars.com/research/bmw-330-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "25V700": {
+      "makes": [
+        "BMW"
+      ],
+      "component": "2025 expansion of the BMW diesel EGR-cooler chain (18V-755 -> 21V-907 -> 25V-700): 2018 328d/328d xDrive incl. SportsWagon. EGR cooler internal leak, melting intake manifold, fire risk. Owner letters Dec 2025. Cited in prose on bmw-3series-2018 as the latest campaign in the chain.",
+      "source": "https://www.cars.com/research/bmw-330-2018/recalls/",
+      "verified": "2026-08-05"
     }
   },
   "unverified_legacy": [
