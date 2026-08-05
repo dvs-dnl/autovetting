@@ -168,6 +168,35 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-recall-audit-wave18-2026-08-05 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-05 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 18 (part 1 of 2) — complete-set rebuilds for the first 5 collision slugs (sentra/pathfinder/mustang/bmw-3series/outback), incl. verification of the Outback's two surviving numbers (both failed)
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-05.md (gitignored), TASKS.md
+- Notes:
+  2026-08-05 02:00: recall-audit WAVE 18 part 1. THREE more fabrications deleted: sentra 14V-344
+  ("Takata Airbag") = Mazda Takata regional campaign — cross-make collision #6; outback 14V-787 +
+  20V-696 BOTH unresolvable to real campaigns (Subaru Takata scope = 2003-05 only; Subaru Denso pump =
+  20V-218, 2019 MY) — the plausible-theme-wrong-number signature. Complete verified sets added:
+  sentra 17V-253/18V-551/21V-135; pathfinder 18V-601+19V-807 (scoped 16V-244 entry retained, scope
+  re-verified); mustang 17V-814/18V-213; bmw-3series 18V-465 gas + 21V-586/21V-907 328d-diesel-scoped;
+  outback 14V-577/15V-366/15V-502/16V-251 (16V-292 excluded — 2016-only build window). stats.recalls
+  re-synced 4/4/3/4/5; VIN-check closing line on all 5. Ledger unverified 62->59, verified 116->132
+  (13 citable + 3 do-not-add). Sources: cars.com per-year NHTSA feeds via WebSearch provenance gate.
+  Remainder queued: outlander-2017/kicks-2019/qx60-2018/ioniq5-2022/carnival-2022 rebuilds, then
+  oldest-first 12V499/13V252/13V561.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) orthogonal; working tree carried no
+  sibling edits tonight. Ready = wave17/wave16 (already pushed 6143b3f/b7b2114), same files but
+  additive on disjoint slugs; Verified against: autovetting-recall-audit-wave17-2026-08-04. Done
+  (last 10) all carry - Started: (checked, no backfill needed). No Re-sync needed.
+  Syntax-check: PASS. Dead-links: verified (no links added). Scanner: PASS (485 files, exit 0).
+  Truncation guard: 17,689 lines / 1,361,375 bytes (was 17,675 / 1,357,640), tail intact. Process
+  note: first edit attempt used stale slug indices after earlier in-file replacements shifted offsets —
+  caught by old-length anomaly, restored from HEAD, redone with per-iteration lookup + sentinel asserts.
+  Commit: fd4ddbf (content), pushed with this docs commit.
+
 *Tasks finished locally and verified. The hub orchestrator only pushes what's in this section.*
 
 #### autovetting-recall-audit-wave17-2026-08-04 — ready (pushed directly)
