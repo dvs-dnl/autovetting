@@ -982,6 +982,138 @@
       "component": "Micro Bird BUS \u2014 loose power-cable connection. BUS ONLY \u2014 was fabricated on hyundai-ioniq5-2022 ('Battery Management Software') AND kia-carnival-2022 ('Brake Warning Indicator'), cross-make collision, both deleted wave 17. Do not add to any car slug.",
       "source": "https://static.nhtsa.gov/odi/rcl/2022/RCLRPT-22V714-8107.PDF (via truckpartsandservice.com weekly recall digest)",
       "verified": "2026-08-04"
+    },
+    "17V253": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Passenger frontal airbag inflator manufacturing error (non-Takata, non-deploy). Scope: 2015-2017 LEAF + 2014, 2016, 2017 Sentra. Remedy: inflator replacement.",
+      "source": "https://www.cars.com/research/nissan-sentra-2017/recalls/",
+      "verified": "2026-08-05"
+    },
+    "21V135": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Brake light switch contamination \u2014 lights may not illuminate. Scope: 2016-2019 Sentra. Nissan PM971. Remedy: switch replacement + protective grommet.",
+      "source": "https://www.cars.com/research/nissan-sentra-2017/recalls/",
+      "verified": "2026-08-05"
+    },
+    "18V601": {
+      "makes": [
+        "Nissan",
+        "Infiniti"
+      ],
+      "component": "ABS actuator pump brake-fluid leak onto circuit board \u2014 electrical short / fire risk. Scope: 2015-2017 Murano, 2016-2017 Maxima, 2017-2018 Pathfinder, 2017 Infiniti QX60. Superseded/expanded by 19V-807.",
+      "source": "https://www.cars.com/research/nissan-pathfinder-2017/recalls/",
+      "verified": "2026-08-05"
+    },
+    "19V807": {
+      "makes": [
+        "Nissan",
+        "Infiniti"
+      ],
+      "component": "ABS actuator \u2014 expansion and re-recall of 18V-601 (previously unrepaired or inspected-no-repair vehicles re-covered). Scope: 2015-2018 Murano, 2016-2018 Maxima, 2017-2019 Pathfinder + Infiniti QX60. Remedy: actuator replacement.",
+      "source": "https://www.cars.com/research/nissan-pathfinder-2017/recalls/",
+      "verified": "2026-08-05"
+    },
+    "17V814": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Instrument cluster may not display/chime PRNDL at key-off out of Park \u2014 rollaway (FMVSS 102/114). Scope: 2018 Mustang w/ auto trans + 12.4-inch digital cluster, ~2,100 units. Remedy: cluster software update.",
+      "source": "https://www.cars.com/research/ford-mustang-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "18V213": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "10-speed (10R80) transmission missing Park roll pin \u2014 loss of Park. Scope: 2017-2018 F-150, 2018 Expedition/Mustang/Navigator, 142 units. Remedy: inspection/repair.",
+      "source": "https://www.cars.com/research/ford-mustang-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "18V465": {
+      "makes": [
+        "BMW",
+        "MINI"
+      ],
+      "component": "Crankshaft sensor incorrect firmware \u2014 engine stall. Expanded 2018-09-12 to 5,309 units incl. 2018-2019 330i/330i xDrive/340i/340i xDrive (+ 2-/5-/7-series, X1/X2, MINI). Remedy: sensor replacement.",
+      "source": "https://www.cars.com/research/bmw-330-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "21V586": {
+      "makes": [
+        "BMW"
+      ],
+      "component": "Diesel high-pressure fuel pump failure \u2014 stall. Scope: 2014-2018 328d/328d xDrive, X5 xDrive35d, 2014-2016 535d, 2015 740Ld, 2015-2017 X3 xDrive28d. DIESEL ONLY \u2014 do not cite on gas 3-series trims without the 328d qualifier.",
+      "source": "https://www.cars.com/research/bmw-330-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "21V907": {
+      "makes": [
+        "BMW"
+      ],
+      "component": "Diesel EGR cooler internal leak \u2014 coolant + soot smolder, melting intake manifold, fire risk. Scope: 2013-2018 328d variants + 535d/740Ld/X3d/X5d. Includes all of 18V-755 (new remedy required); expanded again by 25V-700 (2025) for 2018 328d. DIESEL ONLY.",
+      "source": "https://www.cars.com/research/bmw-330-2018/recalls/",
+      "verified": "2026-08-05"
+    },
+    "14V577": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Accessory trailer hitch mounting nuts overtightened \u2014 stud failure / hitch detachment. Scope: 2015 Outback built 2014-01-22..2014-08-18 WITH Subaru accessory hitch. WQN-50. Remedy: replace all 8 nuts, inspect studs.",
+      "source": "https://www.cars.com/research/subaru-outback-2015/recalls/",
+      "verified": "2026-08-05"
+    },
+    "15V366": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Brake light switch failure disables EyeSight pre-collision braking. Scope: 2015 Legacy/Outback/Impreza/XV Crosstrek + 2016 WRX w/ EyeSight. WQS-54. Remedy: driver-assist reprogram.",
+      "source": "https://www.cars.com/research/subaru-outback-2015/recalls/",
+      "verified": "2026-08-05"
+    },
+    "15V502": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Propeller shaft yoke seal cap deformed \u2014 trans oil leak onto exhaust, fire risk. Scope: 2015-2016 Legacy/Outback built 2015-07-03..2015-07-27. WQU-56. Remedy: propeller shaft replacement.",
+      "source": "https://www.cars.com/research/subaru-outback-2015/recalls/",
+      "verified": "2026-08-05"
+    },
+    "16V251": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Brake fluid excess moisture \u2014 ESC performance degraded (FMVSS 126). Scope: 2015 Legacy/Outback built 2015-07-20. WTC-64. Remedy: ABS activation + brake fluid flush/replace.",
+      "source": "https://www.cars.com/research/subaru-outback-2015/recalls/",
+      "verified": "2026-08-05"
+    },
+    "14V344": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Mazda Takata regional passenger-inflator campaign (Mazda6/RX-8/MPV/Mazdaspeed6/B-Series; FL/PR/HI high-humidity). Was fabricated on nissan-sentra-2017 as \"Takata Airbag (some builds)\" \u2014 cross-make collision, deleted wave 18. The 2017 Sentra has NO Takata campaign; its real airbag recall is 17V-253 (non-Takata mfg error). Do not add to any Nissan slug.",
+      "source": "https://www.nhtsa.gov/recalls?nhtsaId=14V344",
+      "verified": "2026-08-05"
+    },
+    "14V787": {
+      "makes": [
+        "UNRESOLVED"
+      ],
+      "component": "Number could not be resolved to any real campaign via search. Was fabricated on subaru-outback-2015 as \"Takata Airbag (Passenger)\" \u2014 Subaru Takata scope is 2003-2005 Legacy/Outback/Baja + 2004-2005 Impreza only; the 2015 Outback has no Takata campaign and its complete NHTSA set (5 campaigns) does not include this number. Deleted wave 18. Do not add anywhere without primary-source resolution.",
+      "source": "https://www.subaru.com/vehicle-recalls/takata-airbag-recall.html",
+      "verified": "2026-08-05"
+    },
+    "20V696": {
+      "makes": [
+        "UNRESOLVED"
+      ],
+      "component": "Number could not be resolved to any Subaru campaign via search. Was fabricated on subaru-outback-2015 as \"Denso Low-Pressure Fuel Pump\" \u2014 Subaru Denso pump campaign is 20V-218 and covers 2019 Impreza/Outback/Legacy/Ascent, not MY2015; the complete MY2015 Outback NHTSA set does not include this number. Deleted wave 18. Do not add anywhere without primary-source resolution.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2020/RCRIT-20V218-8906.pdf",
+      "verified": "2026-08-05"
     }
   },
   "unverified_legacy": [
@@ -994,11 +1126,9 @@
     "14V292",
     "14V293",
     "14V327",
-    "14V344",
     "14V346",
     "14V355",
     "14V373",
-    "14V787",
     "15V025",
     "15V258",
     "15V303",
@@ -1035,7 +1165,6 @@
     "20V418",
     "20V579",
     "20V583",
-    "20V696",
     "21V009",
     "21V020",
     "21V056",

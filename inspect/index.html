@@ -3249,7 +3249,7 @@ const CHECKLISTS = {
     summary: "The 2015 Outback launched the 5th generation — substantially more refined than the 4th-gen wagon it replaced. It is a strong used buy with one big asterisk: the FB25 four-cylinder is implicated in Subaru's oil-consumption class-action settlement (Yaeger v. Subaru), and a meaningful share of these cars consume oil at a rate the owner does not notice until the engine is starved. The 3.6L H6 has none of that drama. Both transmissions are the Lineartronic CVT — generally reliable, but a fluid check is non-negotiable at this age.",
     stats: {
       itemsToCheck: 13,
-      recalls: 2,
+      recalls: 5,
       ownerComplaints: 612,
       topComplaintArea: 'Engine (oil consumption)'
     },
@@ -3385,8 +3385,11 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '14V-787', title: 'Takata Airbag (Passenger)', desc: 'Critical — verify replacement on file before purchase.' },
-      { number: '20V-696', title: 'Denso Low-Pressure Fuel Pump', desc: 'Pump may fail and cause stall. Free dealer replacement.' }
+      { number: '14V-577', title: 'Accessory Trailer Hitch Mounting (WQN-50)', desc: 'On cars with the Subaru accessory hitch, overtightened mounting nuts can let the hitch detach under tow. Dealer replaces all eight nuts and inspects the studs.' },
+      { number: '15V-366', title: 'Brake Light Switch / EyeSight (WQS-54)', desc: 'A failed brake-light switch also disables EyeSight automatic pre-collision braking. Dealer reprograms the driver-assist system.' },
+      { number: '15V-502', title: 'Propeller Shaft Seal — Trans Oil Leak (WQU-56)', desc: 'A deformed seal cap can leak transmission oil onto the exhaust — fire risk. Built Jul 3-27, 2015. Dealer replaces the propeller shaft.' },
+      { number: '16V-251', title: 'ESC Brake Fluid Moisture (WTC-64)', desc: 'Brake fluid with excess moisture degrades stability-control performance (FMVSS 126). Built Jul 20, 2015. Dealer flushes and replaces the fluid.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6873,7 +6876,7 @@ const CHECKLISTS = {
     engine: '1.8L MRA8DE I4 (130hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "B17 Sentra is among the most affordable used compact sedans available. The 1.8L engine itself is reasonably reliable — the Xtronic CVT is the buyer risk. CVT failure mirrors the Altima pattern when NS-3 fluid was not changed every 30k miles. Service history is everything on any CVT Nissan.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
+    stats: { itemsToCheck: 12, recalls: 4, ownerComplaints: 190, topComplaintArea: 'Xtronic CVT fluid and reliability' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid and reliability', risk: 'high', riskLabel: 'High Attention',
@@ -6911,7 +6914,10 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-344', title: 'Takata Airbag (some builds)', desc: 'Inflator may rupture — verify on eligible VINs.' }
+      { number: '17V-253', title: 'Passenger Airbag Inflator (Non-Deploy)', desc: 'Manufacturing error in the inflator — passenger frontal airbag may not deploy in a crash. Covers 2014, 2016 and 2017 Sentra. Dealer replaces the inflator free.' },
+      { number: '18V-551', title: 'Ignition Switch Rotation (Mechanical Key)', desc: 'Key-ring weight can rotate the ignition out of RUN and shut off the engine while driving. 2017 Sentra with mechanical-key ignition. Dealer inspects and replaces the switch.' },
+      { number: '21V-135', title: 'Brake Light Switch Contamination', desc: 'Switch contamination can keep brake lights from illuminating — 2016-2019 Sentra, Nissan campaign PM971. Dealer replaces the switch and adds a protective grommet.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7108,7 +7114,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (284hp) with Xtronic CVT',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The R52 Pathfinder replaced the 4WD body-on-frame model with an FWD-based unibody crossover — a controversial move. The CVT paired with the 3.5L V6 on a heavy 3-row SUV is the headline concern: the transmission is under more load than in lighter vehicles, and failure has been documented earlier than on Altima/Rogue. Radiator coolant mixing with CVT fluid (via a cross-contamination failure) is the most catastrophic documented issue.",
-    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
+    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 560, topComplaintArea: 'CVT failure / radiator coolant contaminating CVT fluid' },
     sections: [
       { title: 'Transmission — Most Critical', items: [
         { title: 'CVT radiator cross-contamination check', risk: 'critical', riskLabel: 'Critical',
@@ -7146,7 +7152,10 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '16V-244', title: 'OCS Software (2013–2016)', desc: 'Passenger airbag may be incorrectly disabled — campaign covers 2013–2016 Pathfinder; verify on those years.' }
+      { number: '16V-244', title: 'OCS Software (2013–2016)', desc: 'Passenger airbag may be incorrectly disabled — campaign covers 2013–2016 Pathfinder; verify on those years.' },
+      { number: '18V-601', title: 'ABS Actuator Brake-Fluid Leak (Fire Risk)', desc: 'ABS actuator pump can leak brake fluid onto its circuit board — electrical short and fire risk. 2017-2018 Pathfinder. If the ABS light stays on 10+ seconds, park outdoors. Dealer inspects/replaces the actuator.' },
+      { number: '19V-807', title: 'ABS Actuator — Expansion / Re-Recall', desc: 'Expands 18V-601 and re-covers vehicles previously inspected without repair (2017-2019 Pathfinder). Confirm BOTH campaigns closed by VIN, not just the first.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7202,7 +7211,7 @@ const CHECKLISTS = {
     engine: '2.0L B48 Turbo I4 (248–258hp) / 3.0L B58 Turbo I6 (320–382hp) / 3.0L N55/S55 (M models)',
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The F30 3 Series is one of the most satisfying driving experiences available used — but maintenance costs are above-average and must be budgeted honestly. The B48 4-cylinder is the most cost-effective engine. The N20 in 2012–2015 cars had timing chain issues; the B48 (2016+) resolved most of them. Budget $1,500–$3,000/year for maintenance on any used BMW. Pre-purchase inspection by a BMW specialist is non-negotiable.",
-    stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 190, topComplaintArea: 'High maintenance costs / N20 timing chain on earlier builds' },
+    stats: { itemsToCheck: 14, recalls: 4, ownerComplaints: 190, topComplaintArea: 'High maintenance costs / N20 timing chain on earlier builds' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'N20 timing chain (2012–2015 only)', risk: 'critical', riskLabel: 'Critical',
@@ -7244,6 +7253,9 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '18V-465', title: 'Crankshaft Sensor Firmware — Stall', desc: 'Incorrect sensor firmware can stall the engine while driving. Covers certain 2018-2019 330i/330i xDrive/340i/340i xDrive (small population, ~5,309 across BMW/MINI). Dealer replaces the sensor.' },
+      { number: '21V-586', title: 'Diesel High-Pressure Fuel Pump (328d only)', desc: 'HPFP failure can stall the engine — applies only to 2014-2018 328d/328d xDrive diesels. Dealer replaces the pump.' },
+      { number: '21V-907', title: 'Diesel EGR Cooler — Fire Risk (328d only)', desc: 'EGR cooler can leak internally; coolant plus soot can smolder and melt the intake manifold. 2013-2018 328d variants; supersedes 18V-755 and was expanded again by 25V-700 (2025) — insist on the LATEST campaign closed by VIN.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -8105,7 +8117,7 @@ const CHECKLISTS = {
     engine: '2.3L EcoBoost I4 (310hp) / 5.0L Coyote V8 (460hp) / 5.2L Voodoo V8 (526hp GT350)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The S550 Mustang is one of the most satisfying performance cars available used. The 5.0L Coyote V8 is a proven workhorse; EcoBoost 4-cylinder is the fuel-efficient daily driver. Main buyer risk: assess track use and abuse on any GT, GT Premium, or GT350. Cam phaser noise is reported on EcoBoost cars above 60k miles. MT82 manual transmission has known notchy shift quality that worsened with use.",
-    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
+    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EcoBoost cam phaser noise', risk: 'monitor', riskLabel: 'Monitor',
@@ -8147,6 +8159,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '17V-814', title: 'Instrument Cluster PRNDL — Rollaway', desc: 'Automatic cars with the 12.4-inch digital cluster may not display or chime the gear position at key-off out of Park — rollaway risk. Small population (~2,100); dealer updates cluster software.' },
+      { number: '18V-213', title: '10-Speed Auto — Missing Park Roll Pin', desc: 'A missing transmission roll pin can cause loss of the Park function. Tiny population (142 vehicles with the 10R80). Dealer inspects and repairs.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
