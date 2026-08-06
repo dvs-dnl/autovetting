@@ -76,6 +76,14 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     🔴 triggers set in profile: buyer-facing product / consumer pricing; institutional funding or a team beyond the founder; marketplace or acquirer-tier integration; addition of an NHTSA recall or reliability layer; vinsight.dev shipping a buyer-orderable OBD2 product.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: #13 New entrants (start with VINspectorAI). #13 CLOSES THE FIRST FULL ROTATION CYCLE -> that run must also generate Competitors/_Monitor/QUARTERLY-SUMMARY-2026-Q3.md.
 
+  2026-08-06 01:09: profiled #13 New entrants (🟡) — VINspectorAI first-hand + GetVIN baseline + 30-day funding scan. CYCLE 1 COMPLETE (13/13).
+    Output: Competitors/_Monitor/2026-08-06-new-entrants.md + Competitors/_Monitor/QUARTERLY-SUMMARY-2026-Q3.md (rotation-complete quarterly, per task spec). No Awaiting-Daniel append — not 🔴.
+    Sibling check: no overlaps. Ready = recall-audit waves 16/17/18 (inspect/index.html + scripts/recall-ledger.json, pushed directly) — orthogonal, this run wrote only Competitors/_Monitor/ + TASKS.md. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Volkswagen) + autovet-seo-content (Content/blog/) orthogonal. Done(last 10) = recall-audit/decision-execution/vinnote — none touch Competitors/. No Re-sync needed.
+    Key delta: VINspectorAI (vinspectorai.com, launched 2025-09-10, Chicago) = first CONSUMER-buyer-facing AI entrant reviewed first-hand — records-derived "AI That Finds What Carfax Misses," $12.95 consumer / $5.90 dealer-volume vs Carfax $39.99, free VIN + free RECALL CHECK tier, Good Buy/Caution/High Risk verdicts. Real finding = SEO-surface collision: they ship a free 50-point interactive inspection-checklist page + printable PDF, per-state VIN pages, and a Vehicle Stats hub (NHTSA complaints/recalls by brand/model) — programmatic SEO against AutoVet's exact content queries. Traction near-null (TrustPilot 3 reviews vs "5M+ reports" claim; no funding/press). NO physical inspection, NO booking. GetVIN (get.vin, ~Oct 2025) = second records entrant, resells CARFAX+NMVTIS+auction photos w/ AI chat over report; active daily; Low. Funding scan: NOTHING new in 30 days beyond Self Inspection $10M (already profiled 07-30) — no funded buyer-side PPI entrant exists anywhere (Tracxn category census confirms all B2B). vinsight.dev still client-rendered/[unverified], carried forward.
+    Implication: buyer-side white space intact after full 13-slot census — FOURTH consecutive week: moat = WHO PAYS, not AI. New pressure is top-of-funnel (records AI colonizing checklist/recall-check SERPs at $0-13) — recall-audit accuracy is the competitive counter, and the independence counter-positioning page ("seller-provided report ≠ independent inspection, paid by YOU") is now flagged 4 runs straight = highest-leverage unwritten asset. Quarterly summary consolidates: acquirer thesis §9/§13 needs rewrite (Carfax/Cox can rent/build condition tech; surviving rationale = buyer funnel + independence brand + booking); Competitor_Analysis.md restructure by SIDE OF TRANSACTION now has full census.
+    🔴 tripwires consolidated in QUARTERLY-SUMMARY-2026-Q3.md (Carfax consumer condition data; Cox buyer-side; marketplace "Verified" badges; any funded buyer-paid entrant; records player bundling PPI booking).
+    Weekly milestone: DONE — intel + quarterly ready for Daniel's review. Next in rotation: Lemon Squad (#1, CYCLE 2) [carry-forward: verify Wrench consolidation status + Lemon Squad Live traction]. Recommendation standing: retire slot #12 (VINsight, not a competitor) -> standing buyer-side-encroachment sweep.
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
@@ -166,7 +174,44 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Sibling check: no overlaps. No Jeep/Grand Cherokee slug anywhere in TASKS.md (In-flight, Ready [empty], Done last 10). In-flight autovet-competitor-monitor (Competitors/, next=UVeye) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) orthogonal; Done(last 10) = vinnote-batches + recall-audit on inspect/index.html, none touch a Grand Cherokee slug or Content/blog/. No overnight-builder/vinnote/content-checklist task launching a Grand Cherokee. No Re-sync needed.
     Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Escape (#18, PowerShift DCT / EcoBoost coolant-intrusion), Ford Edge (#19, 2.0T water pump / PTU), Toyota Highlander (#20, clean-reliability palate-cleanser).
 
+  2026-08-05 09:20: drafted 2013 Ford Escape (C520 3rd-gen launch year) pillar post — Tier-1 #18, highest-ranked fully-uncovered vehicle; buyer story = three-engine fork (2.5L iVCT safe pick / 1.6L EcoBoost fire-recall-cluster + coolant intrusion / 2.0L EcoBoost crossover pipe) gated by the 17-campaign verified recall set.
+    Output: Content/blog/2026-08-05-2013-ford-escape-buyers-guide.md (1,597 words body, status: draft), Content/_seo-research/2026-08-05-2013-ford-escape.md.
+    Recalls: cited ONLY the wave-16-verified 17-campaign set from inspect/index.html ford-escape-2013 + scripts/recall-ledger.json (13V-583/13V-584/12V-336/12V-431/12V-551 as the five 1.6L must-be-closed; 22V-413+18V-471 dual bushing campaigns; 14V-597 RCM; 14V-495/15V-813 2.0L splices; latch set 16V-643/20V-331/14V-239; 14V-237/14V-164/13V-085/12V-319). No-Takata-on-this-car flag carried into the post verbatim from the checklist. Coolant-intrusion TSB + 6F35 shudder bulletin numbers left [unverified] (described condition, not fabricated).
+    CATALOG CORRECTION embedded: top-500 seed row 18 says "PowerShift DCT (2013-2019)" — WRONG for Escape (DPS6 = Focus/Fiesta; every 2013-2019 Escape = 6F35 conventional 6AT; also no 1.5T in 2013 — 1.6T until MY2017). Post corrects it explicitly (same pattern as Tucson no-Theta-II fix, 07-08); fix seed row at annual refresh. Ford Blue Advantage 139/172-pt protocol referenced (Product/CPO-Protocols/ford-certified.md) with note that a 2013 is past CPO eligibility. Interlinks to 2019-honda-crv + 2019-toyota-rav4 + 2019-chevrolet-equinox + 2018-hyundai-tucson + 2020-ford-explorer (all confirmed present in /blog/).
+    Sibling check: no blocking overlap — ALIGNED with recall audit. Recall-audit wave 16 (2026-08-03, Ready→Done, within 14d) rebuilt ford-escape-2013 in inspect/index.html (deleted 4 fabricated numbers incl. the GM-ignition + Porsche-conrod mis-pastes, added 22V-413); this post is the downstream consumer of that verified set and cites nothing outside it (Explorer-post precedent, 06-24). Wave 18 part 1 (Ready, 08-05) touched sentra/pathfinder/mustang/bmw/outback — no Escape; wave-18 part 2 queue (outlander/kicks/qx60/ioniq5/carnival) — no Escape. In-flight autovet-competitor-monitor (Competitors/, next=VINspectorAI #13 + Q3 summary) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Volkswagen) orthogonal. No overnight-builder/vinnote/content-checklist task launching an Escape. Verified against: autovetting-recall-audit-wave16-2026-08-03, autovetting-recall-audit-wave18-2026-08-05. No Re-sync needed.
+    Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Edge (#19, 2.0T internal water pump / PTU), Toyota Highlander (#20, palate-cleanser), then re-rank top-500 for next uncovered Tier-1.
+
 ## Ready to deploy / publish
+
+#### autovetting-recall-audit-wave18p2-2026-08-06 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-06 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 18 (part 2 of 2) — complete-set rebuilds for the remaining 5 collision slugs (outlander/kicks/qx60/ioniq5/carnival). Collision-cleanup arc CLOSED: all 10 wave-17 collision slugs rebuilt.
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-06.md (gitignored), TASKS.md
+- Notes:
+  2026-08-06 02:00: recall-audit WAVE 18 part 2. Purely additive — the 5 slugs carried only the VIN-check
+  placeholder after wave 17. Sets added (cars.com per-year NHTSA feeds, WebSearch provenance):
+  outlander-2017 17V-609/18V-620/18V-621/20V-403/26V-252 (26V-252 = nationwide expansion of regional
+  25V-507); kicks-2019 19V-654 (sole campaign); qx60-2018 19V-807 only (18V-601 re-recall/expansion;
+  16V-244 confirmed not applicable — OCS scope stops at 2014-2016 QX60); ioniq5-2022 22V-324 + 24V-868
+  (replaces 24V-204, prior-remedy cars need the new fix); carnival-2022 21V-277/21V-908/23V-179/23V-236/
+  24V-025/26V-232. stats.recalls re-synced 6/2/2/3/7; VIN-check closing line retained on all 5.
+  Ledger verified 134->149 (13 citable + 2 cite-the-successor predecessor notes 25V507/24V204);
+  unverified_legacy unchanged at 59. Wave-19 queue: oldest-first 12V499/13V252/13V561.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/ + TASKS.md notes only — its
+  2026-08-06 01:09 cycle-1-complete Notes block was uncommitted and rides in tonight's docs commit with
+  attribution, same handling as wave 17), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/),
+  autovet-seo-content (Content/blog/) orthogonal. Ready = wave18p1/wave17 (already pushed fd4ddbf/
+  6143b3f), same files but additive on disjoint slugs; Verified against:
+  autovetting-recall-audit-wave18-2026-08-05. Done (last 10) all carry - Started: (checked, no backfill
+  needed). No Re-sync needed.
+  Syntax-check: PASS. Dead-links: verified (no links added). Scanner: PASS (495 files, exit 0).
+  Gate-check: 27 pass / 2 warn / 0 CRIT (G28 clean — 25V-507/18V-601/24V-204 prose citations ledgered
+  pre-gate). Truncation guard: 17,704 lines / 1,365,333 bytes (was 17,689 / 1,361,375), tail intact.
+  Process note: first edit attempt aborted safely on sentinel assert (placeholder text matched twice in a
+  fixed 9,000-char window — adjacent-slug bleed); redone with bracket-balanced first-array-after-slug
+  targeting. Commit: 6a2b3ba (content), pushed with this docs commit.
 
 #### autovetting-recall-audit-wave18-2026-08-05 — ready (pushed directly)
 
