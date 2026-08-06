@@ -8171,7 +8171,7 @@ const CHECKLISTS = {
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 3rd-gen Outlander is one of the most affordable used 3-row SUVs available. The powertrain is simple and reliable — the 2.4L 4-cylinder and CVT are proven Mitsubishi units. CVT fluid service is still the primary buyer check. The Outlander PHEV is one of the most capable plug-in SUVs at this price. Main weaknesses: below-average interior quality and limited powertrain power vs. competitors.",
     vinNote: "Decode by trim, because the transmission changes with the engine. ES/SE/SEL = 2.4L MIVEC four (166hp, 4J12 family) with a Jatco CVT (FWD or S-AWC); GT = 3.0L SOHC V6 (224hp, 6B31) with a conventional 6-speed automatic and standard S-AWC — the V6 GT does NOT use a CVT, so the CVT-fluid check applies only to the four-cylinder cars (a GT needs 6-speed ATF service history instead). Physical tell: a GT has dual exhaust outlets and paddle shifters; the four-cylinder has a single outlet. On the VIN engine character, sources show 'X' for the 3.0L V6 — verify against the door-jamb label, since the regular Outlander's 2.4 is the 4J12 (the '4B12' code circulating online is for the Outlander Sport, a different model). Catalog note: the Outlander PHEV was NOT sold in the U.S. as a 2017 — it launched here as a 2018 model — so any '2017 Outlander PHEV' U.S. listing is mislabeled.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 90, topComplaintArea: 'CVT fluid service / below-average interior quality' },
+    stats: { itemsToCheck: 12, recalls: 6, ownerComplaints: 90, topComplaintArea: 'CVT fluid service / below-average interior quality' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT fluid service (Jatco unit)', risk: 'high', riskLabel: 'High Attention',
@@ -8209,6 +8209,11 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '17V-609', title: 'Engine Relay Stall', desc: 'Defective relays can cause an engine stall, reduced power, or overheating — 2015-2017 Outlander, campaign SR-17-005. Dealer replaces the affected relays free.' },
+      { number: '18V-620', title: 'FCM Braking Software', desc: 'Forward Collision Mitigation ECU can keep braking after a pedestrian is no longer detected, risking a rear-end hit — 2017-2018 Outlander, SR-18-007. Dealer reprograms the FCM-ECU.' },
+      { number: '18V-621', title: 'Brake Safety-System Software', desc: 'Hydraulic-unit ECU software can block AEB, ABS, ESC, or Brake Auto Hold intervention on ACC/EPB-equipped 2017-2018 Outlander, SR-18-008. Dealer updates the software.' },
+      { number: '20V-403', title: 'Second-Row Seat Belt Buckle', desc: 'Center buckle can interfere with the right-side buckle when the seat backs fold, pulling the cover off and jamming the latch — 2014-2019 Outlander, SR-20-004. Dealer modifies the buckle cover.' },
+      { number: '26V-252', title: 'Liftgate Gas Spring Rupture', desc: 'Corroding liftgate gas spring cylinders can rupture or let the liftgate fall — 2014-2020 Outlander, SR-26-001 (2026 nationwide expansion of regional campaign 25V-507). Dealer replaces both gas springs.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -8218,7 +8223,7 @@ const CHECKLISTS = {
     engine: '3.5L VQ35DE V6 (295hp) with CVT (JF016E)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen QX60 (2022+) is a major improvement over the 1st gen. For the popular 2016–2021 1st-gen QX60 (same platform): the 3.5L VQ35 is proven but the CVT carries the same cross-contamination risk as the Pathfinder — inspect fluid before driving. Rear seat comfort is exceptional for a 3-row. The 2022+ QX60 with 9-speed auto is the stronger used buy if budget allows.",
-    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT radiator contamination check (1st gen 2016–2021)', risk: 'critical', riskLabel: 'Critical',
@@ -8256,6 +8261,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '19V-807', title: 'ABS Actuator Fluid Leak (Fire Risk)', desc: 'ABS actuator pump can leak brake fluid onto its circuit board — electrical short and fire risk; 2017-2019 QX60 (expansion and re-recall of 18V-601). If the ABS light stays on over 10 seconds, park outdoors. Dealer replaces the actuator.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -9263,7 +9269,7 @@ const CHECKLISTS = {
     engine: '1.6L MR16DDT I4 (122hp) with Xtronic CVT — FWD only',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The P15 Kicks is Nissan's most fuel-efficient non-hybrid crossover — 36 mpg combined with the 1.6L naturally-aspirated engine. FWD only (no AWD option). CVT fluid service every 30k miles with NS-3 fluid is the critical maintenance item. Exterior styling is distinctive. Outstanding commuter value for urban buyers who don't need AWD.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'Xtronic CVT fluid service', risk: 'high', riskLabel: 'High Attention',
@@ -9301,6 +9307,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '19V-654', title: 'Backup Camera Display Setting', desc: 'Rear-view image can be adjusted to invisible and the setting persists into the next reverse (FMVSS 111) — 2018-2019 Kicks. Dealer updates the camera settings software.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -9407,7 +9414,7 @@ const CHECKLISTS = {
     vinNote: "IONIQ 5 (E-GMP) is electric-only, so the 8th VIN digit encodes the motor/battery configuration rather than a combustion engine, reported as B for single-motor RWD and C for dual-motor AWD (320 hp, 77.4 kWh). Treat the B/C split as confirm-at-vpic (single-source) and verify motor count plus heat-pump fitment from the build sheet, since the heat pump is standard on AWD but optional on RWD. 10th digit N = 2022 (P = 2023).",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The IONIQ 5 on the E-GMP platform is one of the best EVs launched since the Tesla Model 3 — 800V architecture enables ultra-fast charging (18 min to 80% at 350kW DCFC), distinctive retro styling, and a flat floor that maximizes interior space. Main buyer concerns: heat pump on cold-climate cars (standard on AWD, optional on RWD), charge port compatibility, and early production quality. Battery degradation is minimal on cars under 40k miles.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
+    stats: { itemsToCheck: 12, recalls: 3, ownerComplaints: 95, topComplaintArea: 'Charging software bugs / heat pump cold-weather range / OTA updates' },
     sections: [
       { title: 'Battery & Charging', items: [
         { title: 'HV battery health and range', risk: 'high', riskLabel: 'High Attention',
@@ -9445,6 +9452,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '22V-324', title: 'Shifter Software Rollaway', desc: 'SCU software error can disengage the parking mechanism and allow rollaway — 2022 Ioniq 5, campaign 228. Use the electronic parking brake until the dealer updates the software.' },
+      { number: '24V-868', title: 'ICCU 12V Charging Failure', desc: 'Integrated Charging Control Unit can fail and stop charging the 12V battery — loss of drive power; 2022-2024 Ioniq 5, campaign 272. Replaces 24V-204: cars fixed under the old remedy need the new one. Dealer inspects/replaces the ICCU and fuse and updates software.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -9502,7 +9511,7 @@ const CHECKLISTS = {
     vinNote: "Every U.S. 2022 Carnival (KA4) uses the same 3.5L Smartstream/Lambda III V6 GDI (290 hp) with an 8-speed automatic — there is no four-cylinder or hybrid option this model year (the Carnival Hybrid did not arrive until 2025), so the 8th VIN digit carries no engine-family ambiguity to decode. That is reassuring: this V6 is NOT part of Kia\u2019s Theta II / KSDS engine-fire population, so the rod-bearing knock-sensor recall anxiety that haunts 2.0T and 2.4 Kias does not apply here. What the VIN still matters for is recalls — run the full 17-digit VIN at nhtsa.gov/recalls before purchase to confirm any open KA4 campaigns (early seat-belt-anchor and power-sliding-door actions) are closed. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm trim and build date.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The KA4 Carnival replaces the Sedona and is the most contemporary family van/crossover available. The 3.5L Lambda V6 is Kia's most proven large engine and does NOT carry KSDS recall exposure. 8-speed automatic is smooth and well-sorted. Interior quality and features are outstanding for the price. Strong family vehicle value with minimal known failure modes.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 45, topComplaintArea: 'Minimal — sliding door motor durability (early assessment)' },
+    stats: { itemsToCheck: 12, recalls: 7, ownerComplaints: 45, topComplaintArea: 'Minimal — sliding door motor durability (early assessment)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.5L Lambda V6 — reliable platform', risk: 'low', riskLabel: 'Low Risk',
@@ -9540,6 +9549,12 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
+      { number: '21V-277', title: 'Fuel Rail Tube Damage (Fire Risk)', desc: 'Plastic fuel rail tube may have been damaged in assembly and can leak fuel — 2022 Carnival, campaign SC211. Dealer inspects and replaces the multi-port injection fuel rail if needed.' },
+      { number: '21V-908', title: 'Sliding Door Latch Failure', desc: 'Passenger-side power sliding door remote controller can fail to latch the door, letting it open while moving — 2022 Carnival, SC221. Dealer replaces the release actuator drum and holder.' },
+      { number: '23V-179', title: 'Tow Hitch Harness Short (Fire Risk)', desc: 'Water on the tow hitch harness module circuit board can short and start a fire — 2022-2023 Carnival with the Kia accessory hitch, SC265. Park outside until remedied; dealer installs a fuse and wire-extension kit.' },
+      { number: '23V-236', title: 'Sliding Door Auto-Reverse', desc: 'Power sliding door auto-reverse may not activate in all situations and can close on an occupant — all 2022 Carnival, SC266. Dealer updates the door control module software.' },
+      { number: '24V-025', title: 'Roof Molding Detachment', desc: 'Roof molding can loosen and detach into the road — 2022-2024 Carnival, SC292. Dealer inspects and secures or replaces the molding.' },
+      { number: '26V-232', title: 'Fuel Pipe Connection Leak (Fire Risk)', desc: 'Fuel can leak at the fuel-pipe-to-fuel-rail connection — 2022-2026 Carnival, SC368 (April 2026 campaign). Dealer tightens or replaces the fuel pipe.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
