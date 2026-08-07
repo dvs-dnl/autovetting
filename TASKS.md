@@ -183,6 +183,53 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-recall-audit-wave19-2026-08-07 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-07 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 19 — oldest-first sweep of the three oldest unverified numbers (12V499 / 13V252 / 13V561) and complete-set rebuilds of the slugs carrying them: honda-ridgeline-2012, jeep-wrangler-2012, lexus-rx350-2011
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-07.md (gitignored), TASKS.md
+- Notes:
+  2026-08-07 02:00: recall-audit WAVE 19. EIGHT fabrications deleted across 3 slugs — every numbered
+  recall on all three failed verification except 16V-061 on the Ridgeline (which also had its
+  "2007-2014 Ridgeline" scope note confirmed correct). Deleted: ridgeline 12V-499 (unresolvable) +
+  15V-441 (= KTM 1290 Super Duke R MOTORCYCLE fuel-tank leak — wrong VEHICLE CLASS, the wave-17
+  signature); wrangler 13V-252 (= 1993-98 Grand Cherokee / 2002-07 Liberty fuel-tank rear-impact recall,
+  1.56M units — real Jeep campaign, wrong model AND era), 14V-373 (= Dodge Journey / Grand Caravan /
+  Town & Country ignition switch, FCA R03), 15V-340 (= Ford/Lincoln/Mercury electric power steering
+  assist, 15S18, 393,623 units — cross-MAKE collision), 17V-525 + 18V-079 (unresolvable); rx350
+  13V-561 (unresolvable — the 2011 RX 350 has exactly one NHTSA recall, 11V-377).
+  NEW SIGNATURE: "real campaign, wrong model within the same corporate parent" (13V-252, 14V-373) —
+  harder to catch than cross-make because the manufacturer name matches. ALSO NEW: a number invented for
+  an issue that was never a recall at all — the Pentastar left-bank cylinder-head defect was a warranty
+  extension/TSB, never an NHTSA campaign; the inspection item (P0302, TSB 09-005-12) was kept, only the
+  fake number removed.
+  HEADLINE FIX: the 2012 Ridgeline was MISSING 22V-430 — rear frame corrosion at the fuel-tank
+  mounting-band surface, 2006-2014, 22 salt-belt states + DC, ~112k trucks, tank can detach and leak,
+  Honda has repurchased severely corroded vehicles. It was absent while the fabricated "Hood Latch" entry
+  occupied its place.
+  Complete verified sets added (cars.com per-MY NHTSA feeds, WebSearch provenance): ridgeline
+  22V-430/19V-501/19V-500/19V-182/18V-662/18V-268/18V-041/17V-029/16V-061/12V-432/12V-025 (11);
+  wrangler 13V-234 (power steering line wearing through the trans cooler line — the one campaign a JK
+  buyer can act on) + 14V-631 mirror-connector fire + Takata 19V-018/18V-021/16V-352 + four
+  RIGHT-HAND-DRIVE-only campaigns explicitly scoped as such in the copy (19V-680/16V-288/13V-176 and
+  11V-528 retained as the superseded predecessor of 13V-176) (9); rx350 11V-377 brake actuator VDIM
+  calibration, with LSC 90G relabelled as a Toyota Limited Service Campaign rather than a recall and
+  scoped to 2010 builds (1 + 1). stats.recalls re-synced to array length 12/10/3. VIN-check closing line
+  retained on all 3.
+  Ledger: verified 149 -> 173 (20 citable adds + 4 do-not-add records for the fabrications that resolved
+  to real unrelated campaigns); unverified_legacy 59 -> 51. Wave-20 queue: 14V028/14V153/14V290, then
+  ledger order.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all orthogonal; working tree carried no
+  sibling edits tonight (clean at start of run). Ready = wave18p2/wave18p1/wave17 (already pushed
+  6a2b3ba/fd4ddbf/6143b3f), same files but additive on disjoint slugs; Verified against:
+  autovetting-recall-audit-wave18p2-2026-08-06. Done (last 10) all carry - Started: (checked, no backfill
+  needed). No Re-sync needed.
+  Syntax-check: PASS. Dead-links: verified (no links added). Scanner: PASS (496 files, exit 0).
+  Gate-check: 27 pass / 2 warn / 0 CRIT (G28 clean). Truncation guard: 17,717 lines / 1,370,286 bytes
+  (was 17,704 / 1,365,333), tail intact. Commit: d6d6550 (content), pushed with the docs commit.
+
 #### autovetting-recall-audit-wave18p2-2026-08-06 — ready (pushed directly)
 
 - Status: ready
