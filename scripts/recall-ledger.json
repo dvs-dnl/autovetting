@@ -1252,12 +1252,220 @@
       "component": "Fuel leak at fuel pipe / fuel rail connection. Scope: 2022-2026 Carnival. SC368 (Apr 2026).",
       "source": "https://www.cars.com/research/kia-carnival-2022/recalls/",
       "verified": "2026-08-06"
+    },
+    "22V430": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Rear frame corrosion at the fuel-tank mounting-band surface, 2006-2014 Ridgeline, 22 salt-belt states + DC (Honda LCD; ~112k units). Fuel tank can detach and leak. Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "19V501": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata PASSENGER inflator installed as recall-remedy or service part, 2006-2014 Ridgeline et al (Honda E5D/X5C). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "19V500": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata DRIVER inflator installed as recall-remedy or service part, 2007-2014 Ridgeline et al (Honda S5B/W59). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "19V182": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata DRIVER inflator replacement parts with a manufacturing error, 2006-2014 Ridgeline et al (Honda O41 / Acura U40). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "18V662": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata passenger inflator, zone-scoped: 2014 Ridgeline nationwide; 2011-2013 Ridgeline Zone B states; 2010-2013 Ridgeline Zone C states (Honda H2H/S2I). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "18V268": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Front passenger airbag installed incorrectly during a previous replacement; includes 2012 Ridgeline (Honda K1P/M1O). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "18V041": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata passenger inflator, Zone A/B/C: 2011-2013 Ridgeline Zone A, 2010 Zone B, 2009 Zone C (Honda U0H/G0I). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "17V029": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Takata passenger inflator: 2006-2012 Ridgeline Zone A, 2006-2009 Ridgeline Zone B (Honda KD9/KE0). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "12V432": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Incorrect passenger airbag status indicator, FMVSS 208 — 2012 Ridgeline built April 18 2012 only (17 units). Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "12V025": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Spare tire does not match tire information placard, FMVSS 110 — 2011-2012 Ridgeline built Aug 25 - Nov 29 2011. Added to honda-ridgeline-2012 wave 19.",
+      "source": "https://www.cars.com/research/honda-ridgeline-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "13V234": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Power steering line contacts and wears a hole in the transmission oil cooler line, 2012-2013 Wrangler 3.6L automatic built Jan 23 2011 - Feb 23 2013 (FCA N28). Added to jeep-wrangler-2012 wave 19.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "14V631": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Exterior heated power mirror connector corrosion -> electrical short / fire, 2011-2013 Wrangler (FCA P61). Added to jeep-wrangler-2012 wave 19.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "19V018": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler",
+        "Ram"
+      ],
+      "component": "Takata passenger frontal inflator, do-not-drive: 2010-2016 Jeep Wrangler, 2010-2015 Challenger/300, 2010-2011 Dakota et al (FCA V01). Added to jeep-wrangler-2012 wave 19.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "18V021": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler",
+        "Ram"
+      ],
+      "component": "Takata passenger inflator, Zone A/B/C: 2009-2013 Jeep Wrangler, Chrysler 300, Challenger, Charger; 2009-2011 Dakota et al (FCA U03). Added to jeep-wrangler-2012 wave 19.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "16V352": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler",
+        "Ram",
+        "Mitsubishi"
+      ],
+      "component": "Takata passenger inflator, Zone A/B: 2007-2012 Jeep Wrangler, 2004-2008 Ram 1500, 2004-2009 Durango, 2006-2009 Mitsubishi Raider et al (FCA S43). Added to jeep-wrangler-2012 wave 19.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "19V680": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Driver seat belt buckle mounting strap may fracture — RIGHT-HAND-DRIVE 2011-2018 Wrangler only (FCA VA6). Added to jeep-wrangler-2012 wave 19 with RHD scope note.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "16V288": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Clockspring dust contamination -> driver airbag circuit failure — RIGHT-HAND-DRIVE 2011-2016 Wrangler only (FCA S40). Added to jeep-wrangler-2012 wave 19 with RHD scope note.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "13V176": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Driver airbag clockspring broken circuit — RIGHT-HAND-DRIVE 2008-2012 Wrangler (FCA M31); SUPERSEDES 11V-528. Added to jeep-wrangler-2012 wave 19 with RHD scope note.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "11V528": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Original RHD 2008-2012 Wrangler driver airbag clockspring campaign; SUPERSEDED BY 13V-176 — cite 13V-176 as the operative remedy. Added to jeep-wrangler-2012 wave 19 as the superseded predecessor.",
+      "source": "https://www.cars.com/research/jeep-wrangler-2012/recalls/",
+      "verified": "2026-08-07"
+    },
+    "11V377": {
+      "makes": [
+        "Lexus"
+      ],
+      "component": "Brake actuator hydraulic control valve calibration on VDIM-equipped 2011 RX 350 built Aug 30 2010 - May 18 2011; right front wheel may not be controlled properly during ABS/VSC intervention. The ONLY NHTSA recall listed for the 2011 RX 350. Added to lexus-rx350-2011 wave 19.",
+      "source": "https://www.cars.com/research/lexus-rx_350-2011/recalls/",
+      "verified": "2026-08-07"
+    },
+    "15V441": {
+      "makes": [
+        "KTM"
+      ],
+      "component": "KTM 1290 Super Duke R MY2014 MOTORCYCLE — fuel leak at gas-tank threaded inserts (KTM TB1507). MOTORCYCLE ONLY — was fabricated on honda-ridgeline-2012 as \"Hood Latch\", deleted wave 19. Do not add to any car slug.",
+      "source": "https://auto-recalls.justia.com/ktm/1290-super-duke-r/2014/15v441000/",
+      "verified": "2026-08-07"
+    },
+    "15V340": {
+      "makes": [
+        "Ford",
+        "Lincoln",
+        "Mercury"
+      ],
+      "component": "Electric power steering assist shutdown from a steering motor sensor fault — 2011-2012 Fusion/Milan/MKZ, 2011-2013 Taurus/Flex/MKS/MKT (Ford 15S18, ~393,623 units). FORD ONLY — was fabricated on jeep-wrangler-2012 as \"Power Steering Hose\", deleted wave 19. Do not add to any Jeep slug.",
+      "source": "https://auto-recalls.justia.com/ford/taurus/2012/15v340000/index.html",
+      "verified": "2026-08-07"
+    },
+    "13V252": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Fuel tank failure/leak in rear impact — 1993-1998 Grand Cherokee and 2002-2007 Liberty (~1.56M units); remedy is a trailer-hitch install. WRONG MODEL AND ERA — was fabricated on jeep-wrangler-2012 as \"Pentastar Cylinder Head\", deleted wave 19. The Pentastar left-bank head defect was a warranty extension, never an NHTSA recall. Do not add to any Wrangler slug.",
+      "source": "https://auto-recalls.justia.com/jeep/grand-cherokee/1995/13v252000/",
+      "verified": "2026-08-07"
+    },
+    "14V373": {
+      "makes": [
+        "Dodge",
+        "Chrysler"
+      ],
+      "component": "Ignition switch may move out of RUN — 2009-2010 Journey, 2008-2010 Grand Caravan / Town and Country (FCA R03). WRONG MODELS AND DEFECT — was fabricated on jeep-wrangler-2012 as \"Active Headrests\", deleted wave 19. Do not add to any Wrangler slug.",
+      "source": "https://auto-recalls.justia.com/dodge/journey/2010/14v373000/",
+      "verified": "2026-08-07"
     }
   },
   "unverified_legacy": [
-    "12V499",
-    "13V252",
-    "13V561",
     "14V028",
     "14V153",
     "14V290",
@@ -1266,25 +1474,20 @@
     "14V327",
     "14V346",
     "14V355",
-    "14V373",
     "15V025",
     "15V258",
     "15V303",
     "15V313",
-    "15V340",
-    "15V441",
     "15V461",
     "15V554",
     "16V065",
     "16V391",
     "16V586",
     "17V225",
-    "17V525",
     "17V718",
     "18V004",
     "18V013",
     "18V027",
-    "18V079",
     "18V139",
     "18V182",
     "18V226",
