@@ -183,6 +183,62 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-recall-audit-wave20-2026-08-08 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-08 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 20 — oldest-first sweep of the three oldest unverified numbers (14V028 / 14V153 / 14V290) and complete-set rebuilds of the slugs carrying them: toyota-highlander-2014, jeep-grand-cherokee-2014, gmc-sierra-2014
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-08.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-08-08 02:00: recall-audit WAVE 20. TWELVE fabrications deleted across 3 slugs — a 100% failure
+  rate, no numbered recall on any of the three survived verification. Deleted: highlander 14V-153
+  (= GM electric power steering, Malibu/Maxx/HHR/Cobalt/Aura/Ion/G6, 1,360,895 units, GM N140115 —
+  cross-MAKE), 19V-291 (= BMW 2019 X3/X4 instrument panel / passenger airbag — cross-MAKE), 15V-025
+  (unresolvable) and a "Multiple / Takata Airbag Inflator" entry; grand-cherokee 14V-028 (= COTTRELL
+  AUTO-TRANSPORTER battery-equalizer potting compound, 779 units — wrong VEHICLE CLASS), 15V-313
+  (= FCA Takata DRIVER inflator for Ram/Durango/Aspen/300/Charger/Magnum/Dakota/Mitsubishi Raider —
+  right corporate parent, wrong model, shipped as "HVAC Fan Wiring"), 16V-391 (unresolvable; the real
+  monostable-shifter campaign is 16V-240), 21V-448 + 18V-182 (unresolvable) and a "Multiple / Takata
+  (select builds)" entry; sierra 14V-290 + 16V-586 (both unresolvable).
+  HEADLINE FIX: the 2014 Highlander shipped a CRITICAL-risk inspection item asserting "The 3rd-gen
+  Highlander is included in the Takata airbag recall", a matching recall entry, and a summary line telling
+  buyers to confirm the Takata remedy. It has five NHTSA campaigns and NONE is Takata. Item rewritten
+  around 14V-576 (fuel delivery pipe leak, fire) and the summary sentence corrected. This is the SECOND
+  slug to carry a phantom Takata claim (subaru-forester-2011, wave 16) -> NEW SIGNATURE "recall invented
+  for a car that has no campaign of that kind at all", which no number-verification pass can catch because
+  there is no number to check; a systemic Takata sweep is wave-21 priority 1.
+  Complete verified sets added (cars.com per-MY NHTSA feeds, WebSearch provenance): highlander
+  14V-576/14V-272/14V-274/14V-051/18E-107 (5); grand-cherokee 18V-332/16V-240/14V-643/17V-435/14V-634/
+  17V-741/14V-154/17V-572/13V-483/14V-636/14V-293/14V-391/15V-461/13V-289/17E-061 (15, incl. THREE
+  overlapping alternator campaigns and two recalls-of-a-repair); sierra 14V-246 (NHTSA do-not-drive)/
+  14V-152/17V-414 (~690,685 trucks)/15V-640/19V-761/19V-645/16V-651/17V-437/16V-209/21V-245/14V-446/
+  14V-374/14V-301/13V-488/13V-315/18V-267 (16, three of them repairs of earlier repairs). stats.recalls
+  re-synced to array length 6/16/17. VIN-check closing line on all 3, carrying the explicit "this car is
+  NOT in the Takata campaign" correction on the two slugs that had falsely claimed it.
+  Ledger: verified 173 -> 213 (36 citable adds + 2 promotions out of unverified_legacy, 14V-293 and
+  15V-461, both confirmed in the Grand Cherokee feed + 4 do-not-add records for the fabrications that
+  resolved to real unrelated campaigns); unverified_legacy 51 -> 39. Wave-21 queue: (0) toyota-highlander-
+  2014 powertrain-generation rewrite — see Awaiting-Daniel; (1) systemic Takata sweep; (2) oldest-first
+  14V292/14V327/14V346/14V355 then ledger order.
+  OPEN FOR DANIEL (appended to Awaiting-Daniel, not fixed this run): toyota-highlander-2014 is authored
+  against the 2017+ facelift powertrain — engine field reads 2GR-FKS / 295hp / 8-speed and the headline
+  monitor-risk item is GDI intake-valve carbon, but MY2014 is 2GR-FE / 270hp / port injection / 6-speed
+  U660E. Fixing it means rewriting engine + summary + inspection item + vinNote together; a partial fix
+  would leave the slug internally inconsistent, so it is queued rather than half-done.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all orthogonal. Working tree carried one
+  sibling edit at start of run — an uncommitted .gitignore widening (push-*.sh -> push*.sh); left in place
+  and carried in tonight's commit with attribution, same handling as waves 17/18. Ready = wave19/wave18p2/
+  wave18p1 (already pushed d6d6550/6a2b3ba/fd4ddbf), same files but additive on disjoint slugs; Verified
+  against: autovetting-recall-audit-wave19-2026-08-07. Done (last 10) all carry - Started: (checked, no
+  backfill needed). No Re-sync needed.
+  Syntax-check: PASS. Dead-links: verified (no links added). Scanner: PASS (498 files, exit 0).
+  Gate-check: 27 pass / 2 warn / 0 CRIT (G28 clean). Truncation guard: 17,744 lines / 1,381,974 bytes
+  (was 17,717 / 1,370,286), tail intact.
+  Process note: the post-edit residual grep caught 16V-391 surviving in a source: field on a prose
+  inspection item OUTSIDE the recalls array — G28 would have CRIT-failed at push time. Re-grep every
+  deleted number across the WHOLE file, not just the array you rewrote.
+
 #### autovetting-recall-audit-wave19-2026-08-07 — ready (pushed directly)
 
 - Status: ready

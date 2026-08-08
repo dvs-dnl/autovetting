@@ -21,7 +21,7 @@
 *.key
 *-token.txt
 *-credentials.json
-push-*.sh
+push*.sh
 secrets.*
 *.swp
 .COMMIT_EDITMSG
