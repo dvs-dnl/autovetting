@@ -1463,33 +1463,392 @@
       "component": "Ignition switch may move out of RUN — 2009-2010 Journey, 2008-2010 Grand Caravan / Town and Country (FCA R03). WRONG MODELS AND DEFECT — was fabricated on jeep-wrangler-2012 as \"Active Headrests\", deleted wave 19. Do not add to any Wrangler slug.",
       "source": "https://auto-recalls.justia.com/dodge/journey/2010/14v373000/",
       "verified": "2026-08-07"
+    },
+    "14V576": {
+      "makes": [
+        "Toyota",
+        "Lexus"
+      ],
+      "component": "Fuel leak from a fuel delivery pipe in the engine compartment, 2014 Avalon/Camry/Sienna/Highlander + 2015 Lexus RX 350. Fire risk. Added to toyota-highlander-2014 wave 20.",
+      "source": "https://www.cars.com/research/toyota-highlander-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V272": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Airbag ECU software applies the ~110 lb front-passenger seat belt force-limiter setting to all occupants, 2014 Highlander + Highlander Hybrid (FMVSS 208). Added to toyota-highlander-2014 wave 20.",
+      "source": "https://www.cars.com/research/toyota-highlander-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V274": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Second-row right-hand seat does not fully lock into the inboard seat track in forward positions, 2014 Highlander built Apr 23 - Apr 29 2014 (FMVSS 207). Added to toyota-highlander-2014 wave 20.",
+      "source": "https://www.cars.com/research/toyota-highlander-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V051": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Third-row middle seat belt not properly secured to the floor anchorage, 2014 Highlander built Nov 20 2013 - Jan 18 2014 (FMVSS 210). Added to toyota-highlander-2014 wave 20.",
+      "source": "https://www.cars.com/research/toyota-highlander-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "18E107": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "EQUIPMENT recall - Fujian Wanda aftermarket replacement windshields for 2014-2018 Highlander; attached wire harness admits water and damages the ECM (stall). Applies only to cars with that aftermarket glass. Added to toyota-highlander-2014 wave 20.",
+      "source": "https://www.cars.com/research/toyota-highlander-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "18V332": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Ram",
+        "Chrysler"
+      ],
+      "component": "Cruise control may not disengage via brake pedal or switch after a wiring short, 2014-2018 Grand Cherokee among many FCA models; PCM/ECM software flash. Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "16V240": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler"
+      ],
+      "component": "Monostable eight-speed gear selector - inadequate warning that the vehicle is not in PARK, rollaway; 2014-2015 Grand Cherokee built Jul 16 2012 - Dec 22 2015 + 2012-2014 Charger/300 (FCA S27). Re-notification Oct 19 2016 for incomplete first repairs. Added to jeep-grand-cherokee-2014 wave 20 (this is the REAL gear-selector campaign; 16V-391 was fabricated).",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V643": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Occupant Restraint Control module fault disables frontal airbags, pretensioners and side airbags; 2014 Grand Cherokee built Oct 30 2012 - Apr 30 2014 + 2014 Durango (FCA P67). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17V435": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler"
+      ],
+      "component": "Sudden alternator failure (stall; short-circuit fire risk) on EHPS-equipped 5.7L/3.6L with 160/180/220A alternator; 2012-2014 Grand Cherokee + 2011-2014 Challenger/Charger/300/Durango (FCA T36). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V634": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler"
+      ],
+      "component": "Sudden alternator failure, 3.6L with 160A alternator; 2012-2014 Grand Cherokee built Apr 22 2010 - Jan 2 2014 + 2011-2014 300/Charger/Challenger/Durango (FCA P60). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17V741": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Chrysler"
+      ],
+      "component": "Sudden alternator failure, 3.6L with 160A alternator; 2014 Grand Cherokee + Challenger/Charger/Durango/300 (FCA T75). Third overlapping alternator campaign on this platform. Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V154": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Brake booster centre shell corrodes and admits water which can freeze and limit braking; 2011-2014 Grand Cherokee/Durango built Jan 5 2010 - Sep 8 2013 (FCA P14). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17V572": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Verification recall of the 14V-154 brake booster water-diverter shield installation; 2011-2014 Grand Cherokee/Durango (FCA T59). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "13V483": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Computer-communication disruption plus loose alternator ground wires cause random cluster warnings, loss of cluster illumination and loss of ABS/ESC; 2014 Grand Cherokee built Jan 8 - Aug 20 2013 (FMVSS 101/126, FCA N58). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V636": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Steering Column Control Module software can disable Electronic Stability Control; 2014 Grand Cherokee/Durango built Oct 3 2013 - Apr 11 2014 (FCA P64). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V391": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Sun visor vanity lamp wiring can short after a service repair - fire risk; 2011-2014 Grand Cherokee/Durango built Jan 5 2010 - Dec 11 2013 (FCA P36). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "13V289": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "Premium headlamps - electrical spikes shut off the parking lamps when switching from DRL; 2014 non-SRT Grand Cherokee built Jan 14 - Mar 20 2013 (FMVSS 108, FCA N42). Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17E061": {
+      "makes": [
+        "Jeep"
+      ],
+      "component": "EQUIPMENT recall - Accessible Technologies (ATI) ProCharger supercharger kits AB037A-100/-100P/A037A-100B for 2012-2017 Grand Cherokee SRT/SRT8; mounting bracket contacts and damages the ABS line. Aftermarket, SRT only. Added to jeep-grand-cherokee-2014 wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V246": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Inner tie rod threaded attachment not properly tightened to the steering gear rack - can separate, loss of steering; 2014 Sierra built May 25 2013 - Mar 31 2014, 2014 Silverado built May 23 2013 - Mar 25 2014. NHTSA do-not-drive advisory (GM 14204). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V152": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Transmission oil cooler line not securely seated in the fitting - leaking fluid onto a hot surface can cause fire; 2014 Sierra/Silverado 1500 with MYC 6-speed automatic (GM 14121). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17V414": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Temporary loss of electric power steering assist, especially in low-speed turns; 2014 Silverado 1500 and Sierra 1500 (~690,685 units, GM 17276). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "15V640": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Ignition lock actuator binds - key sticks in START then snaps to ACCESSORY, losing engine/steering/brake assist and disabling airbags; 2014-2015 Sierra/Silverado built Jan 24 - Feb 26 2014 (GM 15573). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "19V761": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "EBCM software activates driveline protection on a wheel-speed-sensor failure, braking the opposite wheel; 2014-2018 Silverado/Sierra 1500 with 5.3L, 3.08 axle and 4WD (GM N192261050). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "19V645": {
+      "makes": [
+        "GMC",
+        "Chevrolet",
+        "Cadillac"
+      ],
+      "component": "Vacuum pump output decreases over time reducing brake assist; 2014-2018 Silverado/Sierra + 2015-2018 Suburban/Tahoe/Yukon + 2015-2017 Escalade (GM N192268490). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "16V651": {
+      "makes": [
+        "GMC",
+        "Chevrolet",
+        "Buick",
+        "Cadillac"
+      ],
+      "component": "Airbag sensing and diagnostic module software runs a diagnostic test during which frontal airbags and pretensioners would not deploy; 2014-2017 Silverado 1500/Sierra 1500/Corvette/Trax/Encore among others (GM 16007). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "17V437": {
+      "makes": [
+        "GMC",
+        "Chevrolet",
+        "Buick",
+        "Cadillac"
+      ],
+      "component": "Re-recall of vehicles that did not receive the complete 16V-651 SDM software update; 2014-2017 Silverado 1500/Sierra 1500 among others (GM 17287). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "16V209": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Driver seat belt tensioner cable can fatigue and separate when the driver slides over it on entry; 2014-2015 Silverado 1500/Sierra 1500 built Jan 29 2013 - Jan 21 2015 (GM 15822). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "21V245": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Incorrect replacement tensioner cable assembly fitted under a previous remedy can fatigue and separate; 2014-2016 Silverado 1500, 2015-2016 Tahoe, 2014-2015 Sierra 1500 (GM N212330040). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V446": {
+      "makes": [
+        "GMC",
+        "Chevrolet",
+        "Buick",
+        "Cadillac"
+      ],
+      "component": "Incomplete weld on the seat hook bracket assembly - front seat may not stay secured in a crash; 2014-2015 Silverado/Sierra + 2013-2014 Encore/ATS + 2014 CTS/ELR/Caprice/SS (GM 14340). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V374": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Electrical signal short can shift the transfer case to neutral without driver input - rollaway or loss of drive; 2014-2015 Silverado/Sierra + 2015 Yukon/Suburban/Tahoe (GM 14192). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V301": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Base radio with internal amplifier can go inoperative, removing the key-in-ignition door chime and seat belt warning (FMVSS 114/208); 2014-2015 Silverado/Sierra + 2015 Tahoe/Suburban (GM 14315). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "13V488": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Play in manual reclining front seatbacks - head restraint may not protect in a rear impact (FMVSS 202a); 2014 Silverado/Sierra 1500 built Aug 1 - Sep 10 2013 (GM 13323). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "13V315": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Passenger airbag inflator weld can fracture on deployment, venting gas behind the instrument panel; 2014 Silverado built Jun 1-30 2013, 2014 Sierra built Jun 4-30 2013 (GM 13230). Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "18V267": {
+      "makes": [
+        "GMC",
+        "Chevrolet",
+        "Isuzu"
+      ],
+      "component": "EQUIPMENT recall - Kidde plastic-handle / push-button Pindicator fire extinguishers supplied with 2009-2014 Silverado HD and GMC Sierra, 2009-2018 Express/Savana and 2009 Topkick/Isuzu F Series; extinguisher can clog or the nozzle can detach (GM 18146). Accessory only. Added to gmc-sierra-2014 wave 20.",
+      "source": "https://www.cars.com/research/gmc-sierra_1500-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V293": {
+      "makes": [
+        "Jeep",
+        "Dodge"
+      ],
+      "component": "Adaptive cruise control - vehicle continues accelerating briefly after the accelerator is released; 2014 Grand Cherokee/Durango built Jan 16 - Apr 8 2014, GC SRT from Feb 3 2014, Cherokee from Mar 6 2014 (FCA P31). Promoted from unverified_legacy in wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "15V461": {
+      "makes": [
+        "Jeep",
+        "Dodge",
+        "Ram",
+        "Chrysler"
+      ],
+      "component": "Uconnect radio software vulnerability permitting third-party remote access to networked vehicle control systems; 2014-2015 Grand Cherokee/Cherokee/Durango + 2013-2015 Ram + 2015 200/300/Charger/Challenger + 2013-2015 Viper (FCA R40). Promoted from unverified_legacy in wave 20.",
+      "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V153": {
+      "makes": [
+        "Chevrolet",
+        "Pontiac",
+        "Saturn"
+      ],
+      "component": "GM electric power steering (EPS) assist loss - 2004-2006/2008-2009 Malibu, 2004-2006 Malibu Maxx, 2009-2010 HHR, 2010 Cobalt, 2008-2009 Aura, 2004-2007 Ion, 2005-2009 G6 (1,360,895 units, GM N140115). CROSS-MAKE COLLISION - was fabricated on toyota-highlander-2014 as \"Power Window Switch\", deleted wave 20. Do not add to any Toyota slug.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2014/RCLRPT-14V153-1772.PDF",
+      "verified": "2026-08-08"
+    },
+    "19V291": {
+      "makes": [
+        "BMW"
+      ],
+      "component": "BMW improperly manufactured instrument panel assembly affecting front passenger frontal airbag deployment - 2019 X3 sDrive30i/xDrive30i/M40i and X4 M40i. CROSS-MAKE COLLISION - was fabricated on toyota-highlander-2014 as \"Fuel Pump (V6)\", deleted wave 20. Do not add to any Toyota slug.",
+      "source": "https://www.cars.com/research/bmw-x3-2019/recalls/",
+      "verified": "2026-08-08"
+    },
+    "14V028": {
+      "makes": [
+        "Cottrell"
+      ],
+      "component": "Cottrell Inc. auto-transporter (COMMERCIAL VEHICLE) recall - Sure Power battery equalizers whose epoxy potting compound becomes electrically conductive after heat exposure and can melt and burn (779 units). WRONG VEHICLE CLASS - was fabricated on jeep-grand-cherokee-2014 as \"Steering Coupler\", deleted wave 20. Do not add to any car slug.",
+      "source": "https://auto-recalls.justia.com/",
+      "verified": "2026-08-08"
+    },
+    "15V313": {
+      "makes": [
+        "Dodge",
+        "Chrysler",
+        "Mitsubishi"
+      ],
+      "component": "FCA Takata dual-stage DRIVER frontal inflator, moisture intrusion - 2004-2008 Ram 1500, 2005-2009 Ram 2500, 2006-2009 Ram 3500, 2008-2010 Ram 4500/5500, 2004-2008 Durango, 2007-2008 Aspen, 2005-2010 300/300C/300S/SRT8, 2006-2010 Charger, 2005-2008 Magnum, 2005-2011 Dakota, 2006-2009 Mitsubishi Raider. RIGHT CORPORATE PARENT, WRONG MODEL - the WK2 Grand Cherokee is NOT in this campaign; was fabricated on jeep-grand-cherokee-2014 as \"HVAC Fan Wiring\", deleted wave 20. Do not add to any Grand Cherokee slug.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2015/RCLRPT-15V313-7590.PDF",
+      "verified": "2026-08-08"
     }
   },
   "unverified_legacy": [
-    "14V028",
-    "14V153",
-    "14V290",
     "14V292",
-    "14V293",
     "14V327",
     "14V346",
     "14V355",
-    "15V025",
     "15V258",
     "15V303",
-    "15V313",
-    "15V461",
     "15V554",
     "16V065",
-    "16V391",
-    "16V586",
     "17V225",
     "17V718",
     "18V004",
     "18V013",
     "18V027",
     "18V139",
-    "18V182",
     "18V226",
     "18V228",
     "18V575",
@@ -1497,7 +1856,6 @@
     "19V075",
     "19V133",
     "19V243",
-    "19V291",
     "19V415",
     "19V777",
     "19V965",
@@ -1510,7 +1868,6 @@
     "21V020",
     "21V056",
     "21V394",
-    "21V448",
     "21V485",
     "21V625",
     "21V650",

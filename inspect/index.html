@@ -4812,10 +4812,10 @@ const CHECKLISTS = {
     engine: '3.5L 2GR-FKS V6 direct injection (295hp), 8-speed automatic',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 3rd-gen Highlander (XU50, 2014–2019) is one of the most refined and reliable three-row crossovers on the used market. The 2GR-FKS V6 is the direct-injection evolution of the legendary 2GR-FE — almost identically reliable, with one new consideration: direct injection accumulates carbon deposits on intake valves over time if not addressed. The 8-speed automatic is smooth and durable. This is a very low-drama inspection — verify the GDI valve situation, confirm the Takata airbag recall has been remedied, test the panoramic roof drains, and you're largely done.",
+    summary: "The 3rd-gen Highlander (XU50, 2014–2019) is one of the most refined and reliable three-row crossovers on the used market. The 2GR-FKS V6 is the direct-injection evolution of the legendary 2GR-FE — almost identically reliable, with one new consideration: direct injection accumulates carbon deposits on intake valves over time if not addressed. The 8-speed automatic is smooth and durable. This is a very low-drama inspection — verify the GDI valve situation, confirm the 14V-576 fuel delivery pipe recall has been remedied, test the panoramic roof drains, and you're largely done.",
     stats: {
       itemsToCheck: 17,
-      recalls: 4,
+      recalls: 6,
       ownerComplaints: 481,
       topComplaintArea: 'Power Train'
     },
@@ -4927,21 +4927,23 @@ const CHECKLISTS = {
         title: 'Recalls & Safety',
         items: [
           {
-            title: 'Takata airbag inflator — VERIFY COMPLETE',
+            title: 'Fuel delivery pipe leak (14V-576) — VERIFY COMPLETE',
             risk: 'critical', riskLabel: 'Critical',
-            desc: 'The 3rd-gen Highlander is included in the Takata airbag recall — one of the largest safety recalls in automotive history. Affected inflators can rupture and project metal fragments into the cabin.',
-            check: '<strong>Enter the VIN at nhtsa.gov/recalls before seeing the vehicle.</strong> Any open Takata recall = do not purchase until the dealer remediates it for free. Do not accept a verbal assurance.',
+            desc: "The 2014 Highlander shares a fuel-delivery-pipe recall with the 2014 Avalon, Camry and Sienna: fuel can leak from a pipe in the engine compartment, next to hot exhaust. This is the one campaign on this truck that can burn it down. Note that the 2014 Highlander is NOT part of the Takata inflator recall, whatever a listing may claim.",
+            check: "<strong>Enter the VIN at nhtsa.gov/recalls before seeing the vehicle.</strong> Any open recall = do not purchase until the dealer remediates it for free. Do not accept a verbal assurance. With the engine warm, also smell the engine bay for raw fuel and look for staining around the fuel rail and delivery pipes.",
             cost: 'Free dealer repair — demand completion before purchase',
-            source: 'NHTSA Takata recall (multiple campaigns)'
+            source: 'NHTSA campaign 14V-576 (Part 573 report)'
           }
         ]
       }
     ],
     recalls: [
-      { number: 'Multiple', title: 'Takata Airbag Inflator', desc: 'Driver and/or passenger inflator may rupture — critical; verify complete via VIN check.' },
-      { number: '14V-153', title: 'Power Window Switch', desc: 'Window switch lubricant can ignite — verify remedy.' },
-      { number: '15V-025', title: 'Floor Mat Pedal Interference', desc: 'Same Toyota floor mat campaign — verify floor mats are factory correct.' },
-      { number: '19V-291', title: 'Fuel Pump (V6)', desc: '2014–2015 Highlander fuel pump impeller may crack — verify remedy status.' }
+      { number: '14V-576', title: 'Fuel Delivery Pipe Leak (fire risk)', desc: '2014 Highlander, Avalon, Camry and Sienna plus the 2015 Lexus RX 350: fuel can leak from one of the fuel delivery pipes in the engine bay. A fuel leak next to hot exhaust is a fire risk. Dealers replace the suspect pipe free — verify by VIN.' },
+      { number: '14V-272', title: 'Passenger Seat Belt Force Limiter — Airbag ECU Software', desc: '2014 Highlander and Highlander Hybrid: the airbag ECU shipped with software that applies the restraint setting intended for a roughly 110-pound occupant to every front passenger regardless of size (FMVSS 208). Free software update.' },
+      { number: '14V-274', title: 'Second-Row Right Seat Not Locking', desc: 'Narrow campaign — only 2014 Highlanders built April 23 through April 29, 2014. The second-row right-hand seat may not fully lock into the inboard seat track in its forward adjusting positions (FMVSS 207).' },
+      { number: '14V-051', title: 'Third-Row Middle Seat Belt Anchorage', desc: '2014 Highlanders built November 20, 2013 through January 18, 2014: the third-row middle seat belt may not have been properly secured to the floor anchorage during assembly (FMVSS 210). Inspect and secure, free.' },
+      { number: '18E-107', title: 'Aftermarket Replacement Windshield — ECM Water Damage', desc: 'An equipment recall, not a Toyota campaign: Fujian Wanda replacement windshields sold for 2014-2018 Highlanders carry a wire harness that water can leak into, damaging the engine control module and stalling the engine. Only relevant if the glass has been replaced — ask, and check whether the windshield carries Toyota etching.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'The 2014 Highlander is NOT part of the Takata inflator recall. Run the VIN at nhtsa.gov/recalls anyway — the campaigns that do apply here are build-date scoped — and require every open recall closed before purchase.' }
     ]
   },
 
@@ -5098,7 +5100,7 @@ const CHECKLISTS = {
     blogUrl: '/blog/2015-jeep-grand-cherokee-buyers-guide',
     stats: {
       itemsToCheck: 19,
-      recalls: 6,
+      recalls: 16,
       ownerComplaints: 2318,
       topComplaintArea: 'Electrical / Engine'
     },
@@ -5225,21 +5227,31 @@ const CHECKLISTS = {
           {
             title: 'Electronic gear selector / park lock — safety recall',
             risk: 'critical', riskLabel: 'Critical',
-            desc: 'The monostable gear selector on WK2 Grand Cherokees (2012–2014) was subject to safety campaigns: the selector does not stay in the selected position visually, causing confusion about gear state. A 2016 recall specifically addressed this after documented incidents. Verify via VIN that all related campaigns are complete.',
-            check: '<strong>Confirm via VIN check at nhtsa.gov/recalls that all gear selector campaigns are complete.</strong> The selector should clearly indicate Park, Reverse, Neutral, Drive, and Sport mode without ambiguity.',
+            desc: "The monostable gear selector on 2014-2015 Grand Cherokees with the eight-speed automatic does not stay in the position you moved it to, so the car gives you no physical cue about which gear it is in. NHTSA campaign 16V-240 (FCA S27) addressed it after owners were struck by their own vehicles rolling away. FCA later re-notified cars whose first software update was incomplete, so one 'complete' stamp is not enough.",
+            check: "<strong>Confirm via VIN check at nhtsa.gov/recalls that the gear selector campaign is closed, including the second re-flash.</strong> Then test it: shift through the range with the door open and confirm the cluster warns you when the door opens out of PARK.",
             cost: 'Free dealer repair — mandatory before purchase',
-            source: 'NHTSA recall 16V-391 (gear selector / park position)'
+            source: 'NHTSA campaign 16V-240 / FCA S27'
           }
         ]
       }
     ],
     recalls: [
-      { number: '16V-391', title: 'Electronic Gear Selector / Park Lock', desc: 'Monostable gear selector can confuse gear position — high priority; verify complete.' },
-      { number: '14V-028', title: 'Steering Coupler', desc: 'Steering shaft coupler may corrode and reduce control — verify complete.' },
-      { number: '21V-448', title: 'Fuel Tank Straps', desc: 'Fuel tank strap may loosen over time — verify status.' },
-      { number: '18V-182', title: 'Brake Fluid Sensor', desc: 'Sensor may give a false low-fluid reading — verify status.' },
-      { number: 'Multiple', title: 'Takata Airbag (select builds)', desc: 'Some 2014 WK2 builds included in Takata campaign — verify via VIN check.' },
-      { number: '15V-313', title: 'HVAC Fan Wiring', desc: 'HVAC blower motor wiring may overheat — verify status.' }
+      { number: '18V-332', title: 'Cruise Control May Not Cancel', desc: '2014-2018 Grand Cherokee among many FCA models: a short in the wiring can prevent cruise control from being switched off by the brake pedal or the button, leaving the vehicle holding speed or accelerating. Remedy is a powertrain software flash. Until it is done, do not use cruise; if it sticks, brake firmly and shift to neutral.' },
+      { number: '16V-240', title: 'Monostable Gear Selector — Rollaway', desc: '2014-2015 Grand Cherokee with the eight-speed automatic and the monostable shifter: the vehicle may not adequately warn the driver that it is not in PARK when the door opens, and owners have been struck by their own vehicle. FCA campaign S27. A later notice re-flashed cars whose first repair was incomplete — verify the second pass as well.' },
+      { number: '14V-643', title: 'Occupant Restraint Control Module — Airbags Disabled', desc: '2014 Grand Cherokees built October 30, 2012 through April 30, 2014: an ORC module fault can disable the frontal airbags, the seat belt pretensioners and the side airbags. The airbag warning lamp should illuminate first — treat any lit airbag light on a WK2 as this recall until proven otherwise. FCA P67.' },
+      { number: '17V-435', title: 'Alternator Failure — electro-hydraulic steering builds', desc: '2012-2014 Grand Cherokee with electro-hydraulic power steering, 3.6L or 5.7L, and a 160, 180 or 220-amp alternator: the alternator can fail suddenly and stall the vehicle, and can short circuit and start a fire. FCA T36.' },
+      { number: '14V-634', title: 'Alternator Failure — 3.6L, 160-amp', desc: '2012-2014 Grand Cherokee built April 22, 2010 through January 2, 2014 with the 3.6L and a 160-amp alternator: sudden alternator failure and stall without warning. FCA P60.' },
+      { number: '17V-741', title: 'Alternator Failure — 2014, 3.6L, 160-amp', desc: 'The third alternator campaign on this platform. 2014 Grand Cherokee with the 3.6L and a 160-amp alternator. Three overlapping alternator recalls means an unremedied car is likely — check all three by VIN, not just whichever one the seller names. FCA T75.' },
+      { number: '14V-154', title: 'Brake Booster Corrosion — Water Intrusion', desc: '2011-2014 Grand Cherokee built January 5, 2010 through September 8, 2013: the brake booster centre shell can corrode and let water inside, where it can freeze and limit braking. Dealers vacuum-test the booster, add a water diverter shield, and replace the booster if it fails the test. FCA P14.' },
+      { number: '17V-572', title: 'Brake Booster Shield — Installation Verification', desc: 'A recall of the repair itself: FCA re-called 2011-2014 Grand Cherokee and Durango to verify the 14V-154 water diverter shield was installed properly. A car showing 14V-154 complete can still be open on this one. FCA T59.' },
+      { number: '13V-483', title: 'ABS and Stability Control Loss — Cluster and Alternator Ground', desc: '2014 Grand Cherokees built January 8, 2013 through August 20, 2013: disrupted computer communication plus loose alternator ground wires can throw random warning lights, kill cluster illumination and disable ABS and electronic stability control (FMVSS 101 and 126). FCA N58.' },
+      { number: '14V-636', title: 'Steering Column Control Module — Stability Control Disabled', desc: '2014 Grand Cherokee built October 3, 2013 through April 11, 2014: SCCM software can disable electronic stability control. Software update. FCA P64.' },
+      { number: '14V-293', title: 'Adaptive Cruise Control — Continued Acceleration', desc: '2014 Grand Cherokee built January 16 through April 8, 2014, SRT from February 3: with adaptive cruise engaged, pressing the accelerator beyond the set speed can leave the vehicle accelerating briefly after you lift off. Driver assistance module re-flash. FCA P31.' },
+      { number: '14V-391', title: 'Sun Visor Vanity Lamp Wiring — Fire', desc: '2011-2014 Grand Cherokee built January 5, 2010 through December 11, 2013: vanity lamp wiring in the sun visor can short circuit after a service repair and start a fire. Dealers fit a new visor that routes the wire correctly. FCA P36.' },
+      { number: '15V-461', title: 'Uconnect Radio — Remote Access Vulnerability', desc: 'The Jeep remote-hack recall. 2014-2015 Grand Cherokee radios shipped with software that allowed third-party access to networked vehicle control systems. Remedied by a mailed USB update, an owner download, or a dealer visit — ask whether it was ever actually applied, because owner-installed updates frequently were not. FCA R40.' },
+      { number: '13V-289', title: 'Premium Headlamps — Parking Lamps Cut Out', desc: '2014 non-SRT Grand Cherokees built January 14 through March 20, 2013 with premium headlamps: switching between daytime running lights and parking lights can shut the parking lamps off (FMVSS 108). Body controller software. FCA N42.' },
+      { number: '17E-061', title: 'Aftermarket ProCharger Supercharger — ABS Line Damage', desc: 'An equipment recall covering SRT and SRT8 only: ATI ProCharger supercharger kits sold for 2012-2017 Grand Cherokee SRT have a mounting bracket that can contact and damage the ABS line, leaking brake fluid. Only applies to a supercharged car — if a WK2 SRT has been modified, look here first.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'The 2014 Grand Cherokee is NOT part of the Takata inflator recall — the FCA Takata campaign covers Ram, Durango, 300, Charger, Magnum, Dakota and Aspen, not the WK2. Run the VIN at nhtsa.gov/recalls regardless: most campaigns here are build-date scoped, and several are repairs of earlier repairs.' }
     ]
   },
 
@@ -6346,7 +6358,7 @@ const CHECKLISTS = {
     engine: '4.3L EcoTec3 V6 LV3 (285hp) / 5.3L EcoTec3 V8 L83 (355hp, AFM) / 6.2L EcoTec3 V8 L86 (420hp, AFM)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The K2XX Sierra 1500 is mechanically identical to the Chevrolet Silverado 1500 — shared platform, same engines, same known issues. The AFM (Active Fuel Management) cylinder deactivation lifter failure on the 5.3L and 6.2L V8 engines is the defining buyer risk. Decode position 8 of the VIN: U = 4.3L V6 (no AFM, lower risk), Z = 5.3L V8 (AFM, lifter risk), B = 6.2L V8 (AFM). Ask for oil change records regardless of engine.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 520, topComplaintArea: 'Engine / AFM lifter failure (5.3L + 6.2L)' },
+    stats: { itemsToCheck: 13, recalls: 17, ownerComplaints: 520, topComplaintArea: 'Engine / AFM lifter failure (5.3L + 6.2L)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.3L / 6.2L AFM lifter failure (critical for V8 buyers)', risk: 'high', riskLabel: 'High Attention',
@@ -6388,8 +6400,23 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '14V-290', title: 'Seat Belt Buckle Pretensioner', desc: 'Pretensioner may not function correctly.' },
-      { number: '16V-586', title: 'Engine Wiring Harness', desc: 'Wiring chafing may cause CEL or no-start.' }
+      { number: '14V-246', title: 'Inner Tie Rod Not Tightened — Loss of Steering', desc: '2014 Sierra 1500 built May 25, 2013 through March 31, 2014: the tie rod may not have been properly tightened to the steering gear rack and can separate from it. NHTSA advised owners not to drive until inspected and to have the truck towed to the dealer. If a candidate falls inside that build window, confirm the repair before the test drive, not after. GM 14204.' },
+      { number: '14V-152', title: 'Transmission Oil Cooler Line — Fire', desc: '2014 Sierra 1500 with the MYC six-speed automatic: the transmission oil cooler line may not be securely seated in its fitting, and leaking fluid onto a hot surface can start a fire. GM 14121.' },
+      { number: '17V-414', title: 'Electric Power Steering Assist Loss', desc: 'The big one on this generation — roughly 690,000 trucks. 2014 Silverado 1500 and Sierra 1500 can temporarily lose electric power steering assist, most often during low-speed turns, and then have it return abruptly. EPS module software update. GM 17276.' },
+      { number: '15V-640', title: 'Ignition Lock Actuator Bind', desc: '2014-2015 Sierra built January 24 through February 26, 2014: the ignition lock actuator can bind, sticking the key in START and then snapping back to ACCESSORY — losing engine, steering and brake assist, with the airbags disabled. GM 15573.' },
+      { number: '19V-761', title: 'Brake Module Software — Unintended Braking', desc: '2014-2018 Sierra 1500 with the 5.3L, a 3.08 rear axle and four-wheel drive: if a wheel-speed sensor fails, the electronic brake control module can activate driveline protection and brake the wheel opposite the failed sensor, pulling the truck to one side. GM N192261050.' },
+      { number: '19V-645', title: 'Vacuum Pump — Reduced Brake Assist', desc: '2014-2018 Sierra: vacuum pump output can decline over time, raising pedal effort and extending stopping distance. Brake control module reprogramming. GM N192268490.' },
+      { number: '16V-651', title: 'Airbag Sensing Module Software — Non-Deployment', desc: '2014-2017 Sierra 1500: certain driving conditions can send the sensing and diagnostic module into a diagnostic test, during which the frontal airbags and seat belt pretensioners would not deploy in a crash. GM 16007.' },
+      { number: '17V-437', title: 'Airbag Module Software — Incomplete 16V-651 Remedy', desc: 'GM re-recalled trucks that did not receive the complete software update under 16V-651. A Sierra whose paperwork shows 16V-651 closed can still be open on this one. GM 17287.' },
+      { number: '16V-209', title: 'Driver Seat Belt Tensioner Cable Fatigue', desc: '2014-2015 Sierra 1500 built January 29, 2013 through January 21, 2015: sliding across the tensioner cable while entering the truck can fatigue and separate it, leaving the driver improperly restrained. GM 15822.' },
+      { number: '21V-245', title: 'Seat Belt Pretensioner — Incorrect Replacement Cable', desc: 'A recall of the repair: some trucks received the wrong replacement tensioner cable assembly under 16V-209 or a later repair, and it can fatigue and break the same way. Verify both campaigns, not just the first. GM N212330040.' },
+      { number: '14V-446', title: 'Front Seat Hook Bracket Weld', desc: '2014-2015 Sierra: an incomplete weld on the seat hook bracket assembly means a front seat may not stay secured in a crash. GM 14340.' },
+      { number: '14V-374', title: 'Transfer Case Shifts to Neutral', desc: '2014-2015 Sierra: an electrical signal short can shift the transfer case into neutral with no driver input — a rollaway risk when parked, and a loss of drive power when moving. GM 14192.' },
+      { number: '14V-301', title: 'Base Radio Failure — No Warning Chimes', desc: '2014-2015 Sierra with the base radio and internal amplifier: if the radio goes inoperative there is no key-in-ignition door chime and no seat belt warning, failing FMVSS 114 and 208. Radio software update. GM 14315.' },
+      { number: '13V-488', title: 'Front Seatback Play', desc: '2014 Sierra 1500 built August 1 through September 10, 2013 with manual reclining seatbacks: play in the seatback means the head restraint may not protect an occupant in a rear impact (FMVSS 202a). GM 13323.' },
+      { number: '13V-315', title: 'Passenger Airbag Inflator Weld', desc: 'Very narrow — 2014 Sierra built June 4 through June 30, 2013. Welding on the passenger airbag inflator can fracture on deployment, venting gas behind the instrument panel instead of into the bag. GM 13230.' },
+      { number: '18V-267', title: 'Kidde Fire Extinguisher (accessory equipment)', desc: 'An equipment campaign covering plastic-handle and push-button Kidde fire extinguishers supplied with a range of GM trucks and vans: the extinguisher can clog, or the nozzle can detach with enough force to injure. Only relevant if the truck still carries the factory-supplied unit. GM 18146.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Sixteen campaigns touch this truck and three of them are repairs of earlier repairs. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
