@@ -3988,10 +3988,10 @@ const CHECKLISTS = {
     engine: '2.5L 2AR-FE inline-4 (176hp), FWD or AWD',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 4th-gen RAV4 (2013–2018) is one of the safest used-SUV picks available — the 2AR-FE engine runs to 200,000+ miles with basic maintenance and Toyota reliability holds firm. The Takata airbag recall is the biggest outstanding issue: verify completion before anything else. Backup cameras fail or fog on high-mileage examples, and liftgate hinges rattle. Otherwise you're buying a well-documented, easy-to-maintain commuter with an excellent parts supply.",
+    summary: "The 4th-gen RAV4 (2013–2018) is one of the safest used-SUV picks available — the 2AR-FE engine runs to 200,000+ miles with basic maintenance and Toyota reliability holds firm. The Takata airbag recall does not touch this car — Toyota’s RAV4 inflator campaign covers the 2004–2005 model — so the real checks are elsewhere. Backup cameras fail or fog on high-mileage examples, and liftgate hinges rattle. Otherwise you're buying a well-documented, easy-to-maintain commuter with an excellent parts supply.",
     stats: {
       itemsToCheck: 18,
-      recalls: 2,
+      recalls: 1,
       ownerComplaints: 1240,
       topComplaintArea: 'Electrical System'
     },
@@ -4000,12 +4000,12 @@ const CHECKLISTS = {
         title: 'Engine & Powertrain',
         items: [
           {
-            title: 'Takata airbag recall — verify completion first',
-            risk: 'critical', riskLabel: 'Critical',
-            desc: 'The 2016 RAV4 may be covered by the Takata airbag inflator recall — one of the largest automotive safety recalls in history. The defective inflator can rupture and send metal fragments into the cabin. Unrepaired vehicles are not safe to drive.',
-            check: '<strong>Look up the VIN at nhtsa.gov/recalls before purchase.</strong> Any open Takata recall = do not buy until the dealer repairs it at no charge. If the seller says it was repaired, confirm via VIN lookup — repairs are logged in NHTSA\'s system.',
+            title: 'Open recalls — VIN check (the RAV4 Takata recall is not this car)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: "Toyota ran exactly one Takata driver-inflator campaign on the RAV4 and it covers the 2004–2005 model — the second-generation car. The XA40 is not in it, and Toyota does not list any RAV4 under its passenger-inflator campaigns either. Treat any listing that advertises a completed Takata repair on a 2016 RAV4 as a sign the seller is reading someone else's checklist.",
+            check: "<strong>Look up the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaign = do not buy until the dealer has closed it at no charge. Completion is logged against the VIN, so verify rather than take the seller's word.",
             cost: 'Free under recall',
-            source: 'NHTSA Takata airbag recall (nationwide scope)'
+            source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09'
           },
           {
             title: 'Oil level and consumption (2.5L 2AR-FE)',
@@ -4114,7 +4114,6 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: 'Takata Airbag', title: 'Takata Airbag Inflator — Critical Safety Recall', desc: 'Inflator may rupture and send metal shrapnel into cabin. Verify VIN at nhtsa.gov/recalls before purchase. Free dealer repair.' },
       { number: '18V-228', title: 'Pre-Collision System Software Update', desc: 'PCS may issue a false braking event. Free software update — verify completion.' }
     ]
   },
@@ -4245,7 +4244,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: 'Takata Airbag', title: 'Takata Airbag Inflator — Critical Safety Recall', desc: 'Inflator rupture risk — metal fragments into cabin. Verify VIN at nhtsa.gov/recalls. Free dealer repair.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check (not a Takata car)', desc: "Honda's CR-V Takata scope is 2002-2011 — the second and third generation cars. The RM 4th-gen CR-V is not in any Takata inflator campaign, so ignore a listing that advertises the repair. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply and require every open one closed before purchase." },
       { number: '19V-965', title: 'Seat Belt Latch', desc: 'Seat belt latch may not engage properly. Verify completion by VIN. Free repair.' }
     ]
   },
@@ -4401,7 +4400,7 @@ const CHECKLISTS = {
     engine: '1.8L 2ZR-FE inline-4 (132hp), CVTi-S or 6-speed manual',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 11th-gen Corolla (2014–2019) is one of the most reliable used cars on the market — the 1.8L 2ZR-FE is proven and simple, and documented issues are mostly minor. The Takata airbag recall is critical to verify first; beyond that, check oil consumption at higher miles and CVT fluid history. Cars from salt-belt states need a close look at lower body rust. This is a strong buy at any mileage when properly maintained.",
+    summary: "The 11th-gen Corolla (2014–2019) is one of the most reliable used cars on the market — the 1.8L 2ZR-FE is proven and simple, and documented issues are mostly minor. There is no Takata inflator campaign on this generation — that claim belongs to the 2003–2013 car; beyond that, check oil consumption at higher miles and CVT fluid history. Cars from salt-belt states need a close look at lower body rust. This is a strong buy at any mileage when properly maintained.",
     stats: {
       itemsToCheck: 16,
       recalls: 5,
@@ -4410,15 +4409,15 @@ const CHECKLISTS = {
     },
     sections: [
       {
-        title: 'Safety Recall — Check First',
+        title: 'Recall Status — Check First',
         items: [
           {
-            title: 'Takata airbag inflator recall (CRITICAL)',
-            risk: 'critical', riskLabel: 'Critical — Verify Before Purchase',
-            desc: 'The 2014–2017 Corolla is covered by the Takata airbag inflator recall — one of the largest automotive recalls in history. A defective inflator can rupture and send metal shrapnel into the cabin. Several fatalities have been linked to this defect and many vehicles remain unrepaired.',
-            check: '<strong>Enter the VIN at nhtsa.gov/recalls before you see the car.</strong> If the recall shows as open and unrepaired, the seller or dealer must arrange the free repair before sale. Do not purchase or drive the vehicle until this is confirmed repaired.',
-            cost: 'Free dealer repair — non-negotiable safety item',
-            source: 'NHTSA recall database (multiple campaigns by model year)'
+            title: 'Open recalls — VIN check (this is not a Takata car)',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: "Toyota's Takata inflator campaigns stop at the 2013 Corolla — the previous E140/E150 car, not this one. The E170 was never built with a recalled Takata inflator, so a listing or a checklist telling you this Corolla has an outstanding Takata airbag is simply wrong. What it does have are ordinary campaigns whose applicability varies by build date inside the model year.",
+            check: "<strong>Enter the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+            cost: 'Free under recall',
+            source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09'
           }
         ]
       },
@@ -4536,7 +4535,7 @@ const CHECKLISTS = {
         ]
       }
     ],
-    vinNote: 'Unlike most vehicles with multiple powertrains, the 2014–2019 Corolla (E170) is a single-engine generation for North American buyers — the 1.8L 2ZR-FE inline-4 (132\u00a0hp) is fitted to all standard trims. The LE Eco trim is the exception: it uses the 1.8L 2ZR-FAE with Toyota\u2019s Valvematic variable valve lift (140\u00a0hp, slight fuel-economy advantage). Run the full VIN at <a href="#entry-section">autovetting.com/decode</a> to confirm which engine is fitted if buying an Eco-badged car — the inspection profile is nearly identical, but the 2ZR-FAE has more complex valve-train service requirements. The model-year digit is position 10: E\u202f=\u202f2014, F\u202f=\u202f2015, G\u202f=\u202f2016, H\u202f=\u202f2017. The most buyer-critical VIN check is not the engine digit but the Takata airbag recall status — always run the VIN at nhtsa.gov/recalls and confirm repair is documented before purchase. The recall affects 2014–2017 Corollas, but completion status varies by production date within the same model year.',
+    vinNote: 'Unlike most vehicles with multiple powertrains, the 2014–2019 Corolla (E170) is a single-engine generation for North American buyers — the 1.8L 2ZR-FE inline-4 (132\u00a0hp) is fitted to all standard trims. The LE Eco trim is the exception: it uses the 1.8L 2ZR-FAE with Toyota\u2019s Valvematic variable valve lift (140\u00a0hp, slight fuel-economy advantage). Run the full VIN at <a href="#entry-section">autovetting.com/decode</a> to confirm which engine is fitted if buying an Eco-badged car — the inspection profile is nearly identical, but the 2ZR-FAE has more complex valve-train service requirements. The model-year digit is position 10: E\u202f=\u202f2014, F\u202f=\u202f2015, G\u202f=\u202f2016, H\u202f=\u202f2017. The most buyer-critical VIN check is not the engine digit but open-recall status — always run the VIN at nhtsa.gov/recalls and confirm any campaign is documented as repaired before purchase. Note that the Takata inflator recall does not reach this generation: Toyota’s Corolla scope ends with the 2013 car.',
     blogUrl: '/blog/2014-toyota-corolla-buyers-guide',
   },
 
@@ -4809,10 +4808,10 @@ const CHECKLISTS = {
     make: 'Toyota',
     model: 'Highlander',
     trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen, 2014–2019)',
-    engine: '3.5L 2GR-FKS V6 direct injection (295hp), 8-speed automatic',
+    engine: '3.5L 2GR-FE V6 port injection (270hp), 6-speed automatic (U660E) — 2.7L 1AR-FE four (185hp) on base FWD LE',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 3rd-gen Highlander (XU50, 2014–2019) is one of the most refined and reliable three-row crossovers on the used market. The 2GR-FKS V6 is the direct-injection evolution of the legendary 2GR-FE — almost identically reliable, with one new consideration: direct injection accumulates carbon deposits on intake valves over time if not addressed. The 8-speed automatic is smooth and durable. This is a very low-drama inspection — verify the GDI valve situation, confirm the 14V-576 fuel delivery pipe recall has been remedied, test the panoramic roof drains, and you're largely done.",
+    summary: "The 3rd-gen Highlander (XU50) is one of the most refined and reliable three-row crossovers on the used market, but buy the right half of it: the 2014–2016 car uses the port-injected 2GR-FE (270 hp) with the U660E six-speed, and the direct-injected 2GR-FKS and eight-speed only arrive with the 2017 facelift. That matters because most of the carbon-buildup advice written about this Highlander describes the later engine and does not apply here. On a 2014 the inspection is genuinely low-drama — confirm the 14V-576 fuel delivery pipe recall has been remedied, check the timing cover and water pump for seepage, test the panoramic roof drains, and you are largely done.",
     stats: {
       itemsToCheck: 17,
       recalls: 6,
@@ -4824,28 +4823,28 @@ const CHECKLISTS = {
         title: 'Powertrain',
         items: [
           {
-            title: '2GR-FKS V6 — direct injection carbon buildup',
-            risk: 'monitor', riskLabel: 'Monitor',
-            desc: 'The 2GR-FKS uses direct injection, which means fuel is injected directly into the cylinder — bypassing the intake valves. Without fuel washing them, carbon deposits accumulate on intake valve stems over time, typically becoming noticeable above 80,000 miles. Symptoms: rough idle, slight hesitation under load, minor misfires.',
-            check: '<strong>Ask for service records and confirm whether intake valve cleaning has been performed.</strong> On a test drive, look for hesitation or rough idle that is not present when cold. Vehicles under 80k miles with documented Toyota Genuine oil changes are lower risk.',
-            cost: '$400–$800 walnut blast / intake cleaning service',
-            source: 'Toyota 2GR-FKS GDI carbon buildup pattern'
+            title: '2GR-FE V6 — port injected, so no GDI carbon problem',
+            risk: 'low', riskLabel: 'Low Risk',
+            desc: "The 2014 Highlander V6 is the 2GR-FE: 270 hp, port fuel injection, one of the most durable engines Toyota has built. Fuel sprays across the back of the intake valves on every cycle and keeps them clean, so the walnut-blast decarbon service quoted for this model online is not a 2014 expense — that advice belongs to the 2017-and-later 2GR-FKS. What this engine does do at high mileage is seep oil, usually from the timing cover or the water pump.",
+            check: '<strong>With the engine warm, look down the front of the block at the timing cover seam and at the water pump (passenger side, low).</strong> Dried oil crust or wet coolant residue means a seep already in progress. Also pull the dipstick: clean amber or light brown, at the full mark.',
+            cost: '$400–$700 water pump / $1,200–$2,000 timing cover reseal',
+            source: 'Toyota 2GR-FE service pattern; MY2014 powertrain verified against Toyota specifications'
           },
           {
-            title: '2GR-FKS oil consumption — minor concern',
+            title: '2GR-FE oil consumption — minor concern',
             risk: 'low', riskLabel: 'Low Risk',
-            desc: 'The FKS is less prone to oil consumption than many GDI engines, but at high mileage some examples use a quart per 3,000–5,000 miles. Not a class-action-level issue, but worth checking on high-mileage vehicles.',
+            desc: 'The 2GR-FE is not an oil burner by reputation, but at high mileage some examples use a quart per 3,000–5,000 miles, usually through valve stem seals. Not a class-action-level issue, but worth checking on a car with 120k+ miles.',
             check: '<strong>Pull the dipstick and check the oil level relative to the last reported change mileage.</strong> If oil is near the MIN mark and the car was recently serviced, investigate further.',
             cost: '$0 if minor / $3,000–$5,000 ring or valve work if severe',
-            source: 'Toyota 2GR-FKS owner reports'
+            source: 'Toyota 2GR-FE owner reports'
           },
           {
-            title: '8-speed automatic — smooth and durable',
+            title: 'U660E six-speed automatic — smooth and durable',
             risk: 'low', riskLabel: 'Low Risk',
-            desc: 'The Toyota UA80F/UA80E 8-speed automatic is widely regarded as one of the best modern automatic transmissions. Failures are uncommon, but fluid condition matters.',
+            desc: 'The 2014 V6 uses the U660E six-speed automatic (the eight-speed arrives with the 2017 facelift). It is a well-proven unit and failures are uncommon, but fluid condition matters and Toyota calls it lifetime fill, which in practice means nobody changes it.',
             check: '<strong>Verify ATF was serviced per Toyota schedule.</strong> On a test drive, confirm all shifts are smooth through the full speed range. Any shudder at light throttle (30–45 mph) is a sign of fluid degradation or torque converter wear.',
             cost: '$220 ATF service / $3,500–$5,000 rebuild if neglected',
-            source: 'Toyota UA80F reliability documentation'
+            source: 'Toyota U660E reliability documentation'
           }
         ]
       },
@@ -7044,10 +7043,10 @@ const CHECKLISTS = {
           cost: '$400–$800 per side', source: 'LD platform wear pattern' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'Engine variant + Takata airbag recall check', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Takata airbag recall covers certain Charger build dates. Hemi MDS service history is required.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Takata = walk away if unresolved. Hemi oil records = required.',
-          cost: 'Walk away from unresolved Takata on Hemi', source: 'NHTSA' }
+        { title: 'Engine variant + Hemi oil history (and no, this is not a Takata car)', risk: 'critical', riskLabel: 'Critical',
+          desc: "FCA's Takata inflator campaign covers the 2006–2015 Charger; a 2018 is outside it, so ignore any listing that advertises the repair. The document that actually decides this purchase is the oil history: the Hemi MDS lifter failure is the expensive fault on this car and it tracks oil-change discipline more than mileage.",
+          check: "<strong>Require complete Hemi oil-change records, then run the VIN at nhtsa.gov/recalls for the campaigns that do apply.</strong> No records on a V8 Charger = walk away regardless of how the car drives.",
+          cost: 'Walk away from an undocumented Hemi — lifter/cam repair runs $4,000–$7,000', source: 'FCA Takata affected-model list (mopar.com), verified 2026-08-09' }
       ]}
     ],
     recalls: [
@@ -7091,10 +7090,10 @@ const CHECKLISTS = {
           cost: '$0 update / $500–$1,500 unit', source: 'Dodge campaigns' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'Takata recall + performance history audit', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Takata airbag recall affects certain build dates. Performance models need abuse-history assessment.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong> Walk away from Hellcat/Scat Pack without full service history.',
-          cost: 'Walk away from Takata-unresolved or abuse-evident cars', source: 'NHTSA' }
+        { title: 'Performance history audit (the Takata recall is the 2008–2014 car)', risk: 'critical', riskLabel: 'Critical',
+          desc: "FCA's Takata inflator campaign covers the 2008–2014 Challenger, so a 2018 is outside it — which means the airbag paperwork some sellers wave around is for a different car. What actually needs auditing here is how the car was used: launch-control abuse, track days and drag-strip time slips all shorten driveline life on the performance trims.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls for the campaigns that do apply, then demand full service history on any Scat Pack or Hellcat.</strong> Walk away from a performance trim with no records.",
+          cost: 'Walk away from abuse-evident cars — driveline repairs run into five figures', source: 'FCA Takata affected-model list (mopar.com), verified 2026-08-09' }
       ]}
     ],
     recalls: [
@@ -8814,10 +8813,10 @@ const CHECKLISTS = {
           cost: '$400–$800 per side', source: 'WD wear pattern' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'Hemi oil history + Takata recall check', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Hemi oil interval history and Takata recall status are both walk-away items if unresolved.',
-          check: '<strong>Run nhtsa.gov/recalls. Require complete Hemi service history.</strong>',
-          cost: 'Walk away from Takata unresolved or oil-neglected Hemi', source: 'NHTSA' }
+        { title: 'Hemi oil history (the Durango Takata recall is the 2004–2009 truck)', risk: 'critical', riskLabel: 'Critical',
+          desc: "FCA's Takata inflator campaign covers the 2004–2009 Durango — the previous, Dakota-based truck — not this WD-generation one. The genuine walk-away item here is oil-interval history on the Hemi: MDS lifter and camshaft failure is the characteristic expensive fault and it follows neglected oil changes.",
+          check: "<strong>Require complete Hemi service history, then run the VIN at nhtsa.gov/recalls for the campaigns that do apply.</strong> An oil-neglected Hemi is a walk-away no matter how clean the body is.",
+          cost: 'Walk away from an oil-neglected Hemi — lifter/cam repair runs $4,000–$7,000', source: 'FCA Takata affected-model list (mopar.com), verified 2026-08-09' }
       ]}
     ],
     recalls: [
@@ -9020,10 +9019,10 @@ const CHECKLISTS = {
   'honda-hrv-2018': {
     year: 2018, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L / Touring (RU gen)',
     engine: '1.8L R18Z9 SOHC i-VTEC I4 (141hp) with CVT or 6-speed manual',
-    vinNote: "One engine across every 2018 HR-V: the 1.8L SOHC i-VTEC R18Z9 four (141 hp) — not the L15B, which is Honda’s 1.5L turbo family and never went in the RU HR-V (earlier checklist text calling it ‘L15B’ was an engine-code error, corrected here). With a single engine, Honda’s 8th VIN digit does not fork the powertrain — it encodes grade/restraint, and the mechanicals are identical from LX to Touring. The real decode is the transmission: a CVT is standard (verify Honda HCF-2 fluid history — the top powertrain watch item), while a genuine 6-speed manual was offered only on lower FWD trims and is rare enough to confirm on the build. AWD adds a Real Time rear differential that needs its own fluid service. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and confirm the Takata airbag recall is closed on affected 2018 builds.",
+    vinNote: "One engine across every 2018 HR-V: the 1.8L SOHC i-VTEC R18Z9 four (141 hp) — not the L15B, which is Honda’s 1.5L turbo family and never went in the RU HR-V (earlier checklist text calling it ‘L15B’ was an engine-code error, corrected here). With a single engine, Honda’s 8th VIN digit does not fork the powertrain — it encodes grade/restraint, and the mechanicals are identical from LX to Touring. The real decode is the transmission: a CVT is standard (verify Honda HCF-2 fluid history — the top powertrain watch item), while a genuine 6-speed manual was offered only on lower FWD trims and is rare enough to confirm on the build. AWD adds a Real Time rear differential that needs its own fluid service. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and run the VIN for open recalls — note the HR-V is not on Honda's Takata affected-model list, so the campaign to look for is the Denso fuel pump.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The RU HR-V is one of the most practical subcompact SUVs available — the Magic Seat rear-seat system creates genuinely useful cargo configurations. The 1.8L L15B is a naturally-aspirated Honda engine with an outstanding reliability record. CVT is the standard; the 6-speed manual is a rarer and fun option. Limited power is the main tradeoff for fuel efficiency and low ownership cost.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 80, topComplaintArea: 'CVT fluid history / limited power / Takata airbag recall' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 80, topComplaintArea: 'CVT fluid history / limited power / fuel pump campaign' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT fluid service history', risk: 'high', riskLabel: 'High Attention',
@@ -9042,10 +9041,10 @@ const CHECKLISTS = {
           cost: '$150–$300 service', source: 'Honda AWD standard' }
       ]},
       { title: 'Electrical', items: [
-        { title: 'Takata airbag recall (some 2018 builds)', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Some 2018 HR-V build dates received Takata inflators. Verify on VIN before purchase.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls immediately.</strong>',
-          cost: 'Free dealer replacement / walk away if incomplete', source: 'NHTSA Takata recall' }
+        { title: 'Open recalls — VIN check (the HR-V is not a Takata vehicle)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The HR-V does not appear on Honda's Takata affected-model list in any model year — the US car did not go on sale until well after the recalled inflators stopped being fitted. The campaign that does matter on a 2018 is the Denso fuel pump.",
+          check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaign = do not purchase until a dealer has closed it; the work is free and completion is logged against the VIN.',
+          cost: 'Free under recall', source: 'Honda Takata affected-model list (hondanews.com fact sheet), verified 2026-08-09' }
       ]},
       { title: 'Suspension', items: [
         { title: 'Front strut wear at high mileage', risk: 'low', riskLabel: 'Low Risk',
@@ -9054,10 +9053,10 @@ const CHECKLISTS = {
           cost: '$400–$700 per strut', source: 'Common wear' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'CVT history + Takata recall check — both critical', risk: 'critical', riskLabel: 'Critical',
-          desc: 'CVT fluid history and Takata recall status are both required checks.',
-          check: '<strong>Request CVT service record. Run nhtsa.gov/recalls.</strong>',
-          cost: 'Walk away from Takata incomplete or CVT without service', source: 'NHTSA' }
+        { title: 'CVT service history — the real walk-away document', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT fluid history is the document that decides this purchase. The HR-V CVT is durable when serviced and expensive when it is not, and a car with no receipts has almost certainly never had the fluid changed.',
+          check: '<strong>Request the CVT fluid service record, then run the VIN at nhtsa.gov/recalls.</strong> No CVT records = walk away.',
+          cost: '$120-$180 fluid service / $3,500-$5,000 CVT replacement if neglected', source: 'Honda CVT service schedule' }
       ]}
     ],
     recalls: [
@@ -9936,7 +9935,7 @@ const CHECKLISTS = {
     vinNote: "Engine-code correction — the US-market 2018 Fit (GK gen) uses the naturally-aspirated 1.5L L15B1 (130hp DOHC i-VTEC), not the turbocharged L15B7; the L15B7 is the Civic/CR-V 1.5T and only appears in a Fit as an aftermarket swap. With a single engine there is nothing to disambiguate by VIN — Honda carries the model/engine in the 6th VIN character and the 8th digit encodes grade/body within the line, not the powertrain. The variable worth confirming is the transmission: a 6-speed manual was offered on lower trims while EX/EX-L/Touring (and most builds) are CVT — verify the HCF-2 CVT-fluid service history.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The GK Fit is one of the most practical subcompact cars ever made — the Magic Seat system creates more usable space configurations than any car in its class. The 1.5L L15B1 naturally-aspirated engine is reliable and fuel-efficient. CVT fluid service every 30k miles. Discontinued after 2020 in North America, making used supply finite — prices hold well.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid service / Takata airbag (some builds)' },
+    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid service / fuel pump campaign' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'CVT fluid service (Honda HCF-2)', risk: 'high', riskLabel: 'High Attention',
@@ -9949,10 +9948,10 @@ const CHECKLISTS = {
           cost: 'Maintenance only', source: 'Honda L15 track record' }
       ]},
       { title: 'Safety Recalls', items: [
-        { title: 'Takata airbag recall (some builds)', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Some Fit build dates received Takata inflators. Verify on VIN immediately.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before any test drive.</strong>',
-          cost: 'Free dealer replacement / walk away if incomplete', source: 'NHTSA Takata recall' }
+        { title: 'Open recalls — VIN check (no Fit of this generation is a Takata car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Honda's Fit Takata scope is 2009-2014 — the GE-generation car. No GK Fit build date received a recalled inflator, so \"some builds\" is not a real distinction here. What the 2018 car does have is the Denso fuel pump campaign, which is the one to check.",
+          check: '<strong>Run the VIN at nhtsa.gov/recalls before any test drive.</strong> Any open campaign = do not purchase until a dealer has closed it; the work is free and completion is logged against the VIN.',
+          cost: 'Free under recall', source: 'Honda Takata affected-model list (hondanews.com fact sheet), verified 2026-08-09' }
       ]},
       { title: 'Suspension', items: [
         { title: 'Front strut wear', risk: 'low', riskLabel: 'Low Risk',
@@ -9967,10 +9966,10 @@ const CHECKLISTS = {
           cost: '$200–$1,200 depending on severity', source: 'Honda compact rust pattern' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'CVT history + Takata recall — both critical', risk: 'critical', riskLabel: 'Critical',
-          desc: 'CVT fluid history and Takata recall are both walk-away items if unresolved.',
-          check: '<strong>Request CVT receipts. Run nhtsa.gov/recalls.</strong>',
-          cost: 'Walk away from Takata incomplete', source: 'NHTSA' }
+        { title: 'CVT service history — the real walk-away document', risk: 'critical', riskLabel: 'Critical',
+          desc: 'CVT fluid history is the document that decides this purchase. Honda calls for fluid service around every 30,000 miles and a GK Fit with no receipts has almost certainly never had it done.',
+          check: '<strong>Request CVT fluid receipts, then run the VIN at nhtsa.gov/recalls.</strong> No CVT records = walk away.',
+          cost: '$120-$180 fluid service / $3,500-$5,000 CVT replacement if neglected', source: 'Honda CVT service schedule' }
       ]}
     ],
     recalls: [
@@ -11427,8 +11426,8 @@ const CHECKLISTS = {
     year: 2016, make: 'Toyota', model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum (2nd gen XK60, 2008–2022)',
     engine: '5.7L 3UR-FE V8 (381 hp) with 6-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The XK60 Sequoia is one of the most durable full-size SUVs ever made. The 5.7L 3UR-FE is bulletproof with regular maintenance. The main buyer concerns are frame rust (critical in rust-belt states), Takata airbag recall status, and timing chain service history. Southern-state cars are far better buys than northern ones. Expect 200k–300k miles from a well-maintained example.",
-    stats: { itemsToCheck: 13, recalls: 5, ownerComplaints: 340, topComplaintArea: 'Suspension / Frame (rust belt)' },
+    summary: "The XK60 Sequoia is one of the most durable full-size SUVs ever made. The 5.7L 3UR-FE is bulletproof with regular maintenance. The main buyer concerns are frame rust (critical in rust-belt states), open-recall status, and timing chain service history — the Takata inflator recall is not among them, since Toyota's Sequoia scope is the 2002–2007 first-generation truck. Southern-state cars are far better buys than northern ones. Expect 200k–300k miles from a well-maintained example.",
+    stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 340, topComplaintArea: 'Suspension / Frame (rust belt)' },
     sections: [
       { title: 'Frame & Underbody', items: [
         { title: 'Frame rust — critical in rust-belt states', risk: 'high', riskLabel: 'High Risk (rust belt)',
@@ -11443,11 +11442,10 @@ const CHECKLISTS = {
           source: 'Toyota V8 common pattern' }
       ]},
       { title: 'Safety Recall', items: [
-        { title: 'Takata airbag inflator — verify closed', risk: 'critical', riskLabel: 'Critical — Check VIN',
-          desc: 'Second-gen Sequoias are within the Takata airbag recall scope. Inflator rupture is a known fatality risk.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase. Recall must be closed.</strong>',
-          cost: 'Free dealer repair',
-          source: 'NHTSA Takata recall' }
+        { title: 'Open recalls — check VIN (the Sequoia Takata recall is the first-gen truck)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Toyota's Sequoia Takata scope is 2002–2007 — the first-generation truck. The XK60 is not in it, on either the nationwide or the humidity-zone campaign. If a listing claims a Takata repair was done on a 2016 Sequoia, the paperwork belongs to a different vehicle.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '5.7L 3UR-FE engine health', risk: 'low', riskLabel: 'Low Risk',
@@ -11475,7 +11473,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Takata', description: 'Airbag inflator metal fragmentation risk', severity: 'Critical', remedy: 'Free dealer replacement; check VIN at nhtsa.gov' }
+      { campaign: 'VIN check', description: "The XK60 Sequoia is not in a Takata inflator campaign — Toyota's Sequoia scope is the 2002–2007 first-generation truck. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }
     ]
   },
   'hyundai-palisade-2020': {
@@ -11540,10 +11538,10 @@ const CHECKLISTS = {
     year: 2019, make: 'Toyota', model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited (5th gen, 2019–2024)',
     engine: '2.5L A25A-FKS Dynamic Force I4 (203 hp) with 8-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 5th-gen RAV4 on Toyota’s TNGA-K platform is one of the bestselling vehicles in the US for a reason — it’s practical, efficient, and highly reliable. No chronic powertrain failures. The 2019 first-year model had minor software and infotainment complaints addressed by updates. The 2.5L Dynamic Force engine is excellent. Takata airbag recall status should be checked on all 2019 VINs.",
-    vinNote: "The 5th-gen RAV4 (XA50, 2019–2024) splits into two powertrains that the VIN's engine digit actually separates: the gas 2.5L A25A-FKS Dynamic Force four (203 hp, 8-speed automatic) and the RAV4 Hybrid's 2.5L A25A-FXS Atkinson-cycle four (219 hp combined, electronic CVT). Every gas 2019 RAV4 — LE, XLE, XLE Premium, Adventure, TRD Off-Road, Limited — carries the A25A-FKS code, so within the gas lineup the 8th digit won't distinguish trims; it only tells you gas versus hybrid. Confirm which one you're looking at, because the hybrid is a different drivetrain (eCVT plus a rear electric motor for AWD) with its own inspection profile — and \"CVT\" advertised on a gas RAV4 is a red flag the listing is wrong, since the gas car uses a conventional 8-speed automatic. Priorities on every 2019 gas VIN: correct 0W-16 oil viscosity in the service history, plus Takata airbag and fuel-pump recall status checked by VIN. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
+    summary: "The 5th-gen RAV4 on Toyota’s TNGA-K platform is one of the bestselling vehicles in the US for a reason — it’s practical, efficient, and highly reliable. No chronic powertrain failures. The 2019 first-year model had minor software and infotainment complaints addressed by updates. The 2.5L Dynamic Force engine is excellent. There is no Takata inflator campaign on the XA50 — Toyota's RAV4 Takata scope is the 2004–2005 car — but a VIN recall check is still mandatory, because this generation has campaigns of its own.",
+    vinNote: "The 5th-gen RAV4 (XA50, 2019–2024) splits into two powertrains that the VIN's engine digit actually separates: the gas 2.5L A25A-FKS Dynamic Force four (203 hp, 8-speed automatic) and the RAV4 Hybrid's 2.5L A25A-FXS Atkinson-cycle four (219 hp combined, electronic CVT). Every gas 2019 RAV4 — LE, XLE, XLE Premium, Adventure, TRD Off-Road, Limited — carries the A25A-FKS code, so within the gas lineup the 8th digit won't distinguish trims; it only tells you gas versus hybrid. Confirm which one you're looking at, because the hybrid is a different drivetrain (eCVT plus a rear electric motor for AWD) with its own inspection profile — and \"CVT\" advertised on a gas RAV4 is a red flag the listing is wrong, since the gas car uses a conventional 8-speed automatic. Priorities on every 2019 gas VIN: correct 0W-16 oil viscosity in the service history, plus fuel-pump and any other open-recall status checked by VIN (the Takata inflator recall does not reach this car). Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
     blogUrl: '/blog/2019-toyota-rav4-buyers-guide',
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 450, topComplaintArea: 'Electrical / Infotainment (minor)' },
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 450, topComplaintArea: 'Electrical / Infotainment (minor)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '2.5L A25A-FKS — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
@@ -11565,11 +11563,10 @@ const CHECKLISTS = {
           source: 'Toyota AWD service schedule' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN', risk: 'high', riskLabel: 'High Risk — Check VIN',
-          desc: 'Some 2019 RAV4 VINs fall under the extended Takata inflator recall. Verify at nhtsa.gov.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before finalizing purchase.</strong>',
-          cost: 'Free dealer repair',
-          source: 'NHTSA Takata recall' }
+        { title: 'Open recalls — check VIN', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "No RAV4 of this generation is in a Takata inflator campaign. Toyota's only RAV4 Takata recall is the 2004–2005 driver inflator, and the phrase “extended Takata recall” attached to an XA50 is a checklist error, not a campaign. The XA50 does have real campaigns of its own, which is why the VIN check still matters.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Electrical & Interior', items: [
         { title: 'Toyota Safety Sense 2.0 (TSS-2.0)', risk: 'low', riskLabel: 'Low Risk',
@@ -11592,7 +11589,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Takata', description: 'Airbag inflator fragmentation risk on select VINs', severity: 'High', remedy: 'Free dealer repair; verify at nhtsa.gov/recalls' }
+      { campaign: 'VIN check', description: "No XA50 RAV4 is in a Takata inflator campaign — Toyota's RAV4 Takata scope is the 2004–2005 model. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }
     ]
   },
   'subaru-wrx-2018': {
@@ -11904,10 +11901,10 @@ const CHECKLISTS = {
     stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 180, topComplaintArea: 'Infotainment (minor)' },
     sections: [
       { title: 'Recall — Check First', items: [
-        { title: 'Takata airbag inflator recall', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'GX460 models through 2019 may be within the Takata airbag recall. Inflator rupture is a fatality-class risk.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase. Must be closed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Takata inflator recall — this one is real, verify it is closed', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: "Lexus lists the 2010–2017 GX460 among its Takata-affected models (2017 is partial), and this is the only recall on this truck that is a walk-away if it is still open — a degraded inflator can rupture and drive metal fragments into the cabin. Involvement is assigned by VIN and build date, not by model year alone, and cars first sold or registered in high-absolute-humidity states were pulled into the campaign earlier.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls and require the inflator campaign to read as completed.</strong> Do not accept a verbal assurance — remedy completion is recorded against the VIN. Parts are available and the repair, including transport, is free.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '4.6L 1UR-FE V8 — bulletproof', risk: 'low', riskLabel: 'Low Risk',
@@ -11940,7 +11937,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair; verify at nhtsa.gov' }]
+    recalls: [{ campaign: 'Takata inflator', description: 'Lexus lists the 2010–2017 GX460 as affected; involvement is assigned by VIN and build date', severity: 'Critical', remedy: 'Free dealer repair; verify completion at nhtsa.gov/recalls' }]
   },
   'chevy-blazer-2019': {
     year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / LT / RS / Premier (2nd gen, 2019–2023)',
@@ -12031,15 +12028,15 @@ const CHECKLISTS = {
     year: 2018, make: 'Toyota', model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Touring / Limited (5th gen, 2019–2022, or 4th gen XLE/Limited 2013–2018)',
     engine: '3.5L 2GR-FKS V6 (301 hp, 5th gen) or 2.5L A25A-FXS Hybrid',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The Avalon is Toyota's flagship full-size sedan — extremely refined, spacious, and reliable. Both the 3.5L V6 and the hybrid drivetrain are Toyota's best. No chronic failure modes. The main checks are a timing cover oil seep on the 2GR at high mileage, and confirming the Takata airbag recall is closed on 4th-gen models. Outstanding highway cruiser and one of the most undervalued used car segments.",
+    summary: "The Avalon is Toyota's flagship full-size sedan — extremely refined, spacious, and reliable. Both the 3.5L V6 and the hybrid drivetrain are Toyota's best. No chronic failure modes. The main checks are a timing cover oil seep on the 2GR at high mileage, and a VIN recall check (the Avalon is not on Toyota's Takata affected-model list at all). Outstanding highway cruiser and one of the most undervalued used car segments.",
     vinNote: "The 5th-gen Avalon (XX50, 2019-2022) came as either V6 or Hybrid — completely different powertrains with different priorities. Avalon Touring / XSE / XLE / Limited (V6): 3.5L 2GR-FKS V6 (301hp) with 8-speed automatic, FWD only. Same proven Toyota V6 found in the Camry XSE, Lexus ES 350, and pre-2024 Lexus RX 350. Avalon Hybrid (XLE Hybrid / Limited Hybrid): 2.5L A25A-FXS Atkinson + Toyota's hybrid synergy drive (215hp combined). Critical V6 check: GDI carbon buildup at 80-100k miles (walnut blast service, $400-600). Critical hybrid check: cabin-air filter doubles as the hybrid battery cooling air intake — if clogged, the battery overheats faster; replace every 15k miles instead of 30k. Hybrid drivetrain has no documented chronic issue at the 6-year point. The hybrid loses 8-12% resale value vs the V6 at the same trim, so a Hybrid at V6 money is a strong buy. Easy ID: badge on trunk lid says 'Hybrid' explicitly. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 140, topComplaintArea: 'Minimal — very low complaint volume' },
+    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Minimal — very low complaint volume' },
     sections: [
-      { title: 'Recall (4th gen — 2013–2018)', items: [
-        { title: 'Takata airbag recall — verify closed', risk: 'critical', riskLabel: 'Critical on 2013–2018',
-          desc: '4th-gen Avalons are in the Takata recall scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls. Closed = proceed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+      { title: 'Recall status', items: [
+        { title: 'Open recalls — check VIN (the Avalon is not a Takata vehicle)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The Avalon does not appear anywhere on Toyota's list of Takata-affected models — not on the nationwide passenger-inflator campaign, not on the humidity-zone regional campaign, and not on the driver-inflator campaign, which covers only the 2004–2005 RAV4. A VIN check is still worth two minutes, because the 4th-gen car does carry other campaigns.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '3.5L 2GR-FKS V6 — excellent reliability', risk: 'low', riskLabel: 'Low Risk',
@@ -12064,7 +12061,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator on 4th-gen models', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: "The Avalon does not appear on Toyota's Takata affected-model list in any model year. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'gmc-terrain-2018': {
     year: 2018, make: 'GMC', model: 'Terrain', trim: 'SL / SLE / SLT / Denali (2nd gen, 2018–2023)',
@@ -12145,15 +12142,15 @@ const CHECKLISTS = {
     year: 2018, make: 'Lexus', model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD (3rd gen XE30, 2014–2020)',
     engine: '2.0L 8AR-FTS Turbo I4 (241 hp), 3.5L 2GR-FSE V6 (260 hp), or 3.5L 2GR-FKS V6 (311 hp, 2017+)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 3rd-gen IS is a sharp-driving, highly reliable sport sedan. The IS350 with the 3.5L V6 is the standout — naturally aspirated, smooth, and proven. The IS200t/IS300 2.0T is also reliable but less satisfying. Main buyer risks are the same as any sport sedan: modified suspension, aggressive driving history, and GDI carbon on the direct-injection V6. Verify Takata recall status; well-maintained examples hit 200k miles without drama.",
-    vinNote: "The 2018 IS came three ways and the badge tells you the powertrain. IS300 (rear-drive) = 2.0L turbo four (8AR-FTS, 241hp) with 8-speed automatic; the VIN engine character is 'A' on this car. IS300 AWD and IS350 both use the 3.5L V6 (2GR-FKS); the VIN engine character is 'Z'. The AWD-only IS300 detunes that V6 to 260hp with a 6-speed automatic, while the IS350 makes 311hp (8-speed RWD / 6-speed AWD). Note: the checklist's '2GR-FSE, 260hp' label describes the 2014-2015 IS350; for 2018 every V6 IS is the newer 2GR-FKS. Buyer priorities differ by engine: on the turbo four, check for oil consumption and a healthy wastegate/turbo; on the V6, budget for a GDI walnut-blast decarbon at 80-100k miles. All trims: verify Takata inflator recall status by VIN before purchase.",
+    summary: "The 3rd-gen IS is a sharp-driving, highly reliable sport sedan. The IS350 with the 3.5L V6 is the standout — naturally aspirated, smooth, and proven. The IS200t/IS300 2.0T is also reliable but less satisfying. Main buyer risks are the same as any sport sedan: modified suspension, aggressive driving history, and GDI carbon on the direct-injection V6. Lexus’s Takata scope ends with the 2013 IS 250/350, so this car is not part of it; well-maintained examples hit 200k miles without drama.",
+    vinNote: "The 2018 IS came three ways and the badge tells you the powertrain. IS300 (rear-drive) = 2.0L turbo four (8AR-FTS, 241hp) with 8-speed automatic; the VIN engine character is 'A' on this car. IS300 AWD and IS350 both use the 3.5L V6 (2GR-FKS); the VIN engine character is 'Z'. The AWD-only IS300 detunes that V6 to 260hp with a 6-speed automatic, while the IS350 makes 311hp (8-speed RWD / 6-speed AWD). Note: the checklist's '2GR-FSE, 260hp' label describes the 2014-2015 IS350; for 2018 every V6 IS is the newer 2GR-FKS. Buyer priorities differ by engine: on the turbo four, check for oil consumption and a healthy wastegate/turbo; on the V6, budget for a GDI walnut-blast decarbon at 80-100k miles. All trims: run the VIN for open recalls before purchase — but note the Takata inflator campaign covers the 2006–2013 IS, not this one.",
     stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Recall', items: [
-        { title: 'Takata airbag inflator — check VIN', risk: 'critical', riskLabel: 'Critical — Check VIN',
-          desc: 'IS models through 2019 may be in Takata scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — check VIN (Takata scope ends at the 2013 IS)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Lexus lists the IS 250/350 for 2006–2013, the IS 250C/350C convertible for 2010–2015 and the IS-F for 2008–2014 as Takata-affected. A 2018 sedan is outside all three. “IS models through 2019” is not a scope that exists.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '3.5L 2GR V6 (IS350) — excellent', risk: 'low', riskLabel: 'Low Risk',
@@ -12182,7 +12179,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation risk', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: 'Lexus lists the 2006–2013 IS 250/350, the 2010–2015 IS C and the 2008–2014 IS-F as Takata-affected. A 2018 sedan is outside all three. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.', severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'honda-civic-2022': {
     year: 2022, make: 'Honda', model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring (11th gen FE/FL, 2022–2025)',
@@ -12986,8 +12983,8 @@ const CHECKLISTS = {
     engine: '3.6L Pentastar V6 (292 hp) or 5.7L HEMI V8 (363 hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen Chrysler 300 is one of the best value large luxury sedans available — premium presence, rear-wheel-drive or AWD, and the 3.6L Pentastar V6 is well-proven. The HEMI V8 with MDS cylinder deactivation carries lifter failure risk at 80k+ miles (same as Ram/Durango). Main checks: HEMI lifter tick, Uconnect version for infotainment, and transmission fluid service. Outstanding highway car at a fraction of German competitor pricing.",
-    vinNote: "The 2nd-gen 300 (LX, 2011-2023) came with two V engines that share an LX platform but inspect very differently. 3.6L Pentastar V6 (292hp, 8-speed automatic, RWD or AWD) — fitted to base 300 Limited, 300 Touring, 300S V6. The Pentastar is one of FCA's most-proven engines but has a documented oil-cooler housing leak pattern (a known $500-800 service at 80-120k miles) and a rocker-arm-bearing issue on 2011-2013 cars largely resolved by 2016. 5.7L HEMI V8 (363hp, 8-speed automatic, RWD only) — fitted to 300S V8 and 300C variants. The HEMI carries the same MDS lifter failure pattern as the Ram 1500 and Charger/Challenger: lifters can fail at 60-120k miles on neglected oil schedules ($3,000-6,500 repair). Service record showing 5,000-mile or shorter oil intervals is the buyer's protection. Both engines pair with the ZF 8HP70 8-speed, which is exceptionally reliable. Tell engines apart by the trunk badge ('V8' or 'HEMI' is explicit) and exhaust outlet count (single vs dual). Verify Takata airbag recall is closed regardless of engine. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 260, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
+    vinNote: "The 2nd-gen 300 (LX, 2011-2023) came with two V engines that share an LX platform but inspect very differently. 3.6L Pentastar V6 (292hp, 8-speed automatic, RWD or AWD) — fitted to base 300 Limited, 300 Touring, 300S V6. The Pentastar is one of FCA's most-proven engines but has a documented oil-cooler housing leak pattern (a known $500-800 service at 80-120k miles) and a rocker-arm-bearing issue on 2011-2013 cars largely resolved by 2016. 5.7L HEMI V8 (363hp, 8-speed automatic, RWD only) — fitted to 300S V8 and 300C variants. The HEMI carries the same MDS lifter failure pattern as the Ram 1500 and Charger/Challenger: lifters can fail at 60-120k miles on neglected oil schedules ($3,000-6,500 repair). Service record showing 5,000-mile or shorter oil intervals is the buyer's protection. Both engines pair with the ZF 8HP70 8-speed, which is exceptionally reliable. Tell engines apart by the trunk badge ('V8' or 'HEMI' is explicit) and exhaust outlet count (single vs dual). Run the VIN for open recalls regardless of engine — the Takata inflator campaign covers the 2005–2015 300, not this one. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
+    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 260, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
     sections: [
       { title: 'HEMI V8 (if equipped)', items: [
         { title: '5.7L HEMI MDS lifter failure', risk: 'high', riskLabel: 'High Risk on HEMI at 80k+',
@@ -13006,10 +13003,10 @@ const CHECKLISTS = {
           cost: '$200–$350 fluid service', source: 'ZF 8HP reliability standard' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN (some years)', risk: 'critical', riskLabel: 'Critical — Check VIN',
-          desc: 'Some 2nd-gen 300 model years fall in Takata scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — check VIN (Takata scope stops at the 2015 car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "FCA's active airbag-inflator campaign list runs 2005–2015 for the Chrysler 300. A 2016 is one model year outside it. This is worth knowing in both directions: if you are cross-shopping an older 300, a 2015-or-earlier car with an unrepaired inflator is under FCA's stop-drive advisory and should not be driven home.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'FCA Takata affected-model list (mopar.com), verified 2026-08-09' }
       ]},
       { title: 'Documentation', items: [
         { title: 'Service records — HEMI owners especially', risk: 'high', riskLabel: 'High Risk on HEMI without',
@@ -13018,7 +13015,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator risk on select model years', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: "FCA's airbag-inflator campaign covers the 2005–2015 Chrysler 300; a 2016 is outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply — and note that an unrepaired 2015-or-earlier car is under FCA's stop-drive advisory.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'bmw-x7-2019': {
     year: 2019, make: 'BMW', model: 'X7', trim: 'xDrive40i / xDrive50i / M50i (1st gen G07, 2019–2022)',
@@ -13496,14 +13493,14 @@ const CHECKLISTS = {
     year: 2018, make: 'Toyota', model: 'Land Cruiser', trim: 'Base (J200, 2008–2021)',
     engine: '5.7L 3UR-FE V8 (381 hp) with 6-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The J200 Land Cruiser is one of the most durable vehicles ever made — legendary off-road capability, ultra-reliable drivetrain, and Toyota build quality. They commonly reach 300k–400k miles with routine maintenance. The 5.7L 3UR-FE is the same engine as the Sequoia. Takata airbag recall must be verified. Frame rust in northern states is worth checking. High purchase price reflects the high residual value.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 90, topComplaintArea: 'Minimal — very low complaint volume' },
+    summary: "The J200 Land Cruiser is one of the most durable vehicles ever made — legendary off-road capability, ultra-reliable drivetrain, and Toyota build quality. They commonly reach 300k–400k miles with routine maintenance. The 5.7L 3UR-FE is the same engine as the Sequoia. The Land Cruiser is not on Toyota's Takata affected-model list, but a VIN recall check is still mandatory. Frame rust in northern states is worth checking. High purchase price reflects the high residual value.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 90, topComplaintArea: 'Minimal — very low complaint volume' },
     sections: [
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'J200 Land Cruisers are in the Takata recall scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed before purchase.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — check VIN (the J200 is not a Takata vehicle)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The Land Cruiser does not appear on Toyota's Takata affected-model list. Its Lexus cousin the GX460 does — which is probably where the claim came from — but the GX is a different platform (150-series) with different restraint hardware, and one does not imply the other. Run the VIN anyway: the J200 has real campaigns.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '5.7L 3UR-FE V8 — exceptional reliability', risk: 'low', riskLabel: 'Low Risk',
@@ -13532,7 +13529,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: "The Land Cruiser does not appear on Toyota's Takata affected-model list (the Lexus GX460 does, but it is a different platform). Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'ford-f250-2019': {
     year: 2019, make: 'Ford', model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (4th gen P558, 2017–present)',
@@ -13616,16 +13613,16 @@ const CHECKLISTS = {
   'lexus-rx350-2019': {
     year: 2019, make: 'Lexus', model: 'RX350', trim: 'Base / F SPORT / Executive / Premium (4th gen AL20, 2016–2022)',
     engine: '3.5L 2GR-FKS V6 (295 hp) with 8-speed automatic',
-    vinNote: "For the RX350 the 8th VIN digit is ‘Z’ = the 3.5L 2GR-FKS V6 (295 hp), the only engine this badge carried across the whole AL20 generation — 5-seat RX350 or 3-row RX350L, FWD or AWD (Toyota VIN-code tables; JDM Engine Direct 2GR-FKS listing). There is no four-cylinder or turbo RX350 to confuse it with. The hybrid is a separate model, the RX450h, which uses the 2GR-FXS Atkinson V6 plus an electric drive system and carries a different VIN engine character — so ‘RX350 hybrid’ is a contradiction; make sure the badge and the 8th digit agree. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and confirm the Takata airbag recall is closed before purchase.",
+    vinNote: "For the RX350 the 8th VIN digit is ‘Z’ = the 3.5L 2GR-FKS V6 (295 hp), the only engine this badge carried across the whole AL20 generation — 5-seat RX350 or 3-row RX350L, FWD or AWD (Toyota VIN-code tables; JDM Engine Direct 2GR-FKS listing). There is no four-cylinder or turbo RX350 to confuse it with. The hybrid is a separate model, the RX450h, which uses the 2GR-FXS Atkinson V6 plus an electric drive system and carries a different VIN engine character — so ‘RX350 hybrid’ is a contradiction; make sure the badge and the 8th digit agree. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and run the VIN for open recalls before purchase — the RX is not on Lexus’s Takata affected-model list.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The AL20 RX350 is among the most reliable luxury midsize SUVs available. The 2GR-FKS direct-injection V6 is proven and Toyota/Lexus have eliminated the head gasket issues of earlier engines. The 8-speed automatic is smooth and durable. GDI carbon buildup on intake valves is the main watch item on high-mileage examples. Takata airbag recall must be confirmed closed. Outstanding 3-row (RX350L) or 5-seat choice.",
-    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 160, topComplaintArea: 'Minimal' },
+    summary: "The AL20 RX350 is among the most reliable luxury midsize SUVs available. The 2GR-FKS direct-injection V6 is proven and Toyota/Lexus have eliminated the head gasket issues of earlier engines. The 8-speed automatic is smooth and durable. GDI carbon buildup on intake valves is the main watch item on high-mileage examples. The RX is not on Lexus’s Takata affected-model list; a VIN recall check is still worth doing. Outstanding 3-row (RX350L) or 5-seat choice.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 160, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'AL20 RX models are in Takata scope on certain VINs.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — check VIN (the RX is not a Takata vehicle)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The RX appears nowhere on the Lexus Takata affected-model list — that list runs IS, IS C, IS-F, ES 350, GX460, LFA and SC 430, and stops well before 2019 on all of them. Run the VIN regardless; the AL20 has campaigns of its own.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '3.5L 2GR-FKS — reliable with GDI carbon watch', risk: 'low', riskLabel: 'Low Risk',
@@ -13650,7 +13647,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation on select VINs', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: 'The RX appears nowhere on the Lexus Takata affected-model list, which runs IS, IS C, IS-F, ES 350, GX460, LFA and SC 430. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.', severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'subaru-brz-2022': {
     year: 2022, make: 'Subaru', model: 'BRZ', trim: 'Premium / Limited (2nd gen ZD8, 2022–present)',
@@ -14050,8 +14047,8 @@ const CHECKLISTS = {
     year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SXT / GT / R/T / R/T Scat Pack / SRT 392 / SRT Hellcat / Last Call editions (3rd gen LC, 2008–2023)',
     engine: '3.6L Pentastar V6 (305 hp), 5.7L HEMI V8 (375 hp), 6.4L HEMI V8 (485 hp), or 6.2L supercharged (717–807 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The last-generation Challenger ran from 2008 to 2023 — one of the longest production runs in modern automotive history. The HEMI V8 models all carry MDS cylinder deactivation lifter risk at 80k+ miles. The Hellcat supercharged variants are extremely capable but expensive to maintain and insurance-costly. Buy a well-maintained SXT or R/T for value; a Scat Pack for real performance. Verify Takata recall status and HEMI lifter condition on any V8 example.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 480, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
+    summary: "The last-generation Challenger ran from 2008 to 2023 — one of the longest production runs in modern automotive history. The HEMI V8 models all carry MDS cylinder deactivation lifter risk at 80k+ miles. The Hellcat supercharged variants are extremely capable but expensive to maintain and insurance-costly. Buy a well-maintained SXT or R/T for value; a Scat Pack for real performance. Verify HEMI lifter condition on any V8 example; the Takata inflator recall covers the 2008–2014 Challenger, not this one.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 480, topComplaintArea: 'Engine (HEMI MDS) / Electrical' },
     sections: [
       { title: 'HEMI V8 Lifter Risk', items: [
         { title: '5.7L / 6.4L HEMI MDS lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ V8',
@@ -14060,10 +14057,10 @@ const CHECKLISTS = {
           cost: '$2,500–$5,000 lifter service', source: 'Stellantis HEMI MDS pattern' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN (certain years)', risk: 'critical', riskLabel: 'Critical — Check VIN',
-          desc: 'Some Challenger model years are in Takata scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — check VIN (Takata scope stops at the 2014 car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "FCA's active airbag-inflator campaign list runs 2008–2014 for the Challenger. A 2023 is nine model years outside it, and Takata inflators of the recalled type were long out of production by the time this car was built. Run the VIN for the campaigns that do apply.",
+          check: "<strong>Run the VIN at nhtsa.gov/recalls before you go and see the car.</strong> Any campaign that comes back open = do not purchase until the dealer has closed it. Recall work is always free, and completion is logged against the VIN, so a seller's word is not evidence.",
+          cost: 'Free under recall', source: 'FCA Takata affected-model list (mopar.com), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
         { title: '3.6L Pentastar V6 — reliable base engine', risk: 'low', riskLabel: 'Low Risk',
@@ -14082,7 +14079,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator on select model years', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'VIN check', description: "FCA's airbag-inflator campaign covers the 2008–2014 Challenger; a 2023 is nine model years outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
   },
   'kia-telluride-2023': {
     year: 2023, make: 'Kia', model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro (1st gen ON, 2020–present)',
@@ -15204,7 +15201,7 @@ const CHECKLISTS = {
     year: 2020, make: 'Toyota', model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum / XSE (4th gen XU70, 2020–2024)',
     engine: '2.4T I4 (265 hp) or 2.5L Hybrid (243 hp combined)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 4th-gen XU70 Highlander is a significant redesign over the XU50 — no optional V6 (replaced by 2.4T or Hybrid), TNGA-K platform, and Toyota Safety Sense 2.0 standard. The 2.4T is competent; the Hybrid delivers 36 mpg combined. No widespread failure modes. Takata recall must be checked on early production 2020 builds. Outstanding family SUV.",
+    summary: "The 4th-gen XU70 Highlander is a significant redesign over the XU50 — no optional V6 (replaced by 2.4T or Hybrid), TNGA-K platform, and Toyota Safety Sense 2.0 standard. The 2.4T is competent; the Hybrid delivers 36 mpg combined. No widespread failure modes. No Highlander of any generation is on Toyota's Takata affected-model list; run the VIN for first-year 2020 campaigns instead. Outstanding family SUV.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
@@ -15305,7 +15302,7 @@ const CHECKLISTS = {
     year: 2022, make: 'Toyota', model: 'Sequoia', trim: 'SR5 / Limited / Platinum / TRD Pro / Capstone (3rd gen XK70, 2022–present)',
     engine: '3.4L V35A-FTS Twin-Turbo V6 iForce MAX Hybrid (437 hp combined) — standard on all trims',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 3rd-gen Sequoia is a complete redesign — twin-turbo V6 hybrid replaces the legendary 5.7L V8, and the hybrid system is standard on all trims. Early production had a Takata airbag recall carry-over and some powertrain software issues. The iForce MAX is Toyota's new platform and too young for established long-term data. Outstanding fuel economy for a full-size SUV (19 mpg combined vs. 14 for the old V8). Frame-on-body construction retained.",
+    summary: "The 3rd-gen Sequoia is a complete redesign — twin-turbo V6 hybrid replaces the legendary 5.7L V8, and the hybrid system is standard on all trims. Early production had some powertrain software issues. There is no Takata inflator campaign on this truck — Toyota's Sequoia Takata scope is the 2002–2007 first-generation model — so treat any “carry-over” claim as an error. The iForce MAX is Toyota's new platform and too young for established long-term data. Outstanding fuel economy for a full-size SUV (19 mpg combined vs. 14 for the old V8). Frame-on-body construction retained.",
     stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 85, topComplaintArea: 'Powertrain (new platform) / Recall' },
     sections: [
       { title: 'New Powertrain — First-Year Caution', items: [

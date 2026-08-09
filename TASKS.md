@@ -183,6 +183,76 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-recall-audit-wave21-2026-08-09 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-09 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 21 — the two items wave 20 queued: (0) toyota-highlander-2014 powertrain-generation rewrite, (1) systemic Takata sweep across every slug carrying a Takata claim
+- Touched files: inspect/index.html, _hub/Build-Log/2026-08-09.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-08-09 02:00: recall-audit WAVE 21. NINETEEN slugs corrected. The Takata sweep queued by wave 20
+  found that the Takata claim on this site is a batch-authored TEMPLATE, not a set of findings: of the 19
+  affirmative "this car is in the Takata recall" claims checked tonight, 18 were false and 1 (lexus-gx460-
+  2015) was true. 16 of the 19 were critical-risk items, several the first item on the page.
+  ZERO campaign numbers added or deleted -> scripts/recall-ledger.json UNTOUCHED (213 verified / 39
+  unverified_legacy). That is the finding: this whole class shipped WITHOUT campaign numbers — as
+  { campaign: 'Takata' }, { number: 'Takata Airbag' }, or prose in summary/vinNote/topComplaintArea —
+  so G28, the ledger and every number-verification wave 1-20 were structurally unable to see it.
+  Sources of truth (all fetched 2026-08-09): toyota.com/recall/takata (affected-vehicle table + DSF/DSC
+  nationwide, E04/ELG regional, F0L driver campaigns); mopar.com Takata recall page (per-brand model/year
+  list under the 2026 FCA stop-drive advisory); American Honda Takata fact sheet (hondanews.com).
+  FALSE (18, corrected): toyota-corolla-2014 (scope ends 2013), toyota-rav4-2016 + toyota-rav4-2019 (RAV4
+  scope is the 2004-2005 driver inflator, F0L, and Toyota states it is the only Toyota driver-inflator
+  campaign), toyota-sequoia-2016 + toyota-sequoia-2022 (scope is the 2002-2007 first-gen), toyota-avalon-
+  2018 / toyota-land-cruiser-2018 / toyota-highlander-2020 (not on Toyota's list in ANY year), lexus-is-
+  2018 (IS scope ends 2013), lexus-rx350-2019 (RX not on the Lexus list), chrysler-300-2016 (FALSE BY ONE
+  YEAR — 300 scope is 2005-2015), dodge-charger-2018 (2006-2015), dodge-challenger-2018 + dodge-challenger-
+  2023 (2008-2014), dodge-durango-2018 (2004-2009), honda-crv-2015 (CR-V scope 2002-2011), honda-fit-2018
+  (Fit scope 2009-2014), honda-hrv-2018 (HR-V not on Honda's list in any year).
+  TRUE (1, strengthened not deleted): lexus-gx460-2015 — Lexus lists 2010-2017 GX460 (2017 partial); the
+  shipped "through 2019" ceiling was wrong but the involvement is real. Rewritten to say involvement is
+  assigned by VIN and build date, humidity-zone cars pulled in earlier, and to require the campaign read
+  as COMPLETED rather than accept a verbal assurance.
+  CORROBORATED (no edit needed): jeep-wrangler-2012 genuinely in scope (FCA lists 2007-2016 Wrangler);
+  honda-ridgeline-2012 genuinely in scope (2006-2014); the wave-20 negation on jeep-grand-cherokee-2014 is
+  correct (the WK2 is absent from FCA's list).
+  Nothing was silently deleted — each false claim became a monitor-risk VIN-check item that NAMES the real
+  scope and says the claim is wrong (wave-20 pattern; a buyer who read the false version elsewhere needs
+  to be told it is false). Where the Takata claim was bolted onto a real check (three FCA slugs, "Hemi oil
+  history + Takata recall check") the real half was kept and promoted, since MDS lifter failure IS the
+  walk-away item there. 9 pseudo-entries in recalls arrays rewritten as VIN-check entries; stats.recalls
+  re-synced to array length on every slug touched (several were already out of sync — sequoia-2016 claimed
+  5 against an array of 1).
+  ITEM 0 (highlander): engine field, summary, the GDI carbon item and the transmission item rewritten
+  together — MY2014 is 2GR-FE / 270 hp / port injection / U660E six-speed (2.7L 1AR-FE on base FWD LE),
+  not the 2017-facelift 2GR-FKS / 295 hp / 8-speed. The headline monitor item was a $400-800 walnut-blast
+  decarbon the car cannot need; replaced with the seepage checks this engine actually earns. No vinNote
+  exists on the slug so none needed correcting — and none was invented. Awaiting-Daniel item marked
+  RESOLVED.
+  Wave-22 queue: (1) finish the sweep — vw-jetta-2018 / volkswagen-passat-2018 / vw-atlas-2018 (VW is the
+  one manufacturer with a DESICCATED-inflator recall, so verify against the NHTSA VW FAQ, do not assume a
+  late car is safe), chevy-cruze-2017, nissan-armada-2017 + infiniti-qx80-2018 (secondary sources conflate
+  the Takata campaigns with a later non-Takata Armada/QX80 recall — get Nissan's own list); (2) generation-
+  boundary sweep, start with the 2014-2016 Toyota slugs; (3) oldest-first 14V292/14V327/14V346 (on chevy-
+  silverado-2014, which also carries a Takata mention — resolve both together)/14V355; (4) acura-tsx-2014
+  numbers check. NEW GATE PROPOSED: fail any recall entry whose number/campaign field is neither
+  'Multiple' nor a \d{2}[VE]-?\d{3} match, the same way an unledgered number fails.
+  Sibling check: In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all orthogonal. Ready = wave20/wave19/
+  wave18 (already pushed f4905ae/d6d6550/6a2b3ba), same file but additive on disjoint slugs; Verified
+  against: autovetting-recall-audit-wave20-2026-08-08. Done (last 10) all carry - Started: (checked, no
+  backfill needed). Working tree was clean at start of run. No Re-sync needed.
+  Syntax-check: PASS (run after each of the two edit passes). Dead-links: verified (no links added).
+  Scanner: PASS (502 files, exit 0). Gate-check: 27 pass / 2 warn / 0 CRIT (G28 clean; warns are the
+  standing backlog ratchet at 39 and the homepage-test-bc lazy-loading warn). Truncation guard: 17,741
+  lines / 1,392,329 bytes (was 17,744 / 1,381,974 — 3 lines fewer because several replacement items are
+  4 lines where the originals were 5), tail intact.
+  Process note: both passes ran as exact-string substitution with a count==1 assertion per substitution
+  and no write until all 66 matched. Four ambiguity failures were caught by the assertion rather than by
+  eyeball — most usefully { campaign: 'Takata', description: 'Airbag inflator fragmentation', ... }, which
+  is BYTE-IDENTICAL across toyota-land-cruiser-2018, nissan-armada-2017 and infiniti-qx80-2018. A regex
+  edit would have silently corrected the wrong slug.
+
 #### autovetting-recall-audit-wave20-2026-08-08 — ready (pushed directly)
 
 - Status: ready
