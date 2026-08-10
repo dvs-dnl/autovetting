@@ -204,7 +204,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   wave 21 is now CLOSED: the last six slugs carrying an unverified Takata claim were checked against
   manufacturer and NHTSA primary sources and ALL SIX ARE FALSE, taking the sweep to 24 false / 1 true
   across 25 affirmative "this car is in the Takata recall" claims. Ledger 213 verified / 39 unverified
-  -> 216 verified / 38 unverified. Commit: __COMMIT__.
+  -> 216 verified / 38 unverified. Commit: cc8883a.
   Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/),
   autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) and autovet-seo-content (Content/blog/) are all
   orthogonal file-wise. Ready = recall-audit waves 16-21, all sharing inspect/index.html +
