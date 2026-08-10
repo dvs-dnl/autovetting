@@ -1832,12 +1832,41 @@
       "component": "FCA Takata dual-stage DRIVER frontal inflator, moisture intrusion - 2004-2008 Ram 1500, 2005-2009 Ram 2500, 2006-2009 Ram 3500, 2008-2010 Ram 4500/5500, 2004-2008 Durango, 2007-2008 Aspen, 2005-2010 300/300C/300S/SRT8, 2006-2010 Charger, 2005-2008 Magnum, 2005-2011 Dakota, 2006-2009 Mitsubishi Raider. RIGHT CORPORATE PARENT, WRONG MODEL - the WK2 Grand Cherokee is NOT in this campaign; was fabricated on jeep-grand-cherokee-2014 as \"HVAC Fan Wiring\", deleted wave 20. Do not add to any Grand Cherokee slug.",
       "source": "https://static.nhtsa.gov/odi/rcl/2015/RCLRPT-15V313-7590.PDF",
       "verified": "2026-08-08"
+    },
+    "14V346": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Knee contact may move the ignition key out of RUN (GM recall 14294) — NOT an airbag recall",
+      "scope": "2010-2014 Chevrolet Camaro",
+      "source": "https://static.nhtsa.gov/odi/rcl/2014/RCRN-14V346-4931.pdf",
+      "verified": "2026-08-10",
+      "note": "Wave 22: was shipped on chevy-silverado-2014 as 'Front Passenger Airbag (Takata)' — wrong model AND wrong defect. Deleted. Do not add to any non-Camaro slug."
+    },
+    "23V215": {
+      "makes": [
+        "Volkswagen"
+      ],
+      "component": "Passenger Occupant Detection System wiring fault — front passenger airbag may switch off while seat is occupied (VW 69FB)",
+      "scope": "2018-2021 Atlas (143,038 US) + 2020 Atlas Cross Sport (15 US)",
+      "source": "https://static.nhtsa.gov/odi/rcl/2023/RCMN-23V215-2270.pdf",
+      "verified": "2026-08-10",
+      "note": "Wave 22: added to vw-atlas-2018, replacing a fabricated Takata claim. Remedy not available at announcement (Apr 2023)."
+    },
+    "24V834": {
+      "makes": [
+        "Volkswagen"
+      ],
+      "component": "Takata SDI-D desiccated PSAN driver frontal airbag inflator (VW 69EG/69GQ)",
+      "scope": "2017-2019 Beetle + Beetle Convertible; 2006-2007 Passat B6 sedan; 2012-2014 US Passat; B6 Passat wagon",
+      "source": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V834-6970.PDF",
+      "verified": "2026-08-10",
+      "note": "Wave 22: cited in prose on vw-jetta-2018 + volkswagen-passat-2018 to NEGATE their Takata claims. The only NHTSA-forced desiccated-inflator recall. Trap: the Part 573 lists a 'PASSAT WAGON' under model year 2017 whose production dates are OCT 2005 - NOV 2006; secondary sources report this as a '2017 Passat wagon'. Covers no 2018 VW."
     }
   },
   "unverified_legacy": [
     "14V292",
     "14V327",
-    "14V346",
     "14V355",
     "15V258",
     "15V303",

@@ -133,6 +133,16 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Open flags carried forward: eligibility discrepancy UNRESOLVED (2016 checklist form says 72 months / 70,000 mi; current consumer warranty page says 5 yr / 60,000 mi — same class as the Lexus 70k-vs-80k flag); ITB20-002a (VR30DDTT +0.5 qt oil capacity / new dipstick p/n) is forum-sourced, marked [unverified-primary], do NOT publish as verified; CONSULT III Plus + INFINITI-specific battery tester dependency (items 6-8, 37, hybrid block) — same factory-tool gap as Lexus Techstream; RECALL-SET COMPLETENESS CAVEAT — cars.com lists 14 total campaigns for Q50 and 19 for QX60, this run captured page 1 (10 each) plus the QX80's complete set of 8, so a future model-year-slug run must pull page 2.
     Weekly milestone: DONE — infiniti-certified.md saved + INDEX.md updated (P1 now Subaru ✅ → Mazda ✅ → Lexus ✅ → Acura ✅ → Infiniti ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Volkswagen (last P1, then P2 opens with BMW).
 
+  2026-08-09 10:15: ingested Volkswagen CPO protocol (100+ inspection points — NO fixed published count; single tier, no lite tier and no EV tier).
+    Output: Product/CPO-Protocols/volkswagen-certified.md, Product/CPO-Protocols/_runs/2026-08-09-volkswagen.md.
+    Sibling check: no true conflict; ALIGNED with the recall audit. Ready = autovetting-recall-audit-wave21-2026-08-09 (inspect/index.html + gitignored _hub Build-Log/Awaiting-Daniel + TASKS.md) — orthogonal file-wise (this run wrote only Product/CPO-Protocols/ + TASKS.md) and complementary in content: wave 21's queue lists vw-jetta-2018 / volkswagen-passat-2018 / vw-atlas-2018 for wave-22 Takata verification, which this ingestion RESOLVES IN ADVANCE (see below). In-flight autovet-competitor-monitor (Competitors/, next=Lemon Squad #1 cycle 2) + autovet-seo-content (Content/blog/) orthogonal. Done(last 10) = recall-audit waves 15-20 + decision-execution 07-30 + vinnote batches — none author a VW checklist that would consume this protocol; no overnight-builder/content-checklist task is launching a VW vehicle. Verified against: autovetting-recall-audit-wave21-2026-08-09, autovetting-recall-audit-wave20-2026-08-08; cross-referenced to: vw-jetta-2018, volkswagen-passat-2018, vw-atlas-2018, vw-tiguan-2018, vw-golf-2018. No Re-sync needed.
+    ⚠️ WAVE-22 CROSS-REFERENCE — VW TAKATA SCOPE RESOLVED FROM THE PRIMARY SOURCE, NEGATIVELY. Pulled NHTSA's VW-specific FAQ (nhtsa.gov/takata-recall-spotlight/faqs-takata-desiccated-inflators-and-volkswagen-recalls, last updated 2021-02-03): under the 2020 agreement VW recalls desiccated Takata PSAN (SDI-D) inflators in SELECT BEETLE, BEETLE CONVERTIBLE, AND PASSAT ONLY, phased — Group 1 = MY2012-2014 Beetle/Beetle Conv (defect report by 2020-12-31), Group 2 = MY2015-2016 Beetle/Beetle Conv (by 2023-01-01), Group 3 = MY2017-2019 Beetle/Beetle Conv PLUS 2011-2014 PASSAT (by 2025-01-01). Therefore: vw-jetta-2018 = Jetta absent from the agreement in every year -> expect FALSE; volkswagen-passat-2018 = desiccated Passat scope stops at 2014, out of scope by four model years -> expect FALSE; vw-atlas-2018 = Atlas launched MY2018 and appears on no Takata list -> expect FALSE (wave-20/21 "phantom recall" signature). CAVEAT written into the protocol file: the desiccated agreement is ADDITIONAL to the earlier non-desiccated VW campaigns, so "absent from the FAQ" is not proof of no involvement for pre-2016 cars — check those by VIN before writing a negation. Also of note for wave 22: the 2011-2014 Passats sit in Group 3 precisely BECAUSE their inflators were installed as newer like-for-like replacement parts during the earlier recalls — a Passat whose airbag was already "fixed" is the car in this recall.
+    Campaign IDs read first-hand from cars.com NHTSA feeds (provenance gate satisfied — both URLs surfaced in WebSearch before fetching). Verified this run: Jetta 24V-110 (VW 20UF, suction-jet-pump seal -> EVAP fuel leak/fire; EXPANDS AND REPLACES 16V-647; GLI ONLY for 2019-2020 Jetta), 23V-604 (28H7, ignition switch stall, CONVENTIONAL IGNITION SWITCH ONLY), 23V-619 (90W7), 22V-815 (45J6/45J8 TPMS), 22V-514 (91DV eMMC camera), 26V-185 (90Z5, 2025 Jetta+Taos instrument panel), 26V-138 (97TC, 2025-26 Jetta transmission ground wire/fire); Tiguan 21V-732 (51H5), 22V-176 (42L8 rear knuckle corrosion), 22V-226 (66N5, ACCESSORY SPOILER ONLY), 21V-853 (19Q4 brake pipe nut), 25V-082 (91NY camera) + 26V-321 (91NF, recall OF that repair, 2024 Tiguans already fixed under 25V-082), 25V-854 (74HE PODS/passenger airbag), 25V-526 (42E7 tie-rod bolt). THREE items deliberately shipped WITHOUT numbers, marked [unverified] rather than guessed: early-Tiguan rear coil spring fracture, 2016-2018 Passat internal-use/FMVSS non-compliance, 2015 Passat non-desiccated Takata involvement.
+    Anti-fabrication guard written into the file: 19V-258 (deleted 2026-07-30, commit 1d86463, from all four VW slugs) never to be re-added; NO unnumbered Takata claim on any VW slug outside Beetle/Beetle Conv/2011-2014 Passat; do NOT cite 16V-647 as the live fuel-system remedy; do NOT broaden 24V-110 (GLI), 23V-604 (conventional ignition), or 22V-226 (accessory spoiler) past their equipment scope.
+    Key findings for downstream content: (1) THE MISSING NUMBER — VW is the FIRST OEM in this rotation publishing no fixed point count and no line-item checklist, just "100+" and five named areas (engine starting / transmission malfunction+noise / brakes incl. STOPPING DISTANCE / steering noise-effort-vibration-pulling / maintenance catch-up). Prior ten brands all state a number (152-182). Some dealer assets advertise "112-point" — that figure is dealer-authored, appears nowhere in VW of America materials, and MUST NOT be shipped as VW's number. Honest VW framing is "there is no published list to hold your dealer to." (2) WEAKEST CPO VALUE PROP MEASURED SO FAR — 2yr/24,000mi WITH A $50 PER-VISIT DEDUCTIBLE and NO long powertrain term at all (vs Mazda 7/100k @ $0, Hyundai/Kia 10/100k, Toyota 7/100k); MY19 gets only 1yr/12k; eligibility <6MY / 75,000mi; HV battery 8yr/100k with a 70% capacity FLOOR. Carfax's independent review reaches the same verdict (deductible + less rigorous inspection); a documented auto-fraud case has a VW dealer conceding the CPO inspection missed prior collision damage. (3) TWO SUPERSESSION TRAPS IN ONE BRAND (16V-647->24V-110, 25V-082->26V-321) where "all recalls performed" is true and useless -> RECOMMEND a general "superseded by later campaign" field in the checklist engine rather than one-off handling (same pattern hit FCA/Toyota in waves 19-20). (4) EQUIPMENT-SCOPED RECALLS NEED AN EQUIPMENT FIELD — three VW campaigns scope by trim/variant/accessory, not model year; the schema expresses scope in years, which is exactly the "real campaign, wrong variant" failure mode waves 19-20 unwound. (5) 21V-732 IS A CONTENT ASSET — a 2018 Tiguan recall that only exists on a car ALREADY CRASHED AND REPAIRED (incorrect roof reinforcement fitted during roof-damage repair, degrades roof integrity + side-curtain deployment) and can sit inside a valid CPO certification; cleanest argument in the library for "history report + independent physical inspection, not either alone," and it pairs with the independence counter-positioning piece the competitor-monitor has flagged unwritten four weeks running. Worth its own post post-freeze. (6) NO EV TIER — ID.4 runs the same 100+ inspection with no published battery-SOH item while the warranty turns on a 70% floor; AutoVet adds measured SOH + DC-fast-charge taper. (7) TDI emissions-modification status (2009-2016 diesels) has no OEM checklist counterpart; vw.com/en/emissions.html lookup added as an AutoVet step.
+    Retrieval gap: the motorwebs "Volkswagen 112-Point Inspection" dealer asset surfaced in search but returned an empty body to web_fetch (client-rendered). Left unretrieved rather than inferred, and the 112 figure is not adopted.
+    Weekly milestone: DONE — volkswagen-certified.md saved + INDEX.md updated. **P1 ROTATION COMPLETE** (Subaru ✅ → Mazda ✅ → Lexus ✅ → Acura ✅ → Infiniti ✅ → Volkswagen ✅); P0 completed 2026-06-28. Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: **BMW (first P2)**.
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -182,6 +192,85 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Weekly milestone: DONE — draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Ford Edge (#19, 2.0T internal water pump / PTU), Toyota Highlander (#20, palate-cleanser), then re-rank top-500 for next uncovered Tier-1.
 
 ## Ready to deploy / publish
+
+#### autovetting-recall-audit-wave22-2026-08-10 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-10 (02:00 MST overnight builder; priority-1 workstream per DANIEL-DECISIONS-2026-07-29 [freeze] = "finish recall-audit waves")
+- Task: recall-audit wave 22 — close the Takata sweep (the six slugs wave 21 left unverified) and resolve queued number 14V-346
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-10.md (gitignored), TASKS.md
+- Notes:
+  2026-08-10 02:00: recall-audit WAVE 22. SEVEN slugs corrected. The systemic Takata sweep opened by
+  wave 21 is now CLOSED: the last six slugs carrying an unverified Takata claim were checked against
+  manufacturer and NHTSA primary sources and ALL SIX ARE FALSE, taking the sweep to 24 false / 1 true
+  across 25 affirmative "this car is in the Takata recall" claims. Ledger 213 verified / 39 unverified
+  -> 216 verified / 38 unverified. Commit: __COMMIT__.
+  Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) and autovet-seo-content (Content/blog/) are all
+  orthogonal file-wise. Ready = recall-audit waves 16-21, all sharing inspect/index.html +
+  scripts/recall-ledger.json but ALL ALREADY PUSHED DIRECTLY (wave 21 = commit 02fd8d2) and strictly
+  additive-then-superseded by this wave, which continues their own written queue. Verified against:
+  autovetting-recall-audit-wave21-2026-08-09, autovetting-recall-audit-wave20-2026-08-08;
+  cross-referenced to: autovet-cpo-protocol-ingestion 2026-08-09 (Volkswagen), which independently
+  resolved the VW Takata scope from NHTSA's desiccated-inflator FAQ and reached the same three negative
+  verdicts this wave reached from the filed Part 573. No Re-sync needed.
+  FALSE (6, corrected): vw-jetta-2018 (Jetta in no VW Takata campaign after ~MY2014, and in none of
+  24V-834), volkswagen-passat-2018 (FALSE BY FOUR MODEL YEARS — 24V-834 lists the 2012-2014 US Passat),
+  vw-atlas-2018 (Atlas in no Takata campaign in any year), chevy-cruze-2017 (no Cruze of any year is on
+  the GM affected-vehicle list, which runs to the 2007-2014 trucks/SUVs + Vibe/Astra/Saab),
+  nissan-armada-2017 (no Armada of any year on the Nissan list: Maxima 01-03, Pathfinder 02-04, Sentra
+  02-06, Versa 07-11/07-12), infiniti-qx80-2018 (QX80 Takata scope is MY2014 only — the Oct-2014
+  driver-inflator campaign covering the 2013 QX56 and 2014 QX80, ~1,900 vehicles, a build defect not the
+  propellant-degradation recall).
+  THE VW TRAP WAVE 21 WARNED ABOUT WAS REAL AND NEARLY PRODUCED A WRONG ANSWER. Secondary coverage of
+  24V-834 uniformly reports it as covering "2005 through 2018" incl. "2017 Passat wagons" — which would
+  put a 2018 Passat one model year from scope. The FILED Part 573 lists a "2017-2017 PASSAT WAGON" whose
+  PRODUCTION DATES ARE OCT 21 2005 - NOV 06 2006. It is a model-year field on a B6 car; the US Passat
+  scope is MY2012-2014 and the 2018 is FOUR years outside, not one. Research trap now written into the
+  ledger note for 24V834: where a Part 573 model-year field and its production dates disagree, the
+  production dates describe the car.
+  NET GAIN, not just a deletion: vw-atlas-2018's fabricated Takata item was crowding out a real and
+  poorly-known airbag recall — 23V-215 (VW 69FB), a PODS wiring contact fault that switches the front
+  passenger airbag OFF while the seat is occupied; 2018-2021 Atlas (143,038 US) + 2020 Atlas Cross Sport
+  (15 US), and VW had NO REMEDY AVAILABLE at announcement in April 2023, so many changed hands unrepaired.
+  Added with a physical check (watch the PASSENGER AIRBAG OFF indicator go out) alongside the VIN check.
+  14V-346 RESOLVED (queue item 3): shipped on chevy-silverado-2014 as "Front Passenger Airbag (Takata)".
+  NHTSA's own notification letter (RCRN-14V346-4931.pdf, GM recall 14294) says 14V-346 is ALL 2010-2014
+  CHEVROLET CAMARO vehicles, for knee contact moving the ignition key out of RUN. Wrong model AND wrong
+  defect — wave-19 "right parent, wrong model" signature plus an invented defect label. Deleted;
+  stats.recalls 4->3; vinNote "all four listed recalls" -> "all three". Also settled the scope question
+  rather than leaving it implied: GM lists the 2007-2013 Silverado 1500 LD and the 2007-2014 2500/3500 HD,
+  so a 2014 1500 (this slug) is outside Takata scope while a 2014 HD is inside — now in the vinNote.
+  14V-293 / 16V-065 / 14V-355 on that slug remain unverified -> wave 23.
+  GENERATION-BOUNDARY SWEEP PROMOTED TO WAVE-23 PRIORITY 1 — this wave found a second instance without
+  looking for one. vw-jetta-2018 was authored against the 2019 A7 car: trim "(A7 gen)", a 228hp GLI (the
+  2018 GLI is 210hp) and a "DQ200 dry-clutch 7-speed DSG" carrying an $1,800-$3,500 mechatronic cost
+  anchor. The US 2018 Jetta is the final MK6; S/SE/SEL use an Aisin six-speed torque-converter automatic
+  and only the GLI has a dual-clutch — the WET-clutch DQ250. The DQ200 was never fitted to a US Jetta, so
+  the headline powertrain item described a transmission the car does not have and warned about a
+  dry-clutch symptom. Same shape as toyota-highlander-2014 (wave 21). Corrected. volkswagen-passat-2018
+  had a milder version (DSG advice applied to four-cylinder cars that use the Aisin TF-62SN; only the 3.6
+  VR6 got a DSG). Corrected.
+  GATE RECOMMENDATION STRENGTHENED: wave 21 proposed failing any recall entry whose ID is neither
+  'Multiple' nor \d{2}[VE]-?\d{3}. Support that, and add a second rule — 14V-346 WAS visible to G28 and
+  PASSED, because G28 checks that a number is ledgered, not that it belongs to the vehicle it sits on. A
+  ledger `makes` vs slug `make` mismatch check would have caught 14V-346 and the wave-19/20 "right parent,
+  wrong model" fabrications too.
+  Ledger: 14V346 moved unverified->verified with a do-not-add note naming the slug it came off; 23V215 and
+  24V834 added verified with primary-source URLs; the 2017-Passat-Wagon trap written into the 24V834 note.
+  NON-BLOCKING FOR DANIEL: the Ready section now holds SEVEN consecutive already-pushed recall-audit
+  blocks (waves 16-22) while the newest Done block is wave 15 (2026-08-03). The hourly orchestrator is
+  supposed to move Ready -> Done after a push and appears not to have since 2026-08-03. Concrete data
+  point for the suspected orchestrator stall; not blocking (these waves push directly, gate is passing).
+  Edit safety: exact-string substitution scoped to each slug's brace-matched block, count == 1 asserted
+  PER SUBSTITUTION WITHIN THE BLOCK plus a uniqueness assertion on the block itself; no write until all 29
+  matched. Block-scoping mattered: `recalls: [{ campaign: 'Takata', description: 'Airbag inflator
+  fragmentation', ... }]` is byte-identical on nissan-armada-2017 and infiniti-qx80-2018 (the same
+  collision wave 21 hit) and a file-wide replace would have silently corrected the wrong slug.
+  Syntax-check: PASS. Dead-links: verified. Scanner: PASS (505 files, exit 0). Gate: 27 pass / 2 warn /
+  0 CRITICAL; recall-backlog ratchet 39 -> 38. Truncation guard: 17,741 lines / 1,397,866 bytes, tail
+  intact. stats.recalls == recalls.length asserted on all 7 touched slugs (7/7 OK).
+  Detail: _hub/Build-Log/2026-08-10.md.
 
 #### autovetting-recall-audit-wave21-2026-08-09 — ready (pushed directly)
 

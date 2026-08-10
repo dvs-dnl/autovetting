@@ -4260,7 +4260,7 @@ const CHECKLISTS = {
     summary: "The K2XX Silverado (2014–2018) is a well-built, capable full-size truck — but the 5.3L and 6.2L V8 engines carry a serious AFM (Active Fuel Management) lifter failure risk that can cost $3,000–$6,000 if it materializes. AFM deactivates cylinders to save fuel, and the deactivating lifters are prone to collapse between 60,000–130,000 miles. The 4.3L V6 avoids AFM entirely and is the lower-risk powertrain choice. If you buy a V8, verify the AFM system history carefully and verify oil consumption rates. The 2014 is the first model year of this generation — check NHTSA for any open first-year recalls.",
     stats: {
       itemsToCheck: 20,
-      recalls: 4,
+      recalls: 3,
       ownerComplaints: 3124,
       topComplaintArea: 'Engine (AFM System)'
     },
@@ -4383,12 +4383,11 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '14V-346', title: 'Front Passenger Airbag (Takata)', desc: 'Takata airbag inflator rupture risk. Verify VIN at nhtsa.gov/recalls. Free dealer repair.' },
       { number: '14V-293', title: 'Engine Oil Cooler Line — Fire Risk', desc: 'Oil cooler line may leak causing fire risk. Verify completion by VIN. Free repair.' },
       { number: '16V-065', title: 'Brake Fluid Pressure Sensor', desc: 'Sensor may fail, causing extended stopping distance. Verify completion. Free repair.' },
       { number: '14V-355', title: 'Front Seat Belt', desc: 'Belt may not properly restrain occupant in a crash. Free repair — verify completion.' }
     ],
-    vinNote: "The K2XX Silverado 1500 (2014–2018) has three distinct engine families — and which one is in the truck you're buying determines whether the AFM lifter failure risk applies. Decode position 8 of the VIN at <a href=\"/decode/\">autovetting.com/decode</a> or vpic.nhtsa.dot.gov before negotiating. Key splits: position 8 = U is the 4.3L EcoTec3 V6 (LV3, 285 hp) — no AFM, no lifter risk, the lower-risk choice for buyers not towing heavy. Position 8 = Z is the 5.3L EcoTec3 V8 (L83, 355 hp) — this engine uses AFM (also called DoD, Displacement on Demand), and the AFM deactivating lifters are the primary failure point at 60,000–130,000 miles. Position 8 = B is the 6.2L EcoTec3 V8 (L86, 420 hp) — also uses AFM; less common in base 1500 configurations, more common in High Country. The 10th VIN position encodes model year within the K2XX span: E = 2014, F = 2015, G = 2016, H = 2017, J = 2018. A first-year 2014 (10th digit E) has the highest probability of unresolved first-year recalls — verify all four listed recalls are closed by VIN before purchase.",
+    vinNote: "The K2XX Silverado 1500 (2014–2018) has three distinct engine families — and which one is in the truck you're buying determines whether the AFM lifter failure risk applies. Decode position 8 of the VIN at <a href=\"/decode/\">autovetting.com/decode</a> or vpic.nhtsa.dot.gov before negotiating. Key splits: position 8 = U is the 4.3L EcoTec3 V6 (LV3, 285 hp) — no AFM, no lifter risk, the lower-risk choice for buyers not towing heavy. Position 8 = Z is the 5.3L EcoTec3 V8 (L83, 355 hp) — this engine uses AFM (also called DoD, Displacement on Demand), and the AFM deactivating lifters are the primary failure point at 60,000–130,000 miles. Position 8 = B is the 6.2L EcoTec3 V8 (L86, 420 hp) — also uses AFM; less common in base 1500 configurations, more common in High Country. The 10th VIN position encodes model year within the K2XX span: E = 2014, F = 2015, G = 2016, H = 2017, J = 2018. A first-year 2014 (10th digit E) has the highest probability of unresolved first-year recalls — verify all three listed recalls are closed by VIN before purchase. Note also that no 2014 Silverado 1500 is in the GM Takata airbag recall — that list stops at the 2013 1500, though the 2500/3500 HD runs through 2014.",
     blogUrl: '/blog/2014-chevrolet-silverado-buyers-guide',
   },
 
@@ -6718,17 +6717,17 @@ const CHECKLISTS = {
   },
 
   'vw-jetta-2018': {
-    year: 2018, make: 'Volkswagen', model: 'Jetta', trim: 'S / SE / SEL / R-Line / GLI (A7 gen)',
-    engine: '1.4L TSI EA211 I4 (147hp) / 2.0L TSI Turbo I4 (228hp GLI)',
+    year: 2018, make: 'Volkswagen', model: 'Jetta', trim: 'S / SE / SEL / R-Line / GLI (A6 / MK6 gen — the last year before the 2019 A7 redesign)',
+    engine: '1.4L TSI EA211 I4 (147hp), 5-speed manual or Aisin 6-speed torque-converter automatic / 2.0L TSI EA888 I4 (210hp GLI), 6-speed manual or DQ250 6-speed wet-clutch DSG',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The A7 Jetta is a refined, well-built compact sedan — better value than a comparable Audi or BMW entry-luxury car. The DSG dual-clutch transmission shudder is the main buyer risk; it requires strict mechatronic fluid service. 1.4L TSI EA211 is a significant improvement over EA111-era engines. Ensure Takata airbag recall is resolved on eligible VINs.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 120, topComplaintArea: 'DSG shudder / Takata airbag (pre-2019 VINs)' },
+    summary: "This is the last MK6 Jetta, not the first MK7 — the A7 car, its 228hp GLI and its 8-speed automatic all arrive for 2019, so read any '2018-2021 Jetta' advice with that in mind. It is a well-built, plain compact sedan whose real buyer risks are the EA211 timing chain tensioner and deferred oil service. Note the transmission: S/SE/SEL cars use an Aisin six-speed torque-converter automatic, not a DSG — only the GLI has a dual-clutch, and it is the wet-clutch DQ250. No Jetta of this year is in any Takata airbag campaign.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 120, topComplaintArea: 'Timing chain tensioner / oil service history' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: 'DSG DQ200 shudder under 15 mph', risk: 'high', riskLabel: 'High Attention',
-          desc: 'The DQ200 dry-clutch 7-speed DSG shudders or jerks at 5–15 mph when mechatronic fluid service is overdue.',
-          check: '<strong>Test in stop-and-go traffic at under 15 mph.</strong> Any shudder or jerk = DSG service needed immediately.',
-          cost: '$350–$600 fluid service / $1,800–$3,500 mechatronic unit', source: 'VW DSG maintenance pattern' },
+        { title: 'Identify the transmission before you budget for it', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Most 2018 Jettas do not have a DSG at all. S/SE/SEL cars use the Aisin six-speed torque-converter automatic, or a five-speed manual. Only the GLI has a dual-clutch, and it is the wet-clutch DQ250 — not the dry-clutch DQ200 that produces the well-known low-speed shudder, which was never fitted to a US Jetta. Advice about "the 2018 Jetta DSG" is describing a car this is not.',
+          check: '<strong>Confirm which transmission the car has before pricing any repair. GLI: test stop-and-go under 15 mph for shudder. Aisin car: test for flare or gear hunting between 2nd and 3rd from cold.</strong>',
+          cost: '$150–$250 Aisin fluid service / $350–$600 DQ250 DSG service (GLI only)', source: 'VW model-year specifications' },
         { title: '1.4 TSI timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'EA211 timing chain tensioner wear past 100k miles with extended oil intervals. Cold-start rattle check.',
           check: '<strong>Cold-start the engine — sustained rattle past 10 seconds = tensioner wear.</strong>',
@@ -6753,10 +6752,10 @@ const CHECKLISTS = {
           cost: '$100–$300 drain cleaning', source: 'Common VW complaint' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'DSG service history + recall check', risk: 'high', riskLabel: 'High Attention',
-          desc: 'DSG fluid service history is the most critical document. Takata recall must be verified.',
-          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls.</strong>',
-          cost: 'Walk away from DSG without service history', source: 'NHTSA + VW maintenance' }
+        { title: 'Service history + open recalls (this is not a Takata car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "Volkswagen Takata inflator campaigns cover the Jetta only through roughly MY2014, and the later desiccated-inflator recall NHTSA negotiated with VW (24V-834) covers the Beetle and the Passat — not the Jetta, in any year. A listing or a checklist telling you this Jetta has an outstanding Takata airbag is wrong. Oil and transmission service history is what actually matters here.",
+          check: '<strong>Request oil-change receipts, and on a GLI the DSG service record. Run the VIN at nhtsa.gov/recalls and require whatever is genuinely open to be closed before purchase.</strong>',
+          cost: 'Walk away from an unserviced GLI DSG', source: 'VW recall 24V-834 scope / NHTSA' }
       ]}
     ],
     recalls: [
@@ -9260,18 +9259,18 @@ const CHECKLISTS = {
     year: 2018, make: 'Volkswagen', model: 'Passat', trim: 'S / SE / SEL / R-Line / V6 SE (B8 NMS)',
     engine: '1.8L TSI EA888 I4 (170hp) / 2.0T TSI EA888 I4 (174hp) / 3.6L VR6 (280hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The NMS B8 Passat is built in Tennessee for the North American market — simpler and larger than the European B8, and positioned as a value alternative to Camry/Accord. The 1.8T and 2.0T EA888 engines share the timing chain tensioner concern. DSG fluid service is required. Strong value in the used midsize sedan segment for buyers who are budget-conscious with their own PPI.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 135, topComplaintArea: 'EA888 timing chain / DSG fluid / Takata recall' },
+    summary: "The NMS B8 Passat is built in Tennessee for the North American market — simpler and larger than the European B8, and positioned as a value alternative to Camry/Accord. The 1.8T and 2.0T EA888 engines share the timing chain tensioner concern. Note the transmission split: the four-cylinder cars use an Aisin TF-62SN six-speed torque-converter automatic, not a DSG — only the 3.6 VR6 got a dual-clutch. And no 2018 Passat is in any Takata campaign; VW Takata scope for the US Passat is MY2012-2014. Strong value in the used midsize sedan segment for buyers who are budget-conscious with their own PPI.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 135, topComplaintArea: 'EA888 timing chain / oil service history' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'high', riskLabel: 'High Attention',
           desc: 'Same timing chain tensioner concern as Audi A4 and VW Jetta. Cold-start rattle on warm engine = tensioner wear.',
           check: '<strong>Cold-start rattle check (first 5 seconds).</strong>',
           cost: '$1,200–$2,500 timing chain kit', source: 'EA888 pattern' },
-        { title: 'DSG mechatronic fluid service', risk: 'high', riskLabel: 'High Attention',
-          desc: 'DSG shudder at under 15 mph = overdue fluid service.',
-          check: '<strong>Test stop-and-go at under 15 mph.</strong>',
-          cost: '$350–$600 DSG service / $1,800–$3,500 mechatronic', source: 'VW DSG maintenance' }
+        { title: 'Transmission — DSG only on the VR6', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 1.8T and 2.0T Passat uses an Aisin TF-62SN six-speed torque-converter automatic. Only the 3.6 VR6 got the six-speed DSG. Budget the service the car in front of you actually needs — DSG shudder advice does not apply to a four-cylinder Passat.',
+          check: '<strong>Confirm the engine first. VR6: test stop-and-go under 15 mph for DSG shudder. Four-cylinder: test for flare or hunting from cold and check the fluid service record.</strong>',
+          cost: '$150–$250 Aisin service / $350–$600 DSG service (VR6 only)', source: 'VW model-year specifications' }
       ]},
       { title: 'Electrical', items: [
         { title: 'MIB2 infotainment / CarPlay', risk: 'low', riskLabel: 'Low Risk',
@@ -9292,10 +9291,10 @@ const CHECKLISTS = {
           cost: '$100–$300 drain cleaning', source: 'Common VW complaint' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'DSG service + Takata recall check', risk: 'critical', riskLabel: 'Critical',
-          desc: 'DSG fluid history and Takata recall are both critical checks.',
-          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls. Walk away from Takata incomplete.</strong>',
-          cost: 'Walk away from Takata unresolved', source: 'NHTSA' }
+        { title: 'Open recalls — VIN check (the Takata claim does not apply here)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: "The Passat is the one nameplate where the usual reasoning fails, so be precise. Volkswagen is the only manufacturer NHTSA pushed into recalling desiccated Takata inflators, which is why late VWs appear in a Takata campaign at all — but that recall, 24V-834, lists the 2017-2019 Beetle, the 2006-2007 B6 Passat and the 2012-2014 US Passat. A 2018 sedan is in none of them. Secondary sources describing a 2017 Passat wagon are repeating a model-year label on a car whose production dates are 2005-2006.",
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and require every genuinely open campaign closed before purchase. Do not let a seller price this car around a Takata repair it does not need.</strong>',
+          cost: 'n/a', source: 'NHTSA Part 573 report 24V-834' }
       ]}
     ],
     recalls: [
@@ -11332,11 +11331,11 @@ const CHECKLISTS = {
           source: 'Owner pattern reports' }
       ]},
       { title: 'Recalls', items: [
-        { title: 'Takata airbag inflator — verify closed', risk: 'critical', riskLabel: 'Critical — Check VIN',
-          desc: 'Some 2016–2018 Cruze models are within the Takata airbag recall scope. Inflator rupture can cause metal fragmentation injury.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
-          cost: 'Free dealer repair',
-          source: 'NHTSA Takata recall program' },
+        { title: 'Open recalls — VIN check (this is not a Takata car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'No Cruze of any model year appears on the GM Takata affected-vehicle list, which runs to the 2007-2014 full-size trucks and SUVs plus the Pontiac Vibe, Saturn Astra and older Saabs. The Cruze airbag recalls that do exist are a 2013-2014 driver-inflator campaign and a 2014-only roof-rail inflator campaign covering cars built in a three-week window in spring 2014. A second-generation 2017 car is outside all of them.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and require every genuinely open campaign closed. A seller discounting this car for a Takata repair has not checked.</strong>',
+          cost: 'Free dealer repair for anything genuinely open',
+          source: 'GM Takata affected-vehicle list / NHTSA' },
         { title: 'Brake booster vacuum pump leak', risk: 'high', riskLabel: 'High Risk',
           desc: 'The brake booster vacuum pump can develop an internal leak, reducing brake assist. Symptom: harder-than-normal pedal.',
           check: '<strong>Test brake pedal firmness at low speed. Hard pedal = have the booster vacuum pump inspected.</strong>',
@@ -11364,7 +11363,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Takata', description: 'Driver/passenger airbag inflator rupture risk', severity: 'Critical', remedy: 'Free dealer inflator replacement; check VIN at nhtsa.gov' }
+      { number: 'Multiple', title: 'Open recalls — VIN check (not a Takata vehicle)', desc: 'No Cruze appears on the GM Takata affected-vehicle list. Run the VIN at nhtsa.gov/recalls and require every genuinely open recall closed before purchase.' }
     ]
   },
   'kia-optima-2016': {
@@ -11835,8 +11834,8 @@ const CHECKLISTS = {
     year: 2018, make: 'Volkswagen', model: 'Atlas', trim: 'S / SE / SE with Technology / SEL / SEL Premium (1st gen, 2018–2023)',
     engine: '2.0T TSI I4 (235 hp) or 3.6L VR6 (276 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The Atlas is a genuinely spacious 3-row SUV at a mainstream price point, but first-gen quality control was inconsistent. The 2.0T has documented oil consumption and timing chain concerns; the VR6 is smoother and more reliable but burns premium fuel. HVAC and infotainment glitches were common on early builds. 2020+ models show improved build quality. Only buy with documented service history and verify Takata recall is closed.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 750, topComplaintArea: 'Engine / Electrical / HVAC' },
+    summary: "The Atlas is a genuinely spacious 3-row SUV at a mainstream price point, but first-gen quality control was inconsistent. The 2.0T has documented oil consumption and timing chain concerns; the VR6 is smoother and more reliable but burns premium fuel. HVAC and infotainment glitches were common on early builds. 2020+ models show improved build quality. Only buy with documented service history — and check recall 23V-215, the passenger-airbag recall this car really does have, rather than the Takata recall it has never been part of.",
+    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 750, topComplaintArea: 'Engine / Electrical / HVAC' },
     sections: [
       { title: 'Engine', items: [
         { title: '2.0T TSI oil consumption', risk: 'high', riskLabel: 'High Risk',
@@ -11856,11 +11855,11 @@ const CHECKLISTS = {
           source: 'VW VR6 reliability history' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Takata airbag inflator', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'Some Atlas VINs are within the Takata airbag recall scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls before purchase.</strong>',
-          cost: 'Free dealer repair',
-          source: 'NHTSA Takata recall' }
+        { title: '23V-215 — passenger airbag can switch itself off', risk: 'critical', riskLabel: 'Critical — Verify Closed',
+          desc: 'The Atlas is in no Takata campaign in any model year. The airbag recall it does have is 23V-215 (VW 69FB): a wire with a contact fault lets the Passenger Occupant Detection System read a malfunction and switch off the front passenger airbag while someone is sitting in that seat. It covers 2018-2021 Atlas and the 2020 Atlas Cross Sport, about 143,000 US vehicles, and VW had no remedy available when it was announced in April 2023 — so a lot of these changed hands unrepaired.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and confirm 23V-215 shows completed. Then sit in the passenger seat and watch the PASSENGER AIRBAG OFF indicator — it should go out.</strong>',
+          cost: 'Free dealer repair (PODS sensor mat and harness)',
+          source: 'NHTSA recall 23V-215 / VW dealer advisory 69FB' }
       ]},
       { title: 'HVAC & Infotainment', items: [
         { title: 'MIB2 infotainment freezing / reboot loops', risk: 'monitor', riskLabel: 'Monitor',
@@ -11890,7 +11889,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Takata', description: 'Airbag inflator metal fragmentation risk', severity: 'Critical', remedy: 'Free dealer repair; check VIN at nhtsa.gov' }
+      { number: '23V-215', title: 'Passenger occupant detection system — airbag may deactivate', desc: 'PODS wiring fault can switch off the front passenger airbag while the seat is occupied. 2018-2021 Atlas. Free dealer repair — confirm completion by VIN.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check (not a Takata vehicle)', desc: 'The Atlas appears in no Takata inflator campaign. Run the VIN at nhtsa.gov/recalls and require every genuinely open recall closed before purchase.' }
     ]
   },
   'lexus-gx460-2015': {
@@ -13242,14 +13242,14 @@ const CHECKLISTS = {
     year: 2017, make: 'Nissan', model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve (2nd gen Y62, 2017–present)',
     engine: '5.6L VK56 V8 (390 hp) with 7-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 2nd-gen Armada is based on the Nissan Patrol Y62 — a substantial, body-on-frame full-size SUV. The 5.6L VK56 V8 is extremely reliable and proven across Titan trucks and QX80. Main buyer checks are HYDRAULIC MULTI-MODE 4WD service, transmission fluid, and Takata airbag recall status. No AFM/MDS cylinder deactivation — just a straightforward V8. Great value versus Sequoia or Expedition at comparable mileage.",
-    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 150, topComplaintArea: 'Minor electrical / Recall' },
+    summary: "The 2nd-gen Armada is based on the Nissan Patrol Y62 — a substantial, body-on-frame full-size SUV. The 5.6L VK56 V8 is extremely reliable and proven across Titan trucks and QX80. Main buyer checks are 4WD transfer-case service, transmission fluid and towing history — not the Takata airbag recall, which has never covered an Armada in any model year. No AFM/MDS cylinder deactivation — just a straightforward V8. Great value versus Sequoia or Expedition at comparable mileage.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Minor electrical / 4WD service' },
     sections: [
       { title: 'Recall', items: [
-        { title: 'Takata airbag inflator — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: '2nd-gen Armada falls within Takata scope on certain VINs.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — VIN check (this is not a Takata car)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The Nissan Takata affected-vehicle list is short, and no Armada is on it in any model year: 2001-2003 Maxima, 2002-2004 Pathfinder, 2002-2006 Sentra, 2007-2011 Versa sedan, 2007-2012 Versa hatchback. The do-not-drive advisory applies to the 2002-2006 Sentra and 2002-2004 Pathfinder only. A checklist telling you this Armada has an outstanding Takata airbag is wrong.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and require every genuinely open campaign closed before purchase.</strong>',
+          cost: 'Free dealer repair for anything genuinely open', source: 'Nissan Takata affected-vehicle list / NHTSA' }
       ]},
       { title: 'Powertrain', items: [
         { title: '5.6L VK56 V8 — very reliable', risk: 'low', riskLabel: 'Low Risk',
@@ -13274,7 +13274,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ number: 'Multiple', title: 'Open recalls — VIN check (not a Takata vehicle)', desc: 'No Armada appears on the Nissan Takata affected-vehicle list. Run the VIN at nhtsa.gov/recalls and require every genuinely open recall closed before purchase.' }]
   },
   'acura-tlx-2021': {
     year: 2021, make: 'Acura', model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD (3rd gen UB5, 2021–present)',
@@ -14469,15 +14469,15 @@ const CHECKLISTS = {
     year: 2018, make: 'INFINITI', model: 'QX80', trim: 'Base / Luxe / ProACTIV / Sensory / Autograph (2nd gen Z62, 2011–2023)',
     engine: '5.6L VK56 V8 (400 hp) with 7-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The QX80 is a Nissan Patrol-based full-size luxury SUV — the same 5.6L VK56 V8 as the Titan and Armada but in a more premium package. Excellent reliability and extremely durable drivetrain. Main checks: Takata airbag recall status, transmission fluid service, and air suspension compressor (if equipped). Great value vs. Lexus LX or Mercedes GLS at similar mileage.",
-    vinNote: "Only one engine here, so there is no powertrain fork to decode: every 2018 QX80 is the 5.6L VK56VD DOHC V8 (400hp) paired with a 7-speed automatic — the same bulletproof V8 shared with the Nissan Armada and Titan, with no cylinder deactivation. The VIN engine character is 'A' (VK56VD). What the VIN and trim actually change: 2WD versus Nissan's All-Mode 4WD, and whether the truck carries the Hydraulic Body Motion Control suspension and 22-inch wheel package (ProACTIV/Sensory/Autograph) — that hydraulic system and the air-suspension components are the real cost items to inspect, along with confirming Takata airbag recall completion by VIN. Don't confuse this Z62 with the 2025 redesign, which switched to a twin-turbo V6.",
-    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 130, topComplaintArea: 'Air Suspension / Recall' },
+    summary: "The QX80 is a Nissan Patrol-based full-size luxury SUV — the same 5.6L VK56 V8 as the Titan and Armada but in a more premium package. Excellent reliability and extremely durable drivetrain. Main checks: the hydraulic body-motion-control and air-suspension hardware, transmission fluid service and records — not the Takata airbag recall, whose QX80 scope ends with the 2014 model year. Great value vs. Lexus LX or Mercedes GLS at similar mileage.",
+    vinNote: "Only one engine here, so there is no powertrain fork to decode: every 2018 QX80 is the 5.6L VK56VD DOHC V8 (400hp) paired with a 7-speed automatic — the same bulletproof V8 shared with the Nissan Armada and Titan, with no cylinder deactivation. The VIN engine character is 'A' (VK56VD). What the VIN and trim actually change: 2WD versus Nissan's All-Mode 4WD, and whether the truck carries the Hydraulic Body Motion Control suspension and 22-inch wheel package (ProACTIV/Sensory/Autograph) — that hydraulic system and the air-suspension components are the real cost items to inspect. The Takata inflator campaign in this family covers only the 2013 QX56 and the 2014 QX80, so a 2018 sits four model years outside it. Don't confuse this Z62 with the 2025 redesign, which switched to a twin-turbo V6.",
+    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Air suspension / hydraulic body-motion control' },
     sections: [
       { title: 'Recall', items: [
-        { title: 'Takata airbag — check VIN', risk: 'critical', riskLabel: 'Critical — Verify Closed',
-          desc: 'QX80 models are in the Takata recall scope.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls. Must be closed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA Takata' }
+        { title: 'Open recalls — VIN check (Takata scope ends at 2014)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'There is exactly one Takata-supplied campaign in this family, from October 2014, and it covers the 2013 QX56 built 1 September 2012 to 26 April 2013 plus the 2014 QX80 built 18 June 2013 to 11 February 2014 — roughly 1,900 vehicles whose driver inflator was assembled with an incorrect internal part. That is a build defect, not the propellant-degradation recall everyone means by "the Takata recall," and a 2018 QX80 is four model years outside it.',
+          check: '<strong>Run the VIN at nhtsa.gov/recalls and require every genuinely open campaign closed before purchase.</strong>',
+          cost: 'Free dealer repair for anything genuinely open', source: 'INFINITI Takata campaign scope (2013 QX56 / 2014 QX80) / NHTSA' }
       ]},
       { title: 'Powertrain', items: [
         { title: '5.6L VK56 V8 — highly reliable', risk: 'low', riskLabel: 'Low Risk',
@@ -14496,13 +14496,13 @@ const CHECKLISTS = {
           cost: '$1,200–$2,500 compressor', source: 'INFINITI air suspension pattern' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'Service records + Takata recall paperwork', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Records confirm maintenance and recall completion.',
-          check: '<strong>Request all service records and Takata recall completion paperwork.</strong>',
+        { title: 'Service records + recall completion paperwork', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Records confirm maintenance and completion of whatever campaigns genuinely apply to this VIN. Do not go hunting for Takata paperwork on a 2018 — it does not exist, and a seller who produces some has produced something else.',
+          check: '<strong>Request all service records, plus completion documentation for any recall the VIN lookup shows open.</strong>',
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata', description: 'Airbag inflator fragmentation', severity: 'Critical', remedy: 'Free dealer repair' }]
+    recalls: [{ number: 'Multiple', title: 'Open recalls — VIN check (not a Takata vehicle)', desc: 'The INFINITI Takata campaign covers the 2013 QX56 and 2014 QX80 only. Run the VIN at nhtsa.gov/recalls and require every genuinely open recall closed before purchase.' }]
   },
   'chevy-suburban-2021': {
     year: 2021, make: 'Chevrolet', model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country (5th gen T1XX, 2021–present)',
