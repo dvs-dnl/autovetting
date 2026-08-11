@@ -193,6 +193,64 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-overnight-builder-2026-08-11-pinpoint-backlog — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-11 (02:00 MST overnight builder)
+- Task: launch freeze remains active (DANIEL-DECISIONS-2026-07-29, "KEEP FREEZE" — reallocation order recall-audit -> under-$15k study -> booking-infra; vinNote batches fill-in only). This run's assignment protocol asked for a new vehicle launch, but a new vehicle launch means a new Inspect checklist, which is explicitly freeze-blocked per _hub/Awaiting-Daniel.md ("all five section-A targets require a new Inspect checklist and are blocked by the launch freeze — now 9 weeks old"). Judgment call: did NOT launch a vehicle. Instead shipped the Pinpoint-only backlog _hub/Awaiting-Daniel.md explicitly flagged as "NOT freeze-blocked — shippable tonight" and unshipped for five consecutive weekly-index runs (Section B items 3-5 + Section D + Section E.3). Recall-audit wave 23 (generation-boundary sweep) remains the standing priority-1 workstream and was NOT touched by this run to avoid duplicating/conflicting with that specialized track.
+- Touched files: pinpoint/index.html, sitemap.xml, _hub/Build-Log/2026-08-11.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-08-11 02:00: FOUR items closed, all Pinpoint-only (no new Inspect checklist authored, so none freeze-blocked):
+  1. Section D (Durango re-tag, carried 5 runs): re-tagged 'Dodge Durango R/T' (seats 6, budget 20-30k) and
+     'Dodge Durango GT AWD' (seats 7+, budget 20-30k) from use_case 'weekend-fun' to 'road-trip' — a third
+     Durango card ('Dodge Durango SXT/GT/R/T/SRT') was already correctly 'family-hauler', so this was a pure
+     re-tag of an inconsistency within one nameplate, not a judgment call. Fills the empty
+     road-trip/6/20-30k and road-trip/7+/20-30k cells.
+  2. Section B item 4 (Sequoia older-year): added 'Toyota Sequoia SR5 (2008–2012, pre-facelift)' card,
+     outdoor/7+/15-20k, pointed at the existing toyota-sequoia-2016 checklist (its trim field already covers
+     "2nd gen XK60, 2008–2022" via the standard inspectUrl year=2016 direct-match path — no VEHICLE_MENU
+     edit needed). Fills the empty outdoor/7+/15-20k cell.
+  3. Section B item 5 (Enclave/Traverse 6-pass road-trip): added 'Buick Enclave Preferred (2018,
+     high-mileage)' (road-trip/6/under-10k) and 'Chevrolet Traverse LS / LT (2018–2019)'
+     (road-trip/6/10-15k), both pointed at the existing 2nd-gen buick-enclave-2018 /
+     chevrolet-traverse-2018 checklists (same generation as the existing $22k family-hauler cards, framed at
+     the cheaper/higher-mileage end of that same generation's used-market range). Fills both empty
+     road-trip/6/under-10k and road-trip/6/10-15k cells.
+  4. Section B item 3 (4Runner 3rd-row, "highest-priority finisher" of the config-gap items): added FOUR
+     cards spanning all four empty budget tiers — 'Toyota 4Runner SR5 Premium 3rd Row (2010–2012)'
+     (under-10k), '...(2013–2015)' (10-15k), 'Toyota 4Runner Limited 3rd Row (2016–2018)' (15-20k), and
+     '...(2019–2021)' (20-30k) — all outdoor/6/[tier], all pointed at the existing toyota-4runner-2018
+     checklist (5th-gen N280, vinNote confirms single engine across the generation). Did NOT touch
+     VEHICLE_MENU for these years: VEHICLE_MENU's 2010–2012 Toyota/4Runner entries currently route to key
+     'toyota-4runner-2008' (a 4th-gen/N210 checklist), which looks like exactly the class of
+     generation-boundary bug wave 23 is sweeping for — flagging rather than fixing, since that's the
+     recall-audit track's territory and out of scope here. All four new cards instead reuse the direct
+     inspectUrl year=2018 match (same technique as the pre-existing Sequoia $28k card, whose inspectUrl also
+     doesn't match its own 2008–2022 years field) — closes all four outdoor/6/[under-10k..20-30k] cells
+     without going near the VEHICLE_MENU mismatch.
+  5. Section E.3 (/decode/ sitemap): removed the /decode/ <url> entry from sitemap.xml. /decode/ is
+     noindex + meta-refresh to /inspect/ (canonical /inspect/) — submitting it in the sitemap at priority
+     0.9 contradicted that to crawlers. Mirrors the /next/ robots cleanup already done 2026-07-30 (no
+     /next/ entry was ever added back to the sitemap either).
+  Not touched this run (deliberately, to keep scope reviewable): Section E.1 (coalesce recall-audit waves
+  16-21 Ready->Done — belongs to the recall-audit track's own bookkeeping, not this run's files), Section
+  E.6 (29 no-must-have-chip cards spot-check — open-ended, no concrete target list yet).
+  Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-
+  ingestion (Product/CPO-Protocols/), and autovet-seo-content (Content/blog/) are all orthogonal file-wise.
+  Ready = recall-audit waves 16-22 (inspect/index.html + scripts/recall-ledger.json) — this run touched
+  neither of those files, only pinpoint/index.html + sitemap.xml, so no overlap even though both tracks
+  share the "overnight builder" label. Done (last 10) = vinnote-batches + recall-audit on inspect/index.html
+  — none touch pinpoint/index.html or sitemap.xml. Verified against: _hub/Awaiting-Daniel.md weekly-index
+  run #14 (2026-08-10), _hub/Filter-Schema.md, _hub/Pinpoint-Filter-Coverage.md. No Re-sync needed.
+  Recall numbers: none cited or touched — this run made zero contact with inspect/index.html or
+  scripts/recall-ledger.json.
+  Syntax-check: PASS (node script-block check, exit 0). Dead-links: verified (all 304 inspectUrl values in
+  pinpoint/index.html start with /inspect/; sitemap.xml re-validated as well-formed XML after the removal).
+  Scanner: PASS (509 files, exit 0). Gate: scripts/gate-check.py — 27 pass / 2 warn (both pre-existing:
+  recall backlog ratchet 38, homepage-test-bc lazy-load — unrelated to this run) / 0 CRITICAL; pre-push hook
+  ran the same gate a second time before accepting the push, same result. Commit: 2e7a35c (pushed
+  e9f288e..2e7a35c). Detail: _hub/Build-Log/2026-08-11.md.
+
 #### autovetting-recall-audit-wave22-2026-08-10 — ready (pushed directly)
 
 - Status: ready
