@@ -193,6 +193,127 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+#### autovetting-recall-audit-wave23-2026-08-12 — ready (pushed directly)
+
+- Status: ready
+- Started: 2026-08-12 (02:00 MST overnight builder)
+- Task: recall-audit wave 23 — the generation-boundary sweep promoted to priority 1 by the wave-22
+  queue. Launch freeze remains active (DANIEL-DECISIONS-2026-07-29 "KEEP FREEZE"; reallocation order =
+  recall audit -> under-$15k study -> booking infra), so no vehicle was launched; priority 1 in that
+  ordering is this workstream. Three parts: (a) systematic generation/facelift-boundary sweep of the
+  CHECKLISTS records, (b) complete-set rebuild of chevy-silverado-2014 (wave-22 queue item 2), (c) the
+  VEHICLE_MENU 4Runner misrouting flagged by the 2026-08-11 run and left for this track.
+- Touched files: inspect/index.html, scripts/recall-ledger.json, _hub/Build-Log/2026-08-12.md
+  (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-08-12 02:00: **10 generation-boundary errors found, 10 confirmed, 10 corrected** — a 10-for-10
+  hit rate on the first systematic pass, from a candidate list of 10 read off all 245 slugs.
+  1. toyota-avalon-2018 — written as the 5th-gen XX50. Real car = 4th-gen XX40 with the PORT-INJECTED
+     2GR-FE (268 hp) + 6-speed U660E, not the 2GR-FKS (301 hp) + 8AT. The vinNote's headline buyer
+     instruction was "GDI carbon buildup at 80-100k miles (walnut blast, $400-600)" — a service that
+     does not apply to a port-injected engine. Same class as wave 22's vw-jetta-2018 DQ200 anchor.
+     Rewrote trim/engine/summary/vinNote + powertrain, hybrid (2AR-FXE 200hp, not A25A-FXS 215hp) and
+     infotainment items (2018 = Entune App Suite, NO CarPlay — that arrives with the 2019 redesign).
+  2. toyota-highlander-2020 — engine read "2.4T I4 (265 hp)" and the summary asserted "no optional V6".
+     The 2020-2022 XU70 is a 3.5L 2GR-FKS V6 (295 hp) + 8AT; the 2.4T is MY2023+. XSE dropped from the
+     2020 trim list (added 2021). Mirror image of wave 21's highlander-2014 finding — same nameplate,
+     same error, opposite direction.
+  3. mercedes-gla-2020 — written as the H247 2nd gen (M260, 221 hp, 8G-DCT, MBUX). US 2020 GLA is the
+     X156 1st gen (M270, 208 hp, 7G-DCT, COMAND); H247 is MY2021. The "$2,000-$5,000 mechatronic"
+     anchor was priced against a transmission the car does not have. Fixed trim/engine/summary, both
+     transmission + valve-cover items and their sources, renamed the MBUX section to COMAND.
+  4. honda-crv-2015 — a facelift boundary INSIDE one generation, and a new sub-signature. Record said
+     "K24Z7 + 5-speed automatic" with a full 5-speed shift-quality item and an ATF-DW1 anchor; the 2015
+     refresh replaced BOTH with the direct-injected K24W and a CVT on HCF-2. Also missed the defining
+     defect of the refreshed car: CVT judder per Honda SB 15-046 (3 modes; software update + fluid).
+     Replaced the transmission item outright, fixed engine-item title, trim (SE dropped after 2014,
+     Touring added 2015), engine and summary.
+  5. infiniti-qx60-2018 — trim was the 2022+ L51 lineup ("Pure/Luxe/Sensory/Autograph"); the 2018 is
+     1st-gen L50, a SINGLE trim with Premium / Premium Plus / Deluxe Touring packages. Summary opened
+     by describing the 2022+ car as its subject. Dropped an unverifiable CVT part number (JF016E).
+     NOTE: this trim string was mirrored into SIX VEHICLE_MENU rows + the checklist — all 7 moved.
+  6. infiniti-qx80-2018 — "Base/Luxe/ProACTIV/Sensory/Autograph"; Luxe/Premium Select/Sensory are the
+     2021 lineup. 2018 = QX80 and QX80 Limited. Trim-only fix; engine was correct.
+  7. audi-q3-2019 — right generation (2019 IS the first US F3 year) but "184 hp" is the European 35
+     TFSI figure; US cars are 228 hp / 45 TFSI / quattro standard. Split the "2nd gen 8U/F3" code that
+     named both generations at once.
+  8. chevy-blazer-2019 — listed a 2.0T that did not exist until MY2020, and spent its lead powertrain
+     item on 2.0T oil consumption. 2019 = 2.5L (193 hp) or 3.6L V6 (308 hp) only. Item scoped to
+     2020+; trim corrected to 2LT/3LT.
+  9. jeep-wrangler-2018 — listed the 3.0L EcoDiesel (a 2020+ JL option), and did not mention that 2018
+     is a TWO-WRANGLER year: Jeep sold the outgoing JK alongside the JL for the full model year.
+  10. jeep-grand-cherokee-2021 — written as a two-row WL with Trailhawk and a 4xe. For 2021 the WL was
+     sold ONLY as the three-row Grand Cherokee L; two-row WL + Trailhawk + 4xe are all 2022, and the
+     2021 two-row on the market is a WK2 carryover. V6 corrected to 290 hp (WL) from 293 (WK2); 4xe
+     recall item scoped to 2022+.
+  **chevy-silverado-2014 complete-set rebuild — 3 of 3 fabricated.** 14V-293 "Engine Oil Cooler Line"
+  = FCA Jeep Grand Cherokee / Dodge Durango adaptive cruise control; 16V-065 "Brake Fluid Pressure
+  Sensor" = TOYOTA/LEXUS curtain-shield-airbag control module (MY2003-2006 Land Cruiser / Tundra /
+  Sequoia / 4Runner / LX470 / GX470); 14V-355 "Front Seat Belt" = GM but LaCrosse/Lucerne/DeVille/DTS/
+  Impala/Monte Carlo, passenger cars only (wave-19 right-parent-wrong-model signature). **14V-293 is
+  the important one: it has been ledgered VERIFIED with makes ["Jeep","Dodge"] since wave 20 and sat on
+  a Chevrolet slug through two later audit waves without G28 saying a word — because G28 checks that a
+  number is ledgered, not that it BELONGS to the vehicle it sits on.** Second confirmed instance after
+  14V-346 in wave 22; the proposed makes-mismatch gate is now demonstrated, not hypothetical. Replaced
+  with the complete verified 15-campaign set (13V-315, 13V-488, 14V-152, 14V-246, 14V-301, 14V-374,
+  14V-446, 15V-640, 16V-209, 16V-651, 17V-414, 17V-437, 19V-645, 19V-761, 21V-245) — all fifteen were
+  ALREADY ledgered verified from the gmc-sierra-2014 work, so zero new ledger risk. Notables: the real
+  oil-cooler-line fire recall is 14V-152 and it is the TRANSMISSION line not the engine's; 16V-651 and
+  17V-437 are the same airbag defect twice because the first remedy was incomplete (a closed 16V-651
+  does NOT imply a closed 17V-437 — written into both the entries and the vinNote); 14V-246 carries a
+  GM do-not-drive advisory, preserved verbatim. vinNote line telling buyers to "verify all three listed
+  recalls" corrected.
+  **VEHICLE_MENU misrouting (flagged 2026-08-11, confirmed + fixed).** The 2010/2011/2012 4Runner rows
+  routed to toyota-4runner-2008 — the 4th-gen N210 checklist — though the 5th-gen N280 launched MY2010.
+  A 2011 buyer was handed X-REAS suspension, a 4.7L V8, 4th-gen dash cracking and recall 11V-113 (whose
+  population is 2003-2009), none of which exists on their truck. Repointed all three to
+  toyota-4runner-2018 (its vinNote confirms one unchanged powertrain across the N280 generation). Also
+  removed a duplicate 2016 4Runner row with an empty key. **NEW SURFACE: VEHICLE_MENU maps year ->
+  checklist independently of what the checklist says about itself, so it can misroute a generation
+  boundary even when the checklist record is perfectly correct — invisible to any check that reads only
+  the checklist. Wave 24 should sweep it in full.**
+  Ledger: 14V293 kept verified + do-not-add note (naming the GM slugs it must never return to, pointing
+  at 14V-152, and recording why G28 passed it twice); 16V065 and 14V355 promoted unverified_legacy ->
+  verified with full populations, Part 573 PDF sources and do-not-add notes. 16V065's note also flags
+  that it is a LEGITIMATE candidate for the toyota-4runner-2008 / toyota-sequoia-2016 /
+  lexus-gx460-2015 predecessor eras — check years before adding. **Ledger 218 verified / 36
+  unverified_legacy (was 216 / 38).**
+  Wave 24 queue: (1) CONTINUE the generation-boundary sweep — 10/10 tonight was nowhere near
+  exhaustive; already-noticed unverified candidates = kia-stinger-2018 (2.0T is Theta II not Lambda),
+  mercedes-c300-2022 (M254 called a "PHEV"; it is a 48V mild hybrid), acura-mdx-2022 (YD3 = 3rd gen),
+  honda-hrv-2023 (RU4 = 2nd gen), toyota-venza-2021, nissan-titan-2017, mitsubishi-outlander-2017.
+  (2) Sweep VEHICLE_MENU for misrouting in full. (3) acura-tsx-2014 18V-661/19V-378/19V-502 (carried
+  unreached from waves 21, 22, 23). (4) Oldest-first through the remaining 36: 14V292, 14V327, 15V258.
+  (5) TWO gates now evidence-backed: (a) fail any recall ID that is neither 'Multiple' nor
+  \d{2}[VE]-?\d{3} (wave 21), (b) **fail any recall entry whose ledger `makes` does not include the
+  slug's `make` (wave 22) — recommend (b) FIRST, it is cheaper and closes the demonstrated hole.**
+  (6) Signature list gains two: (e) mid-generation FACELIFT boundaries, which carry no generation label
+  to flag them (honda-crv-2015); (f) VEHICLE_MENU year->checklist misrouting.
+  Editing pattern worth keeping: exact-string replacement with a per-edit occurrence assert and a
+  fail-fast that collects ALL mismatches before writing anything — 3 of 48 edits failed their assert on
+  the first attempt and the file was never touched. Two failures were format drift (honda-crv-2015 is
+  stored pretty-printed, one field per line, unlike most slugs); the third was the QX60 trim string
+  appearing 7 times. Also: python len() = chars, wc -c = bytes; they will not agree on this file and
+  that is not a truncation signal — compare line counts and the closing </html>.
+  Sibling check: no true conflict. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) all
+  orthogonal file-wise. Ready holds recall-audit waves 16-22 (same two files — this run is their direct
+  continuation) plus autovetting-overnight-builder-2026-08-11-pinpoint-backlog, which touched
+  pinpoint/index.html + sitemap.xml, neither of which this run went near. All Done (last 10) blocks
+  carry a `- Started:` field — no backfill needed. Verified against:
+  autovetting-recall-audit-wave22-2026-08-10. No Re-sync needed.
+  NOT carried by this run: an unstaged .gitignore edit adding `bridges/` (dated 2026-08-12) was present
+  in the working tree from another task. Left unstaged deliberately — this run committed only
+  inspect/index.html and scripts/recall-ledger.json by explicit path.
+  Syntax-check: PASS (node validator, scripts 2 and 5 OK, run after each of the three edit passes).
+  Structural: 245 slugs before and after; line-count deltas asserted exactly (+12 recall array, -1 dead
+  menu row); recall-ledger.json re-parses as valid JSON; file ends </html>.
+  Dead-links: verified (no new href values introduced this run).
+  Gate-check: 27 passed / 2 warned / 0 CRITICAL (both warnings pre-existing — recall backlog ratchet now
+  36, down from 38; homepage-test-bc/index.html loading=lazy).
+  Scanner: PASS (512 files, exit 0).
+  Commit: e5f891f.
+
 #### autovetting-overnight-builder-2026-08-11-pinpoint-backlog — ready (pushed directly)
 
 - Status: ready
