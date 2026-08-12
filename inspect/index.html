@@ -4122,11 +4122,11 @@ const CHECKLISTS = {
     year: 2015,
     make: 'Honda',
     model: 'CR-V',
-    trim: 'LX / SE / EX / EX-L (4th gen, 2012–2016)',
-    engine: '2.4L K24Z7 inline-4 (185hp), 5-speed automatic',
+    trim: 'LX / EX / EX-L / Touring (4th gen, 2012–2016 — 2015–16 are the post-refresh cars)',
+    engine: '2.4L K24W Earth Dreams direct-injected inline-4 (185hp / 181 lb-ft) with CVT — 2015–16 only; 2012–14 cars use the port-injected K24Z7 with a 5-speed automatic',
     overallRisk: 'low',
     overallRiskLabel: 'Low Risk',
-    summary: "The 4th-gen CR-V (2012–2016) is a dependable compact SUV — the K24 engine is Honda's most bulletproof four-cylinder design, and the 5-speed automatic is straightforward and durable. The standout issue: windshield stress fractures. A significant share of 4th-gen CR-Vs develop a crack pattern along the base or sides of the windshield without impact. Honda issued TSB 14-005 but declined to extend a recall. Buy one without a crack, inspect thoroughly, and verify the A/C evaporator for mold. Note: the 5th gen (2017+) switched to a 1.5T turbo with an oil dilution problem far worse than anything on the 4th gen — stick with 2012–2016 if you want the simpler, proven drivetrain.",
+    summary: "The 4th-gen CR-V (2012–2016) is a dependable compact SUV, but 2015 is a hard split inside that generation: the mid-cycle refresh swapped the port-injected K24Z7 and 5-speed automatic for the direct-injected K24W and a CVT. A 2015 or 2016 car is a CVT car — if a listing or a shop quotes you 5-speed automatic service on one, they are working from the wrong half of the generation. The standout issues on the refreshed car are CVT judder (Honda Service Bulletin 15-046) and windshield stress fractures. A significant share of 4th-gen CR-Vs develop a crack pattern along the base or sides of the windshield without impact. Honda issued TSB 14-005 but declined to extend a recall. Buy one without a crack, inspect thoroughly, and verify the A/C evaporator for mold. Note: the 5th gen (2017+) switched to a 1.5T turbo with an oil dilution problem far worse than anything on the 4th gen — stick with 2012–2016 if you want the simpler, proven drivetrain.",
     stats: {
       itemsToCheck: 17,
       recalls: 2,
@@ -4138,7 +4138,7 @@ const CHECKLISTS = {
         title: 'Engine & Transmission',
         items: [
           {
-            title: 'K24Z7 engine — overall health check',
+            title: 'K24W Earth Dreams engine — overall health check',
             risk: 'low', riskLabel: 'Low Risk',
             desc: 'The K24 is one of Honda\'s most durable four-cylinders with a timing chain (no belt to replace). Documented weakness is oil consumption on very high-mileage units or cars with stretched oil change intervals.',
             check: '<strong>Pull the dipstick and check oil level — should be at or near full.</strong> Check oil condition on a white paper towel: very black = old oil; metallic sheen = bearing wear. Cold-start and listen for chain rattle in the first 5 seconds — should be quiet.',
@@ -4146,12 +4146,12 @@ const CHECKLISTS = {
             source: 'Honda K24 engine documentation'
           },
           {
-            title: '5-speed automatic — shift quality',
-            risk: 'low', riskLabel: 'Low Risk',
-            desc: 'The 5-speed automatic (2012–2016) is generally reliable and simpler than the CVTs introduced on the 5th-gen. Watch for hesitation or hard shifts, which indicate delayed service. Honda ATF-DW1 fluid only — generic fluid causes shudder.',
-            check: '<strong>Drive through all gears: light throttle, moderate, and a brief full-throttle acceleration.</strong> Shifts should be prompt and smooth. Hard clunk into gear = worn bands or solenoid. Verify fluid change history.',
-            cost: '$150 fluid service (ATF-DW1) / $2,000–$4,000 rebuild if neglected',
-            source: 'Honda CR-V 4th gen transmission service notes'
+            title: 'CVT judder and low-speed vibration (2015–16) — Honda SB 15-046',
+            risk: 'monitor', riskLabel: 'Monitor',
+            desc: 'The 2015 refresh replaced the 5-speed automatic with a CVT, and a meaningful share of 2015–16 cars developed a vibration or judder — Honda Service Bulletin 15-046 sorts it into three modes: stopped in gear, light acceleration around 1,000–2,000 rpm, and a 40–50 mph cruise at roughly 1,800–2,200 rpm. The fix is a PCM/software update plus a fluid change, and Honda extended coverage on the emissions-related portion. Honda HCF-2 fluid only — generic CVT fluid will cause shudder on its own. (A 2012–2014 car is a different transmission entirely: the port-injected K24Z7 with a 5-speed automatic on ATF-DW1.)',
+            check: '<strong>Drive it from cold: sit in gear at a stop and feel for a pulse through the floor, then accelerate gently from 15 mph and hold a steady 45 mph.</strong> Any shudder that comes and goes with light throttle is the SB 15-046 pattern. Ask whether the software update and fluid service were done, and get the RO number — this is verifiable at a Honda dealer against the VIN.',
+            cost: '$150–$250 HCF-2 fluid service and software update / $3,000–$5,000 CVT replacement if neglected',
+            source: 'Honda Service Bulletin 15-046 (2015–16 CR-V vibration while driving and/or stopped in gear)'
           }
         ]
       },
@@ -4383,11 +4383,23 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '14V-293', title: 'Engine Oil Cooler Line — Fire Risk', desc: 'Oil cooler line may leak causing fire risk. Verify completion by VIN. Free repair.' },
-      { number: '16V-065', title: 'Brake Fluid Pressure Sensor', desc: 'Sensor may fail, causing extended stopping distance. Verify completion. Free repair.' },
-      { number: '14V-355', title: 'Front Seat Belt', desc: 'Belt may not properly restrain occupant in a crash. Free repair — verify completion.' }
+      { number: '13V-315', title: 'Passenger Airbag Inflator Weld', desc: 'Trucks built June 2013 only. Inflator weld can fracture on deployment, venting gas behind the dash so the bag does not fully inflate. Dealer replaces the passenger airbag module. Free repair.' },
+      { number: '13V-488', title: 'Front Seatback Recliner Play (FMVSS 202a)', desc: 'Trucks built Aug 1 – Sep 10 2013 with manual reclining seatbacks. Play in the recliner means the head restraint may not protect occupants in a rear impact. Dealer inspects and adjusts. Free repair.' },
+      { number: '14V-152', title: 'Transmission Oil Cooler Line — Fire Risk', desc: 'Trucks with the 6-speed automatic (feature code MYC). The transmission oil cooler line may not be fully seated in its fitting; leaking fluid onto a hot surface can start a fire. Dealer inspects and repairs. Free repair.' },
+      { number: '14V-246', title: 'Inner Tie Rod — Loss of Steering (do not drive)', desc: 'Trucks built May 23 2013 – Mar 25 2014. The tie rod may not be properly tightened to the steering rack and can separate, causing loss of steering. GM advised owners not to drive until inspected — have it towed. Free repair.' },
+      { number: '14V-301', title: 'Base Radio — No Door Chime / Belt Warning', desc: 'Trucks with the base radio and internal amplifier. If the radio goes inoperative there is no key-in-ignition chime and no seat belt warning, failing FMVSS 114 and 208. Dealer updates radio software. Free repair.' },
+      { number: '14V-374', title: 'Transfer Case Shifts to Neutral', desc: 'An electrical signal short can drop the transfer case into neutral with no driver input — rollaway when parked, loss of drive when moving. Dealer reprograms the transfer case control module. Free repair.' },
+      { number: '14V-446', title: 'Front Seat Hook Bracket Weld', desc: 'Incomplete weld on the seat hook bracket assembly means the front seat may not stay secured under crash loads. Dealer inspects the weld and replaces the lower seat track if needed. Free repair.' },
+      { number: '15V-640', title: 'Ignition Lock Actuator Binding', desc: 'Trucks built Jan 24 – Feb 26 2014. The ignition lock actuator can bind and stick in START, then snap back to ACCESSORY — loss of engine, steering and brake assist, and airbags may not deploy. Dealer replaces the ignition lock housing. Free repair.' },
+      { number: '16V-209', title: 'Driver Seat Belt Tensioner Cable Fatigue', desc: 'Trucks built Jan 29 2013 – Jan 21 2015. Sliding over the tensioner cable on entry fatigues it until it separates, so the driver is not properly restrained in a crash. Dealer modifies the vehicle and replaces damaged tensioners. Free repair.' },
+      { number: '16V-651', title: 'Airbag Sensing & Diagnostic Module Software', desc: 'Certain driving conditions trigger an SDM diagnostic test during which the frontal airbags and belt pretensioners would not deploy in a crash. Dealer reflashes the SDM. Free repair. See also 17V-437.' },
+      { number: '17V-437', title: 'Incomplete 16V-651 SDM Remedy', desc: 'Trucks that were remedied under 16V-651 but may not have received the complete software update — the original defect can still be present. A closed 16V-651 does not mean this one is closed; check both. Free repair.' },
+      { number: '17V-414', title: 'Electric Power Steering — Temporary Loss of Assist', desc: '2014 model year specifically. EPS assist can drop out and return, most often in low-speed turns, and the hand-off can cost the driver momentary control. Dealer updates EPS module software. Free repair.' },
+      { number: '19V-645', title: 'Vacuum Pump — Reduced Brake Assist', desc: 'The vacuum pump produces less vacuum over time, so brake assist fades, pedal effort climbs and stopping distances extend. Dealer reprograms the electronic brake control module. Free repair.' },
+      { number: '19V-761', title: 'Driveline Protection — Unintended Braking', desc: 'Trucks with the 5.3L engine, 3.08 rear axle and four-wheel drive. If a wheel-speed sensor fails, EBCM software can activate driveline protection and brake the opposite wheel, pulling the truck sideways. Dealer reprograms the EBCM. Free repair.' },
+      { number: '21V-245', title: 'Incorrect Replacement Belt Tensioner Cable', desc: 'Trucks that received the wrong replacement tensioner cable assembly under an earlier remedy or a later repair — the cable can fatigue and separate exactly as before. Dealer replaces the driver seat belt lap pretensioner. Free repair.' }
     ],
-    vinNote: "The K2XX Silverado 1500 (2014–2018) has three distinct engine families — and which one is in the truck you're buying determines whether the AFM lifter failure risk applies. Decode position 8 of the VIN at <a href=\"/decode/\">autovetting.com/decode</a> or vpic.nhtsa.dot.gov before negotiating. Key splits: position 8 = U is the 4.3L EcoTec3 V6 (LV3, 285 hp) — no AFM, no lifter risk, the lower-risk choice for buyers not towing heavy. Position 8 = Z is the 5.3L EcoTec3 V8 (L83, 355 hp) — this engine uses AFM (also called DoD, Displacement on Demand), and the AFM deactivating lifters are the primary failure point at 60,000–130,000 miles. Position 8 = B is the 6.2L EcoTec3 V8 (L86, 420 hp) — also uses AFM; less common in base 1500 configurations, more common in High Country. The 10th VIN position encodes model year within the K2XX span: E = 2014, F = 2015, G = 2016, H = 2017, J = 2018. A first-year 2014 (10th digit E) has the highest probability of unresolved first-year recalls — verify all three listed recalls are closed by VIN before purchase. Note also that no 2014 Silverado 1500 is in the GM Takata airbag recall — that list stops at the 2013 1500, though the 2500/3500 HD runs through 2014.",
+    vinNote: "The K2XX Silverado 1500 (2014–2018) has three distinct engine families — and which one is in the truck you're buying determines whether the AFM lifter failure risk applies. Decode position 8 of the VIN at <a href=\"/decode/\">autovetting.com/decode</a> or vpic.nhtsa.dot.gov before negotiating. Key splits: position 8 = U is the 4.3L EcoTec3 V6 (LV3, 285 hp) — no AFM, no lifter risk, the lower-risk choice for buyers not towing heavy. Position 8 = Z is the 5.3L EcoTec3 V8 (L83, 355 hp) — this engine uses AFM (also called DoD, Displacement on Demand), and the AFM deactivating lifters are the primary failure point at 60,000–130,000 miles. Position 8 = B is the 6.2L EcoTec3 V8 (L86, 420 hp) — also uses AFM; less common in base 1500 configurations, more common in High Country. The 10th VIN position encodes model year within the K2XX span: E = 2014, F = 2015, G = 2016, H = 2017, J = 2018. A first-year 2014 (10th digit E) has the highest probability of unresolved first-year recalls, and this truck carries fifteen separate campaigns — several of them scoped to narrow build windows, and two of them (16V-651 and 17V-437) covering the same airbag defect twice because the first remedy was incomplete. Verify every listed campaign is closed against the VIN before purchase; a closed 16V-651 does not imply a closed 17V-437. Note also that no 2014 Silverado 1500 is in the GM Takata airbag recall — that list stops at the 2013 1500, though the 2500/3500 HD runs through 2014.",
     blogUrl: '/blog/2014-chevrolet-silverado-buyers-guide',
   },
 
@@ -8257,14 +8269,14 @@ const CHECKLISTS = {
   },
 
   'infiniti-qx60-2018': {
-    year: 2018, make: 'INFINITI', model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)',
-    engine: '3.5L VQ35DE V6 (295hp) with CVT (JF016E)',
+    year: 2018, make: 'INFINITI', model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)',
+    engine: '3.5L VQ35DE V6 (295hp) with Xtronic CVT',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The 2nd-gen QX60 (2022+) is a major improvement over the 1st gen. For the popular 2016–2021 1st-gen QX60 (same platform): the 3.5L VQ35 is proven but the CVT carries the same cross-contamination risk as the Pathfinder — inspect fluid before driving. Rear seat comfort is exceptional for a 3-row. The 2022+ QX60 with 9-speed auto is the stronger used buy if budget allows.",
+    summary: "The 2018 QX60 is the 1st-generation L50 car — a Pathfinder R52 underneath, in a more premium package, and sold as a single trim with option packages rather than the named Pure/Luxe/Sensory/Autograph trims Infiniti introduced with the 2022 redesign. The 3.5L VQ35 is proven, but the Xtronic CVT carries the same radiator cross-contamination risk as the Pathfinder — inspect the fluid before driving. Rear seat comfort is exceptional for a 3-row. If the budget stretches, the 2022+ L51 with a 9-speed automatic sidesteps the CVT question entirely.",
     stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 175, topComplaintArea: 'CVT fluid / radiator cross-contamination (1st gen) / infotainment' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: 'CVT radiator contamination check (1st gen 2016–2021)', risk: 'critical', riskLabel: 'Critical',
+        { title: 'CVT radiator contamination check', risk: 'critical', riskLabel: 'Critical',
           desc: 'Same radiator-to-CVT cross-contamination failure mode as Pathfinder. Pink or milky CVT fluid = walk away.',
           check: '<strong>Pull CVT dipstick BEFORE any test drive.</strong> Pink, milky, or foamy = contamination — walk away.',
           cost: '$3,500–$5,500 CVT + $800–$1,500 radiator', source: 'Infiniti/Nissan CVT contamination pattern' },
@@ -8280,7 +8292,7 @@ const CHECKLISTS = {
           cost: '$150–$300 service / $800–$1,500 coupling', source: 'AWD maintenance requirement' }
       ]},
       { title: 'Electrical', items: [
-        { title: 'InTouch infotainment (dual-screen 1st gen)', risk: 'monitor', riskLabel: 'Monitor',
+        { title: 'InTouch infotainment (dual-screen)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Dual-screen InTouch system on 1st-gen QX60 has known reliability issues and feels dated.',
           check: '<strong>Test both screens, including climate controls on lower screen.</strong>',
           cost: '$500–$2,000 screen replacement', source: 'Infiniti infotainment complaint' }
@@ -11940,18 +11952,18 @@ const CHECKLISTS = {
     recalls: [{ campaign: 'Takata inflator', description: 'Lexus lists the 2010–2017 GX460 as affected; involvement is assigned by VIN and build date', severity: 'Critical', remedy: 'Free dealer repair; verify completion at nhtsa.gov/recalls' }]
   },
   'chevy-blazer-2019': {
-    year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / LT / RS / Premier (2nd gen, 2019–2023)',
-    engine: '2.5L I4 (193 hp), 2.0T I4 (228 hp), or 3.6L V6 (308 hp)',
+    year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / 2LT / 3LT / RS / Premier (2nd gen, 2019–2023)',
+    engine: '2.5L I4 (193 hp) or 3.6L LGX V6 (308 hp) — the 2.0T (230 hp) is a 2020-and-later addition, not available on a 2019',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The reborn Blazer is a sharp-looking mid-size crossover but first-generation quality was inconsistent. The 2.0T engine had oil consumption complaints; the 3.6L V6 is more reliable. 2021+ models show improved build quality. The main concerns are the 9-speed automatic rough shifts (common on 2.0T), 2.0T oil consumption, and infotainment glitches. Prefer 2021+ with the V6 if buying used.",
+    summary: "The reborn Blazer is a sharp-looking mid-size crossover but first-year quality was inconsistent. For 2019 the choice is the 2.5L four or the 3.6L V6 — the 2.0T that shows up in a lot of Blazer buying guides was not offered until 2020, so ignore 2.0T-specific advice when shopping a 2019. The V6 is the one to have. The main concerns are 9-speed automatic rough shifts, infotainment glitches, and first-year build variance. Prefer 2021+ with the V6 if you can stretch.",
     stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 440, topComplaintArea: 'Engine / Transmission' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '2.0T oil consumption (LTG engine)', risk: 'high', riskLabel: 'High Risk',
+        { title: '2.0T oil consumption (LTG engine) — 2020+ cars only', risk: 'high', riskLabel: 'High Risk',
           desc: 'The 2.0T LTG engine in the Blazer had documented oil consumption complaints — some owners report 1 qt per 2,000–3,000 miles. GM did not issue a recall.',
           check: '<strong>Check dipstick immediately. Ask owner how often they add oil.</strong>',
           cost: '$0–$2,500', source: 'NHTSA complaints / GM TSBs' },
-        { title: '9-speed automatic rough shifts', risk: 'monitor', riskLabel: 'Monitor',
+        { title: '9-speed automatic rough shifts (both engines)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'The GM 9T65 9-speed automatic is prone to harsh shifts, shuddering, and hunting between gears. Software updates help but don\'t fully resolve all cases.',
           check: '<strong>Test all city and highway throttle scenarios. Any shudder or harsh kick = request TSB update history.</strong>',
           cost: '$0 software update; $3,000+ if transmission hardware needed', source: 'GM 9-speed pattern' },
@@ -12025,11 +12037,11 @@ const CHECKLISTS = {
     recalls: []
   },
   'toyota-avalon-2018': {
-    year: 2018, make: 'Toyota', model: 'Avalon', trim: 'XLE / XLE Plus / XSE / Touring / Limited (5th gen, 2019–2022, or 4th gen XLE/Limited 2013–2018)',
-    engine: '3.5L 2GR-FKS V6 (301 hp, 5th gen) or 2.5L A25A-FXS Hybrid',
+    year: 2018, make: 'Toyota', model: 'Avalon', trim: 'XLE / XLE Plus / XLE Premium / Touring / Limited — Hybrid XLE Plus / XLE Premium / Limited (4th gen XX40, 2013–2018; final year before the 2019 XX50 redesign)',
+    engine: '3.5L 2GR-FE V6 (268 hp, port injection) with 6-speed automatic (U660E), or 2.5L 2AR-FXE Hybrid (200 hp combined) with eCVT',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The Avalon is Toyota's flagship full-size sedan — extremely refined, spacious, and reliable. Both the 3.5L V6 and the hybrid drivetrain are Toyota's best. No chronic failure modes. The main checks are a timing cover oil seep on the 2GR at high mileage, and a VIN recall check (the Avalon is not on Toyota's Takata affected-model list at all). Outstanding highway cruiser and one of the most undervalued used car segments.",
-    vinNote: "The 5th-gen Avalon (XX50, 2019-2022) came as either V6 or Hybrid — completely different powertrains with different priorities. Avalon Touring / XSE / XLE / Limited (V6): 3.5L 2GR-FKS V6 (301hp) with 8-speed automatic, FWD only. Same proven Toyota V6 found in the Camry XSE, Lexus ES 350, and pre-2024 Lexus RX 350. Avalon Hybrid (XLE Hybrid / Limited Hybrid): 2.5L A25A-FXS Atkinson + Toyota's hybrid synergy drive (215hp combined). Critical V6 check: GDI carbon buildup at 80-100k miles (walnut blast service, $400-600). Critical hybrid check: cabin-air filter doubles as the hybrid battery cooling air intake — if clogged, the battery overheats faster; replace every 15k miles instead of 30k. Hybrid drivetrain has no documented chronic issue at the 6-year point. The hybrid loses 8-12% resale value vs the V6 at the same trim, so a Hybrid at V6 money is a strong buy. Easy ID: badge on trunk lid says 'Hybrid' explicitly. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
+    summary: "The Avalon is Toyota's flagship full-size sedan — extremely refined, spacious, and reliable. 2018 is the last year of the 4th-generation XX40 car, so this is a mature, fully-sorted platform rather than a first-year one. Both drivetrains are proven: the 3.5L 2GR-FE V6 is port-injected (so there is no direct-injection intake-carbon service to budget for) and the Hybrid runs Toyota's THS-II. No chronic failure modes. The main checks are a timing cover oil seep on the 2GR at high mileage, and a VIN recall check (the Avalon is not on Toyota's Takata affected-model list at all). Outstanding highway cruiser and one of the most undervalued used car segments.",
+    vinNote: "The 2018 Avalon is the final year of the 4th-generation XX40 car — not the XX50 that replaced it for 2019 — and it came as either V6 or Hybrid, two different powertrains with different priorities. Avalon XLE / XLE Plus / XLE Premium / Touring / Limited (V6): 3.5L 2GR-FE V6 (268hp) with a 6-speed automatic (U660E), FWD only. This is the port-injected 2GR, not the direct-injected 2GR-FKS that arrived with the 2019 redesign, so there is no intake-valve carbon service to price in — if a seller or a shop quotes you a walnut-blast job on this car, they are quoting the wrong engine. Avalon Hybrid (XLE Plus / XLE Premium / Limited): 2.5L 2AR-FXE Atkinson + Toyota's Hybrid Synergy Drive (200hp combined) with an eCVT and a NiMH pack under the rear seat. Critical V6 check: timing cover oil seep at high mileage — look for staining low on the front of the engine. Critical hybrid check: cabin-air filter doubles as the hybrid battery cooling air intake — if clogged, the battery overheats faster; replace every 15k miles instead of 30k. Hybrid drivetrain has no documented chronic issue at the 6-year point. The hybrid loses 8-12% resale value vs the V6 at the same trim, so a Hybrid at V6 money is a strong buy. Easy ID: badge on trunk lid says 'Hybrid' explicitly. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
     stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Minimal — very low complaint volume' },
     sections: [
       { title: 'Recall status', items: [
@@ -12039,18 +12051,18 @@ const CHECKLISTS = {
           cost: 'Free under recall', source: 'Toyota Takata affected-model list (toyota.com/recall/takata), verified 2026-08-09' }
       ]},
       { title: 'Powertrain', items: [
-        { title: '3.5L 2GR-FKS V6 — excellent reliability', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'Direct-injection version of Toyota\'s proven 2GR family. No widespread failure modes. GDI carbon buildup possible at 70k+; test idle smoothness.',
-          check: '<strong>Cold-start idle check. Any roughness at 70k+ may indicate intake carbon.</strong>',
-          cost: '$400–$700 carbon clean if needed', source: 'Toyota 2GR reliability history' },
+        { title: '3.5L 2GR-FE V6 — excellent reliability', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'Port-injected member of Toyota\'s proven 2GR family — no direct injection on this generation, so intake-valve carbon is not a failure mode here. The one thing that does show up with age is a timing cover oil seep.',
+          check: '<strong>Cold-start idle check, then look low on the front of the engine for oil staining at the timing cover seam.</strong>',
+          cost: 'Routine maintenance; $900–$1,800 if a timing cover reseal is actually needed', source: 'Toyota 2GR-FE reliability history' },
         { title: 'Hybrid drivetrain (if Hybrid)', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'Avalon Hybrid uses Toyota\'s proven THS-II system. Request HV battery health test at a Toyota dealer.',
+          desc: 'Avalon Hybrid uses Toyota\'s proven THS-II system with a 2.5L 2AR-FXE and a NiMH pack (200hp combined). Request an HV battery health test at a Toyota dealer.',
           check: '<strong>Test all EV-only modes. Confirm no HV battery warning lights.</strong>',
           cost: 'Routine hybrid maintenance', source: 'Toyota THS-II reliability' }
       ]},
       { title: 'Comfort & Electrical', items: [
         { title: 'Entune / Toyota multimedia', risk: 'low', riskLabel: 'Low Risk',
-          desc: '5th-gen Avalon has Entune 3.0 with CarPlay. 4th-gen Entune is older but functional.',
+          desc: 'The 2018 car runs Entune App Suite — functional, but no Apple CarPlay or Android Auto (those arrive with the 2019 XX50). Budget for an aftermarket head unit if phone integration matters to you.',
           check: '<strong>Test all infotainment features and connectivity.</strong>',
           cost: '$0', source: 'Standard check' }
       ]},
@@ -12257,10 +12269,10 @@ const CHECKLISTS = {
     recalls: []
   },
   'jeep-wrangler-2018': {
-    year: 2018, make: 'Jeep', model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL, 2018–present)',
-    engine: '2.0L eTorque Turbo I4 (270 hp), 3.6L Pentastar V6 (285 hp), or 3.0L EcoDiesel V6 (260 hp)',
+    year: 2018, make: 'Jeep', model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL, 2018–present) — note 2018 is a two-Wrangler year: the outgoing JK was sold alongside the JL as the "Wrangler JK"',
+    engine: '3.6L Pentastar V6 (285 hp) standard, or 2.0L eTorque Turbo I4 (270 hp) — the 3.0L EcoDiesel V6 is a 2020-and-later JL option, not available on a 2018',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The JL Wrangler is Jeep's best Wrangler yet — improved highway manners, better fuel economy, and all the off-road capability. The 3.6L Pentastar is the proven choice; the 2.0T has oil dilution concerns in cold climates; the diesel adds complexity. The main risks are modification history (JLs are heavily modified), death wobble on lifted examples, and potential overheating on the 2.0T under sustained low-speed crawling. Factory-stock Wranglers with documented maintenance are strong buys.",
+    summary: "The JL Wrangler is Jeep's best Wrangler yet — improved highway manners, better fuel economy, and all the off-road capability. First check which car you are actually looking at: 2018 is the changeover year, and Jeep sold the previous-generation JK alongside the new JL for the whole model year. The 3.6L Pentastar is the proven choice; the 2.0T has oil dilution concerns in cold climates. A 2018 cannot be an EcoDiesel — that engine arrives for 2020. The main risks are modification history (JLs are heavily modified), death wobble on lifted examples, and potential overheating on the 2.0T under sustained low-speed crawling. Factory-stock Wranglers with documented maintenance are strong buys.",
     stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 680, topComplaintArea: 'Engine / Death Wobble / Electrical' },
     sections: [
       { title: 'Recall — Check First', items: [
@@ -12497,10 +12509,10 @@ const CHECKLISTS = {
     recalls: []
   },
   'audi-q3-2019': {
-    year: 2019, make: 'Audi', model: 'Q3', trim: 'Premium / Premium Plus / Prestige (2nd gen 8U/F3, 2019–present)',
-    engine: '2.0T TFSI EA888 I4 (184 hp) with 8-speed automatic',
+    year: 2019, make: 'Audi', model: 'Q3', trim: 'Premium / Premium Plus / Prestige (2nd gen F3, US from 2019; the 8U 1st gen ends with 2018)',
+    engine: '2.0T TFSI EA888 I4 (228 hp, US 45 TFSI) with 8-speed automatic and quattro standard',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 2nd-gen Q3 is a well-sized entry luxury crossover — better proportioned than its predecessor, with a much-improved interior. The EA888 2.0T is a proven engine across VW Group. Main risks: timing chain rattle from oil neglect, oil consumption (same EA888 pattern as Q5/Atlas), and Audi maintenance costs. Only buy with documented Audi/VAG-certified shop history.",
+    summary: "The 2nd-gen Q3 (F3) is a well-sized entry luxury crossover — better proportioned than the 8U it replaced, with a much-improved interior. 2019 is its first US model year, so treat it as a first-year car. US-market cars are the 228 hp 45 TFSI with quattro standard; the 184 hp figure quoted in a lot of online spec tables is the European 35 TFSI, which was never sold here. The EA888 2.0T is a proven engine across VW Group. Main risks: timing chain rattle from oil neglect, oil consumption (same EA888 pattern as Q5/Atlas), and Audi maintenance costs. Only buy with documented Audi/VAG-certified shop history.",
     stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine / Oil (maintenance-related)' },
     sections: [
       { title: 'Engine', items: [
@@ -12535,30 +12547,30 @@ const CHECKLISTS = {
     recalls: []
   },
   'mercedes-gla-2020': {
-    year: 2020, make: 'Mercedes-Benz', model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC (2nd gen H247, 2020–present)',
-    engine: '2.0T M260 I4 (221 hp) with 8-speed DCT (8G-DCT)',
+    year: 2020, make: 'Mercedes-Benz', model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 45 4MATIC (1st gen X156, 2015–2020; final year before the 2021 H247 redesign)',
+    engine: '2.0T M270 I4 (208 hp) with 7-speed dual-clutch (7G-DCT) — AMG GLA 45: 2.0T M133 (375 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 2nd-gen GLA (H247) is a significant improvement over the first gen — proper subcompact crossover proportions, MBUX infotainment, and the M260 2.0T engine. Main buyer risks: the 8G-DCT dual-clutch transmission can shudder at low speeds (known issue); oil leaks from the M260 valve cover at high mileage; and Mercedes maintenance costs. Only buy with complete Mercedes-Benz Certified service records.",
+    summary: "2020 is the final year of the 1st-generation X156 GLA — the hatchback-shaped car on the MFA platform, not the taller H247 that replaced it for 2021. Expect COMAND infotainment rather than MBUX, and the M270 2.0T rather than the M260. Main buyer risks: the 7G-DCT dual-clutch can shudder at low speeds (known issue); oil leaks from the M270 valve cover and turbo oil-feed line at high mileage; and Mercedes maintenance costs on a car that sells cheap but does not service cheap. Only buy with complete Mercedes-Benz service records.",
     stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 190, topComplaintArea: 'Transmission / Electrical' },
     sections: [
       { title: 'Transmission', items: [
-        { title: '8G-DCT shudder at low speed', risk: 'high', riskLabel: 'High Risk',
+        { title: '7G-DCT shudder at low speed', risk: 'high', riskLabel: 'High Risk',
           desc: 'The Mercedes 8G-DCT dual-clutch transmission in GLA 250 is known for shudder and jerkiness at 15–25 mph during light throttle engagement. Software and mechatronic unit updates address some cases; severe cases need TCU replacement.',
           check: '<strong>Test slow city driving at 15–25 mph. Any shudder or jerk = factor into offer. Request TCU software update history.</strong>',
-          cost: '$0 software; $2,000–$5,000 mechatronic unit', source: 'Mercedes 8G-DCT pattern' }
+          cost: '$0 software; $2,000–$5,000 mechatronic unit', source: 'Mercedes 7G-DCT pattern' }
       ]},
       { title: 'Engine', items: [
-        { title: 'M260 2.0T valve cover leak', risk: 'monitor', riskLabel: 'Monitor',
+        { title: 'M270 2.0T valve cover leak', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Plastic valve covers on M260 can develop oil leaks at 60k+ miles.',
           check: '<strong>Inspect valve cover area for oil seeps with warm engine.</strong>',
-          cost: '$400–$700', source: 'Mercedes M260 pattern' },
+          cost: '$400–$700', source: 'Mercedes M270 pattern' },
         { title: 'Oil change frequency', risk: 'high', riskLabel: 'High Risk without records',
           desc: 'Mercedes specifies 10,000-mile oil changes but the turbo benefits from shorter 5,000–7,500-mile intervals.',
           check: '<strong>Request all MB service records.</strong>',
           cost: '$800–$1,500 per MB service', source: 'AutoVetting editorial' }
       ]},
-      { title: 'MBUX & Technology', items: [
-        { title: 'MBUX infotainment — generally reliable', risk: 'low', riskLabel: 'Low Risk',
+      { title: 'COMAND & Technology', items: [
+        { title: 'COMAND infotainment — generally reliable', risk: 'low', riskLabel: 'Low Risk',
           desc: 'MBUX is one of the better luxury infotainment systems. Test "Hey Mercedes" and all touch/physical controls.',
           check: '<strong>Test full infotainment and CarPlay/Android Auto pairing.</strong>',
           cost: '$0', source: 'Standard check' }
@@ -12908,10 +12920,10 @@ const CHECKLISTS = {
     recalls: []
   },
   'jeep-grand-cherokee-2021': {
-    year: 2021, make: 'Jeep', model: 'Grand Cherokee', trim: 'Laredo / Altitude / Limited / Overland / Summit / Trailhawk (WL, 2021–present)',
-    engine: '3.6L Pentastar V6 (293 hp), 5.7L HEMI V8 (357 hp), or 4xe Plug-in Hybrid (375 hp combined)',
+    year: 2021, make: 'Jeep', model: 'Grand Cherokee', trim: 'Laredo / Altitude / Limited / Overland / Summit / Summit Reserve — 2021 WL is sold only as the three-row Grand Cherokee L (the two-row WL and the Trailhawk arrive for 2022)',
+    engine: '3.6L Pentastar V6 (290 hp) standard, or 5.7L HEMI V8 (357 hp) on Overland and above — both with an 8-speed automatic; the 4xe plug-in hybrid is a 2022-and-later option',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The WL-generation Grand Cherokee is a complete redesign and a significant improvement over the WK2. However, early 2021–2022 production had notable quality issues: 8.4-inch Uconnect freezing, 4xe plug-in hybrid electrical problems, and a 3.6L camshaft recall on some VINs. 2023+ models are substantially more polished. The V8 HEMI with MDS (cylinder deactivation) shares the same lifter concern as Ram/Durango. Preferred: 2023+ 3.6L base or Summit with clean records.",
+    summary: "The WL-generation Grand Cherokee is a complete redesign and a significant improvement over the WK2 — but for 2021 it exists only as the three-row Grand Cherokee L. A 2021 listing described as a two-row Grand Cherokee is the old WK2 carried over for one more year, and a 2021 advertised as a 4xe does not exist; that powertrain starts with 2022. Early WL production had notable quality issues: Uconnect 5 freezing and a 3.6L camshaft recall on some VINs. 2023+ models are substantially more polished. The V8 HEMI with MDS (cylinder deactivation) shares the same lifter concern as Ram/Durango. Preferred: 2023+ with clean records.",
     stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 580, topComplaintArea: 'Electrical / Infotainment / Engine' },
     sections: [
       { title: 'Recalls — Check First', items: [
@@ -12919,7 +12931,7 @@ const CHECKLISTS = {
           desc: 'Some 2021–2022 WL models were recalled for a variable valve timing solenoid issue that could cause engine stalling.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm all open recalls are closed.</strong>',
           cost: 'Free dealer repair', source: 'NHTSA Jeep WL recall' },
-        { title: '4xe electrical / software recall', risk: 'high', riskLabel: 'High Risk on 4xe',
+        { title: '4xe electrical / software recall (2022+ cars only)', risk: 'high', riskLabel: 'High Risk on 4xe',
           desc: 'Early 4xe models had multiple electrical and software recalls including HV battery management issues.',
           check: '<strong>4xe buyers: confirm ALL outstanding recalls are closed before purchase.</strong>',
           cost: 'Free dealer repair', source: 'NHTSA Jeep 4xe recalls' }
@@ -14466,7 +14478,7 @@ const CHECKLISTS = {
     recalls: []
   },
   'infiniti-qx80-2018': {
-    year: 2018, make: 'INFINITI', model: 'QX80', trim: 'Base / Luxe / ProACTIV / Sensory / Autograph (2nd gen Z62, 2011–2023)',
+    year: 2018, make: 'INFINITI', model: 'QX80', trim: 'QX80 / QX80 Limited, 2WD or 4WD (Z62, 2011–2023 — the Luxe / Premium Select / Sensory trim names arrive for 2021)',
     engine: '5.6L VK56 V8 (400 hp) with 7-speed automatic',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The QX80 is a Nissan Patrol-based full-size luxury SUV — the same 5.6L VK56 V8 as the Titan and Armada but in a more premium package. Excellent reliability and extremely durable drivetrain. Main checks: the hydraulic body-motion-control and air-suspension hardware, transmission fluid service and records — not the Takata airbag recall, whose QX80 scope ends with the 2014 model year. Great value vs. Lexus LX or Mercedes GLS at similar mileage.",
@@ -15198,14 +15210,14 @@ const CHECKLISTS = {
     recalls: []
   },
   'toyota-highlander-2020': {
-    year: 2020, make: 'Toyota', model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum / XSE (4th gen XU70, 2020–2024)',
-    engine: '2.4T I4 (265 hp) or 2.5L Hybrid (243 hp combined)',
+    year: 2020, make: 'Toyota', model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum (4th gen XU70, 2020–2024; XSE added for 2021)',
+    engine: '3.5L 2GR-FKS V6 (295 hp) with 8-speed automatic, or 2.5L A25A-FXS Hybrid (243 hp combined) with eCVT',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 4th-gen XU70 Highlander is a significant redesign over the XU50 — no optional V6 (replaced by 2.4T or Hybrid), TNGA-K platform, and Toyota Safety Sense 2.0 standard. The 2.4T is competent; the Hybrid delivers 36 mpg combined. No widespread failure modes. No Highlander of any generation is on Toyota's Takata affected-model list; run the VIN for first-year 2020 campaigns instead. Outstanding family SUV.",
+    summary: "The 4th-gen XU70 Highlander is a significant redesign over the XU50 — TNGA-K platform, Toyota Safety Sense 2.0 standard, and a much better interior. For 2020 the engine choice is the 3.5L 2GR-FKS V6 (295 hp) with an 8-speed automatic, or the 2.5L Hybrid; the 2.4-liter turbo four that replaced the V6 is a 2023-and-later car, so do not shop for one on a 2020. The V6 is the same proven unit as the Camry V6 and Sienna. The Hybrid delivers 36 mpg combined. No widespread failure modes. No Highlander of any generation is on Toyota's Takata affected-model list; run the VIN for first-year 2020 campaigns instead. Outstanding family SUV.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 150, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '2.4T — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
+        { title: '3.5L 2GR-FKS V6 — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
           desc: 'New-generation 2.4T. No established failure modes. Change oil per OLM.',
           check: '<strong>Cold-start check. Smooth idle. Oil level and color.</strong>',
           cost: 'Routine maintenance', source: 'Toyota 2.4T Highlander reliability' },
@@ -16180,7 +16192,7 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16356,7 +16368,7 @@ const VEHICLE_MENU = {
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16535,7 +16547,7 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16687,7 +16699,7 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16818,7 +16830,7 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
@@ -16924,7 +16936,7 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL first year)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Pure / Luxe / Sensory / Autograph (L50 2nd gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
@@ -16961,7 +16973,6 @@ const VEHICLE_MENU = {
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Toyota': [
-      { model: '4Runner', trim: 'SR5 / Trail / Limited', key: '' },
       { model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
@@ -17143,7 +17154,7 @@ const VEHICLE_MENU = {
     'Nissan': [ { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' } ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' } ],
     'Toyota': [
-      { model: '4Runner', trim: 'V6 SR5 / Trail / Limited', key: 'toyota-4runner-2008' },
+      { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
     ],
@@ -17159,7 +17170,7 @@ const VEHICLE_MENU = {
     'Lexus': [ { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' } ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' } ],
     'Toyota': [
-      { model: '4Runner', trim: 'V6 SR5 / Trail / Limited', key: 'toyota-4runner-2008' },
+      { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
     ]
@@ -17171,7 +17182,7 @@ const VEHICLE_MENU = {
     'Lexus': [ { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' } ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: '' } ],
     'Toyota': [
-      { model: '4Runner', trim: 'V6 SR5 / Trail / Limited', key: 'toyota-4runner-2008' },
+      { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
     ]

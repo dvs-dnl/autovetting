@@ -1784,7 +1784,8 @@
       ],
       "component": "Adaptive cruise control - vehicle continues accelerating briefly after the accelerator is released; 2014 Grand Cherokee/Durango built Jan 16 - Apr 8 2014, GC SRT from Feb 3 2014, Cherokee from Mar 6 2014 (FCA P31). Promoted from unverified_legacy in wave 20.",
       "source": "https://www.cars.com/research/jeep-grand_cherokee-2014/recalls/",
-      "verified": "2026-08-08"
+      "verified": "2026-08-08",
+      "note": "Wave 23: found on chevy-silverado-2014 titled 'Engine Oil Cooler Line — Fire Risk'. DO NOT ADD to any Chevrolet/GMC slug — this is an FCA campaign. The Silverado's real oil-cooler-line fire recall is 14V-152, and it is the TRANSMISSION cooler line, not the engine's. This entry passed G28 for two full waves because G28 checks that a number is ledgered, not that its makes match the slug's make — see the proposed makes-mismatch gate."
     },
     "15V461": {
       "makes": [
@@ -1862,16 +1863,37 @@
       "source": "https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V834-6970.PDF",
       "verified": "2026-08-10",
       "note": "Wave 22: cited in prose on vw-jetta-2018 + volkswagen-passat-2018 to NEGATE their Takata claims. The only NHTSA-forced desiccated-inflator recall. Trap: the Part 573 lists a 'PASSAT WAGON' under model year 2017 whose production dates are OCT 2005 - NOV 2006; secondary sources report this as a '2017 Passat wagon'. Covers no 2018 VW."
+    },
+    "16V065": {
+      "makes": [
+        "Toyota",
+        "Lexus"
+      ],
+      "component": "Curtain-shield-airbag control module (Airbag Sensor Assembly) roll-rate zero-point miscalibration - CSAs and belt pretensioners can fire without a rollover. Denso module. Toyota recall G0C/GLB, 320,409 vehicles.",
+      "scope": "2003-2006 Land Cruiser; 2005-2006 Tundra; 2005-2006 Sequoia; 2004-2006 4Runner; 2003-2006 Lexus LX470; 2004-2006 Lexus GX470. Explicitly EXCLUDES MY2005-2006 Highlander and Lexus RX330 and all other Toyota/Lexus curtain-airbag vehicles.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2016/RCLRPT-16V065-9089.pdf",
+      "verified": "2026-08-12",
+      "note": "Wave 23: found on chevy-silverado-2014 titled 'Brake Fluid Pressure Sensor'. DO NOT ADD to any GM slug — cross-make fabrication. The Silverado's real brake-assist campaign is 19V-645 (vacuum pump). Note this number is a live candidate for legitimate use on the toyota-4runner-2008, toyota-sequoia-2016 and lexus-gx460-2015 slugs' predecessor eras — check the model years above before adding it anywhere."
+    },
+    "14V355": {
+      "makes": [
+        "Buick",
+        "Cadillac",
+        "Chevrolet"
+      ],
+      "component": "Front safety lap belt cable can fatigue and separate.",
+      "scope": "2005-2009 Buick LaCrosse; 2006-2011 Buick Lucerne; 2000-2005 Cadillac DeVille; 2006-2011 Cadillac DTS; 2006-2014 Chevrolet Impala; 2006-2007 Chevrolet Monte Carlo. Passenger cars only - no truck or SUV in the population.",
+      "source": "https://static.nhtsa.gov/odi/rcl/2014/RCLRPT-14V355-6700.PDF",
+      "verified": "2026-08-12",
+      "note": "Wave 23: found on chevy-silverado-2014 titled 'Front Seat Belt'. DO NOT ADD to any truck or SUV slug — right parent (GM), wrong model, the wave-19 signature. The Silverado's real seat belt tensioner campaigns are 16V-209 and 21V-245."
     }
   },
   "unverified_legacy": [
     "14V292",
     "14V327",
-    "14V355",
     "15V258",
     "15V303",
     "15V554",
-    "16V065",
     "17V225",
     "17V718",
     "18V004",
