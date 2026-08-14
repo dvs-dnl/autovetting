@@ -345,7 +345,7 @@ def cta_block(p):
         'and walk you through the findings. From $149, nothing due until we confirm a mechanic '
         'and a time. Piloting in Phoenix; other US metros by arrangement.</p>\n'
         f'      <a class="post-cta-btn" href="mailto:autovetting@gmail.com?subject={subj}&amp;body={body}" '
-        f'onclick="{onclick}">Request an inspection</a>\n'
+        f'onclick="{onclick}">Get an inspection quote</a>\n'
         f'      <a class="post-cta-btn" style="background:transparent;border:1px solid rgba(124,108,255,.6);margin-left:10px;" '
         f'href="mailto:autovetting@gmail.com?subject={rsubj}&amp;body={rbody}" '
         f'onclick="{ronclick}">Get the full Vetting Report &mdash; $49</a>\n'
