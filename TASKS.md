@@ -215,6 +215,17 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-phase-copy-and-template-fix-2026-08-14 — ready 2026-08-14
+
+- Status: ready to deploy (committed locally)
+- Started: 2026-08-14 (Cowork session — orchestrator flagged 27 phase-content violations after 47-day push gap)
+- Touched files: scripts/render-blog.py, inspect/index.html, blog/*/index.html (26 files total)
+- Notes:
+  Same fix as 2026-06-27, extended to the source template. Previous fix only
+  patched output HTML, so new blog renders regenerated the banned copy every
+  night. Both output and source are now aligned on "Get an inspection quote".
+  All 27 critical gates pass locally.
+
 ### autovetting-ga-swap-06S3EWDPXK — ready 2026-08-14
 
 - Status: ready to deploy (committed locally as 4456031; awaiting auto-pusher)
