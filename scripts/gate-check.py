@@ -103,7 +103,7 @@ def gate_jsonld_valid():
 
 # ============================================================
 # G3 (CRIT) — exactly one GA measurement ID across the whole site
-# Catches: stray legacy GA IDs from copy-paste (the G-06S3EWDPXK incident)
+# Catches: stray legacy GA IDs from copy-paste (canonical ID is set in the site's <script> blocks)
 # ============================================================
 def gate_ga_id_uniform():
     ids = set()

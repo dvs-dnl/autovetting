@@ -30,7 +30,7 @@ SRC = REPO / "_hub" / "Content" / "blog"
 OUT = REPO / "blog"
 SITE = "https://autovetting.com"
 TODAY = date.today().isoformat()
-GA_ID = "G-YM12JSF5D1"
+GA_ID = "G-06S3EWDPXK"
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July",
           "August", "September", "October", "November", "December"]
