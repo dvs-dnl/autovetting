@@ -215,6 +215,21 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-ga-swap-06S3EWDPXK — ready 2026-08-14
+
+- Status: ready to deploy (committed locally as 4456031; awaiting auto-pusher)
+- Started: 2026-08-14 (Cowork session — user provided new GA snippet in chat)
+- Touched files: 52 HTML files (all pages), scripts/render-blog.py, scripts/gate-check.py
+- Notes:
+  Site-wide swap of Google Analytics measurement ID from G-YM12JSF5D1 -> G-06S3EWDPXK.
+  User pasted the new snippet in chat. 52 HTML files updated; verified 0 files reference
+  the old ID, 52 reference the new one. Also updated GA_ID constant in render-blog.py
+  so future blog renders emit the correct tag, and refreshed a stale comment in
+  scripts/gate-check.py (G3) that named the wrong incident ID.
+  Old .bak snapshots in pinpoint/ still contain the old tag - not shipped, gate ignores
+  them, safe to leave for rollback history.
+  G3 gate confirms single-ID consistency; all 27 critical gates pass.
+
 #### autovetting-recall-audit-wave23-2026-08-12 — ready (pushed directly)
 
 - Status: ready
