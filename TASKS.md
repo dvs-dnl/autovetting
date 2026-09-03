@@ -268,6 +268,37 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-inspect-key-namespace-rename-2026-09-03 — ready 2026-09-03
+
+- Status: ready to deploy (edited locally)
+- Started: 2026-09-03 (Cowork session — catalog builder Run 73 follow-up, at Daniel's request)
+- Touched files: inspect/index.html
+- Notes:
+  Renames the 26 checklist keys that used a non-canonical make prefix, so the
+  key namespace uses one prefix per make: chevy-* -> chevrolet-* (14),
+  vw-* -> volkswagen-* (6), mercedes-* -> mercedes-benz-* (6).
+  Cosmetic / data-hygiene only — NOT a defect fix. Verified beforehand that
+  this was never a live-site bug: checklist keys are hardcoded literals and are
+  never derived from make/model at runtime, so nothing user-facing changed
+  behaviour. The value is interop — external consumers of the key namespace
+  (the vehicle catalog) no longer need a make-alias table.
+  CRITICAL detail for review: the rename was applied to BOTH sides — the
+  CHECKLISTS object keys AND the 1,068 VEHICLE_MENU `key:` literals. Renaming
+  only one side would have silently dropped all 26 vehicles to
+  renderComingSoon().
+  Integrity verified: 139 replacements; 1,406,561 -> 1,407,277 bytes, and the
+  +716 delta matches the arithmetically expected delta exactly; line count
+  unchanged at 17,753; 245 unique checklist keys before and after; 1,068 menu
+  literals / 245 unique before and after; ZERO dangling menu keys and ZERO
+  orphan checklists; no residual chevy-*/vw-*/mercedes-* keys; all 139 changed
+  lines contain a renamed key and nothing else changed; both JS blocks pass
+  `node --check` and both JSON-LD blocks re-parse; tail intact through </html>.
+  Left deliberately unrenamed: 6 nameplate-drift keys (silverado/sierra ->
+  base 1500, gx460, rx350, mx5) and 2 make-absorbed keys (mazda3-*). Those
+  encode a naming question, not a prefix inconsistency, and stay handled by
+  _hub/Content/vehicle-catalog/inspect-key-aliases.json.
+  Full detail: _hub/Content/vehicle-catalog/BUILD-LOG/2026-09-03.md
+
 ### autovetting-pinpoint-fueltype-schema-fix-2026-08-21 — ready 2026-08-21
 
 - Status: ready to deploy (edited locally, not committed)
