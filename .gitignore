@@ -29,3 +29,6 @@ secrets.*
 
 # Hub docs — strategy, build logs, planning (never deploy to GitHub Pages)
 _hub/
+
+# Internal coordination docs — never publish to the live site (added 2026-08-12)
+bridges/
