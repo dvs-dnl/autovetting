@@ -342,9 +342,19 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   night. Both output and source are now aligned on "Get an inspection quote".
   All 27 critical gates pass locally.
 
-### autovetting-vinnote-batch-2026-09-09 — ready 2026-09-09 (pushed directly)
+### autovetting-vinnote-batch-2026-09-09 — ready 2026-09-09 (COMMITTED, NOT PUSHED)
 
-- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Status: ready to deploy (committed locally as 48b9c9c; PUSH BLOCKED — GitHub PAT rejected)
+- ⚠️ Push blocker: `git push` over HTTPS returned "Invalid username or token. Password
+  authentication is not supported for Git operations." The PAT in
+  ~/Documents/Claude/.credentials/github-config.json (prefix `ghp_krkG...`, rotated 2026-05-29,
+  nominal expiry 2027-05-19) is no longer accepted by github.com. This same credential pushed
+  successfully on 2026-09-03, so it has been revoked or invalidated since. SSH origin is
+  unusable from the scheduled-run sandbox (port 22 / host-key verification blocked) and
+  api.github.com is not reachable from the sandbox either, so the token could not be
+  independently validated. Deploy path: Daniel runs push-deploy.sh from his own Terminal
+  (SSH works there), or regenerates the PAT at github.com/settings/tokens and updates that
+  one credential file. Logged in _hub/Awaiting-Daniel.md.
 - Started: 2026-09-09 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
 - Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-09.md (gitignored), TASKS.md
 - Notes:
