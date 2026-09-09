@@ -193,6 +193,14 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Open flags: audiusa.com CPO page client-rendered (empty fetch) — US "125+" corroborated via booklet + ConsumerAffairs, not the page itself; DL382 service interval + EA888 Gen-3 cooling-plastic part revisions need Mitchell1/ALLDATA before publishing numbers; 13 verified IDs NOT yet ledgered (ledger holds only 19V434) — ledger with guard-table scopes verbatim on first downstream use; Canada/US program divergence (8MY/140k km vs 5MY/60k mi, ":plus" branding) — never mix in US copy.
     Weekly milestone: DONE — audi-certified.md saved + INDEX.md updated (P2 now BMW ✅ → Mercedes-Benz ✅ → Audi ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Volvo (fourth P2).
 
+  2026-09-06 (this run): ingested Volvo CPO protocol (170+ inspection points, single tier; no published PHEV/BEV variant checklist).
+    Output: Product/CPO-Protocols/volvo-certified.md, Product/CPO-Protocols/_runs/2026-09-06-volvo.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists; auto-pusher does not watch Product/CPO-Protocols/. In-flight autovet-competitor-monitor (Competitors/, currently profiling #11 Self Inspection) orthogonal. Ready = autovetting-inspect-key-namespace-rename-2026-09-03 (inspect/index.html) + autovetting-pinpoint-fueltype-schema-fix-2026-08-21 (pinpoint/index.html) + autovetting-phase-copy-and-template-fix-2026-08-14 (render-blog.py/inspect/blog) — all orthogonal, this run wrote to none of them. Done(last 10) + grep of full TASKS.md for volvo/xc60/xc90/s60/s90 found zero prior Volvo mentions anywhere. No overnight-builder/vinnote/content-checklist-authoring task active (consistent with memory: overnight-builder mount-broken since 2026-08-14). No Re-sync needed.
+    Warranty structure note: 5yr/unlimited-mile coverage (upgradeable to 10yr) calculated from ORIGINAL in-service date/zero miles, not CPO purchase date — differs from most other OEMs in this library where CPO warranty clock starts at purchase; flag for downstream content so buyer-facing copy doesn't assume a fresh clock.
+    Top-3-model mapping (by 2025 US sales volume): XC60 (#1, 41,105 units) — added VCM software fault 2017-2019 + Service Action S39893 + Sensus infotainment stress-test gap + transmission fluid check; XC90 (#2, 40,217 units) — added Sensus infotainment gap, water-intrusion/electrical check, 2016-2017 Park-rollaway TCM software item, door lock/battery-drain item; S60 (highest-volume sedan) — added ABS/handbrake recall (MY2023 built 2022) verification, hood-latch/door-lock check, airbag wiring-harness check, thermostat/water-pump/injector TSB items.
+    Key gap for downstream content: Volvo publishes no separate PHEV (T6/T8 Recharge)/BEV inspection-point variant despite selling plug-in trims across most of the lineup since ~2016 — fifth straight OEM (after VW/BMW/Mercedes-Benz/Audi) whose national checklist is a category summary rather than a full line-item list.
+    Weekly milestone: DONE — volvo-certified.md saved + INDEX.md updated (P2 now BMW ✅ → Mercedes-Benz ✅ → Audi ✅ → Volvo ✅; next = Lincoln, last P2). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Lincoln (fifth/last P2).
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -333,6 +341,57 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   patched output HTML, so new blog renders regenerated the banned copy every
   night. Both output and source are now aligned on "Get an inspection quote".
   All 27 critical gates pass locally.
+
+### autovetting-vinnote-batch-2026-09-09 — ready 2026-09-09 (pushed directly)
+
+- Status: ready to deploy (committed + pushed directly by overnight builder via HTTPS PAT)
+- Started: 2026-09-09 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-09.md (gitignored), TASKS.md
+- Notes:
+  2026-09-09 02:00: FIRST PRODUCTIVE OVERNIGHT-BUILDER RUN SINCE 2026-08-12 — the folder
+  mount that had been failing this task resolved; repo mounted, git worked, run completed
+  end to end. Launch freeze still active and no new-vehicle launch queued, so took the
+  Step-3 alternate path. Drained pri 77 nissan-titan-2017 + pri 78 nissan-armada-2017.
+  Queue 151 -> 149 rows; vinNote count 95 -> 97.
+  (1) nissan-titan-2017 -- STRUCTURAL CORRECTION to the standing rule: the 8th digit is the
+      WRONG digit on this truck. Nissan encodes Titan / Titan XD powertrain in the 4TH digit:
+      'A' = 5.6L VK56VD gas V8, 'B' = 5.0L Cummins V8 turbodiesel. Confirmed across multiple
+      OEM/reman parts catalogues listing 2017 Titan XD engines as "5.6L (VIN A, 4th digit)"
+      and "5.0L (VIN B, 4th digit, diesel)". Cummins was Titan XD only, never the half-ton
+      Titan, so the same digit also disambiguates WHICH truck the listing is (different
+      frames, payload, brakes, pricing behind one nameplate). Inspection consequence in the
+      note: Cummins XD = DEF/DPF regen history, two fuel filters, stored-emissions scan;
+      gas VK56VD = none of that, 7-speed fluid history + PRO-4X suspension/skid-plate wear.
+  (2) nissan-armada-2017 -- SINGLE powertrain (structural note, no letter invented). Every
+      U.S. 2017 Armada is the 5.6L VK56VD + 7-speed; no V6/diesel/hybrid/cylinder-deactivation,
+      so the 8th digit sorts nothing. Note redirects to the generation break instead: 2017 is
+      an all-new Y62 truck (global Nissan Patrol), not a facelift of the outgoing TA60, so a
+      2017 shares little beyond the badge with a 2015 (frame, suspension, interior electronics,
+      service procedures all differ) and older Armada TSBs/forum advice are non-transferable.
+      Confirm 10th VIN digit 'H' = 2017 rather than trusting a listing title.
+  Anti-fabrication: toyota-rav4-2016 (pri 79) was the third candidate and was DELIBERATELY
+  SKIPPED — could not source, from a record-quality source, which 8th-digit letter separates
+  the 2AR-FE gas car from the 2AR-FXE hybrid for MY2016. Row left in the queue rather than
+  asserting a letter on inference. Next run: pri 79 only if sourceable, else pri 80
+  toyota-sequoia-2016.
+  Sibling check: no blocking overlap. In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lincoln), autovet-seo-content
+  (Content/blog/) all orthogonal. Ready holds two blocks that DO name inspect/index.html —
+  autovetting-inspect-key-namespace-rename-2026-09-03 and
+  autovetting-phase-copy-and-template-fix-2026-08-14 — but both are already in origin/main
+  (key rename = 0dfa937; origin/main..HEAD was 0 at start of run) and neither touches a
+  nissan-* slug: the rename covered chevy-*/vw-*/mercedes-* prefixes only. Additive per-slug
+  data on DISJOINT slugs. All Done (last 10) blocks carry a - Started: date (checked; no
+  backfill needed). No Re-sync needed.
+  Syntax-check: PASS (node validator, exit 0). NOTE: this run initially FAILED the gate —
+  both inserted vinNote lines were written without a trailing comma, terminating the
+  CHECKLISTS object literal early ("Unexpected identifier 'overallRisk'"). Caught before
+  staging, fixed, re-run clean. Recording it because it is direct evidence the pre-commit
+  validator is load-bearing, not ceremonial.
+  Truncation guard: 17,754 lines before and after; git diff on inspect/index.html is exactly
+  2 insertions(+), 0 deletions; tail intact through </html>.
+  Dead-links: verified (only /decode/, which exists and is already linked from ~90 other
+  vinNotes). Scanner: PASS (569 files, no secrets, exit 0).
 
 ## Done (last 10)
 
