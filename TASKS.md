@@ -109,6 +109,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: no baseline escalation trigger tripped (no buyer-facing research tool, no funding, no marketplace deal, no AI-ordering). The Trustpilot pattern (near-identical missed-defect complaints 15 months apart) is a second concrete data point — after Lemon Squad's 08-13 refund-denial disclaimer language — for the still-unwritten counter-positioning asset on single-visit field-inspection blind spots (use the pattern, not the competitor's name). Acqui-hire thesis reinforced (6th state + real densification = repeatable network build-out) though the price increase implies a higher multiple than baseline assumed.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: YourMechanic / Wrench (#4, cycle 2) — carry-in: re-verify "~3 employees, consumer PPI frozen" from 06-11 baseline and the Lemon Squad/Wrench Inspection Company LLC ownership question flagged 08-13.
 
+  2026-09-10 [scheduled task]: profiled YourMechanic / Wrench (#4, cycle 2) (🟢).
+    Output: Competitors/_Monitor/2026-09-10-yourmechanic-wrench.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. Ready = autovetting-vinnote-batch-2026-09-09 (inspect/index.html, committed locally, push-blocked by the PAT issue) — orthogonal, this run wrote only Competitors/_Monitor/ + TASKS.md. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Volvo done 09-06, next=Lincoln) + autovet-seo-content (Content/blog/, Subaru Outback done 09-09) orthogonal. Done(last 10) = recall-audit/vinnote/overnight-builder entries, none touch Competitors/ and none position an AutoVet feature against YourMechanic/Wrench. No Re-sync needed.
+    Key delta: CONFIRMING re-review, no material change since 06-11 baseline. Both carry-in questions answered: (1) "~3 employees" cross-checked against a second source this run (Wrench Inc. parent = 111 employees / LeadIQ "51-200" bucket, consistent) — still accurate, consumer PPI still a maintained shell. (2) Wrench Inspection Company LLC question RESOLVED via USPTO trademark record: that LLC is the confirmed legal owner of the Lemon Squad trademark for inspection services — the inspection line of business has its own legal wrapper under the Wrench Inc. parent, consistent with (not contradicting) the 08-13 "no brand merge" finding. PPI product itself unchanged (150-point visual, no lift, no compression test, quote-based pricing, same non-guarantee disclaimer language family as Lemon Squad's 08-13 quote — now 2-for-2 incumbents using this disclaimer, strengthening the counter-positioning asset's genericness). BBB B+ / 144 complaints / not accredited recorded as a first-time explicit data point (baseline had no letter grade). No funding, M&A, executive change, or layoff signal in a fresh scan; confirmed the "Wrench Group" HVAC company (Lace AI partnership, March 2026) is the unrelated company flagged in the 06-11 baseline, not this Wrench.
+    Implication: thesis holds, unchanged in either direction — 12 weeks of zero consumer-PPI product investment is itself confirmation this brand isn't re-entering buyer-side competition. No new action; both open carry-in items can be closed in Competitor_Analysis.md at the next housekeeping pass.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Bumper (Instavin) (#5, cycle 2).
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
@@ -274,6 +281,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Sibling check: no overlaps -- Verified against: no active workstream touches a Honda Pilot, Subaru Outback, or Mazda CX-5 slug anywhere in TASKS.md (grep of the full file for pilot/outback/cx-5/cx5 found zero In-flight or Ready hits and only stale Done entries >18 days old, e.g. wave 18's 2026-08-05 subaru-outback-2015 recall rebuild and wave 17's cross-make-collision note on the same slug -- both outside the 14-day window and both in inspect/index.html, a different file tree from this run's Content/blog/ + Content/_seo-research/ output). In-flight autovet-competitor-monitor (Competitors/, last entry 2026-08-20 CARCHEX, next=iNeedaPPi) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 2026-08-30 Audi, next=Volvo) orthogonal -- neither references Honda, Pilot, or any J35-platform vehicle. No overnight-builder/vinnote/content-checklist-authoring task appears anywhere in TASKS.md for this run's window (consistent with memory's note that overnight-builder has been mount-broken since 2026-08-14). Ready = autovetting-pinpoint-fueltype-schema-fix-2026-08-21 (pinpoint/index.html) + autovetting-phase-copy-and-template-fix-2026-08-14 (scripts/render-blog.py, inspect/index.html, blog/*/index.html rendered output) -- both orthogonal; this run touched neither pinpoint/index.html nor any rendered blog/*/index.html output, only the Content/ source tree. No Re-sync needed.
   Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Subaru Outback or Mazda CX-5 (both still untouched by any audit) to continue Tier-2 coverage; re-check whether recall-audit wave 24 has landed and cleared Toyota Highlander (#20) before defaulting back to Tier-2.
 
+  2026-09-09 10:03 [scheduled task]: drafted 2015 Subaru Outback (5th-gen BS, launch year) pillar post -- second Tier-2 vehicle. Picked over Mazda CX-5 (the other remaining untouched Tier-2 candidate) because the content story is materially stronger: an active class-action settlement (Yaeger v. Subaru, FB25 oil consumption) plus 4 concrete NHTSA recalls plus 612 owner complaints already catalogued, versus the CX-5's own checklist rating of "no significant failure modes." Toyota Highlander (#20, last Tier-1 gap) still has no wave-24 entry in TASKS.md, so it remains blocked pending the recall-audit generation-boundary sweep -- deferred again, consistent with the 08-26 and 09-02 runs.
+  Output: Content/blog/2026-09-09-2015-subaru-outback-buyers-guide.md (~1,300 words body, status: draft), Content/_seo-research/2026-09-09-2015-subaru-outback.md.
+  Recalls reused verbatim from the site's own already-verified inspect/index.html subaru-outback-2015 checklist + scripts/recall-ledger.json (not re-derived): 14V-577 (accessory trailer hitch, WQN-50), 15V-366 (brake light switch / EyeSight, WQS-54), 15V-502 (propeller shaft seal / trans oil leak fire risk, WQU-56), 16V-251 (ESC brake fluid moisture, WTC-64). CATALOG CORRECTION carried forward from wave 18 (2026-08-05): explicitly excluded two campaign numbers previously fabricated on this exact slug and since deleted from the ledger -- 14V-787 (mislabeled Takata; Subaru's real Takata scope for this platform is 2003-2005 only) and 20V-696 (mislabeled Denso fuel pump; the real campaign is 20V-218, scoped to 2019 models). Yaeger v. Subaru settlement details (filed 2014 D.N.J., final approval 2016-08-31, covers 2011-2015 FB-engine models) independently WebSearch-confirmed 2026-09-09, not sourced from the site. No claims left [unverified] -- every recall/TSB number and the settlement citation traces to either the site's own ledger or an independent web source. Interlinks to 2016-honda-pilot + 2019-chevrolet-equinox + 2018-hyundai-tucson (all confirmed present in /blog/ by directory listing before linking).
+  Sibling check: Verified against: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for outback/subaru/cx-5/cx5 found only stale Done entries outside the 14-day window (recall-audit wave 18's 2026-08-05 subaru-outback-2015 recall rebuild -- the source of the verified data reused above, not a conflict) plus the 2026-09-06 Volvo CPO-protocol note's unrelated grep hit. In-flight autovet-competitor-monitor (Competitors/, last entry 2026-09-03 iNeedaPPi) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 2026-09-06 Volvo) orthogonal -- neither references Subaru or Outback. No overnight-builder/vinnote/content-checklist-authoring task in Ready touches Content/blog/ or a subaru-outback slug (Ready = key-namespace-rename, fueltype-schema-fix, phase-copy-fix, and the 2026-09-09 vinnote batch -- all inspect/index.html or pinpoint/index.html, all disjoint from this run's output files). No Re-sync needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Mazda CX-5 to close out the currently-flagged Tier-2 pair; re-check whether Toyota Highlander (#20) has cleared the recall-audit generation-boundary sweep before defaulting back to Tier-2.
+
 ## Ready to deploy / publish
 
 ### autovetting-inspect-key-namespace-rename-2026-09-03 — ready 2026-09-03
@@ -341,6 +354,82 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   patched output HTML, so new blog renders regenerated the banned copy every
   night. Both output and source are now aligned on "Get an inspection quote".
   All 27 critical gates pass locally.
+
+### autovetting-vinnote-batch-2026-09-10 — ready 2026-09-10 (COMMITTED, NOT PUSHED)
+
+- Status: ready to deploy (committed locally; PUSH BLOCKED — same GitHub PAT rejection as 09-09)
+- Started: 2026-09-10 (02:00 MST overnight builder, Run 81; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-10.md (gitignored), TASKS.md
+- Notes:
+  2026-09-10 02:00 [scheduled task]: mount check PASS. Drained pri 79 toyota-rav4-2016 +
+  pri 80 toyota-sequoia-2016. vinNote count 97 -> 99; inspect/index.html 1,409,233 ->
+  1,412,705 bytes (+3,472), 17,755 -> 17,757 lines (+2).
+  (1) toyota-rav4-2016 -- CLOSES THE 09-09 ANTI-FABRICATION SKIP. The 09-09 run left this row
+      queued because it could not source which 8th-digit letter separates 2AR-FE gas from
+      2AR-FXE hybrid. Reason found: there is no 8th-digit letter -- TOYOTA ENCODES ENGINE IN
+      THE 5TH DIGIT. Same class of structural correction as 09-09's Nissan-4th-digit finding;
+      the spec's "8th-digit engine code" wording is a Honda/GM convention, wrong for several
+      makes. Sourced from the OEM's own NHTSA filings: vPIC coding docs A5/H5-00 (RAV4 /
+      RAV4 HYBRID) and K6-00 (Sequoia) both label position 5 "5th Digit Engine Type" and
+      position 8 "Line & Make / Series"; cross-checked against parts catalogues ("2.5L VIN F,
+      5th digit 2AR-FE" / "VIN J, 5th digit 2AR-FXE"). Mapping: F = 2AR-FE gas (176 hp, 6AT,
+      FWD or mechanical AWD), J = 2AR-FXE hybrid (194 hp combined, eCVT, AWD-i).
+      COVERAGE GAP flagged in the note: 2016 is the RAV4 Hybrid's FIRST U.S. model year, but
+      the checklist's engine field is gas-only while its trim field claims all of 2013-2018 --
+      so a hybrid buyer is looking at a checklist that does not describe the car. Note carries
+      the delta (no propshaft/rear diff/transfer case, eCVT has no fluid history, substitute
+      traction-battery vent + DTC checks; 8yr/100k pack warranty expired on every 2016,
+      $3,000-8,000 new / $1,500-3,500 refurbished).
+  (2) toyota-sequoia-2016 -- Y = 5.7L 3UR-FE gas V8 (381 hp), W = 5.7L 3UR-FBE flex-fuel (E85).
+      Same engine mechanically, so no frame-rust/timing-chain guidance changes; the digit's
+      value is that the flex-fuel truck carries one pattern the gas truck does not. Toyota TSB
+      T-SB-0166-19 (read first-hand from the NHTSA PDF, supersedes T-SB-0058-13): 2009-2018
+      Sequoia / 2009-2019 Tundra 3UR-FBE, extended crank + MIL with P0171/P0174/P0172/P0175/
+      P1604 from a mislearned fuel alcohol density. Repair is NOT a reflash alone -- ECM
+      reprogram PLUS fuel pump assembly replacement PLUS fuel-density learning reset, 2.2-hour
+      dealer op (EG1904), covered by the Federal Emission Warranty 96 months/80,000 miles,
+      which has expired on every 2016 -> customer-pay on a W truck. No dollar figure invented;
+      the note gives the part and the published labor time and stops.
+  DEFECT CAUGHT AND CORRECTED MID-RUN: the Sequoia note first landed on the WRONG VEHICLE.
+  The insert anchored on the literal string "engine: '5.7L 3UR-FE V8 (381 hp) with 6-speed
+  automatic'," and a uniqueness assertion confirmed exactly one occurrence -- but that
+  occurrence belongs to toyota-land-cruiser-2018, not toyota-sequoia-2016. The Sequoia's line
+  is byte-different: a NON-BREAKING SPACE (U+00A0) sits between "381" and "hp". A uniqueness
+  check proves an anchor is unique, NOT that it belongs to the intended entity. Reverted and
+  re-applied anchored on the slug key block; verified land-cruiser-2018 carries no vinNote and
+  total file size is byte-identical to the pre-fix state. Would otherwise have shipped a
+  flex-fuel TSB warning onto a vehicle Toyota never built a flex-fuel version of. TWO RULES FOR
+  FUTURE RUNS: anchor per-slug edits on the SLUG KEY, never a field value (powertrain strings
+  repeat across Land Cruiser / Sequoia / Tundra); and \xa0 exists in this file's data strings,
+  so ASCII-space regex/grep over inspect/index.html silently mismatches.
+  QUEUE HYGIENE (unplanned, blocking): reconciled vinnote-queue.md against the live file --
+  (a) 21 rows pointed at slugs that NO LONGER EXIST, orphaned by the 2026-09-03 key rename
+  (0dfa937: chevy-* -> chevrolet-*, vw-* -> volkswagen-*, mercedes-* -> mercedes-benz-*); the
+  queue was never updated, so any future run drawing one would have failed to find its slug.
+  All 21 rewritten to canonical names and re-verified present. (b) 3 rows already had vinNotes
+  (chrysler-300-2016 pri 81, mazda-cx5-2013 pri 86, plus the two done this run) -- removed.
+  (c) toyota-highlander-2020 was missing a vinNote but ABSENT from the queue entirely (added
+  after the 2026-06-04 generation) -- appended as pri 228. Queue 151 -> 146 rows and the
+  invariant now holds exactly: 245 checklists, 99 with vinNote, 146 without, 146 queued, zero
+  rows pointing at a missing slug, zero already-done rows.
+  Sibling check: no blocking overlap -- Verified against: autovetting-vinnote-batch-2026-09-09
+  (inspect/index.html, committed 48b9c9c, unpushed) touches nissan-titan-2017 / nissan-armada-2017
+  only; autovetting-inspect-key-namespace-rename-2026-09-03 (0dfa937, already in origin/main)
+  covered chevy-/vw-/mercedes- prefixes only; autovetting-phase-copy-and-template-fix-2026-08-14
+  (scripts/render-blog.py, inspect/index.html, blog/*/index.html) touches no toyota-* slug.
+  Grep of the full TASKS.md for rav4 / sequoia / land.cruiser / highlander returns no In-flight
+  or Ready hit on toyota-rav4-2016, toyota-sequoia-2016 or toyota-land-cruiser-2018; only stale
+  recall-audit Done entries (waves 20/21, 2026-08) whose findings this run reused rather than
+  contradicted -- both summaries' "Takata does not cover this car" lines are wave-21 corrections
+  and were left untouched. In-flight autovet-competitor-monitor (Competitors/, YourMechanic
+  09-10), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, next=Lincoln) and
+  autovet-seo-content (Content/blog/, Subaru Outback 09-09) all orthogonal. Every Done (last 10)
+  block naming inspect/index.html carries a - Started: date (checked; no backfill needed).
+  No Re-sync needed. Additive per-slug data on disjoint slugs.
+  Syntax-check: PASS (node validator, exit 0 -- Script 2 OK, Script 5 OK; both JSON-LD blocks
+  reparse; tail intact through </html>). Dead-links: verified (only /decode/ added; directory
+  exists). Scanner: PASS (574 files, exit 0).
+  Full detail: _hub/Build-Log/2026-09-10.md
 
 ### autovetting-vinnote-batch-2026-09-09 — ready 2026-09-09 (COMMITTED, NOT PUSHED)
 
