@@ -289,9 +289,9 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
-### autovetting-vinnote-batch-2026-09-11 — ready 2026-09-11
+### autovetting-vinnote-batch-2026-09-11 — ready 2026-09-11 (COMMITTED, NOT PUSHED)
 
-- Status: ready to deploy (committed locally)
+- Status: ready to deploy (committed locally as e644151; PUSH BLOCKED — GitHub rejects the stored PAT)
 - Started: 2026-09-11 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
 - Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-11.md (gitignored), TASKS.md
 - Notes:
@@ -341,6 +341,25 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Done(last 10) = recall-audit waves + earlier vinnote batches; no slug collision.
   Verified against: autovetting-vinnote-batch-2026-09-10, autovetting-vinnote-batch-2026-09-09.
   Re-sync needed against:
+  Commit: e644151.
+  PUSH BLOCKER — DIAGNOSIS CORRECTED TONIGHT. The 09-09/09-10 theory ("credentials
+  folder is outside the mount, no token readable") is WRONG: the PAT reads fine from the
+  scheduled-run sandbox. Two separate problems, one fixed and one needing Daniel.
+  FIXED THIS RUN: `origin` was an SSH remote (git@github.com:...) and port 22 is
+  unreachable from the sandbox; set to https://github.com/dvs-dnl/autovetting.git. That
+  change is committed to .git/config and persists.
+  STILL BLOCKED: over HTTPS with GIT_ASKPASS, GitHub answers "Invalid username or token.
+  Password authentication is not supported for Git operations." — GitHub's own response,
+  so the credential arrived and was REJECTED. Retried with HTTP Basic via
+  http.extraheader: also 401. Anonymous `git ls-remote` over HTTPS SUCCEEDS (public repo),
+  which is what made 09-09 look like an egress failure; it is not. api.github.com is
+  blocked from the sandbox (403 at the proxy) so the token's scopes/expiry could not be
+  read back. Token file claims expires 2027-05-19, rotated_on 2026-05-29; the 09-03 push
+  succeeded on this same file and 09-09 was the first rejection, so it was revoked in that
+  window. ACTION: regenerate the PAT (prefix ghp_krkG) with repo scope and replace only the
+  `token` value in ~/Documents/Claude/.credentials/github-config.json. Logged to
+  _hub/Awaiting-Daniel.md as a 🔴 blocking item.
+  Queued behind this blocker: 48b9c9c, 7eea056, 8e10f7d, e644151 (remote HEAD = 0dfa937).
   Syntax-check: PASS. Dead-links: verified. Scanner: PASS.
 
 
