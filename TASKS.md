@@ -289,6 +289,61 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-vinnote-batch-2026-09-11 — ready 2026-09-11
+
+- Status: ready to deploy (committed locally)
+- Started: 2026-09-11 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-11.md (gitignored), TASKS.md
+- Notes:
+  2026-09-11 02:00 [scheduled task]: mount check PASS. Drained pri 82 honda-crv-2015,
+  pri 83 toyota-sienna-2015, pri 84 lexus-gx460-2015. vinNote count 99 -> 102; queue
+  146 -> 143 rows; inspect/index.html 1,412,705 -> 1,417,016 bytes (+4,311),
+  17,756 -> 17,759 lines (+3).
+  THEME OF THIS BATCH: all three are single-engine-in-the-VIN cars, so the honest note is
+  what the VIN CANNOT tell you plus what you must decode instead. That is a different shape
+  from the usual "letter X = engine Y" note and is the correct output for these three —
+  inventing an engine-code split would have been fabrication.
+  (1) honda-crv-2015 — the 5th digit reads "M" on a 2015 CR-V, but carpartplanet lists the
+      SAME "2.4L VIN M 5th digit" code for a 2013 CR-V, i.e. the engine character does NOT
+      separate the port-injected K24Z7/5AT (2012-14) from the direct-injected K24W/CVT
+      (2015-16). The 10th digit (model year: D/E vs F/G) is the discriminator. Note carries
+      the HCF-2 vs ATF-DW1 fluid trap (wrong-fluid = walk-away) and SB 15-046 CVT judder,
+      anchored at a $3,500-5,000 CVT replacement. Drivetrain from chassis code at positions
+      4-6: RM3 front-drive / RM4 AWD (4th-gen model codes per Wikipedia; US cars are 2.4 only).
+  (2) toyota-sienna-2015 — 5th digit always "K" (2GR-FE): 2015 has no engine choice at all
+      (2.7L four gone by 2013; 296-hp 2GR-FKS/8AT arrives 2017). The decode that matters is
+      FWD vs AWD, because an AWD 2015 Sienna HAS NO SPARE TIRE (rear driveshaft + exhaust
+      occupy the well) and ships P235/55RF18 run-flats — cost-anchored at ~$200-250/tire vs
+      ~$130-160 conventional, plus the check for a previous owner having swapped to
+      conventional tires, which leaves the van with neither a reserve nor a spare.
+      DEFECT CAUGHT: the checklist's engine field read "3.5L 2GR-FE V6 (296hp)" — that is the
+      2017+ 2GR-FKS figure. Corrected to "266 hp / 245 lb-ft" (Edmunds / US News 2015 specs).
+      One-string data fix, logged here rather than deferred.
+  (3) lexus-gx460-2015 — 5th digit "M" on every GX460 ever built (4.6L 1UR-FE is the only
+      engine across the whole 2010-2022 J150 run). The decode that matters is GX460 vs GX470:
+      the J120 GX470's 4.7L 2UZ-FE is timing-BELT driven (90k belt + water pump, ~$1,200-2,000,
+      walk-away if undocumented and overdue) where the 1UR-FE is chain. Note also flags two
+      things the VIN will NOT tell you — KDSS presence (inspect the accumulators at the sway
+      bars for weeping) and Takata involvement (assigned by VIN + build date; run nhtsa.gov/
+      recalls), the latter cross-referencing this checklist's existing critical Takata item.
+  Verification: anchored inserts on the slug key block (not on an engine-string literal —
+  the 09-10 non-breaking-space near-miss); insert count asserted == 1 per slug; byte and line
+  deltas recorded above; tail intact through </html>; both JS blocks pass the script gate;
+  both JSON-LD blocks re-parse. Only new href added is /decode/, which exists.
+  Sibling check: no true conflict. Ready blocks sharing inspect/index.html are
+  autovetting-vinnote-batch-2026-09-09 and -2026-09-10 (same task, same file, strictly
+  additive vinNote fields on different slugs — no slug touched twice),
+  autovetting-inspect-key-namespace-rename-2026-09-03 (already pushed as 0dfa937; touches key
+  literals, not vinNote fields) and autovetting-phase-copy-and-template-fix-2026-08-14
+  (scripts/render-blog.py + blog/*, inspect only for phase copy). In-flight
+  autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/) + autovet-seo-content (Content/blog/) are orthogonal.
+  Done(last 10) = recall-audit waves + earlier vinnote batches; no slug collision.
+  Verified against: autovetting-vinnote-batch-2026-09-10, autovetting-vinnote-batch-2026-09-09.
+  Re-sync needed against:
+  Syntax-check: PASS. Dead-links: verified. Scanner: PASS.
+
+
 ### autovetting-inspect-key-namespace-rename-2026-09-03 — ready 2026-09-03
 
 - Status: ready to deploy (edited locally)
