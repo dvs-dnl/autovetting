@@ -289,6 +289,96 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-vinnote-batch-2026-09-12 — ready 2026-09-12 (COMMITTED, NOT PUSHED)
+
+- Status: ready to deploy (committed locally as __COMMIT__; PUSH BLOCKED — GitHub still rejects the stored PAT, unchanged since 09-09)
+- Started: 2026-09-12 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-12.md (gitignored), TASKS.md, _hub/Awaiting-Daniel.md (gitignored)
+- Notes:
+  2026-09-12 02:00 [scheduled task]: mount check PASS (Claude/ sibling present, so .credentials/
+  readable this run). Drained pri 85 toyota-highlander-2014, pri 87 toyota-tacoma-2024,
+  pri 88 dodge-challenger-2023. vinNote count 102 -> 105; queue 143 -> 140 rows;
+  inspect/index.html 1,417,016 -> 1,421,798 bytes (+4,782), 17,760 -> 17,763 lines (+3).
+  Three-way reconciliation clean: 245 CHECKLISTS slugs - 105 with vinNote = 140 queue rows.
+  THEME OF THIS BATCH: the inverse of 09-11. That batch was three single-engine cars where the
+  honest note was what the VIN CANNOT tell you; all three tonight have a real decodable engine
+  split, so each note converts a character position into a buying decision.
+  (1) toyota-highlander-2014 — genuine three-way split on the 5th digit: A = 2.7L 1AR-FE four
+      (185hp, FWD-only base LE, gone after 2016), K = 3.5L 2GR-FE V6 (270hp) w/ U660E 6-speed,
+      C = 2GR-FXE Highlander Hybrid. The hybrid is the real catch: on a 2014 it shipped ONLY in
+      Limited / Limited Platinum — identical badges to a gas V6 Limited — so trim tells a buyer
+      nothing once the sticker is gone. C = eCVT + NiMH pack, replacement ~$2,500-4,000
+      reman-to-dealer. The A four is the second deliberate catch (FWD-only, slowest 3rd-gen,
+      wrong truck for towing). Sourced from reman-engine per-year listings (VIN A 1AR-FE /
+      VIN K 2GR-FE / VIN C 2GR-FXE), corroborated by a United Autos Parts "3.5L VIN K (5th
+      digit)" transmission listing and a real 2014 VIN sample 5TDDKRFH7ES... (5th char K).
+  (2) dodge-challenger-2023 — the true 8th-digit case: G = 3.6 Pentastar (305hp), T = 5.7 HEMI
+      (375hp), J = 6.4 HEMI 392 (485hp), 9 = 6.2 supercharged Hellcat. Leverage: the 5.7 and 6.4
+      both run MDS and carry the collapsed-lifter risk this checklist already details
+      ($4,000-7,000 cam-and-lifter job, more if debris circulated); the Pentastar has NO MDS and
+      no lifter exposure at all — so the 8th digit tells a buyer before driving whether the car's
+      headline failure mode is even on the table.
+      TRAP DOCUMENTED: circulating decoder tables call Z the Hellcat engine code, and a Z IS
+      present in a Hellcat VIN — but at POSITION 6 (series/trim group), not the engine field.
+      Verified against a real 2023 SRT Hellcat VIN 2C3CDZC9XPH512357: pos6 = Z, pos8 = 9,
+      pos10 = P (2023); a 2023-specific reman listing independently gives "6.2L VIN 9 8th digit."
+      Note instructs counting to the 8th character deliberately.
+  (3) toyota-tacoma-2024 — 5th digit D = gas 2.4L T24A-FTS turbo four w/ 8-speed auto; i-FORCE MAX
+      hybrid listed as C or F. Worth decoding because i-FORCE MAX was OPTIONAL on TRD Sport /
+      TRD Off-Road / Limited and standard only on TRD Pro + Trailhunter, so trim will not tell a
+      used buyer whether there is a 48hp motor and traction battery in the driveline. TWO HEDGES
+      WRITTEN INTO THE NOTE rather than papered over: (a) the 4th gen also offered a 6-speed manual
+      with the gas 2.4T and these characters encode the engine-AND-TRANSMISSION pairing, so the
+      character for that combination is NOT documented in available sources — note says confirm,
+      do not assume; (b) the C/F hybrid codes come from community decoder tables (tacoma4g), not
+      Toyota, and the note says so. Note then redirects to the decode that actually matters on a
+      first-year TNGA-F redesign with no long-term failure record: recall lookup at nhtsa.gov/
+      recalls plus whether the 5yr/60k powertrain warranty is still live.
+  ⚠️ SYNTAX GATE FALSE-PASS CAUGHT THIS RUN — new hazard instance, logged in full in the
+  Build-Log. First write embedded the link as <a href="/decode/"> with UNESCAPED inner double
+  quotes inside a double-quoted JS string (house pattern is href=\"/decode/\"; a Python
+  non-raw string ate the backslashes). THE SCRIPT-BLOCK SYNTAX GATE PASSED ON THE BROKEN FILE,
+  because "...<a href=" /decode/ ">..." is syntactically legal JS — string / identifier / string,
+  three division operators. It compiles and only dies at RUNTIME with
+  "ReferenceError: decode is not defined", which would have silently killed CHECKLISTS and taken
+  the inspect page's JS with it. Nastier than truncation: nothing about the file looks wrong.
+  Caught by a FUNCTIONAL READ-BACK (isolate the CHECKLISTS literal, eval it, assert each vinNote
+  is a retrievable string containing the decode anchor). Reverted from a byte-identical pre-edit
+  backup (vinNote count confirmed back to 102), rewrote with \\" in the generator plus a
+  pre-insert assertion that no note contains an unescaped ". PERMANENT ADDITION to this task's
+  routine: syntax check is necessary but NOT sufficient — after editing CHECKLISTS, eval the
+  object literal (use a quote/escape-aware brace match to isolate it; a naive [\s\S]*?\n}; regex
+  truncates it) and read the touched fields back. A note that cannot be read back is not shipped.
+  Verification: Syntax-check: PASS (scripts 2,5). Functional read-back: PASS (lens 1252/1545/1816,
+  exactly 2 quote chars each = the href pair, decode anchor present in all three). JSON-LD: PASS
+  (2 blocks re-parse). Insert count asserted == 1 per slug, no pre-existing vinNote overwritten.
+  Byte/line deltas recorded above; tail intact through </html>. Slug count unchanged at 245.
+  Dead-links: verified — only new href is /decode/, and decode/index.html exists.
+  Scanner: PASS (578 files, exit 0).
+  Sibling check: no true conflict. Ready blocks sharing inspect/index.html are
+  autovetting-vinnote-batch-2026-09-09, -2026-09-10 and -2026-09-11 (same task, same file,
+  strictly additive vinNote fields on different slugs — no slug touched twice; tonight's three
+  slugs are absent from all three prior batches),
+  autovetting-inspect-key-namespace-rename-2026-09-03 (already pushed as 0dfa937; touches key
+  literals, not vinNote fields) and autovetting-phase-copy-and-template-fix-2026-08-14
+  (scripts/render-blog.py + blog/*, inspect only for phase copy). In-flight
+  autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/) + autovet-seo-content (Content/blog/) are orthogonal.
+  Done(last 10) = autovetting-ga-swap-06S3EWDPXK only, which HAS a Started date — no
+  missing-Started gate fix required this run. No slug collision anywhere.
+  Verified against: autovetting-vinnote-batch-2026-09-11, autovetting-vinnote-batch-2026-09-10,
+  autovetting-vinnote-batch-2026-09-09.
+  Re-sync needed against:
+  Commit: __COMMIT__.
+  PUSH BLOCKER — UNCHANGED, DANIEL ACTION STILL REQUIRED. Write-tested, not read-tested
+  (anonymous ls-remote proves nothing on a public repo): `git push --dry-run` with the stored
+  PAT via GIT_ASKPASS returns "remote: Invalid username or token. Password authentication is
+  not supported for Git operations." The token file is UNCHANGED since 09-11 — still prefix
+  ghp_krkG, rotated_on 2026-05-29 — so the PAT has not been regenerated and every future run
+  will fail identically until it is. origin is correctly HTTPS (fixed 09-11, still fixed).
+  6 commits now unpushed; remote HEAD still 0dfa937.
+
+
 ### autovetting-vinnote-batch-2026-09-11 — ready 2026-09-11 (COMMITTED, NOT PUSHED)
 
 - Status: ready to deploy (committed locally as e644151; PUSH BLOCKED — GitHub rejects the stored PAT)
