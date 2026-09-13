@@ -5398,7 +5398,7 @@ const CHECKLISTS = {
       ownerComplaints: 1124,
       topComplaintArea: 'Engine / Hybrid System'
     },
-    categories: [
+    sections: [
       {
         title: 'Hybrid System',
         items: [
@@ -5548,7 +5548,7 @@ const CHECKLISTS = {
       ownerComplaints: 312,
       topComplaintArea: 'Visibility / Electrical'
     },
-    categories: [
+    sections: [
       {
         title: 'Engine & Drivetrain',
         items: [
@@ -5881,7 +5881,7 @@ const CHECKLISTS = {
       ownerComplaints: 4127,
       topComplaintArea: 'Engine / Powertrain'
     },
-    categories: [
+    sections: [
       {
         title: 'Engine & Powertrain',
         items: [
@@ -12437,10 +12437,11 @@ const CHECKLISTS = {
   },
   'toyota-tundra-2022': {
     year: 2022, make: 'Toyota', model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / 1794 / TRD Pro / Capstone (3rd gen, 2022–present)',
-    engine: '3.5L Twin-Turbo V6 iForce MAX (348 hp, or 437 hp Hybrid)',
+    engine: '3.4L V35A-FTS Twin-Turbo V6 i-FORCE (348 or 389 hp) / i-FORCE MAX Hybrid (437 hp combined)',
+    vinNote: "Do not read the 8th digit on a 3rd-gen Tundra \u2014 on this truck it is the body/cab type, not the engine. Toyota\u2019s Part 565 filing for the TNGA-F Tundra (NHTSA MID doc 23-008) puts Engine Type in the <strong>4th VIN digit</strong> and Trim Level in the 5th, which is a change from the older 5th-digit-engine layout used on the 2007\u20132021 trucks. That matters because all three variants share one engine family \u2014 the 3.4L V35A-FTS twin-turbo V6 (Toyota markets it as 3.5L; actual displacement is 3,445 cc) \u2014 and the 4th digit is what separates the three states that engine is sold in: two non-hybrid tunes and the i-FORCE MAX hybrid. Note that Toyota\u2019s Part 565 filing lists engine-level ratings that do not match the marketed figures (the hybrid is advertised at 437 hp combined system output), so match the digit, not the horsepower. So you cannot tell an i-FORCE MAX from a non-hybrid by looking at the engine badge or the 8th digit, and a mis-sold hybrid is the most expensive way to get this wrong. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> and confirm hybrid status against the window sticker before applying the hybrid-specific checks below. Then run the VIN at nhtsa.gov/recalls \u2014 2022 was the first year of this platform and early production carried multiple campaigns.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 3rd-gen Tundra is a complete redesign — new twin-turbo V6 replaces the legendary 5.7L V8, TNGA-F platform, and available iForce MAX hybrid. Early 2022 production had multiple safety recalls (verify all closed by VIN) and some turbo seal reports. The iForce MAX hybrid system is Toyota-developed and expected to be durable long-term but is very new. Strong buy IF all open recalls are confirmed closed and the turbo system shows no seals. 2023+ models have improved quality.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 310, topComplaintArea: 'Engine / Fuel System (recall-related)' },
+    stats: { itemsToCheck: 6, recalls: 1, ownerComplaints: 310, topComplaintArea: 'Engine / Fuel System (recall-related)' },
     sections: [
       { title: 'Recalls — Check First', items: [
         { title: 'Open safety recalls — verify by VIN', risk: 'critical', riskLabel: 'Critical — Check VIN',
@@ -15321,39 +15322,66 @@ const CHECKLISTS = {
     recalls: []
   },
   'toyota-sequoia-2022': {
-    year: 2022, make: 'Toyota', model: 'Sequoia', trim: 'SR5 / Limited / Platinum / TRD Pro / Capstone (3rd gen XK70, 2022–present)',
-    engine: '3.4L V35A-FTS Twin-Turbo V6 iForce MAX Hybrid (437 hp combined) — standard on all trims',
+    year: 2022, make: 'Toyota', model: 'Sequoia', trim: 'SR5 / Limited / Platinum / TRD Sport / TRD Pro (2nd gen XK60, 2008\u20132022 \u2014 final V8 model year)',
+    engine: '5.7L 3UR-FE V8 (381 hp / 401 lb-ft) with 6-speed automatic \u2014 single powertrain, no hybrid offered',
+    vinNote: "Toyota encodes the engine in the 5th VIN digit on this generation, not the 8th \u2014 the 8th digit is Line & Make (per Toyota\u2019s Part 565 filing, NHTSA MID doc K6-00). \u2018Y\u2019 = the 5.7L 3UR-FE V8, 381 hp, and on a 2022 Sequoia that is the only engine there is: every 2022 car is the naturally-aspirated V8 with the 6-speed automatic. The 4th digit is the one worth reading here \u2014 it carries body/grade and, critically, 2WD vs 4WD. <strong>If a listing for a 2022 Sequoia advertises a twin-turbo V6 or an i-FORCE MAX hybrid, the listing is wrong about the model year.</strong> The 3rd-generation XK70 Sequoia (3.4L V35A-FTS hybrid) starts at the 2023 model year; NHTSA campaign scopes confirm this \u2014 Tundra campaigns on the new platform run 2022\u20132025 while the matching Sequoia scopes run 2023\u20132025. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> before you agree a price, because a 2023 commands a large premium over a 2022 and the two share no powertrain parts.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 3rd-gen Sequoia is a complete redesign — twin-turbo V6 hybrid replaces the legendary 5.7L V8, and the hybrid system is standard on all trims. Early production had some powertrain software issues. There is no Takata inflator campaign on this truck — Toyota's Sequoia Takata scope is the 2002–2007 first-generation model — so treat any “carry-over” claim as an error. The iForce MAX is Toyota's new platform and too young for established long-term data. Outstanding fuel economy for a full-size SUV (19 mpg combined vs. 14 for the old V8). Frame-on-body construction retained.",
-    stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 85, topComplaintArea: 'Powertrain (new platform) / Recall' },
+    summary: "The 2022 Sequoia is the last year of a body-on-frame design Toyota sold essentially unchanged since 2008, and the last V8 SUV Toyota ever built. Treat it as a known, mature, thoroughly-documented truck rather than a new one \u2014 the opposite of the 2023 redesign that replaced it. The 3UR-FE V8 is durable but has three well-mapped, labour-expensive failure patterns that decide whether a given car is a good buy: cam-tower oil seepage, the buried secondary air-injection system, and \u2014 on Limited and Platinum only \u2014 the rear load-levelling air suspension. None of these are cheap, and all three are far easier to find before purchase than after. Fuel economy is poor by any modern standard (13\u201314 mpg combined). There is no Takata inflator campaign on this truck \u2014 Toyota\u2019s Sequoia Takata scope is the 2002\u20132007 first-generation model \u2014 so treat any carry-over claim as an error.",
+    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 85, topComplaintArea: 'Engine (oil leaks / air injection) / Suspension' },
     sections: [
-      { title: 'New Powertrain — First-Year Caution', items: [
-        { title: '3.4T iForce MAX — too new for long-term data', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'Complete replacement for the legendary 5.7L V8. No established failure rates. Change oil per Toyota schedule.',
-          check: '<strong>Cold-start smooth idle. Both turbos should spool cleanly. No unusual noise.</strong>',
-          cost: 'Routine hybrid maintenance', source: 'Toyota 3rd gen Sequoia initial data' },
-        { title: 'Hybrid system integration', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'THS-II based system. Confirm EV mode engages. No HV battery warnings.',
-          check: '<strong>Test EV mode at low speed. No HV battery warning lights.</strong>',
-          cost: 'Routine hybrid maintenance', source: 'Toyota iForce MAX standard' }
+      { title: 'Engine \u2014 5.7L 3UR-FE V8', items: [
+        { title: 'Cam tower oil leak \u2014 the signature 3UR-FE failure', risk: 'high', riskLabel: 'High Risk',
+          desc: 'The factory FIPG sealant between the cam towers and the cylinder heads degrades with heat cycling and weeps oil. It is not a cracked head and it is not urgent, but it is deep in the engine and the bill is almost entirely labour.',
+          check: '<strong>With the engine cold, look down the front of each cylinder head and along the valve-cover-to-head seam for wet oil, baked-on residue, or fresh sealant. Check the underside of the engine and the front skid plate for drips. Ask whether it has already been resealed \u2014 a documented repair is a plus, not a minus.</strong>',
+          cost: '$1,200\u2013$3,500 depending on how far the shop goes', source: 'Independent 3UR-FE repair guidance; owner-community consensus' },
+        { title: 'Secondary air injection system (P2440 / P2442 / P2445)', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Moisture reaches the air pumps and switching valves, which sit under the intake manifold. They seize, the truck throws a code, and on some cars enters limp mode. The parts are not the problem \u2014 the access is.',
+          check: '<strong>Scan for stored and pending P244x codes even if no light is on \u2014 a seller can clear codes the morning of the viewing. Cold-start the truck and listen for the pump running for roughly 30 seconds; silence on a cold start is a red flag. Ask for records of any pump or valve replacement.</strong>',
+          cost: '$1,300\u2013$1,500 typical independent; $2,000\u2013$4,000+ at a dealer', source: 'RepairPal Sequoia air pump estimates; Toyota V8 owner-community data' },
+        { title: 'Exhaust manifold cracking and timing-cover seepage', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Both are age-and-heat-cycle items on this V8 rather than defects. A cracked manifold sounds like an exhaust tick that fades as the engine warms.',
+          check: '<strong>Cold-start and listen for a ticking that quietens after a few minutes. Look for soot staining at the manifold-to-head joint and oil seepage at the front timing cover.</strong>',
+          cost: '$600\u2013$1,800 per side for a manifold', source: 'AutoVetting editorial' },
+        { title: 'Water pump and coolant condition', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'A wear item on a 3UR-FE that has usually been done once by this mileage on higher-mile cars.',
+          check: '<strong>Check for pink crust or drip trails at the pump weep hole. Confirm Toyota SLLC pink coolant, not a topped-up mix.</strong>',
+          cost: '$600\u2013$1,000', source: 'AutoVetting editorial' }
       ]},
-      { title: 'Recall', items: [
-        { title: 'Recall check — 2022 first year', risk: 'high', riskLabel: 'High Risk — Check VIN',
-          desc: 'First-year redesign. Run full VIN check for early-production recalls.',
-          check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA' }
-      ]},
-      { title: 'Underbody', items: [
-        { title: 'Frame inspection (northern states)', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'XK70 is new enough that major frame rust is unlikely but northern-state cars should be inspected.',
-          check: '<strong>Inspect frame rails and underbody with flashlight.</strong>',
+      { title: 'Transmission and Driveline', items: [
+        { title: 'Torque converter shudder (6-speed AB60)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'A light shudder under gentle throttle at 35\u201355 mph, most often fluid-related and often fixable with a proper drain-and-fill on the correct Toyota WS fluid.',
+          check: '<strong>On the test drive, hold light throttle at 40\u201350 mph on a flat road and feel for a fine vibration through the floor. Confirm the transmission has had fluid service \u2014 "lifetime fill" is a maintenance record, not a fact.</strong>',
+          cost: '$250\u2013$500 for correct fluid service; far more if ignored', source: 'AutoVetting editorial' },
+        { title: '4WD transfer case and front differential (4x4 cars)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Many Sequoias never leave pavement and the 4WD system goes unexercised for years.',
+          check: '<strong>Engage 4HI and 4LO on a loose surface and confirm both engage and release cleanly with no binding or warning lights. Check the transfer case and front diff for leaks.</strong>',
           cost: 'Varies', source: 'AutoVetting editorial' }
       ]},
+      { title: 'Suspension \u2014 Limited and Platinum only', items: [
+        { title: 'Rear load-levelling air suspension failure', risk: 'high', riskLabel: 'High Risk',
+          desc: 'Fitted to Limited and Platinum; SR5, TRD Sport and TRD Pro use conventional coils and are not exposed to this. The air springs develop slow leaks, the compressor overworks to compensate, and then the compressor fails too.',
+          check: '<strong>Confirm the trim first. Then leave the truck parked overnight if you can, and check the rear has not settled by morning. Listen for the compressor cycling repeatedly at idle, look for an uneven rear ride height, and check for suspension warning lights.</strong>',
+          cost: 'Compressor alone $2,600\u2013$2,700; a full air-spring-and-compressor repair can exceed $2,500. A coil conversion kit is the common long-term fix.', source: 'RepairPal; Strutmasters Sequoia suspension data' },
+        { title: 'Lower ball joints and steering rack', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'Heavy vehicle, heavy front end. Also relevant: Toyota recalled 2008\u20132022 Sequoias for a power-steering gear assembly that could have been built incorrectly and leak.',
+          check: '<strong>Check for play at the front wheels at 12 and 6 o\u2019clock. Look for fluid weeping at the steering gear. Confirm the power-steering campaign is closed for this specific VIN.</strong>',
+          cost: 'Recall repair is free; ball joints $400\u2013$900', source: 'NHTSA; AutoVetting editorial' }
+      ]},
+      { title: 'Body and Underbody', items: [
+        { title: 'Frame and underbody corrosion (salt-belt cars)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'A 2022 car is young, but this platform dates to 2008 and salt-belt examples of the family have a corrosion history. Judge the individual truck, not the badge.',
+          check: '<strong>Get under it with a flashlight. Inspect the frame rails, rear spring hangers, brake and fuel lines. Scaling flake, as opposed to light surface rust, is a walk-away.</strong>',
+          cost: 'Varies; severe frame corrosion is not economically repairable', source: 'AutoVetting editorial' },
+        { title: 'Rear hatch glass and power-fold third row', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The roll-down rear window and the power third-row seat are convenience features that are annoying and not cheap to fix once broken.',
+          check: '<strong>Cycle the rear window down and up, and fold and raise the third row electrically through a full cycle.</strong>',
+          cost: '$300\u2013$900', source: 'AutoVetting editorial' }
+      ]},
       { title: 'Documentation', items: [
-        { title: 'Service records', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'On a new powertrain, records matter more than usual.',
-          check: '<strong>Request all records. Run VIN recall check.</strong>',
-          cost: 'n/a', source: 'AutoVetting editorial' }
+        { title: 'Open recall check and service history', risk: 'high', riskLabel: 'High Risk \u2014 Check VIN',
+          desc: 'A 2022 Sequoia falls inside the 2008\u20132022 power-steering gear campaign, and campaign scopes are added over time.',
+          check: '<strong>Run the exact VIN at nhtsa.gov/recalls on the day you view the car \u2014 not the model year, the VIN. Request full service records; on this engine, evidence of the cam tower and air-injection work being done is worth real money.</strong>',
+          cost: 'Recall repairs are free at any Toyota dealer', source: 'NHTSA' }
       ]}
     ],
     recalls: []
