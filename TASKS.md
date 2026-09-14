@@ -208,6 +208,17 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Key gap for downstream content: Volvo publishes no separate PHEV (T6/T8 Recharge)/BEV inspection-point variant despite selling plug-in trims across most of the lineup since ~2016 — fifth straight OEM (after VW/BMW/Mercedes-Benz/Audi) whose national checklist is a category summary rather than a full line-item list.
     Weekly milestone: DONE — volvo-certified.md saved + INDEX.md updated (P2 now BMW ✅ → Mercedes-Benz ✅ → Audi ✅ → Volvo ✅; next = Lincoln, last P2). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: Lincoln (fifth/last P2).
 
+  2026-09-13 (this run): ingested Lincoln CPO protocol — TWO-TIER structure: 200-point Signature Certification (≤5MY/60k, 6yr/100k warranty from original in-service date) / 139-point Select Certification (≤7MY/80k, 12mo/12k warranty from CPO purchase date).
+    Output: Product/CPO-Protocols/lincoln-certified.md, Product/CPO-Protocols/_runs/2026-09-13-lincoln.md.
+    Sibling check: no true conflict. Protocol files are upstream of inspect/ checklists; auto-pusher does not watch Product/CPO-Protocols/. In-flight autovet-competitor-monitor (Competitors/) + autovet-seo-content (Content/blog/) orthogonal. Ready = the three COMMITTED-NOT-PUSHED vinnote batches (09-09/09-10/09-11/09-12) + autovetting-inspect-render-and-generation-fix-2026-09-13 (all inspect/index.html) — orthogonal, this run wrote only Product/CPO-Protocols/ + TASKS.md. grep of TASKS.md for lincoln/nautilus/navigator/corsair/aviator/mkc/mkx/mkz found only stale (>2-month-old, outside any freshness window) vinNote spec-fix mentions on lincoln-nautilus-2019 and lincoln-corsair-2020 (July 2026 batches) — complementary, this protocol is their upstream source, not a conflict. No overnight-builder/content-checklist-authoring task in flight (consistent with memory: overnight-builder mount-broken since 2026-08-14). No Re-sync needed.
+    Both official inspection-checklist PDFs located and fetched directly from lincoln.com (forms LCPO-INSPECT-Signature-2026, LCPO-INSPECT-SELECT-2026) — full line-item detail for both tiers, same evidentiary bar as INFINITI/BMW/Ford.
+    Key finding: FIRST OEM in the library where the older/higher-mileage tier (Select) gets FEWER inspection points (139 vs 200), not just a lesser warranty — every prior multi-tier OEM (Ford, Nissan, Hyundai, Kia, Acura, INFINITI) held inspection depth constant across tiers.
+    Top-3-model mapping (Nautilus #1 by 2025 volume 33,744 units, Navigator #2 ~22,185 units, Corsair — discontinued after MY2025 but 6-year highest-volume small Lincoln with existing AutoVet checklist coverage): campaign IDs WebSearch/cars.com-NHTSA-verified 2026-09-13 with exact scope in an anti-fabrication guard table: 20V414000 (Nautilus 2019-2020 + MKX 2016-2018 seat/airbag harness), 26V372000 (2019 Nautilus/Navigator/Mustang IPC blank display, REDO of 19V076), 26V377000 (2019 Nautilus lane-centering, redo of 19V031), 26V165000 (2024-25 Nautilus/2022-25 Navigator/2025 Aviator-Explorer, phased IPMA camera/ADAS loss), 26V344000 (2018-2022 Navigator/Expedition seat-belt pretensioner, REPLACES 24V099 AND 25V197), 26V402000 (2018-2021 Navigator/Expedition + 2020-21 Explorer/Aviator + 2021 F-150 park-pawl rollaway, remedy NOT yet available), 26V204000 (2021-2023 Navigator/Expedition/Super Duty wiper arms), 26V091000 (2023-2026 Corsair PHEV/2022-26 Escape HV battery, expands 24V954+25V489), 25V789000 (direct predecessor to 26V091000, same defect), 25V685000 (2020-2022 Corsair + 2016-2019 MKC block heater fire risk, remedy anticipated Sept 2026), 26V123000/26V117000/26V122000/26V301000 (Corsair rearview/wiper/EGR/park-pawl).
+    Deepest supersession chain found to date in this library: Corsair PHEV HV-battery defect reissued FOUR times (24V954→25V489→25V789000→26V091000), remedy still "under development" at every step — reinforces the standing "superseded by later campaign" schema-field recommendation open since VW (08-09).
+    Point-count coincidence flagged (NOT verified item-by-item): Lincoln Select's 139 points exactly matches Ford Blue Advantage's Blue Certified tier (ingested 05-31) — consistent with both brands sharing a Ford Motor Co. corporate inspection program; cross-referenced to ford-certified.md. Flagged as a possible future diff, not claimed as confirmed identical.
+    Open flags for Daniel: $100 deductible sourced only from ConsumerAffairs (third-party), not a primary Lincoln warranty booklet — do not publish as certain; whether the two-tier Signature/Select split is new for 2026 vs. longstanding was not established; two cited recalls (26V402000 Navigator, 25V685000 Corsair) have remedies NOT YET AVAILABLE — downstream content must not imply a fix exists.
+    Weekly milestone: DONE — lincoln-certified.md saved + INDEX.md updated. **P2 ROTATION COMPLETE** (BMW ✅ → Mercedes-Benz ✅ → Audi ✅ → Volvo ✅ → Lincoln ✅). Auto-pusher does not watch Product/CPO-Protocols/. Next in rotation: **Porsche (first P3)**.
+
 ### autovet-seo-content
 
 - Status: in flight
@@ -289,9 +300,88 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-vinnote-batch-2026-09-14 — ready 2026-09-14 (COMMITTED, NOT PUSHED)
+
+- Status: ready to deploy (committed locally; PUSH BLOCKED — stored PAT still rejected, unchanged since 09-09)
+- Started: 2026-09-14 (02:00 MST overnight builder; launch-freeze alternate path = vinNote queue drain)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-14.md (gitignored), TASKS.md
+- Notes:
+  2026-09-14 02:00: drained queue priorities 90/91/93 — rivian-r1t-2022, mercedes-benz-c300-2022,
+  ford-bronco-sport-2021. Two of the three carried spec errors that were fixed alongside the vinNote.
+  (1) LOOK-AHEAD ERROR — `rivian-r1t-2022` was authored with 2023 hardware. Stored engine string offered
+  "Quad-motor (835 hp) or Dual-motor (665 hp); 135 kWh or 149 kWh battery"; the dual-motor R1T did not
+  reach a customer until May/June 2023 (Rivian newsroom + Electrek + InsideEVs), and the 149 kWh Max pack
+  is likewise MY2023. Every MY2022 R1T is quad-motor on the 135 kWh Large pack. Engine string corrected.
+  SECOND look-ahead error in two runs (after toyota-sequoia-2022 on 09-13) — the pattern is now recurrent
+  enough that very-new entries should be treated as suspect by default.
+  (2) SPEC ERROR — `mercedes-benz-c300-2022` engine read "2.0T M254 PHEV mild hybrid I4", which is both
+  self-contradictory and wrong: the US 2022 W206 C300 has no plug-in variant. Corrected to
+  "2.0T M254 I4 (255 hp) with 48V EQ Boost mild hybrid (ISG)". The entry's own summary field was already
+  correct, so only `engine` was wrong.
+  (3) vinNotes: the Rivian and Mercedes notes both exist mainly to STOP an 8th-digit read. Rivian puts
+  trim/series in digit 8 and the motor in digit 6 (A=quad, B=dual) — a domestic-brand habit applied to a
+  Rivian VIN gives a wrong answer. Mercedes nominally has an engine character at digit 8, but the US 2022
+  C-Class shipped one powertrain, so the useful read is positions 4-5 (4G = RWD, 4H = 4MATIC). Ford is the
+  conventional case: digit 8, 6 = 1.5L EcoBoost I3, 9 = 2.0L EcoBoost I4 (Badlands/First Edition only,
+  and the digit doubles as the tell for the twin-clutch rear drive unit).
+  Sibling check: no conflict. Every other block touching inspect/index.html is this same task's prior
+  vinNote batches, all sitting in Ready (COMMITTED, NOT PUSHED) behind the same PAT blocker — sequential,
+  same file, no divergence. In-flight siblings are orthogonal: autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/), autovet-competitor-monitor (Competitors/).
+  Started-date gate: checked all Done blocks touching inspect/index.html — none missing `- Started:`.
+  No Re-sync needed.
+  Functional read-back: 245 keys / 0 missing sections / 1,601 items / vinNotes 107 -> 110 (baseline exact).
+  itemsToCheck drift on all three entries left untouched — standing content decision with Daniel.
+  Syntax-check: PASS. Dead-links: verified (no new hrefs). Scanner: PASS.
+  PUSH BLOCKED — 8 commits now unpushed. Not re-diagnosed; PAT unchanged since May 30.
+
+### autovetting-inspect-render-and-generation-fix-2026-09-13 — ready 2026-09-13 (COMMITTED, NOT PUSHED)
+
+- Status: ready to deploy (committed locally as 8a01144; PUSH BLOCKED — stored PAT still rejected, unchanged since 09-09)
+- Started: 2026-09-13 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain, which surfaced two live defects)
+- Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-13.md (gitignored), TASKS.md, _hub/Awaiting-Daniel.md (gitignored)
+- Notes:
+  2026-09-13 02:00: went to the queue for tundra-2022 / sequoia-2022 vinNotes and found two
+  defects that matter more than the vinNotes.
+  (1) LOOK-AHEAD ERROR — `toyota-sequoia-2022` was authored as the 2023 car. The 2022 Sequoia is
+  the FINAL 2nd-gen XK60 with the 5.7L 3UR-FE V8 (381 hp / 401 lb-ft, 6-speed auto); the 3rd-gen
+  XK70 i-FORCE MAX hybrid starts at MY2023. Corroborated three ways: Toyota press/press-cycle
+  coverage, NHTSA campaign scopes (new-platform Tundra campaigns run 2022-2025 while the matching
+  Sequoia scopes run 2023-2025), and this repo's own `toyota-sequoia-2016` entry, which already
+  says "2nd gen XK60, 2008-2022". Entry fully rewritten to the V8 car: 11 items, cost-anchored on
+  cam-tower oil leak ($1,200-3,500), secondary air injection P244x ($1,300-1,500 indie /
+  $2,000-4,000+ dealer), and the Limited/Platinum-only rear load-levelling air suspension
+  (compressor $2,600-2,700). Same failure mode as the 2018 Avalon and 2020 Highlander findings.
+  (2) LIVE RENDER BUG — `toyota-prius-2012`, `mazda-cx5-2013` and `ford-escape-2013` stored their
+  content under `categories:` while the renderer only ever reads `c.sections` (3 call sites, no
+  fallback). Those three pages threw a TypeError instead of rendering. Renamed the key; 30
+  inspection items are now reachable, including the Escape's **Critical** 1.6L EcoBoost
+  engine-fire item, which has been unreachable to buyers. This class of defect is invisible to the
+  "245 keys -> 245 rows, 1:1" coverage check, which counts keys and never renders them.
+  Also: vinNote added to sequoia-2022 + tundra-2022, sourced to Toyota's Part 565 filings
+  (NHTSA MID K6-00 and 23-008) — engine position is the 5th digit on the 2nd-gen Sequoia and the
+  4th on the TNGA-F Tundra, NOT the 8th on either; tundra-2022 engine string corrected
+  3.5L -> 3.4L V35A-FTS per the same filing; tundra-2022 stats.itemsToCheck 12 -> 6 to match reality.
+  Queue 140 -> 138.
+  Commit: 8a01144. Sibling check: overlaps autovet-competitor-monitor / autovet-cpo-protocol-ingestion /
+  autovet-seo-content (all in-flight, not Done — Done-sibling gate does not apply; all three lack
+  `- Started:` and are flagged in Awaiting-Daniel).
+  Verified against: autovetting-vinnote-batch-2026-09-12, autovetting-vinnote-batch-2026-09-11.
+  Re-sync needed against:
+  Syntax-check: PASS. Scanner: PASS (580 files). Dead-links: verified (/decode/ exists).
+  Functional CHECKLISTS read-back: PASS — brace-matched the real literal out of the file and
+  parsed it with `new Function` (never eval): 245 keys, 0 entries missing `.sections`, 1,601 items
+  survive a `c.sections.map(s => s.items...)` replay of the renderer's own access pattern.
+  PUSH BLOCKER — UNCHANGED, DANIEL ACTION STILL REQUIRED. Write-tested again this run (not
+  read-tested): `git push --dry-run` with the stored PAT via GIT_ASKPASS returns "remote: Invalid
+  username or token." The `Claude/` mount WAS present this run and `.credentials/` read fine, so
+  readability is no longer in question — the token itself (`ghp_krkG...`, unchanged) is rejected.
+  7 commits now unpushed.
+
+
 ### autovetting-vinnote-batch-2026-09-12 — ready 2026-09-12 (COMMITTED, NOT PUSHED)
 
-- Status: ready to deploy (committed locally as __COMMIT__; PUSH BLOCKED — GitHub still rejects the stored PAT, unchanged since 09-09)
+- Status: ready to deploy (committed locally as 416c6ec; PUSH BLOCKED — GitHub still rejects the stored PAT, unchanged since 09-09)
 - Started: 2026-09-12 (02:00 MST overnight builder; launch-freeze alternate work = vinNote queue drain)
 - Touched files: inspect/index.html, _hub/Content/vinnote-queue.md (gitignored), _hub/Build-Log/2026-09-12.md (gitignored), TASKS.md, _hub/Awaiting-Daniel.md (gitignored)
 - Notes:
@@ -369,7 +459,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Verified against: autovetting-vinnote-batch-2026-09-11, autovetting-vinnote-batch-2026-09-10,
   autovetting-vinnote-batch-2026-09-09.
   Re-sync needed against:
-  Commit: __COMMIT__.
+  Commit: 416c6ec.
   PUSH BLOCKER — UNCHANGED, DANIEL ACTION STILL REQUIRED. Write-tested, not read-tested
   (anonymous ls-remote proves nothing on a public repo): `git push --dry-run` with the stored
   PAT via GIT_ASKPASS returns "remote: Invalid username or token. Password authentication is
