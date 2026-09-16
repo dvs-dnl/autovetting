@@ -300,6 +300,74 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-pinpoint-filter-cells-B1-B4-2026-09-15 — ready 2026-09-15 (COMMITTED, NOT PUSHED)
+
+- Status: ready to deploy (committed locally as 88deccd; PUSH BLOCKED — stored PAT still rejected, unchanged since 09-09)
+- Started: 2026-09-15 (02:00 MST overnight builder; launch-freeze alternate path = Awaiting-Daniel section B, taken BEFORE the vinNote queue per run #19 anomaly 2)
+- Touched files: pinpoint/index.html, _hub/Build-Log/2026-09-15.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-09-15 02:00: ROUTING CHANGE APPLIED. Run #19 asked the builder to read section B of
+  Awaiting-Daniel.md before falling through to vinnote-queue.md; five productive nights had gone
+  straight to the queue and left 11 freeze-exempt fills idle for a fifth week. This run read
+  section B first. Drained B.1-B.4 — all 7 named cells — and did NOT touch the vinNote queue
+  (stays at 135, top still hyundai-elantra-2021).
+  Delivered 7 Pinpoint cards, 337 -> 344. work-hauling/2 under-10k + 10-15k (Silverado 1500 WT
+  Regular Cab 2014-2015 / 2016-2018 -> chevrolet-silverado-2014) and 20-30k (F-150 XL Regular Cab
+  4x4 2019-2020 -> ford-f150-2018); road-trip/7+/15-20k (Sienna LE 2015-2017 ->
+  toyota-sienna-2015); road-trip/6/30k+ (Enclave Avenir 2020-2022 -> buick-enclave-2018, Avenir
+  chosen over Traverse High Country because Avenir is on the Filter-Schema top-trim marker list so
+  the card earns the luxury chip by rule); work-hauling/7+ 20-30k + 30k+ (Expedition XLT 2018-2019
+  and Expedition MAX Limited 2020-2021 -> ford-expedition-2018). B.1 also resolves B.6 (the
+  Silverado reg-cab partial) — same work, no separate task.
+  Every cost anchor web-verified before shipping, not written from memory: 4.3L EcoTec3 V6 tow
+  7,200 lb (GM MY2014 figure); 5.3L AFM lifter $2,800 one bank / ~$7,000 with cam damage
+  (CarComplaints 2015 avg $6,500) and the risk spans the WHOLE 2014-2018 run, which the 10-15k
+  tagline says explicitly because "newer is safer" is the wrong instinct here; 2019 F-150 3.3L
+  Ti-VCT tow 7,700 lb; EcoBoost cam phasers $800-2,500 alone, $3,200-5,500 with the timing kit;
+  Sienna class-action power-door cable coverage = 10 years from first use, no mileage cap, so
+  lapsed on a 2015, ~$1,500/side after; Enclave 5,000 lb tow ONLY with the Trailering Package
+  (1,500 lb without); Shift-to-Park = shifter microswitch, TSB 19-NA-206, p/n 84733196;
+  2018 Expedition 9,300 lb properly equipped.
+  SPEC ERROR IN THE INSTRUCTIONS: B.4 asked for "Ford Expedition XL Fleet" cards. The 2018+
+  Expedition has NO XL trim — XLT / Limited / Platinum only. Built XLT and MAX Limited instead.
+  Third bad identifier from that section after ford-expedition-2020 and toyota-sienna-2017; the
+  standing key-resolution fix catches dead slugs but not a trim that never existed. Used the trim
+  fact as content: 2018 XLT ships base SYNC not SYNC 3, so no carplay chip and the tagline says to
+  check. Same discipline dropped carplay from the F-150 XL card (SYNC 3 optional, not standard)
+  and from the Sienna card (no CarPlay before MY2019).
+  Sibling check: no conflict. Only other block touching pinpoint/index.html is Ready =
+  autovetting-pinpoint-fueltype-schema-fix-2026-08-21, which edits the JSON-LD Car block; this run
+  appended only to the VEHICLES array. Verified by diff: 88deccd is 56 added lines / 0 deletions /
+  0 fuelType touches, so that task's work was not swept in. In-flight siblings orthogonal —
+  autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion
+  (Product/CPO-Protocols/), autovet-seo-content (Content/blog/). Done(last 10): the one block
+  touching pinpoint/index.html is the 2026-08-11 sitemap/pinpoint entry and it HAS
+  `- Started: 2026-08-11` — Started-date gate clear, nothing to backfill. No Re-sync needed.
+  Verified against: _hub/Filter-Schema.md (enums), _hub/Awaiting-Daniel.md run #19 section B.
+  Cell matrix: work-hauling/2 0/0/1/0/0 -> 1/1/1/1/0; road-trip/7+ 0/0/0/3/3 -> 0/0/1/3/3;
+  road-trip/6 1/1/1/1/0 -> 1/1/1/1/1; work-hauling/7+ 0/1/0/0/0 -> 0/1/0/1/1. Reachable-empty
+  36 -> 29.
+  Functional read-back: 344 entries parse; 7/7 new entries pass Filter-Schema enum validation;
+  0 entries anywhere still using old type/purpose fields.
+  Resolver gate: reimplemented findChecklistByYMMT against live VEHICLE_MENU (17 years) +
+  CHECKLISTS (245 keys) — 7/7 new inspectUrls resolve to the intended key; all 9 run-#19 wire-to
+  keys resolve; both create-new keys still correctly absent.
+  Syntax-check: PASS (Script 2 OK, Script 4 OK). Dead-links: verified (0 new hrefs).
+  Scanner: PASS (587 files, exit 0).
+  NEW RED FINDING, logged to Awaiting-Daniel: 84 of 311 Pinpoint inspectUrls (27%) dead-route to
+  the coming-soon renderer, and 75 of those have a checklist that already exists — trim baked into
+  the model param, or a year absent from VEHICLE_MENU. Launch-spec criterion 7 failing silently on
+  a quarter of the catalog. NOT auto-swept: naive candidate matches are wrong-generation in several
+  cases. Recommended as the next Step-3 alternate-path workstream ahead of the vinNote queue.
+  NEW RED ANOMALY, logged to Awaiting-Daniel: .git is unlink-restricted from the builder sandbox —
+  writes succeed, deletes return Operation not permitted. Blocked the first commit on a 25.8h-old
+  stale index.lock; worked around with GIT_INDEX_FILE=/tmp/alt.index. 1,402 orphan tmp_obj_* files
+  in .git/objects dating to 2026-08-10, plus undeletable HEAD.lock / index.lock /
+  objects/maintenance.lock, and anomaly 8's stale ref cannot be cleared from here. Plausible
+  confound for the PAT diagnosis; NOT re-diagnosed. Cheap discriminator for Daniel: one git push
+  from his own terminal.
+  PUSH BLOCKED — 9 commits now unpushed. Not re-diagnosed; PAT unchanged since May 30.
+
 ### autovetting-vinnote-batch-2026-09-14 — ready 2026-09-14 (COMMITTED, NOT PUSHED)
 
 - Status: ready to deploy (committed locally; PUSH BLOCKED — stored PAT still rejected, unchanged since 09-09)
