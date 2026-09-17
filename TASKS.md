@@ -8,6 +8,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ### autovet-competitor-monitor
 
 - Status: in flight
+- Started: 2026-06-11 (weekly rotation; date sourced from this block's own first Notes entry — added 2026-09-16 by the overnight builder so a future Done promotion does not gate-block every task sharing pinpoint/index.html)
 - Task: weekly competitive intelligence rotation (one company/week)
 - Notes:
   - 2026-06-11 (this run): profiled YourMechanic / Wrench (🟡).
@@ -116,9 +117,17 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: thesis holds, unchanged in either direction — 12 weeks of zero consumer-PPI product investment is itself confirmation this brand isn't re-entering buyer-side competition. No new action; both open carry-in items can be closed in Competitor_Analysis.md at the next housekeeping pass.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Bumper (Instavin) (#5, cycle 2).
 
+  2026-09-17 [scheduled task]: profiled Bumper (Instavin / VINDATA) (#5, cycle 2) (🟡).
+    Output: Competitors/_Monitor/2026-09-17-bumper.md (no Awaiting-Daniel append — not 🔴).
+    Sibling check: no overlaps. Ready to deploy/publish = pinpoint-dead-route-repair (09-16), pinpoint-filter-cells-B1-B4 (09-15), vinnote batches 09-09/09-11/09-12/09-14, inspect-render-and-generation-fix (09-13), inspect-key-namespace-rename (09-03), pinpoint-fueltype-schema-fix (08-21), phase-copy-and-template-fix (08-14) — all inspect/index.html or pinpoint/index.html or scripts/, none touch Competitors/; this run wrote only Competitors/_Monitor/ + TASKS.md. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) + autovet-seo-content (Content/blog/) orthogonal — neither references Bumper, Instavin, VINDATA, or LTVCo. Done(last 10) = recall-audit waves + vinnote batches, none position an AutoVet feature against Bumper. No Re-sync needed.
+    Key delta: (1) corporate parent identified — Bumper is an LTVCo (The Lifetime Value Co.) brand alongside BeenVerified/Ownerly/PeopleLooker, confirmed via BBB "Related Businesses" + Bumper's own Zendesk help-center running on a beenverified.zendesk.com backend; explicitly NOT the H.I.G./PeopleConnect family (TruthFinder/Intelius) — disambiguation guard for future runs. (2) Reputation figures firsthand-verified/corrected: baseline's "~169 Trustpilot reviews" was stale — actual is 865 total, 2.0/5 "Poor," 64% 1-star; BBB verified firsthand for the first time (B rating, NOT accredited, 215 complaints/3yr) — substance unchanged (still billing-driven complaints, fresh through Sept 2026), figures now citable. (3) Product scope expanded past report+API baseline: "digital dashboard for car ownership" bundling insurance (Jerry)/DMV (eTags)/junk-buyback (Peddle)/marketplace/Bumper Connect telematics (Smartcar API, no hardware) — still data/software-only, June's physical-inspection escalation trigger NOT tripped. (4) CROSS-COMPETITOR FINDING: Lemon Squad appears as a named partner brand on Bumper's About page partner-logo strip (alongside Openbay+/RepairPal/CarShield/RunBuggy/Ownerly); Bumper claims 1M+ monthly visitors — a high-traffic data-report site already sends PPI-intent traffic to Lemon Squad (our #1 rotation slot, under 🔴 strategic-threat watch since 08-13). Not previously captured in the Lemon Squad file's own partnership list — flagged as a carry-forward item for that file, not actioned here. (5) No funding/M&A/exec-change/layoff signal; confirmed a same-named UK repair-financing fintech ("Bumper," $110M raised, AutoBI/Cocoon Payments) is a distinct unrelated company — name-collision guard.
+    Implication: pricing/trust contrast thesis (vs. Bumper's billing reputation) now better-sourced with firsthand BBB/Trustpilot figures. The Lemon Squad↔Bumper partnership reframes Bumper from "irrelevant adjacent player" to "a distribution channel already captured by our most-escalated direct competitor" — worth a note in the Lemon Squad file's carry-forward list next time that profile is touched; no product/pricing decision changes this week. AI-on-physical-condition differentiation remains uncontested (Bumper's AI stays report-layer). Housekeeping still open (repeat from 06-18): add Bumper to Competitor_Analysis.md Indirect Competitors with LTVCo context.
+    Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Carfax (S&P Global Mobility) (#6, cycle 2) [watch with extra care — competitor AND most-likely acquirer per business plan §9/§13].
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
+- Started: 2026-06-14 (weekly rotation; date sourced from this block's own first Notes entry — added 2026-09-16 by the overnight builder, same reason)
 - Task: weekly OEM CPO protocol ingestion (one manufacturer/week) into Product/CPO-Protocols/
 - Notes:
   2026-06-14 09:34: ingested Nissan CPO protocol (167 inspection points; also 139 EV / 84 Certified Select tiers).
@@ -222,6 +231,7 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 ### autovet-seo-content
 
 - Status: in flight
+- Started: 2026-06-17 (weekly rotation; date sourced from this block's own first Notes entry — added 2026-09-16 by the overnight builder, same reason)
 - Task: weekly programmatic SEO pillar post (one top-500 vehicle/week) into Content/blog/ + research log in Content/_seo-research/
 - Notes:
   2026-06-17 11:00: drafted 2019 Chevrolet Equinox pillar post (Tier-1 #4, highest-ranked fully-uncovered vehicle; 1.5L turbo oil-consumption + timing-chain cold-start rattle story).
@@ -298,7 +308,104 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Sibling check: Verified against: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for outback/subaru/cx-5/cx5 found only stale Done entries outside the 14-day window (recall-audit wave 18's 2026-08-05 subaru-outback-2015 recall rebuild -- the source of the verified data reused above, not a conflict) plus the 2026-09-06 Volvo CPO-protocol note's unrelated grep hit. In-flight autovet-competitor-monitor (Competitors/, last entry 2026-09-03 iNeedaPPi) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 2026-09-06 Volvo) orthogonal -- neither references Subaru or Outback. No overnight-builder/vinnote/content-checklist-authoring task in Ready touches Content/blog/ or a subaru-outback slug (Ready = key-namespace-rename, fueltype-schema-fix, phase-copy-fix, and the 2026-09-09 vinnote batch -- all inspect/index.html or pinpoint/index.html, all disjoint from this run's output files). No Re-sync needed.
   Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Mazda CX-5 to close out the currently-flagged Tier-2 pair; re-check whether Toyota Highlander (#20) has cleared the recall-audit generation-boundary sweep before defaulting back to Tier-2.
 
+
+  2026-09-16 03:10 [scheduled task]: drafted 2016 Mazda CX-5 (KE, 1st-gen 2013-2016, final model year) pillar post -- closes out the "currently-flagged Tier-2 pair" tracked across the 2026-08-26/09-02/09-09 runs (Honda Pilot 09-02, Subaru Outback 09-09, Mazda CX-5 today). Picked model year 2016 specifically, not the site's existing mazda-cx5-2013 inspect-checklist slug, for two reasons: (1) the Mazda CPO protocol file (Product/CPO-Protocols/mazda-certified.md) flags "2016 KE had the heaviest recall activity of the generation" -- the richest verified-recall story in the 1st-gen run; (2) mazda-cx5-2013 carries a known unresolved site data-hygiene defect (campaign 15V461, an FCA/Jeep Uconnect recall mis-pasted onto the Mazda slug, flagged in Top-100-Vehicles-Priority.md lines 60/242 as needing adjudication) -- a different model year avoids any risk of this post inheriting or cross-referencing that fabrication. Confirmed via grep of inspect/index.html: only mazda-cx5-2013 and mazda-cx5-2017 exist as checklist slugs -- mazda-cx5-2016 is genuinely new ground, not a reuse of existing verified data. Toyota Highlander (#20, last Tier-1 gap) remains blocked -- still no wave-24 recall-audit entry in TASKS.md -- deferred again, consistent with the three prior runs.
+  Output: Content/blog/2026-09-16-2016-mazda-cx5-buyers-guide.md (1,861 words incl. frontmatter, status: draft), Content/_seo-research/2026-09-16-2016-mazda-cx5.md.
+  Recalls WebSearch-verified 2026-09-16, independently derived (no existing inspect/index.html mazda-cx5-2016 checklist to reuse): 16V064000 / Mazda 9216B (fuel filler pipe rupture / fire risk, 2014-2016 CX-5, 268,799 units, built 2013-06-27 to 2016-02-02); 16V203000 / Mazda 9316D (front strut lower bolt loosening -> steering knuckle separation, shared campaign with 2016 CX-3 / 2013-2014 Mazda2 / 2013-2015 CX-9, only ~578 units total across all four nameplates -- explicitly framed in the post as a narrow fastener-torque issue, not systemic, to counter "years to avoid" listicles that imply otherwise); 20V063000 / Mazda 4320A (LED DRL sulfur-corrosion flicker/failure, 2016 CX-5 only, built 2014-11-03 to 2015-12-07, ~36,760 units, not identified until 2020). Also noted 16E002000 (equipment-level recall, replacement-windshield Smart City Brake Support bracket, tape-only mounting) as applicable only if the car has had glass replaced, kept distinct from anecdotal "weak glass" cracking complaints. HEADLINE FINDING / post differentiator: Mazda TSB 04-001/18 -- rear EPB caliper may not release fully, causing brake drag/overheat/rapid pad wear -- scoped to 2016 CX-5 units built before September 9, 2016 (VIN lower than JM3KE******866136), identifiable by a caliper lot-number stamp (697+ = updated part). It's a dealer bulletin, not an open safety recall, so it will not surface on a standard NHTSA VIN check -- no bulletin number fabricated for anything else: MZD Connect infotainment issues, transmission shudder/hesitation, and AWD rear-differential noise are all described by condition only, left unnumbered, consistent with the anti-fabrication guard already documented in Product/CPO-Protocols/mazda-certified.md for this make. No CPO protocol content reprinted verbatim (business-plan Sec 4.5); referenced as "OEM-aligned" only.
+  Sibling check: Verified against: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for cx-5/cx5/mazda within the 14-day window (since 2026-09-02) found only one hit -- the 2026-09-13 vinnote-queue-hygiene entry, which removed mazda-cx5-2013 from the vinnote queue as "already had a vinNote" (different file tree, inspect/index.html, and a different model year than this post's 2016 pick -- not a content conflict). In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Mazda protocol already ingested 2026-07-05, read-only reused this run) orthogonal. Ready to deploy/publish section holds no Content/blog/ or Mazda-slug entries. No overnight-builder/vinnote/content-checklist-authoring task in flight touching a Mazda CX-5 slug. No Re-sync needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: re-check whether Toyota Highlander (#20) has cleared the recall-audit generation-boundary sweep (wave 24 still hasn't landed as of this run); otherwise rank further into Tier-2 (Honda Accord, Subaru Forester, Mazda3, Hyundai Elantra, Kia Sportage are all untouched) since Pilot/Outback/CX-5 closes the previously-flagged Tier-2 trio. Flagging for Daniel (not fixed this run, outside scope): mazda-cx5-2013's 15V461 fabrication is still unresolved in inspect/index.html / scripts/recall-ledger.json per Top-100-Vehicles-Priority.md -- a future recall-audit wave should adjudicate it.
+
 ## Ready to deploy / publish
+
+### autovetting-menu-generation-and-year-gap-fix-2026-09-17 — ready 2026-09-17 (COMMIT OBJECT BUILT, REF NOT ON main, NOT PUSHED)
+- Status: ready to deploy (commit object built via `git commit-tree` on a separate index and anchored at `refs/heads/builder-2026-09-17`, parented on 09-16's `15010b3` (chain: this commit → 15010b3 → 88deccd); it is NOT on `main` — the .git lock files are still unremovable from this sandbox. PUSH still blocked, unchanged since 09-09.)
+- Started: 2026-09-17 (02:00 MST overnight builder; launch freeze still active. Awaiting-Daniel section B still holds no freeze-exempt work — B.5/B.7 both need a new Inspect checklist — so the run took the VEHICLE_MENU slot 09-16 proposed as section B's replacement.)
+- Task: fix the 6 `VEHICLE_MENU` rows that served the wrong generation, and add the 19 year-rows that make existing correct-generation checklists reachable (launch-spec criterion 7, cross-linking)
+- Touched files: inspect/index.html, pinpoint/index.html, _hub/Build-Log/2026-09-17.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-09-17 02:00: **six wrong-generation menu rows deleted + 19 year-rows added + 9 Pinpoint routes repaired.**
+    Resolving cards **285 → 294** of 311 with an `inspectUrl` (91.6% → 94.5%); dead routes **26 → 17**; duplicate menu rows **19 → 13**.
+    Part 1 — deleted (not re-ordered) the shadowing older-generation row on: Toyota Highlander 2020/2021/2022 (`toyota-highlander-2014`, XU50 ended MY2019 → now `toyota-highlander-2020`), Chevrolet Silverado 1500 2020 + GMC Sierra 1500 2020 (K2XX survived into MY2019 only as the LD / Limited → now the T1XX keys), Jeep Grand Cherokee 2022 (WK2 ended MY2021 → now `jeep-grand-cherokee-2021`). Deleted rather than re-ordered because that generation was not on sale in that model year — the row offers the buyer a car that did not exist. Side effect: card #260, which names XU70 in its own title, was silently being handed the 2014 checklist and is now correct.
+    Part 2 — 19 rows added: Civic 2018-2021 → `honda-civic-2017`; Camry 2021-2023 → `toyota-camry-2018`; Highlander 2023 → `toyota-highlander-2020`; Corolla 2023 → `toyota-corolla-2021`; Sienna 2020 → `toyota-sienna-2015`; Avalon 2013-2015 → `toyota-avalon-2018`; F-150 2023 → `ford-f150-2021`; Palisade 2023 → `hyundai-palisade-2020`; Crosstrek 2020-2023 → `subaru-crosstrek-2018`. Each verified three ways: year block exists, no pre-existing row for that model+year (so no new duplicate), and the target checklist's own `trim` states a range containing the year. Also corrected `hyundai-palisade-2020`'s under-scoped trim string ("1st gen, 2020–2022" → "1st gen LX2, 2020–2025; facelift for 2023") so a 2023 arrival is not told the checklist stops before their car — a factual range correction, not a facelift-policy call, since only one Palisade checklist exists.
+    Part 3 — trim stripped from the `model` param (year never touched) on 9 cards, both occurrences each (VEHICLES entry + the matching `Car` JSON-LD `url`): #272 Civic Sport, #273 Crosstrek Premium, #276 Avalon XLE, #295 Camry XSE, #298 Highlander XLE AWD, #318 F-150 PowerBoost Hybrid XLT, #329 Civic Si Sedan, #332 Sienna XLE, #336 Palisade SEL AWD.
+    REFUSED 2 that would have resolved cleanly: #330 Corolla Hybrid LE 2023 (the E210 checklist's vinNote frames the two *gasoline* engines as "the inspection story"; site convention gives hybrids their own checklist — the 2023 menu row still went in, since a 2023 gas Corolla should get it) and #309 Crosstrek Sport 2023 (title says GU, year says 2023 — cannot both be true; and the Sport's 2.5L FB25 is not in the GT checklist's trim list). #334 Highlander Hybrid 2023 stays dead per 09-16 — XU70 hybrid has no checklist, Tier B, freeze-blocked.
+    NEW FINDING (🟡): the generation range-check surfaced exactly 1 out-of-range route in 141 checkable cards — #281 "Silverado 1500 WT Crew" 2019 → `chevrolet-silverado-2014` (K2XX, 2014–2018). 09-16 filed 2019 Silverado as "arguable" because both generations were on sale; that is right about the year but this card is decidable — the MY2019 K2XX carryover was Double Cab only, so a 2019 **Crew** Cab is T1XX. NOT acted on: the only lever tonight was re-ordering the 2019 row, which would mis-route legitimate LD Double Cab lookups instead. Clean fix is a naming split (`Silverado 1500` vs `Silverado 1500 LD`; `Sierra 1500` vs `Sierra 1500 Limited`) — queued for Daniel in Awaiting-Daniel next to the still-open facelift rule.
+    Sibling check: Verified against: autovetting-pinpoint-dead-route-repair-2026-09-16 (pinpoint/index.html) and autovetting-pinpoint-filter-cells-B1-B4-2026-09-15 (pinpoint/index.html) — direct overlaps, both unpushed and both present in this working tree; tonight's commit is parented on 09-16's `15010b3` so both stay in the chain. Field-level JSON-LD diff and line-level diff accounting confirm no sweep: pinpoint 35/35, of which 26 are 09-16's and 9 are mine. Ready-section entries touching inspect/index.html (vinnote-batches 09-09..09-14, inspect-render-and-generation-fix 09-13, key-namespace-rename 09-03, phase-copy-and-template-fix 08-14) all edit CHECKLISTS content or the render path, not VEHICLE_MENU rows — no line collision. In-flight autovet-competitor-monitor (Competitors/), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/) orthogonal. Every Done (last 10) block carries a `- Started:` date (09-16 added the three that were missing) — no gate-block risk. No Re-sync needed.
+    Gates: **Syntax-check: PASS** (official node recipe both files — inspect Script 2/5 OK, pinpoint Script 2/4 OK, exit 0 each). **Resolver gate: PASS**, 294/311 via a faithful reimplementation of `findChecklistByYMMT` (both paths, `parseInt` call-site semantics) against live CHECKLISTS (245) + VEHICLE_MENU (17 years). **Before/after route diff: PASS** — all 311 routes re-resolved on pre- and post-edit files: 9 newly resolving, 1 generation-corrected, **0 regressions**. **Intent gate: PASS 19/19** (every new row resolves to the key it was authored for). **Menu integrity: PASS** — 1,102 rows, 21 intentionally keyless, 0 pointing at a non-existent checklist key. **JSON-LD: PASS** — 1 block, 308 items before and after, 9 differ, `url`-only, 0 non-url fields touched. **Dead-links: verified** — 0 href attributes added/removed/changed in either file. **Scanner: PASS** (594 files, exit 0). Diff vs parent `15010b3`: inspect 20/7 (19 new rows + 6 deleted rows + Palisade trim line), pinpoint 10/10 (9 VEHICLES lines + the minified JSON-LD line), TASKS.md 112/0. Commit hash recorded in `_hub/Build-Log/2026-09-17.md` (kept out of TASKS.md, which is inside the commit and would otherwise change the hash it names). `git diff` between commit and working tree is empty for all three files.
+    Coverage limit, stated plainly: 153 of the 294 resolving cards route to a checklist whose `trim` states no parseable year range, so the out-of-range check still cannot see mis-routing on them. Unchanged from 09-16 and proposed as the next run's target.
+    Milestone: Tier A from the 09-16 handoff is **closed** — every card behind a menu year-gap is fixed except the two deliberately refused. Remaining 17 dead = 8 Tier B (needs a new checklist, freeze-blocked; Corolla Hybrid 2023 joins tonight) + 8 Tier C (nameplate absent, honest coming-soon) + 1 card-data defect (#309).
+
+### autovetting-pinpoint-dead-route-repair-2026-09-16 — ready 2026-09-16 (COMMIT OBJECT BUILT, REF NOT ON main, NOT PUSHED)
+
+- Status: ready to deploy (commit object `15010b3` built and anchored at `refs/heads/builder-2026-09-16`; it is NOT on `main` — see the git-lock note below. PUSH still blocked, unchanged since 09-09.)
+- Started: 2026-09-16 (02:00 MST overnight builder; launch freeze still active, so alternate path. Awaiting-Daniel section B held no remaining freeze-exempt items — B.1-B.4 were drained 09-15 and B.5/B.7 are freeze-blocked — so this run took the 09-15 finding: dead `inspectUrl` routes.)
+- Touched files: pinpoint/index.html, _hub/Build-Log/2026-09-16.md (gitignored), _hub/Awaiting-Daniel.md (gitignored), TASKS.md
+- Notes:
+  2026-09-16 02:00: **25 dead Pinpoint -> Inspect deep-links repaired.** Launch-spec criterion 7
+  (cross-linking) was failing silently: cards deep-linked to
+  `/inspect/?year=&make=&model=` with the trim baked into the model param
+  (`model=Highlander Hybrid XLE AWD`), which can never match `VEHICLE_MENU`'s
+  `model: 'Highlander'` — `findChecklistByYMMT` needs exact case-insensitive equality on
+  all three params. Those cards rendered the coming-soon page on vehicles whose checklist
+  we already wrote.
+  **Resolving cards 260 -> 285 of 311 (83.6% -> 91.6%). Dead routes 51 -> 26.**
+
+  **Correction to the 09-15 figure.** Run 09-15 reported 227 resolve / 84 dead. The real
+  numbers were 260 / 51. That resolver reimplemented Path 1 (`VEHICLE_MENU`) only and
+  omitted Path 2, the direct case-insensitive match on stored checklist year/make/model,
+  which carries 33 cards on its own. The 84 was an overcount; the underlying defect was real.
+
+  **The fix rule, and why it cannot invent a generation:** strip trim from `model`, never
+  touch `year`. The site's own `VEHICLE_MENU` year->key mapping still decides which
+  generation that year gets. A card whose year is absent from the menu was left alone —
+  that is a menu edit, a different change class, scoped below rather than guessed.
+
+  **3 candidates deliberately NOT fixed** (the strip would have produced a wrong route):
+  Toyota Prius c 2018 (NHP10 is a different car from the Prius liftback; `model=Prius`
+  would route a Prius c buyer to the ZVW50 checklist); VW Golf Alltrack S 2019 (4Motion
+  wagon; `volkswagen-golf-2018` is the Mk7.5 hatch and carries nothing on the Haldex rear
+  drive); Toyota Avalon Hybrid XLE 2022 (the menu maps 2019-2022 to `toyota-avalon-2018`,
+  whose own trim string reads "4th gen XX40, 2013-2018" — routing a 2022 XX50 there is a
+  **menu wrong-generation bug**, flagged in Awaiting-Daniel, not propagated here).
+
+  **Both occurrences per card updated** — the `VEHICLES` entry and the matching `Car`
+  JSON-LD `url` in the single-line ItemList on line 1010. The JSON-LD diff was verified
+  item-by-item as **url-only**: 24 items differ, 0 non-url fields changed, 308 items before
+  and after. (The 25th card, Mazda3, has no `Car` item.)
+
+  Sibling check: overlaps `autovetting-pinpoint-filter-cells-B1-B4-2026-09-15` (Ready,
+  committed `88deccd`) and `autovetting-pinpoint-fueltype-schema-fix-2026-08-21` (Ready) on
+  `pinpoint/index.html`. **No conflict** — this run changes only `inspectUrl` strings and the
+  matching JSON-LD `url` values; 88deccd added `VEHICLES` entries (none of which are in this
+  batch, all 7 already resolved) and the fueltype fix touches `fuelType` only. Diff is 26/26
+  lines, 0 `fuelType` touches, 0 `VEHICLES` additions or deletions.
+  Verified against: autovetting-pinpoint-filter-cells-B1-B4-2026-09-15,
+  autovetting-pinpoint-fueltype-schema-fix-2026-08-21.
+  Re-sync needed against: (none)
+
+  Also added missing `- Started:` fields to the three In-flight blocks that share
+  `pinpoint/index.html` — `autovet-competitor-monitor` (2026-06-11),
+  `autovet-cpo-protocol-ingestion` (2026-06-14), `autovet-seo-content` (2026-06-17). Each
+  date is sourced from that block's own first dated Notes entry, not invented. Without them,
+  the first of those blocks to reach Done would gate-block every future task touching
+  `pinpoint/index.html` indefinitely.
+
+  Gates: **Syntax-check: PASS** (official node recipe on pinpoint/index.html — Script 2 OK,
+  Script 4 OK, exit 0). **JSON-LD parse: PASS** (1 ld+json block, 308 items).
+  **Resolver gate: PASS 25/25** — each card re-resolved through a faithful reimplementation
+  of `findChecklistByYMMT` (both paths, `parseInt` year semantics) against the live
+  `CHECKLISTS` (245 keys) and `VEHICLE_MENU` (17 years) and matched its intended key.
+  **Generation cross-check: PASS** — every target checklist whose trim string states a year
+  range contains the card's year. **Dead-links: verified** — 0 new `href` attributes; every
+  changed URL targets `/inspect/`, which exists. **Scanner: PASS** (589 files, no secrets, exit 0).
+
+  Commit: `15010b3` — **object built, but it is NOT on `main`.** `.git/HEAD.lock` was left
+  behind by 09-15's `88deccd` and cannot be unlinked from the builder sandbox, so no ref
+  update that dereferences HEAD can run here. Worked around with `git commit-tree` +
+  anchored at `refs/heads/builder-2026-09-16` so the object survives a `git gc --prune=now`.
+  The commit also carries 09-15's 68 staged TASKS.md lines, which had no commit of their own.
+  **Daniel: one command puts it on main —**
+  `rm -f .git/HEAD.lock .git/refs/heads/main.lock && git update-ref refs/heads/main 15010b3 && git branch -d builder-2026-09-16`
 
 ### autovetting-pinpoint-filter-cells-B1-B4-2026-09-15 — ready 2026-09-15 (COMMITTED, NOT PUSHED)
 
@@ -366,6 +473,11 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   objects/maintenance.lock, and anomaly 8's stale ref cannot be cleared from here. Plausible
   confound for the PAT diagnosis; NOT re-diagnosed. Cheap discriminator for Daniel: one git push
   from his own terminal.
+  Follow-on to that anomaly: 88deccd created .git/HEAD.lock and could not unlink it, so the SECOND
+  commit of this run (this TASKS.md entry) failed with "cannot lock ref 'HEAD'". Exactly one commit
+  per session is possible — likely why every recent night shows precisely one. TASKS.md is STAGED
+  BUT UNCOMMITTED; its content is on disk and correct (orchestrator reads the file, not git) and
+  will ride along on the next commit. Cleanup sequence for Daniel is in Awaiting-Daniel.md.
   PUSH BLOCKED — 9 commits now unpushed. Not re-diagnosed; PAT unchanged since May 30.
 
 ### autovetting-vinnote-batch-2026-09-14 — ready 2026-09-14 (COMMITTED, NOT PUSHED)
