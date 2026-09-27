@@ -15721,12 +15721,16 @@ const VEHICLE_MENU = {
       { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
     ],
     'Audi': [
+      { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
       { model: 'e-tron', trim: 'Standard / Prestige', key: 'audi-e-tron-2019' },
       { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
       { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' },
       { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
     ],
-    'BMW': [ { model: 'X5', trim: 'xDrive40i / xDrive50i / M50i / X5 PHEV (G05)', key: 'bmw-x5-2019' } ],
+    'BMW': [
+      { model: 'X3', trim: 'sDrive30i / xDrive30i / M40i (G01 platform)', key: 'bmw-x3-2018' },
+      { model: 'X5', trim: 'xDrive40i / xDrive50i / M50i / X5 PHEV (G05)', key: 'bmw-x5-2019' }
+    ],
     'Buick': [
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
       { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
@@ -15738,13 +15742,26 @@ const VEHICLE_MENU = {
       { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' }
     ],
     'Chevrolet': [
+      { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2', key: 'chevrolet-colorado-2023' },
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevrolet-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
+      { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevrolet-silverado-2022' },
+      { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-suburban-2021' },
+      { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
+      { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevrolet-trailblazer-2021' },
       { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
       { model: 'Trax', trim: 'LS / LT / RS / ACTIV', key: 'chevrolet-trax-2024' }
     ],
     'Ford': [
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
       { model: 'Bronco Sport', trim: 'Base / Big Bend / Badlands / First Edition / Outer Banks', key: 'ford-bronco-sport-2021' },
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'Active / ST-Line / ST-Line Select / Platinum / PHEV', key: 'ford-escape-2020' },
+      { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
+      { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (14th gen P702)', key: 'ford-f150-2021' },
       { model: 'F-150 Lightning', trim: 'Pro / XLT / Lariat / Platinum', key: 'ford-f150-lightning-2022' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum', key: 'ford-f250-2019' },
       { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
       { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT / Rally', key: 'ford-mustang-mach-e-2021' }
     ],
@@ -15759,19 +15776,22 @@ const VEHICLE_MENU = {
       { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
       { model: 'Passport', trim: 'Sport / EX-L / Touring / Elite (2nd gen)', key: 'honda-passport-2019' },
-      { model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite', key: 'honda-passport-2023' }
+      { model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite', key: 'honda-passport-2023' },
+      { model: 'Pilot', trim: 'Sport / EX-L / TrailSport / Touring / Elite (4th gen YF6)', key: 'honda-pilot-2023' }
     ],
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / Hybrid (CN7 gen)', key: 'hyundai-elantra-2021' },
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' },
       { model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)', key: 'hyundai-ioniq5-2022' },
       { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
+      { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
       { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid / PHEV', key: 'hyundai-tucson-2022' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'INFINITI': [ { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' } ],
     'Jeep': [
+      { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
       { model: 'Gladiator', trim: 'Sport / Overland / Rubicon / Mojave (JT)', key: 'jeep-gladiator-2020' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk / 4xe (WL)', key: 'jeep-grand-cherokee-2021' },
       { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL)', key: 'jeep-wrangler-2018' },
@@ -15795,7 +15815,8 @@ const VEHICLE_MENU = {
     'Lincoln': [
       { model: 'Aviator', trim: 'Standard / Reserve / Black Label / Grand Touring PHEV', key: 'lincoln-aviator-2020' },
       { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' },
-      { model: 'Nautilus', trim: 'Standard / Reserve / Black Label', key: 'lincoln-nautilus-2019' }
+      { model: 'Nautilus', trim: 'Standard / Reserve / Black Label', key: 'lincoln-nautilus-2019' },
+      { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' }
     ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
@@ -15810,9 +15831,11 @@ const VEHICLE_MENU = {
       { model: 'GLS', trim: 'GLS 450 / GLS 580 / AMG GLS 63', key: 'mercedes-benz-gls-2020' }
     ],
     'Nissan': [
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Pro-4X / PRO-X / SL', key: 'nissan-frontier-2022' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
       { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Rock Creek / Platinum', key: 'nissan-pathfinder-2022' },
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' }
     ],
@@ -15821,6 +15844,8 @@ const VEHICLE_MENU = {
       { model: 'Macan', trim: 'Base / S / GTS / Turbo', key: 'porsche-macan-2017' }
     ],
     'Ram': [
+      { model: '1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' },
+      { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' },
       { model: '1500 TRX', trim: 'Standard / Final Edition', key: 'ram-1500-trx-2021' },
       { model: '2500', trim: 'Tradesman / Big Horn / Power Wagon / Laramie / Limited', key: 'ram-2500-2019' }
     ],
@@ -15838,9 +15863,12 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Camry', trim: 'LE / SE / XLE / XSE / TRD (Hybrid)', key: 'toyota-camry-2024' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD / Hybrid', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum / XSE', key: 'toyota-highlander-2020' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)', key: 'toyota-rav4-hybrid-2019' },
       { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
       { model: 'Sequoia', trim: 'SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-sequoia-2022' },
       { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' },
@@ -15855,18 +15883,34 @@ const VEHICLE_MENU = {
     ],
     'Volvo': [
       { model: 'S60', trim: 'T5 Momentum / T5 R-Design / T6 / T8 Recharge', key: 'volvo-s60-2019' },
-      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' }
+      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' },
+      { model: 'XC60', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc60-2018' },
+      { model: 'XC90', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc90-2017' }
     ]
   },
   2023: {
-    'Acura': [ { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' } ],
-    'Audi': [ { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' } ],
+    'Acura': [
+      { model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra', key: 'acura-mdx-2022' },
+      { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
+    ],
+    'Audi': [
+      { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
+      { model: 'e-tron', trim: 'Standard / Prestige / S', key: 'audi-e-tron-2019' },
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
+    ],
     'BMW': [
       { model: '5 Series', trim: '530i / 540i / M550i / 530e PHEV (G30)', key: 'bmw-5series-2018' },
       { model: 'X3', trim: 'sDrive30i / xDrive30i / M40i (G01 platform)', key: 'bmw-x3-2018' },
       { model: 'X5', trim: 'xDrive40i / xDrive50i / M50i / X5 PHEV (G05)', key: 'bmw-x5-2019' }
     ],
-    'Buick': [ { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' } ],
+    'Buick': [
+      { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Envision', trim: 'Preferred / Essence / Avenir', key: 'buick-envision-2021' }
+    ],
     'Cadillac': [
       { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
       { model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV', key: 'cadillac-escalade-2021' },
@@ -15877,6 +15921,8 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevrolet-blazer-2019' },
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
       { model: 'Colorado', trim: 'WT / LT / Z71 / Trail Boss / ZR2', key: 'chevrolet-colorado-2023' },
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevrolet-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / ZR2 / High Country', key: 'chevrolet-silverado-2022' },
       { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-suburban-2021' },
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
@@ -15885,13 +15931,22 @@ const VEHICLE_MENU = {
     ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / R/T Scat Pack / SRT 392 / SRT Hellcat / Last Call editions', key: 'dodge-challenger-2023' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
+      { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
       { model: 'Bronco Sport', trim: 'Base / Big Bend / Badlands / First Edition / Outer Banks', key: 'ford-bronco-sport-2021' },
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
+      { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited / Raptor (14th gen P702)', key: 'ford-f150-2021' },
+      { model: 'F-150 Lightning', trim: 'Pro / XLT / Lariat / Platinum', key: 'ford-f150-lightning-2022' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum', key: 'ford-f250-2019' },
+      { model: 'Maverick', trim: 'XL / XLT / Lariat', key: 'ford-maverick-2022' },
       { model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550)', key: 'ford-mustang-2018' },
+      { model: 'Mustang Mach-E', trim: 'Select / Premium / California Route 1 / GT', key: 'ford-mustang-mach-e-2021' },
       { model: 'Ranger', trim: 'XL / XLT / Lariat (T6 platform)', key: 'ford-ranger-2019' }
     ],
     'GMC': [
@@ -15905,6 +15960,7 @@ const VEHICLE_MENU = {
       { model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring', key: 'honda-civic-2022' },
       { model: 'CR-V', trim: 'LX / EX / EX-L / Sport / Sport Touring / Hybrid', key: 'honda-crv-2023' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L', key: 'honda-hrv-2023' },
+      { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
       { model: 'Passport', trim: 'Sport / EX-L / Touring / Elite (2nd gen)', key: 'honda-passport-2019' },
       { model: 'Passport', trim: 'Sport / EX-L / TrailSport / Elite', key: 'honda-passport-2023' },
       { model: 'Pilot', trim: 'Sport / EX-L / TrailSport / Touring / Elite (4th gen YF6)', key: 'honda-pilot-2023' },
@@ -15913,36 +15969,64 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / Hybrid (CN7 gen)', key: 'hyundai-elantra-2021' },
       { model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)', key: 'hyundai-ioniq5-2022' },
+      { model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD', key: 'hyundai-ioniq6-2023' },
       { model: 'Palisade', trim: 'SE / SEL / XRT / Limited / Calligraphy (1st gen LX2, 2023 facelift)', key: 'hyundai-palisade-2020' },
-      { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' }
+      { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
+      { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Tucson', trim: 'SE / SEL / N Line / XRT / Limited / Hybrid', key: 'hyundai-tucson-2022' },
+      { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
-      { model: 'Gladiator', trim: 'Sport / Overland / Rubicon / Mojave (JT)', key: 'jeep-gladiator-2020' }
+      { model: 'Gladiator', trim: 'Sport / Overland / Rubicon / Mojave (JT)', key: 'jeep-gladiator-2020' },
+      { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit / Trailhawk (WL)', key: 'jeep-grand-cherokee-2021' },
+      { model: 'Renegade', trim: 'Sport / Latitude / Limited / Trailhawk (BU)', key: 'jeep-renegade-2018' },
+      { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL)', key: 'jeep-wrangler-2018' },
+      { model: 'Wrangler 4xe', trim: '4xe Sahara / 4xe Rubicon (PHEV)', key: 'jeep-wrangler-4xe-2021' }
     ],
     'Kia': [
       { model: 'Carnival', trim: 'LX / EX / SX / SX Prestige (KA4 gen)', key: 'kia-carnival-2022' },
+      { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
       { model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD gen)', key: 'kia-forte-2019' },
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' },
+      { model: 'Sorento', trim: 'LX / S / EX / SX / X-Line / Hybrid / PHEV', key: 'kia-sorento-2021' },
+      { model: 'Sportage', trim: 'LX / EX / SX-Prestige / X-Pro / Hybrid / PHEV', key: 'kia-sportage-2023' },
       { model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)', key: 'kia-stinger-2018' },
       { model: 'Telluride', trim: 'LX / S / EX / SX / SX Prestige', key: 'kia-telluride-2020' }
     ],
-    'Lexus': [ { model: 'ES', trim: '350 / 300h Hybrid / F Sport (7th gen XZ10)', key: 'lexus-es-2019' } ],
-    'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
+    'Lexus': [
+      { model: 'ES', trim: '350 / 300h Hybrid / F Sport (7th gen XZ10)', key: 'lexus-es-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
+    ],
+    'Lincoln': [
+      { model: 'Aviator', trim: 'Standard / Reserve / Black Label / Grand Touring PHEV', key: 'lincoln-aviator-2020' },
+      { model: 'Corsair', trim: 'Standard / Reserve / Grand Touring', key: 'lincoln-corsair-2020' },
+      { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' }
+    ],
     'Mazda': [
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo', key: 'mazda-cx50-2023' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
-      { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+      { model: 'Mazda3', trim: 'Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
+      { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
+      { model: 'Frontier', trim: 'S / SV / Pro-4X / PRO-X / SL', key: 'nissan-frontier-2022' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
-      { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' }
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
+      { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
+      { model: 'Pathfinder', trim: 'S / SV / SL / Rock Creek / Platinum', key: 'nissan-pathfinder-2022' },
+      { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' }
     ],
     'Subaru': [
+      { model: 'BRZ', trim: 'Premium / Limited', key: 'subaru-brz-2022' },
       { model: 'Crosstrek', trim: 'Base / Premium / Sport / Limited (2nd gen GT, final year)', key: 'subaru-crosstrek-2018' },
+      { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
       { model: 'Impreza', trim: '2.0i / Premium / Sport / Limited (5th gen GK/GT)', key: 'subaru-impreza-2018' },
       { model: 'Outback', trim: '2.5i / Premium / Sport / Limited / Onyx XT / Limited XT (BT gen)', key: 'subaru-outback-2020' }
     ],
@@ -15953,8 +16037,17 @@ const VEHICLE_MENU = {
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Camry', trim: 'LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen, final year)', key: 'toyota-corolla-2021' },
+      { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
+      { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
       { model: 'Highlander', trim: 'L / LE / XLE / XSE / Limited / Platinum (4th gen XU70)', key: 'toyota-highlander-2020' },
+      { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)', key: 'toyota-rav4-hybrid-2019' },
+      { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
+      { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / Platinum / TRD Pro / 1794', key: 'toyota-tundra-2022' },
       { model: 'Venza', trim: 'LE / XLE / Limited (2nd gen AX10)', key: 'toyota-venza-2021' }
     ],
     'Volkswagen': [
@@ -15963,10 +16056,19 @@ const VEHICLE_MENU = {
       { model: 'Taos', trim: 'S / SE / SEL FWD / AWD', key: 'volkswagen-taos-2022' },
       { model: 'Tiguan', trim: 'S / SE / SEL / SEL Premium R-Line (MQB 2nd gen)', key: 'volkswagen-tiguan-2018' }
     ],
-    'Volvo': [ { model: 'XC60', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc60-2018' } ]
+    'Volvo': [
+      { model: 'S60', trim: 'T5 Momentum / T5 R-Design / T6 / T8 Recharge', key: 'volvo-s60-2019' },
+      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' },
+      { model: 'XC60', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc60-2018' },
+      { model: 'XC90', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc90-2017' }
+    ]
   },
   2022: {
-    'Acura': [ { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' } ],
+    'Acura': [
+      { model: 'MDX', trim: 'Standard / Technology / A-Spec / Type S / Type S Ultra', key: 'acura-mdx-2022' },
+      { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
+    ],
     'Audi': [
       { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
       { model: 'e-tron', trim: 'Standard / Prestige / S / S Sportback', key: 'audi-e-tron-2019' },
@@ -15983,7 +16085,9 @@ const VEHICLE_MENU = {
     ],
     'Buick': [
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
-      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
+      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Envision', trim: 'Preferred / Essence / Avenir', key: 'buick-envision-2021' }
     ],
     'Cadillac': [
       { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
@@ -15995,23 +16099,32 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevrolet-blazer-2019' },
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
       { model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)', key: 'chevrolet-colorado-2018' },
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevrolet-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevrolet-silverado-2022' },
       { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-suburban-2021' },
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevrolet-trailblazer-2021' },
-      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' }
+      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
-    'Chrysler': [ { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' } ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / Everglades', key: 'ford-bronco-2021' },
       { model: 'Bronco Sport', trim: 'Base / Big Bend / Badlands / First Edition / Outer Banks', key: 'ford-bronco-sport-2021' },
       { model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)', key: 'ford-ecosport-2018' },
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV / ST-Line', key: 'ford-escape-2020' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (14th gen P702)', key: 'ford-f150-2021' },
       { model: 'F-150 Lightning', trim: 'Pro / XLT / Lariat / Platinum', key: 'ford-f150-lightning-2022' },
       { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' },
@@ -16041,6 +16154,7 @@ const VEHICLE_MENU = {
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / Hybrid (CN7 gen)', key: 'hyundai-elantra-2021' },
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / N / Hybrid', key: 'hyundai-elantra-2022' },
+      { model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)', key: 'hyundai-ioniq-2019' },
       { model: 'IONIQ 5', trim: 'Standard Range / Long Range / AWD (E-GMP)', key: 'hyundai-ioniq5-2022' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
@@ -16062,8 +16176,10 @@ const VEHICLE_MENU = {
       { model: 'Carnival', trim: 'LX / EX / SX / SX Prestige (KA4 gen)', key: 'kia-carnival-2022' },
       { model: 'EV6', trim: 'Light / Standard / Wind / GT-Line / GT', key: 'kia-ev6-2022' },
       { model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD gen)', key: 'kia-forte-2019' },
+      { model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)', key: 'kia-niro-2019' },
       { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' },
       { model: 'Sorento', trim: 'LX / S / EX / SX / X-Line / Hybrid / PHEV', key: 'kia-sorento-2021' },
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)', key: 'kia-stinger-2018' },
       { model: 'Stinger', trim: 'GT-Line / GT1 / GT2', key: 'kia-stinger-2022' },
       { model: 'Telluride', trim: 'LX / S / EX / SX / SX Prestige', key: 'kia-telluride-2020' }
@@ -16084,7 +16200,8 @@ const VEHICLE_MENU = {
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
-      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' }
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
     'Mercedes-Benz': [
       { model: 'C-Class', trim: 'C300 / C300 4MATIC (W206)', key: 'mercedes-benz-c300-2022' },
@@ -16100,6 +16217,7 @@ const VEHICLE_MENU = {
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
       { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Rock Creek / Platinum', key: 'nissan-pathfinder-2022' },
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
       { model: 'Rogue Sport', trim: 'S / SV / SL (J11)', key: 'nissan-rogue-sport-2018' }
@@ -16120,6 +16238,7 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)', key: 'toyota-chr-2018' },
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Corolla Cross', trim: 'L / LE / XLE / XLE AWD', key: 'toyota-corolla-cross-2022' },
       { model: 'GR86', trim: 'Base / Premium', key: 'toyota-gr86-2022' },
@@ -16127,6 +16246,7 @@ const VEHICLE_MENU = {
       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Prius Prime', trim: 'Plus / Premium / Advanced (ZVW52)', key: 'toyota-prius-prime-2017' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)', key: 'toyota-rav4-hybrid-2019' },
       { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
       { model: 'Sequoia', trim: 'SR5 / Limited / Platinum / TRD Pro / Capstone', key: 'toyota-sequoia-2022' },
       { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' },
@@ -16150,7 +16270,8 @@ const VEHICLE_MENU = {
   },
   2021: {
     'Acura': [
-      { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' }
+      { model: 'RDX', trim: 'Base / Technology / A-Spec / Advance (3rd gen)', key: 'acura-rdx-2019' },
+      { model: 'TLX', trim: 'Standard / Technology / A-Spec / SH-AWD / Type S', key: 'acura-tlx-2021' }
     ],
     'Audi': [
       { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
@@ -16168,7 +16289,9 @@ const VEHICLE_MENU = {
     ],
     'Buick': [
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
-      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
+      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' },
+      { model: 'Envision', trim: 'Preferred / Essence / Avenir', key: 'buick-envision-2021' }
     ],
     'Cadillac': [
       { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
@@ -16180,11 +16303,14 @@ const VEHICLE_MENU = {
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevrolet-blazer-2019' },
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
       { model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)', key: 'chevrolet-colorado-2018' },
+      { model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen)', key: 'chevrolet-equinox-2018' },
+      { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevrolet-silverado-2022' },
       { model: 'Suburban', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-suburban-2021' },
       { model: 'Tahoe', trim: 'LS / LT / RST / Z71 / Premier / High Country', key: 'chevrolet-tahoe-2021' },
       { model: 'Trailblazer', trim: 'LS / LT / ACTIV / RS / Premier', key: 'chevrolet-trailblazer-2021' },
-      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' }
+      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
     'Chrysler': [
       { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
@@ -16192,14 +16318,17 @@ const VEHICLE_MENU = {
     ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
       { model: 'Bronco', trim: 'Base / Big Bend / Black Diamond / Badlands / Wildtrak / First Edition', key: 'ford-bronco-2021' },
       { model: 'Bronco Sport', trim: 'Base / Big Bend / Badlands / First Edition / Outer Banks', key: 'ford-bronco-sport-2021' },
       { model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)', key: 'ford-ecosport-2018' },
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (14th gen P702)', key: 'ford-f150-2021' },
       { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' },
       { model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550)', key: 'ford-mustang-2018' },
@@ -16230,10 +16359,12 @@ const VEHICLE_MENU = {
     ],
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / SEL / N Line / Limited / Hybrid (CN7 gen)', key: 'hyundai-elantra-2021' },
+      { model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)', key: 'hyundai-ioniq-2019' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
       { model: 'Sonata', trim: 'SE / SEL / SEL Plus / Limited / Hybrid', key: 'hyundai-sonata-2020' },
+      { model: 'Tucson', trim: 'SE / Sport / Limited (TL first year)', key: 'hyundai-tucson-2017' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
     'Jeep': [
@@ -16248,6 +16379,10 @@ const VEHICLE_MENU = {
     ],
     'Kia': [
       { model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD gen)', key: 'kia-forte-2019' },
+      { model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)', key: 'kia-niro-2019' },
+      { model: 'Seltos', trim: 'LX / S / EX / SX / SX Turbo', key: 'kia-seltos-2021' },
+      { model: 'Sorento', trim: 'LX / S / EX / SX / X-Line / Hybrid / PHEV', key: 'kia-sorento-2021' },
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)', key: 'kia-stinger-2018' },
       { model: 'Telluride', trim: 'LX / S / EX / SX / SX Prestige', key: 'kia-telluride-2020' }
     ],
@@ -16269,9 +16404,11 @@ const VEHICLE_MENU = {
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
       { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
-      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
+      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
     'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 35', key: 'mercedes-benz-gla-2020' },
       { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' },
       { model: 'GLE', trim: 'GLE 350 / GLE 350 4MATIC / GLE 450 / AMG GLE 53', key: 'mercedes-benz-gle-2020' },
@@ -16285,11 +16422,17 @@ const VEHICLE_MENU = {
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
       { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Rogue', trim: 'S / SV / SL / Platinum', key: 'nissan-rogue-2021' },
       { model: 'Rogue Sport', trim: 'S / SV / SL (J11)', key: 'nissan-rogue-sport-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
-    'Ram': [ { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' } ],
+    'Ram': [
+      { model: '1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' },
+      { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' },
+      { model: '1500 TRX', trim: 'Standard / Final Edition', key: 'ram-1500-trx-2021' },
+      { model: '2500', trim: 'Tradesman / Big Horn / Power Wagon / Laramie / Limited', key: 'ram-2500-2019' }
+    ],
     'Subaru': [
       { model: 'Crosstrek', trim: 'Base / Premium / Sport / Limited / Hybrid (2nd gen GT)', key: 'subaru-crosstrek-2018' },
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
@@ -16306,12 +16449,14 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)', key: 'toyota-chr-2018' },
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / XLE V6 / XSE V6 / TRD (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum / XSE', key: 'toyota-highlander-2020' },
       { model: 'Land Cruiser', trim: 'Heritage Edition (J200 final year)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Prius Prime', trim: 'Plus / Premium / Advanced (ZVW52)', key: 'toyota-prius-prime-2017' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)', key: 'toyota-rav4-hybrid-2019' },
       { model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology', key: 'toyota-rav4-prime-2021' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Sienna', trim: 'LE / XLE / XSE / Limited / Platinum (Hybrid)', key: 'toyota-sienna-2021' },
@@ -16354,9 +16499,15 @@ const VEHICLE_MENU = {
     ],
     'Buick': [
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
-      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
+      { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' },
+      { model: 'Encore GX', trim: 'Preferred / Select / Essence', key: 'buick-encore-gx-2020' }
     ],
-    'Cadillac': [ { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' } ],
+    'Cadillac': [
+      { model: 'CT5', trim: 'Luxury / Premium Luxury / Sport / V', key: 'cadillac-ct5-2020' },
+      { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' },
+      { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevrolet-blazer-2019' },
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
@@ -16366,20 +16517,27 @@ const VEHICLE_MENU = {
       { model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country', key: 'chevrolet-silverado-2022' },
       { model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)', key: 'chevrolet-suburban-2018' },
       { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' },
-      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' }
+      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
-    'Chrysler': [ { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' } ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
       { model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)', key: 'ford-ecosport-2018' },
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / PHEV', key: 'ford-escape-2020' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / ST / Platinum (6th gen)', key: 'ford-explorer-2020' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' },
       { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited', key: 'ford-f250-2019' },
+      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' },
       { model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550)', key: 'ford-mustang-2018' },
       { model: 'Ranger', trim: 'XL / XLT / Lariat (T6 platform)', key: 'ford-ranger-2019' }
     ],
@@ -16404,6 +16562,7 @@ const VEHICLE_MENU = {
     ],
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)', key: 'hyundai-ioniq-2019' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Palisade', trim: 'SE / SEL / Limited / Calligraphy', key: 'hyundai-palisade-2020' },
       { model: 'Santa Fe', trim: 'SE / SEL / Limited / Ultimate (TM 4th gen)', key: 'hyundai-santa-fe-2019' },
@@ -16411,7 +16570,10 @@ const VEHICLE_MENU = {
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' },
       { model: 'Venue', trim: 'SE / SEL / DENIM', key: 'hyundai-venue-2020' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [
+      { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' }
+    ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16422,8 +16584,10 @@ const VEHICLE_MENU = {
     ],
     'Kia': [
       { model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD gen)', key: 'kia-forte-2019' },
+      { model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)', key: 'kia-niro-2019' },
       { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' },
       { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
+      { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)', key: 'kia-stinger-2018' },
       { model: 'Telluride', trim: 'LX / S / EX / SX / SX Prestige', key: 'kia-telluride-2020' }
     ],
@@ -16442,13 +16606,15 @@ const VEHICLE_MENU = {
       { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' }
     ],
     'Mazda': [
-      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
       { model: 'CX-30', trim: 'Base / Select / Preferred / Premium (DM gen; 2.5 Turbo added 2021)', key: 'mazda-cx30-2020' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
-      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
+      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
     'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
       { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-benz-gla-2020' },
       { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' },
       { model: 'GLE', trim: 'GLE 350 / GLE 350 4MATIC / GLE 450 / AMG GLE 53', key: 'mercedes-benz-gle-2020' },
@@ -16462,12 +16628,14 @@ const VEHICLE_MENU = {
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
       { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)', key: 'nissan-pathfinder-2017' },
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
       { model: 'Rogue Sport', trim: 'S / SV / SL (J11)', key: 'nissan-rogue-sport-2018' },
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Ram': [
+      { model: '1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' },
       { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' },
       { model: '2500', trim: 'Tradesman / Big Horn / Power Wagon / Laramie / Limited', key: 'ram-2500-2019' },
       { model: 'Ram 1500', trim: 'DT platform — eTorque / Hemi / Rebel / Laramie', key: 'ram-1500-2019' }
@@ -16479,12 +16647,16 @@ const VEHICLE_MENU = {
       { model: 'Outback', trim: '2.5i / Premium / Sport / Limited / Onyx XT / Limited XT (BT gen)', key: 'subaru-outback-2020' },
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
-    'Tesla': [ { model: 'Model 3', trim: 'Standard Range Plus / Long Range / Performance (MIC/FC)', key: 'tesla-model3-2019' } ],
+    'Tesla': [
+      { model: 'Model 3', trim: 'Standard Range Plus / Long Range / Performance (MIC/FC)', key: 'tesla-model3-2019' },
+      { model: 'Model Y', trim: 'Standard Range / Long Range / Performance', key: 'tesla-model-y-2021' }
+    ],
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)', key: 'toyota-chr-2018' },
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla', trim: 'L / LE / SE / XSE / XLE (E210, 12th gen)', key: 'toyota-corolla-2021' },
       { model: 'Highlander', trim: 'L / LE / XLE / Limited / Platinum / XSE', key: 'toyota-highlander-2020' },
       { model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)', key: 'toyota-highlander-hybrid-2018' },
@@ -16492,6 +16664,7 @@ const VEHICLE_MENU = {
       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'Prius Prime', trim: 'Plus / Premium / Advanced (ZVW52)', key: 'toyota-prius-prime-2017' },
       { model: 'RAV4', trim: 'LE / XLE / XLE Premium / Adventure / TRD Off-Road / Limited', key: 'toyota-rav4-2019' },
+      { model: 'RAV4 Hybrid', trim: 'LE / XLE / XLE Premium / Limited / Adventure (XA50)', key: 'toyota-rav4-hybrid-2019' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (3rd gen XL30, final year)', key: 'toyota-sienna-2015' },
       { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
@@ -16517,7 +16690,10 @@ const VEHICLE_MENU = {
     ],
     'Audi': [
       { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
-      { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' }
+      { model: 'e-tron', trim: 'Standard / Prestige / S', key: 'audi-e-tron-2019' },
+      { model: 'Q3', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q3-2019' },
+      { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
     ],
     'BMW': [
       { model: '3 Series', trim: '320i / 328i / 330i / 340i / M340i (F30)', key: 'bmw-3series-2018' },
@@ -16531,7 +16707,11 @@ const VEHICLE_MENU = {
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
       { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
     ],
-    'Cadillac': [ { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' } ],
+    'Cadillac': [
+      { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' },
+      { model: 'XT4', trim: 'Luxury / Premium Luxury / Sport', key: 'cadillac-xt4-2019' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
     'Chevrolet': [
       { model: 'Blazer', trim: 'L / LT / RS / Premier', key: 'chevrolet-blazer-2019' },
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
@@ -16546,7 +16726,10 @@ const VEHICLE_MENU = {
       { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
       { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
-    'Chrysler': [ { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' } ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
       { model: 'Charger', trim: 'SXT / GT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
@@ -16555,6 +16738,7 @@ const VEHICLE_MENU = {
     'Ford': [
       { model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)', key: 'ford-ecosport-2018' },
       { model: 'Edge', trim: 'SE / SEL / Titanium / ST (2nd gen)', key: 'ford-edge-2017' },
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' },
@@ -16590,7 +16774,10 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [
+      { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' }
+    ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16609,16 +16796,28 @@ const VEHICLE_MENU = {
     ],
     'Lexus': [
       { model: 'ES', trim: '350 / 300h Hybrid / F Sport (7th gen XZ10)', key: 'lexus-es-2019' },
-      { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' }
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' },
+      { model: 'UX', trim: 'UX200 / UX250h Hybrid', key: 'lexus-ux-2019' }
     ],
-    'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
+    'Lincoln': [
+      { model: 'Nautilus', trim: 'Standard / Reserve / Black Label', key: 'lincoln-nautilus-2019' },
+      { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' }
+    ],
     'Mazda': [
-      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
-      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
+      { model: 'Mazda3', trim: 'Base / Select / Preferred / Premium / 2.5T', key: 'mazda3-2019' },
+      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
-    'Mercedes-Benz': [ { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' } ],
+    'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-benz-gla-2020' },
+      { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' }
+    ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / SR / Platinum (L34, 6th gen)', key: 'nissan-altima-2019' },
@@ -16635,6 +16834,7 @@ const VEHICLE_MENU = {
       { model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve', key: 'nissan-titan-2017' }
     ],
     'Ram': [
+      { model: '1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' },
       { model: '1500 Classic', trim: 'Tradesman / SLT / Big Horn / Laramie (DS platform)', key: 'ram-1500-classic-2019' },
       { model: '2500', trim: 'Tradesman / Big Horn / Power Wagon / Laramie / Limited', key: 'ram-2500-2019' },
       { model: 'Ram 1500', trim: 'DT platform (2019 base)', key: 'ram-1500-2019' }
@@ -16644,6 +16844,7 @@ const VEHICLE_MENU = {
       { model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring', key: 'subaru-forester-2019' },
       { model: 'Impreza', trim: '2.0i / Premium / Sport / Limited (5th gen GK/GT)', key: 'subaru-impreza-2018' },
       { model: 'Legacy', trim: '2.5i / 2.5i Premium / 2.5i Sport / 3.6R Limited (BN gen)', key: 'subaru-legacy-2018' },
+      { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' },
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Tesla': [ { model: 'Model 3', trim: 'Standard Range Plus / Long Range / Performance (MIC/FC)', key: 'tesla-model3-2019' } ],
@@ -16652,6 +16853,7 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XSE / Touring / Limited', key: 'toyota-avalon-2018' },
       { model: 'C-HR', trim: 'LE / XLE / XLE Premium (AX10)', key: 'toyota-chr-2018' },
       { model: 'Camry', trim: 'L / LE / SE / XSE / XLE / V6 trims / TRD / Hybrid (XV70)', key: 'toyota-camry-2018' },
+      { model: 'Camry Hybrid', trim: 'LE / SE / XLE / XSE (XV70)', key: 'toyota-camry-hybrid-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' },
       { model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)', key: 'toyota-highlander-hybrid-2018' },
@@ -16673,6 +16875,8 @@ const VEHICLE_MENU = {
       { model: 'Tiguan', trim: 'S / SE / SEL / SEL Premium R-Line (MQB 2nd gen)', key: 'volkswagen-tiguan-2018' }
     ],
     'Volvo': [
+      { model: 'S60', trim: 'T5 Momentum / T5 R-Design / T6 / T8 Recharge', key: 'volvo-s60-2019' },
+      { model: 'XC40', trim: 'Momentum / R-Design / Inscription', key: 'volvo-xc40-2019' },
       { model: 'XC60', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc60-2018' },
       { model: 'XC90', trim: 'Momentum / Inscription / R-Design / T8 PHEV (2nd gen SPA)', key: 'volvo-xc90-2017' }
     ]
@@ -16681,7 +16885,8 @@ const VEHICLE_MENU = {
     'Acura': [ { model: 'MDX', trim: 'Base / Technology / A-Spec / Advance / Sport Hybrid (3rd gen YD3)', key: 'acura-mdx-2018' } ],
     'Audi': [
       { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
-      { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' }
+      { model: 'Q5', trim: 'Premium / Premium Plus / Prestige / SQ5 (2nd gen FY)', key: 'audi-q5-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
     ],
     'BMW': [
       { model: '3 Series', trim: '320i / 328i / 330i / 340i / M340i (F30)', key: 'bmw-3series-2018' },
@@ -16693,7 +16898,10 @@ const VEHICLE_MENU = {
       { model: 'Enclave', trim: 'Preferred / Essence / Premium / Avenir (C1 2nd gen)', key: 'buick-enclave-2018' },
       { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' }
     ],
-    'Cadillac': [ { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' } ],
+    'Cadillac': [
+      { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
     'Chevrolet': [
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
       { model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)', key: 'chevrolet-colorado-2018' },
@@ -16703,9 +16911,13 @@ const VEHICLE_MENU = {
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevrolet-silverado-2014' },
       { model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)', key: 'chevrolet-suburban-2018' },
       { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' },
-      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' }
+      { model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1 2nd gen)', key: 'chevrolet-traverse-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
-    'Chrysler': [ { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' } ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
@@ -16714,6 +16926,7 @@ const VEHICLE_MENU = {
     'Ford': [
       { model: 'EcoSport', trim: 'S / SE / SES / Titanium (B4A)', key: 'ford-ecosport-2018' },
       { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' },
       { model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (4th gen U553)', key: 'ford-expedition-2018' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (13th gen refresh)', key: 'ford-f150-2018' },
@@ -16735,15 +16948,20 @@ const VEHICLE_MENU = {
       { model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)', key: 'honda-fit-2018' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L / Touring (RU gen)', key: 'honda-hrv-2018' },
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring / Elite (5th gen)', key: 'honda-odyssey-2018' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)', key: 'hyundai-ioniq-2019' },
       { model: 'Kona', trim: 'SE / SEL / Limited / Ultimate', key: 'hyundai-kona-2019' },
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [
+      { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' }
+    ],
     'Jeep': [
       { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
@@ -16752,13 +16970,19 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL)', key: 'jeep-wrangler-2018' }
     ],
     'Kia': [
+      { model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)', key: 'kia-niro-2019' },
       { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' },
       { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' },
       { model: 'Stinger', trim: 'Premium / GT / GT-Line / GT2 (CK gen)', key: 'kia-stinger-2018' }
     ],
-    'Lexus': [ { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
+    ],
     'Lincoln': [ { model: 'Navigator', trim: 'Standard / Reserve / Black Label (U553)', key: 'lincoln-navigator-2018' } ],
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
@@ -16769,6 +16993,7 @@ const VEHICLE_MENU = {
     ],
     'Mercedes-Benz': [
       { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-benz-gla-2020' },
       { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' }
     ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
@@ -16777,6 +17002,7 @@ const VEHICLE_MENU = {
       { model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve', key: 'nissan-armada-2017' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Kicks', trim: 'S / SV / SR (P15)', key: 'nissan-kicks-2019' },
+      { model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus', key: 'nissan-leaf-2019' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
       { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)', key: 'nissan-pathfinder-2017' },
@@ -16789,6 +17015,7 @@ const VEHICLE_MENU = {
       { model: 'Crosstrek', trim: '2.0i / Premium / Limited (GT gen)', key: 'subaru-crosstrek-2018' },
       { model: 'Impreza', trim: '2.0i / Premium / Sport / Limited (5th gen GK/GT)', key: 'subaru-impreza-2018' },
       { model: 'Legacy', trim: '2.5i / 2.5i Premium / 2.5i Sport / 3.6R Limited (BN gen)', key: 'subaru-legacy-2018' },
+      { model: 'Outback', trim: '2.5i / 2.5i Premium / 2.5i Limited / 3.6R Limited', key: 'subaru-outback-2015' },
       { model: 'WRX', trim: 'Base / Premium / Limited', key: 'subaru-wrx-2018' }
     ],
     'Toyota': [
@@ -16823,14 +17050,20 @@ const VEHICLE_MENU = {
   },
   2017: {
     'Acura': [ { model: 'MDX', trim: 'Base / Technology / A-Spec / Advance / Sport Hybrid (3rd gen YD3)', key: 'acura-mdx-2018' } ],
-    'Audi': [ { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' } ],
+    'Audi': [
+      { model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9 platform)', key: 'audi-a4-2018' },
+      { model: 'Q7', trim: 'Premium / Premium Plus / Prestige', key: 'audi-q7-2018' }
+    ],
     'BMW': [
       { model: '3 Series', trim: '320i / 328i / 330i / 340i / M340i (F30)', key: 'bmw-3series-2018' },
       { model: '5 Series', trim: '530i / 540i / M550i / 530e PHEV (G30)', key: 'bmw-5series-2018' },
       { model: 'X1', trim: 'sDrive28i / xDrive28i', key: 'bmw-x1-2018' }
     ],
     'Buick': [ { model: 'Encore', trim: 'Preferred / Essence / Sport Touring / Premium (BRE)', key: 'buick-encore-2018' } ],
-    'Cadillac': [ { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' } ],
+    'Cadillac': [
+      { model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX BOF)', key: 'cadillac-escalade-2018' },
+      { model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum', key: 'cadillac-xt5-2017' }
+    ],
     'Chevrolet': [
       { model: 'Bolt EV', trim: 'LT / Premier / Launch Edition (Gen 1)', key: 'chevrolet-bolt-ev-2020' },
       { model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)', key: 'chevrolet-colorado-2018' },
@@ -16839,9 +17072,13 @@ const VEHICLE_MENU = {
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevrolet-silverado-2014' },
       { model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)', key: 'chevrolet-suburban-2018' },
-      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' }
+      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
-    'Chrysler': [ { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' } ],
+    'Chrysler': [
+      { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' },
+      { model: 'Pacifica', trim: 'Touring / Touring L / Limited / Pinnacle / Hybrid (RU, 1st gen)', key: 'chrysler-pacifica-2017' }
+    ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
       { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
@@ -16849,8 +17086,10 @@ const VEHICLE_MENU = {
     ],
     'Ford': [
       { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
+      { model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum', key: 'ford-f250-2019' },
       { model: 'Fusion', trim: 'SE / Titanium / Sport / Hybrid', key: 'ford-fusion-2017' },
       { model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550)', key: 'ford-mustang-2018' }
     ],
@@ -16861,39 +17100,57 @@ const VEHICLE_MENU = {
       { model: 'Yukon', trim: 'SLE / SLT / Denali (K2XX BOF)', key: 'gmc-yukon-2018' }
     ],
     'Honda': [
+      { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
       { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' },
       { model: 'CR-V', trim: 'LX / EX / EX-L / Touring (5th gen RW/RT)', key: 'honda-crv-2017' },
       { model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)', key: 'honda-fit-2018' },
       { model: 'HR-V', trim: 'LX / Sport / EX / EX-L / Touring (RU gen)', key: 'honda-hrv-2018' },
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring (4th gen)', key: '' },
-      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' }
+      { model: 'Pilot', trim: 'LX / EX / EX-L / Touring / Elite (3rd gen)', key: 'honda-pilot-2016' },
+      { model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition', key: 'honda-ridgeline-2021' }
     ],
     'Hyundai': [
       { model: 'Elantra', trim: 'SE / Sport / Limited (AD gen)', key: 'hyundai-elantra-2017' },
+      { model: 'Ioniq', trim: 'Blue / SEL / Limited / Plug-In / Electric (AE gen)', key: 'hyundai-ioniq-2019' },
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL gen)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [
+      { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' }
+    ],
     'Jeep': [
+      { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Compass', trim: 'Sport / Latitude / Limited / Trailhawk (MP 2nd gen)', key: 'jeep-compass-2018' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Renegade', trim: 'Sport / Latitude / Limited / Trailhawk (BU)', key: 'jeep-renegade-2018' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
     'Kia': [
+      { model: 'Niro', trim: 'FE / LX / EX / Touring / Plug-In / EV (DE gen)', key: 'kia-niro-2019' },
       { model: 'Optima', trim: 'LX / EX / SX / SXL', key: 'kia-optima-2016' },
       { model: 'Sorento', trim: 'LX / EX / SX (UM gen)', key: 'kia-sorento-2016' },
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' }
     ],
-    'Lexus': [ { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
+    ],
     'Mazda': [
-      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KF 2nd gen)', key: 'mazda-cx5-2017' },
       { model: 'CX-9', trim: 'Sport / Touring / Grand Touring / Signature (TC gen)', key: 'mazda-cx9-2018' },
-      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
+      { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
+      { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' },
+      { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' }
     ],
-    'Mercedes-Benz': [ { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' } ],
+    'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-benz-gla-2020' },
+      { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' }
+    ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -16948,13 +17205,16 @@ const VEHICLE_MENU = {
       { model: 'Malibu', trim: 'L / LS / LT / Premier (9th gen)', key: 'chevrolet-malibu-2016' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevrolet-silverado-2014' },
       { model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)', key: 'chevrolet-suburban-2018' },
-      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' }
+      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
@@ -16967,6 +17227,7 @@ const VEHICLE_MENU = {
       { model: 'Yukon', trim: 'SLE / SLT / Denali (K2XX BOF)', key: 'gmc-yukon-2018' }
     ],
     'Honda': [
+      { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
       { model: 'Civic', trim: 'LX / EX / EX-T / EX-L / Touring / Si / Sport', key: 'honda-civic-2017' },
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' },
       { model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)', key: 'honda-fit-2018' },
@@ -16979,9 +17240,14 @@ const VEHICLE_MENU = {
       { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' },
       { model: 'Tucson', trim: 'SE / Sport / Limited (TL first year)', key: 'hyundai-tucson-2017' }
     ],
-    'INFINITI': [ { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' } ],
+    'INFINITI': [
+      { model: 'QX60', trim: 'Single trim, FWD or AWD, with Premium / Premium Plus / Deluxe Touring packages (L50, 1st gen)', key: 'infiniti-qx60-2018' },
+      { model: 'QX80', trim: 'Base / Luxe / Sensory / Autograph', key: 'infiniti-qx80-2018' }
+    ],
     'Jeep': [
+      { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Renegade', trim: 'Sport / Latitude / Limited / Trailhawk (BU)', key: 'jeep-renegade-2018' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
     'Kia': [
@@ -16990,7 +17256,12 @@ const VEHICLE_MENU = {
       { model: 'Soul', trim: 'Base / + / ! Turbo (PS gen)', key: 'kia-soul-2017' },
       { model: 'Sportage', trim: 'LX / EX / SX Turbo (QL gen)', key: 'kia-sportage-2017' }
     ],
-    'Lexus': [ { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'NX', trim: '200t / 300 / 300h Hybrid / F Sport (1st gen AZ10)', key: 'lexus-nx-2018' },
+      { model: 'RX350', trim: 'Base / F SPORT / Executive', key: 'lexus-rx350-2019' }
+    ],
     'Mazda': [
       { model: 'MX-5 Miata', trim: 'Sport / Club / Grand Touring / RF (ND)', key: 'mazda-mx5-2016' },
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' },
@@ -16998,12 +17269,17 @@ const VEHICLE_MENU = {
       { model: 'Mazda3', trim: 'Sport / Touring / Grand Touring (BM gen)', key: 'mazda3-2014' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
-    'Mercedes-Benz': [ { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' } ],
+    'Mercedes-Benz': [
+      { model: 'C-Class', trim: 'C300 / C300 4MATIC / C43 AMG (W205)', key: 'mercedes-benz-c300-2018' },
+      { model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC', key: 'mercedes-benz-gla-2020' },
+      { model: 'GLC', trim: 'GLC 300 / GLC 300 4MATIC / GLC 43 AMG (X253)', key: 'mercedes-benz-glc-2018' }
+    ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Maxima', trim: 'SV / SL / Platinum / SR (8th gen A36)', key: 'nissan-maxima-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)', key: 'nissan-pathfinder-2017' },
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' },
@@ -17020,11 +17296,13 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XLE Plus / Limited', key: 'toyota-avalon-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)', key: 'toyota-highlander-hybrid-2018' },
       { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / LE / XLE / Limited / AWD-e (ZVW50, 4th gen)', key: 'toyota-prius-2016' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Sienna', trim: 'LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Tacoma', trim: 'SR / SR5 / TRD Sport / TRD Off-Road / Limited / TRD Pro (3rd gen)', key: 'toyota-tacoma-2019' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ],
     'Volkswagen': [
@@ -17041,14 +17319,17 @@ const VEHICLE_MENU = {
       { model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen)', key: 'chevrolet-colorado-2018' },
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ (K2XX)', key: 'chevrolet-silverado-2014' },
       { model: 'Suburban', trim: 'LS / LT / Premier (K2XX, 3/4 ton equiv.)', key: 'chevrolet-suburban-2018' },
-      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' }
+      { model: 'Tahoe', trim: 'LS / LT / Premier (K2XX body-on-frame)', key: 'chevrolet-tahoe-2018' },
+      { model: 'Trax', trim: 'LS / LT / Premier (1st gen Gamma II)', key: 'chevrolet-trax-2019' }
     ],
     'Chrysler': [ { model: '300', trim: '300 / 300S / 300C / 300C Platinum', key: 'chrysler-300-2016' } ],
     'Dodge': [
       { model: 'Challenger', trim: 'SXT / GT / R/T / Scat Pack / Hellcat (LC)', key: 'dodge-challenger-2018' },
+      { model: 'Charger', trim: 'SXT / R/T / Scat Pack / 392 (LD)', key: 'dodge-charger-2018' },
       { model: 'Durango', trim: 'SXT / GT / R/T / SRT / Citadel / Pursuit (WD)', key: 'dodge-durango-2018' }
     ],
     'Ford': [
+      { model: 'Edge', trim: 'SE / SEL / Titanium / Sport (2nd gen)', key: 'ford-edge-2017' },
       { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' },
       { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
       { model: 'F-150', trim: 'XL / XLT / Lariat / King Ranch / Platinum (13th gen)', key: 'ford-f150-2015' },
@@ -17061,13 +17342,16 @@ const VEHICLE_MENU = {
       { model: 'Yukon', trim: 'SLE / SLT / Denali (K2XX BOF)', key: 'gmc-yukon-2018' }
     ],
     'Honda': [
+      { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' },
       { model: 'Fit', trim: 'LX / Sport / EX / EX-L / Touring (GK gen)', key: 'honda-fit-2018' },
       { model: 'Odyssey', trim: 'LX / EX / EX-L / Touring (4th gen)', key: '' }
     ],
     'Hyundai': [ { model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (7th gen LF)', key: 'hyundai-sonata-2018' } ],
     'Jeep': [
+      { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
+      { model: 'Renegade', trim: 'Sport / Latitude / Limited / Trailhawk (BU)', key: 'jeep-renegade-2018' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (2DR & Unlimited)', key: 'jeep-wrangler-2012' }
     ],
     'Lexus': [
@@ -17078,12 +17362,14 @@ const VEHICLE_MENU = {
     ],
     'Mazda': [
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' },
+      { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
       { model: 'Mazda6', trim: 'Sport / Touring / Grand Touring / Signature (GJ gen)', key: 'mazda-mazda6-2018' }
     ],
     'Mitsubishi': [ { model: 'Outlander', trim: 'ES / SE / SEL / GT (3rd gen)', key: 'mitsubishi-outlander-2017' } ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
+      { model: 'Murano', trim: 'S / SV / SL / Platinum (Z52 gen)', key: 'nissan-murano-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)', key: 'nissan-pathfinder-2017' },
       { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
       { model: 'Sentra', trim: 'S / SV / SR / SL (B17 gen)', key: 'nissan-sentra-2017' }
@@ -17099,10 +17385,13 @@ const VEHICLE_MENU = {
       { model: 'Avalon', trim: 'XLE / XLE Premium / Touring / Limited — Hybrid (4th gen XX40)', key: 'toyota-avalon-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco / SE (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited / Limited Platinum (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)', key: 'toyota-highlander-hybrid-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Sequoia', trim: 'SR5 / Limited / TRD Pro / Platinum', key: 'toyota-sequoia-2016' },
       { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ]
   },
@@ -17117,7 +17406,11 @@ const VEHICLE_MENU = {
       { model: 'Silverado 1500', trim: 'WT / LT / LTZ / High Country (K2XX)', key: 'chevrolet-silverado-2014' },
       { model: 'Volt', key: '' }
     ],
-    'Ford': [ { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' } ],
+    'Ford': [
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (C520)', key: 'ford-escape-2013' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
+      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' }
+    ],
     'GMC': [ { model: 'Sierra 1500', trim: 'SLE / SLT / Denali (K2XX)', key: 'gmc-sierra-2014' } ],
     'Honda': [
       { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
@@ -17126,10 +17419,15 @@ const VEHICLE_MENU = {
       { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' }
     ],
     'Jeep': [
+      { model: 'Cherokee', trim: 'Sport / Latitude / Limited / Trailhawk / Overland (KL)', key: 'jeep-cherokee-2018' },
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
-    'Lexus': [ { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD', key: 'lexus-is-2018' },
+      { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
+    ],
     'Mazda': [
       { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' },
       { model: 'Mazda3', trim: 'i Sport / i Touring / i Grand Touring / s Grand Touring', key: 'mazda3-2014' },
@@ -17140,24 +17438,36 @@ const VEHICLE_MENU = {
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
       { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' },
       { model: 'Pathfinder', trim: 'S / SV / SL / Platinum (R52)', key: 'nissan-pathfinder-2017' },
-      { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' }
+      { model: 'Rogue', trim: 'S / SV / SL (T32, 2nd gen)', key: 'nissan-rogue-2017' },
+      { model: 'Sentra', trim: 'S / SV / SR / SL (B17 first year)', key: 'nissan-sentra-2017' }
     ],
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / TRD Off-Road / Limited / TRD Pro / Venture (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Avalon', trim: 'XLE / XLE Premium / Touring / Limited — Hybrid (4th gen XX40)', key: 'toyota-avalon-2018' },
       { model: 'Corolla', trim: 'L / LE / S / LE Eco (E170, 11th gen)', key: 'toyota-corolla-2014' },
       { model: 'Highlander', trim: 'LE / LE Plus / XLE / Limited (3rd gen)', key: 'toyota-highlander-2014' },
+      { model: 'Highlander Hybrid', trim: 'LE Plus / XLE / Limited / Platinum (XU50)', key: 'toyota-highlander-hybrid-2018' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
       { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
       { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ],
-    'Volkswagen': [ { model: 'Jetta GLI', key: '' } ]
+    'Volkswagen': [
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI', key: 'volkswagen-jetta-2018' },
+      { model: 'Jetta GLI', key: '' }
+    ]
   },
   2013: {
     'BMW': [ { model: '3 Series', trim: '320i / 328i / 330i / 340i / M340i (F30)', key: 'bmw-3series-2018' } ],
-    'Ford': [ { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' } ],
+    'Ford': [
+      { model: 'Escape', trim: 'S / SE / SEL / Titanium (2nd gen)', key: 'ford-escape-2013' },
+      { model: 'Explorer', trim: 'Base / XLT / Limited / Platinum / Sport', key: 'ford-explorer-2017' },
+      { model: 'Fusion', trim: 'S / SE / Titanium / Hybrid', key: 'ford-fusion-2017' }
+    ],
     'Honda': [
+      { model: 'Accord', trim: 'LX / Sport / EX / EX-L / Touring', key: 'honda-accord-2014' },
       { model: 'CR-V', trim: 'LX / SE / EX / EX-L (4th gen)', key: 'honda-crv-2015' },
       { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' }
     ],
@@ -17166,7 +17476,10 @@ const VEHICLE_MENU = {
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
     'Kia': [ { model: 'Sportage', trim: 'LX / EX / SX (3rd gen SL)', key: '' } ],
-    'Lexus': [ { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
+    ],
     'Mazda': [ { model: 'CX-5', trim: 'Sport / Touring / Grand Touring (KE gen)', key: 'mazda-cx5-2013' } ],
     'Nissan': [
       { model: 'Altima', trim: '2.5 S / SV / SL / 3.5 S / SL (L33, 5th gen)', key: 'nissan-altima-2013' },
@@ -17176,11 +17489,15 @@ const VEHICLE_MENU = {
     ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' } ],
     'Toyota': [
+      { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Avalon', trim: 'XLE / XLE Premium / Touring / Limited — Hybrid (4th gen XX40, first year)', key: 'toyota-avalon-2018' },
+      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
       { model: 'RAV4', trim: 'LE / XLE / SE / Limited (4th gen)', key: 'toyota-rav4-2016' },
       { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ],
     'Volkswagen': [ { model: 'Jetta', trim: 'S / SE / SEL / GLI (A6 gen)', key: '' } ]
   },
@@ -17194,41 +17511,70 @@ const VEHICLE_MENU = {
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
-    'Lexus': [ { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
+    ],
     'Nissan': [ { model: 'Frontier', trim: 'S / SV / Desert Runner / Pro-4X (D40 3rd gen)', key: 'nissan-frontier-2018' } ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' } ],
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
+      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
       { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ],
-    'Volkswagen': [ { model: 'GTI Mk6', key: '' } ]
+    'Volkswagen': [
+      { model: 'GTI Mk6', key: '' },
+      { model: 'Jetta', trim: 'S / SE / SEL / GLI', key: 'volkswagen-jetta-2018' }
+    ]
   },
   2011: {
-    'Acura': [ { model: 'MDX', key: '' } ],
+    'Acura': [
+      { model: 'MDX', key: '' },
+      { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' }
+    ],
     'Honda': [ { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' } ],
     'Jeep': [
       { model: 'Grand Cherokee', trim: 'Laredo / Limited / Overland / Summit (WK2)', key: 'jeep-grand-cherokee-2014' },
       { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK)', key: 'jeep-wrangler-2012' }
     ],
-    'Lexus': [ { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
+    ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: 'subaru-forester-2011' } ],
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
+      { model: 'Sienna', trim: 'L / LE / SE / XLE / Limited (XL30)', key: 'toyota-sienna-2015' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ]
   },
   2010: {
-    'Acura': [ { model: 'MDX', key: '' } ],
+    'Acura': [
+      { model: 'MDX', key: '' },
+      { model: 'TSX', trim: 'Base / Technology / V6 / V6 Technology', key: 'acura-tsx-2014' }
+    ],
     'Honda': [ { model: 'Ridgeline', trim: 'RT / RTS / RTL / Sport', key: 'honda-ridgeline-2012' } ],
     'Jeep': [ { model: 'Wrangler', trim: 'Sport / Sahara / Rubicon (JK 3.8L pre-Pentastar)', key: '' } ],
-    'Lexus': [ { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' } ],
+    'Lexus': [
+      { model: 'GX460', trim: 'Base / Premium / Luxury', key: 'lexus-gx460-2015' },
+      { model: 'RX 350', trim: 'Base / Premium / Navigation', key: 'lexus-rx350-2011' }
+    ],
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: '' } ],
     'Toyota': [
       { model: '4Runner', trim: 'SR5 / Trail / Limited (5th gen N280)', key: 'toyota-4runner-2018' },
       { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
-      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' }
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
+      { model: 'Prius', trim: 'Two / Three / Four / Five (ZVW30, 3rd gen)', key: 'toyota-prius-2012' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ]
   },
   2009: {
@@ -17236,14 +17582,20 @@ const VEHICLE_MENU = {
     'Subaru': [ { model: 'Forester', trim: '2.5X / Premium / Limited / XT', key: '' } ],
     'Toyota': [
       { model: '4Runner', trim: 'V6 SR5 / Sport / Trail / Limited / V8', key: 'toyota-4runner-2008' },
-      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' }
+      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ]
   },
   2008: {
     'Honda': [ { model: 'CR-V', key: '' } ],
     'Toyota': [
       { model: '4Runner', trim: 'V6 SR5 / Sport / Trail / Limited / V8', key: 'toyota-4runner-2008' },
-      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' }
+      { model: 'Highlander', trim: 'Base / SE / Limited', key: 'toyota-highlander-2010' },
+      { model: 'Land Cruiser', trim: 'Base (J200)', key: 'toyota-land-cruiser-2018' },
+      { model: 'Tacoma', trim: 'SR5 / TRD Sport / TRD Off-Road', key: 'toyota-tacoma-2012' },
+      { model: 'Tundra', trim: 'SR / SR5 / Limited / TRD Pro / 1794 Edition / Platinum (2nd gen XK50)', key: 'toyota-tundra-2018' }
     ]
   }
 };
