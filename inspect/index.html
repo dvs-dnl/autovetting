@@ -3686,9 +3686,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      
-      { number: '14V-327', title: 'ABS Modulator Overheating', desc: 'ABS modulator may overheat on some build dates. Verify completion.' },
-      { number: '18V-575', title: 'Fuel Pump (i-Stop Models)', desc: 'Fuel pump may fail causing stall. Free dealer replacement.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -3827,8 +3825,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '20V-012', title: 'Denso Low-Pressure Fuel Pump', desc: 'May fail causing stall or no-start. Free dealer replacement — verify VIN.' },
-      { number: '19V-133', title: 'Pre-Collision System Calibration', desc: 'PCS may not detect certain hazards. Free software update.' },
-      { number: '18V-004', title: 'Seat Recliner Mechanism', desc: 'Seat may not lock in position; injury risk. Free repair — verify VIN.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ],
     vinNote: 'The 8th VIN digit is the critical decode for the 2018 Camry (XV70). Position 8 = A means the 2.5L A25A-FKS 4-cylinder (203 hp); position 8 = 6 means the 3.5L 2GR-FKS V6 (301 hp). These two engines have diverging inspection priorities: the A25A I4 has documented oil consumption reports and is subject to the Denso fuel pump recall (20V-012), while the 2GR-FKS V6 is one of Toyota\'s most proven platforms but carries a different timing chain profile worth checking at high mileage. Hybrid trim VINs encode powertrain differently — confirm the hybrid badge on the fender matches what the NHTSA vPIC decode returns at vpic.nhtsa.dot.gov. Any mismatch may indicate a trim badge swap. The 10th position encodes model year: J = 2018.',
     blogUrl: '/blog/2018-toyota-camry-buyers-guide'
@@ -3974,10 +3971,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '18V-568', title: 'Seat-Belt Pretensioner — Fire Risk', desc: 'Deploying front pretensioner can ignite B-pillar insulation/wiring (2015–2018 F-150). Free dealer remedy — verify before purchase.' },
-      { number: '15V-554', title: 'Transmission Shift Cable Bushing', desc: 'Bushing may disconnect; vehicle may move when gear selector shows Park. Verify completion.' },
-      { number: '15V-303', title: 'Knee Airbag Deployment', desc: 'Knee airbag may not deploy in crash. Free dealer repair.' },
-      { number: '19V-075', title: 'Rear Axle Shaft Bearing', desc: 'Bearing may fracture; rear axle separation risk. Verify completion.' },
-      { number: '15V-258', title: 'Rear Camera Display', desc: 'Backup camera image may fail to display. Free software update.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
   'toyota-rav4-2016': {
@@ -4115,7 +4109,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '18V-228', title: 'Pre-Collision System Software Update', desc: 'PCS may issue a false braking event. Free software update — verify completion.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -4246,8 +4240,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: 'Multiple', title: 'Open recalls — VIN check (not a Takata car)', desc: "Honda's CR-V Takata scope is 2002-2011 — the second and third generation cars. The RM 4th-gen CR-V is not in any Takata inflator campaign, so ignore a listing that advertises the repair. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply and require every open one closed before purchase." },
-      { number: '19V-965', title: 'Seat Belt Latch', desc: 'Seat belt latch may not engage properly. Verify completion by VIN. Free repair.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check (not a Takata car)', desc: "Honda's CR-V Takata scope is 2002-2011 — the second and third generation cars. The RM 4th-gen CR-V is not in any Takata inflator campaign, so ignore a listing that advertises the repair. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply and require every open one closed before purchase." }
     ]
   },
 
@@ -5094,10 +5087,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '18V-585', title: 'Rear View Camera Display', desc: 'Camera may not display within required 2 seconds — verify status.' },
-      { number: '20V-418', title: 'Fuel Pump Impeller', desc: 'Fuel pump may crack and cause stall — high priority; verify remedy.' },
-      { number: '21V-009', title: 'Side Curtain Airbag', desc: 'Airbag may not deploy correctly in certain crash types — verify status.' },
-      { number: '23V-123', title: 'Rear Seat Restraint', desc: 'Rear seat belt anchor may not be properly secured — verify status.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -5634,7 +5624,7 @@ const CHECKLISTS = {
           {
             title: 'Open recall campaigns — verify via VIN',
             risk: 'monitor', riskLabel: 'Monitor',
-            desc: 'The KE CX-5 has had several recalls including HID headlamp compliance (15V-461, certain Grand Touring builds), windshield wiper (14V-292), and fuel pump (shared with broader Mazda 2.5L campaign). All should be closed before purchase.',
+            desc: 'The KE CX-5 has had several recalls including HID headlamp compliance (15V-461, certain Grand Touring builds). Coverage varies by build date, so the VIN lookup is the only reliable way to see which campaigns apply to a specific car.',
             check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaigns are remedied free at a Mazda dealer.',
             cost: 'Free dealer repair',
             source: 'NHTSA recall database'
@@ -5644,8 +5634,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '15V-461', title: 'HID Headlamps (Grand Touring)', desc: 'HID headlamp aim may not meet FMVSS standards on select builds — verify via VIN.' },
-      { number: '14V-292', title: 'Windshield Wiper', desc: 'Wiper pivot shaft may corrode and cause failure — verify status.' },
-      { number: '20V-579', title: 'Fuel Pump / Electrical', desc: 'Shared Mazda fuel pump campaign — verify via VIN check.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6210,7 +6199,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '19V-415', title: 'Brake Booster Pump', desc: 'eTorque: brake boost may be reduced — software fix.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6312,8 +6301,8 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '22V-486', title: 'Rear Axle Bolt Fracture — CRITICAL', desc: 'Rear axle can separate from vehicle. Do not drive until repaired.' },
-      { number: '21V-485', title: 'Fuel Injector Leak', desc: 'Fuel injector seals on 2.3L EcoBoost may leak — fire risk.' },
-      { number: '20V-575', title: 'Rearview Camera — Image May Blank or Distort', desc: 'FMVSS 111: a poor camera connection can cause the rearview image to blank or distort (Ford 20C19). Free dealer remedy — confirm closed by VIN.' }
+      { number: '20V-575', title: 'Rearview Camera — Image May Blank or Distort', desc: 'FMVSS 111: a poor camera connection can cause the rearview image to blank or distort (Ford 20C19). Free dealer remedy — confirm closed by VIN.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6355,14 +6344,12 @@ const CHECKLISTS = {
       ]},
       { title: 'Documentation', items: [
         { title: 'Recall verification (fleet cars often skip dealer visits)', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Fleet vehicles often miss recall repairs. Key recall 19V-777 covers park pawl failure.',
+          desc: 'Fleet vehicles often miss recall repairs, and this generation sold heavily into fleet and rental service.',
           check: '<strong>Run VIN at nhtsa.gov/recalls.</strong>',
           cost: 'Walk away from unresolved safety recalls', source: 'NHTSA' }
       ]}
     ],
     recalls: [
-      { number: '19V-777', title: 'Park Pawl Fracture', desc: 'Parking pawl can fracture — vehicle may roll. Free repair.' },
-      { number: '18V-139', title: 'Steering Gear Seals', desc: 'Power steering seals may leak — fire risk.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -6635,7 +6622,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
-      { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'Hose may crack — reduced braking.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -6728,7 +6715,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: 'Multiple', title: 'Engine recalls — VIN check', desc: 'Kia Nu/Theta engines have multiple engine-failure/KSDS campaigns by year and trim. Run the VIN at nhtsa.gov/recalls and confirm all engine recalls are closed.' },
-      { number: '18V-013', title: 'Brake Booster Check Valve', desc: 'May fail — reduced braking assist.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -7019,7 +7006,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-027', title: 'Occupant Classification System', desc: 'Passenger airbag may be incorrectly disabled.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -8113,8 +8100,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '23V-838', title: 'Autosteer Controls (Autopilot)', desc: 'Autosteer controls may be insufficient to prevent misuse — free OTA update (2023.44.30). Covers 2017–2023 Model 3; verify by VIN.' },
-      { number: '21V-020', title: 'In-Car Camera', desc: 'Camera monitoring software update.' },
-      { number: '20V-066', title: 'Touchscreen eMMC Wear', desc: 'MCU1 eMMC chip may wear out — display replacement.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9556,7 +9542,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '18V-226', title: 'Brake Booster Vacuum Hose', desc: 'May crack — reduced braking.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -9707,7 +9693,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-485', title: 'Fuel Injector Seal', desc: '2.0T: may leak — fire risk.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10280,8 +10266,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '22V-076', title: 'Battery Module Fire Risk — CRITICAL', desc: 'Battery may cause fire. MODULE REPLACEMENT required — verify complete.' },
-      { number: '21V-650', title: 'Onboard Charging Module', desc: 'OBCM may cause fire — replacement required.' },
-      { number: '20V-583', title: 'Battery Module Software', desc: 'Interim software fix before hardware remedy.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10416,8 +10401,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-394', title: 'EyeSight Camera', desc: 'May deactivate — software fix.' },
-      { number: '21V-587', title: 'Denso Fuel Pump Impeller', desc: 'Low-pressure fuel pump may fail — engine stall risk. 2018–2020 Outback; free replacement (Subaru WRG-21).' }
+      { number: '21V-587', title: 'Denso Fuel Pump Impeller', desc: 'Low-pressure fuel pump may fail — engine stall risk. 2018–2020 Outback; free replacement (Subaru WRG-21).' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10843,7 +10828,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: '25V-010', title: 'Side Curtain Airbag Inflator (Joyson)', desc: 'Curtain airbag inflator can rupture from internal corrosion (stress-corrosion cracking), spraying metal — free replacement. Affects some 2016 + 2018–2019 Classic builds; confirm your VIN at nhtsa.gov.' },
-      { number: '17V-225', title: 'Fuel Tank Strap', desc: 'Strap may corrode on salt-belt trucks — verify applicability by VIN.' }
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -10890,7 +10875,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { number: '21V-485', title: 'Fuel Injector Seal', desc: '3.5T: may leak — fire risk.' },
+      { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
 
@@ -11519,11 +11504,11 @@ const CHECKLISTS = {
           source: 'Hyundai drivetrain standard' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Engine stall / fuel system recall (2020 models)', risk: 'high', riskLabel: 'High Risk — Check 2020 VIN',
-          desc: 'Some 2020 Palisade models were recalled for a fuel system issue that could cause an unexpected engine stall. NHTSA 21V-056.',
+        { title: 'Open-recall check (2020 model year)', risk: 'high', riskLabel: 'High Risk — Check 2020 VIN',
+          desc: 'AutoVetting could not confirm a 2020 Palisade fuel-system campaign against the NHTSA database, so no campaign number is asserted here. Coverage varies by build date — the VIN lookup is the source of truth.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm recall is closed.</strong>',
           cost: 'Free dealer repair',
-          source: 'NHTSA recall 21V-056' }
+          source: 'NHTSA recalls (VIN lookup)' }
       ]},
       { title: 'HVAC & Electrical', items: [
         { title: 'Tri-zone climate control — first-year complaints', risk: 'monitor', riskLabel: 'Monitor',
@@ -11553,7 +11538,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '21V-056', description: 'Fuel system issue causing unexpected engine stall (2020 models)', severity: 'High', remedy: 'Dealer software update and component replacement at no cost' }
+      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
     ]
   },
   'toyota-rav4-2019': {
@@ -11671,7 +11656,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '17V-718', description: 'Fuel pump coupling failure risk — engine stall on certain 2015-2019 WRX', severity: 'High', remedy: 'Dealer fuel pump replacement at no cost; check VIN at nhtsa.gov' }
+      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
     ]
   },
   'ford-bronco-2021': {
@@ -11684,10 +11669,10 @@ const CHECKLISTS = {
     sections: [
       { title: 'Recalls — Check First (2021 especially)', items: [
         { title: '7-speed manual transmission — clutch/gearshift issue', risk: 'high', riskLabel: 'High Risk — Check 7MT VINs',
-          desc: 'Ford recalled some 2021 Bronco 7-speed manual transmissions for a clutch damper spring that could cause transmission lockout. Affected VINs need the clutch assembly replaced.',
+          desc: 'Owners have reported clutch and gearshift trouble on 2021 Bronco trucks with the 7-speed manual. AutoVetting could not confirm an NHTSA campaign for it, so this is an inspection item rather than a recall — the VIN lookup is the source of truth for open campaigns.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. If 7-speed manual, confirm clutch recall is closed.</strong>',
           cost: 'Free dealer repair',
-          source: 'NHTSA Ford Bronco 7MT recall 21V-625' },
+          source: 'NHTSA recalls (VIN lookup)' },
         { title: 'HVAC duct improper installation', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Early production 2021 Broncos had HVAC duct routing issues that could cause reduced airflow or noise.',
           check: '<strong>Test all climate settings including defrost. Any weak zones indicate duct issue.</strong>',
@@ -11739,8 +11724,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '21V-625', description: '7-speed manual transmission clutch damper spring failure — gearbox lockout risk', severity: 'High', remedy: 'Dealer clutch assembly replacement at no cost' },
-      { campaign: 'MIC Hardtop', description: '2021 molded hardtop cracking and water intrusion', severity: 'High', remedy: 'Ford replacement hardtop program (check dealer for status)' }
+      { campaign: 'MIC Hardtop', description: '2021 molded hardtop cracking and water intrusion', severity: 'High', remedy: 'Ford replacement hardtop program (check dealer for status)' },
+      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
     ]
   },
   'bmw-x1-2018': {
@@ -11802,7 +11787,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '20V-286', description: 'Fuel pump failure risk on select F48 X1 models', severity: 'High', remedy: 'Free dealer fuel pump replacement; check VIN at nhtsa.gov' }
+      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
     ]
   },
   'hyundai-kona-2019': {
@@ -12290,10 +12275,10 @@ const CHECKLISTS = {
     stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 680, topComplaintArea: 'Engine / Death Wobble / Electrical' },
     sections: [
       { title: 'Recall — Check First', items: [
-        { title: 'Fuel tank skid plate / fuel leak recall', risk: 'high', riskLabel: 'High Risk — Check VIN',
-          desc: 'NHTSA 19V-243 covers certain 2018–2019 JL Wranglers for a fuel tank vent that could allow fuel to leak in the event of a crash.',
+        { title: 'Fuel system open-recall check', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'AutoVetting could not confirm an NHTSA campaign number for a JL fuel-tank-vent leak, so none is asserted here. Fuel-system campaign coverage varies by build date — run the VIN.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA recall 19V-243' }
+          cost: 'Free dealer repair where a campaign applies', source: 'NHTSA recalls (VIN lookup)' }
       ]},
       { title: 'Death Wobble (Lifted / Modified)', items: [
         { title: 'Death wobble on lifted examples', risk: 'high', riskLabel: 'High Risk if lifted',
@@ -12328,12 +12313,12 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: '19V-243', description: 'Fuel tank vent — fuel leak risk in crash on select 2018-2019 JL', severity: 'High', remedy: 'Free dealer repair' }]
+    recalls: [{ campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }]
   },
   'ford-maverick-2022': {
     year: 2022, make: 'Ford', model: 'Maverick', trim: 'XL / XLT / Lariat (1st gen, 2022–present)',
     engine: '2.5L Atkinson-cycle Hybrid I4 (191 hp combined, standard) or 2.0T EcoBoost I4 (250 hp, optional)',
-    vinNote: "The 2022 Maverick offers two completely different powertrains and the 8th VIN digit separates them instantly. 8th digit \u20183\u2019 = 2.5L Atkinson-cycle hybrid I4 (FWD-only, 191 hp combined, eCVT) — the 42-mpg-city standard drivetrain on most XL/XLT trucks, Toyota-style hybrid tech with no chronic failure modes. 8th digit \u20189\u2019 = 2.0L EcoBoost turbo I4 (GTDI, 250 hp, AWD-available, 8-speed automatic) — the tow-rated choice (4,000 lb vs 2,000 lb) that trades the hybrid\u2019s economy for capability; change oil every 5,000 miles and watch for typical turbo direct-injection carbon buildup at higher mileage. The hybrid cannot be paired with AWD, so a listing advertising \u2018hybrid AWD\u2019 is mislabeled. Whichever engine, run the VIN at nhtsa.gov for recall 22V-899 (rear-axle-bolt torque) and confirm it is closed. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a>.",
+    vinNote: "The 2022 Maverick offers two completely different powertrains and the 8th VIN digit separates them instantly. 8th digit \u20183\u2019 = 2.5L Atkinson-cycle hybrid I4 (FWD-only, 191 hp combined, eCVT) — the 42-mpg-city standard drivetrain on most XL/XLT trucks, Toyota-style hybrid tech with no chronic failure modes. 8th digit \u20189\u2019 = 2.0L EcoBoost turbo I4 (GTDI, 250 hp, AWD-available, 8-speed automatic) — the tow-rated choice (4,000 lb vs 2,000 lb) that trades the hybrid\u2019s economy for capability; change oil every 5,000 miles and watch for typical turbo direct-injection carbon buildup at higher mileage. The hybrid cannot be paired with AWD, so a listing advertising \u2018hybrid AWD\u2019 is mislabeled. Whichever engine, run the VIN at nhtsa.gov/recalls and confirm every open campaign is closed. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a>.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The Maverick is a genuinely clever compact truck — standard hybrid on XL/XLT delivers 42 mpg city, making it the most fuel-efficient truck ever sold. The standard hybrid drivetrain has no reliability concerns (Toyota-licensed design). The optional 2.0T EcoBoost trades fuel economy for towing capacity and is solid. First-year 2022 models had some minor quality complaints; 2023+ are better. Very high demand makes these hold value well — inspect carefully before paying asking price.",
     stats: { itemsToCheck: 9, recalls: 2, ownerComplaints: 220, topComplaintArea: 'Body / Minor quality (2022)' },
@@ -12355,10 +12340,10 @@ const CHECKLISTS = {
           cost: '$0–$300 dealer adjustment', source: 'Ford Maverick owner community' }
       ]},
       { title: 'Recall', items: [
-        { title: 'Rear axle bolt recall (select 2022–2023)', risk: 'high', riskLabel: 'High Risk — Check VIN',
-          desc: 'NHTSA recall 22V-899: some 2022–2023 Mavericks had improperly torqued rear axle bolts that could loosen and cause loss of control.',
+        { title: 'Rear axle bolt torque — open-recall check', risk: 'high', riskLabel: 'High Risk — Check VIN',
+          desc: 'AutoVetting could not confirm an NHTSA campaign number for a Maverick rear-axle-bolt torque defect, so none is asserted here. Coverage varies by build date — run the VIN.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. Confirm closed.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA recall 22V-899' }
+          cost: 'Free dealer repair where a campaign applies', source: 'NHTSA recalls (VIN lookup)' }
       ]},
       { title: 'Documentation', items: [
         { title: 'Service records', risk: 'low', riskLabel: 'Low Risk',
@@ -12367,7 +12352,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: '22V-899', description: 'Rear axle bolts insufficiently torqued — vehicle control risk', severity: 'High', remedy: 'Free dealer torque check and correction' }]
+    recalls: [{ campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }]
   },
   'kia-ev6-2022': {
     year: 2022, make: 'Kia', model: 'EV6', trim: 'Light / Standard / Standard Plus / Wind / GT-Line / GT (1st gen, 2022–present)',
@@ -14262,10 +14247,10 @@ const CHECKLISTS = {
           desc: 'Ford recalled 2021–2022 Mach-E units for high-voltage battery main contactors that can overheat and cause a loss of drive power.',
           check: '<strong>Run VIN at nhtsa.gov/recalls. 22V-412 must be confirmed closed.</strong>',
           cost: 'Free dealer repair (software update / contactor)', source: 'NHTSA recall 22V-412' },
-        { title: 'Frunk latch recall (21V-711)', risk: 'high', riskLabel: 'High Risk — Check VIN',
+        { title: 'Frunk latch — open-recall check', risk: 'high', riskLabel: 'High Risk — Check VIN',
           desc: 'Front trunk (frunk) latch can open unexpectedly while driving on some units.',
           check: '<strong>Run VIN at nhtsa.gov. Test frunk latch engagement manually.</strong>',
-          cost: 'Free dealer repair', source: 'NHTSA recall 21V-711' }
+          cost: 'Free dealer repair where a campaign applies', source: 'NHTSA recalls (VIN lookup)' }
       ]},
       { title: 'Battery', items: [
         { title: 'HV battery SoH', risk: 'monitor', riskLabel: 'Monitor',
@@ -14292,7 +14277,7 @@ const CHECKLISTS = {
     ],
     recalls: [
       { campaign: '22V-412', description: 'HV battery main contactors overheat — loss of drive power', severity: 'Critical', remedy: 'Free dealer software update / contactor repair' },
-      { campaign: '21V-711', description: 'Frunk latch opens unexpectedly while driving', severity: 'High', remedy: 'Free dealer latch replacement' }
+      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
     ]
   },
   'nissan-leaf-2019': {
