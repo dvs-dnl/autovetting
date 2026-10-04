@@ -5534,7 +5534,7 @@ const CHECKLISTS = {
     vinNote: "The 1st-gen CX-5 (KE platform, 2013–2016) came with two SkyActiv-G inline-fours that share the same architecture but differ in displacement. 2.0L SkyActiv-G (155hp) was the 2013 launch engine and was paired with the Sport trim only, available with either 6-speed manual or 6-speed automatic, FWD only. 2.5L SkyActiv-G (184hp) launched in 2014 for the Touring/Grand Touring trims and became standard across the line in 2015–2016; 6-speed automatic only, FWD or AWD. Both engines have the same documented carbon-buildup pattern (a SkyActiv-G family trait — walnut-blast intake valves every 80–100k miles) and the same chain-tensioner concern above 120k miles. The 2.5L is meaningfully better for hauling and highway passing; the 2.0L is fine for commuting but feels strained loaded. Confirm displacement by looking at the engine cover (it's printed in large letters) or the door-jamb sticker. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
     stats: {
       itemsToCheck: 14,
-      recalls: 3,
+      recalls: 1,
       ownerComplaints: 312,
       topComplaintArea: 'Visibility / Electrical'
     },
@@ -5624,7 +5624,7 @@ const CHECKLISTS = {
           {
             title: 'Open recall campaigns — verify via VIN',
             risk: 'monitor', riskLabel: 'Monitor',
-            desc: 'The KE CX-5 has had several recalls including HID headlamp compliance (15V-461, certain Grand Touring builds). Coverage varies by build date, so the VIN lookup is the only reliable way to see which campaigns apply to a specific car.',
+            desc: 'NHTSA 16V-644 (Mazda recall 9916H) covers 2013-2016 CX-5 built December 15, 2011 through December 26, 2015: the liftgate support struts can corrode, break, and let the liftgate drop without warning. Coverage is build-date scoped, so the VIN lookup is the only reliable way to see which campaigns apply to a specific car.',
             check: '<strong>Run the VIN at nhtsa.gov/recalls before purchase.</strong> Any open campaigns are remedied free at a Mazda dealer.',
             cost: 'Free dealer repair',
             source: 'NHTSA recall database'
@@ -5633,7 +5633,7 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '15V-461', title: 'HID Headlamps (Grand Touring)', desc: 'HID headlamp aim may not meet FMVSS standards on select builds — verify via VIN.' },
+      { number: '16V-644', title: 'Liftgate Support Struts — Corrosion', desc: '2013-2016 CX-5 built December 15, 2011 through December 26, 2015: corroded liftgate support struts can break and let the liftgate drop unexpectedly, risking injury. Dealers replace both supports free of charge. Mazda recall 9916H; 580,455 units across Mazda3, Mazda5, CX-5 and CX-3.' },
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
     ]
   },
@@ -5972,7 +5972,7 @@ const CHECKLISTS = {
       { number: '12V-551', title: '1.6L Engine Overheat / Fluid Leak Fire Risk', desc: "2013 Escape built 2011-10-05 through 2012-11-26 and 2013 Fusion with the 1.6L. Engines may overheat and leak fluid onto the hot exhaust. Ford issued this one before a remedy existed and arranged alternate transportation for owners. Verify by VIN that the final remedy was performed, not just that the car was notified." },
       { number: '22V-413', title: 'Transmission Shift-Cable Bushing / Rollaway (Ford 22S43)', desc: "2013-2019 Escape (also 2013-2018 C-Max, 2013-2016 Fusion, 2013-2021 Transit Connect, 2015-2018 Edge, ~2.9M vehicles). The bushing attaching the shifter cable to the transmission can degrade or detach, so the car may not go into the gear selected and can roll after the driver selects Park. Remedy replaces the under-hood bushing and adds a protective cap. Test it on the lot: with the car on a slight grade, select Park and let off the brake before shutting down \u2014 and always confirm the parking brake works." },
       { number: '18V-471', title: 'Shift-Cable Bushing Detaches \u2014 earlier campaign (Ford 18S20)', desc: "2013-2014 Escape and 2013-2016 Fusion with the six-speed automatic. Same bushing, earlier remedy: the driver can move the lever to Park and remove the key while the transmission is not actually in Park, with no warning chime. A 2013 Escape is in scope for BOTH this and 22V-413, and the later campaign exists because this repair did not hold. Check that both are closed." },
-      { number: '20V-331', title: 'Door Latches \u2014 prior repair may not have been done correctly (Ford 20S30)', desc: "2013-2015 Escape among many Ford and Lincoln models. These cars were already repaired under 15V-246, 16V-643 or 17V-210, but the repair may have been performed incorrectly, leaving a latch component that can break and let a door open while driving. Remedy inspects the latch date codes and replaces latches as needed. Open and firmly close every door; a door that needs a second slam is worth a VIN check." },
+      { number: '20V-331', title: 'Door Latches \u2014 prior repair may not have been done correctly (Ford 20S30)', desc: "2013-2015 Escape among many Ford and Lincoln models. Escapes in this population were already repaired under 16V-643, but the repair may have been performed incorrectly, leaving a latch component that can break and let a door open while driving. (15V-246 and 17V-210, the other campaigns 20V-331 re-inspects, cover the Fiesta, Fusion and MKZ \u2014 not the Escape.) Remedy inspects the latch date codes and replaces latches as needed. Open and firmly close every door; a door that needs a second slam is worth a VIN check." },
       { number: '16V-643', title: 'Door Latch Component Breakage (Ford 16S30)', desc: "2013-2015 Escape and C-MAX, 2012-2015 Focus, 2015 Mustang and MKC, 2014-2016 Transit Connect. A component inside the door latch can break, preventing the door from latching or making it seem closed when it is not. Remedy replaces the latches with an improved part. Superseded in practice by 20V-331 for cars whose first repair was botched." },
       { number: '14V-597', title: 'Restraint Control Module Coating Cracks \u2014 airbags may not deploy (Ford 14S21)', desc: "2013-2014 Escape built 2011-10-05 through 2013-11-01, plus C-Max, Fusion and MKZ. The coating on the restraint control module can crack; with humidity, circuits on the board short and the frontal airbags, side curtains and belt pretensioners may not function in a crash. Remedy replaces the RCM. This is the most safety-consequential non-fire recall on the car \u2014 an illuminated airbag lamp is a hard stop." },
       { number: '14V-237', title: 'Rollover Curtain Airbag Deployment Delay (Ford 14S04)', desc: "2013-2014 Escape and C-MAX. A programming error in the restraint control module can delay side-curtain rollover airbag deployment. Remedy is an RCM reflash \u2014 quick and free, so there is no excuse for it to be open." },
