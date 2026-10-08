@@ -138,6 +138,13 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: embedding thesis reinforced again (third consecutive CarGurus-family finding) — CarGurus keeps building the discovery front end (now a named conversational brand), never the condition/trust back end; a Guru result ending in "book an independent inspection" is a more natural CTA now that it's conversational. No severity or action change from 06-28 baseline.
     Weekly milestone: DONE — intel ready for Daniel's review. Next in rotation: Cars.com (#8, cycle 2) [AI search rollout / inspection or trust-layer launches].
 
+  2026-10-08 08:13 [scheduled task]: profiled Cars.com (Cars Commerce, #8, cycle 2) (🟡).
+    Output: Competitors/_Monitor/2026-10-08-cars-com.md (no Awaiting-Daniel append -- not 🔴).
+    Sibling check: no overlaps. Ready to deploy/publish (recall-audit waves 24-25, vinnote batches 09-09..10-01, menu/pinpoint fixes back through 08-14) is entirely inspect/index.html, pinpoint/index.html, or scripts/recall-ledger.json -- none touch Competitors/. In-flight autovet-recall-study-under-15k (_hub/Content/_seo-research + inspect/index.html + scripts/recall-ledger.json), autovet-cpo-protocol-ingestion (Product/CPO-Protocols/) and autovet-seo-content (Content/blog/) all orthogonal -- none reference Cars.com, Cars Commerce, or AccuTrade. Done (last 10) = recall-audit/vinnote/menu fixes, none touch Competitors/. Verified against: 2026-07-02-cars-com.md (baseline for this cycle's delta). No Re-sync needed.
+    Key delta: "Dealer Verified Listings" launched on the Marketplace (flagged in Q2 2026 results 08-06, rollout called central to subscription growth on the 08-07 earnings call) -- a consumer-visible "Dealer Verified Condition" badge on SRP/VDP. Confirmed via Cars Commerce's own dealer help docs: the dealer's own staff verify condition inside AccuTrade, a dealer manager role signs off, no third party or independent inspector anywhere in the workflow; bundled into the Premium Plus package as a revenue lever (15% penetration target). Same dealer-self-certified pattern as Carfax's Homegrown badge (06-25, 🟢) and CarGurus' "unbiased recommendation" (06-28) -- now a 3-for-3 marketplace pattern, sharpening the still-unwritten independence counter-positioning asset with a concrete, citable example (dealer verifies + dealer manager approves). Carson AI now ~20% of searches (scaled, not new in kind). Two leadership changes (CFO transition announced 09-30, effective 11-06; CEO already changed at baseline) -- noted, not product-relevant. Financials steady: Q2 revenue $179.9M +1% YoY, net income $14.3M +103%, adj. EBITDA 29.4% margin, FY26 guide reaffirmed -- same trajectory as 07-02 baseline.
+    Implication: embedding thesis reinforced a fourth consecutive marketplace-side cycle (06-25 Carfax, 06-28 & 10-01 CarGurus, now Cars.com) -- no marketplace has shipped an independent/buyer-ordered condition layer, only seller-sourced trust badges. Escalation trigger to 🔴 (not tripped): a third-party or AI-computer-vision inspection step added to Dealer Verified Listings, or AccuTrade condition data exposed as independently-sourced rather than dealer self-report. Housekeeping (repeat, open since 06-18): Competitor_Analysis.md's pending "Marketplace/channel" archetype block should now contrast each marketplace's trust-badge source (Carfax=Carfax-sourced, CarGurus=platform-recommendation, Cars.com=dealer-sourced) against AutoVet's buyer-ordered independent model.
+    Weekly milestone: DONE -- intel ready for Daniel's review (not 🔴, no Awaiting-Daniel append required). Next in rotation: AutoTrader (Cox Automotive) (#9, cycle 2) [Cox-wide acquisitions, any inspection-layer signals].
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
@@ -364,6 +371,116 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   Sibling check: Verified against: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for sportage/kia found zero content-authoring hits within the 14-day window -- only a stale (2026-06-28, >80 days old) autovet-cpo-protocol-ingestion note about a "Kia Sportage 2023" vinnote-queue mention (different model year, different file tree, no overlap) and today's autovetting-menu-reroute-and-orphan-repair-2026-09-23 Ready block, which touches mazda3/highlander/civic/etc. menu routing but carries zero Sportage or Kia references (confirmed via targeted grep of that block). In-flight autovet-competitor-monitor (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, Kia protocol already ingested 2026-06-28, read-only reused this run) orthogonal. Ready to deploy/publish section (menu-reroute 09-23, menu-phantom-year-rows 09-22, checklist-generation-spans 09-21, menu-generation-and-year-gap-fix 09-17, pinpoint-dead-route-repair 09-16, and the vinnote/inspect-render batches 09-09 through 09-14) is entirely inspect/index.html, pinpoint/index.html, or scripts/ -- none touch Content/blog/, Content/_seo-research/, or a Kia Sportage slug. No overnight-builder/vinnote/content-checklist-authoring task in flight is launching a Kia Sportage page. No Re-sync needed.
   Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: re-check whether Toyota Highlander (#20) has cleared the recall-audit generation-boundary sweep (wave 24 still hasn't landed as of this run, now 6 runs deferred since 08-26); otherwise continue Tier-2 with Subaru Forester, Mazda3, or Hyundai Elantra (all still genuinely untouched, verified against the blog directory this run, not just the tracking table). Flagging for Daniel again (not fixed this run, outside scope, now a 3rd-run recurrence): the top-500-vehicles.md "Already covered" table's pre-06-17 tracking gap should get a one-time backfill so future runs stop needing to independently re-derive it from the blog directory.
 
+
+  2026-09-30 12:23 [scheduled task]: drafted 2021 Hyundai Elantra (7th-gen CN7, launch year) pillar
+  post -- Tier-2. Of the three untouched Tier-2 candidates flagged since 09-16 (Subaru Forester,
+  Mazda3, Hyundai Elantra), picked Elantra: launch year of an all-new platform with three distinct
+  powertrains (2.0L MPI Nu / 1.6T Gamma II N Line DCT / 1.6L Kappa Hybrid), a cluster of FOUR
+  separate seat-belt-pretensioner recall waves (21V796000 10/13/21, 22V123000 3/3/22, 22V218000
+  4/1/22, 22V354000 5/19/22) that no aggregator page totals up, a Hybrid-only unintended-acceleration
+  recall (23V589000, ~38,000 US units, MCU software fault) that does NOT apply to the gas trims, and
+  a documented Forward Collision-Avoidance Assist phantom-braking/non-engagement owner-complaint
+  pattern (57 combined NHTSA complaints per carcomplaints.com/lemberglaw, not an open recall).
+  Also four other verified recalls: 21V302000 (4/28/21, seat-recliner weld), 21V00M000 (12/28/21,
+  windshield bonding), 22V632000 (8/18/22, airbag emblem weld), 24V879000 (11/21/24, rearview
+  camera, gas+Hybrid).
+  Output: Content/blog/2026-09-30-2021-hyundai-elantra-buyers-guide.md (~1,900 words body,
+  status: draft), Content/_seo-research/2026-09-30-2021-hyundai-elantra.md.
+  CATALOG NOTE: the Hyundai CPO protocol file's (Product/CPO-Protocols/hyundai-certified.md) Nu-engine
+  "stall/fire" flag (Recall 203 / 21V-301) does NOT apply to this car -- that campaign covers the
+  outgoing 2019-2020 AD-generation Elantra's Nu engine, a different platform despite sharing the "Nu"
+  family name. Independently confirmed via NHTSA's own recallsByVehicle API: zero 21V-301 hits for
+  2021 or 2022 model-year Elantra. Flagged in the post so a seller/forum thread can't wave that
+  recall at a CN7 buyer.
+  No claims left unverified except: no TSB number found for the FCA phantom-braking pattern or the
+  dashboard-warning-light/power-steering owner-complaint pattern (both described as NHTSA
+  owner-complaint patterns, not confirmed defects or recalls, per the site's anti-fabrication
+  convention).
+  Sibling check: no overlaps. In-flight autovet-competitor-monitor (Competitors/, last entry 09-24
+  Carfax, next=CarGurus) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 09-27
+  Jaguar/Land Rover, next=Mini) orthogonal -- neither references Hyundai or Elantra anywhere in
+  TASKS.md. Toyota Highlander (#20, last Tier-1 gap) still blocked -- no wave-24 recall-audit entry
+  exists in TASKS.md, now 8 runs deferred since 08-26. Grep of TASKS.md In-flight + Ready + Done
+  (last 10) for elantra/hyundai found only the standalone hyundai-elantra-2021/2022 vinNote entries
+  already present in inspect/index.html (a different file tree, read-only reused as background
+  context, not a conflict) and the 07-08 Hyundai Tucson post (different model, no overlap). No
+  autovet-content-checklist-authoring or autovetting-overnight-builder task in flight is launching a
+  Hyundai Elantra page. No Re-sync needed.
+  **RUN INTERRUPTED, RECOVERED 2026-10-07:** the device bridge to Daniel's computer disconnected on
+  2026-09-30 after the blog post was written but before this TASKS.md entry could be appended live or
+  before Content/_seo-research/2026-09-30-2021-hyundai-elantra.md's write could be confirmed -- see
+  claude/2026-09-30-autovet-seo-content-run-findings.md in the AutoVetting project for the original
+  incident report. The 2026-10-07 run confirmed Content/blog/2026-09-30-2021-hyundai-elantra-buyers-guide.md
+  existed intact, found Content/_seo-research/2026-09-30-2021-hyundai-elantra.md genuinely missing
+  from disk, reconstructed it verbatim from the project-doc backup, and appended this block -- all
+  before starting its own pick.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch
+  Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Subaru
+  Forester or Mazda3 (both still untouched Tier-2); re-check whether Toyota Highlander (#20) has
+  cleared the recall-audit generation-boundary sweep (still no wave-24 entry as of this run).
+
+
+  2026-10-07 10:15 [scheduled task]: drafted 2019 Subaru Forester (5th-gen SK, launch year) pillar
+  post -- Tier-2. Before picking, recovered backlog from an interrupted prior run: the 2026-09-30
+  Hyundai Elantra draft existed in Content/blog/ but had no TASKS.md Notes entry and was missing its
+  Content/_seo-research/ file (device bridge disconnected mid-run per
+  claude/2026-09-30-autovet-seo-content-run-findings.md in the AutoVetting project). Confirmed the
+  blog post intact, reconstructed the missing research file from that doc's backup content, appended
+  the missing Notes block above (dated 2026-09-30, marked recovered), and updated
+  top-500-vehicles.md's Already-covered table + Suggested-next-picks note for the Elantra before
+  starting today's own pick.
+  Picked Subaru Forester over Mazda3 -- the two remaining untouched Tier-2 candidates since 09-16.
+  Forester's story is cleaner: 2019 is a true single-powertrain launch year (2.5L direct-injection
+  FB25 + Lineartronic CVT, standard AWD, no turbo trim -- the XT was discontinued for this
+  generation), with three independently NHTSA-verified recalls and a real, model-year-specific CVT
+  TSB, plus two clean disambiguation opportunities against recalls that get mis-attributed to this
+  car online.
+  Output: Content/blog/2026-10-07-2019-subaru-forester-buyers-guide.md (~1,750 words body,
+  status: draft), Content/_seo-research/2026-10-07-2019-subaru-forester.md.
+  Recalls independently verified 2026-10-07 via api.nhtsa.gov/recalls/campaignNumber (not aggregator
+  copy): 19V856000 (PCV valve separation / loss of power, 2/12/2019, shared w/ 2019 Ascent +
+  Crosstrek, 51,613 units combined), 19V065000 (EPS connector short / loss of power-steering assist,
+  6/2/2019, shared w/ 2019 Crosstrek, 10,417 units combined), 21V263000 (rear stabilizer bracket
+  bolts loosen/detach, 4/15/2021, shared w/ 2018-2019 Crosstrek, 408,271 units combined).
+  TWO DISAMBIGUATIONS, both independently confirmed via direct NHTSA campaignNumber lookups rather
+  than trusting aggregator text: (1) 21V587000 (low-pressure fuel pump), the recall
+  Product/CPO-Protocols/subaru-certified.md's own Forester section scopes to "2018 SK-gen Forester" --
+  re-pulled its full Make/Model/ModelYear list this run and confirmed 2019 Forester is genuinely NOT
+  in it (2018 only). Not cited in the post. (2) 23V755000, which a pickuptrucktalk.com aggregator page
+  attributes to 2019-2023 Forester as a "backup camera/inhibitor switch" recall -- verified via
+  NHTSA's own RCRIT filing + justia's recall database that this is actually a 2023 Outback/Legacy
+  automatic-transmission park/neutral-start-interlock-switch campaign with zero Forester involvement.
+  Not cited. Same aggregator page's cited PCV recall numbers ("19V-858/19V-844") also don't match the
+  real campaign (19V856000) -- not used.
+  TSB 16-103-16R (NHTSA doc #10202815, published 10/27/2021, CVT fluid seepage) confirmed real and
+  specific to 2019 Forester via carcomplaints.com's TSB archive -- the post's headline finding.
+  Bulletin 16-117-18 (CVT warranty extended 5yr/60k -> 10yr/100k) confirmed scoped to 2018
+  model-year CVT Subarus; whether it (or a successor bulletin) reaches 2019 Foresters was NOT
+  independently confirmed this run -- left in the post as a buyer question for the dealer, not
+  asserted as fact. EyeSight phantom-braking and infotainment-freeze owner-complaint patterns
+  described by condition only, no TSB number fabricated for either. Explicitly disambiguated the FB25
+  engine from Yaeger v. Subaru (2011-2015 FB-engine class period, pre-direct-injection design) --
+  the 2019 Forester's FB25 is the updated DI engine introduced with this generation, outside that
+  settlement.
+  Interlinks to 2015-subaru-outback + 2016-mazda-cx5 + 2016-honda-pilot + 2019-toyota-rav4 +
+  2018-hyundai-tucson (all confirmed present in /blog/ by directory listing before linking).
+  Sibling check: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for
+  forester/subaru/cx-5/mazda3 found only stale Done entries well outside the 14-day window (menu
+  routing on mazda3-2018/2019 from 09-23, orthogonal inspect/index.html routing work, not a content
+  conflict) and the Subaru CPO protocol file (read-only reused for the 21V-587 disambiguation above,
+  itself read-only background, not a conflict). In-flight autovet-competitor-monitor (Competitors/,
+  last entry 09-24 Carfax) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 09-27
+  Jaguar/Land Rover) orthogonal -- neither references Subaru or Forester anywhere in TASKS.md. No
+  autovet-content-checklist-authoring or autovetting-overnight-builder task in flight is launching a
+  Subaru Forester page. No Re-sync needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch
+  Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: Mazda3
+  (last remaining untouched Tier-2 candidate from the 09-16/09-23/09-30 list); re-check whether Toyota
+  Highlander (#20) has cleared the recall-audit generation-boundary sweep (still no dedicated wave-24
+  Highlander content fix found in TASKS.md as of this run, though 09-17's menu-routing fix did split
+  toyota-highlander-2014/2020 into correct generation-specific menu rows -- that's a routing fix, not
+  confirmation the checklist *content* itself is generation-clean, so still deferred out of caution).
+
 ### autovet-recall-study-under-15k
 
 - Status: in flight
@@ -418,6 +535,28 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
     **The deployment gap now has a safety edge worth naming.** The 2021 Corolla fix is live-site-relevant: until `git push origin main` runs with a working PAT, autovetting.com keeps telling 2021 Corolla buyers their only critical check is a 2020 fuel-pump recall and keeps omitting a 999,901-unit airbag campaign that applies to their car — alongside the 36 false citations wave 24 removed and the CX-5 correction from wave 25. One push with a live token fixes 27 vehicle pages.
 
+
+    2026-10-08 02:00 [scheduled task]: **Tranche 3 ran the no-network audit, and the `stats.recalls` question Daniel was asked on 10-06 is not a one-slug wording problem — it is 245 slugs, and the live label is a claim the site cannot support. Separately, the two worst instances of the class are fixed with verified data: `nissan-altima-2013` and `honda-pilot-2016` went from a recall count with nothing listed to 12 and 8 named, NHTSA-sourced campaigns.**
+
+    **The audit (all 245 slugs, no network, `CHECKLISTS` evaluated out of the HTML per the 10-05 method note).** Before tonight's edits: `stat == displayed rows` on 150 slugs, **mismatched on 95** — 87 over-stating, 8 under-stating. **59 slugs rendered a recall count of 1 or more with zero recall rows on the page**, 4 of them with no `recalls` array at all (`nissan-altima-2013` 6, `toyota-corolla-2014` 5, `honda-pilot-2016` 4, `nissan-altima-2019` 2). A further 99 shipped a count with rows that are **only** the generic `Open recalls — VIN check` row, so no campaign number a reader could check. **Only 59 of 245 slugs carried a single named campaign number.** `toyota-corolla-2014` surfaced on 10-06 because it happened to sit in the gap table; it is one of 59, not an outlier.
+
+    **And the 10-05 "under-citing" column was measuring the wrong field, which corrects a conclusion in this block.** `chevrolet-silverado-2014` was logged as 3-vs-20. It **displays 15 named campaigns**; the 3 is only its `stats.recalls`. Same for `chevrolet-malibu-2016` (stat 3, one generic row). So the under-citing column was the identical counting artifact as the over-citing column 10-06 resolved, read from the other end — the freshness queue built on it (Silverado, Cherokee, Compass, Sorento, Malibu) is **not** a queue of thin content, and three of those five are honest generic-row pages. The real queue is the 57 slugs that show a number against an empty list.
+
+    **The finding that outranks the field definition: the label.** `inspect/index.html:17767-17768` renders this number under **"Open recalls"**. An open recall is one unremedied on a specific VIN — no static page can know that for any car, so the label is wrong on all 245 slugs under *every* candidate meaning of the field (campaign count, displayed-row count, generation total). It also contradicts the site's own standing advice, which is to run the VIN precisely because only NHTSA knows what is open. **Recommendation, which does not need the field definition settled: relabel to "Recalls listed" and make the field equal the displayed row count** (already the convention on 152 of 245 slugs). That is a one-line renderer change plus a derived-value pass, it makes every page self-auditing, and it is honest whatever Daniel decides the number should count. Not applied — it is a copy change on every vehicle page. Escalated.
+
+    **Fixed tonight, with primary sources: the two slugs with the largest unsupported counts.** `nissan-altima-2013` (`stats.recalls` 6, no `recalls` array) now ships **12 named campaigns** from `recallsByVehicle?make=nissan&model=altima&modelYear=2013` (Count 12). The editorial find is a cascade: **four separate secondary-hood-latch campaigns re-opened and re-scoped over six years** — `14V-565` (2013) → `15V-116` (2013-2015) → `16V-029` (2013-2015) → `20V-315`, which covers **all 2013-2018 Altimas, 1,831,818 units**, owner letters June 2021, confirmed by `campaignNumber=20V315000`. A closed earlier wave does not clear the later ones, and that is now stated on the page. Five more are front-passenger occupant-classification campaigns (`13V-069`, `14V-138`, `15V-681`, `16V-244`, `16V-911`) that can switch the passenger airbag off. `stats.recalls` 6 → 12 (= displayed rows). `honda-pilot-2016` (stat 4, no array) now ships **8** from `recallsByVehicle` (Count 8), including **two separate fuel-tank replacements** (`16V-417` and the Pilot-specific `17V-219`, so a closed 16V-417 does not clear 17V-219), `23V-751` connecting-rod-bearing engine seizure — 248,999 units, scope confirmed by `campaignNumber=23V751000` as 2016 + 2018-2019 Pilot with **the 2017 car not in it** — and `26V-365`, opened **2026-04-06**, 880,514 units, rear subframe corrosion limited to 22 salt-belt states plus DC, scope confirmed by `campaignNumber=26V365000`. stat 4 → 8. One summary sentence added to each slug naming the pattern; both summaries previously mentioned no recall at all.
+
+    **One self-caught attribution error, which is the 10-04 lesson working.** The first draft of the `23V-858` row repeated NHTSA's own wording that it expands `20V-314` and `21V-215`. `campaignNumber=20V314000` was then checked: 135,995 units across Accord/Civic/Fit/HR-V/Insight/NSX/RDX/RLX and **no Pilot**. True of the campaign chain, misleading on a Pilot page, so the numbers were removed from the prose rather than ledgered — the point of G28 is not to let a real number imply a scope it does not have.
+
+    **Ledger: `verified` 239 → 257**, 18 new numbers, each with its `campaignNumber` API URL as source and makes recorded. `16V-244` and `23V-858` were already verified and were reused, not re-added. `20V-314` deliberately **not** added. `unverified_legacy` 0 → 0. Unledgered-number sweep across `inspect/index.html`, `index.html` and `pinpoint/index.html`: **NONE**.
+
+    Sibling check: no blocking overlap, nothing to re-sync. Tracked files touched: `inspect/index.html`, `scripts/recall-ledger.json`, `TASKS.md`. `pinpoint/index.html` untouched and clean in `git status` this run (the `MM` index noise logged 10-03 → 10-06 no longer shows against explicit paths). Ready blocks 09-09 → 10-06 all touch `inspect/index.html` or `scripts/recall-ledger.json` and are **ancestors of `main`, not concurrent siblings**; `eee03dc`/`e69c8ed` (wave-25 follow-on, 2021 Corolla) is the direct parent and tonight extends its ledger. The vinNote blocks edit `vinNote:` fields only; tonight adds two `recalls` arrays, changes two `stats.recalls` integers and two `summary` strings on two slugs — disjoint from every one of them, and neither slug was touched by waves 24, 25 or the 10-06 Corolla fix. In-flight `autovet-competitor-monitor` (`Competitors/`), `autovet-cpo-protocol-ingestion` (`Product/CPO-Protocols/`) and `autovet-seo-content` (`Content/blog/`, gitignored) are orthogonal. **`Started:` audit clean — 31 blocks across In-flight, Ready and Done (last 10), 0 missing.** Verified against: autovetting-recall-audit-wave-25-2026-10-04, autovetting-recall-audit-wave-24-2026-10-03, autovetting-vinnote-batch-2026-10-01.
+
+    **Scanner: PASS** (650 files, exit 0, file count read not just the exit code). The two-failure distinction holds a third run: the prompt-literal `/Users/...` path exits **2** (python cannot open the script — fails closed, correct), while **right script, unresolvable target** still prints `OK: scanned 0 file(s)` and exits **0**. **Ask unchanged: `scan_for_secrets.py` should exit non-zero when it scans 0 files.** **Syntax-check: PASS** (official node recipe on the installed file, Script 2 OK / Script 5 OK, exit 0, run after each of the two edit passes). **Dead-links: verified** — `href` inventory md5 `f8554c34…` **byte-identical** to the 10-06 baseline, 85 hrefs, no link added or changed, no `/decode/` link; NHTSA cited as prose and campaign numbers only. **Deploy gate `scripts/gate-check.py`: 28 passed, 1 warned, 0 CRITICAL failed** — identical to the 10-04/10-05/10-06 baseline, the one warn still the pre-existing `loading=lazy` note on `homepage-test-bc/index.html`; **G28 passed with 18 new citations because every number was ledgered before it shipped.** **CHECKLISTS integrity:** 245 keys before and after, key *sequence* identical, verified by evaluating both the HEAD blob and the worktree file in node. **`VEHICLE_MENU` byte-identical**, so no route could change. **Truncation guard:** ends `</html>`. **Ledger JSON parses.**
+
+    **Post-edit audit for the record:** `stat == displayed rows` now 152 of 245; mismatched 93 (85 over, 8 under); slugs with a count and zero rows **59 → 57**; slugs with at least one named campaign **59 → 61**; slugs with no `recalls` array at all **4 → 2** (`toyota-corolla-2014`, held for Daniel since 10-06, and `nissan-altima-2019`).
+
+    **Next run.** The 57-slug queue is the work, and it is ordered by claimed count with nothing to show: `ford-bronco-2021` (6), `jeep-wrangler-4xe-2021` (5), `ford-f150-lightning-2022` (5), `honda-odyssey-2018` (4), `rivian-r1t-2022` (4), `ford-mustang-mach-e-2021` (4). One `recallsByVehicle` call each, 2-3 slugs a night at tonight's rate. `nissan-altima-2019` and `toyota-corolla-2014` are the two with no array left and both are cheap once Daniel answers, but **neither answer is needed to keep draining the queue** — adding verified rows is correct under every candidate definition. Do **not** rebuild the 10-05 gap table against `stats.recalls`; it measures the stat, not the content.
 
 ## Ready to deploy / publish
 

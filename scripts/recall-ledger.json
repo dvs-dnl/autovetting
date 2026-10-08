@@ -2056,6 +2056,157 @@
       "component": "Occupant classification system software — front passenger airbag may not deploy as intended",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V865",
       "verified": "2026-10-06"
+    },
+    "12V494": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Transverse link / power steering rack bolts not torqued to spec (2012-2013 Altima)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=12V494000",
+      "verified": "2026-10-08"
+    },
+    "13V069": {
+      "makes": [
+        "Nissan",
+        "Infiniti"
+      ],
+      "component": "Passenger occupant-detection sensor out of spec — front passenger airbag permanently suppressed (2013 Altima/LEAF/Pathfinder/Sentra, JX35)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=13V069000",
+      "verified": "2026-10-08"
+    },
+    "13V158": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Temporary spare tire inflated out of specification (2013 Altima)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=13V158000",
+      "verified": "2026-10-08"
+    },
+    "14V138": {
+      "makes": [
+        "Nissan",
+        "Infiniti"
+      ],
+      "component": "Occupant classification software reads occupied front passenger seat as empty (2013-2014 Nissan/Infiniti)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=14V138000",
+      "verified": "2026-10-08"
+    },
+    "14V565": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Secondary hood latch binds unlatched — hood can open (2013 Altima; wave 1 of 4)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=14V565000",
+      "verified": "2026-10-08"
+    },
+    "15V116": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Secondary hood latch — expansion of 14V565 (2013-2015 Altima; wave 2 of 4)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=15V116000",
+      "verified": "2026-10-08"
+    },
+    "15V486": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Fuel sending-unit o-ring improperly seated — fuel leak / fire risk (2013-2015 Altima 3.5 V6, 2016 Maxima)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=15V486000",
+      "verified": "2026-10-08"
+    },
+    "15V681": {
+      "makes": [
+        "Nissan",
+        "Infiniti"
+      ],
+      "component": "Wrong occupant classification control unit installed — passenger airbag may not deploy (2013-2015 Altima/Pathfinder, 2013-2014 Sentra, JX35, QX60)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=15V681000",
+      "verified": "2026-10-08"
+    },
+    "16V029": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Secondary hood latch — second expansion (2013-2015 Altima; wave 3 of 4)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V029000",
+      "verified": "2026-10-08"
+    },
+    "16V911": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Incorrect occupant classification ECU in front passenger seat (2013-2015 Altima, 2015-2016 Rogue, 2016 Maxima)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V911000",
+      "verified": "2026-10-08"
+    },
+    "20V315": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Secondary hood latch corrosion — hood can open while driving; 1,831,818 units, all 2013-2018 Altima (wave 4 of 4)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V315000",
+      "verified": "2026-10-08"
+    },
+    "15V424": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Third-row seat belt can be trapped between seat and sideliner (2016 Pilot)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=15V424000",
+      "verified": "2026-10-08"
+    },
+    "15V668": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Instrument cluster software — TPMS/ABS/ESC warning lamp not displayed until ignition cycle; FMVSS non-compliance (2016 Pilot)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=15V668000",
+      "verified": "2026-10-08"
+    },
+    "16V417": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Fuel tank weld separation — leak / fire risk (2015-2016 MDX, 2015-2016 Odyssey, 2016 Pilot)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V417000",
+      "verified": "2026-10-08"
+    },
+    "17V219": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Leaking fuel tank — fire risk (2016 Pilot 2WD and AWD)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=17V219000",
+      "verified": "2026-10-08"
+    },
+    "21V932": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Hood latch striker can separate — hood can open while driving (2016-2019 Pilot, 2019 Passport, 2017-2020 Ridgeline)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V932000",
+      "verified": "2026-10-08"
+    },
+    "23V751": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Connecting rod bearing wear / engine seizure; 248,999 units. Scope: 2016 + 2018-2019 Pilot, 2017/2019 Ridgeline, 2018-2019 Odyssey, 2016-2020 MDX, 2015-2020 TLX — 2017 Pilot NOT included",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V751000",
+      "verified": "2026-10-08"
+    },
+    "26V365": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Rear subframe corrosion at suspension mounting points — control arm can fail; 880,514 units, 22 salt-belt states + DC only (2016-2022 Pilot, 2017-2023 Ridgeline, 2019-2023 Passport, 2014-2020 MDX)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V365000",
+      "verified": "2026-10-08"
     }
   },
   "unverified_legacy": []
