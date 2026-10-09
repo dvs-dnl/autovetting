@@ -2207,6 +2207,186 @@
       "component": "Rear subframe corrosion at suspension mounting points — control arm can fail; 880,514 units, 22 salt-belt states + DC only (2016-2022 Pilot, 2017-2023 Ridgeline, 2019-2023 Passport, 2014-2020 MDX)",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V365000",
       "verified": "2026-10-08"
+    },
+    "21V982": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Forward collision avoidance: radar sensing system misalignment",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "21V770": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Air bags: frontal — passenger airbag premature vent opening",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "22V411": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Latches/locks/linkages: doors: lock — passenger-side rear child safety lock",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "22V825": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: camera — rearview image lingers after reverse",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "22V928": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Air bags: side impact sensor — loose fasteners",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "23V165": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: camera — 8-inch SYNC rearview image persists",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "23V358": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Seat belts: critical fasteners — 5-door front belt latch reach",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "23V598": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: camera — loss of rearview image",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "24V635": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Engine: hard parts internal/mechanical — intake valve fracture",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V025": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Suspension: rear shock absorber reservoir detachment",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V315": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: software — delayed/frozen/blank rearview image",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V312": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: camera — 8-inch SYNC lingering image",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V455": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Fuel system, gasoline: low-pressure fuel pump failure",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V685": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Equipment: electrical: engine block heater cracking — fire risk",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V721": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Seats: critical fasteners — front seat pivot bolts",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "25V888": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: camera — 8-inch SYNC lingering image",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "26V124": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Back over prevention: software — APIM overheat blocks rearview image",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "26V236": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Power train: automatic transmission — transmission-to-transfer-case wear",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "26V299": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Structure: body: roof and pillars — MIC hardtop section detachment",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "26V468": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Engine — damaged engine wiring, short circuit/fire risk",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
+      "verified": "2026-10-09",
+      "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
     }
   },
   "unverified_legacy": []

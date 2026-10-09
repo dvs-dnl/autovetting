@@ -11450,7 +11450,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Multiple', description: 'Theta II engine metal debris — catastrophic engine seizure risk; verify all open engine recalls by VIN', severity: 'Critical', remedy: 'Free dealer engine inspection and replacement if necessary; KSDS software installed' }
+      { number: "Multiple", title: "Severity: Critical", desc: "Theta II engine metal debris — catastrophic engine seizure risk; verify all open engine recalls by VIN. Remedy: Free dealer engine inspection and replacement if necessary; KSDS software installed." }
     ]
   },
   'toyota-sequoia-2016': {
@@ -11505,7 +11505,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'VIN check', description: "The XK60 Sequoia is not in a Takata inflator campaign — Toyota's Sequoia scope is the 2002–2007 first-generation truck. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }
+      { number: "VIN check", title: "Severity: Informational", desc: "The XK60 Sequoia is not in a Takata inflator campaign — Toyota's Sequoia scope is the 2002–2007 first-generation truck. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply. Remedy: Any open campaign is repaired free by a dealer." }
     ]
   },
   'hyundai-palisade-2020': {
@@ -11563,7 +11563,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
+      { number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }
     ]
   },
   'toyota-rav4-2019': {
@@ -11621,7 +11621,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'VIN check', description: "No XA50 RAV4 is in a Takata inflator campaign — Toyota's RAV4 Takata scope is the 2004–2005 model. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }
+      { number: "VIN check", title: "Severity: Informational", desc: "No XA50 RAV4 is in a Takata inflator campaign — Toyota's RAV4 Takata scope is the 2004–2005 model. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car. Remedy: Any open campaign is repaired free by a dealer." }
     ]
   },
   'subaru-wrx-2018': {
@@ -11681,7 +11681,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
+      { number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }
     ]
   },
   'ford-bronco-2021': {
@@ -11689,8 +11689,8 @@ const CHECKLISTS = {
     engine: '2.3L EcoBoost I4 (300 hp) or 2.7L EcoBoost V6 (330 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     vinNote: "8th VIN digit engine code: ‘H’ = 2.3L EcoBoost I4 (300 hp), ‘P’ = 2.7L EcoBoost V6 (330 hp). Both confirmed against NHTSA vPIC pattern data. On a first-year Bronco this digit decides which inspection you are doing. ‘H’ is the only engine offered with the 7-speed manual, so an ‘H’ car needs the transmission checked as carefully as the engine — work the shifter through every gate including the crawler, and confirm any manual-transmission campaign on the VIN is closed. ‘P’ is automatic-only, and early-build 2.7L cars carry an owner-tracked cluster of sudden valve-train engine failures that ran through 2022: ask the selling dealer to print the VIN service history and confirm whether any engine field service action was performed, and treat a replaced engine as a documentation question rather than a disqualifier. Beyond the engine, 2021 build quality is the real story on this truck (soft top, HVAC ducting, paint), so run the full VIN at nhtsa.gov and confirm every open recall is closed before you commit.",
-    summary: "The 6th-gen Bronco is an enthusiast-grade off-road SUV with a first-year production run that had significant quality issues. 2021 models particularly had soft-top defects, 7-speed manual transmission recalls, HVAC duct failures, and paint quality complaints. 2022+ models are considerably better. If buying a 2021, verify all known recalls are closed. The 2.3L EcoBoost is well-proven; the 2.7L is more capable but at higher maintenance cost.",
-    stats: { itemsToCheck: 14, recalls: 6, ownerComplaints: 920, topComplaintArea: 'Body / Soft Top / Electrical' },
+    summary: "The 6th-gen Bronco is an enthusiast-grade off-road SUV with a first-year production run that had significant quality issues. 2021 models particularly had soft-top defects, 7-speed manual transmission recalls, HVAC duct failures, and paint quality complaints. 2022+ models are considerably better. If buying a 2021, verify all known recalls are closed. NHTSA lists 20 campaigns against the 2021 model year, and seven of them are the same rearview-camera defect reopened between 2022 and 2026 — so ‘the camera recall was done’ is not an answer; ask which one. The two that cost real money if open are 24V-635 (2.7L EcoBoost intake valve fracture, engine failure) and 26V-299, the molded-in-color hardtop campaign. The 2.3L EcoBoost is well-proven; the 2.7L is more capable but at higher maintenance cost.",
+    stats: { itemsToCheck: 14, recalls: 20, ownerComplaints: 920, topComplaintArea: 'Body / Soft Top / Electrical' },
     sections: [
       { title: 'Recalls — Check First (2021 especially)', items: [
         { title: '7-speed manual transmission — clutch/gearshift issue', risk: 'high', riskLabel: 'High Risk — Check 7MT VINs',
@@ -11749,8 +11749,26 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'MIC Hardtop', description: '2021 molded hardtop cracking and water intrusion', severity: 'High', remedy: 'Ford replacement hardtop program (check dealer for status)' },
-      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
+      { number: "21V-982", title: "Forward-radar misalignment (shared with the 2021 Ranger)", desc: "The cruise-control radar module can be misaligned, so adaptive cruise may hold the wrong following distance and automatic emergency braking can be delayed or absent. Remedy: free dealer realignment." },
+      { number: "21V-770", title: "Passenger frontal airbag vents prematurely", desc: "During passenger airbag deployment a vent can open early, reducing the protection the bag provides in a crash. Remedy: free dealer repair." },
+      { number: "22V-411", title: "Passenger-side rear child safety lock (four-door only)", desc: "On four-door 2021-2022 trucks the passenger-side rear child safety lock may not hold, so the door can still be opened from inside. Remedy: free dealer inspection and repair." },
+      { number: "22V-825", title: "Rearview image lingers after reverse — camera action 1 of 7", desc: "The rearview image can stay on screen after the truck leaves reverse, distracting the driver. This is the first of SEVEN separate rearview-camera campaigns on the 2021 Bronco; a closed earlier one does not clear the later ones. Remedy: free dealer software update." },
+      { number: "22V-928", title: "Side-impact sensor fasteners loose", desc: "A right or left side impact sensor can be loose, which can cause an unintended deployment or a failure to deploy. Remedy: free dealer inspection and refastening." },
+      { number: "23V-165", title: "8-inch SYNC rearview image persists — camera action 2 of 7", desc: "On trucks with the 8-inch SYNC system the rearview image can persist after reversing. Remedy: free dealer software update." },
+      { number: "23V-358", title: "Five-door front seat-belt latch hard to reach", desc: "On 2021-2023 five-door bodies the front seat belt latch can be difficult to reach, so occupants may drive unbelted. Remedy: free dealer repair." },
+      { number: "23V-598", title: "Rearview camera image loss — camera action 3 of 7", desc: "The rearview image can be lost entirely, removing the rear view when reversing. Campaign also covers several Lincoln and other Ford lines. Remedy: free dealer repair." },
+      { number: "24V-635", title: "2.7L EcoBoost intake valve fracture — engine failure", desc: "Intake valves can break, causing engine failure and a loss of motive power while driving. Campaign spans 2021-2022 Bronco, F-150, Edge, Explorer and Lincoln Nautilus. On a 2.7L V6 truck (8th VIN digit P) this is the single most expensive thing to confirm closed. Remedy: free dealer engine inspection and repair." },
+      { number: "25V-025", title: "Rear shock absorber reservoir detaches", desc: "A rear shock reservoir can come loose and fall into the roadway, becoming a hazard to following traffic. Covers 2021-2024 Bronco. Remedy: free dealer replacement." },
+      { number: "25V-315", title: "Rearview software delay, freeze or blank screen — camera action 4 of 7", desc: "A software fault can delay, freeze or blank the rearview image. Covers a wide 2021-2025 Ford and Lincoln range. Remedy: free dealer software update." },
+      { number: "25V-312", title: "8-inch SYNC lingering image — camera action 5 of 7", desc: "Another 8-inch SYNC action on the same lingering-image defect. Remedy: free dealer software update." },
+      { number: "25V-455", title: "Low-pressure fuel pump failure — stall while driving", desc: "The low-pressure fuel pump can fail and stall the engine in traffic. Covers 2021-2023 Bronco, Explorer, Lincoln Aviator and Super Duty. Remedy: free dealer pump replacement." },
+      { number: "25V-685", title: "Engine block heater cracks — short circuit and fire risk", desc: "A cracked engine block heater can short circuit and create a fire risk. Broad multi-line Ford and Lincoln campaign. Only relevant if the truck was ordered with the block heater. Remedy: free dealer repair." },
+      { number: "25V-721", title: "Front seat pivot bolts loose", desc: "Front seat pivot bolts may be loose, so a seat may not restrain its occupant in a crash. Covers 2021-2023 Bronco. Remedy: free dealer inspection and torque or replacement." },
+      { number: "25V-888", title: "8-inch SYNC lingering image — camera action 6 of 7", desc: "A third 8-inch SYNC action on the lingering-image defect, opened late 2025. Remedy: free dealer software update." },
+      { number: "26V-124", title: "APIM overheats and blocks the rearview image — camera action 7 of 7", desc: "The infotainment module (APIM) can overheat and stop displaying the rearview image. Opened 2026, covering 2021-2026 Bronco and 2021-2024 Edge. The seventh and newest camera action: ask which of the seven a seller means when they say the camera recall was done. Remedy: free dealer repair." },
+      { number: "26V-236", title: "Transmission-to-transfer-case wear — power loss or rollaway", desc: "Wear at the transmission-to-transfer-case joint can cause a loss of motive power or let the truck roll away when parked. Opened 2026, covering 2021-2025 Bronco. Remedy: free dealer repair." },
+      { number: "26V-299", title: "Molded-in-color hardtop sections detach", desc: "MIC hardtop roof sections on 2021-2022 three-door and five-door trucks can detach and become a road hazard. This is the campaign behind the hardtop problem this page previously listed without a number. Opened 2026. Remedy: free dealer repair or replacement." },
+      { number: "26V-468", title: "Engine wiring damage — short circuit and fire risk", desc: "Damaged engine wiring can short, creating heat or sparks and a fire risk. Opened 2026, covering 2021-2026 Bronco and Bronco Raptor. Remedy: free dealer inspection and repair." }
     ]
   },
   'bmw-x1-2018': {
@@ -11812,7 +11830,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
+      { number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }
     ]
   },
   'hyundai-kona-2019': {
@@ -11972,7 +11990,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Takata inflator', description: 'Lexus lists the 2010–2017 GX460 as affected; involvement is assigned by VIN and build date', severity: 'Critical', remedy: 'Free dealer repair; verify completion at nhtsa.gov/recalls' }]
+    recalls: [{ number: "Takata inflator", title: "Severity: Critical", desc: "Lexus lists the 2010–2017 GX460 as affected; involvement is assigned by VIN and build date. Remedy: Free dealer repair; verify completion at nhtsa.gov/recalls." }]
   },
   'chevrolet-blazer-2019': {
     year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / 2LT / 3LT / RS / Premier (2nd gen, 2019–2023)',
@@ -12014,7 +12032,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Brake hose', description: 'Front brake hose chafing — fluid leak risk on select 2019-2020', severity: 'High', remedy: 'Free dealer brake hose replacement' }]
+    recalls: [{ number: "Brake hose", title: "Severity: High", desc: "Front brake hose chafing — fluid leak risk on select 2019-2020. Remedy: Free dealer brake hose replacement." }]
   },
   'cadillac-xt5-2017': {
     year: 2017, make: 'Cadillac', model: 'XT5', trim: 'Luxury / Premium Luxury / Platinum (1st gen, 2017–2023)',
@@ -12096,7 +12114,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: "The Avalon does not appear on Toyota's Takata affected-model list in any model year. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "The Avalon does not appear on Toyota's Takata affected-model list in any model year. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply to this car. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'gmc-terrain-2018': {
     year: 2018, make: 'GMC', model: 'Terrain', trim: 'SL / SLE / SLT / Denali (2nd gen, 2018–2023)',
@@ -12214,7 +12232,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: 'Lexus lists the 2006–2013 IS 250/350, the 2010–2015 IS C and the 2008–2014 IS-F as Takata-affected. A 2018 sedan is outside all three. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.', severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "Lexus lists the 2006–2013 IS 250/350, the 2010–2015 IS C and the 2008–2014 IS-F as Takata-affected. A 2018 sedan is outside all three. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'honda-civic-2022': {
     year: 2022, make: 'Honda', model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring (11th gen FE/FL, 2022–2025)',
@@ -12338,7 +12356,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }]
+    recalls: [{ number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }]
   },
   'ford-maverick-2022': {
     year: 2022, make: 'Ford', model: 'Maverick', trim: 'XL / XLT / Lariat (1st gen, 2022–present)',
@@ -12377,7 +12395,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }]
+    recalls: [{ number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }]
   },
   'kia-ev6-2022': {
     year: 2022, make: 'Kia', model: 'EV6', trim: 'Light / Standard / Standard Plus / Wind / GT-Line / GT (1st gen, 2022–present)',
@@ -12494,7 +12512,7 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: 'Multiple', description: 'Early 2022 Tundra had multiple safety recalls — verify all closed by VIN', severity: 'Check VIN', remedy: 'Confirm completion at nhtsa.gov/recalls' }
+      { number: "Multiple", title: "Severity: Check VIN", desc: "Early 2022 Tundra had multiple safety recalls — verify all closed by VIN. Remedy: Confirm completion at nhtsa.gov/recalls." }
     ]
   },
   'volvo-xc40-2019': {
@@ -12640,7 +12658,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Fuel injector', description: 'Fuel injector fracture — engine fire risk on select 2020-2021', severity: 'High', remedy: 'Free dealer injector replacement' }]
+    recalls: [{ number: "Fuel injector", title: "Severity: High", desc: "Fuel injector fracture — engine fire risk on select 2020-2021. Remedy: Free dealer injector replacement." }]
   },
   'chevrolet-silverado-2022': {
     year: 2022, make: 'Chevrolet', model: 'Silverado 1500', trim: 'WT / Custom / LT / RST / LTZ / High Country (T1XX, 2019–present)',
@@ -12984,7 +13002,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple WL', description: 'Camshaft/VVT and 4xe electrical recalls on 2021-2022 builds', severity: 'High', remedy: 'Free dealer repair; run VIN at nhtsa.gov' }]
+    recalls: [{ number: "Multiple WL", title: "Severity: High", desc: "Camshaft/VVT and 4xe electrical recalls on 2021-2022 builds. Remedy: Free dealer repair; run VIN at nhtsa.gov." }]
   },
   'mazda-cx50-2023': {
     year: 2023, make: 'Mazda', model: 'CX-50', trim: '2.5 S / 2.5 S Carbon Edition / 2.5 Turbo (1st gen, 2023–present)',
@@ -13052,7 +13070,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: "FCA's airbag-inflator campaign covers the 2005–2015 Chrysler 300; a 2016 is outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply — and note that an unrepaired 2015-or-earlier car is under FCA's stop-drive advisory.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "FCA's airbag-inflator campaign covers the 2005–2015 Chrysler 300; a 2016 is outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply — and note that an unrepaired 2015-or-earlier car is under FCA's stop-drive advisory. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'bmw-x7-2019': {
     year: 2019, make: 'BMW', model: 'X7', trim: 'xDrive40i / xDrive50i / M50i (1st gen G07, 2019–2022)',
@@ -13163,7 +13181,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'TSB 17-0064', description: 'Exhaust fume intrusion via HVAC — CO exposure risk', severity: 'Critical', remedy: 'Dealer TSB repair (not mandatory recall — verify completion)' }]
+    recalls: [{ number: "TSB 17-0064", title: "Severity: Critical", desc: "Exhaust fume intrusion via HVAC — CO exposure risk. Remedy: Dealer TSB repair (not mandatory recall — verify completion)." }]
   },
   'cadillac-escalade-2021': {
     year: 2021, make: 'Cadillac', model: 'Escalade', trim: 'Luxury / Premium Luxury / Sport / ESV (5th gen T1XX, 2021–present)',
@@ -13237,7 +13255,7 @@ const CHECKLISTS = {
           cost: '$0 OTA', source: 'VW ID.4 OTA history' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple 2021-22', description: 'Rear defroster fire risk, regen braking loss, infotainment defects', severity: 'High', remedy: 'Free dealer OTA/hardware updates; verify at nhtsa.gov' }]
+    recalls: [{ number: "Multiple 2021-22", title: "Severity: High", desc: "Rear defroster fire risk, regen braking loss, infotainment defects. Remedy: Free dealer OTA/hardware updates; verify at nhtsa.gov." }]
   },
   'ford-escape-2020': {
     year: 2020, make: 'Ford', model: 'Escape', trim: 'S / SE / SE Sport / SEL / Titanium / Plug-in Hybrid (4th gen, 2020–present)',
@@ -13275,7 +13293,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: '1.5T head crack', description: 'Cylinder head crack / oil leak on 2020-2021 1.5T EcoBoost', severity: 'High', remedy: 'Engine replacement under extended warranty on affected units' }]
+    recalls: [{ number: "1.5T head crack", title: "Severity: High", desc: "Cylinder head crack / oil leak on 2020-2021 1.5T EcoBoost. Remedy: Engine replacement under extended warranty on affected units." }]
   },
   'nissan-armada-2017': {
     year: 2017, make: 'Nissan', model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve (2nd gen Y62, 2017–present)',
@@ -13569,7 +13587,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: "The Land Cruiser does not appear on Toyota's Takata affected-model list (the Lexus GX460 does, but it is a different platform). Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "The Land Cruiser does not appear on Toyota's Takata affected-model list (the Lexus GX460 does, but it is a different platform). Run the VIN at nhtsa.gov/recalls for the campaigns that do apply. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'ford-f250-2019': {
     year: 2019, make: 'Ford', model: 'F-250 Super Duty', trim: 'XL / XLT / Lariat / King Ranch / Platinum / Limited (4th gen P558, 2017–present)',
@@ -13687,7 +13705,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: 'The RX appears nowhere on the Lexus Takata affected-model list, which runs IS, IS C, IS-F, ES 350, GX460, LFA and SC 430. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.', severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "The RX appears nowhere on the Lexus Takata affected-model list, which runs IS, IS C, IS-F, ES 350, GX460, LFA and SC 430. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'subaru-brz-2022': {
     year: 2022, make: 'Subaru', model: 'BRZ', trim: 'Premium / Limited (2nd gen ZD8, 2022–present)',
@@ -13936,7 +13954,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple 2022', description: 'Seat belt, thermal, brake controller, steering issues on early R1T', severity: 'High', remedy: 'Rivian mobile service or service center; verify at nhtsa.gov' }]
+    recalls: [{ number: "Multiple 2022", title: "Severity: High", desc: "Seat belt, thermal, brake controller, steering issues on early R1T. Remedy: Rivian mobile service or service center; verify at nhtsa.gov." }]
   },
   'tesla-model-y-2022': {
     year: 2022, make: 'Tesla', model: 'Model Y', trim: 'Standard Range / Long Range / Performance (2022–present)',
@@ -14122,7 +14140,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'VIN check', description: "FCA's airbag-inflator campaign covers the 2008–2014 Challenger; a 2023 is nine model years outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply.", severity: 'Informational', remedy: 'Any open campaign is repaired free by a dealer' }]
+    recalls: [{ number: "VIN check", title: "Severity: Informational", desc: "FCA's airbag-inflator campaign covers the 2008–2014 Challenger; a 2023 is nine model years outside it. Run the VIN at nhtsa.gov/recalls for the campaigns that do apply. Remedy: Any open campaign is repaired free by a dealer." }]
   },
   'kia-telluride-2023': {
     year: 2023, make: 'Kia', model: 'Telluride', trim: 'LX / S / EX / SX / SX-P / X-Line / X-Pro (1st gen ON, 2020–present)',
@@ -14301,8 +14319,8 @@ const CHECKLISTS = {
       ]}
     ],
     recalls: [
-      { campaign: '22V-412', description: 'HV battery main contactors overheat — loss of drive power', severity: 'Critical', remedy: 'Free dealer software update / contactor repair' },
-      { campaign: 'Multiple', description: 'Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase', severity: 'Varies', remedy: 'Dealer remedy at no cost where a campaign applies' }
+      { number: "22V-412", title: "Severity: Critical", desc: "HV battery main contactors overheat — loss of drive power. Remedy: Free dealer software update / contactor repair." },
+      { number: "Multiple", title: "Severity: Varies", desc: "Campaigns vary by build date — run the VIN at nhtsa.gov/recalls and require every open campaign closed before purchase. Remedy: Dealer remedy at no cost where a campaign applies." }
     ]
   },
   'nissan-leaf-2019': {
@@ -14616,7 +14634,7 @@ const CHECKLISTS = {
           cost: '$600–$1,500 per service interval', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: '19V-434', description: 'Moisture/water ingress into HV battery — fire risk on 2019 e-tron', severity: 'Critical', remedy: 'Free dealer battery remedy' }]
+    recalls: [{ number: "19V-434", title: "Severity: Critical", desc: "Moisture/water ingress into HV battery — fire risk on 2019 e-tron. Remedy: Free dealer battery remedy." }]
   },
   'genesis-gv70-2022': {
     year: 2022, make: 'Genesis', model: 'GV70', trim: 'Standard / Advanced / Advanced Plus / Sport / Sport Plus (1st gen JK1, 2022–present)',
@@ -14725,7 +14743,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple 4xe 2021', description: 'HV battery, powertrain software, and thermal management recalls on early PHEV builds', severity: 'Critical', remedy: 'Free dealer repairs; verify at nhtsa.gov' }]
+    recalls: [{ number: "Multiple 4xe 2021", title: "Severity: Critical", desc: "HV battery, powertrain software, and thermal management recalls on early PHEV builds. Remedy: Free dealer repairs; verify at nhtsa.gov." }]
   },
   'ram-1500-trx-2021': {
     year: 2021, make: 'Ram', model: '1500 TRX', trim: 'Launch Edition / Standard (DT, 2021–2024)',
@@ -15133,7 +15151,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple 2022', description: 'Suspension failure, battery fire, software, and charging issues on early Lightning', severity: 'Critical', remedy: 'Free dealer repairs; verify at nhtsa.gov' }]
+    recalls: [{ number: "Multiple 2022", title: "Severity: Critical", desc: "Suspension failure, battery fire, software, and charging issues on early Lightning. Remedy: Free dealer repairs; verify at nhtsa.gov." }]
   },
   'genesis-gv80-2021': {
     year: 2021, make: 'Genesis', model: 'GV80', trim: '2.5T / 3.5T / 3.5T Sport Prestige (1st gen JX1, 2021–present)',
@@ -15210,7 +15228,7 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ campaign: 'Multiple', description: 'Open recalls vary by build date — check the VIN', severity: 'Varies', remedy: 'Run the VIN at nhtsa.gov/recalls and confirm any open campaigns are closed' }]
+    recalls: [{ number: "Multiple", title: "Severity: Varies", desc: "Open recalls vary by build date — check the VIN. Remedy: Run the VIN at nhtsa.gov/recalls and confirm any open campaigns are closed." }]
   },
   'buick-envision-2021': {
     year: 2021, make: 'Buick', model: 'Envision', trim: 'Preferred / Essence / Avenir (2nd gen 2021–present)',
