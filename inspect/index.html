@@ -4409,7 +4409,7 @@ const CHECKLISTS = {
     summary: "The 11th-gen Corolla (2014–2019) is one of the most reliable used cars on the market — the 1.8L 2ZR-FE is proven and simple, and documented issues are mostly minor. There is no Takata inflator campaign on this generation — that claim belongs to the 2003–2013 car; beyond that, check oil consumption at higher miles and CVT fluid history. Cars from salt-belt states need a close look at lower body rust. This is a strong buy at any mileage when properly maintained.",
     stats: {
       itemsToCheck: 16,
-      recalls: 5,
+      recalls: 2,
       ownerComplaints: 843,
       topComplaintArea: 'Air Bags / Powertrain'
     },
@@ -4543,6 +4543,14 @@ const CHECKLISTS = {
     ],
     vinNote: 'Unlike most vehicles with multiple powertrains, the 2014–2019 Corolla (E170) is a single-engine generation for North American buyers — the 1.8L 2ZR-FE inline-4 (132\u00a0hp) is fitted to all standard trims. The LE Eco trim is the exception: it uses the 1.8L 2ZR-FAE with Toyota\u2019s Valvematic variable valve lift (140\u00a0hp, slight fuel-economy advantage). Run the full VIN at <a href="#entry-section">autovetting.com/decode</a> to confirm which engine is fitted if buying an Eco-badged car — the inspection profile is nearly identical, but the 2ZR-FAE has more complex valve-train service requirements. The model-year digit is position 10: E\u202f=\u202f2014, F\u202f=\u202f2015, G\u202f=\u202f2016, H\u202f=\u202f2017. The most buyer-critical VIN check is not the engine digit but open-recall status — always run the VIN at nhtsa.gov/recalls and confirm any campaign is documented as repaired before purchase. Note that the Takata inflator recall does not reach this generation: Toyota’s Corolla scope ends with the 2013 car.',
     blogUrl: '/blog/2014-toyota-corolla-buyers-guide',
+    recalls: [
+      { number: "13V-505",
+        title: "Windshield wiper switch can short-circuit and kill the wipers (2014 only)",
+        desc: "The wiper switch assembly can short-circuit and disable the windshield wipers, which is a visibility failure under FMVSS 104 rather than a nuisance. Scope is the 2014 Corolla plus the 2013-2014 Camry and 2013 Avalon, so it does not reach the 2015-2019 cars this checklist also covers. Remedy: free dealer replacement of the switch assembly; the campaign opened November 2013, so an unrepaired car at this age is a records question." },
+      { number: "20V-024",
+        title: "Airbag control module can be left inoperative (2011-2019 Corolla, every year on this page)",
+        desc: "Electrical noise can make the airbag electronic control unit malfunction so that the airbags or the seat-belt pretensioners may not deploy in a crash. This is the campaign that covers the whole 2014-2019 generation, and it is the reason to run the VIN even on a late, low-mileage car. Remedy: free dealer inspection of the ECU with a noise filter installed where needed. Note what this is not: an airbag-ECU campaign, not a Takata inflator campaign. Toyota's Corolla Takata scope ends with the 2013 car." }
+    ]
   },
 
   'nissan-altima-2013': {
@@ -12121,7 +12129,7 @@ const CHECKLISTS = {
     engine: '1.5T I4 (170 hp), 2.0T I4 (252 hp), or 1.6L diesel I4 (137 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 2nd-gen Terrain is a capable compact crossover with two turbocharged four-cylinder options. The 1.5T has oil consumption complaints and timing chain concerns with infrequent oil changes — this is the main risk. The 2.0T is smoother and more powerful with fewer consumption reports. The diesel is rare and expensive to maintain. 9-speed transmission rough shifts affect both 1.5T and 2.0T — software updates help.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 390, topComplaintArea: 'Engine / Transmission' },
+    stats: { itemsToCheck: 11, recalls: 5, ownerComplaints: 390, topComplaintArea: 'Engine / Transmission' },
     sections: [
       { title: 'Engine', items: [
         { title: '1.5T oil consumption (LYX engine)', risk: 'high', riskLabel: 'High Risk',
@@ -12150,7 +12158,23 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "17V-516",
+        title: "Right front intermediate driveshaft can fracture and separate",
+        desc: "The right front intermediate driveshaft can fracture and separate while driving, which causes a loss of propulsion; if it separates while the vehicle is parked on a grade without the parking brake set, the vehicle can roll away. Scope is the 2018 Terrain, the 2018 Chevrolet Equinox and the 2017-2018 GMC Acadia. Remedy: free dealer replacement of the right front intermediate driveshaft assembly." },
+      { number: "18V-358",
+        title: "High-pressure fuel pump can detach and damage the fuel line (fire risk)",
+        desc: "The high-pressure fuel pump can detach from its mounting flange and damage the high-pressure fuel line, which puts fuel where it should not be on a hot engine. This is a multi-model GM campaign and the Terrain is in scope. Remedy: free dealer replacement of both the high-pressure fuel pump and the fuel pipe." },
+      { number: "18V-340",
+        title: "Airbag sensing module may not power down, leaving airbags inoperative at restart (2018 Terrain)",
+        desc: "The sensing and diagnostic module may fail to power down when the vehicle is shut off and can then be inoperative at the next restart, so the airbags may not deploy in a crash. Scope is the 2018 Terrain specifically, which is this slug's own model year. Remedy: free dealer software reprogramming of the module." },
+      { number: "18V-576",
+        title: "Rear brake caliper piston coating cuts rear braking performance",
+        desc: "Inadequate coating on the rear brake caliper pistons lets gas pockets form, which reduces rear brake performance. A multi-model GM campaign with the 2018 Terrain in scope. Remedy: free dealer bleed of the brake system. It is a cheap, quick fix, so an open one on a car this age is a sign the vehicle has not been taken to a dealer in years rather than a sign of an expensive problem." },
+      { number: "20V-668",
+        title: "Start/stop accumulator endcap may be missing bolts, leaking transmission fluid",
+        desc: "The automatic transmission start/stop accumulator endcap can be missing bolts. The resulting transmission-fluid leak can cause a loss of propulsion, and fluid reaching an ignition source raises fire risk. A multi-model GM campaign with the Terrain in scope. Remedy: free dealer inspection of the start-stop accumulator, replaced if bolts are missing." }
+    ]
   },
   'mazda3-2019': {
     year: 2019, make: 'Mazda', model: 'Mazda3', trim: 'Base / Select / Preferred / Premium (4th gen BP, 2019–2023)',
@@ -13594,7 +13618,7 @@ const CHECKLISTS = {
     engine: '6.2L Godzilla V8 (385 hp), 7.3L Godzilla V8 (430 hp, 2020+), or 6.7L Power Stroke Diesel (450 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The Super Duty F-250 is the workhorse of the truck segment — built for heavy towing and payload. The 6.7L Power Stroke diesel is the towing king but requires DEF and has injector/turbo maintenance. The 6.2L/7.3L gasoline V8s are simpler. Main buyer risks: diesel injector failure at high mileage, turbo oil supply tube (known diesel issue), transmission wear from heavy towing, and cab/frame corrosion on work trucks.",
-    stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 420, topComplaintArea: 'Diesel Engine / Transmission / Electrical' },
+    stats: { itemsToCheck: 13, recalls: 4, ownerComplaints: 420, topComplaintArea: 'Diesel Engine / Transmission / Electrical' },
     sections: [
       { title: 'Diesel Engine (6.7L Power Stroke)', items: [
         { title: 'Fuel injector wear at high mileage', risk: 'high', riskLabel: 'High Risk at 150k+ diesel',
@@ -13633,7 +13657,20 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "20V-576",
+        title: "Front axle wheel-end yoke may not be welded to the axle tube (2019 F-250/F-350 4x4)",
+        desc: "On 4x4 trucks the front axle wheel-end yoke may not be properly welded to the axle tube, and a failure there costs you control of the truck. Scope is the 2019 F-250 and F-350 4x4 in both single and dual rear wheel configurations, so this is a this-truck campaign and not a Super-Duty-wide one. Remedy: free dealer inspection of the weld location, with the axle assembly replaced if the weld is misplaced." },
+      { number: "19V-688",
+        title: "Rear axle shaft can fracture on electronic-locking-differential trucks (2019 F-250/F-350)",
+        desc: "The passenger-side rear axle shaft can fail prematurely from a material defect on trucks built with the electronically locking rear differential. A broken shaft means loss of drive power and the truck cannot be held in Park, so if the parking brake is not set it can roll away. Remedy: free dealer inspection of the passenger-side shaft, replaced as needed." },
+      { number: "18V-894",
+        title: "Engine block heater cable can short and overheat wiring (2017-2019 Super Duty)",
+        desc: "Water and road contaminants corrode the block-heater cable splice connector; prolonged corrosion causes a resistive short that overheats or melts the wiring and raises fire risk. It matters most on northern and work trucks that actually plugged the heater in. Remedy: dealers first disabled the block heater cable and later replaced it, free of charge, so a truck whose block heater simply does not work may be parked at the interim fix rather than the final one." },
+      { number: "19V-633",
+        title: "Front seat recliner may be missing a pawl (2019-2020 Super Duty, manual recliners)",
+        desc: "Manual seat-back recliners can be missing a third pawl, which leaves the seat back loose and out of compliance with the federal seating standard, so it may not adequately restrain an occupant in a crash. Remedy: free dealer inspection of the seat structure with replacement as needed. Worth checking by hand on a truck whose seat back feels loose, since the defect is physical and present from new." }
+    ]
   },
   'honda-insight-2019': {
     year: 2019, make: 'Honda', model: 'Insight', trim: 'LX / EX / Touring (3rd gen ZE4, 2019–2022)',

@@ -2387,6 +2387,96 @@
       "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=bronco&modelYear=2021",
       "verified": "2026-10-09",
       "note": "2021 Ford Bronco; returned by recallsByVehicle for make=ford model=bronco modelYear=2021 (Count 20), list cross-checked on two independent fetches"
+    },
+    "13V505": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Windshield wiper switch assembly short circuit (FMVSS 104); 2014 Corolla, 2013-2014 Camry/Camry HV, 2013 Avalon/Avalon HV",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=toyota&model=corolla&modelYear=2014 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=13V505",
+      "verified": "2026-10-10"
+    },
+    "20V024": {
+      "makes": [
+        "Toyota"
+      ],
+      "component": "Airbag electronic control unit may be disabled by electrical noise (NHTSA action EA19001); 2011-2019 Corolla, 2011-2013 Matrix, 2012-2018 Avalon/Avalon HV",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=toyota&model=corolla&modelYear=2014",
+      "verified": "2026-10-10"
+    },
+    "20V576": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Front axle wheel-end yoke not properly welded to axle tube; 2019 F-250/F-350 4x4 (SRW and DRW)",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=f-250&modelYear=2019 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V576",
+      "verified": "2026-10-10"
+    },
+    "19V688": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Passenger-side rear axle shaft premature failure; 2019 F-250/F-350 with electronically locking rear differential",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=f-250&modelYear=2019",
+      "verified": "2026-10-10"
+    },
+    "18V894": {
+      "makes": [
+        "Ford"
+      ],
+      "component": "Engine block heater cable splice-connector corrosion, resistive short / fire risk; 2015-2019 F-150, 2017-2019 Super Duty",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=f-250&modelYear=2019",
+      "verified": "2026-10-10"
+    },
+    "19V633": {
+      "makes": [
+        "Ford",
+        "Lincoln"
+      ],
+      "component": "Manual front seat-back recliner missing third pawl (FMVSS 207); 2018-2020 F-150, 2019-2020 Super Duty, 2018-2019 Explorer, 2019-2020 Expedition, 2020 Escape, 2020 Lincoln Aviator",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=f-250&modelYear=2019",
+      "verified": "2026-10-10"
+    },
+    "17V516": {
+      "makes": [
+        "GMC",
+        "Chevrolet"
+      ],
+      "component": "Right front intermediate driveshaft can fracture and separate; 2018 Terrain, 2018 Equinox, 2017-2018 Acadia",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018",
+      "verified": "2026-10-10"
+    },
+    "18V358": {
+      "makes": [
+        "GMC"
+      ],
+      "component": "High-pressure fuel pump can detach from mounting flange and damage the HP fuel line (fire risk); multi-model GM campaign, 2018 Terrain confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018",
+      "verified": "2026-10-10"
+    },
+    "18V340": {
+      "makes": [
+        "GMC"
+      ],
+      "component": "Sensing and diagnostic module may not power down, airbags inoperative at restart; certain 2018 GMC Terrain",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=18V340",
+      "verified": "2026-10-10"
+    },
+    "18V576": {
+      "makes": [
+        "GMC"
+      ],
+      "component": "Rear brake caliper piston coating allows gas pockets, reduced rear braking; multi-model GM campaign, 2018 Terrain confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018",
+      "verified": "2026-10-10"
+    },
+    "20V668": {
+      "makes": [
+        "GMC"
+      ],
+      "component": "Start/stop accumulator endcap may be missing bolts, transmission-fluid leak / loss of propulsion / fire risk; multi-model GM campaign, Terrain confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018",
+      "verified": "2026-10-10"
     }
   },
   "unverified_legacy": []
