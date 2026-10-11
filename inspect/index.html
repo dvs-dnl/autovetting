@@ -12303,7 +12303,7 @@ const CHECKLISTS = {
     vinNote: "Do not use the 8th VIN digit to identify this truck's engine — Nissan encodes the Titan/Titan XD powertrain in the <strong>4th</strong> digit. 4th digit ‘A’ = 5.6L VK56VD Endurance gas V8; 4th digit ‘B’ = 5.0L Cummins V8 turbodiesel. The Cummins was offered only in the heavy-duty Titan XD, never in the half-ton Titan, so the 4th digit also tells you which truck you are actually looking at — Titan and Titan XD share a nameplate and a showroom but ride on different frames with different payload, brakes and pricing. The inspection diverges completely: a Cummins XD needs DEF and DPF regeneration history, fuel-filter service records (two filters, not one) and a scan for stored emissions codes; a VK56VD gas truck needs none of that and should instead be checked for 7-speed automatic fluid service history and, on PRO-4X, off-road suspension and skid-plate wear. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a> to confirm engine and body before applying this checklist, and run it at nhtsa.gov/recalls.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 2nd-gen Titan with the 5.6L Endurance V8 is a reliable full-size truck that competes well against F-150 and Silverado on durability. No chronic powertrain failures. Main buyer checks are the transmission fluid service history, suspension wear on PRO-4X off-road models, and verifying the optional towing package if heavy towing is planned. Lower resale than domestic competitors makes it a value buy for work-truck buyers.",
-    stats: { itemsToCheck: 10, recalls: 2, ownerComplaints: 180, topComplaintArea: 'Electrical / Minor' },
+    stats: { itemsToCheck: 10, recalls: 3, ownerComplaints: 180, topComplaintArea: 'Electrical / Minor' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '5.6L Endurance V8 — solid truck engine', risk: 'low', riskLabel: 'Low Risk',
@@ -12332,7 +12332,11 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "19V-495", title: "Alternator Harness Chafe (gasoline Titan only)", desc: "2017-2019 gasoline, light-duty Titan - not the Cummins Titan XD: the alternator harness can be damaged during engine installation and short, stalling the engine, with an added fire risk. Dealer re-routes and clips the harness or replaces it. The 4th VIN digit tells you whether this campaign can apply to the truck in front of you." },
+      { number: "18V-240", title: "Missing Load-Capacity Modification Label", desc: "2016-2018 Titan (plus 2016 and 2018 Titan XD) delivered with factory accessories that cut load capacity, but without the modification label FMVSS 110 requires. The remedy is a label and instructions - no hardware - but the point for a buyer is that the door-jamb payload figure can overstate what the truck may legally carry." },
+      { number: "17V-268", title: "Rear Seat-Belt D-Ring Trim Cap (Crew Cab only)", desc: "2016-2017 Titan and Titan XD Crew Cab only: in a crash a rear occupant head can strike the seat-belt D-ring bolt trim cap - an FMVSS 201 failure. Dealer adds energy-absorbing material to the C-pillar finishers and replaces the bolt and cap. King Cab and Single Cab trucks are outside the scope, so this one depends on body style, not just year." }
+    ]
   },
   'jeep-wrangler-2018': {
     year: 2018, make: 'Jeep', model: 'Wrangler', trim: 'Sport / Sport S / Sahara / Rubicon (JL, 2018–present) — note 2018 is a two-Wrangler year: the outgoing JK was sold alongside the JL as the "Wrangler JK"',
@@ -12544,7 +12548,7 @@ const CHECKLISTS = {
     engine: '2.0T Drive-E T4 I4 (187 hp) or T5 I4 (248 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The XC40 is Volvo's entry luxury compact SUV — excellent safety ratings, well-designed interior, and modern Drive-E four-cylinder powertrains. Main buyer risks are the DCT/transmission shudder on T4 models, oil consumption on some early T5 units, and — critically — Volvo's expensive dealership maintenance requirements. Deferred maintenance on a Volvo compounds fast. Only buy with verified Volvo service history.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 250, topComplaintArea: 'Transmission / Electrical' },
+    stats: { itemsToCheck: 11, recalls: 4, ownerComplaints: 250, topComplaintArea: 'Transmission / Electrical' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'T5 2.0T oil consumption (early units)', risk: 'monitor', riskLabel: 'Monitor',
@@ -12573,7 +12577,12 @@ const CHECKLISTS = {
           cost: '$0 OTA update', source: 'Volvo Sensus TSBs' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "18V-554", title: "Brake Pedal Not Riveted - stop-driving recall", desc: "2019 XC40, an estimated 71 cars: brake pedals may not have been riveted correctly and can move out of position, reducing braking performance. Volvo told owners to stop driving; cars were inspected where they sat or towed in and the pedal replaced. Tiny campaign, but the only stop-driving order on this car - confirm by VIN that it was closed. Volvo R59899." },
+      { number: "18V-535", title: "Missing Rear Seat-Back Lock Strikers", desc: "2019 XC40: the rear seat back can be missing its lock strikers, letting it move forward under hard braking or in a crash. Dealer inspects and installs the missing strikers. Check it with the seat folded and latched rather than taking the paperwork for it. Volvo R89898." },
+      { number: "20V-144", title: "Automatic Emergency Braking May Not Engage", desc: "2019-2020 XC40 among nine Volvo lines: a software and hardware incompatibility in the Active Safety Domain Master means the automatic emergency braking system may fail to detect an obstacle or engage as intended. Software update at the dealer. Volvo R29998." },
+      { number: "18V-800", title: "Connectivity Module - no GPS to emergency services", desc: "2017-2019 XC40 among eight Volvo lines: a Vehicle Connectivity Module software error can leave the telematics and driver-support systems malfunctioning so the car does not send its GPS position to emergency responders after a crash. Software fix. Nothing a test drive reveals - it has to be checked by VIN. Volvo R39917." }
+    ]
   },
   'audi-q3-2019': {
     year: 2019, make: 'Audi', model: 'Q3', trim: 'Premium / Premium Plus / Prestige (F3, 2nd gen, US 2019-2025; the 8U 1st gen ends with 2018)',
@@ -12689,7 +12698,7 @@ const CHECKLISTS = {
     engine: '2.7T I4 (310 hp), 5.3L V8 EcoTec3 (355 hp), 6.2L V8 EcoTec3 (420 hp), or 3.0L Duramax diesel (277 hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The T1XX-platform Silverado (2019+) is a significant upgrade from the K2XX. The 2.7T is surprisingly capable for daily use; the 5.3L V8 is the workhorse choice. AFM (Active Fuel Management) on the V8s can cause lifter failures on extended highway use — same pattern as Colorado and Suburban. The L87 6.2L is the standout but commands a price premium. Well-maintained T1XX Silverados are strong used truck buys.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 380, topComplaintArea: 'Engine (AFM lifters) / Electrical' },
+    stats: { itemsToCheck: 11, recalls: 6, ownerComplaints: 380, topComplaintArea: 'Engine (AFM lifters) / Electrical' },
     sections: [
       { title: 'AFM Lifter Failure (V8 models)', items: [
         { title: '5.3L / 6.2L AFM lifter failure', risk: 'high', riskLabel: 'High Risk on high-mileage V8',
@@ -12720,7 +12729,14 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "25V-274", title: "6.2L V8 Connecting Rod / Crankshaft - engine failure", desc: "2021-2024 Silverado 1500 built with the 6.2L V8 only: connecting-rod and crankshaft manufacturing defects can damage and destroy the engine. Dealer inspects and repairs or replaces it; trucks that pass get higher-viscosity oil, a new oil filler cap and a new filter. This is the most expensive item on this page by an order of magnitude - on a 6.2L truck, confirm by VIN that it was inspected or the engine replaced before any money moves. 5.3L and 3.0L trucks are not in scope." },
+      { number: "24V-797", title: "Diesel Transmission Control Valve - rear wheels lock", desc: "2020-2022 Silverado 1500 with a diesel engine only: the transmission control valve can fail and lock the rear wheels. Dealer installs new transmission control module software, and GM covers the transmission repair where that software finds a defective valve. Gas trucks are outside the scope." },
+      { number: "26V-083", title: "Re-repair of 24V-797 - done wrong the first time", desc: "2020-2022 Silverado 1500 that may have been repaired incorrectly under 24V-797, leaving the control valve still able to fail and lock the rear wheels. So a seller saying the transmission recall was done is answering for 24V-797 and not for this one - both have to read closed. VINs became searchable 2026-02-12 and owner letters went out 2026-03-06, so a truck sold before that will not have it." },
+      { number: "22V-903", title: "Daytime Running Lights Stay Lit With Headlights", desc: "2022-2023 Silverado 1500 among eleven GM lines: body-control-module software can leave the daytime running lights on when the headlights are on, glaring oncoming traffic - an FMVSS 108 failure. Dealer or over-the-air software update." },
+      { number: "22V-463", title: "Accessory Sport Bar Blocks the High-Mount Brake Light", desc: "2022 Silverado 1500 and Sierra fitted with the accessory sport bar: the bar high-mounted brake light may not work and the bar can block the factory high-mount lamp - an FMVSS 108 failure. Only applies if the truck actually carries that bar, so look at the bed before chasing it. Dealer supplies the correct wiring." },
+      { number: "22V-873", title: "Airbag Module Left in Manufacturing Mode", desc: "Certain 2022 Silverado 1500 whose sensing diagnostic module was never activated at the assembly plant, so the airbags would not deploy in a crash - an FMVSS 208 failure. Closed before first sale: the trucks went back to the GM plant and no owner letters were mailed. Listed here so a used buyer recognises it as already settled rather than an open item." }
+    ]
   },
   'subaru-forester-2019': {
     year: 2019, make: 'Subaru', model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring (5th gen SK, 2019–2024)',

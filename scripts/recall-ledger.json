@@ -2477,6 +2477,110 @@
       "component": "Start/stop accumulator endcap may be missing bolts, transmission-fluid leak / loss of propulsion / fire risk; multi-model GM campaign, Terrain confirmed in scope by recallsByVehicle",
       "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=gmc&model=terrain&modelYear=2018",
       "verified": "2026-10-10"
+    },
+    "19V495": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Alternator harness damaged at engine installation can short, engine stall + fire risk; 2017-2019 gasoline light-duty Titan only, NOT the Cummins Titan XD",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=titan&modelYear=2017 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V495",
+      "verified": "2026-10-11"
+    },
+    "18V240": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Accessories cut load capacity with no load-capacity modification label, FMVSS 110 noncompliance; 2016-2018 Titan + 2016/2018 Titan XD",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=titan&modelYear=2017",
+      "verified": "2026-10-11"
+    },
+    "17V268": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Rear seat-belt D-ring bolt trim cap head-impact hazard, FMVSS 201 noncompliance; 2016-2017 Titan and Titan XD Crew Cab only",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=titan&modelYear=2017 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=17V268",
+      "verified": "2026-10-11"
+    },
+    "18V554": {
+      "makes": [
+        "Volvo"
+      ],
+      "component": "Brake pedal not riveted correctly, pedal can move out of position and reduce braking; 2019 XC40, ~71 vehicles, stop-driving advisory",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volvo&model=xc40&modelYear=2019 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=18V554",
+      "verified": "2026-10-11"
+    },
+    "18V535": {
+      "makes": [
+        "Volvo"
+      ],
+      "component": "Rear seat back missing lock strikers, seat back can move forward in hard braking or a crash; 2019 XC40",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volvo&model=xc40&modelYear=2019",
+      "verified": "2026-10-11"
+    },
+    "20V144": {
+      "makes": [
+        "Volvo"
+      ],
+      "component": "Active Safety Domain Master software/hardware incompatibility, automatic emergency braking may not detect or engage; multi-model Volvo campaign, 2019 XC40 confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volvo&model=xc40&modelYear=2019",
+      "verified": "2026-10-11"
+    },
+    "18V800": {
+      "makes": [
+        "Volvo"
+      ],
+      "component": "Vehicle Connectivity Module software error, telematics/driver-support malfunction and no GPS position to emergency responders; multi-model Volvo campaign, 2019 XC40 confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volvo&model=xc40&modelYear=2019",
+      "verified": "2026-10-11"
+    },
+    "25V274": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Connecting rod and/or crankshaft manufacturing defects, engine damage and failure; 2021-2024 6.2L V8 only, multi-make GM campaign, 2022 Silverado 1500 confirmed in scope by recallsByVehicle and campaignNumber",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=25V274",
+      "verified": "2026-10-11"
+    },
+    "24V797": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Transmission control valve can fail and lock the rear wheels, diesel-engine vehicles only; multi-make GM campaign, 2022 Silverado 1500 confirmed in scope by recallsByVehicle and campaignNumber",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022 + https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V797",
+      "verified": "2026-10-11"
+    },
+    "26V083": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Incorrect repair under 24V-797 leaves the transmission control valve able to fail and lock the rear wheels; 2020-2022 Silverado 1500 / Sierra 1500 + 2020 HD, confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022",
+      "verified": "2026-10-11"
+    },
+    "22V903": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Lighting control module software leaves daytime running lights on with headlights, glare, FMVSS 108 noncompliance; expands 22V-827, multi-make GM campaign, 2022 Silverado 1500 confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022",
+      "verified": "2026-10-11"
+    },
+    "22V463": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Accessory sport bar high-mounted brake light inoperative and/or blocks the factory high-mount lamp, FMVSS 108 noncompliance; 2022 Silverado 1500 and Sierra so equipped",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022",
+      "verified": "2026-10-11"
+    },
+    "22V873": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Sensing diagnostic module shipped in manufacturing mode, airbags would not deploy, FMVSS 208 noncompliance; certain 2022 Silverado 1500, remedied pre-sale at the assembly plant",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=chevrolet&model=silverado%201500&modelYear=2022",
+      "verified": "2026-10-11"
     }
   },
   "unverified_legacy": []
