@@ -12815,7 +12815,7 @@ const CHECKLISTS = {
     engine: '2.7T I4 (310 hp), 5.3L V8 EcoTec3 (355 hp), 6.2L V8 EcoTec3 (420 hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The T1XX Sierra is the premium sibling to the Silverado — same platform, more refined interior, MultiPro tailgate. Same powertrain considerations apply: the 5.3L V8 AFM (Active Fuel Management) lifter failure is the main risk at 80k–120k miles. The Denali with the 6.2L V8 or the 2.7T are the smarter choices to avoid AFM concerns. Well-maintained T1XX Sierras are excellent used trucks.",
-    stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Engine (AFM) / Electrical' },
+    stats: { itemsToCheck: 11, recalls: 6, ownerComplaints: 310, topComplaintArea: 'Engine (AFM) / Electrical' },
     sections: [
       { title: 'AFM Lifter Failure (V8)', items: [
         { title: '5.3L EcoTec3 AFM lifter failure', risk: 'high', riskLabel: 'High Risk at 80k+ on V8',
@@ -12846,7 +12846,14 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "25V-274", title: "6.2L V8 Connecting Rod / Crankshaft - engine failure", desc: "2021-2024 Sierra 1500 built with the 6.2L V8 only: connecting-rod and crankshaft manufacturing defects can damage and destroy the engine. Dealer inspects and repairs or replaces it; trucks that pass get higher-viscosity oil, a new oil filler cap, a new filter and a revised owner's manual. On a 6.2L truck this is the one item that can cost more than the truck is worth - confirm by VIN that it was inspected or the engine replaced before any money moves. 5.3L and 3.0L trucks are not in scope, so the engine decides this, not the model year." },
+      { number: "24V-797", title: "Diesel Transmission Control Valve - rear wheels lock", desc: "2020-2022 Sierra 1500 with a diesel engine only: the transmission control valve can fail and lock the rear wheels. Dealer installs new transmission control module software, and GM covers the transmission repair where that software finds a defective valve. Gas trucks are outside the scope." },
+      { number: "26V-083", title: "Re-repair of 24V-797 - done wrong the first time", desc: "2020-2022 Sierra 1500 that may have been repaired incorrectly under 24V-797, leaving the control valve still able to fail and lock the rear wheels. A seller saying the transmission recall was done is answering for 24V-797 and not for this one - both have to read closed. VINs became searchable 2026-02-12, so a truck sold before that will not have had it." },
+      { number: "25V-060", title: "Chrome Front Grille Deflector Can Detach", desc: "2022 GMC Sierra 1500 fitted with the chrome front grille deflector: the attachments holding it can fracture and let it come off into traffic. 70,768 trucks, and this is the only campaign on this page that is Sierra-specific rather than shared across the GM full-size line. Only applies if the truck actually wears that deflector, so look at the grille before chasing it. Dealer reinforces or repairs every attachment point; owner letters went out 2025-03-17." },
+      { number: "22V-903", title: "Daytime Running Lights Stay Lit With Headlights", desc: "2022-2023 Sierra 1500 among eleven GM lines: body-control-module software can leave the daytime running lights on when the headlights are on, glaring oncoming traffic - an FMVSS 108 failure. Dealer or over-the-air software update." },
+      { number: "22V-463", title: "Accessory Sport Bar Blocks the High-Mount Brake Light", desc: "2022 Sierra 1500 and Silverado fitted with the accessory sport bar: the bar's own high-mounted brake light may not work and the bar can block the factory high-mount lamp - an FMVSS 108 failure. Only applies if the truck actually carries that bar, so look at the bed before chasing it. Dealer supplies the correct wiring." }
+    ]
   },
   'genesis-g70-2019': {
     year: 2019, make: 'Genesis', model: 'G70', trim: '2.0T / 3.3T Sport / Sport Advanced (1st gen IK, 2019–2021)',
@@ -13117,7 +13124,7 @@ const CHECKLISTS = {
     engine: '3.0L B58 Turbo I6 (335 hp xDrive40i) or 4.4L N63 V8 (456 hp xDrive50i)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The X7 is BMW flagship 3-row SUV — imposing presence, genuine luxury interior, and strong powertrain options. The B58 inline-six is excellent; the N63 V8 has documented oil consumption and injector issues. On any used X7: BMW maintenance costs are unforgiving, extended warranty or CPO is highly recommended, and the B58 is strongly preferred over the N63 for ownership cost. Only buy with complete BMW dealer service history.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 280, topComplaintArea: 'Engine (N63) / Cooling / Electrical' },
+    stats: { itemsToCheck: 12, recalls: 11, ownerComplaints: 280, topComplaintArea: 'Engine (N63) / Cooling / Electrical' },
     sections: [
       { title: 'Engine', items: [
         { title: 'B58 I6 (xDrive40i) — excellent engine', risk: 'low', riskLabel: 'Low Risk',
@@ -13148,7 +13155,19 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "25V-644", title: "Starter Motor Overheats - fire risk (supersedes the software fix)", desc: "2019-2020 X7 among six BMW lines, 145,102 vehicles: after repeated start attempts the starter motor can overheat from electrical overload and ignite combustible material in the engine bay. Dealer replaces the engine starter. This campaign explicitly includes cars already repaired under 24V-576, which got software only and need the hardware too - so an X7 whose history shows the 2024 starter recall as completed still needs this one, and both have to read closed. Owner letters went out 2026-02-09, VINs searchable from 2025-11-17." },
+      { number: "24V-576", title: "Starter Motor Overheats - the earlier software-only remedy", desc: "2019-2020 X7 and other BMW lines: same starter overheat and fire mechanism, remedied in 2024 with a vehicle software update rather than a new starter. BMW later concluded that was not enough, which is why 25V-644 exists and replaces the hardware. Listed so a buyer reading a service record can tell which of the two was actually done." },
+      { number: "19V-513", title: "High-Pressure Fuel Pump Flange Cracks - fuel leak", desc: "The high-pressure fuel pump may not have been properly attached to the engine, so its flange can crack and leak fuel near hot engine components. Dealer replaces the high-pressure fuel pump. Any fuel smell after a hot shutdown on an unverified car makes this the first VIN check to run, not the last." },
+      { number: "21V-062", title: "Integrated Brake System Weld - loss of ABS and brake assist", desc: "The rotor and shaft inside the integrated brake system may not be properly welded and can separate under hard braking, costing ABS and most of the braking assistance. Dealer replaces the whole integrated brake system. Owner letters went out 2021-05-25." },
+      { number: "19V-541", title: "Left-Side Wheel Bolts Under-Tightened - wheel can detach", desc: "2019 X5 xDrive50i and X7 xDrive40i: left-side wheel bolts may have been insufficiently tightened and can loosen over time until a wheel comes off. Only 5 vehicles were ever in scope, so the odds any given X7 is one of them are negligible - it is listed because the consequence is a detached wheel and the VIN check is free." },
+      { number: "19V-386", title: "Head Airbag Misaligned With Trim", desc: "2019 X7 xDrive40i and xDrive50i: the head airbags may not have been aligned with the trim during installation, which can impair deployment. Dealer inspects and reinstalls the head airbags where needed. Nothing about this is visible from the seat, so it is a VIN-only item." },
+      { number: "22V-670", title: "Third-Row Backrest Lock Springs", desc: "2019-2022 X7 with third-row seats: the compression springs that lock the backrest may be installed wrong or come loose, so the backrest may not fully lock in a crash. Dealer inspects the third-row seat and reinstalls or replaces the springs. Owner letters went out 2022-11-04." },
+      { number: "19V-135", title: "Business Lounge Seat Adapter Bolts", desc: "2019 X7 ordered with the business lounge seat option only: the seat adapter attachment bolts may not have been properly tightened, raising occupant injury risk in a crash. Dealer replaces the bolts. Unsold cars were quarantined on dealer lots at the time, so most of these were fixed before first delivery - check the option list before assuming it applies." },
+      { number: "21V-096", title: "Reverse Camera Image Obscured or Screen Dark", desc: "Shifting into reverse can leave part of the rearview image obscured or the screen unlit, an FMVSS 111 failure. Dealer inspects the rearview camera software and updates it. Worth testing on the drive: select reverse, wait, and watch whether the full image appears every time." },
+      { number: "19V-684", title: "Back-Up Camera Setting Persists Between Drives", desc: "The back-up camera display settings can be changed so the rear image disappears, and the system keeps that setting the next time the car is in reverse - an FMVSS 111 failure. Dealer updates the back-up camera software. A seller may have set it that way without knowing, so a blank reverse screen is a software question before it is a camera question." },
+      { number: "22V-267", title: "Sunroof Can Close With No Key Fob Inside", desc: "The roof function control unit may be programmed incorrectly, letting the sunroof close without the key fob present - an FMVSS 118 failure, which is the anti-entrapment standard. Dealer reprograms the control unit. Owner letters went out 2022-06-20." }
+    ]
   },
   'nissan-rogue-2021': {
     year: 2021, make: 'Nissan', model: 'Rogue', trim: 'S / SV / SL / Platinum (3rd gen D14, 2021–present)',
@@ -13229,7 +13248,7 @@ const CHECKLISTS = {
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     vinNote: "8th VIN digit engine code: ‘L’ = 6.2L L87 V8 (420 hp), ‘T’ = 3.0L LM2 Duramax turbodiesel I6 (277 hp). Both confirmed against NHTSA vPIC pattern data. This one digit selects between two entirely different failure families, and it is worth more than any trim badge on the tailgate. ‘L’ cars run Dynamic Fuel Management, which can deactivate any of the eight cylinders rather than AFM's fixed four — more lifters in play, and a collapsed lifter is the expensive outcome. Warm the engine fully, then listen at idle and at a light-throttle 1,200–1,500 rpm for a persistent tick, and ask for service history showing whether lifters, camshaft or the DFM-disabling calibration have already been addressed. ‘T’ cars have no cylinder deactivation, so the lifter question simply does not apply; the diesel-specific checks replace it — confirm the DPF and DEF system are healthy and fault-free, ask how the truck was driven (a short-trip life means incomplete regens and a loaded filter), and check oil-change history against the diesel interval rather than the gas one. Air-ride compressor wear applies to both. Run the full VIN at nhtsa.gov to confirm all open campaigns are closed.",
     summary: "The 5th-gen Escalade is a massive improvement over the 4th gen — OLED instrument cluster, air ride suspension, independent rear suspension, and a more refined interior. The 6.2L L87 V8 has DFM (Dynamic Fuel Management) which replaces AFM — more cylinders affected, potentially higher lifter risk. Diesel option is smooth and fuel-efficient. Air suspension compressor failure is the most common repair on used examples. Only buy with Cadillac CPO or extended warranty.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 310, topComplaintArea: 'Air Suspension / Engine (DFM) / Electrical' },
+    stats: { itemsToCheck: 12, recalls: 9, ownerComplaints: 310, topComplaintArea: 'Air Suspension / Engine (DFM) / Electrical' },
     sections: [
       { title: 'Air Suspension', items: [
         { title: 'MagneRide / air compressor failure', risk: 'high', riskLabel: 'High Risk at 50k+',
@@ -13260,7 +13279,17 @@ const CHECKLISTS = {
           cost: '$2,000–$4,000 extended warranty', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "25V-274", title: "6.2L V8 Connecting Rod / Crankshaft - engine failure", desc: "2021-2024 Escalade and Escalade ESV with the 6.2L L87 V8 only: connecting-rod and crankshaft manufacturing defects can damage and destroy the engine. Dealer inspects and repairs or replaces it; cars that pass get higher-viscosity oil, a new oil filler cap, a new filter and a revised owner's manual. The 8th VIN digit decides whether this applies at all - an 'L' car is in scope, a 'T' diesel is not. On an 'L' car, confirm by VIN that it was inspected or the engine replaced before any money moves." },
+      { number: "24V-797", title: "Diesel Transmission Control Valve - rear wheels lock", desc: "2021 Escalade and Escalade ESV with the 3.0L LM2 Duramax only: the transmission control valve can fail and lock the rear wheels. Dealer installs new transmission control module software, and GM covers the transmission repair where that software finds a defective valve. This is the mirror image of 25V-274 - the same 8th VIN digit that puts an 'L' car in the engine campaign puts a 'T' car in this one, and neither vehicle is in both." },
+      { number: "21V-739", title: "Fuel Pump Power Control Module - engine stalls", desc: "The fuel pump power control module can make the pump fail or run intermittently, interrupting fuel flow and stalling the engine. Dealer replaces the module. An intermittent stall with no stored fuel-pressure fault is the symptom pattern to ask about." },
+      { number: "22V-036", title: "Rear Driveshaft Not Properly Heat-Treated", desc: "Rear wheel driveshaft assemblies may contain internal parts that were not heat-treated correctly and can fail, causing a sudden loss of drive power. Dealer replaces the left and/or right rear driveshaft assembly." },
+      { number: "21V-190", title: "Third-Row Outboard Seat Belts Pinched or Misrouted", desc: "Third-row outboard seat belts may be pinched or routed behind the seat-folding mechanism, which damages the webbing until it can break in a crash. Dealer inspects, replaces damaged belts and reroutes them. This one is partly checkable by hand: fold and unfold the third row and watch where the belt runs." },
+      { number: "22V-617", title: "Third-Row Buckle Rivet Improperly Formed", desc: "The rivet holding the third-row buckle to its bracket may be improperly formed, so it may not restrain an occupant properly. Dealer inspects the rivet heads on both sides and replaces buckle assemblies as needed. Second of two separate third-row belt campaigns on this vehicle - a seller saying the seat-belt recall was done has to say which." },
+      { number: "21V-421", title: "Airbag Warning Lamp May Not Alert the Driver", desc: "The communications gateway module mishandles a loss of communication with the sensing diagnostic module, so the airbag warning light can illuminate inconsistently. The defect is the warning, not the airbag: a lamp that stays dark can hide a real airbag fault. Dealer or over-the-air software update." },
+      { number: "22V-827", title: "Daytime Running Lights Stay Lit With Headlights", desc: "2021 Escalade and Escalade ESV among six GM full-size lines, 338,735 vehicles: body-control-module software can leave the daytime running lights on with the headlights, glaring oncoming traffic - an FMVSS 108 failure. Over-the-air body-control-module update; owner letters went out 2022-12-15." },
+      { number: "25V-619", title: "Incorrect Diesel Fuel Tank Fitted at a Prior Repair", desc: "2021 Escalade with the 3.0L diesel: an earlier fuel-tank replacement may have installed the wrong tank, which can leak in a rollover. Only 12 vehicles across the whole GM campaign, so this is a long shot - but it is a service-history defect rather than a build defect, which means a diesel Escalade that has had tank work done is exactly the one to check. Dealer inspects for the correct tank and replaces it; owner letters went out 2025-11-05." }
+    ]
   },
   'volkswagen-id4-2021': {
     year: 2021, make: 'Volkswagen', model: 'ID.4', trim: 'Standard / Pro / Pro S / AWD Pro / AWD Pro S (1st gen, 2021–present)',
