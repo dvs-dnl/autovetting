@@ -2733,6 +2733,86 @@
       "component": "Original diesel fuel tank possibly replaced with an incorrect tank at a prior repair, fuel leak in a rollover, fire risk; 6-cylinder diesel only, 12 units in the campaign record, 2021 Escalade listed",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=25V619000",
       "verified": "2026-10-12"
+    },
+    "19V035": {
+      "makes": [
+        "Audi"
+      ],
+      "component": "Left and right fuel rails may leak fuel, fire risk near an ignition source; 74,881 units, campaign record lists 2016-2018 Q7 plus A6/A7 2016-2018 and A8 2015-2018, 2018 Q7 listed",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V035000",
+      "verified": "2026-10-13"
+    },
+    "20V149": {
+      "makes": [
+        "Audi"
+      ],
+      "component": "Steering shaft-to-steering-gear bolt can loosen, sudden loss of steering control; 229 units, campaign record lists 2017-2019 Q7 and 2019 Q8 only, 2018 Q7 listed",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V149000",
+      "verified": "2026-10-13"
+    },
+    "20V658": {
+      "makes": [
+        "Audi"
+      ],
+      "component": "C-pillar deformation element may not absorb enough impact energy, unbelted occupant head strike; 94,144 units, campaign record lists 2018-2020 Audi Q7 only",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V658000",
+      "verified": "2026-10-13"
+    },
+    "21V455": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Power steering control module software fault can cut steering assist at startup or while driving; 26,847 units, over-the-air remedy available, campaign record lists 2021 Escalade/Escalade ESV, Suburban, Tahoe, Yukon and Yukon XL",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V455000",
+      "verified": "2026-10-13"
+    },
+    "21V579": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Brake system control module calibrated incorrectly at a dealer service visit, degraded stability control, traction control, ABS and towing brake performance; 2 units, campaign record lists 2021 Chevrolet Tahoe and 2021 GMC Yukon only (not Yukon XL) - service-induced rather than build defect",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V579000",
+      "verified": "2026-10-13"
+    },
+    "21V064": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Fuel tank shell missing adhesive between its two layers, fuel leak and fire risk; 18 units, campaign record lists 2021 Chevrolet Tahoe and 2021 GMC Yukon only (not Yukon XL, not Suburban)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V064000",
+      "verified": "2026-10-13"
+    },
+    "20V735": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Front seats removed for a repair during assembly, attachment bolts possibly not reinstalled, seat can move in a crash; 94 units, campaign record lists 2021 Tahoe, Suburban, Yukon and Yukon XL",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V735000",
+      "verified": "2026-10-13"
+    },
+    "20V792": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Front-row center seat belt brackets possibly not secured to the seat frame, center occupant not restrained in a crash; 624,216 units, campaign record lists 17 combinations including 2021 Tahoe, Suburban and GMC Yukon XL but NOT the short-wheelbase 2021 GMC Yukon",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V792000",
+      "verified": "2026-10-13"
+    },
+    "20V811": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Incorrect bolts used at one or more seat belt fastening locations, belt may not restrain an occupant; 470 units across 18 model lines, campaign record lists 2021 Tahoe, Yukon and Yukon XL among them",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V811000",
+      "verified": "2026-10-13"
+    },
+    "21V210": {
+      "makes": [
+        "Chevrolet"
+      ],
+      "component": "Second-row center seat belt latch trapped under the trim bezel and inaccessible, FMVSS 208 noncompliance; 5 units, campaign record lists 2021 Chevrolet Tahoe only",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V210000",
+      "verified": "2026-10-13"
     }
   },
   "unverified_legacy": []
