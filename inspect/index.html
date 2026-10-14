@@ -14581,7 +14581,7 @@ const CHECKLISTS = {
     engine: '2.0T P300 I4 (296 hp), 3.0T P400 I6 MHEV (395 hp), or 5.0 V8 (518 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The L663 Defender is a landmark redesign of the iconic off-roader — proper off-road capability on a modern platform with PIVI Pro infotainment. Early production had software and electrical reliability concerns that Land Rover addressed via OTA updates. The 6-cylinder P400 is the preferred powertrain. Air suspension compressor failure is the main mechanical concern. Land Rover dealer support is essential. Only buy with LR CPO or full dealer history.",
-    stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 340, topComplaintArea: 'Electrical / Software / Air Suspension' },
+    stats: { itemsToCheck: 12, recalls: 8, ownerComplaints: 340, topComplaintArea: 'Electrical / Software / Air Suspension' },
     sections: [
       { title: 'Air Suspension', items: [
         { title: 'Air suspension compressor failure', risk: 'high', riskLabel: 'High Risk at 50k+',
@@ -14612,7 +14612,16 @@ const CHECKLISTS = {
           cost: '$1,200–$2,500 per service', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "21V-424", title: "PCM Shuts Down and the Engine Stalls — Six-Cylinder Only, 163 Vehicles", desc: "The Powertrain Control Module can switch off while the vehicle is moving and stall the engine without warning. 163 vehicles campaign-wide, and the scope is the six-cylinder car only — the P400 3.0T I6 this checklist calls the preferred powertrain. The remedy disables Connected Diagnostic Services and over-the-air diagnostics and can be applied over the air, so a clean dealer history neither proves nor disproves it." },
+      { number: "23V-044", title: "Blocked Cam Carrier Oil Channel — Oil Leak and Fire Risk", desc: "A blocked oil channel in the engine cam carrier can cause an oil leak, which with an ignition source becomes a fire risk. Dealers inspect and replace the cam carrier and related parts as needed. A broad Jaguar Land Rover campaign covering Range Rover Sport, Range Rover, Discovery and Velar alongside the Defender, so it is not a Defender design fault — but this engine bay is in scope." },
+      { number: "26V-248", title: "DC-DC Converter Overload — Loss of Drive Power and Exterior Lighting", desc: "Insufficient electrical load balancing lets the DC-DC converter overload and fail. Losing 12-volt charging can mean a complete loss of drive power and of the exterior lights at the same time. Covers 2020-2024 Defender and other mild-hybrid models, so the P400 MHEV is the car to check here. Interim letters went out in June 2026." },
+      { number: "26V-599", title: "DC-DC Converter — Expands 26V-248, and Puts Already-Fixed Cars Back in Scope", desc: "A second DC-DC converter campaign for the same failure, plus a software error that can stop the converter at startup. It <strong>expands 26V-248</strong>, which means a Defender already remedied under that campaign returns to scope under this one. Interim owner letters are expected 2026-11-13 and the final remedy follows, so as of now this is an open recall with no fix yet available — worth knowing before a seller tells you the recalls are clear." },
+      { number: "26V-389", title: "Driver Airbag Clockspring Connector Corrosion", desc: "The driver's air bag clockspring connector can corrode so the air bag may not deploy as intended. The remedy is a protective lubricant gel applied to the connector terminals — a minutes-long dealer job, which is a reason to confirm it was actually done rather than assume a visit covered it. Owner letters were mailed 2026-08-03." },
+      { number: "21V-435", title: "Smoked Rear Light Assemblies — Turn, Brake and Tail Lights Can All Fail at Once", desc: "On 2020-2022 Defenders fitted with the smoked rear light assemblies, bright light striking the rear of the vehicle can cause a voltage spike that disables the turn signals, brake lights and tail lights together. Fitment-dependent: only the smoked option is in scope, so look at which lenses the car actually has before deciding whether this applies." },
+      { number: "24E-102", title: "Aftermarket Raised Air Intake Can Detach — Equipment Recall, 485 Units", desc: "An equipment recall rather than a vehicle campaign: the accessory Raised Air Intake, part VPLEP0543, may not be secured properly and can detach into the road. 485 units. It only applies if a previous owner fitted the accessory, so no build sheet or spec check will surface it — you find this one by looking at the car." },
+      { number: "21V-584", title: "Owner's Manual Overstates Third-Row Child Anchors — FMVSS 225", desc: "The manual for 2020-2021 Defenders states the third row has LATCH anchors with top tethers when it does not. The remedy is a correction insert mailed to the owner, so nothing is done to the vehicle and no service record is ever created. If you plan to seat a child in the third row, check the anchors in the car rather than the book." },
+    ]
   },
   'toyota-rav4-prime-2021': {
     year: 2021, make: 'Toyota', model: 'RAV4 Prime', trim: 'SE / XSE / XSE Premium / XSE Technology (1st gen, 2021–present)',
@@ -15589,7 +15598,7 @@ const CHECKLISTS = {
     engine: '3.0T V6 (335 hp), 2.9T V6 biturbo (434 hp, S), 4.0T V8 biturbo (541 hp, Turbo)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 3rd-gen Cayenne is arguably the best Cayenne ever — improved handling, larger interior, available PHEV, and excellent driving dynamics. The 3.0T V6 base is the value choice. Air suspension compressor failure is the main mechanical concern. Porsche maintenance costs are significant and unavoidable. Porsche CPO with extended warranty is essentially mandatory on any used Cayenne purchase.",
-    stats: { itemsToCheck: 13, recalls: 2, ownerComplaints: 230, topComplaintArea: 'Air Suspension / Engine / Electrical' },
+    stats: { itemsToCheck: 13, recalls: 8, ownerComplaints: 230, topComplaintArea: 'Air Suspension / Engine / Electrical' },
     sections: [
       { title: 'Air Suspension', items: [
         { title: 'PDCC / air suspension compressor failure', risk: 'high', riskLabel: 'High Risk at 60k+',
@@ -15620,7 +15629,16 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "20V-270", title: "Fuel Line Quick Connector Leak — Cayenne Turbo Only, 2,253 Units", desc: "A fuel line quick connector in the engine compartment can leak, with the fire risk that implies. Dealers replace the line and the connector. 2,253 units, and the campaign record lists <strong>Turbo and Turbo S Hybrid bodies only</strong> — no base or S car is in scope. NHTSA returns this campaign under the model string \"Cayenne Turbo\" and not under \"Cayenne\", so a single-query recall check on this vehicle misses it entirely." },
+      { number: "23V-841", title: "240V Charging Cable Overheats — E-Hybrid Only, 41,345 Units", desc: "On plug-in Cayennes the 220V/240V compact charging cable can overheat the household outlet or the cable itself when charging to 100 percent. The remedy supplies a replacement cable with a built-in temperature sensor. Note what that means on a used car: the recalled part is a <strong>loose object that travels with the vehicle</strong>, so a VIN that reads remedied tells you a cable was issued to somebody, not that the right cable is in the car you are buying. Open the frunk and look." },
+      { number: "18V-751", title: "Rear Seat Belt Buckle Can Break Under Load — FMVSS 209", desc: "The passenger-side rear seat belt buckle can break under load, which in a crash leaves that occupant unrestrained. Dealers replace the buckle. The oldest campaign on this car and the one most likely to have been closed years ago — but also the one with the worst outcome if it was not." },
+      { number: "19V-735", title: "Brake-Pad Wear Warning Missing — Supersedes 19V-115 and Re-Covers Cars Already Fixed", desc: "The instrument cluster may not give a visual warning that the brake pads are worn, an FMVSS 135 noncompliance. This campaign <strong>supersedes 19V-115 and explicitly covers vehicles already repaired under it</strong>, so a Cayenne whose paperwork shows the earlier fix completed is still in scope here. Dealers reprogram the cluster. Covers 2017-2020 Panamera and Cayenne including the Coupe." },
+      { number: "19V-115", title: "Brake-Pad Wear Warning Missing — FMVSS 135, Superseded", desc: "The original brake-pad warning campaign for the 2019 Cayenne and Cayenne S, remedied by an instrument-cluster software update. Listed because it is still on the car's record: it was superseded by 19V-735, and a completed 19V-115 does not close 19V-735." },
+      { number: "19V-111", title: "Rearview Camera Display Delay — FMVSS 111", desc: "A software fault can delay the rearview camera image on the 2019 Cayenne and Cayenne S, reducing the driver's view behind the car. Dealers update the software. Distinct from 25V-896 below, which is a different mechanism six years later on the same camera." },
+      { number: "25V-896", title: "Rearview Camera Image Fails in Reverse — FMVSS 111", desc: "The rearview camera image may not display when the car is put in reverse, on 2019-2025 Cayenne and Cayenne E-Hybrid among other Porsche lines. Dealers update the driver assistance software. The second camera campaign on this vehicle — two separate rear-visibility recalls six years apart, so one completed camera recall does not settle the question." },
+      { number: "19V-112", title: "Shock Absorber Forks Can Loosen — One Vehicle in the Entire Campaign", desc: "Shock absorber forks may allow the shock absorbers to loosen, impairing steering. The population is <strong>one vehicle</strong> campaign-wide — the narrowest recall in this library. It ships so the one person looking at that car can find out. Also worth knowing if you check this vehicle by hand: NHTSA returns it under the model string \"Cayenne\" even though the summary names the Cayenne Turbo, the opposite of how 20V-270 is filed." },
+    ]
   },
   'cadillac-xt4-2019': {
     year: 2019, make: 'Cadillac', model: 'XT4', trim: 'Luxury / Premium Luxury / Sport (1st gen, 2019–present)',
@@ -15766,7 +15784,7 @@ const CHECKLISTS = {
     summary: "The 6th-gen Altima (L34, 2019–2023) is a meaningful improvement over the notoriously fragile L33 generation. The 2.5L PR25DD is a more robust engine than the old QR25DE, and AWD is finally available. Two risks remain: (1) the 2.0L VC-Turbo (SR/Platinum FWD) burns oil and had an engine-bearing recall — verify the ECM update is done; and (2) the CVT8 is better than the old JF015E but still shudders on neglected fluid. A 2.5L AWD model with documented CVT fluid history and a completed camera recall is the safest pick.",
     stats: {
       itemsToCheck: 14,
-      recalls: 2,
+      recalls: 7,
       ownerComplaints: 380,
       topComplaintArea: 'CVT hesitation / shudder and VC-Turbo oil consumption (2019–2020)'
     },
@@ -15865,6 +15883,15 @@ const CHECKLISTS = {
           source: 'L34 Altima owner reports (NissanTalk, Reddit r/Nissan)'
         }
       ]}
+    ],
+    recalls: [
+      { number: "25V-437", title: "VC-Turbo Engine Bearings — 2.0L Only, 443,899 Units", desc: "Engine bearings with manufacturing defects can cause engine failure, and a bearing failure can breach the block and release hot oil, adding a fire risk. The scope is the <strong>2.0L VC-Turbo only</strong> — the 2.5L PR25DD does not share it, exactly as this checklist's VIN note says. The remedy is an ECM software reprogram rather than a mechanical repair, so confirm it from the VIN; owner letters were mailed 2026-04-08." },
+      { number: "19V-316", title: "Fuel Pump Lock Ring Not Engaged — 2.5L Front-Drive Only, FMVSS 301", desc: "A fuel pump lock ring that is not fully engaged can leak fuel near an ignition source. The scope is the <strong>front-wheel-drive 2.5L</strong> car — the mirror image of the bearing recall above, so the two engine families each carry one engine-specific campaign and they are different ones. Dealers tighten a disengaged ring or replace the pump if it has detached." },
+      { number: "18V-922", title: "Fuel Tube Retainer Clip Not Locked — Leak or Stall", desc: "The retainer clip joining the low-pressure fuel tube to the high-pressure fuel pump may not be locked in place. The tube can shift and leak, or disconnect entirely and stall the engine. A second and separate fuel-delivery campaign on the same model year as 19V-316, with a different mechanism — so \"the fuel recall was done\" is an incomplete answer on this car." },
+      { number: "19V-235", title: "Mislocated Brake Switch Bracket — Brake Lights Stay On and the Shifter Can Leave Park", desc: "A brake switch bracket in the wrong position can hold the switch on. Two consequences: the brake lights stay lit when nobody is braking, and the shift lever can be moved out of Park without the brake pedal pressed, which is a rollaway. Dealers inspect and fit a new brake pedal as needed. Easy to check on a walkaround — have someone watch the rear while you sit with your foot off the pedal." },
+      { number: "23V-628", title: "Damaged Rear Camera Harness — FMVSS 111", desc: "A damaged camera harness can distort or cut off the rearview image on 2019-2021 Altima and 2020-2021 Sentra. Dealers inspect the camera and harness and replace them if damaged, or apply protective tape and reroute the harness if not. The second of two separate camera campaigns on this car." },
+      { number: "19V-654", title: "Rear Camera Image Can Be Switched Off and Stay Off — FMVSS 111", desc: "On a broad set of 2018-2019 Nissan and Infiniti models the rear camera display setting can be changed so the image does not appear, and the setting persists across drive cycles. A blank reverse screen on a test drive is therefore a settings question before it is a hardware question — the previous owner may simply have turned it off. Dealers update the camera settings software." },
+      { number: "21V-169", title: "Over-Cured Continental Tires — 36,141 Units", desc: "Tires cured too long in production can develop a sidewall break or belt edge separation and lose air suddenly. 36,141 units across 2019-2020 Altima and 2018-2021 Titan. Practically, this is the one recall class a used buyer can usually discount on a car this age: the original tires are long gone. If the VIN still shows it open, that means nobody logged an inspection, not that the tires on the car are bad." },
     ]
   },
 };

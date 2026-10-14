@@ -2813,6 +2813,166 @@
       "component": "Second-row center seat belt latch trapped under the trim bezel and inaccessible, FMVSS 208 noncompliance; 5 units, campaign record lists 2021 Chevrolet Tahoe only",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V210000",
       "verified": "2026-10-13"
+    },
+    "21V435": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Smoked rear light assemblies suffer a voltage spike when bright light strikes the rear, disabling turn signals, brake lights and tail lights; 2020-2022 Defender so equipped, confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "21V584": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Owner's manual incorrectly states the third row has LATCH anchors with top tethers, FMVSS 225 noncompliance, remedy is a mailed manual insert; 2020-2021 Defender, confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "21V424": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Powertrain Control Module can switch off while driving and stall the engine; six-cylinder engines only, 163 units, campaign record lists 2020 and 2021 Land Rover Defender only",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V424000",
+      "verified": "2026-10-14"
+    },
+    "23V044": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Blocked engine cam carrier oil channel can cause an oil leak and fire; multi-model JLR campaign spanning Range Rover Sport, Range Rover, Defender, Discovery and Velar, 2020 Defender confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "24E102": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Equipment recall, not a vehicle campaign: aftermarket Raised Air Intake part VPLEP0543 insufficiently secured and can detach as a road hazard; 485 units, campaign record lists 2020-2025 Defender plus the accessory itself",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24E102000",
+      "verified": "2026-10-14"
+    },
+    "26V248": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Insufficient electrical load balancing overloads the DC-DC converter, losing 12-volt charging and with it drive power and exterior lighting; 2020-2024 Defender and other mild-hybrid models, confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "26V599": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "DC-DC converter malfunction from electrical overload plus a startup software error; expands campaign 26V-248, so vehicles already remedied under that campaign return to scope. Interim owner letters expected 2026-11-13, final remedy to follow. 2020-2024 Defender confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "26V389": {
+      "makes": [
+        "Land Rover"
+      ],
+      "component": "Driver air bag clockspring connector can corrode and the air bag may not deploy; remedy applies protective lubricant gel to the connector terminals; 2020-2026 Defender confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=land%20rover&model=defender&modelYear=2020",
+      "verified": "2026-10-14"
+    },
+    "18V922": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Retainer clip joining the low-pressure fuel tube to the high-pressure fuel pump may not be locked, so the tube can shift and leak or fully disconnect and stall the engine; 2019 Altima confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=altima&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "19V235": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Brake switch bracket in the wrong location can hold the brake switch on, leaving brake lights lit and allowing the shift lever to leave Park without the brake pedal pressed; 2019 Altima confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=altima&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "19V316": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Fuel pump lock ring not fully engaged can leak fuel, FMVSS 301 noncompliance; front-wheel-drive 2.5L 2019 Altima only, confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=nissan&model=altima&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "21V169": {
+      "makes": [
+        "Nissan"
+      ],
+      "component": "Continental tires cured too long in production can develop a sidewall break or belt edge separation causing sudden air loss; 36,141 units, campaign record lists 2019-2020 Altima and 2018-2021 Titan",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V169000",
+      "verified": "2026-10-14"
+    },
+    "18V751": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Passenger-side rear seat belt buckle can break under load, FMVSS 209 noncompliance; 2019 Cayenne confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "19V111": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Software fault delays the rearview camera display, FMVSS 111 noncompliance; 2019 Cayenne and Cayenne S confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "19V112": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Shock absorber forks may allow the shock absorbers to loosen, impairing steering; 1 unit campaign-wide, campaign record lists one 2019 Porsche Cayenne (summary specifies Cayenne Turbo). Returned under model=cayenne, not model=cayenne turbo",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V112000",
+      "verified": "2026-10-14"
+    },
+    "19V115": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Instrument cluster gives no visual warning of worn brake pads, FMVSS 135 noncompliance; superseded by 19V-735; 2019 Cayenne and Cayenne S confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "19V735": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Brake-pad wear warning absent from the instrument cluster, FMVSS 135 noncompliance; supersedes 19V-115 and covers vehicles already remedied under it; 2017-2020 Panamera and Cayenne including Coupe variants, 2019 Cayenne confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
+      "verified": "2026-10-14"
+    },
+    "20V270": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Fuel line quick connector in the engine compartment can leak, fire risk; 2,253 units, campaign record lists 2019 Cayenne Turbo, 2020 Cayenne Turbo, 2020 Cayenne Turbo Coupe, 2020 Cayenne S Hybrid and 2020 Cayenne Turbo S Hybrid Coupe only. Returned by model=cayenne turbo and NOT by model=cayenne",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V270000",
+      "verified": "2026-10-14"
+    },
+    "23V841": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "220V/240V compact charging cable can overheat the outlet or cable when charging to 100 percent, fire risk; remedy supplies a replacement cable with a built-in temperature sensor; 41,345 units, campaign record lists Cayenne E-Hybrid 2019-2024 among Taycan and Panamera plug-in models. Returned by model=cayenne e-hybrid and NOT by model=cayenne",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V841000",
+      "verified": "2026-10-14"
+    },
+    "25V896": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Rearview camera image may not display in reverse, FMVSS 111 noncompliance; 2019-2025 Cayenne and Cayenne E-Hybrid among 911, Taycan and Panamera models, 2019 Cayenne confirmed in scope by recallsByVehicle",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
+      "verified": "2026-10-14"
     }
   },
   "unverified_legacy": []
