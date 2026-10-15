@@ -145,6 +145,14 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Implication: embedding thesis reinforced a fourth consecutive marketplace-side cycle (06-25 Carfax, 06-28 & 10-01 CarGurus, now Cars.com) -- no marketplace has shipped an independent/buyer-ordered condition layer, only seller-sourced trust badges. Escalation trigger to 🔴 (not tripped): a third-party or AI-computer-vision inspection step added to Dealer Verified Listings, or AccuTrade condition data exposed as independently-sourced rather than dealer self-report. Housekeeping (repeat, open since 06-18): Competitor_Analysis.md's pending "Marketplace/channel" archetype block should now contrast each marketplace's trust-badge source (Carfax=Carfax-sourced, CarGurus=platform-recommendation, Cars.com=dealer-sourced) against AutoVet's buyer-ordered independent model.
     Weekly milestone: DONE -- intel ready for Daniel's review (not 🔴, no Awaiting-Daniel append required). Next in rotation: AutoTrader (Cox Automotive) (#9, cycle 2) [Cox-wide acquisitions, any inspection-layer signals].
 
+
+  2026-10-15 [scheduled task]: profiled AutoTrader (Cox Automotive, #9, cycle 2) (🟡).
+    Output: Competitors/_Monitor/2026-10-15-autotrader-cox.md (no Awaiting-Daniel append -- not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/), and autovet-recall-study-under-15k (inspect/index.html + scripts/recall-ledger.json) all orthogonal -- grep of TASKS.md for autotrader/cox/kbb/manheim/vauto found no hits in any of those three blocks' In-flight notes. Ready to deploy/publish is entirely inspect/index.html, pinpoint/index.html, or scripts/recall-ledger.json -- none touch Competitors/. Done (last 10) = recall-audit/vinnote/menu fixes, none touch Competitors/. Verified against: 2026-07-09-autotrader-cox.md (baseline for this cycle's delta). No Re-sync needed.
+    Key delta: KBB ICO's AI Remote Damage Assessment + Dynamic Condition Quiz are still NOT GA three months after the baseline ("upcoming capability" language unchanged on the same source page) -- the single biggest acquirer-tier condition-AI building block has not moved. New data point: vAuto "Test Drive" (launched 2026-08-28) previews two condition-adjacent dealer-side features -- "Common Problems" (AI-mined owner-forum issue data per make/model) and "Vehicle Journey" (service/ownership history feeding appraisal condition assessment) -- both appraisal/reconditioning tooling, not buyer-facing. No Cox-wide acquisitions found in the window (checked full PR Newswire feed Jul-Oct 2026 plus targeted M&A search); the only acquisition-shaped hits (BSC America auctions, Corcoran's Mobile Services, F&I Express) are stale (2025-07/2023-08/2018-10) and non-inspection. Other Aug-Oct releases (Secure Vehicle Transfer, Central Dispatch AI pricing, AI-shopper-gap tracker, Manheim Value Index) are wholesale/logistics/market-data, orthogonal. Confirmed an AutoTrader ChatGPT-integration story is Canadian TRADER.ca, not US AutoTrader -- same disambiguation trap as baseline, logged not actioned.
+    Implication: both standing theses (embedding reinforced, acquirer thesis at baseline's "modestly weakened, watch closely" level) hold unchanged. No escalation trigger tripped. No messaging change.
+    Weekly milestone: DONE -- intel ready for Daniel's review (not 🔴, no Awaiting-Daniel append required). Next in rotation: UVeye (#10, cycle 2) [funding, new partnerships, any consumer-facing moves].
+
 ### autovet-cpo-protocol-ingestion
 
 - Status: in flight
@@ -488,6 +496,65 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   toyota-highlander-2014/2020 into correct generation-specific menu rows -- that's a routing fix, not
   confirmation the checklist *content* itself is generation-clean, so still deferred out of caution).
 
+  2026-10-14 10:20 [scheduled task]: drafted 2018 Mazda3 (BM/BN, final model year of the 2014-2018
+  generation) pillar post -- Tier-2. Last remaining untouched Tier-2 candidate flagged since
+  09-16/09-23/09-30/10-07 (Subaru Forester posted 10-07; Mazda3 was the only name left on that list).
+  Picked 2018 specifically because it carries the busiest single-model-year recall set in the whole
+  BM/BN generation: four separate NHTSA campaigns, two of them extremely narrow (144 and 210 units),
+  giving a real VIN-check-vs-broad-risk story to tell, plus a clean hatchback-vs-sedan disambiguation
+  opportunity no aggregator source states plainly.
+  Output: Content/blog/2026-10-14-2018-mazda3-buyers-guide.md (~1,770 words body, status: draft),
+  Content/_seo-research/2026-10-14-2018-mazda3.md. Also updated Content/_seo-research/top-500-vehicles.md
+  (added the Mazda3 row to Already Covered; Suggested Next Picks note records that the previously-flagged
+  Tier-2 pair is now fully closed and flags Highlander re-check / unverified Tier-2-Tier-3 candidates for
+  next run, to be confirmed against the actual blog directory rather than assumed).
+  Recalls independently verified 2026-10-14 via api.nhtsa.gov/recalls/recallsByVehicle (not aggregator
+  copy), cross-checked against Part 573 PDFs where unit counts mattered: 19V272000 (wiper relay/BCM
+  fault, 2016-2018 Mazda3, 187,880 units -- the headline/broadest recall here); 17V745000 (incorrect
+  exhaust valve spring, engine-stall risk, 2018 Mazda3 ONLY, just 144 units built Oct 9-18 2017);
+  21V875000 (Denso low-pressure fuel pump impeller crack/deform, shared campaign across Mazda3/6/CX-3/
+  CX-5/CX-9/MX-5/Mazda2, 121,038 units total, but the 2018 Mazda3's own slice is only 210 units built
+  May 7-Oct 1 2018); 23V487000 (rearview-camera wiring-harness-fastener wear, confirmed via the Part 573
+  PDF to apply ONLY to the 2014-2018 Mazda3 5-door HATCHBACK -- 141,491 of a 227,335-unit combined
+  Mazda3+CX-3 campaign -- the sedan is not in scope at all, a real and checkable disambiguation no
+  aggregator source states). DISAMBIGUATION embedded (same pattern as every prior run's seed-correction):
+  19V-497 (2.5L cylinder-deactivation PCM -> valvetrain interference), which Product/CPO-Protocols/
+  mazda-certified.md's own Mazda3 section already scopes to "2019-2020 Mazda3," is explicitly flagged in
+  the post as belonging to the next, redesigned BP-generation car -- not this BM/BN-generation 2018 car --
+  so a reader can't confuse the two generations' recall sets. No campaign number fabricated or estimated;
+  the two coil-spring TSBs (02-015-18-3499, 02-014-18-3503) and the oil-consumption bulletin (MT-005-20)
+  are all confirmed real via carcomplaints.com's TSB archive. Carbon-buildup cleaning cost ($350-480) and
+  MAZDA CONNECT screen-replacement cost (~$1,000+) are both sourced to samarins.com, not invented or
+  presented as OEM figures. No Mazda CPO protocol content reprinted verbatim (business-plan Sec 4.5);
+  Product/CPO-Protocols/mazda-certified.md's category list and Mazda3-specific mapping paraphrased and
+  extended, consistent with every prior OEM-protocol citation on this site. Interlinks to 2017-honda-civic
+  + 2021-toyota-corolla + 2021-hyundai-elantra + 2016-mazda-cx5 (all four confirmed present in /blog/ by
+  directory listing before linking).
+  Sibling check: Verified against: no overlaps. Grep of TASKS.md In-flight + Ready + Done(last 10) for
+  mazda3/mazda-3/mazda found only stale, orthogonal hits well outside the 14-day window: the 2026-07-05
+  Mazda CPO-protocol-ingestion run (read-only reused above for the 19V-497 generation-scoping disambiguation,
+  not a conflict), the 2026-09-16 Mazda CX-5 content post (different vehicle, different file, >14 days old),
+  and several 09-22/09-23/09-25/09-26 menu-routing/duplicate-row fixes on mazda3-2018/2019 in
+  inspect/index.html (a different file tree -- dropdown routing, not blog content -- and all now well
+  outside the 14-day window from today's 2026-10-14 run date). In-flight autovet-competitor-monitor
+  (Competitors/) + autovet-cpo-protocol-ingestion (Product/CPO-Protocols/, last entry 10-11 Toyota
+  loop-restart, next=Honda) orthogonal -- neither references Mazda3 anywhere in TASKS.md. Ready to
+  deploy/publish (recall-audit wave-25, 2026-10-04, COMMITTED NOT PUSHED) touched mazda-cx5-2013's
+  15V-461 false-citation fix in inspect/index.html + scripts/recall-ledger.json -- a different vehicle
+  (CX-5, not Mazda3) and a different file tree than this run's Content/blog/ + Content/_seo-research/
+  output; read-only cross-referenced, not a conflict. No autovet-content-checklist-authoring or
+  autovetting-overnight-builder task is in flight anywhere in TASKS.md (consistent with the active
+  vehicle-launch freeze, DANIEL-DECISIONS-2026-07-29 [freeze], which applies to overnight-builder/
+  vinNote launches, not to this orthogonal content workstream). No Re-sync needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch
+  Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates: the
+  previously-flagged Tier-2 pair (Subaru Forester, Mazda3) is now fully closed -- re-check whether Toyota
+  Highlander (#20, last Tier-1 gap) has cleared the recall-audit generation-boundary sweep before
+  defaulting to further Tier-2/Tier-3 picks (Nissan Sentra, Kia Forte, Chevrolet Trax, Subaru Crosstrek,
+  Hyundai Santa Fe are candidates but NOT yet verified against the actual Content/blog/ directory --
+  confirm there first, not just against this tracking table, per the recurring tracking-gap lesson).
+
+
 ### autovet-recall-study-under-15k
 
 - Status: in flight
@@ -697,6 +764,28 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     **Commit: `c91961b`** (parented on `a393b62`; tree diff is exactly 2 paths — `inspect/index.html` and `scripts/recall-ledger.json`. `git diff-tree` confirms nothing under `_hub/` entered the tree). **PUSH: refused, Day 35.** `GET /user` with the stored PAT returns **401** (prefix `ghp_krkG...`, `expires` still reads 2027-05-19, credentials file untouched since 2026-05-30 — revoked, not expired). No `git push` was attempted: the only way to make one succeed without a valid credential is to put a token in the remote URL, which SECRETS-POLICY Rule 1 bans. **43 commits now stuck**, `origin/main` still at `0dfa937`. **G29** (10-09) still awaiting Daniel; tonight's 23 rows would pass it.
 
     **Next run.** Queue **42**. Three slugs still claiming 2, in order: `porsche-macan-2017`, `ram-2500-2019`, `tesla-model-y-2022` — then the thirty-nine at 1. `porsche-macan-2017` is next. **Carry the method in, not just the lesson: start every slug with `products/vehicle/models?modelYear=Y&make=M&issueType=r`.** Two named candidates ahead where it pays immediately — **`porsche-macan-2017`**, because the 2019 Porsche list already showed `MACAN` and `MACAN TURBO` as separate strings (check 2017's own list), and **`ram-2500-2019`**, where `2500` vs `2500 HD` vs a bare `ram` was flagged on 10-13.
+
+    2026-10-15 02:00 [scheduled task]: **two more slugs off the recall-content queue — `porsche-macan-2017` and `ram-2500-2019`. 19 NHTSA campaign rows added**, every one returned by `recallsByVehicle` for that exact vehicle before it was written and ledgered before it shipped. `stats.recalls` 2 -> 7 (Macan) and 2 -> 12 (Ram); both displayed zero rows against a stat of 2, so both were *under*-stating. Queue **42 -> 40**. Ledger `verified` **350 -> 367** (17 new; `25V-010` and `20V-191` were already ledgered and left untouched), `unverified_legacy` 0 -> 0. Two slugs rather than three, deliberately: the Ram carries 12 campaigns and the Macan needed seven `campaignNumber` second-sources to settle scope in both directions. The third queued slug, `tesla-model-y-2022`, was scouted and left for tomorrow with its data in hand — it is a 20-row page.
+
+    **The index is wrong in BOTH directions on the same vehicle, and the proof is inside one record.** The 2017 Macan holds four strings (`MACAN` 6 campaigns / `MACAN S` 4 / `MACAN TURBO` 3 / `MACAN GTS` 4, union **7**) and the sets are not nested. The base string misses `17V-133` (occupant sensor mat, FMVSS 208, 17,871 units, **GTS-only for MY2017**, returned under `MACAN GTS` alone). The trim strings miss `20V-077` (fuel pump flange cracked by its own service cover, **70,117 units**, fire risk) and `16V-680` (front anti-roll bar links -> oversteer, 243 units), both indexed under the bare `MACAN` string only. Decisive: **`16V-680`'s own summary names "2017 Macan, Macan S, Macan GTS, and Macan Turbo" while its model index carries a single row, `MACAN, 2017`** — the record contradicts its own index in the same API response. The union is the only defensible answer, not merely the safest.
+
+    **The mirror failure — summary year-ranges OVER-attribute — and the sibling check is what caught it.** `autovet-cpo-protocol-ingestion` verified Macan campaigns first-hand on 2026-07-05 and recorded `22V-656` (low-beam headlight adjustment-screw caps, FMVSS 108, **222,858 units**), which appeared in **none** of tonight's four queries. Checked directly rather than assumed: its summary covers "certain **2003-2020** Macan, Cayenne, Panamera, and Cayman S vehicles" but its per-model-year rows — read end to end across two fetch windows — hold `2015 Macan S`, `2015 Macan Turbo` and `2018 Macan S` and **no 2017 Macan row of any trim**. **Deliberately not shipped.** So trim strings under-attribute while summary ranges over-attribute, and **a campaign another task verified first-hand for the *model* is not verified for the *model year*** — the model-year rows are the gate. Second, opposite reason for the existing "never reuse another slug's result" rule.
+
+    **Supersession recurs three times tonight, on two manufacturers, and in each case the later campaign re-covers cars the earlier one fixed.** (a) Macan occupant sensor mat: `17V-133` (Jun 2017, GTS only, 17,871) then `21V-131` (Oct 2021, **all four 2017 trims**, 39,547) — same component, same remedy, so a 2017 GTS repaired in 2017 is back in scope four years later. (b) Macan fuel pump flange: `17V-289` (Jul 2017, 51,497) then `20V-077` (Apr 2020, 70,117) — same part three years apart, and the later, larger one is the fragmented one. (c) Ram curtain airbag inflator: `25V-010` (letters 2025-02-13, 6,066, FCA 05C/09C/10C) then `25V-824` (letters 2025-12-18, 1,589, FCA C2C/C7C/C8C) — same rupture, same remedy, ten months apart, and `25V-824`'s VINs only became searchable 2025-12-04, so a history report printed before that date cannot show it. "The recall was done" is a sentence about one campaign, not about a component.
+
+    **The recommended engine carries the recalls again — third night in four.** `ram-2500-2019` rates the 6.7L Cummins **low risk** and calls it "legendary for durability." Three of the truck's four fire-or-stall campaigns sit on the Cummins driveline and none touch the 6.4L HEMI: `21V-880` (HPFP fails, engine stalls, **222,410 units**, Cummins only), `19V-498` (diesel fuel lines leak into the engine bay, 499 units, diesel only), `20V-043` (the six-speed **68RFE** pushes fluid out of the dipstick tube and the record states it could reach **the turbocharger**, 87,431 units — 68RFE and turbo are the Cummins driveline; the 2019 HEMI 2500 runs the eight-speed). The fourth, `19V-635` (front calipers built with the wrong assembly fluid, seals swell, brakes drag and overheat, 5,495 units), is the only engine-agnostic one and the only one whose remedy is a real mechanical repair. 10-14 found the *preferred* engine carrying the stall recall; tonight the *legendary* one carries three of four. **Wear reputation and recall exposure are orthogonal** — and the checklists state the first while implying the second.
+
+    **Ram 2019 does not fragment; the 10-13 question is closed in one call.** `products/vehicle/models?modelYear=2019&make=ram&issueType=r` returns seven distinct strings (`1500`, `1500 CLASSIC`, `2500`, `3500`, `4500`, `5500`, `PROMASTER`, `PROMASTER CITY`) and exactly **one** 2500 string — no `2500 HD`, no bare `RAM`. 12 is provably complete.
+
+    **Other editorial findings.** (a) **Fitment-dependent rows, factory-option flavour:** `20V-207` (Ram accessory bed step, 37,580 units) and `18V-844` (Macan optional ski bag, 142 units) apply only if the part is on the vehicle — unlike `24E-102` (10-14, aftermarket) these are factory options, so a VIN can read open on a car that never had one or closed because somebody removed it. Both rows say to look at the car. (b) **OTA holds on a fourth manufacturer:** `20V-191` (Ram rearview camera) is a radio software update applicable over the air, so a clean dealer history neither proves nor disproves it. (c) **A quieter version of the same problem:** `22V-140`'s defect is that the ESC warning lamp may fail to illuminate during a fault, so on an unremedied truck **a dark ESC light is not evidence the system works** — worth closing before trusting a clean dash on a test drive.
+
+    Sibling check: no blocking overlap, nothing to re-sync. Touched `inspect/index.html`, `scripts/recall-ledger.json`, `TASKS.md` and the gitignored `_hub/Build-Log/2026-10-15.md` + `_hub/Awaiting-Daniel.md`. In-flight `autovet-competitor-monitor` (`Competitors/`, AutoTrader/Cox 10-15), `autovet-cpo-protocol-ingestion` (`Product/CPO-Protocols/`) and `autovet-seo-content` (`Content/blog/` + per-vehicle `Content/_seo-research/`, 2018 Mazda3 10-14) are orthogonal by file tree. The cpo-ingestion block *does* carry Macan campaign IDs (2026-07-05) — read-only cross-referenced, and it produced tonight's `22V-656` finding rather than a conflict. Ready blocks 09-09 -> 10-04 all touch `inspect/index.html` or `scripts/recall-ledger.json` but are ancestors of `main`, not concurrent siblings; `c91961b`/`d6eeccf` (10-14) is the direct parent and this run consumes its ledger output read-only. Done (last 10) grep for `macan` / `ram-2500` / `2500` found no block touching either slug's rows. **`Started:` audit clean** — all 31 `###` blocks carry a `- Started:` date, 0 missing. Verified against: autovet-cpo-protocol-ingestion (`22V-656` cross-reference), autovetting-recall-audit-wave-25-2026-10-04.
+
+    **Scanner: PASS** (671 files, exit 0 — run with output redirected to a file, not piped, so a non-zero exit could not be masked). **Syntax-check: PASS** (official node recipe on `inspect/index.html`: Script 2 OK, Script 5 OK, exit 0). **Dead-links: verified** — the diff adds no `href` at all, so no new route can be dead. **Row integrity:** both slugs re-parsed out of the HTML after the edit — `stat == displayed rows` (7 == 7, 12 == 12) and **0 rows missing `number`, `title` or `desc`**, so the proposed G29 gate would pass on all 19. **`VEHICLE_MENU` untouched** (no `{ model:` line in the diff), so no route could change. `inspect/index.html` +25/-4 (18,334 -> 18,355 lines), truncation guard ends `</html>`. Ledger diff **+138/-0**, purely additive.
+
+    **Commit: `a49ca8e`** (parented on `d6eeccf`; `git diff-tree` confirms the tree diff is exactly 2 paths — `inspect/index.html` and `scripts/recall-ledger.json`, nothing under `_hub/` entered the tree). **PUSH: refused, Day 36** — `GET /user` with the stored PAT returns **401** (prefix `ghp_krkG...`, credentials file untouched since 2026-05-30). No `git push` attempted: the only way to make one succeed without a valid credential is to put a token in the remote URL, which SECRETS-POLICY Rule 1 bans. **45 commits now stuck**, `origin/main` still at `0dfa937`.
+
+    **Next run.** Queue **40**. One slug still claiming 2 — **`tesla-model-y-2022`** — then the thirty-nine at 1. **Already scouted, and it is the worst case the study has produced.** (1) **There is no canonical `MODEL Y` string at all**: the 2022 Tesla model list holds `MODEL Y 7-SEAT` and `MODEL Y  5-SEAT` and nothing named plainly `MODEL Y` — NHTSA partitions this vehicle by **seat count**, a dimension with no relationship to any defect. (2) **`MODEL Y  5-SEAT` contains two spaces** between `Y` and `5-SEAT`; any exact-match pipeline keyed on a cleanly-typed string silently returns nothing for half the population. (3) **`model=model y` returns 20 campaigns against a `stats.recalls` of 2** — the largest understatement in the library, on a page that reads `overallRisk: 'low'` and hand-waves with "Verify all NHTSA recalls are closed." The 20: `21V-912`, `22V-037`, `22V-045`, `22V-050`, `22V-063`, `22V-235`, `22V-296`, `22V-702`, `22V-844`, `23V-085`, `23V-130`, `23V-385`, `23V-838`, `24V-051`, `24V-153`, `24V-376`, `24V-554`, `24V-935`, `26V-283`, `26V-507`. Confirm the union against both seat strings before writing, and pin down why `model=model y` (20) already exceeds what either seat string can hold alone — that implies substring matching, a difference from the exact-match behaviour recorded on the Silverado on 10-05. Most of the 20 are software/ADAS campaigns with OTA remedies, so that page is where the "no service record is ever created" thread gets its fullest treatment. **Budget the whole night for it.** Carry the method in — `products/vehicle/models` first, every slug — and carry tonight's second lesson in too: **a campaign verified first-hand for the model is not verified for the model year.**
 
 ## Ready to deploy / publish
 
