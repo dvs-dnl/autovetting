@@ -2973,6 +2973,144 @@
       "component": "Rearview camera image may not display in reverse, FMVSS 111 noncompliance; 2019-2025 Cayenne and Cayenne E-Hybrid among 911, Taycan and Panamera models, 2019 Cayenne confirmed in scope by recallsByVehicle",
       "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=porsche&model=cayenne&modelYear=2019",
       "verified": "2026-10-14"
+    },
+    "20V077": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Fuel pump filter flange cracked by service cover contact",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V077000",
+      "verified": "2026-10-15"
+    },
+    "17V289": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Fuel pump flange crack / fuel leak",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=17V289000",
+      "verified": "2026-10-15"
+    },
+    "16V680": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Front anti-roll bar connecting links out of position",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V680000",
+      "verified": "2026-10-15"
+    },
+    "17V133": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Front passenger occupant classification sensor mat (FMVSS 208)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=17V133000",
+      "verified": "2026-10-15"
+    },
+    "21V131": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Front passenger seat occupancy sensor mat degradation",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V131000",
+      "verified": "2026-10-15"
+    },
+    "23V443": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Rear outboard lower seat belt anchor screw torque",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V443000",
+      "verified": "2026-10-15"
+    },
+    "18V844": {
+      "makes": [
+        "Porsche"
+      ],
+      "component": "Optional ski bag fastening strap thread",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=18V844000",
+      "verified": "2026-10-15"
+    },
+    "21V880": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Cummins 6.7L high-pressure fuel pump failure / engine stall",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V880000",
+      "verified": "2026-10-15"
+    },
+    "19V498": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Diesel fuel lines leak into engine compartment",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V498000",
+      "verified": "2026-10-15"
+    },
+    "20V043": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "68RFE transmission fluid leak from dipstick tube",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V043000",
+      "verified": "2026-10-15"
+    },
+    "19V635": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Front brake calipers assembled with incorrect fluid",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V635000",
+      "verified": "2026-10-15"
+    },
+    "25V824": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Side curtain air bag inflator rupture (second campaign)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=25V824000",
+      "verified": "2026-10-15"
+    },
+    "20V580": {
+      "makes": [
+        "Ram",
+        "Jeep"
+      ],
+      "component": "Front seat belt retractor load limiting",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ram&model=2500&modelYear=2019",
+      "verified": "2026-10-15"
+    },
+    "22V140": {
+      "makes": [
+        "Ram",
+        "Dodge"
+      ],
+      "component": "ABS module software — ESC warning lamp (FMVSS 126)",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ram&model=2500&modelYear=2019",
+      "verified": "2026-10-15"
+    },
+    "22V904": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Tailgate striker misalignment / latch",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ram&model=2500&modelYear=2019",
+      "verified": "2026-10-15"
+    },
+    "22V035": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Wiper arm retaining nuts loose",
+      "source": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ram&model=2500&modelYear=2019",
+      "verified": "2026-10-15"
+    },
+    "20V207": {
+      "makes": [
+        "Ram"
+      ],
+      "component": "Accessory bed step failure under side load",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V207000",
+      "verified": "2026-10-15"
     }
   },
   "unverified_legacy": []
