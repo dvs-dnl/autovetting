@@ -3111,6 +3111,150 @@
       "component": "Accessory bed step failure under side load",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V207000",
       "verified": "2026-10-15"
+    },
+    "26V507": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Low-beam headlights exceed FMVSS 108 maximum output; headlights replaced — 2017-2023 Model 3 / 2020-2023 Model Y, 20,349 units, letters 2026-10-03",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V507000",
+      "verified": "2026-10-16"
+    },
+    "21V912": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Front and rear suspension knuckles may fracture, suspension links separate — 2020-2022 Model Y, 826 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V912000",
+      "verified": "2026-10-16"
+    },
+    "23V385": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Steering-wheel fastener loose, wheel can separate from column (SB-23-32-001) — 2022-2023 Model Y, 137 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V385000",
+      "verified": "2026-10-16"
+    },
+    "23V130": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Second-row seat-back frame bolts not securely tightened (SB-23-13-001) — 2022-2023 Model Y, 3,470 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V130000",
+      "verified": "2026-10-16"
+    },
+    "22V037": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "FSD Beta 'rolling stop' through all-way stops — OTA — 2016-2022 S/X, 2017-2022 Model 3, 2020-2022 Model Y, 53,822 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V037000",
+      "verified": "2026-10-16"
+    },
+    "22V045": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Seat-belt chime may not sound for unbelted driver, FMVSS 208 — OTA — 2021-2022 S/X, 2017-2022 Model 3, 2020-2022 Model Y, 817,143 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V045000",
+      "verified": "2026-10-16"
+    },
+    "22V050": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Heat-pump valve reduces windshield defrosting, FMVSS 103 — OTA — 2021-2022 Model 3/S/X, 2020-2022 Model Y, 26,681 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V050000",
+      "verified": "2026-10-16"
+    },
+    "22V063": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Boombox obscures Pedestrian Warning System sounds, FMVSS 141 — OTA; superseded by 22V-235 — 2020-2022 S/X/Y, 2017-2022 Model 3, 578,607 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V063000",
+      "verified": "2026-10-16"
+    },
+    "22V235": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Boombox / PWS second remedy incl. Summon and Smart Summon, FMVSS 141 — OTA; supersedes 22V-063 — 2020-2022 Y/X/S, 2017-2022 Model 3, 594,894 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V235000",
+      "verified": "2026-10-16"
+    },
+    "22V296": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Infotainment CPU overheats on fast-charge, rearview image and centre display lost — OTA — 2021-2022 S/X, 2022 Model 3/Y, 129,960 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V296000",
+      "verified": "2026-10-16"
+    },
+    "22V702": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Automatic window reversal may not detect obstruction, FMVSS 118 — OTA — 2017-2022 Model 3, 2020-2022 Model Y, 2021-2022 S/X, 1,096,762 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V702000",
+      "verified": "2026-10-16"
+    },
+    "22V844": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Taillights may intermittently fail to illuminate (SB-22-00-016) — OTA — 2023 Model 3, 2020-2023 Model Y, 321,628 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V844000",
+      "verified": "2026-10-16"
+    },
+    "23V085": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "FSD Beta unsafe at intersections and on speed-limit changes — OTA — 2016-2023 S/X/3/Y, 362,758 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V085000",
+      "verified": "2026-10-16"
+    },
+    "24V051": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Brake/Park/ABS warning lights wrong font size, FMVSS 105/135 (SB-24-00-003) — OTA — S/X/3/Y multi-year + 2024 Cybertruck, 2,193,869 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V051000",
+      "verified": "2026-10-16"
+    },
+    "24V153": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Factory reset muted Pedestrian Warning System, FMVSS 141 — OTA (2023.44.30.14) — 2013-2022 S/X/3/Y, 6,557 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V153000",
+      "verified": "2026-10-16"
+    },
+    "24V554": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Hood latch may not detect unlatched hood (SB-24-00-012) — OTA — 2021-2024 Model 3/S/X, 2020-2024 Model Y, 1,849,638 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V554000",
+      "verified": "2026-10-16"
+    },
+    "24V935": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "TPMS warning light may not stay illuminated, FMVSS 138 (SB-24-00-018) — OTA — 2024 Cybertruck, 2017-2025 Model 3, 2020-2025 Model Y, 696,281 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V935000",
+      "verified": "2026-10-16"
+    },
+    "26V283": {
+      "makes": [
+        "Tesla"
+      ],
+      "component": "Rearview camera image delayed in reverse on software 2026.8.6, FMVSS 111 — OTA (record's overTheAirUpdate flag reads false while remedy text describes an OTA update) — 2017 and 2020-2023 Model Y, 2021-2023 Model 3/S, Model X; 218,868 units",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V283000",
+      "verified": "2026-10-16"
     }
   },
   "unverified_legacy": []
