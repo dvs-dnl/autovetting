@@ -3255,6 +3255,71 @@
       "component": "Rearview camera image delayed in reverse on software 2026.8.6, FMVSS 111 — OTA (record's overTheAirUpdate flag reads false while remedy text describes an OTA update) — 2017 and 2020-2023 Model Y, 2021-2023 Model 3/S, Model X; 218,868 units",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V283000",
       "verified": "2026-10-16"
+    },
+    "21V301": {
+      "makes": [
+        "Hyundai"
+      ],
+      "component": "2.0L Nu MPI piston oil rings not properly heat-treated; engine damage/stall/fire. 158,493 units. PNSS software + engine inspection/replacement",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V301000",
+      "verified": "2026-10-17"
+    },
+    "16V802": {
+      "makes": [
+        "Cadillac",
+        "GMC"
+      ],
+      "component": "Front brake caliper piston seal torn/misaligned; brake fluid leak. 1,844 units. GM 16096",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=16V802000",
+      "verified": "2026-10-17"
+    },
+    "19V425": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Lug nuts on all four wheels may loosen; wheel detachment. 25,003 units. Mazda 3519F",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V425000",
+      "verified": "2026-10-17"
+    },
+    "19V907": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Smart Brake Support false obstacle detection; unintended AEB. 35,390 units. Mazda 4219L",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V907000",
+      "verified": "2026-10-17"
+    },
+    "19V497": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "PCM software error; engine stall. 262,220 units. Mazda 3719F",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V497000",
+      "verified": "2026-10-17"
+    },
+    "19V363": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Passenger airbag-off light and seat-belt indicators incorrectly programmed. 17,016 units. Mazda 3319E",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V363000",
+      "verified": "2026-10-17"
+    },
+    "19V514": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Front seat cover interferes with head-restraint lock release. 9,430 units. Mazda 3819F",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V514000",
+      "verified": "2026-10-17"
+    },
+    "19V558": {
+      "makes": [
+        "Mazda"
+      ],
+      "component": "Interior rearview mirror adhesive; mirror may detach (manual dimming mirrors). 22,571 units. Mazda 3919G",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V558000",
+      "verified": "2026-10-17"
     }
   },
   "unverified_legacy": []

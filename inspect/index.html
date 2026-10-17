@@ -11846,7 +11846,7 @@ const CHECKLISTS = {
     engine: '2.0L MPI I4 (147 hp) or 1.6L Turbo GDI I4 (175 hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The 1st-gen Kona (non-EV) is a practical and reliable subcompact SUV. The 1.6T is significantly more enjoyable than the base 2.0L. No chronic powertrain failures on either engine. The 7-speed DCT on the 1.6T can shudder at low speed — a known issue addressed by Hyundai with software updates. Avoid the Kona Electric (separate product with battery fire recall history).",
-    vinNote: "The 1st-gen Kona (OS, 2018-2023) came with two completely different gas engines AND an electric variant (Kona EV — separate checklist). 2.0L MPI Nu I4 (147hp), naturally aspirated, paired with 6-speed automatic — fitted to SE and SEL trims. 1.6L Gamma Turbo GDI I4 (175hp), paired with 7-speed dual-clutch automatic — fitted to Limited and Ultimate trims. Critical disambiguation: the 2.0L is part of Hyundai's broad Nu/Theta engine recall exposure (KSDS engine-bearing rod-knock pattern) and was subject to multiple campaigns; the 1.6T uses a different (Gamma) family with no equivalent recall but has its own carbon-buildup and timing-chain stretch concerns above 80k miles. Practical buyer rule: verify ALL open Hyundai engine recalls are closed via VIN at the dealer or hyundaiusa.com regardless of engine — the 2.0L exposure is the bigger concern. The 7-speed dual-clutch on the 1.6T needs trans fluid service every 30k miles. Tell engines apart by the trim badge: SE/SEL = 2.0L NA, Limited/Ultimate = 1.6T. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
+    vinNote: "The 1st-gen Kona (OS, 2018-2023) came with two completely different gas engines AND an electric variant (Kona EV — separate checklist). 2.0L MPI Nu I4 (147hp), naturally aspirated, paired with 6-speed automatic — fitted to SE and SEL trims. 1.6L Gamma Turbo GDI I4 (175hp), paired with 7-speed dual-clutch automatic — fitted to Limited and Ultimate trims. Critical disambiguation: the 2.0L Nu MPI is the engine named in NHTSA campaign 21V-301, where improperly heat-treated piston oil rings can damage the engine, and Hyundai's remedy pairs an engine inspection or replacement with Piston Ring Noise Sensing System (PNSS) software; the 1.6T uses a different (Gamma) family and is not in that campaign but has its own carbon-buildup and timing-chain stretch concerns above 80k miles. Practical buyer rule: verify ALL open Hyundai engine recalls are closed via VIN at the dealer or hyundaiusa.com regardless of engine — the 2.0L exposure is the bigger concern. The 7-speed dual-clutch on the 1.6T needs trans fluid service every 30k miles. Tell engines apart by the trim badge: SE/SEL = 2.0L NA, Limited/Ultimate = 1.6T. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
     stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 195, topComplaintArea: 'Transmission (DCT shudder)' },
     sections: [
       { title: 'Powertrain', items: [
@@ -11888,7 +11888,9 @@ const CHECKLISTS = {
           source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "21V-301", title: "2.0L Nu MPI piston oil rings not properly heat-treated — engine damage, stall and fire risk", desc: "2019-2021 Kona, 2019-2020 Elantra and 2019-2021 Veloster built with the 2.0L Nu MPI engine, 158,493 units. Piston oil rings that were not properly heat-treated can damage the engine and stall it, and oil leaking onto hot exhaust parts can start a fire. Dealers inspect and replace the engine at no charge and deploy Piston Ring Noise Sensing System (PNSS) software; owner letters were mailed 2021-08-24. This is the engine-code item on this page: the campaign covers the 2.0L only, so an SE or SEL is in scope and a 1.6T Limited or Ultimate is not. The trim badge narrows it and the VIN settles it." }
+    ]
   },
   'volkswagen-atlas-2018': {
     year: 2018, make: 'Volkswagen', model: 'Atlas', trim: 'S / SE / SE with Technology / SEL / SEL Premium (1st gen, 2018–2023)',
@@ -12083,7 +12085,9 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "16V-802", title: "Front brake caliper piston seal torn or misaligned — brake fluid leak", desc: "2017 XT5 and 2017 GMC Acadia, 1,844 units. A torn or misaligned front brake caliper piston seal can let brake fluid leak past it and reduce braking performance. Dealers inspect the front calipers and replace the assemblies as needed at no charge; GM calls this recall 16096 and it began 2016-12-12. 1,844 units is a very narrow population for a model year, so the model year tells you almost nothing here — only the VIN does. Because the campaign is nearly ten years old, what you are checking is whether the completion was recorded, not whether the car is new enough to have escaped it." }
+    ]
   },
   'toyota-avalon-2018': {
     year: 2018, make: 'Toyota', model: 'Avalon', trim: 'XLE / XLE Plus / XLE Premium / Touring / Limited — Hybrid XLE Plus / XLE Premium / Limited (4th gen XX40, 2013–2018; final year before the 2019 XX50 redesign)',
@@ -12180,9 +12184,9 @@ const CHECKLISTS = {
     year: 2019, make: 'Mazda', model: 'Mazda3', trim: 'Base / Select / Preferred / Premium (4th gen BP, 2019–2023)',
     engine: '2.0L SKYACTIV-G I4 (155 hp) or 2.5L SKYACTIV-G I4 (186 hp) or 2.5T Turbo (227 hp)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 4th-gen Mazda3 (BP) is one of the best-built compact cars in its segment — premium interior quality that rivals luxury brands, refined SKYACTIV powertrain, and exceptional reliability record. No chronic failure modes on any powertrain variant. The 2.5T Turbo (Hatchback and select Sedan) is the standout choice. ADAS radar sensor alignment can be affected by accidents; check for any prior front-end work.",
+    summary: "The 4th-gen Mazda3 (BP) is one of the best-built compact cars in its segment — premium interior quality that rivals luxury brands, refined SKYACTIV powertrain, and exceptional reliability record. No chronic failure modes on any powertrain variant. The 2.5T Turbo (Hatchback and select Sedan) is the standout choice. ADAS radar sensor alignment can be affected by accidents; check for any prior front-end work. On recalls the first year of this generation is busy rather than troubling: NHTSA lists six campaigns for MY2019, five of them software or trim items and one — loose lug nuts on all four wheels, 19V-425 — worth confirming by VIN, because its consequence is a wheel coming off.",
     vinNote: "The 4th-gen Mazda3 (BP, 2019+) came with three different SkyActiv engines and the inspection priorities differ across them. 2.0L SkyActiv-G (155hp) — the base hatch/sedan engine, paired with 6-speed manual or 6-speed automatic. 2.5L SkyActiv-G (186hp) — the mid-trim engine, 6-speed auto only. 2.5L SkyActiv-G Turbo (227hp regular fuel / 250hp premium) — fitted to the Premium and Turbo trims, 6-speed auto only, with AWD optional. All three share the same carbon-buildup pattern documented across the SkyActiv-G family (walnut blast every 80-100k miles), but the Turbo adds a wastegate noise/failure pattern above 60k miles (a documented $400-700 service) and is the only engine that benefits meaningfully from premium fuel. The 6-speed automatic in all three is exceptionally reliable. Tell engines apart by the trim badge and the engine cover (displacement is printed in large letters); the Turbo adds 'Turbo' to the trunk badge. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Minimal' },
+    stats: { itemsToCheck: 9, recalls: 6, ownerComplaints: 110, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'SKYACTIV-G 2.0L / 2.5L — no chronic issues', risk: 'low', riskLabel: 'Low Risk',
@@ -12213,7 +12217,14 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "19V-425", title: "Lug nuts on all four wheels may loosen — a wheel can detach", desc: "2019 Mazda3, 25,003 units. The lug nuts on all four wheels may loosen, and a wheel separating from the car is the most serious failure on this page. Dealers tighten the front and rear lug nuts to specification at no charge; Mazda calls this recall 3519F and it began 2019-07-09. It is a short free job, so most cars have had it, but it is also the one campaign here whose consequence is structural — confirm the completion by VIN rather than assuming." },
+      { number: "19V-907", title: "Smart Brake Support may brake for an obstacle that is not there", desc: "2019-2020 Mazda3, 35,390 units. The forward-sensing system can falsely detect an obstacle and trigger automatic emergency braking, stopping the car suddenly in traffic. Dealers update the SBS software, and some cars also get an instrument-cluster software update or replacement and a revised owner manual, all at no charge; Mazda calls it 4219L. Worth raising specifically on a test drive, because an owner who found the braking unnerving may have switched the system off rather than had it updated." },
+      { number: "19V-497", title: "Powertrain control module software error can stall the engine", desc: "2018-2019 CX-5, 2018-2019 Mazda6 and 2019 Mazda3, 262,220 units — the largest population of the six. A software error in the powertrain control module can stall the engine. Dealers reprogram the PCM at no charge; Mazda calls it 3719F. A dealer reprogramming leaves a service record behind, which is the difference between this and an over-the-air fix: here there is something to look for in the history." },
+      { number: "19V-363", title: "Passenger airbag-off light and seat-belt indicators programmed wrong", desc: "2019 Mazda3, 17,016 units. Incorrect programming can switch off the passenger airbag deactivation light while the airbag is actually off, and can switch off the seat-belt indicators while belts are unfastened — so the car can imply a front child seat is safe when it is not. Dealers replace the passenger airbag and seat-belt status indicator assembly at no charge; Mazda calls it 3319E. The remedy is a part rather than software, so a record exists for it." },
+      { number: "19V-514", title: "Front seat cover can block the head-restraint lock release", desc: "2019 Mazda3, 9,430 units. Seat cover material can interfere with the head restraint lock release button so the restraint may not lock in place, which raises injury risk in a crash. Dealers install spacers under the lock release buttons on both front seats at no charge; Mazda calls it 3819F. This is the one item on the page you can check yourself in the car park — raise each front head restraint and confirm it locks at height." },
+      { number: "19V-558", title: "Interior rearview mirror can detach from its housing", desc: "2019 Mazda3 with manual dimming mirrors, 22,571 units. The adhesive bonding the interior rearview mirror to its housing may not be properly bonded, letting the mirror come away and cutting rearward visibility. Dealers replace the mirror assembly at no charge; Mazda calls it 3919G. Only cars with the manual dimming mirror are in scope, so an auto-dimming car is out — another case where the option list rather than the model year decides." }
+    ]
   },
   'lexus-is-2018': {
     year: 2018, make: 'Lexus', model: 'IS', trim: 'IS200t / IS300 / IS350 / IS350 AWD (3rd gen XE30, 2014–2020)',
