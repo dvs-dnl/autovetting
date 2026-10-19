@@ -12652,8 +12652,8 @@ const CHECKLISTS = {
     year: 2020, make: 'Mercedes-Benz', model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 45 4MATIC (1st gen X156, 2015–2020; final year before the 2021 H247 redesign)',
     engine: '2.0T M270 I4 (208 hp) with 7-speed dual-clutch (7G-DCT) — AMG GLA 45: 2.0T M133 (375 hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "2020 is the final year of the 1st-generation X156 GLA — the hatchback-shaped car on the MFA platform, not the taller H247 that replaced it for 2021. Expect COMAND infotainment rather than MBUX, and the M270 2.0T rather than the M260. Main buyer risks: the 7G-DCT dual-clutch can shudder at low speeds (known issue); oil leaks from the M270 valve cover and turbo oil-feed line at high mileage; and Mercedes maintenance costs on a car that sells cheap but does not service cheap. Only buy with complete Mercedes-Benz service records.",
-    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 190, topComplaintArea: 'Transmission / Electrical' },
+    summary: "2020 is the final year of the 1st-generation X156 GLA — the hatchback-shaped car on the MFA platform, not the taller H247 that replaced it for 2021. Expect COMAND infotainment rather than MBUX, and the M270 2.0T rather than the M260. Main buyer risks: the 7G-DCT dual-clutch can shudder at low speeds (known issue); oil leaks from the M270 valve cover and turbo oil-feed line at high mileage; and Mercedes maintenance costs on a car that sells cheap but does not service cheap. Only buy with complete Mercedes-Benz service records. On recalls, NHTSA lists four campaigns for a MY2020 GLA and the one to confirm by VIN is 21V-961, a fuel-rail and injector fuel-leak fire campaign covering only 139 cars built in a narrow window - rare, but VIN-specific; the other three are eCall and communication-module software items with free or over-the-air remedies.",
+    stats: { itemsToCheck: 11, recalls: 4, ownerComplaints: 190, topComplaintArea: 'Transmission / Electrical' },
     sections: [
       { title: 'Transmission', items: [
         { title: '7G-DCT shudder at low speed', risk: 'high', riskLabel: 'High Risk',
@@ -12678,7 +12678,12 @@ const CHECKLISTS = {
           cost: '$0', source: 'Standard check' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "21V-961", title: "Severity: Critical - fuel leak and fire", desc: "Particles trapped between the fuel rail and the fuel injectors during manufacturing can cause a fuel leak, and a leak near a hot engine or exhaust component can start a fire. Only 139 units, so this is VIN-specific rather than fleet-wide; report received 2021-12-13, owner letters mailed 2022-04-22, MBUSA recall 2022030003. The NHTSA record carries a literal MERCEDES-BENZ / GLA 250 / 2020 row. Remedy: fuel rail and fuel injectors replaced free by a dealer." },
+      { number: "21V-058", title: "Severity: High - emergency call sends the wrong location", desc: "Communication-module software can transmit the wrong vehicle position to the eCall emergency system after a crash, which can send responders to the wrong place. 1,292,258 units across 2016-2021 Mercedes-Benz models; report received 2021-02-05. Confirmed on the AMG GLA 45 for 2020 in NHTSA's own campaign record. Remedy: communication-module software updated by a dealer or over the air, free." },
+      { number: "22V-365", title: "Severity: High - emergency call disabled", desc: "A SIM-card software error can cause a mobile-network connection failure that disables eCall, so occupants may not be able to reach the emergency call centre. 242,722 units across 2017-2022 Mercedes-Benz models; report received 2022-05-20. NHTSA's campaign record lists the AMG GLA 45 for 2019, 2020 and 2021. Remedy: communication-module software updated over the air or by a dealer, free." },
+      { number: "21V-072", title: "Severity: Monitor - emergency call left switched off", desc: "The communication module may have been deactivated during a service visit and never switched back on, leaving eCall inoperative. Only 67 units; report received 2021-02-12. The NHTSA record carries a literal MERCEDES-BENZ / GLA 250 / 2020 row. Remedy: dealer inspects the communication module and activates it if necessary, free." }
+    ]
   },
   'lincoln-corsair-2020': {
     year: 2020, make: 'Lincoln', model: 'Corsair', trim: 'Standard / Reserve / Grand Touring (1st gen, 2020–present)',
@@ -12767,10 +12772,10 @@ const CHECKLISTS = {
   'subaru-forester-2019': {
     year: 2019, make: 'Subaru', model: 'Forester', trim: 'Base / Premium / Sport / Limited / Touring (5th gen SK, 2019–2024)',
     engine: '2.5L FB25D DOHC I4 (182 hp) Naturally Aspirated',
-    vinNote: "Every 2019 Forester (5th-gen SK) uses the same 2.5L FB25D naturally aspirated four with a Lineartronic CVT across all trims — there is no XT turbo and no manual — so the 8th VIN digit does not separate engines. On these Subarus the 8th digit only encodes the emissions market: 'A' = federal/49-state, 'C' = California emissions, the same FB25D either way. Because the powertrain is uniform, the distinctions that matter are trim and driver-assist hardware, not engine code: confirm EyeSight is present and was recalibrated after any windshield replacement, and get CVT fluid-service records (30k-mile intervals). Run the full VIN at nhtsa.gov to confirm the year's recall is closed.",
+    vinNote: "Every 2019 Forester (5th-gen SK) uses the same 2.5L FB25D naturally aspirated four with a Lineartronic CVT across all trims — there is no XT turbo and no manual — so the 8th VIN digit does not separate engines. On these Subarus the 8th digit only encodes the emissions market: 'A' = federal/49-state, 'C' = California emissions, the same FB25D either way. Because the powertrain is uniform, the distinctions that matter are trim and driver-assist hardware, not engine code: confirm EyeSight is present and was recalibrated after any windshield replacement, and get CVT fluid-service records (30k-mile intervals). Run the full VIN at nhtsa.gov to confirm the year's three recalls are closed.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 5th-gen Forester (SK) is the cleanest Forester yet — naturally aspirated only (no XT turbo), CVT standard on all trims, and excellent EyeSight driver assistance standard. The 2.5L FB25D eliminated the head gasket issue of the older EJ-series engines. Main checks: CVT fluid service history, any oil consumption on high-mileage examples, and EyeSight camera calibration after windshield work. Very strong family SUV buy.",
-    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 140, topComplaintArea: 'Minimal' },
+    summary: "The 5th-gen Forester (SK) is the cleanest Forester yet — naturally aspirated only (no XT turbo), CVT standard on all trims, and excellent EyeSight driver assistance standard. The 2.5L FB25D eliminated the head gasket issue of the older EJ-series engines. Main checks: CVT fluid service history, any oil consumption on high-mileage examples, and EyeSight camera calibration after windshield work. Very strong family SUV buy. On recalls, NHTSA lists three campaigns for MY2019 and the one to confirm by VIN is 19V-856, a PCV-valve separation campaign that can send debris into the engine and cause a sudden loss of power; 21V-263 (rear stabilizer-bracket bolts) is the other live item, and 19V-065 was remedied before any affected car was sold.",
+    stats: { itemsToCheck: 9, recalls: 3, ownerComplaints: 140, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'FB25D 2.5L — no head gasket issues (unlike older EJ)', risk: 'low', riskLabel: 'Low Risk',
@@ -12801,7 +12806,11 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "19V-856", title: "Severity: Critical - sudden loss of engine power", desc: "The aluminium PCV valve can separate and let debris into the engine, causing a sudden loss of power while driving. 51,613 units across the 2019 Forester, Crosstrek and Ascent; report received 2019-12-02. Remedy: PCV valve inspected and replaced free, and if the separated components cannot be found the short block engine is replaced. This is the campaign to confirm closed on any 2019 Forester." },
+      { number: "21V-263", title: "Severity: High - rear suspension bracket", desc: "Rear stabilizer-bracket bolts may loosen and detach, letting the bracket shift and raising crash risk. 408,271 units across the 2018-2019 Crosstrek, 2019 Crosstrek Hybrid and 2019 Forester; report received 2021-04-15. Remedy: dealers retorque the bolts and replace any that are missing, free." },
+      { number: "19V-065", title: "Severity: Informational - remedied pre-sale", desc: "A connector inside the electric power steering unit could short-circuit and cost the driver steering assist, leaving much higher steering effort. 10,417 units across the 2019 Forester and Crosstrek; report received 2019-02-06, recall began 2019-02-07. NHTSA's record notes that none of the affected vehicles had been sold when the recall was filed, so a car on the used market today was almost certainly fixed before delivery - verify by VIN rather than assume. Remedy: steering gearbox inspected and replaced as necessary, free." }
+    ]
   },
   'honda-hrv-2023': {
     year: 2023, make: 'Honda', model: 'HR-V', trim: 'LX / Sport / EX / EX-L (3rd gen RU4, 2023–present)',
@@ -12886,8 +12895,8 @@ const CHECKLISTS = {
     engine: '2.0T Lambda I4 (252 hp) or 3.3T Lambda V6 Twin-Turbo (365 hp)',
     vinNote: "The 8th VIN digit is decisive on the G70 because its two engines are mechanically unrelated. 'A' = 2.0L Theta II T-GDI turbo four (252 hp); 'E' = 3.3L Lambda II twin-turbo V6 (365 hp), both with an 8-speed automatic. Note the 'Lambda' badge applies only to the 3.3T V6 — the 2.0T is a Theta II engine, a different family with its own service history — so read the 8th digit, not the trim name, to know which you are buying. A 3.3T is the enthusiast pick and commands a premium; a 2.0T is the value daily driver. Independent-shop support is thin either way, so favor examples with remaining Genesis powertrain warranty, and run the full VIN at nhtsa.gov to confirm any open recall for that specific car is closed.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The G70 is Genesis' BMW 3 Series competitor — rear-wheel drive, optional AWD, excellent driving dynamics, and premium interior at a significant discount to German rivals. No chronic powertrain failures. The 3.3T is the standout choice. The 8-speed DCT on some trims can shudder; the 8-speed automatic is smooth. Genesis is relatively new so certified pre-owned with extended Genesis warranty coverage is preferred. Independent shop support is limited.",
-    stats: { itemsToCheck: 10, recalls: 1, ownerComplaints: 120, topComplaintArea: 'Transmission / Electrical (minor)' },
+    summary: "The G70 is Genesis' BMW 3 Series competitor — rear-wheel drive, optional AWD, excellent driving dynamics, and premium interior at a significant discount to German rivals. No chronic powertrain failures. The 3.3T is the standout choice. The 8-speed DCT on some trims can shudder; the 8-speed automatic is smooth. Genesis is relatively new so certified pre-owned with extended Genesis warranty coverage is preferred. Independent shop support is limited. On recalls, NHTSA lists five campaigns for MY2019 and two are park-outside fire campaigns - 21V-161 (ABS module short, 552 cars) and 24V-107 (water in the starter solenoid, 90,907) - so confirm both by VIN before buying. Which of the two powertrain campaigns applies depends on the engine rather than the year: 24V-191 (left turbocharger oil-feed pipe) is explicitly 3.3L twin-turbo V6 only, while 24V-528 (fuel-pump failure, loss of drive power) is the campaign shared with Hyundai's 2.0T N cars.",
+    stats: { itemsToCheck: 10, recalls: 5, ownerComplaints: 120, topComplaintArea: 'Transmission / Electrical (minor)' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '3.3T Lambda V6 Twin-Turbo — excellent', risk: 'low', riskLabel: 'Low Risk',
@@ -12922,7 +12931,13 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "21V-161", title: "Severity: Critical - park outside, fire risk", desc: "The ABS module can malfunction and short-circuit, which can start an engine-compartment fire whether the car is parked or being driven. NHTSA flags this one park-outside. Only 552 units across the 2019-2021 G70, so it is VIN-specific; report received 2021-03-10. Remedy: ABS module fuse replaced free by a dealer. Park away from structures until it is done." },
+      { number: "24V-107", title: "Severity: Critical - park outside, fire risk", desc: "Water can enter the starter solenoid and cause an electrical short, starting an engine-compartment fire parked or driving. NHTSA flags this one park-outside. 90,907 units across 2015-2016 Genesis, 2017-2019 G80 and G90 and the 2019 G70; report received 2024-02-13. Remedy: a remedy relay kit installed in the engine junction box, free." },
+      { number: "24V-191", title: "Severity: Critical - 3.3T only, engine-bay fire", desc: "The left turbocharger oil-feed pipe can deteriorate and leak oil onto hot engine parts, raising the risk of an engine-compartment fire. This campaign covers only cars with the 3.3L twin-turbo V6, which is why the 8th VIN digit matters more than the model year here - a 2.0T G70 is outside it. 28,439 units across the 2019-2022 G70, 2018-2020 G80 and 2017-2022 G90; report received 2024-03-08, owner letters mailed 2024-05-03, Hyundai number 019G. It expands and replaces 19V-538, the 2019 campaign for the same pipe - but 19V-538 covered only the 2017-2018 G90 and 2018 G80, no G70 at all, so for a 2019 G70 this is first-time exposure rather than a repeat visit. Remedy: left turbo oil-feed pipe replaced free." },
+      { number: "24V-528", title: "Severity: High - loss of drive power", desc: "The fuel pump may fail and cause a loss of drive power. 54,647 units across the 2019-2023 G70 and Hyundai's 2019-2022 Veloster N and 2022-2023 Elantra N and Kona N - all 2.0T Theta II cars, though NHTSA's record states no engine restriction for the G70 itself, so confirm by VIN whichever engine you are looking at. Report received 2024-07-12; interim safety-risk letters mailed 2024-09-03 and owner letters from 2024-09-09; Hyundai numbers 262 and 023G. Remedy: engine control module software updated and the fuel pump assembly inspected and replaced as needed, free." },
+      { number: "22V-196", title: "Severity: Monitor - trunk cannot be opened from inside", desc: "The trunk latch can be damaged so the trunk cannot be opened from inside, which fails FMVSS 401 and raises the injury risk to anyone shut in there. 63,461 units across the 2019 G70 and the 2020 Sonata and Sonata Hybrid; report received 2022-03-28. Remedy: trunk latch inspected and the latch base replaced as necessary, free." }
+    ]
   },
   'honda-ridgeline-2021': {
     year: 2021, make: 'Honda', model: 'Ridgeline', trim: 'Sport / RTL / RTL-E / Black Edition / RTL-E (2nd gen YK2, 2017–2023)',

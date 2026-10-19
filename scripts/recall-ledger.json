@@ -3421,6 +3421,113 @@
       "component": "Steering rack to subframe bolt can corrode and break, breaking the rack housing; loss of steering control. 208,724 units. Audi 48LG and 48VT",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V590000",
       "verified": "2026-10-19"
+    },
+    "21V961": {
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "component": "Fuel rail / injector particles - fuel leak, fire (139 units; literal GLA 250 2020 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V961000",
+      "verified": "2026-10-19"
+    },
+    "21V058": {
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "component": "eCall communication module transmits wrong crash location (1,292,258 units; AMG GLA45 2020 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V058000",
+      "verified": "2026-10-19"
+    },
+    "22V365": {
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "component": "SIM-card software fault disables eCall (242,722 units; AMG GLA45 2019-2021 rows)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V365000",
+      "verified": "2026-10-19"
+    },
+    "21V072": {
+      "makes": [
+        "Mercedes-Benz"
+      ],
+      "component": "Communication module deactivated at service - eCall inoperative (67 units; literal GLA 250 2020 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V072000",
+      "verified": "2026-10-19"
+    },
+    "19V856": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "PCV valve separation - debris into engine, sudden power loss (51,613 units; literal FORESTER 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V856000",
+      "verified": "2026-10-19"
+    },
+    "21V263": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "Rear stabilizer bracket bolts loosen/detach (408,271 units; literal FORESTER 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V263000",
+      "verified": "2026-10-19"
+    },
+    "19V065": {
+      "makes": [
+        "Subaru"
+      ],
+      "component": "EPS connector short - loss of steering assist; remedied pre-sale (10,417 units; literal FORESTER 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V065000",
+      "verified": "2026-10-19"
+    },
+    "21V161": {
+      "makes": [
+        "Genesis"
+      ],
+      "component": "ABS module short - engine fire, park outside (552 units; literal G70 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V161000",
+      "verified": "2026-10-19"
+    },
+    "24V107": {
+      "makes": [
+        "Genesis",
+        "Hyundai"
+      ],
+      "component": "Water in starter solenoid - engine fire, park outside (90,907 units; literal G70 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V107000",
+      "verified": "2026-10-19"
+    },
+    "24V191": {
+      "makes": [
+        "Genesis"
+      ],
+      "component": "Left turbo oil-feed pipe leak - engine fire; 3.3L twin-turbo V6 only; expands/replaces 19V-538 (28,439 units; literal G70 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V191000",
+      "verified": "2026-10-19"
+    },
+    "24V528": {
+      "makes": [
+        "Genesis",
+        "Hyundai"
+      ],
+      "component": "Fuel pump failure - loss of drive power (54,647 units; literal G70 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V528000",
+      "verified": "2026-10-19"
+    },
+    "22V196": {
+      "makes": [
+        "Genesis",
+        "Hyundai"
+      ],
+      "component": "Trunk latch damage - cannot open from inside, FMVSS 401 (63,461 units; literal G70 2019 row)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V196000",
+      "verified": "2026-10-19"
+    },
+    "19V538": {
+      "makes": [
+        "Genesis"
+      ],
+      "component": "Turbocharger oil supply pipe - superseded by 24V-191; scope was 2017-2018 G90 + 2018 G80 only, no G70 (8,059 units)",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V538000",
+      "verified": "2026-10-19"
     }
   },
   "unverified_legacy": []
