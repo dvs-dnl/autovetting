@@ -863,6 +863,24 @@ def gate_recall_ledger():
 # ============================================================
 # Run + report
 # ============================================================
+# ============================================================
+# G29 (CRIT) — static vehicle pages match CHECKLISTS
+# Catches: a checklist edit or new blog post shipping while inspect/<key>/ pages,
+# their sitemap entries, or internal /inspect/?year=… links still show the old state.
+# Fix: node scripts/build-vehicle-pages.js, then commit.
+# ============================================================
+def gate_vehicle_pages_in_sync():
+    import shutil
+    name = "Static vehicle pages in sync with CHECKLISTS (pages, sitemap, links)"
+    if not shutil.which("node"):
+        warn(name + " — skipped, node not installed", False, "install node to run this check")
+        return
+    r = subprocess.run(["node", "scripts/build-vehicle-pages.js", "--check"],
+                       capture_output=True, text=True, timeout=120)
+    detail = " | ".join((r.stdout + r.stderr).strip().splitlines()[:6])
+    critical(name, r.returncode == 0, detail)
+
+
 def main():
     gates = [
         gate_inline_js_syntax,
@@ -872,6 +890,7 @@ def main():
         gate_runtime_idents_resolve,
         gate_no_orphan_checklists,
         gate_jsonld_covers_vehicles,
+        gate_vehicle_pages_in_sync,
         gate_brief_module_intact,
         gate_nav_consistency,
         gate_no_unsafe_apostrophes,

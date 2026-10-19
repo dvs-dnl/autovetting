@@ -889,6 +889,28 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-static-vehicle-pages-2026-10-19 — ready 2026-10-19 (COMMITTED TO `main`, NOT PUSHED)
+
+- Started: 2026-10-19 (Daniel, live session — Search Console indexing review)
+- Status: ready to deploy. Ships with the next push of `main`.
+- Task: give every inspection checklist its own indexable URL. Search Console (export through 2026-10-11) showed indexed pages falling 193 → 64 and 206 pages under "Alternate page with proper canonical tag": every `/inspect/?year=…&make=…&model=…` URL serves `inspect/index.html`, whose canonical is `/inspect/`, so Google folded all of them into one page.
+- Touched files: `scripts/build-vehicle-pages.js` (new), `scripts/gate-check.py`, `inspect/checklist.css` (new), `inspect/<key>/index.html` ×245 (new), `sitemap.xml`, `index.html`, `pinpoint/index.html`, `homepage-test/index.html`, `homepage-test-bc/index.html`, `blog/*/index.html` ×23, `_hub/Content/blog/*.md` ×23 (gitignored), `_hub/Content/Blog-Post-Standard.md` (gitignored), `_hub/Vehicle-Launch-Spec.md` (gitignored), `TASKS.md`
+- Verified against: autovetting-pinpoint-filter-cells-B1-B4-2026-09-15, autovetting-pinpoint-dead-route-repair-2026-09-16, autovetting-menu-generation-and-year-gap-fix-2026-09-17 (the only Ready/Done siblings touching `pinpoint/index.html`; all are ancestors of `e26b929` and already live). `inspect/index.html` is read, not written.
+- Re-sync needed against:
+- Notes:
+
+    2026-10-19 [live session]: **New pages:** `inspect/<key>/index.html` for all 245 CHECKLISTS keys (URL = the CHECKLISTS key, e.g. `/inspect/acura-tsx-2014/`). Each has a self-referencing canonical, a vehicle title and description, the checklist rendered into the HTML (sections, recalls, vinNote, buyer's-guide link, same-make links), and the same CTA as the live renderer. Nav, footer, head and CSS are copied from `inspect/index.html` on every build, so they cannot drift. 245 URLs added to `sitemap.xml` right after `/inspect/`.
+
+    **Links:** 652 internal links rewritten from `/inspect/?year=…` (and `?vehicle=`) to the static URL, only where `findChecklistByYMMT` routing resolves to a checklist (same answer the live page gives). Files: `pinpoint/index.html` (559, incl. the ItemList JSON-LD), `index.html` (12), `homepage-test/index.html` (6), 23 blog posts and their markdown sources. 35 Pinpoint links that carry a trim in the model (e.g. `model=Golf Alltrack S`) do not resolve to a checklist today and still show "coming soon"; they were left as-is.
+
+    **`homepage-test-bc/index.html`:** added `noindex` + canonical to `/`.
+
+    **New gate G29 (CRITICAL, approved by Daniel 2026-10-19):** `node scripts/build-vehicle-pages.js --check`. Fails when any `inspect/<key>/` page, the sitemap vehicle URLs, or an internal link no longer matches CHECKLISTS. **Fix when it fails: `node scripts/build-vehicle-pages.js`, then commit what it writes.** Every CHECKLISTS edit (recall rows, vinNotes, new vehicles) now needs that one command before push. Never hand-edit `inspect/<key>/index.html`. Retired keys are overwritten with a noindex redirect to `/inspect/` (unlink is blocked on the mount).
+
+    **Authoring docs updated:** Blog-Post-Standard.md and Vehicle-Launch-Spec.md now specify `/inspect/<checklist-key>/` links and the build step.
+
+    **Gates:** gate-check 29 passed / 1 warned (pre-existing `homepage-test-bc` lazy-load) / 0 CRITICAL. Secrets pattern grep clean. Scanner not run from this session (`scan_for_secrets.py` outside the mounted folder) — run it at push time.
+
 
 
 ### autovetting-recall-audit-wave-25-2026-10-04 — ready 2026-10-04 (COMMITTED TO `main`, NOT PUSHED)
