@@ -3320,6 +3320,107 @@
       "component": "Interior rearview mirror adhesive; mirror may detach (manual dimming mirrors). 22,571 units. Mazda 3919G",
       "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=19V558000",
       "verified": "2026-10-17"
+    },
+    "23V704": {
+      "makes": [
+        "Honda"
+      ],
+      "component": "Replacement power steering rack misassembled; tire can chafe lower suspension arm or tie rod end. 264,567 units. Honda YFW",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=23V704000",
+      "verified": "2026-10-19"
+    },
+    "24V064": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Front passenger seat weight sensor cracks/shorts; airbag not suppressed as intended. 750,114 units. Honda XHP and VHQ",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V064000",
+      "verified": "2026-10-19"
+    },
+    "24V744": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Steering gearbox excessive internal friction; difficult steering. 1,693,199 units. EA23003. Honda SJS/MJU/QJT/VJV",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V744000",
+      "verified": "2026-10-19"
+    },
+    "26V332": {
+      "makes": [
+        "Honda",
+        "Acura"
+      ],
+      "component": "Front passenger seat weight sensor cracks/shorts; airbags may deploy unintentionally. 98,892 units. Expands 24V-064",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V332000",
+      "verified": "2026-10-19"
+    },
+    "22V322": {
+      "makes": [
+        "Kia"
+      ],
+      "component": "Shifter Control Unit software error can disengage the parking mechanism; rollaway. 9,014 units. Kia SC236",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V322000",
+      "verified": "2026-10-19"
+    },
+    "24V200": {
+      "makes": [
+        "Kia"
+      ],
+      "component": "Integrated Charging Control Unit stops charging the 12V battery; loss of drive power. 48,232 units. Kia SC302",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V200000",
+      "verified": "2026-10-19"
+    },
+    "24V867": {
+      "makes": [
+        "Kia"
+      ],
+      "component": "ICCU 12V charging failure; loss of drive power. Expands and replaces 24V-200. 62,872 units. Kia SC327",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=24V867000",
+      "verified": "2026-10-19"
+    },
+    "26V431": {
+      "makes": [
+        "Kia"
+      ],
+      "component": "High-voltage battery cells with misaligned electrodes; fire risk. Park outside, charge to 80%. 8 units. Kia SC375",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V431000",
+      "verified": "2026-10-19"
+    },
+    "20V273": {
+      "makes": [
+        "Audi"
+      ],
+      "component": "Passenger airbag may not deploy correctly through the instrument panel tear seam. 3,024 units. Volkswagen 70H7",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=20V273000",
+      "verified": "2026-10-19"
+    },
+    "21V027": {
+      "makes": [
+        "Audi"
+      ],
+      "component": "Belt pulley deviation leaves steering rack circlip unseated; steering can lock. 1 unit. Audi 48P7",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=21V027000",
+      "verified": "2026-10-19"
+    },
+    "22V815": {
+      "makes": [
+        "Audi",
+        "Volkswagen"
+      ],
+      "component": "TPMS may not warn when all four tires lose pressure at once; FMVSS 138 noncompliance. 296,044 units. Audi 45J7",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=22V815000",
+      "verified": "2026-10-19"
+    },
+    "26V590": {
+      "makes": [
+        "Audi",
+        "Volkswagen"
+      ],
+      "component": "Steering rack to subframe bolt can corrode and break, breaking the rack housing; loss of steering control. 208,724 units. Audi 48LG and 48VT",
+      "source": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=26V590000",
+      "verified": "2026-10-19"
     }
   },
   "unverified_legacy": []

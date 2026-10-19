@@ -12273,9 +12273,9 @@ const CHECKLISTS = {
     year: 2022, make: 'Honda', model: 'Civic', trim: 'LX / Sport / EX / Sport Touring / Touring (11th gen FE/FL, 2022–2025)',
     engine: '2.0L i-VTEC I4 (158 hp, LX/Sport) or 1.5L VTEC Turbo I4 (192 hp, EX+)',
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The 11th-gen Civic is a significant improvement over the 10th gen — larger, quieter, better interior quality, and the 1.5T oil dilution issue is substantially reduced (though not fully eliminated on Canadian-spec vehicles). No widespread powertrain failures. The 11th gen is a strong buy at any mileage. Oil dilution on the 1.5T remains a watch item in cold climates; check PCM software version.",
+    summary: "The 11th-gen Civic is a significant improvement over the 10th gen — larger, quieter, better interior quality, and the 1.5T oil dilution issue is substantially reduced (though not fully eliminated on Canadian-spec vehicles). No widespread powertrain failures. The 11th gen is a strong buy at any mileage. Oil dilution on the 1.5T remains a watch item in cold climates; check PCM software version. On recalls, NHTSA lists four campaigns for MY2022 and the one to confirm by VIN is 26V-332, an open front passenger seat-weight-sensor campaign whose letters went out in July 2026; the other three are steering and airbag items with free dealer remedies.",
     vinNote: "The 11th-gen Civic (FE/FL, 2022+) launched with two engines and the choice matters more than usual. 2.0L i-VTEC I4 (158hp) — naturally aspirated, port-injection only, paired with CVT — fitted to LX and Sport trims. NO oil-dilution exposure; this is the safer used buy. 1.5L L15B7 VTEC Turbo I4 (180-200hp depending on year) — direct-injection, paired with CVT or 6-speed manual (Si trim only) — fitted to EX, EX-L, Sport Touring, Si. The 1.5T retains the 10th-gen Civic's documented cold-weather fuel-dilution problem; Honda's 2022 PCM calibration is the fix but verify it's on the service record AND check the dipstick for fuel-smell or above-MAX oil level before purchase. The Si (6-speed manual only) is the enthusiast pick but the 1.5T is the same engine; abuse-history matters. Easy ID: LX/Sport = 2.0L NA. EX and higher = 1.5T. Full VIN decode at <a href=\"/inspect/\">autovetting.com/inspect</a>.",
-    stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Minimal' },
+    stats: { itemsToCheck: 9, recalls: 4, ownerComplaints: 95, topComplaintArea: 'Minimal' },
     sections: [
       { title: 'Powertrain', items: [
         { title: '1.5T L15CA — oil dilution reduced vs 10th gen', risk: 'low', riskLabel: 'Low Risk',
@@ -12306,7 +12306,12 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "26V-332", title: "Severity: Open — airbag suppression", desc: "Front passenger seat-weight sensor can crack and short-circuit, which can make the airbags deploy unintentionally in a crash. 98,892 units across 2016-2026 Honda and Acura models; expands 24V-064; owner letters mailed 2026-07-07. Remedy: seat weight sensors replaced free by a dealer." },
+      { number: "24V-744", title: "Severity: Critical — steering effort", desc: "Steering gearbox assembly manufactured with excessive internal friction, making the car hard to steer. 1,693,199 units across Honda and Acura, from NHTSA engineering analysis EA23003; Honda SJS/MJU/QJT/VJV; owner letters mailed 2024-11-18. Remedy: worm gear spring replaced and grease redistributed or added, free." },
+      { number: "23V-704", title: "Severity: High — tire damage", desc: "A replacement power steering rack may have been assembled incorrectly, letting a front tire chafe against the lower suspension arm or tie rod end until the tire is damaged and can fail. 264,567 units, Honda YFW; owner letters mailed 2024-01-16. Remedy: electric power steering rack inspected and replaced as needed, free." },
+      { number: "24V-064", title: "Severity: Superseded by 26V-332", desc: "The original phased form of the same front passenger seat-weight sensor defect — 750,114 units across 2020-2022 Honda and Acura models, Honda XHP and VHQ, owner letters mailed 2024-03-28. For a 2022 Civic the live campaign is 26V-332, which expands this one. Remedy: seat weight sensors replaced free." }
+    ]
   },
   'nissan-titan-2017': {
     year: 2017, make: 'Nissan', model: 'Titan', trim: 'S / SV / SL / PRO-4X / Platinum Reserve (2nd gen A60, 2016–2021)',
@@ -12441,8 +12446,8 @@ const CHECKLISTS = {
     engine: 'Rear-wheel-drive 168 hp (Standard) / 225 hp (Long Range) or AWD 320 hp — 58 kWh or 77.4 kWh battery',
     vinNote: "The 2022 EV6 is electric, so the 8th VIN digit encodes battery and motor rather than a combustion engine — and the difference is worth real money. 8th digit \u2018B\u2019 = 58 kWh battery, single rear motor, 167 hp (the Standard-Range RWD \u2018Light\u2019 trim) — shortest range (~232 mi EPA) and the one to skip if you road-trip. 8th digit \u2018A\u2019 = 77.4 kWh battery, single rear motor, 225 hp (Long-Range RWD Wind/GT-Line) — the sweet spot at ~310 mi. 8th digit \u2018C\u2019 = 77.4 kWh battery, dual-motor AWD, 320 hp (~274 mi). All three share the same 800V E-GMP architecture and 350 kW fast-charging. Confirm battery state-of-health at a Kia dealer (free) — Long-Range cars should read >90% SoH on low-mileage examples — and verify the ICCU/charging-relay recall (select 2022) is closed. Decode the full VIN at <a href=\"/decode/\">autovetting.com/decode</a>.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
-    summary: "The EV6 is one of the best EVs in the segment — 800V architecture enables ultra-fast 350 kW charging (10–80% in under 18 minutes), exceptional driving dynamics, and a spacious interior on the E-GMP platform shared with the Hyundai Ioniq 5. No widespread battery or drivetrain failures on used examples. Main buyer checks: software version (OTA updates are frequent), confirm 400V vs 800V charging compatibility, and battery state of health.",
-    stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 95, topComplaintArea: 'Software / Infotainment (minor)' },
+    summary: "The EV6 is one of the best EVs in the segment — 800V architecture enables ultra-fast 350 kW charging (10–80% in under 18 minutes), exceptional driving dynamics, and a spacious interior on the E-GMP platform shared with the Hyundai Ioniq 5. No widespread battery or drivetrain failures on used examples. Main buyer checks: software version (OTA updates are frequent), confirm 400V vs 800V charging compatibility, and battery state of health. On recalls, NHTSA lists four campaigns for MY2022. Two matter: the ICCU 12-volt charging failure that can cause a loss of drive power, which ran twice (24V-200, then 24V-867 expanding and replacing it, so a car fixed under the first still needs the second), and 26V-431, a high-voltage-battery fire campaign with a park-outside instruction whose population is only 8 cars — negligible odds, but a VIN check is the only way to rule it out.",
+    stats: { itemsToCheck: 8, recalls: 4, ownerComplaints: 95, topComplaintArea: 'Software / Infotainment (minor)' },
     sections: [
       { title: 'Battery & Charging', items: [
         { title: 'HV battery state of health', risk: 'monitor', riskLabel: 'Monitor',
@@ -12473,7 +12478,12 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'EV battery management standard' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "26V-431", title: "Severity: Critical — fire, park outside", desc: "High-voltage battery cells may have misaligned electrodes, which can short and cause a fire while parked or driving. The population is 8 vehicles across the 2022-2024 EV6 and 2024 EV9 — narrow enough that only a VIN check can answer it — Kia SC375, report received 2026-07-02. Until repaired Kia says park outside away from structures and limit charging to 80 percent. Remedy: high-voltage battery system assembly replaced free." },
+      { number: "24V-867", title: "Severity: Critical — loss of drive power", desc: "The Integrated Charging Control Unit can be damaged and stop charging the 12-volt battery, causing a loss of drive power while driving. 62,872 units, Kia SC327, report received 2024-11-18. This expands and replaces 24V-200, so a car already repaired under that campaign still needs this remedy. Remedy: ICCU and its fuse inspected and replaced as needed plus a software update, free." },
+      { number: "24V-200", title: "Severity: Superseded by 24V-867", desc: "The first form of the same ICCU 12-volt charging failure — 48,232 units, Kia SC302, report received 2024-03-14. Confirm the car carries the later SC327 remedy and not only this one. Remedy: ICCU and fuse inspected and replaced as needed plus a software update, free." },
+      { number: "22V-322", title: "Severity: High — rollaway", desc: "A Shifter Control Unit software error can disengage the parking mechanism and let the vehicle roll away. 9,014 units, Kia SC236, report received 2022-05-11. Remedy: Shifter Control Unit software updated at no cost." }
+    ]
   },
   'hyundai-ioniq6-2023': {
     year: 2023, make: 'Hyundai', model: 'IONIQ 6', trim: 'SE / SEL / Limited RWD / AWD (1st gen, 2023–present)',
@@ -12599,8 +12609,8 @@ const CHECKLISTS = {
     year: 2019, make: 'Audi', model: 'Q3', trim: 'Premium / Premium Plus / Prestige (F3, 2nd gen, US 2019-2025; the 8U 1st gen ends with 2018)',
     engine: '2.0T TFSI EA888 I4 (228 hp, US 45 TFSI) with 8-speed automatic and quattro standard',
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
-    summary: "The 2nd-gen Q3 (F3) is a well-sized entry luxury crossover — better proportioned than the 8U it replaced, with a much-improved interior. 2019 is its first US model year, so treat it as a first-year car. US-market cars are the 228 hp 45 TFSI with quattro standard; the 184 hp figure quoted in a lot of online spec tables is the European 35 TFSI, which was never sold here. The EA888 2.0T is a proven engine across VW Group. Main risks: timing chain rattle from oil neglect, oil consumption (same EA888 pattern as Q5/Atlas), and Audi maintenance costs. Only buy with documented Audi/VAG-certified shop history.",
-    stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine / Oil (maintenance-related)' },
+    summary: "The 2nd-gen Q3 (F3) is a well-sized entry luxury crossover — better proportioned than the 8U it replaced, with a much-improved interior. 2019 is its first US model year, so treat it as a first-year car. US-market cars are the 228 hp 45 TFSI with quattro standard; the 184 hp figure quoted in a lot of online spec tables is the European 35 TFSI, which was never sold here. The EA888 2.0T is a proven engine across VW Group. Main risks: timing chain rattle from oil neglect, oil consumption (same EA888 pattern as Q5/Atlas), and Audi maintenance costs. Only buy with documented Audi/VAG-certified shop history. On recalls, NHTSA lists four campaigns for MY2019, and one of them is live right now: 26V-590, a corroding steering-rack-to-subframe bolt that can break the rack housing and cause a loss of steering control. It was reported 2026-09-11 and owner letters are not due until 2026-11-10, so assume it is open on any 2019 Q3 you look at and confirm it at an Audi dealer before you buy.",
+    stats: { itemsToCheck: 11, recalls: 4, ownerComplaints: 180, topComplaintArea: 'Engine / Oil (maintenance-related)' },
     sections: [
       { title: 'Engine', items: [
         { title: 'EA888 2.0T timing chain', risk: 'monitor', riskLabel: 'Monitor',
@@ -12631,7 +12641,12 @@ const CHECKLISTS = {
           cost: '$0 software update', source: 'Standard check' }
       ]}
     ],
-    recalls: []
+    recalls: [
+      { number: "26V-590", title: "Severity: Critical — open, letters not yet mailed", desc: "The right-side bolt attaching the steering rack to the subframe can corrode and break, which can break the steering rack housing and cause a loss of steering control. 208,724 units across the 2018 Tiguan, 2018-2019 Atlas and 2019-2021 Q3; Audi 48LG and 48VT; report received 2026-09-11 and owner letters are not due until 2026-11-10 — so this is open on effectively every 2019 Q3 on the market today. Remedy: right-side steering rack mounting bolt replaced free." },
+      { number: "22V-815", title: "Severity: High — FMVSS 138 noncompliance", desc: "The tire pressure monitoring system may not warn in time when all four tires lose pressure at once, so the vehicle does not meet FMVSS 138. 296,044 units across many 2019 Volkswagen Group models, Audi 45J7; owner letters mailed 2022-11-18. Remedy: TPMS software updated free." },
+      { number: "20V-273", title: "Severity: High — passenger airbag", desc: "The passenger airbag may not deploy correctly through the instrument panel tear seam, and plastic fragments can enter the cabin. 3,024 units, Volkswagen 70H7, began 2020-06-10. Remedy: instrument panel inspected and replaced if needed, free." },
+      { number: "21V-027", title: "Severity: Informational — 1 vehicle", desc: "A belt pulley production deviation can leave the steering rack circlip unseated; if it detaches it can jam adjacent parts and lock the steering. The population is a single vehicle, Audi 48P7, and the campaign was completed 2021-02-28 — recorded for completeness rather than as a live risk. Remedy: steering rack replaced free." }
+    ]
   },
   'mercedes-benz-gla-2020': {
     year: 2020, make: 'Mercedes-Benz', model: 'GLA', trim: 'GLA 250 / GLA 250 4MATIC / AMG GLA 45 4MATIC (1st gen X156, 2015–2020; final year before the 2021 H247 redesign)',
