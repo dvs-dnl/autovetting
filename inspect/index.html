@@ -5766,12 +5766,12 @@ const CHECKLISTS = {
         title: 'Brake System',
         items: [
           {
-            title: 'Brake master cylinder — NHTSA 25V236000 (open recall check)',
+            title: 'Brake master cylinder — NHTSA 25V-236 (open recall check)',
             risk: 'critical', riskLabel: 'Critical — Open Recall',
-            desc: 'NHTSA recall 25V236000 covers certain 2017–2018 F-150: brake fluid can leak from the front-circuit reservoir into the brake booster, reducing front-brake effectiveness. This is an expansion of prior campaigns 22V150 and 20V332. The dealer remedy is master cylinder replacement at no charge. A 2018 F-150 with this recall still open should not be purchased until the recall work is scheduled.',
-            check: '<strong>Enter the VIN at nhtsa.gov/recalls before the test drive and confirm 25V236000 is closed.</strong> Signs of active failure: sinking or soft brake pedal, unusually long stopping distances, ABS warning light. If open, require dealer repair before purchase or delivery.',
+            desc: 'NHTSA recall 25V-236 covers certain 2017–2018 F-150: brake fluid can leak from the front-circuit reservoir into the brake booster, reducing front-brake effectiveness. This is an expansion of prior campaigns 22V-150 and 20V-332. The dealer remedy is master cylinder replacement at no charge. A 2018 F-150 with this recall still open should not be purchased until the recall work is scheduled.',
+            check: '<strong>Enter the VIN at nhtsa.gov/recalls before the test drive and confirm 25V-236 is closed.</strong> Signs of active failure: sinking or soft brake pedal, unusually long stopping distances, ABS warning light. If open, require dealer repair before purchase or delivery.',
             cost: 'Free dealer repair under recall / Do not drive home with soft pedal',
-            source: 'NHTSA recall 25V236000 + prior campaigns 22V150 + 20V332'
+            source: 'NHTSA recall 25V-236 + prior campaigns 22V-150 + 20V-332'
           },
           {
             title: 'Brake pad and rotor wear',
@@ -5853,12 +5853,12 @@ const CHECKLISTS = {
         title: 'Open Recalls',
         items: [
           {
-            title: 'NHTSA 25V236000 — brake master cylinder (covered above)',
+            title: 'NHTSA 25V-236 — brake master cylinder (covered above)',
             risk: 'critical', riskLabel: 'Critical',
             desc: 'Detailed in the Brake System section. Verify this recall is closed before purchase. This is the safety-critical recall on the 2018 F-150.',
             check: '<strong>VIN check at nhtsa.gov/recalls.</strong> Any open brake recall = do not finalize purchase until dealer repair is scheduled.',
             cost: 'Free dealer repair',
-            source: 'NHTSA recall 25V236000'
+            source: 'NHTSA recall 25V-236'
           },
           {
             title: 'Tailgate latch recall — verify VIN',
@@ -5880,8 +5880,8 @@ const CHECKLISTS = {
       }
     ],
     recalls: [
-      { number: '25V236000', title: 'Brake Master Cylinder Leak', desc: 'Brake fluid can leak from front-circuit reservoir into brake booster, reducing front-brake effectiveness. Expansion of 22V150 and 20V332. Dealer remedy: master cylinder replacement.' },
-      { number: '22V150', title: 'Brake Master Cylinder (prior campaign)', desc: 'Prior brake master cylinder campaign superseded by 25V236000. Verify closed status at nhtsa.gov/recalls.' },
+      { number: '25V-236', title: 'Brake Master Cylinder Leak', desc: 'Brake fluid can leak from front-circuit reservoir into brake booster, reducing front-brake effectiveness. Expansion of 22V-150 and 20V-332. Dealer remedy: master cylinder replacement.' },
+      { number: '22V-150', title: 'Brake Master Cylinder (prior campaign)', desc: 'Prior brake master cylinder campaign superseded by 25V-236. Verify closed status at nhtsa.gov/recalls.' },
       { number: 'see nhtsa.gov', title: 'Tailgate Latch', desc: 'Some builds: gate can open unexpectedly while driving. Verify VIN-specific applicability.' },
       { number: 'see nhtsa.gov', title: 'Additional campaigns', desc: 'LED headlamp/DRL software, engine block heater (cold-climate builds), Continental tire production. Verify full recall list for this VIN.' }
     ]
@@ -6026,7 +6026,7 @@ const CHECKLISTS = {
     engine: '2.5L QR25DE inline-4 (170hp) + Jatco JF017E CVT | Hybrid: 2.5L MR20 + e-motor (see VIN note)',
     overallRisk: 'high',
     overallRiskLabel: 'High Attention',
-    summary: "The 2017 Rogue is the 5th most popular used vehicle in America — and carries one asterisk that erases everything else if you ignore it: the Jatco JF017E CVT fails at a well-documented rate between 60,000 and 110,000 miles, and replacement costs $4,000–$6,500. Service history verification and a CVT fluid inspection are non-negotiable before any purchase. Beyond the transmission, a fire-risk wiring recall (22V875000) affects ~125,000 units. Buy with verified fluid history and clean recalls — this is a solid 150,000-mile commuter. Buy blind and you\u2019re paying for someone else\u2019s neglect.",
+    summary: "The 2017 Rogue is the 5th most popular used vehicle in America — and carries one asterisk that erases everything else if you ignore it: the Jatco JF017E CVT fails at a well-documented rate between 60,000 and 110,000 miles, and replacement costs $4,000–$6,500. Service history verification and a CVT fluid inspection are non-negotiable before any purchase. Beyond the transmission, a fire-risk wiring recall (22V-875) affects ~125,000 units. Buy with verified fluid history and clean recalls — this is a solid 150,000-mile commuter. Buy blind and you\u2019re paying for someone else\u2019s neglect.",
     vinNote: "8th VIN digit engine code: \u2018A\u2019 = 2.5L QR25DE I4 (all standard 2014–2020 Rogue). The Rogue Hybrid (2017–2019) uses the MR20 engine; 8th digit \u2018B\u2019 indicates the hybrid drivetrain and requires a completely different inspection protocol — hybrid battery SOH, regenerative brake system, and inverter cooling pump (not covered here). If the VIN decodes to a Hybrid, do not apply this checklist.",
     blogUrl: '/blog/2017-nissan-rogue-buyers-guide',
     stats: {
@@ -6156,31 +6156,31 @@ const CHECKLISTS = {
         title: 'Open Recalls — Verify All Before Purchase',
         items: [
           {
-            title: 'Recall 22V875000 — Dash harness corrosion (fire risk)',
+            title: 'Recall 22V-875 — Dash harness corrosion (fire risk)',
             risk: 'critical', riskLabel: 'Critical — Fire Risk',
-            desc: 'NHTSA recall 22V875000 covers approximately 125,000 units of the 2017 Nissan Rogue. Water intrusion can corrode a wiring connector under the instrument panel, potentially causing a fire. Dealer remedy is grease application and connector repair — free. If open on a Northeast or coastal car, this is a safety item the prior owner skipped for years.',
-            check: '<strong>Run the full VIN at nhtsa.gov/recalls before the test drive.</strong> Campaign 22V875000 should show as "Completed" if the car is an affected unit. Open = free dealer repair required before taking ownership.',
+            desc: 'NHTSA recall 22V-875 covers approximately 125,000 units of the 2017 Nissan Rogue. Water intrusion can corrode a wiring connector under the instrument panel, potentially causing a fire. Dealer remedy is grease application and connector repair — free. If open on a Northeast or coastal car, this is a safety item the prior owner skipped for years.',
+            check: '<strong>Run the full VIN at nhtsa.gov/recalls before the test drive.</strong> Campaign 22V-875 should show as "Completed" if the car is an affected unit. Open = free dealer repair required before taking ownership.',
             cost: 'Free dealer repair',
-            source: 'NHTSA recall 22V875000 (2017 Nissan Rogue dash harness corrosion)'
+            source: 'NHTSA recall 22V-875 (2017 Nissan Rogue dash harness corrosion)'
           },
           
           {
-            title: 'Recalls 23V093000, 17V663000, 16V244000 — additional active campaigns',
+            title: 'Recalls 23V-093, 17V-663, 16V-244 — additional active campaigns',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Three additional campaigns affect a significant share of 2017 Rogue production: 23V093000 (folding key collapses mid-drive, engine shuts off — jackknife key spacer fix), 17V663000 (2016–2017 builds: rear seat recliner welds may fail in a crash), and 16V244000 (2014–2016 builds: passenger frontal airbag may be disabled due to OCS sensor error — software reflash). Any open safety campaign is free dealer work the prior owner skipped.',
+            desc: 'Three additional campaigns affect a significant share of 2017 Rogue production: 23V-093 (folding key collapses mid-drive, engine shuts off — jackknife key spacer fix), 17V-663 (2016–2017 builds: rear seat recliner welds may fail in a crash), and 16V-244 (2014–2016 builds: passenger frontal airbag may be disabled due to OCS sensor error — software reflash). Any open safety campaign is free dealer work the prior owner skipped.',
             check: '<strong>At nhtsa.gov/recalls, confirm all three campaign IDs show "Completed" on the specific VIN.</strong> Each open campaign is a negotiation line-item or a condition of purchase.',
             cost: 'Free dealer repair for all three',
-            source: 'NHTSA recalls 23V093000, 17V663000, 16V244000 (2017 Nissan Rogue)'
+            source: 'NHTSA recalls 23V-093, 17V-663, 16V-244 (2017 Nissan Rogue)'
           }
         ]
       }
     ],
     recalls: [
-      { number: '22V875000', title: 'Dash Harness Corrosion — Fire Risk', desc: 'Water intrusion can corrode instrument panel wiring connector — fire risk on select 2017 Rogues. Verify complete.' },
+      { number: '22V-875', title: 'Dash Harness Corrosion — Fire Risk', desc: 'Water intrusion can corrode instrument panel wiring connector — fire risk on select 2017 Rogues. Verify complete.' },
       
-      { number: '23V093000', title: 'Jackknife Ignition Key Collapse', desc: 'Folding key can collapse mid-drive and shut off engine. Dealer spacer fix — verify complete.' },
-      { number: '17V663000', title: 'Rear Seat Recliner Welds (2016–2017)', desc: 'Improper rear recliner welds on 2016–2017 Rogue (FMVSS 207/210, Nissan PC592) compromise rear-seat crash protection — verify complete.' },
-      { number: '16V244000', title: 'Occupant Classification System (2014–2016)', desc: 'Passenger frontal airbag may be incorrectly disabled on 2014–2016 Rogue — software reflash; verify complete on pre-2017 builds.' }
+      { number: '23V-093', title: 'Jackknife Ignition Key Collapse', desc: 'Folding key can collapse mid-drive and shut off engine. Dealer spacer fix — verify complete.' },
+      { number: '17V-663', title: 'Rear Seat Recliner Welds (2016–2017)', desc: 'Improper rear recliner welds on 2016–2017 Rogue (FMVSS 207/210, Nissan PC592) compromise rear-seat crash protection — verify complete.' },
+      { number: '16V-244', title: 'Occupant Classification System (2014–2016)', desc: 'Passenger frontal airbag may be incorrectly disabled on 2014–2016 Rogue — software reflash; verify complete on pre-2017 builds.' }
     ]
   },
 
@@ -15889,12 +15889,12 @@ const CHECKLISTS = {
         }
       ]},
       { title: 'Engine — VC-Turbo and 2.5L PR25DD', items: [
-        { title: 'VC-Turbo oil consumption and bearing recall 25V437 (CRITICAL if equipped)',
+        { title: 'VC-Turbo oil consumption and bearing recall 25V-437 (CRITICAL if equipped)',
           risk: 'critical', riskLabel: 'Critical',
-          desc: 'The 2.0L KR20DDET variable-compression turbo is only on SR/Platinum FWD models. NHTSA 25V437 (June 2025) covers 2019–2020 VC-Turbo Altimas for engine-bearing manufacturing defects that can lead to catastrophic engine failure — fix is an ECM reprogram. Separately, VC-Turbo engines are known to consume 1 quart per 1,500–3,000 miles on some units.',
-          check: '<strong>Run the VIN at nhtsa.gov before purchasing — confirm recall 25V437 is completed on any 2019–2020 VC-Turbo car.</strong> Check the oil level cold; below MIN or milky/foamy oil signals internal damage. Ask for oil-level check records and any dealer recall documentation.',
+          desc: 'The 2.0L KR20DDET variable-compression turbo is only on SR/Platinum FWD models. NHTSA 25V-437 (June 2025) covers 2019–2020 VC-Turbo Altimas for engine-bearing manufacturing defects that can lead to catastrophic engine failure — fix is an ECM reprogram. Separately, VC-Turbo engines are known to consume 1 quart per 1,500–3,000 miles on some units.',
+          check: '<strong>Run the VIN at nhtsa.gov before purchasing — confirm recall 25V-437 is completed on any 2019–2020 VC-Turbo car.</strong> Check the oil level cold; below MIN or milky/foamy oil signals internal damage. Ask for oil-level check records and any dealer recall documentation.',
           cost: '$7,000–$12,000 engine replacement if bearing failure has occurred',
-          source: 'NHTSA recall 25V437 (June 2025) — 2019–2020 Nissan Altima VC-Turbo'
+          source: 'NHTSA recall 25V-437 (June 2025) — 2019–2020 Nissan Altima VC-Turbo'
         },
         { title: 'VC-Turbo shaft and turbocharger condition (if equipped)',
           risk: 'monitor', riskLabel: 'Monitor',
@@ -15912,12 +15912,12 @@ const CHECKLISTS = {
         }
       ]},
       { title: 'ADAS and Rear Camera', items: [
-        { title: 'Rear camera recall 23V628 / R23C3 (2019–2021 Platinum)',
+        { title: 'Rear camera recall 23V-628 / R23C3 (2019–2021 Platinum)',
           risk: 'high', riskLabel: 'High Attention',
-          desc: 'NHTSA recall 23V628 (Nissan campaign R23C3, September 2023) affects 2019–2021 Altima Platinum models. The rear camera wiring harness can chafe and produce a blurry, distorted, or multi-colored backup image — a direct safety hazard. Fix is harness securing or camera replacement at no charge.',
+          desc: 'NHTSA recall 23V-628 (Nissan campaign R23C3, September 2023) affects 2019–2021 Altima Platinum models. The rear camera wiring harness can chafe and produce a blurry, distorted, or multi-colored backup image — a direct safety hazard. Fix is harness securing or camera replacement at no charge.',
           check: '<strong>Put the car in Reverse and confirm the backup camera shows a clear, undistorted image.</strong> Run the VIN at nhtsa.gov to confirm R23C3 is completed on Platinum-trim cars.',
           cost: 'Covered under recall (no cost to owner)',
-          source: 'NHTSA recall 23V628 / Nissan campaign R23C3 — September 11, 2023'
+          source: 'NHTSA recall 23V-628 / Nissan campaign R23C3 — September 11, 2023'
         },
         { title: 'ProPilot Assist camera calibration (SV and above)',
           risk: 'monitor', riskLabel: 'Monitor',
@@ -15951,12 +15951,12 @@ const CHECKLISTS = {
         }
       ]},
       { title: 'Body and Documentation', items: [
-        { title: 'Open recall compliance — 23V628 and 25V437',
+        { title: 'Open recall compliance — 23V-628 and 25V-437',
           risk: 'high', riskLabel: 'High Attention',
-          desc: 'Two verified L34 recalls: rear camera wiring harness (23V628/R23C3, Platinum, 2019–2021) and VC-Turbo engine bearing (25V437, 2019–2020 VC-Turbo). An uncompleted 25V437 on a VC-Turbo car represents potential engine failure.',
-          check: '<strong>Enter the VIN at nhtsa.gov/recalls before signing.</strong> Both 23V628 and 25V437 must show as completed (where applicable). Unresolved recalls = negotiate a price reduction or have the dealer complete the repair first.',
+          desc: 'Two verified L34 recalls: rear camera wiring harness (23V-628/R23C3, Platinum, 2019–2021) and VC-Turbo engine bearing (25V-437, 2019–2020 VC-Turbo). An uncompleted 25V-437 on a VC-Turbo car represents potential engine failure.',
+          check: '<strong>Enter the VIN at nhtsa.gov/recalls before signing.</strong> Both 23V-628 and 25V-437 must show as completed (where applicable). Unresolved recalls = negotiate a price reduction or have the dealer complete the repair first.',
           cost: 'Free (recall repairs at Nissan dealers)',
-          source: 'NHTSA recalls 23V628 (September 2023) and 25V437 (June 2025)'
+          source: 'NHTSA recalls 23V-628 (September 2023) and 25V-437 (June 2025)'
         },
         { title: 'Water intrusion and sunroof drain check (if sunroof equipped)',
           risk: 'monitor', riskLabel: 'Monitor',

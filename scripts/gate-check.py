@@ -847,7 +847,9 @@ def gate_recall_ledger():
         if not p.exists():
             continue
         src = p.read_text(encoding="utf-8", errors="replace")
-        for n in set(re.findall(r"\d{2}V-?\d{3}", src)):
+        # anchored + [VE]: unanchored \d{2}V-?\d{3} substring-matched 9-digit forms
+        # (25V236000 -> "25V236") and missed equipment campaigns (13E010). 2026-10-20.
+        for n in set(re.findall(r"(?<![0-9A-Za-z])\d{2}[VE]-?\d{3}(?![0-9])", src)):
             norm = n.replace("-", "")
             if norm not in known:
                 unknown.setdefault(str(p.relative_to(REPO)), []).append(n)
