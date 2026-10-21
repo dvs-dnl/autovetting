@@ -32,3 +32,8 @@ _hub/
 
 # Internal coordination docs — never publish to the live site (added 2026-08-12)
 bridges/
+
+# FUSE deleted-but-open corpses from the connected-folder mount (added 2026-10-21)
+# Four of these were tracked since ddbd24e (2026-06-27): full 1.28 MB pre-audit copies of
+# inspect/index.html carrying 46 unledgered campaign numbers, incl. 19V-268 / 19V-258.
+.fuse_hidden*
