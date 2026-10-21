@@ -908,6 +908,36 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 ## Ready to deploy / publish
 
+### autovetting-blog-recall-format-and-ledger-census-2026-10-21 — ready 2026-10-21
+
+- Started: 2026-10-21 (02:00 MST overnight builder; queued item (b) from the 2026-10-20 run's "Next run" note. Launch freeze `DANIEL-DECISIONS-2026-07-29` still active, so no vehicle launch was available; NHTSA checked first per that note and still 403, so the recall queue could not move.)
+- Status: ready to deploy. Pushed directly (scanner passed, gates clean, no Re-sync).
+- Backlog-ref: 2026-10-20 Build-Log "Next run" item (b) — the blog-side tail of the 10-20 display-format fix.
+- Task: finish the campaign-number display-format normalisation in the one tier the 10-20 run did not reach, and establish what that unguarded tier actually ships.
+- Touched files: `blog/2017-nissan-rogue-buyers-guide/index.html`, `blog/2019-chevrolet-malibu-buyers-guide/index.html`, `_hub/Content/blog/2026-05-22-2017-nissan-rogue-buyers-guide.md` (gitignored), `_hub/Content/blog/2026-06-28-2019-chevrolet-malibu-buyers-guide.md` (gitignored), `_hub/Content/blog-recall-ledger-queue.md` (new, gitignored), `_hub/Build-Log/2026-10-21.md` (gitignored), `_hub/Awaiting-Daniel.md` (gitignored), `TASKS.md`
+- Verified against: autovetting-static-vehicle-pages-2026-10-19 (the only Ready/Done sibling touching `blog/*/index.html`; SHIPPED in `eb784c2`, an ancestor of this commit, not a concurrent sibling — it rewrote `/inspect/` links in 23 posts and this diff changes neither a link nor an `href`), autovet-seo-content (in flight, writes `_hub/Content/blog/` — its recent picks are Mazda3 10-14, Forester 10-07, Elantra 09-30; the two sources touched here date to 2026-05-22 and 2026-06-28 and are far outside its 14-day window)
+- Re-sync needed against:
+- Notes:
+
+    2026-10-21 02:00 [scheduled task]: **The queued prediction was wrong on both halves, and the second half is the finding.** Last night's note read "the 2017 Rogue and 2018 F-150 buyer's guides still print the 9-digit form, and G28 does not scan `blog/` at all, so that tier is unguarded."
+
+    **Display format (the queued work, done).** The 2018 F-150 guide has no 9-digit forms. The pages that do are the **2017 Rogue (4)** and the **2019 Malibu (1)**. All 5 normalised to the site's `NNV-NNN` form, plus the 5 matching occurrences in their two gitignored markdown sources so a re-render cannot reintroduce them. Display only — no claim, number, scope or link changed; `href` inventory md5 byte-identical to `HEAD` on both pages; 3/3 `ld+json` blocks parse. **Third consecutive night a count carried forward from a prior note was wrong** (10-19: unanchored metric regex; 10-20: field-only census missing a prose-only slug; tonight: wrong second page). Standing rule now: **re-measure every count a note hands you.**
+
+    **The real finding: the unguarded tier ships 16 unledgered recall claims.** Full census of the 26 deployed buyer's guides — **53 distinct campaign numbers, of which 16 across 9 pages and 44 body occurrences are in neither `verified` nor `unverified_legacy`.** Outside the recall-ledger rule entirely, with nothing reporting it, because G28's scope is `inspect/` + `pinpoint/` + `index.html`. All 16 are body claims a buyer reads, not JSON-LD-only metadata. Concentration: **ford-explorer 2020 — 4 of its 4 numbers** (`20V-693`, `22V-255`, `23V-069`, `23V-675`), hyundai-tucson 2018 3 of 4, honda-crv 2019 2 of 4.
+
+    **Not presumed fabricated, and that distinction is the whole judgement.** All 9 pages came from `autovet-seo-content`, whose notes state recalls were WebSearch-verified at authoring time — real verification, just not the ledger's standard (primary source only: NHTSA `campaignNumber` or a Part 573 PDF). Precedent cuts both ways and neither side licenses a guess: wave 24 found **36 of 36** unledgered numbers in `inspect/` misattributed; wave 25 found **1 of 185** ledgered ones wrong. So this tier is **unquantified**, not known-bad.
+
+    **Deliberately not drained.** `api.nhtsa.gov` 403s at the proxy from both shells (device `curl` exit 56, cloud proxy identical), first seen 10-05, re-tested tonight. The 10-19 method requires reading an entire campaign record; the 10-20 run declined the summarising fetch channel for exactly that reason. Writing or clearing 16 claims through a lossy read would re-open what waves 24–25 spent two weeks closing. Queue opened instead — `_hub/Content/blog-recall-ledger-queue.md`, one row per page-claim with the shipped claim text and the drain procedure, following the `vinnote-queue.md` pattern.
+
+    **Deferred with a reason: 153 unhyphenated 6-character forms** (`19V383`, `23V675`) also ship across the blog tier — same defect class as tonight's fix, two orders of magnitude bigger. Left alone because roughly a third sit on rows in the new queue and may be *removed* when it drains; normalising a claim that may not survive is churn. One pass after the queue reaches zero.
+
+    **The gate change is Daniel's call, not tonight's.** Extending G28 to `blog/*/index.html` is what stops the tier refilling, but a new gate needs approval and switching it on today would CRITICAL-fail every push on 16 rows an unattended run cannot resolve without the API — blocking the orchestrator indefinitely. Raised in `Awaiting-Daniel.md`; the queue file records it as the closing step.
+
+    Sibling check: no blocking overlap, per Verified against above. In-flight `autovet-competitor-monitor` (`Competitors/`), `autovet-cpo-protocol-ingestion` (`Product/CPO-Protocols/`) and `autovet-recall-study-under-15k` are orthogonal — none references `blog/*/index.html`. Ready blocks ahead of this one touch `inspect/index.html`, `scripts/recall-ledger.json`, `pinpoint/index.html` and `scripts/render-blog.py`; this diff touches none of them (`scripts/recall-ledger.json` was **read only** — no entry added or moved). **`Started:` audit clean** — every block across In-flight, Ready and all 24 Done blocks carries a `- Started:` date. No Re-sync needed.
+
+    **Scanner: PASS** (932 files, exit 0; file count read, not just the exit code, per the 10-01 gate-bug note). **Syntax-check: PASS** (official node recipe, Script 2 OK on both pages, exit 0). **Dead-links: verified** — `href` inventory md5 identical to `HEAD` on both files; no link added, removed or changed, no `/decode/` link. **G29 in sync** (245 pages, sitemap, links). **Deploy gate `scripts/gate-check.py`: 29 passed, 1 warned, 0 CRITICAL** (the warn is the pre-existing `homepage-test-bc` `loading=lazy` note, unchanged from the 10-20 baseline). **Commit: COMMIT_SHA.**
+
+
 ### autovetting-static-vehicle-pages-2026-10-19 — ready 2026-10-19 (PUSHED 2026-10-20 in `eb784c2`)
 
 - Started: 2026-10-19 (Daniel, live session — Search Console indexing review)
