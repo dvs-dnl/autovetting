@@ -6232,7 +6232,8 @@ const CHECKLISTS = {
     ],
     recalls: [
       { number: 'Multiple', title: 'Open recalls — VIN check', desc: 'Campaigns vary by build date. Run the VIN at nhtsa.gov/recalls and require every open recall closed before purchase.' }
-    ]
+    ],
+    vinNote: "The 8th VIN digit is necessary but not sufficient on a 2019 Ram 1500, and this is the year it matters most: Ram sold the new DT and the carryover Classic body side by side as 2019 models. Verified against NHTSA vPIC by varying position 8 alone with trim held constant: ‘T’ = 5.7L Hemi V8 (5.7L / 8 cylinders), ‘G’ = 3.6L Pentastar V6 (3.6L / 6 cylinders), ‘M’ = 3.0L diesel V6 (3.0L / 6 cylinders, fuel type Diesel). Two things that digit will not tell you. It does not identify eTorque — vPIC returns a blank electrification field for both 5.7L cars, and the real separator is the engine ID: EZL is the 48-volt eTorque belt-starter-generator truck, EZH is the 12-volt non-eTorque. And it does not separate DT from Classic — a Classic-pattern VIN decodes as plain Ram 1500 with the same 5.7L V8 and the word Classic appears nowhere in the response. The fastest tell in the parking lot is the wheel: Classic hubs are 5-lug, DT hubs are 6-lug. Also note that ‘M’ will return the diesel even on a DT-pattern VIN, because the decoder reads Chrysler’s shared engine table without checking whether that combination was ever built — a decode that returns an engine is not proof the engine was offered. Settle body and eTorque status before applying the MDS lifter and BSG sections of this checklist, because they do not apply equally.",
   },
 
   'chevrolet-equinox-2018': {
@@ -13403,7 +13404,8 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ number: "1.5T head crack", title: "Severity: High", desc: "Cylinder head crack / oil leak on 2020-2021 1.5T EcoBoost. Remedy: Engine replacement under extended warranty on affected units." }]
+    recalls: [{ number: "1.5T head crack", title: "Severity: High", desc: "Cylinder head crack / oil leak on 2020-2021 1.5T EcoBoost. Remedy: Engine replacement under extended warranty on affected units." }],
+    vinNote: "8th VIN digit engine code, verified against NHTSA vPIC by changing that one character and nothing else: ‘6’ = 1.5L EcoBoost three-cylinder (vPIC returns 1.5L / 3 cylinders on a clean decode), ‘9’ = 2.0L EcoBoost four-cylinder (2.0L / 4 cylinders, engine model GTDI 240PS), ‘Z’ = 2.5L Atkinson four in the hybrid (2.5L / 4 cylinders, ElectrificationLevel Strong HEV). This is the most consequential decode on the 4th-gen Escape, because the 1.5T three-cylinder is the engine carrying the documented cylinder-head-to-block oil leak on early builds and the 2.0T is not — the two cars are visually identical and the badge does not tell you. Confirm it at the curb before paying for a compression test: open the hood and count ignition coils, three for the 1.5T and four for the 2.0T. One decoding caveat worth knowing: ‘Z’ only resolves alongside the hybrid’s own 7th character (B or D), and returns error 14 on the 1.5T/2.0T pattern, so read positions 7 and 8 together off the actual VIN rather than treating the 8th digit as a standalone lookup. A ‘Z’ car is a hybrid; only the plug-in variant has a charge port, so if there is no charge port the all-electric-range question does not apply.",
   },
   'nissan-armada-2017': {
     year: 2017, make: 'Nissan', model: 'Armada', trim: 'SV / SL / Platinum / Platinum Reserve (2nd gen Y62, 2017–present)',
@@ -15425,7 +15427,8 @@ const CHECKLISTS = {
           cost: 'n/a', source: 'AutoVetting editorial' }
       ]}
     ],
-    recalls: [{ number: "Multiple", title: "Severity: Varies", desc: "Open recalls vary by build date — check the VIN. Remedy: Run the VIN at nhtsa.gov/recalls and confirm any open campaigns are closed." }]
+    recalls: [{ number: "Multiple", title: "Severity: Varies", desc: "Open recalls vary by build date — check the VIN. Remedy: Run the VIN at nhtsa.gov/recalls and confirm any open campaigns are closed." }],
+    vinNote: "Both Aviator powertrains are 3.0L EcoBoost V6s, so displacement tells you nothing — the 8th VIN digit is the only clean separator, verified against NHTSA vPIC with trim held constant at Reserve. ‘C’ = the standard 3.0T: vPIC returns 3.0L, 6 cylinders, 400 hp, gasoline, no electrification. ‘Y’ = the Grand Touring plug-in hybrid: same 3.0L, but ElectrificationLevel PHEV and primary fuel Electric. (vPIC reports 4 cylinders on the ‘Y’ decode — that is a decoder artifact, the Grand Touring is the same V6.) The Grand Touring adds a high-voltage battery pack, its own cooling circuit, and a service history worth reading line by line; a Grand Touring priced like a Reserve is usually priced that way for a reason. Decode the digit before using the suspension and infotainment sections of this checklist, and treat any Grand Touring without documented high-voltage service as an unpriced risk rather than a bargain.",
   },
   'buick-envision-2021': {
     year: 2021, make: 'Buick', model: 'Envision', trim: 'Preferred / Essence / Avenir (2nd gen 2021–present)',

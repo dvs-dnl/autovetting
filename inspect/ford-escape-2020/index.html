@@ -195,7 +195,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">8th VIN digit engine code, verified against NHTSA vPIC by changing that one character and nothing else: ‘6’ = 1.5L EcoBoost three-cylinder (vPIC returns 1.5L / 3 cylinders on a clean decode), ‘9’ = 2.0L EcoBoost four-cylinder (2.0L / 4 cylinders, engine model GTDI 240PS), ‘Z’ = 2.5L Atkinson four in the hybrid (2.5L / 4 cylinders, ElectrificationLevel Strong HEV). This is the most consequential decode on the 4th-gen Escape, because the 1.5T three-cylinder is the engine carrying the documented cylinder-head-to-block oil leak on early builds and the 2.0T is not — the two cars are visually identical and the badge does not tell you. Confirm it at the curb before paying for a compression test: open the hood and count ignition coils, three for the 1.5T and four for the 2.0T. One decoding caveat worth knowing: ‘Z’ only resolves alongside the hybrid’s own 7th character (B or D), and returns error 14 on the 1.5T/2.0T pattern, so read positions 7 and 8 together off the actual VIN rather than treating the 8th digit as a standalone lookup. A ‘Z’ car is a hybrid; only the plug-in variant has a charge port, so if there is no charge port the all-electric-range question does not apply.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
