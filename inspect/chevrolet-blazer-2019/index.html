@@ -210,7 +210,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the second-generation Blazer the 8th digit is the engine character and it resolves cleanly, which makes a 2019 easy to shop once you know only two engines exist — verified against NHTSA vPIC by varying that one character off 3GNKBCRS1KS000000 and holding the rest constant: S returns Chevrolet / Blazer / 2019 / 3.6L / 6 cylinders / EngineModel LGX / V-shaped; A returns 2.5L / 4 cylinders / EngineModel LCV / in-line; X returns error 14 with every engine field blank. So the digit is a two-way fork, LCV four or LGX V6, and the 2.0T LTG this checklist flags as a 2020-and-later engine does not appear on any 2019 pattern tested — the measured version of the warning in the entry above. Drivetrain and trim ride together at position 6, not at 8: C returns 2LT with FWD, H returns 3LT with AWD, and K returns Premier with AWD on an error 0 clean decode. That matters because AWD was optional and a badge is the easiest thing on the car to change. One decoder artifact recorded on purpose, because a reader who checks will otherwise think the note is sloppy: 3GNKBKRA1KS000000 — Premier, AWD, carrying the 2.5L character — decodes without complaint, even though the 2.5L was never paired with AWD or with Premier trim. vPIC reads GM's engine table without validating the combination, the same artifact the Gladiator and Ram notes documented, so a decode returning a configuration is evidence of what the VIN encodes, not proof the car was built that way. Confirm the V6 at the car: badge, and coil count, six versus four.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

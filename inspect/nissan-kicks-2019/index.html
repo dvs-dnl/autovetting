@@ -112,7 +112,7 @@
           <div class="item-risk-marker item-risk-low"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">1.6L MR16 engine oil consumption</h3></div>
+              <div class="item-title-link"><h3 class="item-title">1.6L HR16DE engine oil consumption</h3></div>
               <div class="item-risk-label low">Low Risk</div>
             </div>
             <div class="item-desc">Naturally-aspirated and generally reliable. Standard pre-purchase check.</div>
@@ -220,7 +220,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the P15 Kicks the 8th VIN digit is not the engine character, and knowing that saves a wasted decode — verified against NHTSA vPIC by changing one character at a time off 3N1CP5CU1KL000000: position 8 at U and at V both return Nissan / Kicks / 2019 / 1.6L / 4x2, identical in every engine field, and the V decode comes back error 0, clean. The character that actually carries the engine sits at position 4: hold the rest constant and C returns the 1.6L, while D drops Make, Model, displacement and fuel type out of the response entirely (error 14, with vPIC suggesting a correction back). That matches the parts-catalog convention for this car, which identifies the engine as 1.6L, VIN C, 4th digit. The practical answer, though, is that a 2019 offers a buyer no engine fork at all: one engine, one transmission, one drivetrain — 1.6L HR16DE, naturally aspirated, 122 hp at 6,300 rpm, Xtronic CVT, front-wheel drive, per Nissan's own published specifications. There is no AWD Kicks and no turbo Kicks to shop for, so the decision point is the CVT service history, not the digit. Record correction shipped with this note: this entry previously named the engine MR16DDT, which is Nissan's turbocharged 1.6 from the Juke, not the naturally aspirated HR16DE in this car — the item text below always said naturally aspirated, so the label was the error. One limit recorded on purpose: vPIC returns no EngineModel, EngineCylinders or EngineHP on this VIN pattern at all, so the decode confirms displacement and drivetrain but cannot confirm the engine family on its own.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

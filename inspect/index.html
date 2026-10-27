@@ -9343,7 +9343,8 @@ const CHECKLISTS = {
 
   'nissan-kicks-2019': {
     year: 2019, make: 'Nissan', model: 'Kicks', trim: 'S / SV / SR (P15, 2018-2024; the P15 continued for 2025 as the Kicks Play)',
-    engine: '1.6L MR16DDT I4 (122hp) with Xtronic CVT — FWD only',
+    engine: '1.6L HR16DE I4 (122hp) with Xtronic CVT — FWD only',
+    vinNote: "On the P15 Kicks the 8th VIN digit is not the engine character, and knowing that saves a wasted decode — verified against NHTSA vPIC by changing one character at a time off 3N1CP5CU1KL000000: position 8 at U and at V both return Nissan / Kicks / 2019 / 1.6L / 4x2, identical in every engine field, and the V decode comes back error 0, clean. The character that actually carries the engine sits at position 4: hold the rest constant and C returns the 1.6L, while D drops Make, Model, displacement and fuel type out of the response entirely (error 14, with vPIC suggesting a correction back). That matches the parts-catalog convention for this car, which identifies the engine as 1.6L, VIN C, 4th digit. The practical answer, though, is that a 2019 offers a buyer no engine fork at all: one engine, one transmission, one drivetrain — 1.6L HR16DE, naturally aspirated, 122 hp at 6,300 rpm, Xtronic CVT, front-wheel drive, per Nissan's own published specifications. There is no AWD Kicks and no turbo Kicks to shop for, so the decision point is the CVT service history, not the digit. Record correction shipped with this note: this entry previously named the engine MR16DDT, which is Nissan's turbocharged 1.6 from the Juke, not the naturally aspirated HR16DE in this car — the item text below always said naturally aspirated, so the label was the error. One limit recorded on purpose: vPIC returns no EngineModel, EngineCylinders or EngineHP on this VIN pattern at all, so the decode confirms displacement and drivetrain but cannot confirm the engine family on its own.",
     overallRisk: 'low', overallRiskLabel: 'Low Risk',
     summary: "The P15 Kicks is Nissan's most fuel-efficient non-hybrid crossover — 36 mpg combined with the 1.6L naturally-aspirated engine. FWD only (no AWD option). CVT fluid service every 30k miles with NS-3 fluid is the critical maintenance item. Exterior styling is distinctive. Outstanding commuter value for urban buyers who don't need AWD.",
     stats: { itemsToCheck: 12, recalls: 2, ownerComplaints: 65, topComplaintArea: 'CVT fluid history / FWD-only limitation' },
@@ -9353,7 +9354,7 @@ const CHECKLISTS = {
           desc: 'CVT requires NS-3 fluid every 30k miles. Same failure profile as Altima and Rogue on neglected service.',
           check: '<strong>Request CVT fluid service receipts.</strong>',
           cost: '$200–$350 service / $3,000–$4,500 CVT', source: 'Nissan CVT standard' },
-        { title: '1.6L MR16 engine oil consumption', risk: 'low', riskLabel: 'Low Risk',
+        { title: '1.6L HR16DE engine oil consumption', risk: 'low', riskLabel: 'Low Risk',
           desc: 'Naturally-aspirated and generally reliable. Standard pre-purchase check.',
           check: '<strong>Pull dipstick before driving.</strong>',
           cost: 'Maintenance only', source: 'Consumer pattern' }
@@ -10164,9 +10165,10 @@ const CHECKLISTS = {
 
   'kia-forte-2019': {
     year: 2019, make: 'Kia', model: 'Forte', trim: 'FE / LXS / GT-Line / EX / GT (BD, 3rd gen, 2019-2024)',
-    engine: '2.0L MPI Nu I4 (147hp) / 1.6T Gamma Turbo (201hp GT)',
+    engine: '2.0L MPI Nu I4 (147hp) — the 1.6T GT (201hp, 7-speed DCT) is a 2020-and-later addition, not available on a 2019',
+    vinNote: "On the BD Forte the 8th digit does carry the engine, but for a 2019 the more useful finding is what it cannot return — verified against NHTSA vPIC off 3KPF24AD1KE000000 by varying position 8 and holding everything else constant: D returns Kia / Forte / 2019 / trim FE-LX-LXS / 2.0L / 4 cylinders / 147 hp / EngineModel MPI Nu, which confirms this entry's Nu label against primary source; A returns error 14 with no engine data and a SuggestedVIN flipping that position to B; and B itself decodes clean on the check digit yet still returns error 14 with every engine field blank. No character tested returns a 1.6L on a 2019 pattern, and that is the right answer rather than a hole in the data: the 1.6T GT is not a 2019 car. Kia unveiled it in Las Vegas on 30 October 2018 as the 2020 Forte GT — turbocharged 1.6-liter GDI, an estimated 201 hp, 6-speed manual or 7-speed dual-clutch — so a 2019 Forte is the 147 hp 2.0L, and any 1.6T or DCT advice found in Forte buying guides belongs to a 2020-or-later car. Record correction shipped with this note: the engine string and the summary previously listed the 1.6T as a 2019 option, and the GT Powertrain section is now year-qualified the same way this site already qualifies the Blazer 2.0T. What the VIN will not settle is the fork that actually drives maintenance cost on a 2019: TransmissionStyle comes back blank, so the 6-speed manual and the IVT are the same decode. Check the pedal box and the service receipts, because the IVT fluid item below applies to only one of them.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The BD Forte is Kia's best compact sedan — well-styled, feature-rich, and priced aggressively. The 2.0L Nu engine carries KSDS recall exposure (same family as Sonata). Verify all recall campaigns before purchase. The 1.6T GT is genuinely fun. IVT/CVT fluid service is the critical maintenance document on the base 2.0L. Strong value when recalls are confirmed complete.",
+    summary: "The BD Forte is Kia's best compact sedan — well-styled, feature-rich, and priced aggressively. The 2.0L Nu engine carries KSDS recall exposure (same family as Sonata). Verify all recall campaigns before purchase. The 1.6T GT is genuinely fun, but it is a 2020-and-later car — a 2019 is the 2.0L only. IVT/CVT fluid service is the critical maintenance document on the base 2.0L. Strong value when recalls are confirmed complete.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Nu engine KSDS recall / CVT/IVT fluid service' },
     sections: [
       { title: 'Powertrain', items: [
@@ -10179,8 +10181,8 @@ const CHECKLISTS = {
           check: '<strong>Request IVT fluid service receipts.</strong>',
           cost: '$200–$400 service / $3,500–$5,000 IVT', source: 'Kia IVT service standard' }
       ]},
-      { title: 'GT Powertrain', items: [
-        { title: '1.6T DCT fluid and service (GT)', risk: 'monitor', riskLabel: 'Monitor',
+      { title: 'GT Powertrain (2020+ cars only)', items: [
+        { title: '1.6T DCT fluid and service (GT) — 2020+ cars only', risk: 'monitor', riskLabel: 'Monitor',
           desc: '7-speed DCT shudder at low speed = overdue fluid.',
           check: '<strong>Test stop-and-go under 15 mph.</strong>',
           cost: '$250–$450 service', source: 'Kia DCT pattern' }
@@ -12009,6 +12011,7 @@ const CHECKLISTS = {
   'chevrolet-blazer-2019': {
     year: 2019, make: 'Chevrolet', model: 'Blazer', trim: 'L / 2LT / 3LT / RS / Premier (2nd gen, 2019–2023)',
     engine: '2.5L I4 (193 hp) or 3.6L LGX V6 (308 hp) — the 2.0T (230 hp) is a 2020-and-later addition, not available on a 2019',
+    vinNote: "On the second-generation Blazer the 8th digit is the engine character and it resolves cleanly, which makes a 2019 easy to shop once you know only two engines exist — verified against NHTSA vPIC by varying that one character off 3GNKBCRS1KS000000 and holding the rest constant: S returns Chevrolet / Blazer / 2019 / 3.6L / 6 cylinders / EngineModel LGX / V-shaped; A returns 2.5L / 4 cylinders / EngineModel LCV / in-line; X returns error 14 with every engine field blank. So the digit is a two-way fork, LCV four or LGX V6, and the 2.0T LTG this checklist flags as a 2020-and-later engine does not appear on any 2019 pattern tested — the measured version of the warning in the entry above. Drivetrain and trim ride together at position 6, not at 8: C returns 2LT with FWD, H returns 3LT with AWD, and K returns Premier with AWD on an error 0 clean decode. That matters because AWD was optional and a badge is the easiest thing on the car to change. One decoder artifact recorded on purpose, because a reader who checks will otherwise think the note is sloppy: 3GNKBKRA1KS000000 — Premier, AWD, carrying the 2.5L character — decodes without complaint, even though the 2.5L was never paired with AWD or with Premier trim. vPIC reads GM's engine table without validating the combination, the same artifact the Gladiator and Ram notes documented, so a decode returning a configuration is evidence of what the VIN encodes, not proof the car was built that way. Confirm the V6 at the car: badge, and coil count, six versus four.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The reborn Blazer is a sharp-looking mid-size crossover but first-year quality was inconsistent. For 2019 the choice is the 2.5L four or the 3.6L V6 — the 2.0T that shows up in a lot of Blazer buying guides was not offered until 2020, so ignore 2.0T-specific advice when shopping a 2019. The V6 is the one to have. The main concerns are 9-speed automatic rough shifts, infotainment glitches, and first-year build variance. Prefer 2021+ with the V6 if you can stretch.",
     stats: { itemsToCheck: 11, recalls: 2, ownerComplaints: 440, topComplaintArea: 'Engine / Transmission' },
