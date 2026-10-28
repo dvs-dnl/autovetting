@@ -210,7 +210,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 2019 Q3 gives a buyer no engine fork at all, so the useful decode here is the generation check instead. Verified against NHTSA vPIC: off WA1AECF3*K1, position 8 at ‘3’ returns Audi / Q3 / 2019 / quattro Premium / 2.0L / 4 cylinders / 228 hp / AWD, and changing only that character to ‘4’ or ‘8’ drops Model, displacement and every engine field out of the response entirely (error 14, with vPIC suggesting a correction back). Real-world 2019 VINs agree — WA1AECF30K1077709 and WA1AECF39K1075599 both carry ‘3’ in that position — so one engine, one character, nothing to shop between. Position 4 carries market and trim rather than hardware: ‘A’ is the US Premium, ‘F’ the Canadian Technik. The fork that matters is F3 versus 8U, and it is measurable: a 2018 8U VIN, WA1BCCFS7JR034731, decodes clean to Q3 / 2018 / Premium, Sport Premium / 2.0L / 200 hp, reading ‘CCFS’ at positions 4–7 where this 2019 F3 reads ‘AECF’ and 228 hp. They are different cars — different platform, different interior, first model year here — so a decode returning 200 hp means the items below do not apply to the car in front of you. The 184 hp figure in a lot of online spec tables is the European 35 TFSI and was never sold here; anything other than 2.0L / 228 hp / AWD on a car being sold as a 2019 Q3 should be re-identified before you use this checklist.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
