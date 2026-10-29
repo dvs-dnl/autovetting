@@ -158,6 +158,12 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
     Key delta: only new item since 07-29 baseline is a Canada expansion (Jul 30, 2026, one day after baseline) -- live at Trotman Auto Group dealerships in British Columbia, same dealer-pushed Scan to Sold pattern (advisor shares visual report with customer in person; one-minute photo appraisal feeds listings), no new data type, no buyer-ordered path. No funding, M&A, or new partnership found in the 07-29..10-22 window; several "recent-looking" press items (Dealer Tire, JLR seaports, heavy-duty fleets) were confirmed via direct fetch to date to Aug-Sept 2025 and are stale, not this cycle's delta. Neither 07-29 🔴 trigger (shopper-facing condition DATA; buyer-orderable product) tripped; 🟡 trigger (Scan to Sold at marketplace-VDP scale) also not tripped -- still dealer-site only.
     Implication: both standing theses (buyer-side PPI white space intact; acquirer-ecosystem positioning unchanged) hold. No messaging change. Independence counter-positioning line flagged 07-29 remains the standing unwritten recommendation.
     Weekly milestone: DONE -- intel ready for Daniel's review (not 🔴, no Awaiting-Daniel append required). Next in rotation: Self Inspection (#11, cycle 2) [funding follow-ons, product evolution].
+  2026-10-29 08:12 [scheduled task]: profiled Self Inspection (#11, cycle 2) (🟢).
+    Output: Competitors/_Monitor/2026-10-29-self-inspection.md (no Awaiting-Daniel append -- not 🔴).
+    Sibling check: no overlaps. In-flight autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), autovet-seo-content (Content/blog/), and Done (last 10) entries all checked -- no other autovet work this week positions an AutoVet feature against Self Inspection specifically.
+    Key delta: no material change since 07-30 baseline -- same $10M Sandberg Bernthal round (just newly attributed to co-founder Vince Gaydarzhiev in one syndicated piece, confirmed same raise, not a new entrant), marketplace solution page unchanged (still seller/platform-paid, not buyer-orderable, only new item is an NAAA membership banner), no marketplace integration news, 0 TrustPilot reviews (expected, B2B).
+    Implication: standing analysis holds unchanged -- seller-side condition-data-rail narrows white space from the marketplace-software direction, not direct-to-consumer; AutoVet's independence + physical-inspection + buyer-pays positioning remains undisputed. No escalation trigger tripped.
+    Weekly milestone: DONE -- intel ready for Daniel's review (not 🔴, no Awaiting-Daniel append required). Next in rotation: VINsight.ai (#12) [competitive direct comparison; what they're shipping].
 
 ### autovet-cpo-protocol-ingestion
 
@@ -616,6 +622,57 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   then; otherwise Nissan Sentra, Kia Forte, Subaru Crosstrek, or Hyundai Santa Fe (verify each against
   the actual Content/blog/ directory first, not just this table, per the recurring lesson).
 
+  2026-10-28 10:14 [scheduled task]: drafted 2017 Nissan Sentra (B17, 7th-gen, 2013-2019) pillar
+  post -- Tier-2. Sibling-conflict check run before picking (per this task's required gate): Kia
+  Forte and Hyundai Santa Fe, both previously flagged as untouched Tier-2/3 candidates (10-14,
+  10-21 runs), are EXCLUDED this run because autovetting-vinnote-batch-2026-10-26 and
+  autovetting-vinnote-batch-2026-10-27 corrected hyundai-santa-fe-2019's engine-family label
+  (Theta II, not Nu) and kia-forte-2019's model-year engine claim (1.6T GT is 2020+, not 2019)
+  respectively -- both inside the 14-day sibling window and both bear directly on buyer-facing
+  engine/trim claims a pillar post on either vehicle would need to get right. Subaru Crosstrek had
+  no recent (14-day) sibling touches but its own checklist carries zero verified recalls and no
+  settlement story; picked Sentra instead for the stronger, better-sourced narrative: a real,
+  named class-action settlement (the "Nissan CVT Stringer Class Action," 2013-2017 Sentra) plus
+  direct interlink continuity into the two already-published CVT-family posts (2017 Rogue, 2019
+  Altima). Toyota Highlander (#20, last Tier-1 gap) re-checked again -- still no wave-24+
+  recall-audit generation-boundary entry in TASKS.md -- remains deferred, consistent with every
+  run since 08-26.
+  Recalls verified against AutoVet's own scripts/recall-ledger.json (verified tier) +
+  inspect/index.html's existing nissan-sentra-2017 checklist, cross-checked via WebFetch of
+  clearvin.com and automotive-fleet.com: 17V-253000 (passenger airbag inflator, scope 2014/2016/
+  2017 Sentra), 18V-551000 (ignition switch rotation, mechanical-key cars only), 21V-135000 (brake
+  light switch contamination, Nissan PM971, ~807k units, scope 2016-2019 Sentra). Two
+  Sentra-adjacent numbers explicitly excluded by year per the ledger's own scope notes: 16V-244000
+  (ledger scope 2013-2016 Sentra, not 2017) and 19V-654000 (ledger scope 2018-2019 Sentra, not
+  2017) -- flagged in the post as a common VIN-lookup mismatch rather than cited as applicable.
+  CVT-specific TSBs (NTB17-034 series, NTB19-075/NTB19-075a) confirmed via carcomplaints.com's
+  published 2017 Sentra TSB archive, not fabricated. The Stringer settlement's terms (84mo/84k-mile
+  warranty extension, Jan 30 2020 claims deadline) confirmed via WebFetch of bbbprograms.org
+  ("nissan cvt") and topclassactions.com -- framed in the post as closed/historical, not active
+  relief for a 2026 buyer. No Nissan CPO protocol content reprinted verbatim (business-plan Sec
+  4.5); Product/CPO-Protocols/nissan-certified.md's Sentra-specific mapping (CVT sub-protocol
+  recommendation) paraphrased. Interlinks to 2017-nissan-rogue + 2019-nissan-altima (both
+  confirmed present in /blog/ by directory listing before linking).
+  Output: Content/blog/2026-10-28-2017-nissan-sentra-buyers-guide.md (~1,790 words body, status:
+  draft), Content/_seo-research/2026-10-28-2017-nissan-sentra.md. Also updated
+  Content/_seo-research/top-500-vehicles.md (added the Sentra row to Already Covered; Suggested
+  Next Picks / Updated-2026-10-28 note records the Forte/Santa Fe sibling-conflict exclusion and
+  narrows the Tier-2/3 list to Kia Forte, Subaru Crosstrek, Hyundai Santa Fe for the next run).
+  Sibling check: Re-sync needed against: none (Forte and Santa Fe were excluded from THIS run's
+  pick precisely to avoid needing one; Sentra itself has no In-flight/Ready/Done(last-10) touch
+  anywhere in TASKS.md within the 14-day window -- grepped for sentra/nissan-sentra and found only
+  this task's own prior 10-21 mention and the stale 08-04/08-05 recall-audit wave 17/18 entries,
+  both outside the window). In-flight autovet-competitor-monitor (Competitors/),
+  autovet-cpo-protocol-ingestion (Product/CPO-Protocols/), and autovet-recall-study-under-15k (its
+  own log) are all orthogonal file-wise. No autovet-content-checklist-authoring or
+  autovetting-overnight-builder task is in flight anywhere in TASKS.md (consistent with the active
+  vehicle-launch freeze, DANIEL-DECISIONS-2026-07-29). No Re-sync needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch
+  Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates:
+  re-verify whether Kia Forte or Hyundai Santa Fe have cleared their 14-day sibling-conflict window
+  by the next run; otherwise Subaru Crosstrek, or re-check Toyota Highlander (#20) against the
+  recall-audit generation-boundary sweep.
+
 
 ### autovet-recall-study-under-15k
 
@@ -981,6 +1038,35 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 
 ## Ready to deploy / publish
+
+### autovetting-vinnote-batch-2026-10-29 — ready 2026-10-29
+
+- Started: 2026-10-29 (02:00 MST overnight builder; the 10-28 NHTSA fetch-path decision at the top of `_hub/Awaiting-Daniel.md` is still unanswered — that file has not been modified since the 10-28 run wrote it — so the launch posture was left exactly as that run set it and this run took the sanctioned Step-3 alternative again. A scheduled run does not answer its own question.)
+- Status: ready to deploy. Pushed directly (scanner passed, gates clean, no Re-sync).
+- Backlog-ref: `_hub/Content/vinnote-queue.md` priorities 121 / 122 / 123 (the three rows below the deferred Mercedes head, per the queue's own How-to-use note).
+- Task: drain 3 vinNote entries (launch-spec criterion 3, VIN decoding intelligence)
+- Touched files: `inspect/index.html`, `inspect/nissan-leaf-2019/index.html`, `inspect/audi-e-tron-2019/index.html`, `inspect/porsche-cayenne-2019/index.html`, `sitemap.xml`, `_hub/Content/vinnote-queue.md` (gitignored), `_hub/Build-Log/2026-10-29.md` (gitignored), `TASKS.md`
+- Notes:
+
+    2026-10-29 [scheduled task]: **3 vinNotes added — `nissan-leaf-2019`, `audi-e-tron-2019`, `porsche-cayenne-2019`. vinNotes 134 -> 137 (55.9% of 245). All three are "the engine is not where you would look" findings, and two of the three required a confirmed negative on the 8th digit before the real discriminator could be named. Four sourced record corrections shipped. Night 29 without a vehicle launch — posture unchanged and not changed on my own authority; see the Started note.** Commit: ``3092caf``.
+
+    **`nissan-leaf-2019` — the battery is in the 4th digit, and `decodeall=true` is what exposes it.** The plain vPIC decode is a dead end: `1N4AZ1CP*KC` and `1N4BZ1CP*KC` both return `BEV` / `Electric` / Smyrna with **every battery field blank**, which is how this slug could have been written wrong. Adding `decodeall=true` breaks it open, because the capacity rides in `OtherEngineInfo` rather than `BatteryKWh`: `1N4AZ1CP*KC` -> `Motor (BAT:40kw)`, `1N4BZ1CP*KC` -> `Motor (BAT:62kw)`. So **position 4 (A vs B) is the discriminator, not position 8.** Confirmed negative on 8: holding `1N4AZ1C` and changing only position 8 from `P` to `U` returns `Motor (BAT:40kw)` either way — the character is validated (an invalid `A` there comes back error 4 with `SuggestedVIN: 1N4AZ1C!*KC`, the `!` marking position 8) but carries no capacity. Anchored real-world: `1N4BZ1CP1KC319895` decodes **error 0 clean** to `Motor (BAT:62kw)` and the selling dealer lists that exact VIN as a **2019 LEAF SL PLUS** — two independent confirmations. Two cautions written into the note: NHTSA writes the capacity as `kw` where it means kWh, and **no vPIC field reports battery health**, so the VIN tells you which pack the car was built with while the 12-bar gauge already in this checklist remains the only way to learn what a Phoenix car has left.
+
+    **`audi-e-tron-2019` — one powertrain, so the 8th digit has nothing to fork.** Position 8 is a fixed `E` on every 2019 car; changing it returns error 14, "unable to provide information for some of the characters in the VIN, based on the manufacturer submission" — no other value exists in Audi's 2019 submission. What varies is **position 4**, carrying the trim: `WA1L...` -> `e-tron quattro Premium Plus`, `WA1V...` -> `e-tron quattro Prestige`, **both 402 hp**, 95 kWh, Brussels. The note's useful content is therefore the two listing traps rather than an engine map: 355 vs 402 hp is the continuous vs boost rating of the same car, and any 2019 e-tron advertised as an "S" is mislabeled.
+
+    **`porsche-cayenne-2019` — the engine is in the 5th digit and the 8th is a decoy.** Holding `WP1A_2AY` and varying position 5 only: `A` = Cayenne base, 3.0L turbo V6, 335 hp; `B` = S, 2.9L biturbo V6, 434 hp; `E` = E-Hybrid, 3.0L V6 plug-in, 455 hp (vPIC labels the trim `S E-Hybrid`; Porsche dropped the S for 2019); `F` = Turbo, 4.0L biturbo V8, 541 hp; `C` = no match. All four return Series **`Type 9YA`**, Bratislava. Position 8 is a fixed `Y` and varying it returns error 14 — which is precisely the condition under which a future run hunting for an 8th-digit Cayenne engine code would find nothing and be tempted to invent one. The note now forecloses that.
+
+    **Four record corrections, all sourced.** Both European entries described variants that **did not exist in MY2019**. `audi-e-tron-2019`: trim `Standard / Prestige / S` -> `Premium Plus / Prestige` (names from vPIC's own `Trim` field; the **S removed because the three-motor 496 hp e-tron S did not reach the US until MY2022** — announced Aug 2021, on sale fall 2021, per Carscoops), and engine `AWD 355 hp (95 kWh) or e-tron S AWD 496 hp (95 kWh)` -> `Dual-motor AWD quattro, 95 kWh (355 hp continuous / 402 hp boost)`. `porsche-cayenne-2019`: trim `Base / S / GTS / Turbo / Coupe / Turbo S E-Hybrid` -> `Base / S / E-Hybrid / Turbo` — **GTS returns MY2021, the Coupe body arrives MY2020 and the Turbo S E-Hybrid arrives MY2020**, while the **E-Hybrid, which did exist in 2019 and is the one variant with a different inspection profile, was missing entirely**; `NHTSA Type 9YA` added to the generation parenthetical; engine gained `3.0T V6 plug-in hybrid (455 hp, E-Hybrid)`. **One source conflict recorded rather than silently resolved:** Carvana's 2019 Cayenne page gives the Turbo as 4.8L / 550 hp, which is the *second*-generation 958 Turbo; vPIC says 4.0L / 541 hp for `WP1AF2AY` in MY2019, which matches the 9YA and matches what this checklist already carried, so **NHTSA was taken over the retail page and the existing figure was left alone.**
+
+    Sibling check: no blocking overlap. Ready block `autovetting-vinnote-batch-2026-10-28` is the direct ancestor of this one on `inspect/index.html` (sequential, not concurrent); `autovetting-blog-recall-format-and-ledger-census-2026-10-21` touches `blog/` and `scripts/recall-ledger.json`; `autovetting-static-vehicle-pages-2026-10-19` is the ancestor of the static-page build this run re-ran. In-flight `autovet-competitor-monitor` (`Competitors/`), `autovet-cpo-protocol-ingestion` (`Product/CPO-Protocols/`), `autovet-seo-content` (`Content/blog/`) and `autovet-recall-study-under-15k` are orthogonal — note that the first two appended their own uncommitted TASKS.md notes earlier today and those ride along in this commit as the record intends. Done (last 10) holds one block, `autovetting-ga-swap-06S3EWDPXK` (2026-08-14, 52 HTML files) — old, not concurrent, orthogonal content. **`Started:` audit clean across all 37 blocks — 0 missing, no gate-block risk on `inspect/index.html`.** No Re-sync needed. Verified against: autovetting-vinnote-batch-2026-10-28, autovetting-static-vehicle-pages-2026-10-19.
+
+    **Scanner: PASS** (951 files, exit 0, mounted path). **Syntax-check: PASS** (official node recipe on `inspect/index.html`, Script 2 OK / Script 5 OK, exit 0). **Dead-links: verified** — the diff adds **zero** `href` attributes; all three notes are prose and no `/decode/` link was added. **Deploy gate `scripts/gate-check.py`: 29 passed, 1 warned, 0 CRITICAL failed** — identical to the 10-22 through 10-28 baseline, the one warn being the pre-existing `loading=lazy` on `homepage-test-bc/index.html`. **Static pages (G29): rebuilt** — `node scripts/build-vehicle-pages.js` reports 245 checklists, 3 pages written, 0 retired, 0 links rewritten. **CHECKLISTS integrity:** 245 keys before and after, all unique, identical key set; `VEHICLE_MENU` untouched — the entire `inspect/index.html` diff is **+7 / -4** (3 new `vinNote:` fields, 4 field corrections confined to the e-tron and Cayenne entries). **Truncation guard:** ends `</html>`. **`sitemap.xml`: 6 `lastmod` values advanced, no URL added or removed.** **Queue reconciled:** 137 `vinNote` fields present and 108 queue rows remaining, 245 - 137 = 108, so the queue and the file agree exactly.
+
+    **Gate-check vinNote coverage held at 47/100 rather than rising.** That is correct, not a regression: the metric counts multi-engine *gas* checklists, and tonight's three are two BEVs and a car whose engine character is not in the 8th digit. The three notes still satisfy launch-spec criterion 3 for their slugs — a verified negative ("the engine is not here, it is there") is the decoding intelligence a buyer needs on these vehicles. Worth knowing that as the queue works down through EVs and European marques, this metric will keep lagging the vinNote count by design.
+
+    **NHTSA: unchanged from 10-28, and the decision is still open.** `curl` to `api.nhtsa.gov` and `vpic.nhtsa.dot.gov` still fails from both shells; the sandbox's own fetch path still reaches both. Tonight's work used that path for every character claim above, exactly as the 10-28 run described — which is further evidence the route is sound for per-vehicle verification. But the **launch posture was not changed**: `_hub/Awaiting-Daniel.md` has not been modified since the 10-28 run wrote the decision into it, so no answer has arrived, and a scheduled run does not get to grant itself one. One allowlist entry for `api.nhtsa.gov` remains the real fix for anything scripted or bulk.
+
+    **Housekeeping, unchanged and cosmetic.** The `.git/` lock-corpse pile is still roughly 330 files (`rm -f .git/HEAD.lock.* .git/index.lock.* .git/stale-*-lock*` clears it from a normal terminal). The 0-byte stray root file whose name is a `console.log` snippet is **still there — fifteen runs open.**
 
 ### autovetting-vinnote-batch-2026-10-28 — ready 2026-10-28
 
