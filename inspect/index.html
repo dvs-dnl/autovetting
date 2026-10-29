@@ -14525,6 +14525,7 @@ const CHECKLISTS = {
   'nissan-leaf-2019': {
     year: 2019, make: 'Nissan', model: 'LEAF', trim: 'S / SV / SL / S Plus / SV Plus / SL Plus (2nd gen ZE1, 2018–present)',
     engine: '40 kWh (150 hp) or 62 kWh Plus (214 hp)',
+    vinNote: "On the 2019 LEAF the battery is not in the 8th VIN digit — it is in the 4th, and that one character is the whole buying decision on this car. NHTSA's own pattern data separates them: a VIN beginning 1N4AZ decodes with OtherEngineInfo 'Motor (BAT:40kw)' (the 40 kWh car, 150 hp, roughly 150 miles of range), while 1N4BZ decodes 'Motor (BAT:62kw)' — the 62 kWh LEAF Plus (214 hp, roughly 215–226 miles). Confirmed by single-variable decode at vpic.nhtsa.dot.gov and anchored on a real-world Plus VIN, 1N4BZ1CP1KC319895, which decodes error-0 clean to 62kw and is listed by the selling dealer as an SL PLUS. Changing only the 8th digit (P to U) leaves the battery reading unchanged, so do not try to read capacity there. Two cautions: NHTSA writes the capacity as 'kw' where it means kWh, and no vPIC field reports battery health — the 12-bar capacity gauge in this checklist is still the only way to learn what a hot-climate car has left.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 2nd-gen LEAF is a practical and affordable EV for city and suburban use. The main buyer concern is battery degradation: the LEAF uses passive thermal management (no active liquid cooling) which accelerates capacity loss in hot climates or with frequent DC fast charging. CHAdeMO rapid charging is available but the standard is being phased out. Check battery health carefully — a used LEAF in Phoenix is very different from one in Seattle.",
     stats: { itemsToCheck: 8, recalls: 1, ownerComplaints: 160, topComplaintArea: 'Battery Degradation / Range' },
@@ -14811,8 +14812,9 @@ const CHECKLISTS = {
     recalls: []
   },
   'audi-e-tron-2019': {
-    year: 2019, make: 'Audi', model: 'e-tron', trim: 'Standard / Prestige / S (1st gen GE, 2019–present)',
-    engine: 'AWD 355 hp (95 kWh) or e-tron S AWD 496 hp (95 kWh)',
+    year: 2019, make: 'Audi', model: 'e-tron', trim: 'Premium Plus / Prestige (1st gen GE, 2019–present)',
+    engine: 'Dual-motor AWD quattro, 95 kWh (355 hp continuous / 402 hp boost)',
+    vinNote: "There is only one e-tron powertrain for 2019, so the 8th VIN digit has nothing to fork: it is a fixed 'E' on every 2019 car (95 kWh pack, dual motor, quattro). Single-variable decode at vpic.nhtsa.dot.gov confirms it — hold positions 1–7 constant and change the 8th character and NHTSA returns error 14, 'unable to provide information for some of the characters in the VIN, based on the manufacturer submission,' because no other value exists in Audi's 2019 submission. What does vary is the 4th digit, which carries the trim: WA1L… decodes to e-tron quattro Premium Plus and WA1V… to e-tron quattro Prestige, both at 402 hp. Expect a horsepower discrepancy in listings — 355 hp is the continuous rating and 402 hp the boost-mode figure NHTSA records; they are the same car. Any 2019 e-tron advertised as an 'S' is mislabeled: the three-motor, 496 hp e-tron S did not reach the US until model year 2022.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The e-tron is Audi's first mass-market EV — comfortable, premium, and practical. Early production had a water ingress recall affecting the battery cooling system. The 95 kWh battery delivers good range. Air suspension compressor failure (Audi standard pattern) is the main mechanical concern. Audi dealer service is essential and expensive. Confirm all recalls closed and check HV battery SoH carefully.",
     stats: { itemsToCheck: 10, recalls: 3, ownerComplaints: 220, topComplaintArea: 'Battery / Air Suspension / Recalls' },
@@ -15689,8 +15691,9 @@ const CHECKLISTS = {
     ]
   },
   'porsche-cayenne-2019': {
-    year: 2019, make: 'Porsche', model: 'Cayenne', trim: 'Base / S / GTS / Turbo / Coupe / Turbo S E-Hybrid (3rd gen PO536, 2019–present)',
-    engine: '3.0T V6 (335 hp), 2.9T V6 biturbo (434 hp, S), 4.0T V8 biturbo (541 hp, Turbo)',
+    year: 2019, make: 'Porsche', model: 'Cayenne', trim: 'Base / S / E-Hybrid / Turbo (3rd gen PO536 / NHTSA Type 9YA, 2019–present)',
+    engine: '3.0T V6 (335 hp), 2.9T V6 biturbo (434 hp, S), 3.0T V6 plug-in hybrid (455 hp, E-Hybrid), 4.0T V8 biturbo (541 hp, Turbo)',
+    vinNote: "The Cayenne's engine is in the 5th VIN digit, not the 8th — a trap on this car, because the 8th is a fixed 'Y' on every 2019 Cayenne and changing it returns NHTSA error 14 rather than a different engine. Single-variable decode at vpic.nhtsa.dot.gov, holding the rest of WP1A_2AY constant: 'A' = Cayenne base, 3.0L turbo V6, 335 hp; 'B' = Cayenne S, 2.9L biturbo V6, 434 hp; 'E' = Cayenne E-Hybrid, 3.0L V6 plug-in, 455 hp combined (NHTSA labels this trim 'S E-Hybrid' — Porsche dropped the 'S' from the name for 2019); 'F' = Cayenne Turbo, 4.0L biturbo V8, 541 hp. 'C' returns no match. NHTSA records all four as Series 'Type 9YA', built in Bratislava. The fork changes the inspection: the E-Hybrid adds a high-voltage pack and charging system the gas items below do not cover, and the 4.0L V8 Turbo carries the heaviest air-suspension and brake bills of the four.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The 3rd-gen Cayenne is arguably the best Cayenne ever — improved handling, larger interior, available PHEV, and excellent driving dynamics. The 3.0T V6 base is the value choice. Air suspension compressor failure is the main mechanical concern. Porsche maintenance costs are significant and unavoidable. Porsche CPO with extended warranty is essentially mandatory on any used Cayenne purchase.",
     stats: { itemsToCheck: 13, recalls: 8, ownerComplaints: 230, topComplaintArea: 'Air Suspension / Engine / Electrical' },
