@@ -97,14 +97,14 @@
           <div class="item-risk-marker item-risk-high"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">2.0T LTG oil consumption</h3></div>
+              <div class="item-title-link"><h3 class="item-title">2.0T LSY oil consumption</h3></div>
               <div class="item-risk-label high">High Risk</div>
             </div>
-            <div class="item-desc">Same documented oil consumption pattern as in Blazer and Envision.</div>
-            <div class="item-check"><strong>Check dipstick immediately at viewing.</strong></div>
+            <div class="item-desc">This is GM LSY, not the older LTG, so LTG histories from other GM vehicles do not transfer. The LSY record is its own: a published teardown of a 24,491-mile LSY found stuck oil control rings, heavy piston-crown and intake-port carbon, and timing-chain-guide wear. Stuck oil rings are the mechanism behind oil consumption on this engine.</div>
+            <div class="item-check"><strong>Check dipstick immediately at viewing.</strong> Then ask for the oil-change receipts and look for short intervals; the teardown pointed at oil quality and gentle duty cycles rather than a design fault.</div>
             <div class="item-meta">
               <span><strong>Est. cost:</strong> $0–$2,500</span>
-              <span><strong>Source:</strong> GM LTG pattern</span>
+              <span><strong>Source:</strong> NHTSA vPIC engine code (LSY) + published 24k-mile LSY teardown</span>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
             <div class="item-check"><strong>Cold-start hood open. Chain rattle lasting >3 seconds = concern.</strong></div>
             <div class="item-meta">
               <span><strong>Est. cost:</strong> $800–$1,500</span>
-              <span><strong>Source:</strong> GM LTG chain pattern</span>
+              <span><strong>Source:</strong> LSY timing-chain-guide wear found at 24k miles</span>
             </div>
           </div>
         </div>
@@ -166,7 +166,10 @@
       </div>
     </div>
 
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 2019 XT4 has one engine, so the 8th VIN digit has nothing to fork, and NHTSA says so outright. Every 2019 XT4 pattern tested returns engine 'LSY - SIDI, VVT, ALUM, VAR 3', the 2.0L turbo four rated 237 hp and 258 lb-ft. Position 8 is a fixed '4': change it to '5' and vPIC returns errors 4, 6 and 14 with a SuggestedVIN of '1GYFZER!*KF' marking position 8, every engine field drops out, and the response's own note lists 'Unused position(s): 8'. What the VIN does tell you sits at position 6, and it is worth reading because it settles the driveline in one character. Single-variable decode at vpic.nhtsa.dot.gov, holding 1GYFZ_R4 and the KF tail constant: 'A' = Luxury FWD, 'B' = Luxury AWD, 'C' = Premium Luxury FWD, 'D' = Premium Luxury AWD, 'E' = Sport FWD, 'F' = Sport AWD. FWD and AWD alternate, so one step along the alphabet is a different drivetrain at the same trim level. That changes the inspection: an AWD car carries a driveshaft and rear drive unit the front-drivers do not have, so add a leak check on the rear unit and a test for clean, quiet engagement to everything below. One correction worth carrying away: this is GM's LSY, not the older LTG. They are different engines, so LTG oil-consumption histories from other GM vehicles of this era do not transfer to a 2019 XT4. The LSY has its own record, and it is in the engine item below.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

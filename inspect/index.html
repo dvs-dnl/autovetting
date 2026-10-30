@@ -4990,7 +4990,8 @@ const CHECKLISTS = {
     make: 'Honda',
     model: 'Odyssey',
     trim: 'LX / EX / EX-L / Touring / Elite (5th gen, 2018–2023)',
-    engine: '3.5L V6 i-VTEC Earth Dreams (280hp), 9-speed or 10-speed automatic',
+    engine: '3.5L V6 i-VTEC Earth Dreams J35Y7 (280 hp), 9-speed automatic on LX / EX / EX-L or 10-speed on Touring / Elite',
+    vinNote: "The 2018 Odyssey has one engine, and the 8th VIN digit is still the most useful character on the van, because it tells you which transmission you are buying, and that is this vehicle's second risk after oil dilution. Every pattern tested returns engine 'J35Y7', 3.5L V6, 280 hp, built in Lincoln, Alabama. Single-variable decode at vpic.nhtsa.dot.gov, holding 5FNRL6H and the JB tail constant: '2' = LX, 9-speed automatic; '5' = EX, 9-speed; '7' = EX-L and EX-L-NR, 9-speed; '8' = Touring, 10-speed; '9' = Elite, 10-speed. The split is by trim and it holds across the whole model year: the three lower trims got the 9-speed, the two top trims got the 10-speed. TrueCar's 2018 trim table says the same thing independently. That corrects a widely repeated piece of advice this checklist used to carry itself: the 9-speed was not swapped out partway through 2018 production, so the door-jamb build date will not tell you which gearbox is in the van. The VIN will, in one character. Later years are murkier and are left as a conflict rather than resolved: vPIC still returns 9-speed for an EX-L pattern on both the 2019 and 2020 year characters, while retail spec pages for 2020 list the 10-speed across the whole line. On a 2019 or 2020, decode the VIN and then confirm against the car instead of trusting either source.",
     overallRisk: 'high',
     overallRiskLabel: 'High Attention',
     summary: "The 5th-gen Odyssey (2018–2023) is a sophisticated minivan with one serious documented flaw: oil dilution. On some examples driven predominantly on short trips, raw gasoline enters the engine oil through the cylinder walls, dramatically reducing lubrication quality. Honda acknowledged the issue and extended the powertrain warranty to 8 years / 80,000 miles for affected builds. The 9-speed automatic in early 2018 production had calibration issues; later 2018s and 2019+ moved to a smoother 10-speed. A well-maintained 2019+ Odyssey with full service records is a strong buy; a 2018 with incomplete service history requires extra scrutiny on the engine.",
@@ -5034,17 +5035,17 @@ const CHECKLISTS = {
         title: 'Transmission',
         items: [
           {
-            title: '9-speed automatic (early 2018) — calibration issues',
+            title: '9-speed automatic (LX / EX / EX-L) — calibration issues',
             risk: 'high', riskLabel: 'High Attention',
-            desc: 'Early 2018 Odyssey builds launched with a 9-speed automatic that exhibited hunting, harsh downshifts, and hesitation in stop-and-go driving — the same class of issue as the Pilot 2016–2017. Honda issued software updates and shifted to a 10-speed in later 2018 production and all 2019+. Check the door jamb build date: early 2018 builds are higher risk.',
-            check: '<strong>Test drive: gradual acceleration from 5–35 mph in light traffic, and highway cruise at 55–70 mph on a gently rolling road.</strong> Watch for hesitation at tip-in and unprompted downshifts on grades. Ask a Honda dealer (free VIN check) if all transmission software updates have been applied.',
+            desc: 'Early 2018 Odyssey builds launched with a 9-speed automatic that exhibited hunting, harsh downshifts, and hesitation in stop-and-go driving — the same class of issue as the Pilot 2016–2017. Honda issued software updates. The 9-speed was not replaced partway through the model year: for all of 2018 it is the LX, EX and EX-L transmission, while Touring and Elite shipped with the 10-speed. The 8th VIN digit, not the door-jamb build date, is what tells you which one is in the van.',
+            check: '<strong>Read the 8th VIN digit first - 2, 5 or 7 means this 9-speed. Then test drive: gradual acceleration from 5–35 mph in light traffic, and highway cruise at 55–70 mph on a gently rolling road.</strong> Watch for hesitation at tip-in and unprompted downshifts on grades. Ask a Honda dealer (free VIN check) if all transmission software updates have been applied.',
             cost: '$0 software update / $2,500–$5,000 valve body if mechanical damage',
             source: 'Honda Odyssey 5th gen transmission documentation + NHTSA complaints'
           },
           {
-            title: '10-speed automatic (2019+, later 2018) — reliable baseline',
+            title: '10-speed automatic (Touring / Elite) — reliable baseline',
             risk: 'low', riskLabel: 'Low Risk',
-            desc: 'The revised 10-speed is substantially smoother than the early 9-speed. Failures are uncommon. Standard ATF-DW1 fluid maintenance applies.',
+            desc: 'The 10-speed is substantially smoother than the 9-speed. Failures are uncommon. Standard ATF-DW1 fluid maintenance applies.',
             check: '<strong>Verify ATF has been serviced per Honda schedule (30k miles).</strong> Test drive should show clean progression through all ranges.',
             cost: '$180 fluid service / $2,000–$4,000 rebuild if neglected',
             source: 'Honda 10-speed AT documentation'
@@ -15740,20 +15741,21 @@ const CHECKLISTS = {
   },
   'cadillac-xt4-2019': {
     year: 2019, make: 'Cadillac', model: 'XT4', trim: 'Luxury / Premium Luxury / Sport (1st gen, 2019–present)',
-    engine: '2.0T LTG I4 (237 hp) with 9-speed automatic',
+    engine: '2.0T LSY I4 (237 hp, 258 lb-ft) with 9-speed automatic',
+    vinNote: "The 2019 XT4 has one engine, so the 8th VIN digit has nothing to fork, and NHTSA says so outright. Every 2019 XT4 pattern tested returns engine 'LSY - SIDI, VVT, ALUM, VAR 3', the 2.0L turbo four rated 237 hp and 258 lb-ft. Position 8 is a fixed '4': change it to '5' and vPIC returns errors 4, 6 and 14 with a SuggestedVIN of '1GYFZER!*KF' marking position 8, every engine field drops out, and the response's own note lists 'Unused position(s): 8'. What the VIN does tell you sits at position 6, and it is worth reading because it settles the driveline in one character. Single-variable decode at vpic.nhtsa.dot.gov, holding 1GYFZ_R4 and the KF tail constant: 'A' = Luxury FWD, 'B' = Luxury AWD, 'C' = Premium Luxury FWD, 'D' = Premium Luxury AWD, 'E' = Sport FWD, 'F' = Sport AWD. FWD and AWD alternate, so one step along the alphabet is a different drivetrain at the same trim level. That changes the inspection: an AWD car carries a driveshaft and rear drive unit the front-drivers do not have, so add a leak check on the rear unit and a test for clean, quiet engagement to everything below. One correction worth carrying away: this is GM's LSY, not the older LTG. They are different engines, so LTG oil-consumption histories from other GM vehicles of this era do not transfer to a 2019 XT4. The LSY has its own record, and it is in the engine item below.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The XT4 is Cadillac's entry luxury crossover — well-priced, well-equipped, and Cadillac's first compact luxury SUV. The 2.0T LTG has documented oil consumption, the main buyer concern. The 9-speed automatic is smooth. Cadillac CUE infotainment on early models was criticized for slow response. Competitive with Audi Q3 and BMW X1 at a lower price.",
     stats: { itemsToCheck: 9, recalls: 1, ownerComplaints: 200, topComplaintArea: 'Engine (2.0T oil) / Infotainment' },
     sections: [
       { title: 'Engine', items: [
-        { title: '2.0T LTG oil consumption', risk: 'high', riskLabel: 'High Risk',
-          desc: 'Same documented oil consumption pattern as in Blazer and Envision.',
-          check: '<strong>Check dipstick immediately at viewing.</strong>',
-          cost: '$0–$2,500', source: 'GM LTG pattern' },
+        { title: '2.0T LSY oil consumption', risk: 'high', riskLabel: 'High Risk',
+          desc: 'This is GM LSY, not the older LTG, so LTG histories from other GM vehicles do not transfer. The LSY record is its own: a published teardown of a 24,491-mile LSY found stuck oil control rings, heavy piston-crown and intake-port carbon, and timing-chain-guide wear. Stuck oil rings are the mechanism behind oil consumption on this engine.',
+          check: '<strong>Check dipstick immediately at viewing.</strong> Then ask for the oil-change receipts and look for short intervals; the teardown pointed at oil quality and gentle duty cycles rather than a design fault.',
+          cost: '$0–$2,500', source: 'NHTSA vPIC engine code (LSY) + published 24k-mile LSY teardown' },
         { title: 'Timing chain — oil change sensitive', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Cold-start rattle with extended oil changes.',
           check: '<strong>Cold-start hood open. Chain rattle lasting >3 seconds = concern.</strong>',
-          cost: '$800–$1,500', source: 'GM LTG chain pattern' }
+          cost: '$800–$1,500', source: 'LSY timing-chain-guide wear found at 24k miles' }
       ]},
       { title: 'Infotainment', items: [
         { title: 'Cadillac CUE — early model lag', risk: 'monitor', riskLabel: 'Monitor',
@@ -15798,8 +15800,9 @@ const CHECKLISTS = {
     recalls: []
   },
   'volvo-s60-2019': {
-    year: 2019, make: 'Volvo', model: 'S60', trim: 'Momentum / R-Design / Inscription / T8 Recharge PHEV (3rd gen Z, 2019–present)',
-    engine: '2.0T Drive-E T5 I4 (250 hp), T6 AWD (316 hp), or T8 PHEV (400 hp combined)',
+    year: 2019, make: 'Volvo', model: 'S60', trim: 'Momentum / R-Design / Inscription, in T5 / T6 / T8 Plug-in Hybrid (3rd gen Z, 2019–present)',
+    engine: '2.0T Drive-E T5 FWD (250 hp, B4204T), supercharged-plus-turbo T6 AWD (316 hp, B4204TS), or T8 plug-in hybrid AWD (400 hp combined; the 415 hp T8 Polestar Engineered was lease-only for 2019)',
+    vinNote: "On the 2019 S60 the 8th VIN digit is the trim character, not the engine, and this one is measured both ways, which makes it unusually safe to lean on. The engine rides in positions 4 through 7. Single-variable decode at vpic.nhtsa.dot.gov: '7JRA22T' returns engine 'B4204TS (HP)', 316 hp, the turbocharged-and-supercharged T6; '7JR102F' returns 'B4204T (MP)', 250 hp with an 8-speed automatic, which is the T5. Hold either one and vary position 8 and the same three-way map comes back on both: 'K' = Momentum, 'L' = Inscription, 'M' = R-Design. So position 8 never moves the engine, and a given character means the same trim whichever engine you are looking at. Real-world anchor: 7JR102FL1KG003342 is advertised by its selling dealer as a 2019 S60 T5 Inscription, exactly what '102F' plus 'L' predicts. Two reading cautions, because NHTSA's Volvo submission is noisy here. The Series field on T5 patterns comes back as 'FWD/eAWD (T8)', which reads like it is telling you the car is a T8 and is not - go by EngineModel and EngineHP instead. And DriveType is unreliable on this car: it returned blank on one T5 pattern and 'AWD' on two others, when the 2019 T5 is front-drive and only the T6 and T8 are all-wheel drive. The fork changes the inspection: the T6 carries a supercharger ahead of its turbo, a system the T5 does not have at all, and the T8 adds a high-voltage pack and charging system that none of the gas items below cover.",
     overallRisk: 'monitor', overallRiskLabel: 'Monitor',
     summary: "The S60 is Volvo's sport luxury sedan — available T8 PHEV offers 22 miles EV range and 400 hp combined. The T5 and T6 share Volvo Drive-E engine family concerns: timing belt (not chain) service at 60k miles, oil consumption on some T5 units. The T8 PHEV battery adds complexity. Only buy with full Volvo dealer service records; Volvo timing belt service is $1,000–$1,500 and non-negotiable on high-mileage units.",
     stats: { itemsToCheck: 11, recalls: 1, ownerComplaints: 180, topComplaintArea: 'Engine (timing belt) / Transmission / Electrical' },
