@@ -6239,25 +6239,26 @@ const CHECKLISTS = {
 
   'chevrolet-equinox-2018': {
     year: 2018, make: 'Chevrolet', model: 'Equinox', trim: 'L / LS / LT / Premier (3rd gen, 2018-2024)',
-    engine: '1.5L Ecotec LFV Turbo I4 (170hp) / 2.0L LSY Turbo I4 (252hp) / 1.6L Duramax Diesel I4 (137hp)',
+    engine: '1.5L Ecotec LYX Turbo I4 (170hp) / 2.0L Ecotec LTG Turbo I4 (252hp) / 1.6L LH7 Duramax Diesel I4 (137hp)',
+    vinNote: "On a 2018 Equinox the 8th VIN digit is the engine, and it is the most important character on the car, because the three engines have almost nothing in common. Single-variable decodes at vpic.nhtsa.dot.gov, holding 2GNAXJE and the J tail constant and changing only position 8: 'V' = LYX, 1.5L gasoline turbo; 'X' = LTG, 2.0L gasoline turbo; '8', '9' and 'U' all return the 1.6L turbodiesel, which NHTSA carries under three submission codes (LWW twice, LH7 once) for what is one engine. Those five characters are the complete allowed set - feed position 8 anything outside it and vPIC answers with Possible values (8:89UVX), so there is no sixth engine hiding in this VIN. Two corrections to our own record came out of that. The 1.5T is GM's LYX, not the LFV: the LFV is the 160-hp 1.5T from the Malibu and Cruze, the Equinox got the 170-hp LYX, and GM Authority's 2018 Equinox specification table gives the same RPO independently. The 2.0T is the LTG, not the LSY - the LSY is a later GM engine and never shipped in a 2018 Equinox. Decode before you believe any transmission advice about this car, too: no 2018 Equinox has a CVT. The 1.5T uses a six-speed automatic and the 2.0T a nine-speed, and Consumer Guide and GM Authority list it that way, so Equinox CVT guidance is describing a different car. Run the full VIN at nhtsa.gov before purchase - a 1.6 diesel also brings DEF and emissions hardware history the gasoline cars do not have.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 3rd-gen Equinox was a significant step up from the 2nd gen — but the dominant engine, the 1.5L LFV turbo, has documented oil consumption and timing chain stretch issues that buyers must investigate. The 2.0L LSY is the stronger used pick. The 1.6L diesel is uncommon and requires DEF system maintenance. Avoid the 1.5T if oil change records are incomplete.",
     blogUrl: '/blog/2019-chevrolet-equinox-buyers-guide',
     stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 380, topComplaintArea: 'Engine / oil consumption (1.5T)' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '1.5L LFV turbo oil consumption', risk: 'high', riskLabel: 'High Attention',
-          desc: 'The 1.5T LFV has documented oil consumption on higher-mileage examples (80k+). Piston ring wear causes oil burning; check engine light may follow with catalyst codes.',
+        { title: '1.5L LYX turbo oil consumption', risk: 'high', riskLabel: 'High Attention',
+          desc: 'The 1.5T LYX has documented oil consumption on higher-mileage examples (80k+). Piston ring wear causes oil burning; check engine light may follow with catalyst codes.',
           check: '<strong>Pull the oil dipstick on 1.5T cars before driving.</strong> Low oil between changes is the key indicator. Ask for service records — changes more frequent than 5k miles suggest known consumption.',
-          cost: '$0–$1,500 under extended warranty / $4,500–$7,000 engine replacement', source: 'NHTSA complaints + GM service campaign 18208' },
-        { title: '1.5L LFV timing chain stretch', risk: 'high', riskLabel: 'High Attention',
-          desc: 'Timing chain on the LFV can stretch prematurely with low oil or extended intervals. Rattle at cold start (first 3–5 seconds) is the audible warning.',
+          cost: '$0–$1,500 under extended warranty / $4,500–$7,000 engine replacement', source: 'NHTSA owner complaints (1.5T oil consumption); GM bulletin number unverified' },
+        { title: '1.5L LYX timing chain stretch', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Timing chain on the LYX can stretch prematurely with low oil or extended intervals. Rattle at cold start (first 3–5 seconds) is the audible warning.',
           check: '<strong>Cold-start the engine (after overnight sit).</strong> A rattle in the first few seconds of startup that clears is early stretch; sustained rattle is advanced failure.',
-          cost: '$1,800–$3,200 timing chain kit + guides', source: 'GM LFV known failure pattern' },
-        { title: 'CVT / 6-speed fluid condition', risk: 'monitor', riskLabel: 'Monitor',
-          desc: '1.5T models pair with a CVT; 2.0T uses a 9-speed. Both require factory-spec fluid. Brown, burnt, or opaque fluid means service is overdue.',
-          check: '<strong>Check fluid color via dipstick (CVT) or at the fill plug.</strong> Dark fluid on a CVT warrants a flush before purchase.',
-          cost: '$200–$450 fluid service / $3,500–$5,500 CVT replacement', source: 'GM service intervals' }
+          cost: '$1,800–$3,200 timing chain kit + guides', source: 'GM 1.5T Ecotec chain-wear pattern; LYX-specific bulletin unverified' },
+        { title: 'Automatic transmission fluid condition - and no, there is no CVT', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'No 2018 Equinox has a CVT. The 1.5T uses a six-speed automatic and the 2.0T a nine-speed, and both require factory-spec fluid. Brown, burnt, or opaque fluid means service is overdue. Treat any "Equinox CVT" guidance you find online as describing a later car, not this one.',
+          check: '<strong>Read the 8th VIN digit first so you know which gearbox you are testing, then check fluid condition at the fill plug and drive for flare or gear hunting from cold.</strong>',
+          cost: '$200–$450 fluid service / $3,500–$5,500 transmission replacement', source: 'Consumer Guide + GM Authority 2018 Equinox specifications' }
       ]},
       { title: 'Electrical', items: [
         { title: 'Infotainment software and MyLink freeze', risk: 'low', riskLabel: 'Low Risk',
@@ -6755,7 +6756,8 @@ const CHECKLISTS = {
 
   'volkswagen-jetta-2018': {
     year: 2018, make: 'Volkswagen', model: 'Jetta', trim: 'S / SE / SEL / R-Line / GLI (A6 / Mk6 gen, 2011-2018 - the last year before the 2019 A7 redesign)',
-    engine: '1.4L TSI EA211 I4 (147hp), 5-speed manual or Aisin 6-speed torque-converter automatic / 2.0L TSI EA888 I4 (210hp GLI), 6-speed manual or DQ250 6-speed wet-clutch DSG',
+    engine: '1.4L TSI EA211 I4 (150hp), 5-speed manual or Aisin 6-speed torque-converter automatic / 1.8L TSI EA888 I4 (170hp, SE Sport and SEL) / 2.0L TSI EA888 I4 (210hp GLI), 6-speed manual or DQ250 6-speed wet-clutch DSG',
+    vinNote: "The 8th VIN digit is the wrong character to read on a 2018 Jetta. It is 'J' on every one of them - S, SE, Wolfsburg and GLI alike - and NHTSA's pattern decoder reports it as an unused position. The engine lives in the 5th digit. Single-variable decodes at vpic.nhtsa.dot.gov, holding 3VW, the 7AJ at positions 6-8 and the JM tail constant and changing only position 5: '1' = 1.8L TSI, 170 hp; '6' and 'B' = 1.4L TSI, 150 hp; 'T' = 2.0L TSI, 210 hp. 'A', 'D', 'F', 'M', 'N', 'P' and 'R' return no engine record at all. The 4th digit is trim plus transmission: '1' and '2' = S with the 5-speed manual, 'D' = SE and Wolfsburg with the 6-speed automatic, '4' = GLI. Two real cars anchor the map - 3VW167AJ1JM212503 decodes clean, error code 0, as a 1.4T S, 150 hp, 5-speed manual, and 3VWDB7AJ5JM258442 as a 1.4T SE, 150 hp, 6-speed automatic, which is exactly how its selling dealer advertised it. That measurement found a hole in this checklist: the 2018 Jetta has three engines, not two. SE Sport and SEL cars carry the 1.8L EA888 at 170 hp, which this entry did not list at all, and the EA888 is a different engine family from the 1.4L EA211 the timing-chain item below is written against - it has its own, better-known tensioner history. Read position 5 before you price any chain work. The 1.4T also makes 150 hp, not the 147 this entry used to print; vPIC returns 150 and Consumer Guide's 2018 Jetta lineup agrees. One vPIC trap worth knowing: it resolves trim from position 4 and engine from position 5 independently, so a hand-built pattern like 3VW4B7AJ comes back as a GLI with a 1.4L engine - a car that never existed. Decode the whole VIN, which can only carry a real combination, rather than probing characters one at a time.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "This is the last MK6 Jetta, not the first MK7 — the A7 car, its 228hp GLI and its 8-speed automatic all arrive for 2019, so read any '2018-2021 Jetta' advice with that in mind. It is a well-built, plain compact sedan whose real buyer risks are the EA211 timing chain tensioner and deferred oil service. Note the transmission: S/SE/SEL cars use an Aisin six-speed torque-converter automatic, not a DSG — only the GLI has a dual-clutch, and it is the wet-clutch DQ250. No Jetta of this year is in any Takata airbag campaign.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 120, topComplaintArea: 'Timing chain tensioner / oil service history' },
@@ -6766,7 +6768,7 @@ const CHECKLISTS = {
           check: '<strong>Confirm which transmission the car has before pricing any repair. GLI: test stop-and-go under 15 mph for shudder. Aisin car: test for flare or gear hunting between 2nd and 3rd from cold.</strong>',
           cost: '$150–$250 Aisin fluid service / $350–$600 DQ250 DSG service (GLI only)', source: 'VW model-year specifications' },
         { title: '1.4 TSI timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'EA211 timing chain tensioner wear past 100k miles with extended oil intervals. Cold-start rattle check.',
+          desc: 'EA211 timing chain tensioner wear past 100k miles with extended oil intervals. Cold-start rattle check. This item covers the 1.4L EA211 only - SE Sport and SEL cars carry the 1.8L EA888 instead (a 1 in the 5th VIN digit), a different engine family with its own tensioner history, so price chain work against the engine the car actually has.',
           check: '<strong>Cold-start the engine — sustained rattle past 10 seconds = tensioner wear.</strong>',
           cost: '$600–$1,400 timing chain kit', source: 'EA211 service pattern' }
       ]},
@@ -7000,6 +7002,7 @@ const CHECKLISTS = {
   'nissan-murano-2018': {
     year: 2018, make: 'Nissan', model: 'Murano', trim: 'S / SV / SL / Platinum (Z52, 3rd gen, 2015-2024)',
     engine: '3.5L VQ35DE V6 (260hp) with Xtronic CVT',
+    vinNote: "The 2018 Murano has one engine, the 3.5L VQ35DE, so no VIN character can tell you anything about it - vPIC returns displacement 3.5 on every pattern. What the 8th digit carries is the drivetrain, and on a CVT car that changes the inspection. Single-variable decode at vpic.nhtsa.dot.gov, holding 5N1AZ2M and the JN tail constant and changing only position 8: 'G' returns DriveType 4x2, 'H' returns 4WD/4-Wheel Drive/4x4, and every other field - make, model, 3.5L, Canton assembly - comes back identical. Full VINs confirm it: 5N1AZ2MG0JN154091 decodes clean as a front-driver and was advertised by its selling dealer as a Platinum FWD, while 5N1AZ2MH4JN104495 decodes as 4x4. Both characters turn up on SV and on Platinum cars, so this is drivetrain, not trim. Note that NHTSA labels position 8 unused when you hand it a pattern it cannot resolve, which is why a partial decode can make the character look meaningless when it is in fact telling you whether the car is all-wheel drive. An H car adds a propeller shaft, a rear differential and the AWD coupling to the pre-purchase inspection, and gives the Xtronic CVT more to pull, so the fluid-history demand in the first powertrain item is stricter on an AWD Murano than on a front-driver. Run the full VIN at nhtsa.gov before purchase; open campaigns on this generation vary by build date. Observed and not changed here: the stats block says one recall, the documentation item says three are possible, and the recalls array carries a Multiple placeholder - that is recall-ledger work, not VIN work.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "Z52 Murano is Nissan's most premium crossover with a genuinely upscale interior. The 3.5L VQ35DE V6 is one of Nissan's most proven engines — the CVT remains the risk vector. CVT service at 30k miles with genuine NS-3 fluid is mandatory. Body on Frame alternative? No — this is unibody-only. Strong buy for buyers who prioritize comfort and have documented service history.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 130, topComplaintArea: 'CVT fluid history / infotainment issues' },

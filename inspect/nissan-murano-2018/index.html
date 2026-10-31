@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 2018 Murano has one engine, the 3.5L VQ35DE, so no VIN character can tell you anything about it - vPIC returns displacement 3.5 on every pattern. What the 8th digit carries is the drivetrain, and on a CVT car that changes the inspection. Single-variable decode at vpic.nhtsa.dot.gov, holding 5N1AZ2M and the JN tail constant and changing only position 8: 'G' returns DriveType 4x2, 'H' returns 4WD/4-Wheel Drive/4x4, and every other field - make, model, 3.5L, Canton assembly - comes back identical. Full VINs confirm it: 5N1AZ2MG0JN154091 decodes clean as a front-driver and was advertised by its selling dealer as a Platinum FWD, while 5N1AZ2MH4JN104495 decodes as 4x4. Both characters turn up on SV and on Platinum cars, so this is drivetrain, not trim. Note that NHTSA labels position 8 unused when you hand it a pattern it cannot resolve, which is why a partial decode can make the character look meaningless when it is in fact telling you whether the car is all-wheel drive. An H car adds a propeller shaft, a rear differential and the AWD coupling to the pre-purchase inspection, and gives the Xtronic CVT more to pull, so the fluid-history demand in the first powertrain item is stricter on an AWD Murano than on a front-driver. Run the full VIN at nhtsa.gov before purchase; open campaigns on this generation vary by build date. Observed and not changed here: the stats block says one recall, the documentation item says three are possible, and the recalls array carries a Multiple placeholder - that is recall-ledger work, not VIN work.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
