@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the KL Cherokee position 8 is the engine, and it sorts the two powertrains this checklist treats very differently. Single-variable decode at vpic.nhtsa.dot.gov, holding '1C4PJMC' and the 'JD' tail constant and varying only position 8: 'B' returns the 2.4L Tigershark four at 184 hp; 'S' and 'X' both return the 3.2L Pentastar V6 at 271 hp - one engine carried under two submission codes, the same thing GM does with the Equinox diesel. A 'B' car is the oil-consumption engine in the second powertrain item below, so the cold dipstick check and the oil-change records matter on a 'B' and not on an 'S' or an 'X'; the 3.2L V6 is the one powertrain in this generation with no documented consumption pattern. Both engines share the 9-speed 948TE, so the transmission test applies either way. Record correction from this decode: the 2.4L makes 184 hp, not the 180 this entry previously carried - vPIC returns EngineHP 184 on every resolving 2.4 pattern, and the Cars.com 2018 Cherokee specification page gives '184 @ 6400' SAE net. The 2.0L turbo four is a 2019-and-later engine on this platform, arriving with the facelift: no 2018 VIN decodes to it, and the Cars.com 2018 engine list contains only the 2.4L and the 3.2L V6. The trap here is larger than on most cars, because the allowed-character list vPIC returns for position 8, '(8:2589ABDGJLMNSTUXY)', is Jeep's brand-wide engine key - a Cherokee pattern will cheerfully decode 'T' as a 5.7L Hemi V8 and 'M' as a 3.0L diesel V6, engines that live in the Grand Cherokee and were never offered in a Cherokee. Probe characters and you will invent a car; decode the whole 17-character VIN, which can only carry a real combination.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
