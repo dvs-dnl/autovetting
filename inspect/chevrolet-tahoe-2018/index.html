@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the K2XX Tahoe the 8th VIN digit is the engine, and it is the character that changes what you test. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018, run on two independent base patterns — 1GNSKBK (4WD) and 1GNSCBK (4x2): C returns engine L83 - Spark Ignited Direct Injection, Variable Valve Timing, AFM, E85 MAX, ALUM at 5.3L, and J returns L86 at 6.2L. Same answer on both patterns. Of the nine characters NHTSA allows at position 8 on a 2018 Tahoe pattern — 1, B, C, F, G, J, P, W and X — only those two resolve to an engine: 1, F, G and W each come back with error 14 and every engine field blank, and Q is rejected with a SuggestedVIN of 1GNSKBK!*JR. The allowed list is GM-wide, not Tahoe-wide, so probing characters invents cars. The fork is not the AFM lifter item — both engines use AFM and that item applies either way. It is the gearbox. The 6.2L L86 is paired with the 10-speed automatic, 420 hp and 460 lb-ft per the published 2018 RST Performance Package specification, while the 5.3L L83 keeps the 6-speed 6L80. So the 6L80 shudder item below is a 5.3L item: on a J car you are inspecting a 10L80 instead and that test does not transfer. Two reading cautions, both measured tonight. vPIC reports transmission speeds of 6 on the J pattern as well as the C pattern, which is wrong for the 6.2L — take the gearbox from position 8, not from vPIC. And vPIC returns Trim LT on both patterns, while the 6.2L Performance Package was a top-trim option: Consumer Guide's 2018 first drive states it is available only on topline Tahoe Premier models. A single-character probe will happily build an LT with a 6.2L that was never sold. Decode whole 17-character VINs, and check the model year separately — the same J on a 2016 Tahoe pattern still returns the L86, which this model's own history does not support.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
