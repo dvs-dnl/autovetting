@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the C1 Enclave the 8th VIN digit decides nothing, and that is worth knowing before you go hunting for an engine code in it. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018: every base pattern measured - 5GAERBK, 5GAEVBK and 5GAERDK - carries W at position 8 and returns the same engine, LFY - Spark ignited Direct Injection, ATSS, GEN1 at 3.6L, six cylinders, nine transmission speeds. Substitute any other character and vPIC does not offer an alternative engine, it corrects you: 5GAERBKC comes back with error 2, VIN corrected, error in one position, plus error 14, and a SuggestedVIN of 5GAERBKW - position 8 pushed straight back to W. There is one engine in a 2018 Enclave, and position 8 is where it is recorded rather than where it is chosen. Two consequences for the PPI. First, this entry's engine field was corrected from LGX to LFY: vPIC names LFY on every pattern above, and the 310 hp at 6800 rpm and 266 lb-ft at 2800 rpm that Cars.com lists for the 2018 Enclave match the LFY rating rather than the higher-output 3.6L that wears the LGX code. The GDI carbon-buildup and 9T65 hesitation items below therefore apply to every car in this entry, with no variant to rule out. Second, the fork that does exist on an Enclave is drivetrain, and it is not a single character. Moving position 5 alone on the BK pattern does move it - 5GAERBKW returns FWD and 5GAEVBKW returns AWD - but the same substitution on the DK pattern fails: 5GAEVDKW returns error 14 with Model, Trim and DriveType all blank. Positions 5 through 7 are a combined series-and-drivetrain code on this car, not independent fields, so the AWD rear-coupling service item below cannot be scoped from one character. Decode the full 17-character VIN, or read the drivetrain off the car itself.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
