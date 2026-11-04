@@ -82,12 +82,12 @@
           <span class="dot"></span> Watchful
         </div>
       </div>
-      <p class="checklist-summary">The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. DSG fluid service is required regularly. Strong compact SUV value for buyers who maintain the service schedule.</p>
+      <p class="checklist-summary">The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. The 8-speed automatic is the Aisin 09P torque-converter unit, not a DSG, so there is no dual-clutch pack on a US-market car. Strong compact SUV value for buyers who maintain the service schedule.</p>
       <div class="checklist-stats">
         <div class="stat"><div class="stat-label">Items to check</div><div class="stat-value">12</div></div>
         <div class="stat"><div class="stat-label">Open recalls</div><div class="stat-value">1</div></div>
         <div class="stat"><div class="stat-label">NHTSA complaints</div><div class="stat-value">130</div></div>
-        <div class="stat"><div class="stat-label">Top concern</div><div class="stat-value" style="font-size:14px; line-height:1.3">DSG service / EA888 carbon buildup</div></div>
+        <div class="stat"><div class="stat-label">Top concern</div><div class="stat-value" style="font-size:14px; line-height:1.3">Transmission hesitation (TCM software) / EA888 carbon buildup</div></div>
       </div>
     </div>
     <div class="checklist-section-block">
@@ -112,14 +112,14 @@
           <div class="item-risk-marker item-risk-high"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">DSG fluid service (if DSG-equipped)</h3></div>
+              <div class="item-title-link"><h3 class="item-title">09P 8-speed automatic — hesitation and fluid history</h3></div>
               <div class="item-risk-label high">High Attention</div>
             </div>
-            <div class="item-desc">The DSG (DQ381 8-speed wet-clutch) on 2nd-gen Tiguan shudders at low speed when fluid is overdue.</div>
-            <div class="item-check"><strong>Test stop-and-go under 15 mph.</strong></div>
+            <div class="item-desc">US cars use the Aisin AW 09P torque-converter automatic, not a DSG, so there is no clutch pack or mechatronic unit. The documented 2018–2020 complaint is low-speed hesitation and harsh shifting, addressed by TCM software rather than hardware.</div>
+            <div class="item-check"><strong>Test stop-and-go under 15 mph for hesitation or a harsh 1-2 shift, then ask whether the TCM software update was performed.</strong></div>
             <div class="item-meta">
-              <span><strong>Est. cost:</strong> $400–$600 DSG fluid / $2,000–$3,500 clutch pack</span>
-              <span><strong>Source:</strong> VW DSG maintenance standard</span>
+              <span><strong>Est. cost:</strong> $0 TCM software / $250–$450 ATF service (G 055 540 A2)</span>
+              <span><strong>Source:</strong> VW Self Study Program 850193 (09P / AQ 450, Aisin AW)</span>
             </div>
           </div>
         </div>
@@ -192,13 +192,13 @@
           <div class="item-risk-marker item-risk-high"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">DSG service history + recall check</h3></div>
+              <div class="item-title-link"><h3 class="item-title">Transmission service history + recall check</h3></div>
               <div class="item-risk-label high">High Attention</div>
             </div>
-            <div class="item-desc">DSG fluid history is critical. Three recalls possible.</div>
-            <div class="item-check"><strong>Request DSG service receipt. Run nhtsa.gov/recalls.</strong></div>
+            <div class="item-desc">Automatic transmission fluid history and any TCM software work matter on this car. Campaigns vary by build date.</div>
+            <div class="item-check"><strong>Request the ATF service receipt and the TCM update history. Run nhtsa.gov/recalls.</strong></div>
             <div class="item-meta">
-              <span><strong>Est. cost:</strong> Walk away from DSG without service history</span>
+              <span><strong>Est. cost:</strong> Walk away without transmission service history</span>
               <span><strong>Source:</strong> NHTSA</span>
             </div>
           </div>
@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the MQB Tiguan the 8th VIN digit is the engine position and it has exactly one legal value, so it forks nothing: every US 2018 Tiguan is the 2.0L TSI EA888 at 184 hp. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018 on the '3VV2B7A' base: position 8 = 'X' returns Tiguan, 2.0L, 4-cylinder, 184 hp, 8-speed automatic, while 'C', 'W' and 'Y' all return no data. What does move is position 4, and it is the drivetrain. '3VV1B7AX' returns Trim S with DriveType FWD; '3VV2B7AX' returns 'SE, 4Motion SEL' with DriveType AWD; '3VV3B7AX' returns 'SE, SEL' with DriveType FWD - and a full decode of a real car agrees, 3VV3B7AX9JM000932 returning ErrorCode 0, Tiguan, 184 hp, 8-speed automatic, FWD, built at Puebla. The 4MOTION Haldex coupling service below therefore applies only to a position 4 = '2' car; read the drivetrain from position 4, never from the 8th digit. The transmission is where this entry was wrong, and it is worth saying plainly: a US-market 2018 Tiguan has no DSG. It uses the 09P 8-speed, an Aisin AW torque-converter automatic. Volkswagen's own Self Study Program 850193 gives the code as AQ 450 and the manufacturer as AISIN AW CO., LTD. Japan, and describes a torque converter acting as a fluid coupling with an ATF pump and planetary gearsets, filled with 7.65 L of G 055 540 A2; Blauparts and PartsAdvisory both identify the 2018-2024 Tiguan 8-speed as the same 09P torque-converter unit. There is no dual-clutch pack to replace and no mechatronic unit to fail, so a quoted DSG clutch-pack repair on this car is not a real line item. The documented 2018-2020 complaint against this transmission is low-speed hesitation and harsh shifting addressed by TCM software - test for that, and ask for the software history.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

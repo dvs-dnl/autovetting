@@ -230,7 +230,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the B9 A4 the 8th VIN digit is not the engine and not the trim - it is the model line, and reading it as an engine code is how a buyer ends up inspecting a different car. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018: hold positions 1-7 at 'WAUENAF' and position 8 = '4' returns Audi A4, 2.0L, 4-cylinder, 252 hp, AWD; the identical pattern with position 8 = '5' returns an Audi A5 Sportback. Characters '3', '6', '7' and 'A' in that position return no data at all. So the 8th digit separates A4 from A5 - not one engine from another. The fork that actually changes the PPI sits in position 4, and it is the transmission. On two otherwise identical quattro Premium Plus patterns: 'WAUENAF4' decodes TransmissionStyle Automatic, the 7-speed S tronic, while 'WAUPNAF4' decodes TransmissionStyle Manual/Standard - the 6-speed manual Audi still sold on quattro trims for 2018 (Cars.com lists a 2018 A4 2.0 TFSI Prestige Manual quattro with a 6-Speed M/T at 252 hp). Those two cars share nothing in the transmission inspection: the S tronic car needs the mechatronic fluid history and a low-speed shudder test, the manual car needs a clutch and dual-mass flywheel check, and neither test applies to the other. Position 4 carries power and drivetrain too: 'WAUGMAF4' returns 190 hp with DriveType blank - the FWD 2.0T ultra, S tronic only - against 252 hp and AWD on every 'A', 'D', 'E' and 'P' pattern measured. Confirm the engine, the drivetrain and above all the transmission by decoding the whole VIN or by reading the car, never from the 8th digit alone.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

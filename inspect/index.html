@@ -7579,7 +7579,8 @@ const CHECKLISTS = {
 
   'audi-a4-2018': {
     year: 2018, make: 'Audi', model: 'A4', trim: 'Premium / Premium Plus / Prestige (B9, 2017-2025)',
-    engine: '2.0L TFSI EA888 Turbo I4 (190–252hp) with 7-speed S tronic DSG',
+    engine: '2.0L TFSI EA888 Turbo I4 (190hp FWD ultra / 252hp quattro) with 7-speed S tronic or 6-speed manual (quattro only)',
+    vinNote: "On the B9 A4 the 8th VIN digit is not the engine and not the trim - it is the model line, and reading it as an engine code is how a buyer ends up inspecting a different car. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018: hold positions 1-7 at 'WAUENAF' and position 8 = '4' returns Audi A4, 2.0L, 4-cylinder, 252 hp, AWD; the identical pattern with position 8 = '5' returns an Audi A5 Sportback. Characters '3', '6', '7' and 'A' in that position return no data at all. So the 8th digit separates A4 from A5 - not one engine from another. The fork that actually changes the PPI sits in position 4, and it is the transmission. On two otherwise identical quattro Premium Plus patterns: 'WAUENAF4' decodes TransmissionStyle Automatic, the 7-speed S tronic, while 'WAUPNAF4' decodes TransmissionStyle Manual/Standard - the 6-speed manual Audi still sold on quattro trims for 2018 (Cars.com lists a 2018 A4 2.0 TFSI Prestige Manual quattro with a 6-Speed M/T at 252 hp). Those two cars share nothing in the transmission inspection: the S tronic car needs the mechatronic fluid history and a low-speed shudder test, the manual car needs a clutch and dual-mass flywheel check, and neither test applies to the other. Position 4 carries power and drivetrain too: 'WAUGMAF4' returns 190 hp with DriveType blank - the FWD 2.0T ultra, S tronic only - against 252 hp and AWD on every 'A', 'D', 'E' and 'P' pattern measured. Confirm the engine, the drivetrain and above all the transmission by decoding the whole VIN or by reading the car, never from the 8th digit alone.",
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The B9 Audi A4 is a genuinely excellent executive sedan — refined, comfortable, and well-built. But like all German luxury cars at this price point, maintenance costs are significantly above average. DSG fluid service, carbon walnut blasting on the EA888, timing chain service at 80k+ miles, and coolant flange cracks are all known line items. Audi-specialist PPI is mandatory. Budget $2,000–$4,000/year honestly.",
     stats: { itemsToCheck: 14, recalls: 1, ownerComplaints: 140, topComplaintArea: 'High maintenance costs / EA888 carbon buildup / DSG service' },
@@ -7629,8 +7630,9 @@ const CHECKLISTS = {
   },
 
   'bmw-x3-2018': {
-    year: 2018, make: 'BMW', model: 'X3', trim: 'sDrive30i / xDrive30i / M40i (G01, 2018-2024)',
+    year: 2018, make: 'BMW', model: 'X3', trim: 'xDrive30i / M40i (G01, 2018-2024; the rear-drive sDrive30i arrived for 2019)',
     engine: '2.0L B48 Turbo I4 (248hp) / 3.0L B58 Turbo I6 (355hp M40i)',
+    vinNote: "On the G01 X3 the 8th VIN digit is the restraint-system character, not the engine, and it carries nothing a buyer can act on. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018 on the '5UXTR9C' base: position 8 = '5' and position 8 = '3' both return the same car - X3, 2.0L, 4-cylinder, 248 hp, 8-speed - with the identical restraint string 'Pretensioners for Driver and Front Passenger', while '1' and 'A' return no data. Every real 2018 X3 VIN surveyed across independent dealer listings carries '5' there. The engine fork lives in positions 4-7. '5UXTR9C' returns the 2.0L B48 at 248 hp; '5UXTS3C' returns the 3.0L B58 at 355 hp, the M40i - confirmed on a full decode, where 5UXTS3C5XJL... returns X3 M40i, 3.0L, 6-cylinder, 355 hp, built at Greer. One reading caution matters more here than the digit does. vPIC returns Trim 'sDrive30i' on the '5UXTR9C' pattern, including on a complete VIN that decodes with ErrorCode 0, 'VIN decoded clean' - but BMW did not sell an sDrive30i X3 in the US for 2018. The 2018 line was xDrive30i and M40i, and per Cars.com both engines came with an eight-speed automatic and standard all-wheel drive; the rear-drive sDrive30i arrived for 2019. A clean decode is not the same as a correct trim: treat a 2018 X3 as xDrive and verify the badge and the transfer case on the car.",
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The G01 X3 (2018+) is BMW's best X3 yet — the B48 engine is significantly more reliable than predecessor N20 units and the B58 6-cylinder is excellent. Main buyer concerns: electric water pump/thermostat failure (all BMW B-series engines), control arm bushing wear front and rear, and maintenance costs. BMW specialist PPI with iDrive scan is required on any used G01 purchase.",
     stats: { itemsToCheck: 13, recalls: 0, ownerComplaints: 135, topComplaintArea: 'Water pump failure / control arm wear / maintenance costs' },
@@ -7724,20 +7726,21 @@ const CHECKLISTS = {
 
   'volkswagen-tiguan-2018': {
     year: 2018, make: 'Volkswagen', model: 'Tiguan', trim: 'S / SE / SEL / SEL Premium R-Line (MQB, 2nd gen, 2018-2024)',
-    engine: '2.0L TSI EA888 Turbo I4 (184hp) with 8-speed Tiptronic',
+    engine: '2.0L TSI EA888 Turbo I4 (184hp) with the Aisin 09P 8-speed torque-converter automatic (no DSG in the US)',
+    vinNote: "On the MQB Tiguan the 8th VIN digit is the engine position and it has exactly one legal value, so it forks nothing: every US 2018 Tiguan is the 2.0L TSI EA888 at 184 hp. Single-variable decodes at vpic.nhtsa.dot.gov for model year 2018 on the '3VV2B7A' base: position 8 = 'X' returns Tiguan, 2.0L, 4-cylinder, 184 hp, 8-speed automatic, while 'C', 'W' and 'Y' all return no data. What does move is position 4, and it is the drivetrain. '3VV1B7AX' returns Trim S with DriveType FWD; '3VV2B7AX' returns 'SE, 4Motion SEL' with DriveType AWD; '3VV3B7AX' returns 'SE, SEL' with DriveType FWD - and a full decode of a real car agrees, 3VV3B7AX9JM000932 returning ErrorCode 0, Tiguan, 184 hp, 8-speed automatic, FWD, built at Puebla. The 4MOTION Haldex coupling service below therefore applies only to a position 4 = '2' car; read the drivetrain from position 4, never from the 8th digit. The transmission is where this entry was wrong, and it is worth saying plainly: a US-market 2018 Tiguan has no DSG. It uses the 09P 8-speed, an Aisin AW torque-converter automatic. Volkswagen's own Self Study Program 850193 gives the code as AQ 450 and the manufacturer as AISIN AW CO., LTD. Japan, and describes a torque converter acting as a fluid coupling with an ATF pump and planetary gearsets, filled with 7.65 L of G 055 540 A2; Blauparts and PartsAdvisory both identify the 2018-2024 Tiguan 8-speed as the same 09P torque-converter unit. There is no dual-clutch pack to replace and no mechatronic unit to fail, so a quoted DSG clutch-pack repair on this car is not a real line item. The documented 2018-2020 complaint against this transmission is low-speed hesitation and harsh shifting addressed by TCM software - test for that, and ask for the software history.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. DSG fluid service is required regularly. Strong compact SUV value for buyers who maintain the service schedule.",
-    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 130, topComplaintArea: 'DSG service / EA888 carbon buildup' },
+    summary: "The 2nd-gen Tiguan (2018+) on the MQB platform is a substantial improvement over the 1st gen. The EA888 2.0T is the same family as Audi's engine but with different tuning. GDI carbon buildup on intake valves is a long-term service item. The 8-speed automatic is the Aisin 09P torque-converter unit, not a DSG, so there is no dual-clutch pack on a US-market car. Strong compact SUV value for buyers who maintain the service schedule.",
+    stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 130, topComplaintArea: 'Transmission hesitation (TCM software) / EA888 carbon buildup' },
     sections: [
       { title: 'Powertrain', items: [
         { title: 'EA888 timing chain tensioner', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Same EA888 timing chain tensioner concern as Audi A4. Cold-start rattle = tensioner wear.',
           check: '<strong>Cold-start rattle check first 5 seconds.</strong>',
           cost: '$1,200–$2,500 timing chain service', source: 'EA888 pattern' },
-        { title: 'DSG fluid service (if DSG-equipped)', risk: 'high', riskLabel: 'High Attention',
-          desc: 'The DSG (DQ381 8-speed wet-clutch) on 2nd-gen Tiguan shudders at low speed when fluid is overdue.',
-          check: '<strong>Test stop-and-go under 15 mph.</strong>',
-          cost: '$400–$600 DSG fluid / $2,000–$3,500 clutch pack', source: 'VW DSG maintenance standard' }
+        { title: '09P 8-speed automatic — hesitation and fluid history', risk: 'high', riskLabel: 'High Attention',
+          desc: 'US cars use the Aisin AW 09P torque-converter automatic, not a DSG, so there is no clutch pack or mechatronic unit. The documented 2018–2020 complaint is low-speed hesitation and harsh shifting, addressed by TCM software rather than hardware.',
+          check: '<strong>Test stop-and-go under 15 mph for hesitation or a harsh 1-2 shift, then ask whether the TCM software update was performed.</strong>',
+          cost: '$0 TCM software / $250–$450 ATF service (G 055 540 A2)', source: 'VW Self Study Program 850193 (09P / AQ 450, Aisin AW)' }
       ]},
       { title: 'AWD', items: [
         { title: '4MOTION coupling fluid', risk: 'monitor', riskLabel: 'Monitor',
@@ -7758,10 +7761,10 @@ const CHECKLISTS = {
           cost: '$100–$300 drain cleaning', source: 'VW group common issue' }
       ]},
       { title: 'Documentation', items: [
-        { title: 'DSG service history + recall check', risk: 'high', riskLabel: 'High Attention',
-          desc: 'DSG fluid history is critical. Three recalls possible.',
-          check: '<strong>Request DSG service receipt. Run nhtsa.gov/recalls.</strong>',
-          cost: 'Walk away from DSG without service history', source: 'NHTSA' }
+        { title: 'Transmission service history + recall check', risk: 'high', riskLabel: 'High Attention',
+          desc: 'Automatic transmission fluid history and any TCM software work matter on this car. Campaigns vary by build date.',
+          check: '<strong>Request the ATF service receipt and the TCM update history. Run nhtsa.gov/recalls.</strong>',
+          cost: 'Walk away without transmission service history', source: 'NHTSA' }
       ]}
     ],
     recalls: [
