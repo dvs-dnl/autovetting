@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 8th VIN digit on the first-gen Encore is the engine, and on a 2018 it is a two-way fork that NHTSA names outright. Single-variable decodes at vpic.nhtsa.dot.gov, holding KL4CJAS constant: position 8 = B returns 1.4L with EngineModel LUV: MFI, Variable Valve Timing, ALUM, E85 MAX, and position 8 = M returns 1.4L with EngineModel LE2 - Direct Injection, Variable Valve Timing, ALUM, GEN 1. Those strings are GM own submission to NHTSA, so this is the rare car where the decode hands you the engine code instead of a guess; 2 returns error 14 with the engine fields blank. The displacement is identical and the output is not - Edmunds, Consumer Guide and GM Authority all put the base engine at 138 hp and the optional one at 153 hp with stop-start, a $250 option offered on Sport Touring and Essence and dropped for 2020. The fork changes the inspection: LUV is multi-port injected (the MFI in its own NHTSA string), while LE2 is direct injected, so an LE2 car carries an intake-valve carbon-deposit exposure the LUV car does not and needs that history asked after on top of the timing-chain and oil-consumption checks below, which apply to both. No 2018 decode returns LUJ - that is the pre-2016 engine and does not belong on a 2018 shopping list. Position 8 is the engine; position 6 carries trim and drivetrain (KL4CJAS = Preferred FWD, KL4CJBS = Preferred II FWD, KL4CJFS = Preferred II AWD), so do not read a drivetrain off position 8.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

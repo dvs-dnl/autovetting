@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the MP Compass the 8th VIN digit is not an engine fork, because the US car does not have one: every 2018 Compass sold here is the 2.4L Tigershark at 180 hp, and the cars.com model-year write-up says so outright - only one engine powers the new Compass. Single-variable decodes at vpic.nhtsa.dot.gov, holding 3C4NJDB constant, confirm it: position 8 = B returns 2.4L, 4-cyl, 180 hp, gasoline, and the only other character that returns an engine at all is D, which comes back as a 3.0L four-cylinder diesel - a displacement and cylinder count that cannot coexist, on a fuel never sold in the US Compass, so treat it as a vPIC artifact and not a spec. E and F return NHTSA error 14 with every engine field blank. The characters that actually change your inspection are positions 6 and 7. Position 6 is the drivetrain: C = FWD, D = 4x4. Position 7 is trim and gearbox: B = 6-speed manual, C = Limited on the 9-speed, D = Trailhawk on the 9-speed. That decides whether the 9-speed 948TE hesitation test below applies to the car in front of you at all - 3C4NJDBB decodes as a 6-speed manual 4x4 and 3C4NJCBB as a 6-speed automatic FWD, and neither has a 948TE in it. Three real dealer-listed VINs match the map: 3C4NJDBB9JT452929 (Latitude, manual), 3C4NJCBB8JT374508 (Latitude FWD, automatic), 3C4NJDDB0JT211953 (Trailhawk). One further trap: position 6 = E or F returns a clean-looking Jeep Grand Cherokee Limited with a 2.4L and an 8-speed - a drivetrain Jeep never built, on a WMI that only ever carried Compass. A decode that reports no error is not the same as a decode that is right.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
