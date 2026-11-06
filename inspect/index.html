@@ -7919,6 +7919,7 @@ const CHECKLISTS = {
   'cadillac-escalade-2018': {
     year: 2018, make: 'Cadillac', model: 'Escalade', trim: 'Luxury / Premium / Platinum (K2XX body-on-frame, 2015-2020)',
     engine: '6.2L EcoTec3 V8 L86 (420hp, AFM)',
+    vinNote: "The K2XX Escalade has one engine, so the 8th VIN digit has nothing to fork — and NHTSA's own data says so. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1GYS4?K? constant, return engine 'L86 -SIDI: Spark Ignition Direct Injection, VVT: Variable Valve Timing, AFM, E85 MAX, ALUM', 6.2L, 8 cylinders when position 8 is 'J'; set it to 'B' or '0' and every engine field drops out with errors 4 and 14. Every 2018 Escalade is the 6.2L L86 with AFM, which means the critical lifter item below applies to all of them — there is no cheaper engine to hope for. <strong>Read positions 5 and 6 instead.</strong> Position 5 is the driveline: '4' = 4WD, '3' = 4x2. Position 6 is the body: 'C' = standard Escalade (116.0 in wheelbase), 'H' = Escalade ESV (130.0 in). The ESV's extra length rides on the same frame and the same rear air-leveling hardware, so the frame-rust and air-ride items matter more on it, not less. One correction carried into this page tonight: NHTSA's 2018 submission returns 10 transmission speeds and its 2017 submission returns 8, so the 10-speed 10L90 arrived for 2018 and 2015–2017 cars are 8L90 8-speeds (Diesel Hub lists the 8L90 as a 2015–2017 Escalade application). The 6L80 belongs to the previous GMT900 Escalade, not to any K2XX.",
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The K2XX Escalade uses exclusively the 6.2L V8 with AFM — the most expensive AFM failure scenario of any K2XX vehicle. Lifter failure at 60k–100k miles on neglected service costs $5,000–$8,000+. Every used Escalade buyer must verify AFM status. Magnetic Ride Control (MRC) suspension is a significant additional cost when dampers fail. Budget $6,000–$10,000 for deferred repairs on any high-mileage example.",
     stats: { itemsToCheck: 14, recalls: 0, ownerComplaints: 310, topComplaintArea: 'AFM lifter failure (6.2L) / MRC suspension / air suspension' },
@@ -7929,7 +7930,7 @@ const CHECKLISTS = {
           check: '<strong>Cold-start ticking + P0300 scan + oil interval records. Walk away if no records.</strong>',
           cost: '$5,000–$8,000 lifter replacement', source: 'K2XX 6.2L AFM pattern' },
         { title: '10-speed 10L90 transmission', risk: 'monitor', riskLabel: 'Monitor',
-          desc: '2017+ Escalade uses the 10-speed, which has shudder TSBs. Pre-2017 uses 6L80.',
+          desc: 'The 2018 Escalade uses the 10-speed 10L90, which has shudder TSBs. NHTSA returns 10 speeds on the 2018 submission and 8 on the 2017, so 2015-2017 cars are the 8L90 8-speed; the 6L80 was the previous GMT900 generation.',
           check: '<strong>Test light throttle 30–50 mph for shudder.</strong>',
           cost: '$400–$600 fluid + calibration', source: '10L90 service pattern' }
       ]},
@@ -7969,9 +7970,10 @@ const CHECKLISTS = {
 
   'chevrolet-traverse-2018': {
     year: 2018, make: 'Chevrolet', model: 'Traverse', trim: 'LS / LT / RS / Premier / High Country (C1, 2nd gen, 2018-2023)',
-    engine: '3.6L LGX V6 (310hp) / 2.0L LSY Turbo I4 (257hp)',
+    engine: '3.6L LFY V6 (305hp) / 2.0L LTG Turbo I4 (255hp, RS trim, FWD only)',
+    vinNote: "The 2nd-gen Traverse has a real two-engine fork and the 8th VIN digit settles it — but read position 5 in the same glance. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1GNE?GK? constant: position 8 = 'W' returns engine 'LFY - Spark Ignited Direct injection, ATSS, GEN 1', 3.6L, 6 cylinders; position 8 = 'X' returns 'LTG - SIDI, ALUM DOHC, VVT, DCVCP', 2.0L, 4 cylinders. Position 5 is the driveline: 'R' = FWD, 'V' = AWD. <strong>The 2.0L was RS-trim-only and front-wheel drive only</strong> — Cars.com's 2018 model-year write-up says it is only available in front-wheel drive — so a Traverse decoding 'X' at position 8 and 'V' at position 5 is not a factory build, even though vPIC returns it with no error: engine, trim and drive are read off separate positions here and nothing cross-checks them. Two claims on this page were wrong until tonight. The V6 is the LFY, not the LGX: the LFY is the older LFX block with auto stop/start added, rated 305 hp, while the 310 hp figure and the LGX name belong to the Acadia/XT5 engine (GM Authority, May 2017, reporting that the Traverse and Enclave shipped with a version of GM's 3.6L V-6 LFX). And the turbo is the LTG — GM's own submission to NHTSA names it — not the LSY, which is the 2019-and-later 2.0L. The intake-valve carbon check below still applies; it is an LFY, not an LGX.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
-    summary: "2nd-gen Traverse (2018+) on the C1 platform is a substantial improvement — more space, better quality, and the 3.6L LGX is a known reliable engine. The 9-speed auto had early hesitation issues mostly resolved by 2019+. GDI carbon buildup is a long-term service item on the LGX. One of the better-value 3-row family crossovers on the used market.",
+    summary: "2nd-gen Traverse (2018+) on the C1 platform is a substantial improvement — more space, better quality, and the 3.6L LFY is a known reliable engine. The 9-speed auto had early hesitation issues mostly resolved by 2019+. GDI carbon buildup is a long-term service item on the LGX. One of the better-value 3-row family crossovers on the used market.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 165, topComplaintArea: '9-speed transmission hesitation / GDI carbon buildup' },
     sections: [
       { title: 'Powertrain', items: [
@@ -7979,7 +7981,7 @@ const CHECKLISTS = {
           desc: '2018 first-year Traverse had the worst 9T65 hesitation and hunting behavior. 2019+ improved significantly after TSB updates.',
           check: '<strong>Test all driving scenarios thoroughly — especially low-speed stop-and-go and highway on-ramp.</strong>',
           cost: '$350–$550 fluid + calibration / $3,500–$5,500 transmission', source: 'GM 9T65 TSB history' },
-        { title: '3.6L LGX GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
+        { title: '3.6L LFY GDI carbon buildup', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'GDI deposits on intake valves at 80k+ miles. Loss of power and rough idle.',
           check: '<strong>Test idle smoothness and acceleration response.</strong>',
           cost: '$400–$800 walnut blast cleaning', source: 'GDI pattern' }
@@ -8208,8 +8210,9 @@ const CHECKLISTS = {
   },
 
   'ford-mustang-2018': {
-    year: 2018, make: 'Ford', model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / Bullitt / GT350 (S550, 2015-2023)',
+    year: 2018, make: 'Ford', model: 'Mustang', trim: 'EcoBoost / GT / GT Premium / GT350 (S550, 2015-2023; Bullitt 2019-2020)',
     engine: '2.3L EcoBoost I4 (310hp) / 5.0L Coyote V8 (460hp) / 5.2L Voodoo V8 (526hp GT350)',
+    vinNote: "On the S550 Mustang the 8th VIN digit is the engine and the 7th is the body line, and vPIC reads them independently — which is the trap on this car. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1FA6P8?? constant: position 8 = 'H' returns '2.3L 4V Premium Fuel', 4 cylinders, 310 hp; 'F' returns '5.0L 4V Premium Fuel', 8 cylinders; 'Z' returns '5.2L TIVCT', 8 cylinders, 526 hp. Position 7 carries the line: 'T' = I4 Coupe, 'C' = GT Coupe, 'J' = Shelby Coupe. <strong>Hold position 7 at 'T' and set position 8 to 'F' and vPIC returns an I4 Coupe with a 5.0L V8 and no error at all</strong> — a car Ford never built. Take position 8 for the engine and position 7 for the body, and never read a clean decode as proof the pair is real. Two further cautions. Ford's 2018 submission returns 435 hp for the 5.0L, which is the 2015–2017 Gen-2 Coyote figure; the 2018 car is the Gen-3 at 460 hp (Cars.com, July 2017), so the stale number there is NHTSA's, not this page's. And the Bullitt is a 2019–2020 car, so a 2018 advertised as one is a badge or a re-title. Which character sits at position 8 decides the inspection order: 'H' puts the cam-phaser rattle check first, 'F' and 'Z' put the track-abuse assessment first.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The S550 Mustang is one of the most satisfying performance cars available used. The 5.0L Coyote V8 is a proven workhorse; EcoBoost 4-cylinder is the fuel-efficient daily driver. Main buyer risk: assess track use and abuse on any GT, GT Premium, or GT350. Cam phaser noise is reported on EcoBoost cars above 60k miles. MT82 manual transmission has known notchy shift quality that worsened with use.",
     stats: { itemsToCheck: 13, recalls: 3, ownerComplaints: 165, topComplaintArea: 'Track abuse assessment / EcoBoost cam phasers / MT82 shift quality' },
