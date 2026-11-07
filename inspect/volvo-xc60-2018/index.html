@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">Position 8 on the SPA XC60 is the trim character, not the engine — the same structure already measured on the 2019 S60, repeating here character for character. Single-variable decodes at vpic.nhtsa.dot.gov on YV4???RK with the J1 tail held constant: vary position 8 and you get 'K' = Momentum, 'L' = Inscription, 'M' = R-Design, with engine and horsepower unchanged across all three. The engine rides in positions 4 and 5. '102' returns engine 'B4204T(MP)' at 250 hp, the T5; 'A22' returns 'B4204TS(HP)' at 316 hp, the turbocharged-and-supercharged T6; and 'B' at position 4 with 'R0D' following returns Series 'T8 AWD', engine 'B4204TSH(HP)' at 313 hp, fuel type Electric, PHEV — the plug-in, whose 400 hp figure is the combined system output Volvo publishes, not an engine rating. All three return an 8-speed automatic. Positions 4 and 5 are read together rather than independently: '122' (position 4 = '1' with position 5 = '2') returns error 14 with every engine field blank, so a character that is valid in one slot is meaningless in the other. The fork changes the inspection — the T6 carries a supercharger ahead of its turbo that the T5 does not have at all, and the T8 adds a high-voltage pack and charging system that none of the gas items below cover. Two cautions about the source. 'A02' returns 'B4204TS(HP+)' at 362 hp on a pattern that otherwise reads as an XC60 Momentum, but Volvo's own 2018 XC60 release lists only 250, 316 and 400 hp, and 362 hp is the published S60/V60 Polestar rating for the same B4204T block — almost certainly another model's row bleeding into this one, not a car you can buy. And DriveType came back 'AWD' on every pattern tested including the T5, the same unreliable field already flagged on the 2019 S60, so confirm the driveline physically rather than from that field.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
