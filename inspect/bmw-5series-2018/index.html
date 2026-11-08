@@ -97,7 +97,7 @@
           <div class="item-risk-marker item-risk-critical"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">N63 V8 — rod bearing and carbon (M550i / 550i)</h3></div>
+              <div class="item-title-link"><h3 class="item-title">N63 V8 — rod bearing and carbon (M550i)</h3></div>
               <div class="item-risk-label critical">Critical</div>
             </div>
             <div class="item-desc">The N63 biturbo V8 has documented rod bearing concerns and significant carbon buildup on intake valves. Avoid unless confirmed CPO or with full service history. B58 I6 is significantly more reliable.</div>
@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the G30 5 Series the 8th VIN digit is not the engine and carries no vehicle meaning at all. Single-variable decodes at vpic.nhtsa.dot.gov, holding WBAJ_?C? and the JB tail constant, show it has exactly two legal characters on a 2018 car — '3' and '5' — and switching between them returns the identical car: same model, same displacement, same horsepower, even the same airbag and pretensioner fields. Feed it anything else and NHTSA answers with error 4 and PossibleValues '(8:35)' rather than a different powertrain. The engine rides at position 5 and the variant at position 6, and the two are read as a pair. 'A5' = 530i, 2.0L B48 turbo four, 248 hp, rear-drive; 'A7' = the same 530i with xDrive (DriveType returns AWD); 'A9' = the 530e plug-in hybrid — NHTSA labels it PHEV with Electric as the primary fuel, Gasoline secondary, and reports 180 hp for the engine alone; 'E5' = 540i, 3.0L B58 turbo six, 335 hp, rear-drive; 'E7' = 540i xDrive; 'B9' = M550i xDrive, 4.4L V8. All six return the 8-speed automatic and the Dingolfing plant. So one step at position 6 is a different driveline at the same engine, and one step at position 5 is a different engine entirely. That changes the inspection: the 530e adds a high-voltage pack and charging system none of the gas items below cover, and an xDrive car adds a transfer case and front driveshafts the rear-drive cars do not have. Two cautions about the source and the badge. First, NHTSA's own BMW submission is wrong about itself here: ask it about an invalid position-8 character and the response's AdditionalErrorText reads 'Unused position(s): 4,5,6,7,8' — declaring five consecutive positions meaningless on a car where two of them are the entire engine and driveline fork. Go by the measured map above, not by that string. Second, the V8 is rated 456 hp (BMW's own launch release: 456 hp at 5,500 rpm, 480 lb-ft; vPIC returns 455). The 523 hp figure that circulates belongs to the 2020-2023 M550i, which got the later N63B44T3 from the M850i. And there is no 550i in this generation at all — the 550i was the previous F10 car (2011-2016). That matters for the rod-bearing item below: the heavy carbon-and-bearing reputation was earned by the first N63 (N63B44O0, 2009-2013), while a 2017-2019 M550i carries the revised N63B44O2 / N63TU2. Ask for this car's own service records rather than assuming either the old engine's history or a clean sheet.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
