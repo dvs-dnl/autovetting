@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the U553 Expedition the 8th VIN digit is the engine position and it tells a buyer nothing, because there is only one engine. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1FMJU1?T and the JE tail constant: position 8 accepts eleven characters (789DGHMRTVX) and only 'T' is mapped — 3.5L GTDI, 6 cylinders, turbocharged. Every other legal character, '8' included, returns error 14 (no manufacturer data) with the displacement, cylinder and horsepower fields blank. So on this car the question is not which engine but which tune, and the VIN answers that at position 7, which encodes trim and drivetrain together: 'H' = XLT 4x2, 'J' = XLT 4WD, 'K' = Limited 4x2, 'L' = Platinum 4x2. That character is the one to read, because the output split is a trim-linked calibration rather than a different engine: 375 hp and 470 lb-ft on 87-octane for XL, XLT and Limited; 400 hp and 480 lb-ft on 93-octane, Platinum only. A Platinum needs premium in it to make its rating — one run on regular has been making roughly XLT power — and a Limited is a 375 hp car no matter what a listing claims. Wheelbase sits further forward still: positions 4-5 separate the two bodies, '1FMJU' decoding as Expedition and '1FMJK' as Expedition MAX (131.6-inch wheelbase, reported as its own model rather than as a trim). Two cautions on the decoder itself. First, NHTSA returns EngineHP 310 on every Expedition pattern tested — XLT, Limited, Platinum, standard and MAX alike — and 310 matches no published 2018 Expedition rating; the horsepower field is a generic 3.5L GTDI filing here, so read the trim, not the decoder, for output. Second, feed position 8 an invalid character and the AdditionalErrorText reads 'Unused position(s): 8' in the same response that enumerates eleven legal values for it. Treat that string as noise. Whatever the trim, the mechanical checks below do not change: the same 10R80 ten-speed and the same cam-phaser exposure sit under all of them. Run the full VIN at nhtsa.gov/recalls before you buy.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

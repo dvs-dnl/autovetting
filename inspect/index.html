@@ -8892,7 +8892,8 @@ const CHECKLISTS = {
 
   'ford-expedition-2018': {
     year: 2018, make: 'Ford', model: 'Expedition', trim: 'XL / XLT / Limited / Platinum / King Ranch / MAX (U553, 4th gen, 2018-2024)',
-    engine: '3.5L EcoBoost V6 (375hp) / 3.5L EcoBoost High Output (400hp Limited)',
+    engine: '3.5L EcoBoost V6 (375hp XL/XLT/Limited) / 3.5L EcoBoost High Output (400hp Platinum, 93-octane)',
+    vinNote: "On the U553 Expedition the 8th VIN digit is the engine position and it tells a buyer nothing, because there is only one engine. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1FMJU1?T and the JE tail constant: position 8 accepts eleven characters (789DGHMRTVX) and only 'T' is mapped — 3.5L GTDI, 6 cylinders, turbocharged. Every other legal character, '8' included, returns error 14 (no manufacturer data) with the displacement, cylinder and horsepower fields blank. So on this car the question is not which engine but which tune, and the VIN answers that at position 7, which encodes trim and drivetrain together: 'H' = XLT 4x2, 'J' = XLT 4WD, 'K' = Limited 4x2, 'L' = Platinum 4x2. That character is the one to read, because the output split is a trim-linked calibration rather than a different engine: 375 hp and 470 lb-ft on 87-octane for XL, XLT and Limited; 400 hp and 480 lb-ft on 93-octane, Platinum only. A Platinum needs premium in it to make its rating — one run on regular has been making roughly XLT power — and a Limited is a 375 hp car no matter what a listing claims. Wheelbase sits further forward still: positions 4-5 separate the two bodies, '1FMJU' decoding as Expedition and '1FMJK' as Expedition MAX (131.6-inch wheelbase, reported as its own model rather than as a trim). Two cautions on the decoder itself. First, NHTSA returns EngineHP 310 on every Expedition pattern tested — XLT, Limited, Platinum, standard and MAX alike — and 310 matches no published 2018 Expedition rating; the horsepower field is a generic 3.5L GTDI filing here, so read the trim, not the decoder, for output. Second, feed position 8 an invalid character and the AdditionalErrorText reads 'Unused position(s): 8' in the same response that enumerates eleven legal values for it. Treat that string as noise. Whatever the trim, the mechanical checks below do not change: the same 10R80 ten-speed and the same cam-phaser exposure sit under all of them. Run the full VIN at nhtsa.gov/recalls before you buy.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 4th-gen Expedition is Ford's full-size 3-row BOF SUV — aluminium body panels over a steel frame, twin-turbo EcoBoost V6. The 3.5L EcoBoost is proven in F-150 applications; the main buyer checks are cam phaser noise on cold start and 10-speed transmission shudder. MAX wheelbase adds genuine third-row legroom. Strong full-size SUV value versus GM competition.",
     stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 195, topComplaintArea: '3.5T EcoBoost cam phasers / 10-speed transmission shudder' },
@@ -8991,16 +8992,17 @@ const CHECKLISTS = {
 
   'chevrolet-colorado-2018': {
     year: 2018, make: 'Chevrolet', model: 'Colorado', trim: 'Base / WT / LT / Z71 / ZR2 (2nd gen, 2015-2022)',
-    engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
+    engine: '2.5L LCV Ecotec I4 (200hp) / 3.6L LGZ V6 (308hp, 2017+) / 2.8L LWN Duramax Diesel I4 (181hp)',
+    vinNote: "On the 2nd-gen Colorado the 8th VIN digit really is the engine, and it is the cleanest of the three cars read tonight. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1GCGTCE? and the J1 tail constant: 'A' = 2.5L LCV Ecotec, 4 cylinders, gasoline (the filing also flags it E0-E100 flex-fuel capable); 'N' = 3.6L LGZ V6, 6 cylinders; '1' = 2.8L LWN Duramax, 4 cylinders, diesel, turbocharged. The map survives a change of cab and trim pattern — '1GCPTDE1' decodes a Z71 crew-cab 4WD with the same 2.8L LWN — so the character means the same engine wherever it appears. Position 8 accepts twelve characters (1ABCFGHJNPRY); 'B' and 'C' are legal but carry no engine data on this line. The familiar decoder bug appears here too: 'Unused position(s): 8' comes back in the same response that lists all twelve, which is nonsense on a car where that position is the entire powertrain fork. The engine-code correction matters more than usual on this slug, because the checklist spans 2015-2022 and the V6 changed inside that span. NHTSA returns LGZ (direct injection, VVT, GEN2) for the 2018 3.6L. The LFX is the earlier engine: 2015-2016 Colorados carry the LFX at 305 hp behind a six-speed, and 2017 brought the LGZ at 308 hp behind the 8L45 eight-speed. So the eight-speed shudder check below applies only to a 2017-or-later V6 — no 2015-2016 truck has an eight-speed at all, and the four-cylinder kept the six-speed throughout. One caution: NHTSA returns no horsepower at all for any Colorado pattern, so output has to come from Chevrolet rather than the decoder — 200 hp for the 2.5L, 308 hp for the 3.6L, 181 hp for the 2.8L diesel. Read the 8th digit before the badge, because the three engines are three different ownership propositions: the diesel brings a DEF system and its own service burden, the V6 brings the 8L45, and the 2.5L brings the lowest running costs and the least to go wrong. Run the full VIN at nhtsa.gov/recalls before you buy.",
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The 2nd-gen Colorado is the best mid-size truck GM has made. The 3.6L LFX V6 is the preferred engine — proven and powerful. The 2.5L I4 is adequate for light duty. The 2.8L Duramax diesel is fuel-efficient and torquey but DEF system maintenance is required. No AFM on the Colorado — a significant advantage over Silverado/Sierra siblings.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 120, topComplaintArea: 'DEF system (diesel) / 8-speed shudder (V6) / frame rust' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '3.6L LFX V6 — solid choice', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'LFX is GM\'s proven V6 — runs reliably past 200k miles with synthetic oil.',
+        { title: '3.6L LGZ V6 — solid choice (2017+)', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2018 V6 is the LGZ, GM\'s GEN2 direct-injection 3.6L (308hp) — runs reliably past 200k miles with synthetic oil. 2015-2016 trucks carry the earlier LFX (305hp) behind a six-speed instead; the two are not the same engine.',
           check: '<strong>Standard check — cold-start, oil level, transmission shudder test.</strong>',
-          cost: 'Maintenance only', source: 'GM LFX reliability record' },
+          cost: 'Maintenance only', source: 'GM LGZ reliability record' },
         { title: '2.8L Duramax diesel DEF system', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'Diesel Exhaust Fluid (DEF) system requires fluid top-up every 5,000 miles. DEF pump and injector failures are reported.',
           check: '<strong>Check DEF level and verify DEF system warning lights are off.</strong>',
@@ -9013,10 +9015,10 @@ const CHECKLISTS = {
           cost: 'Walk away from through-rust', source: 'Truck inspection standard' }
       ]},
       { title: 'Transmission', items: [
-        { title: '8-speed automatic shudder (V6)', risk: 'monitor', riskLabel: 'Monitor',
-          desc: 'V6 Colorado 8-speed can shudder at light throttle. Fluid service resolves most cases.',
+        { title: '8L45 8-speed shudder (2017+ V6 only)', risk: 'monitor', riskLabel: 'Monitor',
+          desc: 'The 2017+ V6 uses the 8L45 eight-speed, which can shudder at light throttle as torque-converter fluid degrades. Fluid service resolves most cases. Does not apply to the 2.5L four-cylinder or to any 2015-2016 truck — those use a six-speed.',
           check: '<strong>Test highway light throttle for shudder.</strong>',
-          cost: '$300–$500 fluid flush', source: 'GM 8L90 service pattern' }
+          cost: '$300–$500 fluid flush', source: 'GM 8L45 service pattern' }
       ]},
       { title: 'Electrical', items: [
         { title: 'MyLink infotainment', risk: 'low', riskLabel: 'Low Risk',
@@ -9181,14 +9183,15 @@ const CHECKLISTS = {
 
   'hyundai-sonata-2018': {
     year: 2018, make: 'Hyundai', model: 'Sonata', trim: 'SE / SEL / Eco / Sport / Limited (LF, 7th gen, 2015-2019)',
-    engine: '2.4L GDI Nu I4 (185hp) / 2.0T Theta II I4 (245hp Sport) / 1.6T Eco I4 (178hp)',
+    engine: '2.4L GDI Theta II I4 (185hp) / 2.0T Theta II I4 (245hp Sport) / 1.6T Gamma I4 (178hp Eco)',
+    vinNote: "On the LF Sonata the 8th VIN digit is the engine and it is the single highest-value character on the car, because one of the three engines sits outside the story that defines this model. Single-variable decodes at vpic.nhtsa.dot.gov, holding 5NPE24A? and the JH tail constant, return exactly three legal values: 'A' = 1.6L T-GDI Gamma, turbocharged, 178 hp; 'B' = 2.0L T-GDI Theta II, turbocharged, 245 hp; 'F' = 2.4L GDI Theta II. The map holds across trim — position 5 is the trim group ('2' decodes SE and Eco, '3' decodes SEL, Limited and Sport) and 'F' is the 2.4L under both — so the character means the same engine wherever it appears. The naming correction matters here more than naming usually does. The 2.4L is a Theta II, not a Nu: NHTSA's own filing returns EngineModel 'GDI THETA-II' for it, and the Nu family is 1.8L and 2.0L only — Hyundai has never built a 2.4L Nu. That is worth being exact about because the rod-bearing and KSDS exposure that drives this page is a Theta II GDI pattern, so a buyer told the 2.4L is a 'Nu' could reasonably conclude their car is outside the affected family when it is inside it. Both 'F' and 'B' cars are Theta II. The 1.6T ('A') is a Gamma, a different engine family altogether, and is the one of the three that does not carry the Theta II bearing history — which is exactly why the 8th digit is worth reading before the badge on this car. It is also the least common of the three. One caution on the decoder: it returns 187 hp for the 2.4L where Hyundai's own brochure says 185 hp and 178 lb-ft. The published figure is kept here; NHTSA is not the authority on output. Whichever character sits at position 8, run the full VIN at nhtsa.gov/recalls before any test drive and require every engine campaign closed.",
     overallRisk: 'high', overallRiskLabel: 'High Attention',
     summary: "The LF Sonata is a well-designed midsize sedan at a value price — but both the 2.4L Nu and 2.0T Theta II engines are in the Hyundai KSDS recall family for rod bearing wear. Multiple campaigns apply. This is the most important pre-purchase check. The 1.6T Eco is less common and somewhat lower risk. Sonata is a strong value when all recall campaigns are verified complete.",
     stats: { itemsToCheck: 13, recalls: 1, ownerComplaints: 280, topComplaintArea: 'Nu / Theta II engine bearing recall — multiple KSDS campaigns' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: 'Nu / Theta II engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
-          desc: 'Multiple KSDS recall campaigns cover both Sonata engines. Bearing wear can lead to engine seizure.',
+        { title: 'Theta II GDI engine KSDS recall — critical', risk: 'critical', riskLabel: 'Critical',
+          desc: 'Multiple KSDS recall campaigns cover both Theta II engines — the 2.4L GDI (8th VIN digit F) and the 2.0L T-GDI (8th digit B). Bearing wear can lead to engine seizure. The 1.6T Eco (8th digit A) is a Gamma engine and sits outside this family.',
           check: '<strong>Run VIN at nhtsa.gov/recalls BEFORE any test drive.</strong> All campaigns must be complete.',
           cost: '$0 under recall / $6,000–$9,000 engine seizure', source: 'Hyundai KSDS recall family' },
         { title: 'Theta II 2.0T oil maintenance (Sport)', risk: 'high', riskLabel: 'High Attention',
@@ -9764,16 +9767,16 @@ const CHECKLISTS = {
 
   'gmc-canyon-2018': {
     year: 2018, make: 'GMC', model: 'Canyon', trim: 'Base / SLE / SLT / All Terrain / Denali (2nd gen, 2015-2022)',
-    engine: '2.5L Ecotec I4 (200hp) / 3.6L LFX V6 (308hp) / 2.8L Duramax Diesel I4 (186hp)',
+    engine: '2.5L LCV Ecotec I4 (200hp) / 3.6L LGZ V6 (308hp, 2017+) / 2.8L LWN Duramax Diesel I4 (181hp)',
     overallRisk: 'monitor', overallRiskLabel: 'Watchful',
     summary: "The Canyon is mechanically identical to the Chevrolet Colorado — same platform, same engines, same reliability profile. GMC badge adds slightly nicer trim. The 3.6L LFX V6 is the preferred engine (no AFM). The 2.8L Duramax diesel is fuel-efficient but DEF system maintenance is required. Frame rust on salt-belt trucks is the primary structural concern.",
     stats: { itemsToCheck: 12, recalls: 1, ownerComplaints: 110, topComplaintArea: 'Frame rust / 8-speed shudder (V6) / DEF system (diesel)' },
     sections: [
       { title: 'Powertrain', items: [
-        { title: '3.6L LFX V6 — preferred engine', risk: 'low', riskLabel: 'Low Risk',
-          desc: 'LFX is GM\'s proven V6. No AFM, no known major failure modes.',
+        { title: '3.6L LGZ V6 — preferred engine', risk: 'low', riskLabel: 'Low Risk',
+          desc: 'The 2018 V6 is the LGZ (308hp), GM\'s GEN2 direct-injection 3.6L. No AFM, no known major failure modes. 2015-2016 trucks carry the earlier LFX (305hp) behind a six-speed.',
           check: '<strong>Standard check — cold-start, oil level, transmission shudder test.</strong>',
-          cost: 'Maintenance only', source: 'GM LFX reliability' },
+          cost: 'Maintenance only', source: 'GM LGZ reliability' },
         { title: '2.8L Duramax DEF system', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'DEF fluid required every 5,000 miles. DEF pump failures are reported.',
           check: '<strong>Check DEF level and verify no DEF warning lights.</strong>',
@@ -9789,7 +9792,7 @@ const CHECKLISTS = {
         { title: '8-speed shudder (V6)', risk: 'monitor', riskLabel: 'Monitor',
           desc: 'V6 Canyon 8-speed can shudder at light throttle.',
           check: '<strong>Highway light throttle test.</strong>',
-          cost: '$300–$500 fluid flush', source: 'GM 8L90 pattern' }
+          cost: '$300–$500 fluid flush', source: 'GM 8L45 pattern' }
       ]},
       { title: 'Electrical', items: [
         { title: 'IntelliLink infotainment', risk: 'low', riskLabel: 'Low Risk',

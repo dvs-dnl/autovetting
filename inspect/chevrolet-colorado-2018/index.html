@@ -97,14 +97,14 @@
           <div class="item-risk-marker item-risk-low"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">3.6L LFX V6 — solid choice</h3></div>
+              <div class="item-title-link"><h3 class="item-title">3.6L LGZ V6 — solid choice (2017+)</h3></div>
               <div class="item-risk-label low">Low Risk</div>
             </div>
-            <div class="item-desc">LFX is GM's proven V6 — runs reliably past 200k miles with synthetic oil.</div>
+            <div class="item-desc">The 2018 V6 is the LGZ, GM's GEN2 direct-injection 3.6L (308hp) — runs reliably past 200k miles with synthetic oil. 2015-2016 trucks carry the earlier LFX (305hp) behind a six-speed instead; the two are not the same engine.</div>
             <div class="item-check"><strong>Standard check — cold-start, oil level, transmission shudder test.</strong></div>
             <div class="item-meta">
               <span><strong>Est. cost:</strong> Maintenance only</span>
-              <span><strong>Source:</strong> GM LFX reliability record</span>
+              <span><strong>Source:</strong> GM LGZ reliability record</span>
             </div>
           </div>
         </div>
@@ -152,14 +152,14 @@
           <div class="item-risk-marker item-risk-monitor"></div>
           <div class="item-content">
             <div class="item-header">
-              <div class="item-title-link"><h3 class="item-title">8-speed automatic shudder (V6)</h3></div>
+              <div class="item-title-link"><h3 class="item-title">8L45 8-speed shudder (2017+ V6 only)</h3></div>
               <div class="item-risk-label monitor">Monitor</div>
             </div>
-            <div class="item-desc">V6 Colorado 8-speed can shudder at light throttle. Fluid service resolves most cases.</div>
+            <div class="item-desc">The 2017+ V6 uses the 8L45 eight-speed, which can shudder at light throttle as torque-converter fluid degrades. Fluid service resolves most cases. Does not apply to the 2.5L four-cylinder or to any 2015-2016 truck — those use a six-speed.</div>
             <div class="item-check"><strong>Test highway light throttle for shudder.</strong></div>
             <div class="item-meta">
               <span><strong>Est. cost:</strong> $300–$500 fluid flush</span>
-              <span><strong>Source:</strong> GM 8L90 service pattern</span>
+              <span><strong>Source:</strong> GM 8L45 service pattern</span>
             </div>
           </div>
         </div>
@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the 2nd-gen Colorado the 8th VIN digit really is the engine, and it is the cleanest of the three cars read tonight. Single-variable decodes at vpic.nhtsa.dot.gov, holding 1GCGTCE? and the J1 tail constant: 'A' = 2.5L LCV Ecotec, 4 cylinders, gasoline (the filing also flags it E0-E100 flex-fuel capable); 'N' = 3.6L LGZ V6, 6 cylinders; '1' = 2.8L LWN Duramax, 4 cylinders, diesel, turbocharged. The map survives a change of cab and trim pattern — '1GCPTDE1' decodes a Z71 crew-cab 4WD with the same 2.8L LWN — so the character means the same engine wherever it appears. Position 8 accepts twelve characters (1ABCFGHJNPRY); 'B' and 'C' are legal but carry no engine data on this line. The familiar decoder bug appears here too: 'Unused position(s): 8' comes back in the same response that lists all twelve, which is nonsense on a car where that position is the entire powertrain fork. The engine-code correction matters more than usual on this slug, because the checklist spans 2015-2022 and the V6 changed inside that span. NHTSA returns LGZ (direct injection, VVT, GEN2) for the 2018 3.6L. The LFX is the earlier engine: 2015-2016 Colorados carry the LFX at 305 hp behind a six-speed, and 2017 brought the LGZ at 308 hp behind the 8L45 eight-speed. So the eight-speed shudder check below applies only to a 2017-or-later V6 — no 2015-2016 truck has an eight-speed at all, and the four-cylinder kept the six-speed throughout. One caution: NHTSA returns no horsepower at all for any Colorado pattern, so output has to come from Chevrolet rather than the decoder — 200 hp for the 2.5L, 308 hp for the 3.6L, 181 hp for the 2.8L diesel. Read the 8th digit before the badge, because the three engines are three different ownership propositions: the diesel brings a DEF system and its own service burden, the V6 brings the 8L45, and the 2.5L brings the lowest running costs and the least to go wrong. Run the full VIN at nhtsa.gov/recalls before you buy.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
