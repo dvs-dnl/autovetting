@@ -752,6 +752,63 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
   re-verify whether Kia Forte or Hyundai Santa Fe have cleared their 14-day sibling-conflict window
   (clears 11-09/11-10); otherwise rank further into Tier-2/3 off the top-500 seed list.
 
+  2026-11-11 16:32 [scheduled task]: drafted 2019 Hyundai Santa Fe (TM, 4th-gen, launch year)
+  pillar post -- Tier-2, the top remaining candidate once both Kia Forte and Hyundai Santa Fe
+  cleared their 14-day sibling-conflict windows (Santa Fe clears 11-09, Forte clears 11-10; today
+  is 11-11, so both were eligible -- Santa Fe picked for richer verified recall/engine content).
+  Sibling-conflict check run before picking (per this task's required gate): grepped TASKS.md
+  In-flight + Ready + Done(last 10) for santa-fe/forte -- no autovet-content-checklist-authoring
+  or autovetting-overnight-builder task in flight anywhere (consistent with the active
+  vehicle-launch freeze, DANIEL-DECISIONS-2026-07-29). Also searched the project's own
+  2026-11-05 through 2026-11-10 overnight-builder findings/vinnote-batch docs for a repeat touch
+  to either slug -- none found; both nameplates surface only as measurement asides (e.g. the
+  11-09 doc's gate-metric discussion cites kia-forte-2019 and hyundai-santa-fe-2019 only as
+  examples of a regex-invisibility problem, not as a write). Toyota Highlander (#20, last Tier-1
+  gap) re-checked again -- still no wave-24+ recall-audit generation-boundary entry anywhere in
+  TASKS.md -- remains deferred.
+  Recalls WebSearch-verified 2026-11-11: two NHTSA campaigns confirmed specific to the 2019
+  model year -- 18V-715000 (side curtain airbag mounting-bolt interference, Oct 2018) and
+  23V-181000 (tow-hitch harness water intrusion / fire risk, Mar 2023, ~584,784 units, confirmed
+  via the affected-vehicle list to cover the gas 2019 Santa Fe and not just Hybrid/PHEV). Also
+  verified a dealer service campaign, T3G (TSB 21-01-002H pub. 2021-01-12 / NHTSA TSB #10186818,
+  and follow-up 22-EM-002H-1 pub. 2022-04-15 / NHTSA TSB #10211674), extending engine long-block
+  warranty to 10yr/120k miles for connecting-rod-bearing damage -- scoped specifically to the
+  2019 Santa Fe by the source pages' own URLs, not a safety recall. Important correction caught
+  and written into the post rather than carried forward uncritically: the well-known Theta II
+  class-action "lifetime engine warranty" settlement (verified against the Center for Auto
+  Safety's own settlement vehicle list) names 2011-2019 Sonata, 2013-2019 Santa Fe SPORT, and
+  2014-2015/2018-2019 Tucson -- NOT the redesigned 2019 Santa Fe (TM) this post covers. AutoVet's
+  own Product/CPO-Protocols/hyundai-certified.md likewise scopes Theta II exposure to "Sonata/
+  Tucson/Santa Fe Sport/Optima," not the TM Santa Fe -- this task did not edit that file (not its
+  class), but flagged the distinction in the blog post itself since it's a genuine buyer-facing
+  source of confusion. No campaign number was invented for the Theta II/KSDS story; where primary
+  sourcing didn't support a specific claim, the post states the T3G campaign as the car's actual
+  coverage instead. Also noted, not chased this run: no OEM-published AWD transfer-case/coupling
+  fluid interval for this generation was found; the post says so explicitly rather than guessing
+  a number (flagged [unverified] in the research doc).
+  Lineup-trap note carried from this checklist's own vinNote and independently corroborated: the
+  outgoing 3-row Santa Fe (3.3L V6) was sold alongside the new car as "Santa Fe XL" for 2019 --
+  a different vehicle, called out explicitly in the post so a buyer doesn't cross-apply either
+  car's recall history to the other.
+  No OEM CPO content reprinted verbatim (business-plan Sec 4.5); Product/CPO-Protocols/
+  hyundai-certified.md's HCUV scope (173-point gas inspection, oil-sludge disqualifier, 10yr/100k
+  reinstated powertrain warranty) paraphrased. Interlinks to 2018-hyundai-tucson (same brand,
+  Theta II family) + 2018-kia-sportage (shared Hyundai-Kia Theta II platform) + 2019-toyota-rav4
+  (cross-shop alternative), all confirmed present in /blog/ by directory listing before linking.
+  Output: Content/blog/2026-11-11-2019-hyundai-santa-fe-buyers-guide.md (~1,810 words body, status:
+  draft), Content/_seo-research/2026-11-11-2019-hyundai-santa-fe.md. Also updated
+  Content/_seo-research/top-500-vehicles.md (added the Santa Fe row to Already Covered; Suggested
+  Next Picks / Updated-2026-11-11 note records the pick and narrows the Tier-2/3 list to Kia Forte
+  for the next run).
+  Sibling check: Verified against: hyundai-santa-fe-2019, kia-forte-2019 -- no In-flight/Ready/
+  Done(last-10) task touches either slug within the 14-day window as of 2026-11-11. No Re-sync
+  needed.
+  Weekly milestone: DONE -- draft ready for Daniel's editorial review (auto-pusher does not watch
+  Content/blog/; drafts stay private until Daniel approves + migrates). Next pick candidates:
+  Kia Forte (clear of its own sibling window as of 11-10), otherwise rank further into Tier-2/3
+  off the top-500 seed list, or re-check Toyota Highlander (#20) against the recall-audit
+  generation-boundary sweep.
+
 
 ### autovet-recall-study-under-15k
 
@@ -1131,6 +1188,25 @@ Deploy gate: the hourly orchestrator pushes what's in **Ready to deploy / publis
 
 
 ## Ready to deploy / publish
+
+### autovetting-vinnote-batch-2026-11-11 — ready 2026-11-11
+
+- Started: 2026-11-11 (02:00 MST overnight builder; the 10-28 NHTSA fetch-path decision in `_hub/Awaiting-Daniel.md` is still unanswered — **fifteenth night** — the file opens on the 11-10 entry with 11-09, 11-08, 11-07, 11-06, 11-05, 11-04 and 10-28 below it and no answer written beneath any of the eight, so the launch posture was left exactly as the 10-28 run set it and this run took the sanctioned Step-3 alternative again. A scheduled run does not answer its own question.)
+- Status: ready to deploy. Pushed directly (scanner passed, gates clean, no Re-sync).
+- Backlog-ref: `_hub/Content/vinnote-queue.md` priorities 160 / 161 / 162 (the three rows below the deferred Mercedes head, per the queue's own How-to-use note).
+- Task: drain 3 vinNote entries (launch-spec criterion 3, VIN decoding intelligence)
+- Touched files: `inspect/index.html`, `inspect/lincoln-navigator-2018/index.html`, `inspect/subaru-legacy-2018/index.html`, `inspect/nissan-maxima-2018/index.html`, `sitemap.xml`, `_hub/Content/vinnote-queue.md` (gitignored), `_hub/Build-Log/2026-11-11.md` (gitignored), `_hub/Awaiting-Daniel.md` (gitignored), `TASKS.md`
+- Notes:
+
+    2026-11-11 [scheduled task]: **3 vinNotes added — `lincoln-navigator-2018`, `subaru-legacy-2018`, `nissan-maxima-2018`. vinNotes 173 -> 176 (71.8% of 245). Queue 72 -> 69; 245 - 176 = 69, so file and queue agree exactly. 17 vPIC single-variable decodes carried every character claim; both horsepower figures came from Lincoln's and Nissan's own material because the decoder either contradicted the car or returned nothing. Zero record corrections shipped — one was staged and reverted, deliberately (see the near-miss). The night's structural finding escalates 11-10's: on the Navigator the engine fields are not bound to the vehicle at all — set position 7 to `C` and the decode becomes a Lincoln MKC Select 4x2, a model that never offered a 3.5, while `DisplacementL: 3.5` and `EngineHP: 310` stay put. And that 310 is wrong by 140 hp for a 2018 Navigator (Lincoln: 450 hp / 510 lb-ft) while the IDENTICAL characters on a 2022 VIN return 440, which is correct — so the stale record belongs to the early pattern, not to the decoder. Night 42 without a vehicle launch — posture unchanged and not changed on my own authority; see the Started note.** Commit: ``COMMIT_HASH``.
+
+    Per-slug, all measured by single-variable decode at vpic.nhtsa.dot.gov holding the model year constant: **Navigator** — position 8 accepts `9HT`, only `T` mapped (3.5L GTDI, 6 cyl, turbo); the load-bearing character is **position 7** (model + trim + drivetrain: `L` = Reserve 4WD, `T` = Black Label/`Trim: BL` 4WD), and position 6 separates the bodies (`5LMJJ2` = Navigator, `5LMJJ3` = Navigator L). **Legacy** — position 8 accepts **exactly one** character (`6`) and the engine fields stay populated through an illegal value, so the engine is at **position 6**: `A` = 2.5L FB25 / 4 / 175 hp / `U5`, `D` = same 2.5L and 175 hp under `C5`, `E` = 3.6L / 6 / 256 hp / `U4`, `F` = same 3.6L and 256 hp under `C0` — the U/C pairs are an emissions-spec split, not a power split. `B` is the trap: legal, returns `2.5` with **ErrorCode 1 only, no error 14**, and cylinders/horsepower/engine-model all blank. Cross-span, `E` is still the 3.6 on a 2015 VIN but that record returns `3.6L U4` with cylinders and horsepower blank where 2018 returns 6 and 256. **Maxima** — position 8 accepts seven characters (`FHKLPRU`) and none touches the engine; all it carries is drive type and only `P` fills it (`4x2`), `U` decodes clean with it blank. Engine lives in **positions 4-6**; feed position 6 an illegal character and **Make itself** goes blank, and of its eight legal values (`0-7`) only `6` populates a Maxima. Horsepower and engine model are empty on every 2018 Maxima pattern tried, so the 300 hp / 261 lb-ft came from Nissan's 2018 press kit. `Unused position(s): 8` is now **0-for-13** — the Legacy returned it while enumerating a single legal value.
+
+    **The near-miss, recorded because the lesson outlives this run.** The Maxima `trim` names four trims (`SV / SL / Platinum / SR`) where Nissan's own 2018 press kit lists **five** — the base `S` is missing. The one-token fix was applied and then **reverted before commit** for two independent reasons. First, `trim` is the field class `autovetting-checklist-generation-spans-2026-09-21` owns on this file and that block is ready-but-not-pushed; 11-10 escalated a `trim` question rather than edit one, and the same restraint applies. Second, and the one worth keeping: the matching `VEHICLE_MENU` label replace reported **8 occurrences, not 2** — the same trim label string is reused across Maxima menu rows for years this run never researched, so a naive replace would have silently rewritten menu cells inside a structure 11-10 deliberately left alone and which belongs to the menu-sweep blocks. **The generalisable rule: menu label strings on this file are not unique per entry, so count a `trim`-class edit's matches before applying it, not after.** Nothing shipped from it; the discrepancy is recorded inside the Maxima vinNote as noted-and-not-changed and escalated in `_hub/Awaiting-Daniel.md`.
+
+    Sibling check: no blocking overlap, and **zero field-class overlap — the diff is pure insertion**. Tonight's field-level diff is exactly three `vinNote` lines, one per slug, and nothing else: `git diff HEAD --numstat` on `inspect/index.html` is **3 insertions / 0 deletions** across **3 hunks**, all labelled `const CHECKLISTS = {`. **No `recalls` array, no `stats.*` value, no `summary` string and no `engine` string was touched** — the `summary` class is one in-flight `autovet-recall-study-under-15k` also writes on this file and it was not entered at all tonight. `autovetting-checklist-generation-spans-2026-09-21` owns `trim` on this file and tonight's only `trim` edit was reverted before commit, with zero deletions in the diff as the receipt. Ready `autovetting-vinnote-batch-2026-11-10` is the direct sequential ancestor on `inspect/index.html` (not concurrent) and tonight's Navigator work continues its 11-09 Expedition finding on the same generic `3.5L GTDI` filing; `autovetting-static-vehicle-pages-2026-10-19` is the ancestor of the static-page rebuild; the two Stinger routing defects raised 11-10 belong to `autovetting-menu-duplicate-model-rows-2026-09-25` and the menu-sweep blocks and were left there, as were the Maxima menu cells. Grep of `TASKS.md` for the three slugs: `lincoln-navigator-2018` appears as queue row 160 and in the Lincoln CPO-protocol rotation note (`Product/CPO-Protocols/`, a different file, untouched); `subaru-legacy-2018` and `nissan-maxima-2018` appear only as queue rows 161/162. In-flight `autovet-competitor-monitor` (`Competitors/`), `autovet-cpo-protocol-ingestion` (`Product/CPO-Protocols/`) and `autovet-seo-content` (`Content/blog/`) are orthogonal. **`Started:` audit clean — 0 missing across all 24 Done blocks, checked programmatically per block, so no gate-block risk on `inspect/index.html`.** **Concurrency recorded, not assumed away:** in-flight `autovet-seo-content` ran at **16:32 today**, concurrently with this run, and appended its own 2019 Hyundai Santa Fe draft note to this same `TASKS.md` (57 lines at the In-flight section) while this block was being written. Its file scope is `Content/blog/` (gitignored, auto-pusher does not watch it), so the only shared artefact is the `TASKS.md` note itself. This run's commit therefore **carries that task's note as well as its own**, by design rather than by accident — `TASKS.md` is the shared record and dropping its lines would have been the silent revert the 11-10 rule exists to prevent. Zero overlap on `inspect/index.html`. No Re-sync needed. Verified against: autovetting-vinnote-batch-2026-11-10, autovetting-static-vehicle-pages-2026-10-19, autovetting-checklist-generation-spans-2026-09-21, autovetting-menu-duplicate-model-rows-2026-09-25, autovet-recall-study-under-15k, autovet-seo-content.
+
+    **Scanner: PASS** — `OK: scanned 985 file(s); no secrets detected`, exit **0**, run unpiped against the mounted path with the count read rather than inferred, and re-run as the last step before push. **Syntax-check: PASS** — official node recipe on `inspect/index.html` (Script 2 OK / Script 5 OK, exit 0) and on all three rebuilt static pages, re-run after the trim revert. **Runtime verification, not just parse:** `CHECKLISTS` evaluated out of the HTML and all three entries read back — **245** top-level keys, **176** carrying a vinNote, note lengths **1412 / 1340 / 1380** chars, section count (5), item count (6), `stats.itemsToCheck` and `stats.recalls` unchanged on every one, and the Maxima `trim` reading back at its original four-trim value. **Dead-links: verified** — href inventory on `inspect/index.html` byte-identical to `HEAD` (`diff` clean, not sampled); all three notes are prose and no `/decode/` link was added. **Deploy gate: 29 passed, 1 warned, 0 CRITICAL failed** — identical to the 10-22 -> 11-10 baseline, the warn being the pre-existing `loading=lazy` on `homepage-test-bc/index.html`; multi-engine vinNote coverage now **69/99 = 69.7%**. **Static pages (G29): rebuilt** — 245 checklists, 3 written, 0 retired, 0 links rewritten, `sitemap.xml` lastmod 2026-10-19 -> 2026-11-11 on exactly those three URLs. **Index hygiene:** `git status --porcelain` read *after* staging per the 11-10 rule, to catch the stale-index silent-revert hazard; the working tree was clean at start of run.
 
 ### autovetting-vinnote-batch-2026-11-10 — ready 2026-11-10
 

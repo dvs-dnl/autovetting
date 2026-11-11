@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On the BN Legacy the 8th VIN digit is not the engine character and cannot be: single-variable decodes at vpic.nhtsa.dot.gov show position 8 accepting exactly one character, '6', and every engine field stays populated (2.5L, 4 cylinders, 175 hp) even when that position is fed an illegal value. The engine sits at position 6, and that is the character to read: 'A' = 2.5L FB25, 4 cylinders, 175 hp, engine model U5; 'D' = the same 2.5L at the same 175 hp under engine model C5; 'E' = 3.6L, 6 cylinders, 256 hp, engine model U4; 'F' = the same 3.6L at 256 hp under engine model C0. The U-code and C-code pairs are an emissions-spec split rather than a power split, so A and D are the same car to drive, and so are E and F. 'B' is the trap: it is legal, it returns 2.5 for displacement with no error flag at all, and cylinders, horsepower and engine model all come back blank — so a tool that reads displacement alone will call it a 2.5i while a tool that reads horsepower gets nothing. Position 7 moves trim only (22 legal letters) and leaves the engine untouched. The character is stable across the generation — 'E' is still the 3.6 on a 2015 VIN — but the record behind it is not: that 2015 decode returns engine model '3.6L U4' with cylinders and horsepower blank where the 2018 returns 6 and 256. Pin the model year, then read position 6.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
