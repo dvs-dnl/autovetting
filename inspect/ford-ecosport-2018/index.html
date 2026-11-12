@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 8th VIN digit is a true engine code on the B4A EcoSport, and it is the one field here you can lean on. Single-variable decodes at vpic.nhtsa.dot.gov, holding MAJ6P1??*JC and the model year constant: position 8 accepts exactly two characters — 'E' returns 1.0 litres, 3 cylinders and 123 hp, 'L' returns 2.0 litres, 4 cylinders and 166 hp. Position 7 carries trim and drivetrain together ('R' = S FWD, 'S' = S 4WD, 'U' = SE 4WD), and the two positions are independent, which is the trap. Ford paired the 1.0L EcoBoost with front drive only and the 2.0L with 4WD only, but vPIC decodes either crossing without complaint: MAJ6P1RL comes back as an S FWD with the 2.0 at ErrorCode 0 — a fully clean decode of a configuration Ford never sold — and MAJ6P1UE as an SE 4WD with the 1.0. So read position 8 for the engine, then confirm the drivetrain on the car itself rather than from the decode. Real VIN MAJ6P1SL4JC163923 anchors the scheme at ErrorCode 0: S 4WD, 2.0L, 166 hp. Positions 4 to 6 carry nothing a buyer needs — position 4 accepts '3' or '6' and both return the same vehicle, position 5 accepts only 'P', position 6 only '1'. Catalogue discrepancy recorded and not changed: the engine field on this entry lists a 1.5L Ti-VCT at 123 hp, and no 2018 US pattern produces a 1.5 — position 8 offers only the 1.0 and the 2.0.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">The 8th VIN digit on a J11 Rogue Sport is the drivetrain character, not an engine code, because the car has only one engine. Single-variable decodes at vpic.nhtsa.dot.gov, holding JN1BJ1C?*JW and the model year constant: 'R' returns 4WD, 'P' and 'H' both return 4x2, and every one of them returns the same 2.0 litres with cylinders, horsepower and engine model blank. Both real-world forms decode at ErrorCode 0 — JN1BJ1CR0JW257196 as AWD, JN1BJ1CP7JW190000 as front-drive — which makes position 8 the one character worth reading on this car: it tells you which of the two drivetrains you are standing in front of, and the AWD coupling-fluid item above applies only to an 'R'. Do not rely on the decoder to tell you that. Feed position 8 an illegal character and vPIC offers only (8:H) as a possible value while reporting Unused position(s): 8, even though 'P' and 'R' both decode clean. Position 7 has to be 'C': 'A', 'E', 'F', 'P' and 'R' are all listed as legal there and all return a bare body class with no make, no model and no engine. Positions 4 to 6 carry the platform code — position 6 accepts 0 through 7 and only '1' produces a Rogue Sport, the J11 in the trim string above. No pattern returns output figures at all, so take them from Nissan's own 2018 press kit: MR20DD, 141 hp at 6,000 rpm and 147 lb-ft at 4,400 rpm through the Xtronic.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">

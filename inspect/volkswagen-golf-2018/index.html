@@ -215,7 +215,10 @@
         </div>
       </div>
     </div>
-
+    <div class="checklist-section-block">
+      <div class="checklist-section-header"><h2 class="checklist-section-title">What the VIN tells you</h2></div>
+      <div class="item-check" style="padding:16px">On a 2018 Golf the 8th VIN digit is not the engine code, and reading it as one misleads twice over. Single-variable decodes at vpic.nhtsa.dot.gov on the 3VW?17AU pattern with the model year held at 2018: position 8 switches the nameplate — 'U' returns the Golf family, 'J' returns a Jetta — while displacement and horsepower sit unmoved at 1.8 litres and 170 hp. The engine is at position 5. Real VIN 3VWG17AU0JM284800 decodes at ErrorCode 0 as a Golf S/SE hatch, 1.8L, 4 cylinders, 170 hp; change position 5 from '1' to '4' and the same car comes back as a 220 hp Golf S, which Volkswagen never built. Position 4 sets model and body independently of the engine, so the two combine into cars that never existed and nothing is flagged: 3VW417AU is a GTI carrying the 170 hp 1.8, 3VW247AU a SportWagen 4Motion carrying the GTI 2.0. On a Jetta GLI (3VW447AJ) vPIC declares position 5 unused and returns no engine at all — the same character that carries the engine one nameplate over. The Golf R is a different WMI entirely: WVWWF7AUXJW173204 decodes clean at 2.0L and 292 hp, built in Wolfsburg rather than Puebla. Catalogue discrepancy recorded and not changed: the engine field on this entry names a 1.4L TSI EA211 at 147 hp, which is the 2019-and-later Golf engine. Every 2018 US pattern returns the 1.8L EA888, and VW rated it 170 hp with 199 lb-ft (184 lb-ft with the 5-speed manual); GTI 220 hp at 4,700 rpm, Golf R 292 hp.</div>
+    </div>
 
     <div class="checklist-section-block">
       <div class="checklist-section-header">
